@@ -45,6 +45,13 @@
 								<div class="table-100">
 									<table class="player-detail-table4">
 										<caption>정규경기 경기 기록 테이블</caption>
+										<colgroup>
+											<col style="width: 9rem;">
+											<col style="width: 12rem;">
+											<col style="width: 4.2rem;">
+											<col style="width: 4.2rem;">
+											<col style="width: 4.2rem;">
+										</colgroup>
 										<thead>
 											<tr>
 												<th class="fixed">일자</th>
@@ -52,9 +59,9 @@
 												<th class="fixed">W/L</th>
 												<th class="fixed">득점</th>
 												<th class="fixed">실점</th>
-												<th title="시간">Min</th>
+												<th title="시간" class="sorting down">Min</th>
 												<th title="총 득점">PTS</th>
-												<th title="2점슛 성공" class="sorting down">2PM</th>
+												<th title="2점슛 성공">2PM</th>
 												<th title="2점슛 시도">2PA</th>
 												<th title="2점슛 성공률">2P%</th>
 												<th title="3점슛 성공">3PM</th>
@@ -90,7 +97,7 @@
 												<td>2022.10.29</td>
 												<td>
 													<div class="team-name"><i class="ic-emblem pega"></i>
-														<p>대구한국공사</p>
+														<p>대구 한국가스공사</p>
 													</div>
 												</td>
 												<td>W</td>
@@ -143,6 +150,13 @@
 								<div class="table-100">
 									<table class="player-detail-table4">
 										<caption>정규경기 경기 기록 테이블(D리그)</caption>
+										<colgroup>
+											<col style="width: 9rem;">
+											<col style="width: 12rem;">
+											<col style="width: 4.2rem;">
+											<col style="width: 4.2rem;">
+											<col style="width: 4.2rem;">
+										</colgroup>
 										<thead>
 											<tr>
 												<th class="fixed">일자</th>
@@ -188,7 +202,7 @@
 												<td>2022.10.29</td>
 												<td>
 													<div class="team-name"><i class="ic-emblem pega"></i>
-														<p>대구한국공사</p>
+														<p>대구 한국가스공사</p>
 													</div>
 												</td>
 												<td>W</td>
@@ -230,7 +244,7 @@
 												<td>2022-2023</td>
 												<td>
 													<div class="team-name"><i class="ic-emblem pega"></i>
-														<p>대구한국공사</p>
+														<p>대구 한국가스공사</p>
 													</div>
 												</td>
 												<td>W</td>
@@ -268,12 +282,12 @@
 												<td>99.99</td>
 												<td>99.99</td>
 											</tr>
-											<tr>
+											<tr class="last">
 												<td colspan="2">경기당 평균</td>
 												<td>W</td>
 												<td>W</td>
 												<td>99</td>
-												<td>99</td>
+												<td>36’18”</td>
 												<td>36’18”</td>
 												<td>99.99</td>
 												<td>99.99</td>
@@ -591,6 +605,114 @@
 					</div>
 					<div class="pop-btn single">
 						<button>확인</button>
+					</div>
+				</div>
+			</div>
+
+			<!--2. 가로모드 (m ver) -->
+			<div id="s2iZone" class="pop landscape">
+				<div class="pop-wrap">
+					<div class="pop-tit">
+						<h2>경기별 기록 - 정규경기 경기 기록</h2>
+						<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+					</div>
+					<div class="pop-cont">
+						<div class="table-100">
+							<table class="player-detail-table4">
+								<caption>정규경기 경기 기록 테이블</caption>
+								<colgroup>
+									<col style="width: 9rem;">
+									<col style="width: 12rem;">
+									<col style="width: 4.2rem;">
+									<col style="width: 4.2rem;">
+									<col style="width: 4.2rem;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th class="fixed">일자</th>
+										<th class="fixed">대진팀</th>
+										<th class="fixed">W/L</th>
+										<th class="fixed">득점</th>
+										<th class="fixed">실점</th>
+										<th title="시간" class="sorting down">Min</th>
+										<th title="총 득점">PTS</th>
+										<th title="2점슛 성공">2PM</th>
+										<th title="2점슛 시도">2PA</th>
+										<th title="2점슛 성공률">2P%</th>
+										<th title="3점슛 성공">3PM</th>
+										<th title="3점슛 시도">3PA</th>
+										<th title="3점슛 성공률">3P%</th>
+										<th title="야투 성공">FGM</th>
+										<th title="야투 시도">FGA</th>
+										<th title="야투 성공률">FG%</th>
+										<th title="자유투 성공">FTM</th>
+										<th title="자유투 시도">FTA</th>
+										<th title="자유투 성공률">FT%</th>
+										<th title="공격 리바운드">OREB</th>
+										<th title="수비 리바운드">DREB</th>
+										<th title="리바운드">REB</th>
+										<th title="어시스트">AST</th>
+										<th title="스틸">STL</th>
+										<th title="블록">BLK</th>
+										<th title="굿디펜스">GD</th>
+										<th title="덩크 성공">DK</th>
+										<th title="덩크 시도">DKA</th>
+										<th title="턴오버">TO</th>
+										<th title="개인파울">PF</th>
+										<th title="페인트존 득점 성공">PP</th>
+										<th title="페인트존 득점 시도">PPA</th>
+										<th title="페인트존 득점 성공률">PP%</th>
+										<th title="득실마진">+/-</th>
+										<th title="더블더블">DD2</th>
+										<th title="트리플더블">TD3</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2022.10.29</td>
+										<td>
+											<div class="team-name"><i class="ic-emblem pega"></i>
+												<p>대구 한국가스공사</p>
+											</div>
+										</td>
+										<td>W</td>
+										<td>99</td>
+										<td>99</td>
+										<td>36’18”</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+										<td>99.99</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

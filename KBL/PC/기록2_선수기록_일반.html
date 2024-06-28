@@ -29,7 +29,7 @@
 							<h2>선수기록</h2>
 						</div>
 						<div class="filter-wrap">
-							<ul>
+							<ul class="desktop">
 								<li>
 									<select>
 										<option>2022-2023</option>
@@ -48,13 +48,47 @@
 								</li>
 								<li>
 									<select>
-										<option>일반기록</option>
 										<option>정규기록</option>
+										<option>일반기록</option>
 									</select>
 								</li>
 								<li class="more"><input type="checkbox" id="setting"><label for="setting">세부설정<i class="ic-more-down"></i></label></li>
 							</ul>
-							<div class="setting active">
+
+							<div class="mobile">
+								<div class="slide-wrap">
+									<ul>
+										<li>
+											<select>
+												<option>2022-2023</option>
+											</select>
+										</li>
+										<li>
+											<select>
+												<option>정규경기</option>
+											</select>
+										</li>
+										<li>
+											<select>
+												<option>1차</option>
+												<option>2차</option>
+											</select>
+										</li>
+										<li>
+											<select>
+												<option>정규기록</option>
+												<option selected>일반기록</option>
+											</select>
+										</li>										
+									</ul>
+								</div>
+								<a class="more">
+									<input type="checkbox" id="setting">
+									<label for="setting">세부설정<i class="ic-more-down"></i></label>
+								</a>
+							</div>
+
+							<div class="setting">
 								<ul class="option">
 									<li>
 										<p>팀 선택</p>
@@ -65,7 +99,7 @@
 									<li>
 										<p>팀VS</p>
 										<select>
-											<option>원주 DB</option>
+											<option>대구 한국가스공사</option>
 										</select>
 									</li>
 									<li>
@@ -99,7 +133,7 @@
 										</select>
 									</li>
 									<li>
-										<p>전/후반</p>
+										<p>전반/후반</p>
 										<select>
 											<option>전반</option>
 										</select>
@@ -121,8 +155,7 @@
 										<select>
 											<option>1라운드</option>
 										</select>
-									</li>
-									
+									</li> 
 									<li>
 										<p>요일별</p>
 										<select>
@@ -138,7 +171,7 @@
 									<li>
 										<p>선수구분</p>
 										<select>
-											<option>선발출전</option>
+											<option>국내</option>
 										</select>
 									</li>
 									<li>
@@ -168,7 +201,13 @@
 									<li>
 										<p>키</p>
 										<select>
-											<option>&gt;200</option>
+											<option>> 200</option>
+										</select>
+									</li>
+									<li>
+										<p>몸무게</p>
+										<select>
+											<option>> 150</option>
 										</select>
 									</li>
 								</ul>
@@ -177,7 +216,7 @@
 										<p>팀</p><span>대구 한국가스공사<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
 									</li>
 									<li>
-										<p>팀VS</p><span>원주 DB<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+										<p>팀VS</p><span>대구 한국가스공사<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
 									</li>
 									<li>
 										<p>PER</p><span>평균<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
@@ -203,14 +242,10 @@
 									<li>
 										<p>월별</p><span>10월<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
 									</li>
-									<li>
-										<p>구분</p><span>평균<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
-									</li>
-									<li>
-										<p>포지션</p><span>포지션가드<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
-									</li>
 								</ul>
-								<div><button class="line black">설정 초기화</button><button>적용</button></div>
+								<div>
+									<button class="line black">설정 초기화</button><button>적용</button>
+								</div>
 							</div>
 						</div>
 						<!-- 1차 스탯 -->
@@ -479,7 +514,7 @@
 													<div>
 														<img src="">
 													</div>
-													<p>홍길동</p>
+													<p>알리제 드숀 존슨</p>
 												</div>
 											</td>
 											<td>2</td>
@@ -1783,7 +1818,7 @@
 													<div>
 														<img src="">
 													</div>
-													<p>홍길동</p>
+													<p>알리제 드숀 존슨</p>
 												</div>
 											</td>
 											<td>2</td>

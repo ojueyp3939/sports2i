@@ -1,0 +1,414 @@
+﻿@charset "utf-8";
+
+.s2i {font-family:'Noto Sans regular', 'malgun gothic', dotum !important;}
+
+/* team color -new */
+.s2i .team.SK {border-bottom:2px solid #FDBA30;}
+.s2i .team.HT {border-bottom:2px solid #000D1E;}
+.s2i .team.OB {border-bottom:2px solid #FB1414;}
+.s2i .team.LT {border-bottom:2px solid #D10F31;}
+.s2i .team.NC {border-bottom:2px solid #24447D;}
+.s2i .team.SS {border-bottom:2px solid #0072D2;} 
+.s2i .team.LG {border-bottom:2px solid #b60059;}
+.s2i .team.WO {border-bottom:2px solid #760520;}
+.s2i .team.HH {border-bottom:2px solid #EC7100;}
+.s2i .team.KT {border-bottom:2px solid #59595A;}
+.s2i .team.WE {border-bottom:2px solid #b90015;}
+.s2i .team.EA {border-bottom:2px solid #001c64;}
+
+/* 그래픽중계 */
+.s2i .m {width:100%;height:74.44444vw;background:url("../images/bg_ground_day_m.png") no-repeat;background-size:contain;}
+.s2i .m.night {background:url("../images/bg_ground_night_m.png") no-repeat;background-size:contain;}
+.s2i .m .graphic-wrap {position:relative;width:100%;height:74.44444vw;padding-top:1.66667vw;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .graphic-wrap .play-box .match-box {display:flex;justify-content:space-between;align-items:center;width:71.66667vw;max-width:258px;height:48px;padding:0 18px;margin:0 auto;color:#fff;border-radius:8px;border:1px solid #9A9693;background:#202425;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .graphic-wrap .play-box .match-box .team {display:flex;align-items:center;width:58px;}
+.s2i .m .graphic-wrap .play-box .match-box .team .count {float:right;width:20px;font-weight:700;font-size:16px;text-align:center;letter-spacing:-.3px;}
+.s2i .m .graphic-wrap .play-box .match-box .team .name {display:inline-block;width:54px;font-size:14px;text-align:center;}
+.s2i .m .graphic-wrap .play-box .match-box .team.home .count {float:left}
+.s2i .m .graphic-wrap .play-box .match-box .state {display:flex;justify-content:space-between;width:86px;height:42px;padding:0 0 0 8px;margin:0 8px;border:1px solid #000;border-radius:4px;background:linear-gradient(#606164, #000300);box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .graphic-wrap .play-box .match-box .state .inning {width:19px;padding-top:3px;text-align:center;}
+.s2i .m .graphic-wrap .play-box .match-box .state .inning p {font-size:16px;font-weight:700;}
+.s2i .m .graphic-wrap .play-box .match-box .state .inning .icon {width:10px;margin:0 auto;vertical-align:top;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current {width:100%;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base {position:relative;width:30px;height:22px;margin:2px auto 1px;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base li {position:absolute;top:0;width:10px;height:10px;border:1px solid #fff;text-indent:-99999vw;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base li.on {background:#ffda00;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base li.b1 {top:10px;right:2px;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base li.b2 {top:2px;left:50%;transform:translate(-50%, 0) rotate(45deg);}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .base li.b3 {top:10px;left:2px;}
+.s2i .m .graphic-wrap .play-box .match-box .state .current .ballcount {font-size:10px;color:#fff;text-align:center;}
+.s2i .m .graphic-wrap .play-box .player-info {display:flex;justify-content:space-around;align-items:center;width:142px;padding:6px 12px;margin:0 auto;border-radius:0 0 8px 8px;background-color:#202425;text-align:center;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .graphic-wrap .play-box .player-info li {font-size:10px;color:#FAEC9E;letter-spacing:-0.2px;line-height:1;}
+.s2i .m .graphic-wrap .play-box .player-info li b {font-size:inherit}
+.s2i .m .graphic-wrap .set-box .hitter-graphic {position:absolute;bottom:1.66667vw;width:25.27778vw;}
+.s2i .m .graphic-wrap .set-box .hitter-graphic img {width:100%;}
+.s2i .m .graphic-wrap .set-box.left .hitter-graphic {left:50%;margin-left:16.38889vw;}
+.s2i .m .graphic-wrap .set-box.right .hitter-graphic {right:50%;margin-right:16.38889vw;}
+.s2i .m .graphic-wrap .set-box .speen-box {position:absolute;bottom:2.77778vw;min-width:90px;padding:6px 5px 7px;border-radius:14px;font-size:10px;color:#fff;text-align:center;background:rgba(0, 0, 0, 0.7);}
+.s2i .m .graphic-wrap .set-box.left .speen-box {left:2.77778vw;}
+.s2i .m .graphic-wrap .set-box.right .speen-box {right:2.77778vw;}
+.s2i .m .graphic-wrap .pts-zone {position:absolute;bottom:2.22222vw;left:50%;width:35vw;height:46.11111vw;z-index:5;text-indent:-9999vw;transform:translate(-50%, 0);}
+.s2i .m .graphic-wrap .strike-zone {position:absolute;bottom:16.2vw;left:50%;width:17.22223vw;height:22vw;background:url("../images/bg_strikezone_m.png") no-repeat 0 0;background-size:100% 100%;text-indent:-9999vw;transform:translate(-50%, 0);}
+
+/* layer */
+.s2i .m .analysis-box {position:relative;width:100%;height:74.44444vw;}
+.s2i .m .analysis-wrap {position:absolute;top:50%;left:50%;width:92.22222vw;max-width:332px;height:66.66667vw;max-height:240px;padding:16px 20px;border-radius:8px;background-color:#fff;transform:translate(-50%, -50%);z-index:10;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .analysis-wrap .tit {margin-bottom:12px;font-size:14px;font-weight:700;line-height:1.2;}
+.s2i .m .analysis-wrap .analysis-area .versus {position:relative;}
+.s2i .m .analysis-wrap .analysis-area .versus::after {content:"";display:block;clear:both;}
+.s2i .m .analysis-wrap .analysis-area .versus .team {float:left;display:flex;justify-content:space-between;width:50%;text-align:center;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .divide {font-weight:700;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .divide span {display:inline-block;margin-right:4px;font-size:30px;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .divide.win span {color:#06c;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .result {color:#6e6e6e;}
+.s2i .m .analysis-wrap .analysis-area .versus .vs-wrap {position:absolute;left:50%;padding-top:12px;color:#828282;font-size:12px;text-align:center;transform:translateX(-50%);line-height:1.2;}
+.s2i .m .analysis-wrap .analysis-area .versus .vs-wrap .season {display:block;width:7.22222vw;max-width:26px;padding:3px 0 2px;margin:3px auto 0;font-weight:700;border-radius:4px;background:#2A63C8;color:#fff;font-size:8px;}
+.s2i .m .analysis-wrap .analysis-area .record {padding:12px 0 0;}
+.s2i .m .analysis-wrap .analysis-area .record dl {position:relative;padding:4px 0;}
+.s2i .m .analysis-wrap .analysis-area .record dl::after {content:"";display:block;clear:both;}
+.s2i .m .analysis-wrap .analysis-area .record dl dt {position:absolute;left:50%;float:left;font-size:11px;color:#333;transform:translateX(-50%);line-height:1.2;}
+.s2i .m .analysis-wrap .analysis-area .record dl dd {float:left;width:50%;font-size:11px;color:#666;text-align:center;line-height:1.2;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .analysis-wrap .analysis-area .record dl dd.away {padding-right:32px;}
+.s2i .m .analysis-wrap .analysis-area .record dl dd.home {padding-left:32px;}
+.s2i .m .analysis-wrap .analysis-area .record dl dd.over {color:#0064c9;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .percent {padding-top:14px;font-size:12px;color:#666;line-height:1.2;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .percent.high {color:#0064c9;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .percent b {font-size:20px;}
+.s2i .m .analysis-wrap .analysis-area .versus .team.home .percent {padding-left:36px}
+.s2i .m .analysis-wrap .analysis-area .versus .team.away .percent {padding-right:36px}
+.s2i .m .analysis-wrap .analysis-area .versus .team .player-img {position:relative;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .player-img img {width:13.88889vw;max-width:60px;}
+.s2i .m .analysis-wrap .analysis-area .versus .team.home .player-img {padding-left:64px;margin-right:32px;}
+.s2i .m .analysis-wrap .analysis-area .versus .team.away .player-img {padding-right:64px;margin-left:32px;}
+.s2i .m .analysis-wrap .analysis-area .versus .team .name {padding:2px 0 10px;font-size:11px;color:#333;text-align:center;line-height:1.2;}
+
+/* 승부예측 */
+.s2i .m .match .analysis-area .versus .team.away .player-img {padding-left:12px;padding-right:10px;margin-left:0;}
+.s2i .m .match .analysis-area .versus .team.home .player-img {padding-left:10px;padding-right:12px;margin-right:0;}
+
+/* 선발투수, 키플레이어, 선발라인업 - 공통  */
+.s2i .m .type .analysis-area .versus .team .name {width:100%;margin-top:-2px;}
+.s2i .m .type .analysis-area .versus .team.home .name {padding-left:32px}
+.s2i .m .type .analysis-area .versus .team.away .name {padding-right:32px}
+.s2i .m .type .analysis-area .versus .vs-wrap {padding-top:0;margin-top:-2px;}
+
+/* 선발투수 > 구종별 */
+.s2i .m .type .analysis-area .graph-box {display:table;width:100%;padding-top:9px;}
+.s2i .m .type .analysis-area .graph-box .record {display:table;float:left;width:50%;height:38.88889vw;max-height:140px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .type .analysis-area .graph-box .record.away {padding:0 23px 0 0;}
+.s2i .m .type .analysis-area .graph-box .record.home {padding:0 0 0 23px;}
+.s2i .m .type .analysis-area .graph-box .record .info-graph {float:right;width:10.55556vw;max-width:38px;height:100%;}
+.s2i .m .type .analysis-area .graph-box .record.home .info-graph {float:left;}
+.s2i .m .type .analysis-area .graph-box .record .info-graph li {display:table;width:100%;color:#fff;text-align:center;}
+.s2i .m .type .analysis-area .graph-box .record .info-graph li span {display:table-cell;font-size:10px;vertical-align:middle;line-height:1;}
+.s2i .type .analysis-area .graph-box .record .info-graph.SK .rank1 {background:#FDBA30;}
+.s2i .type .analysis-area .graph-box .record .info-graph.HT .rank1 {background:#000D1E;}
+.s2i .type .analysis-area .graph-box .record .info-graph.OB .rank1 {background:#FB1414;}
+.s2i .type .analysis-area .graph-box .record .info-graph.LT .rank1 {background:#D10F31;}
+.s2i .type .analysis-area .graph-box .record .info-graph.NC .rank1 {background:#24447D;}
+.s2i .type .analysis-area .graph-box .record .info-graph.SS .rank1 {background:#0072D2;}
+.s2i .type .analysis-area .graph-box .record .info-graph.LG .rank1 {background:#b60059;}
+.s2i .type .analysis-area .graph-box .record .info-graph.WO .rank1 {background:#760520;}
+.s2i .type .analysis-area .graph-box .record .info-graph.HH .rank1 {background:#EC7100;}
+.s2i .type .analysis-area .graph-box .record .info-graph.KT .rank1 {background:#59595A;}
+.s2i .type .analysis-area .graph-box .record .info-graph.WE .rank1 {background:#b90015;}
+.s2i .type .analysis-area .graph-box .record .info-graph.EA .rank1 {background:#001c64;}
+.s2i .type .analysis-area .graph-box .record .info-graph.SK .rank2 {background:rgba(253,186,48,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HT .rank2 {background:rgba(0,13,30,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.OB .rank2 {background:rgba(251,20,20,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LT .rank2 {background:rgba(209,15,49,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.NC .rank2 {background:rgba(36,68,125,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.SS .rank2 {background:rgba(0,114,210,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LG .rank2 {background:rgba(178,36,77,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WO .rank2 {background:rgba(118,5,32,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HH .rank2 {background:rgba(236,113,0,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.KT .rank2 {background:rgba(89,89,90,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WE .rank2 {background:rgba(199,51,68,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.EA .rank2 {background:rgba(51,73,131,0.6);}
+.s2i .type .analysis-area .graph-box .record .info-graph.SK .rank3 {background:rgba(253,186,48,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HT .rank3 {background:rgba(0,13,30,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.OB .rank3 {background:rgba(251,20,20,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LT .rank3 {background:rgba(209,15,49,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.NC .rank3 {background:rgba(36,68,125,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.SS .rank3 {background:rgba(0,114,210,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LG .rank3 {background:rgba(178,36,77,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WO .rank3 {background:rgba(118,5,32,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HH .rank3 {background:rgba(236,113,0,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.KT .rank3 {background:rgba(89,89,90,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WE .rank3 {background:rgba(199,51,68,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.EA .rank3 {background:rgba(51,73,131,0.4);}
+.s2i .type .analysis-area .graph-box .record .info-graph.SK .rank4 {background:rgba(253,186,48,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HT .rank4 {background:rgba(0,13,30,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.OB .rank4 {background:rgba(251,20,20,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LT .rank4 {background:rgba(209,15,49,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.NC .rank4 {background:rgba(36,68,125,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.SS .rank4 {background:rgba(0,114,210,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.LG .rank4 {background:rgba(178,36,77,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WO .rank4 {background:rgba(118,5,32,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.HH .rank4 {background:rgba(236,113,0,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.KT .rank4 {background:rgba(89,89,90,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.WE .rank4 {background:rgba(199,51,68,0.2);}
+.s2i .type .analysis-area .graph-box .record .info-graph.EA .rank4 {background:rgba(51,73,131,0.2);}
+.s2i .m .type .analysis-area .graph-box .record.home .info-list {float:left;height:100%;margin-left:6px;text-align:left;}
+.s2i .m .type .analysis-area .graph-box .record.away .info-list {float:right;height:100%;margin-right:6px;text-align:right;}
+.s2i .m .type .analysis-area .graph-box .record .info-list li {display:table;width:100%;height:100%;font-size:10px;}
+.s2i .m .type .analysis-area .graph-box .record.away .info-list li {text-align:right;}
+.s2i .m .type .analysis-area .graph-box .record .info-list li dl {display:table-cell;padding:0;vertical-align:middle;}
+.s2i .m .type .analysis-area .graph-box .record .info-list li dl dt {position:inherit;left:unset;float:none;display:inline-block;font-size:10px;color:#666;letter-spacing:-0.8px;transform:none;}
+.s2i .m .type .analysis-area .graph-box .record .info-list li dl dd {float:none;display:inline-block;width:auto;font-size:10px;}
+
+/* 키플레이어 */
+.s2i .m .keyplayer .analysis-area .hotcoldzone {display:flex;justify-content:space-between;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone {position:relative;width:25.55556vw;max-width:92px;height:25.55556vw;max-height:92px;margin-top:30px}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold {width:100%;height:100%;color:#fff;border-collapse:collapse;text-align:center;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td {border:1px solid #f4f4f4;background:#ccc;font-size:6px;}
+.s2i .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td.lev1 {background:#ff3d3d !important;}
+.s2i .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td.lev2 {background:#ff9ea2 !important;}
+.s2i .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td.lev3 {background:#5599ff !important;}
+.s2i .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td.lev4 {background:#9fc4eb !important;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr:first-child td {vertical-align:top;padding-top:4px;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr td:first-child {padding-left:4px;text-align:left;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr td:last-child {padding-right:4px;text-align:right;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr:last-child td {vertical-align:bottom;padding-bottom:4px;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.front {position:absolute;top:50%;left:50%;width:16.66667vw;max-width:60px;height:16.66667vw;max-height:60px;transform:translate(-50%, -50%);}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.front td {vertical-align:middle;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .record {width:100px}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .record dl dd.home {padding-left:20px;}
+.s2i .m .keyplayer .analysis-area .hotcoldzone .record dl dd.away {padding-right:20px;}
+
+/* 선발라인업 */
+.s2i .m .lineup .analysis-area .versus .team.home .name {padding-left:24px}
+.s2i .m .lineup .analysis-area .versus .team.away .name {padding-right:24px}
+.s2i .m .lineup .analysis-area .ground-view {display:flex;justify-content:space-between}
+.s2i .m .lineup .analysis-area .ground-view .team {position:relative;width:38.05556vw;max-width:135px;height:38.61111vw;max-height:137px;margin-top:10px}
+.s2i .m .lineup .analysis-area .ground-view .team::after {content:"";display:block;clear:both;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground {position:relative;width:100%;height:100%;background:url("../images/bg_ground.png");background-size:100%;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .ground-img {width:100%;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list {position:relative;width:100%;height:100%;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list li {position:absolute;width:13.88889vw;max-width:50px;height:4.16667vw;max-height:15px;border:1px solid #666;border-radius:0.55556vw;background:#fff;font-size:8px;color:#333;letter-spacing:-1px;text-align:center;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list li .position {display:inline-block;margin-right:2px;font-size:inherit;font-weight:700;text-align:center;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.SK li .position {color:#FDBA30;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.HT li .position {color:#000D1E;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.OB li .position {color:#FB1414;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.LT li .position {color:#D10F31;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.NC li .position {color:#24447D;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.SS li .position {color:#0072D2;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.LG li .position {color:#b60059;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.WO li .position {color:#760520;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.HH li .position {color:#EC7100;}
+.s2i .lineup .analysis-area .ground-view .team .ground .player-list.KT li .position {color:#59595A;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .C {bottom:20px;left:50%;transform:translateX(-50%);}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .DH {bottom:2px;right:3px;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .B1 {top:50%;right:6px;transform:translateY(-50%);}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .B2 {top:38px;right:10px;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .B3 {top:50%;left:6px;transform:translateY(-50%);}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .P {bottom:42px;left:50%;transform:translateX(-50%);}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .SS {top:38px;left:10px;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .LF {top:21px;left:6px;}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .CF {top:2px;left:50%;transform:translateX(-50%);}
+.s2i .m .lineup .analysis-area .ground-view .team .ground .player-list .RF {top:21px;right:6px;}
+
+/* 경기정보 */
+.s2i .m .info {padding-bottom:10px;}
+.s2i .m .info .tit {margin-bottom:4px;}
+.s2i .m .info .analysis-area .info-name {position:relative;padding:0 1px 4px 55px;border-bottom:1px solid #F2F2F2;line-height:1.2;}
+.s2i .m .info .analysis-area .info-name label {position:absolute;top:0;left:1px;padding:3px 4px;font-size:10px;font-weight:700;color:#fff;border-radius:4px;background-color:#333;letter-spacing:-0.4px;}
+.s2i .m .info .analysis-area .info-name span {font-size:10px;color:#333;}
+.s2i .m .info .analysis-area .info-box {padding:2px 4px 0;max-height:170px;overflow-y:auto;}
+.s2i .m .info .analysis-area .info-box .info-list {width:100%;}
+.s2i .m .info .analysis-area .info-box .info-list tr th {padding-bottom:1px;font-size:10px;color:#333;font-weight:400;text-align:center;line-height:1.1;}
+.s2i .m .info .analysis-area .info-box .info-list tr td {padding-left:18px;font-size:10px;color:#666;line-height:1.1;word-break:keep-all;}
+
+/* 키플레이어 (WPA) */
+.s2i .m .wpa .tit {margin-bottom:18px;}
+.s2i .m .wpa .analysis-area ul {display:flex;justify-content:space-between;}
+.s2i .m .wpa .analysis-area ul li {width:90px;height:161px;padding:5px;border:1px solid #F2F2F2;border-radius:4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .m .wpa .analysis-area ul li label {display:block;width:27px;height:17px;padding-top:1px;margin-bottom:10px;font-size:10px;font-weight:700;color:#fff;text-align:center;border-radius:4px;background-color:#666;letter-spacing:-0.4px;}
+.s2i .m .wpa .analysis-area ul li .pic {position:relative;width:60px;height:60px;margin:0 auto 10px;border-radius:50%;}
+.s2i .m .wpa .analysis-area ul li .pic img {width:100%;}
+.s2i .m .wpa .analysis-area ul li.win label {background-color:#2A63C8;}
+.s2i .m .wpa .analysis-area ul li.win .percent {color:#2A63C8}
+.s2i .m .wpa .analysis-area ul li .name {font-size:10px;color:#333;text-align:center;}
+.s2i .m .wpa .analysis-area ul li .percent {font-size:12px;color:#666;text-align:center;}
+.s2i .m .wpa .analysis-area ul li .percent b {font-size:20px;color:inherit;letter-spacing:-0.4px;}
+.s2i .m .wpa .analysis-area ul li .emb {position:absolute;top:41px;left:38px;width:36px;height:28px;background-size:contain;}
+.s2i .wpa .analysis-area ul li .emb.SK {background-image:url("../images/SK.png");}
+.s2i .wpa .analysis-area ul li .emb.HT {background-image:url("../images/HT.png");}
+.s2i .wpa .analysis-area ul li .emb.OB {background-image:url("../images/OB.png");}
+.s2i .wpa .analysis-area ul li .emb.LT {background-image:url("../images/LT.png");}
+.s2i .wpa .analysis-area ul li .emb.NC {background-image:url("../images/NC.png");}
+.s2i .wpa .analysis-area ul li .emb.SS {background-image:url("../images/SS.png");}
+.s2i .wpa .analysis-area ul li .emb.LG {background-image:url("../images/LG.png");}
+.s2i .wpa .analysis-area ul li .emb.WO {background-image:url("../images/WO.png");}
+.s2i .wpa .analysis-area ul li .emb.HH {background-image:url("../images/HH.png");}
+.s2i .wpa .analysis-area ul li .emb.KT {background-image:url("../images/KT.png");}
+
+
+/* 그래픽중계 */
+.s2i .pc {width:718px;height:402px;background:url("../images/bg_ground_day.png") no-repeat;background-size:contain;}
+.s2i .pc.night {background:url("../images/bg_ground_night.png") no-repeat;background-size:contain;}
+.s2i .pc .graphic-wrap {position:relative;width:718px;height:402px;padding-top:8px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .graphic-wrap .play-box .match-box {display:flex;justify-content:space-between;align-items:center;width:296px;height:59px;padding:0 26px;margin:0 auto;color:#fff;border-radius:8px;border:1px solid #9A9693;background:#202425;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .graphic-wrap .play-box .match-box .team {width:calc((100% - 101px)/2);line-height:1.2;}
+.s2i .pc .graphic-wrap .play-box .match-box .team .count {float:right;width:20px;font-weight:700;font-size:16px;text-align:center;letter-spacing:-.3px;}
+.s2i .pc .graphic-wrap .play-box .match-box .team .name {display:inline-block;width:calc(100% - 20px);font-size:14px;text-align:center;line-height:1.4;vertical-align:top;}
+.s2i .pc .graphic-wrap .play-box .match-box .team.home .count {float:left}
+.s2i .pc .graphic-wrap .play-box .match-box .state {display:flex;justify-content:space-between;width:94px;height:52px;padding:0 8px;margin:0 14px;border:1px solid #000;border-radius:4px;background:linear-gradient(#606164, #000300);box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .inning {width:28px;padding-top:8px;text-align:center;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .inning p {margin-bottom:2px;font-size:16px;font-weight:700;letter-spacing:-0.4px;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .inning .icon {width:10px;margin:0 auto;vertical-align:top;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current {width:100%;padding-top:3px;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base {position:relative;width:48px;height:24px;margin:0 auto 4px;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base li {position:absolute;top:0;width:10px;height:10px;border:1px solid #fff;text-indent:-99999vw;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base li.on {background:#FFDA00;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base li.b1 {top:12px;right:10px;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base li.b2 {top:3px;left:50%;transform:translate(-50%, 0) rotate(45deg);}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .base li.b3 {top:12px;left:10px;}
+.s2i .pc .graphic-wrap .play-box .match-box .state .current .ballcount {font-size:12px;color:#fff;text-align:center;line-height:1.2;}
+.s2i .pc .graphic-wrap .play-box .player-info {display:flex;justify-content:space-evenly;align-items:center;width:146px;height:16px;padding:6px 27px;margin:0 auto;border-radius:0 0 8px 8px;background-color:#202425;text-align:center;}
+.s2i .pc .graphic-wrap .play-box .player-info li {font-size:12px;color:#FAEC9E;letter-spacing:-0.2px;line-height:1;}
+.s2i .pc .graphic-wrap .play-box .player-info li b {font-size:inherit}
+.s2i .pc .graphic-wrap .set-box .hitter-graphic {position:absolute;bottom:14px;width:148px;}
+.s2i .pc .graphic-wrap .set-box .hitter-graphic img {width:100%}
+.s2i .pc .graphic-wrap .set-box.left .hitter-graphic {left:50%;margin-left:70px;}
+.s2i .pc .graphic-wrap .set-box.right .hitter-graphic {right:50%;margin-right:70px;}
+.s2i .pc .graphic-wrap .set-box .speen-box {position:absolute;top:105px;bottom:unset;min-width:97px;padding:7px 18px 8px;border-radius:50px;font-size:12px;color:#fff;text-align:center;background:rgba(0, 0, 0, 0.7);}
+.s2i .pc .graphic-wrap .set-box.left .speen-box {left:50%;transform:translate(-50%, 0);}
+.s2i .pc .graphic-wrap .set-box.right .speen-box {right:50%;transform:translate(50%, 0);}
+.s2i .pc .graphic-wrap .pts-zone {position:absolute;bottom:11px;left:50%;width:200px;height:260px;z-index:5;text-indent:-9999vw;transform:translate(-50%, 0);}
+.s2i .pc .graphic-wrap .strike-zone {position:absolute;bottom:92.5px;left:50%;width:94px;height:119px;background:url("../images/bg_strikezone.png") no-repeat 0 0;background-size:100% 100%;text-indent:-9999vw;transform:translate(-50%, 0);}
+
+/* layer */
+.s2i .pc .analysis-box {position:relative;width:718px;height:402px;}
+.s2i .pc .analysis-wrap {position:absolute;top:50%;left:50%;width:626px;height:350px;padding:30px 40px;border-radius:8px;background-color:#fff;transform:translate(-50%, -50%);box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;z-index:10;}
+.s2i .pc .analysis-wrap .tit {margin-bottom:22px;font-size:14px;font-weight:700}
+.s2i .pc .analysis-wrap .analysis-area .versus {position:relative;}
+.s2i .pc .analysis-wrap .analysis-area .versus::after {content:"";display:block;clear:both;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team {float:left;display:flex;justify-content:space-between;width:50%;text-align:center;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .name {padding:6px 0 18px;font-size:14px;color:#333;text-align:center;line-height:1.2;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .percent {padding-top:17px;font-size:16px;color:#666;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .percent.high {color:#0064c9;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .percent b {font-size:30px;letter-spacing:-0.4px;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team.home .percent {padding-left:33px}
+.s2i .pc .analysis-wrap .analysis-area .versus .team.away .percent {padding-right:33px}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .player-img {position:relative;margin:0 auto;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team .player-img img {width:70px;vertical-align:top;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team.home .player-img {padding-left:65px;margin-right:138px;}
+.s2i .pc .analysis-wrap .analysis-area .versus .team.away .player-img {padding-right:65px;margin-left:138px;}
+.s2i .pc .analysis-wrap .analysis-area .versus .vs-wrap {position:absolute;left:50%;padding-top:20px;color:#828282;font-size:15px;text-align:center;transform:translateX(-50%);line-height:1.2;}
+.s2i .pc .analysis-wrap .analysis-area .versus .vs-wrap .season {display:block;width:26px;padding:3px 0 2px;margin:2px auto 0;font-size:8px;color:#fff;font-weight:700;border-radius:4px;background:#2A63C8;}
+.s2i .pc .analysis-wrap .analysis-area .record {padding:15px 0 0;}
+.s2i .pc .analysis-wrap .analysis-area .record dl {position:relative;padding:7px 111px;}
+.s2i .pc .analysis-wrap .analysis-area .record dl::after {content:"";display:block;clear:both;}
+.s2i .pc .analysis-wrap .analysis-area .record dl dt {position:absolute;left:50%;float:left;font-size:12px;color:#333;transform:translateX(-50%);line-height:1.2;}
+.s2i .pc .analysis-wrap .analysis-area .record dl dd {float:left;width:50%;font-size:12px;color:#666;text-align:center;line-height:1.2;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .analysis-wrap .analysis-area .record dl dd.away {padding-right:52px;}
+.s2i .pc .analysis-wrap .analysis-area .record dl dd.home {padding-left:52px;}
+.s2i .pc .analysis-wrap .analysis-area .record dl dd.over {color:#0064c9;}
+
+/* 승부예측 */
+.s2i .pc .match .analysis-area .versus .team.away .player-img {padding-right:20px;margin-left:91px}
+.s2i .pc .match .analysis-area .versus .team.home .player-img {padding-left:20px;margin-right:91px}
+
+/* 선발투수, 키플레이어, 선발라인업 - 공통  */
+.s2i .pc .type .tit {margin-bottom:20px}
+.s2i .pc .type .analysis-area .versus .team .name {width:100%;padding-bottom:25px;margin-top:-6px;font-size:20px}
+.s2i .pc .type .analysis-area .versus .team.home .name {padding-left:59px;margin-right:112px;}
+.s2i .pc .type .analysis-area .versus .team.away .name {padding-right:59px;margin-left:112px;}
+.s2i .pc .type .analysis-area .versus .team.home .player-img {padding-left:65px;margin-right:85px;}
+.s2i .pc .type .analysis-area .versus .team.away .player-img {padding-right:65px;margin-left:85px;}
+.s2i .pc .type .analysis-area .versus .vs-wrap {padding-top:0;margin-top:-6px;}
+
+/* 선발투수 > 구종별 */
+.s2i .pc .type .analysis-area .graph-box {display:table;width:100%;padding-top:14px;}
+.s2i .pc .type .analysis-area .graph-box .record {display:table;float:left;width:273px;height:180px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .type .analysis-area .graph-box .record.away {padding:0 59px 0 0;}
+.s2i .pc .type .analysis-area .graph-box .record.home {padding:0 0 0 59px;}
+.s2i .pc .type .analysis-area .graph-box .record .info-graph {float:right;width:59px;height:100%;}
+.s2i .pc .type .analysis-area .graph-box .record.home .info-graph {float:left;}
+.s2i .pc .type .analysis-area .graph-box .record .info-graph li {display:table;width:100%;color:#fff;text-align:center;}
+.s2i .pc .type .analysis-area .graph-box .record .info-graph li span {display:table-cell;font-size:10px;vertical-align:middle;line-height:1;}
+.s2i .pc .type .analysis-area .graph-box .record.home .info-list {float:left;height:100%;margin-left:10px;text-align:left;}
+.s2i .pc .type .analysis-area .graph-box .record.away .info-list {float:right;height:100%;margin-right:10px;text-align:right;}
+.s2i .pc .type .analysis-area .graph-box .record .info-list li {display:table;width:100%;height:100%;font-size:12px;}
+.s2i .pc .type .analysis-area .graph-box .record.away .info-list li {text-align:right;}
+.s2i .pc .type .analysis-area .graph-box .record .info-list li dl {display:table-cell;padding:0;vertical-align:middle;}
+.s2i .pc .type .analysis-area .graph-box .record .info-list li dl dt {position:inherit;left:unset;float:none;display:inline-block;font-size:12px;color:#666;letter-spacing:-0.8px;transform:none;}
+.s2i .pc .type .analysis-area .graph-box .record .info-list li dl dd {float:none;display:inline-block;width:auto;font-size:12px;}
+
+/* 키플레이어 */
+.s2i .pc .keyplayer .analysis-area .hotcoldzone {display:flex;justify-content:space-between;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone {position:relative;width:132px;height:132px;margin-top:34px}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold {width:100%;height:100%;color:#fff;border-collapse:collapse;text-align:center;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold td {border:1px solid #f4f4f4;background:#ccc;font-size:10px;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr:first-child td {vertical-align:top;padding-top:4px;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr td:first-child {padding-left:4px;text-align:left;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr td:last-child {padding-right:4px;text-align:right;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.back tr:last-child td {vertical-align:bottom;padding-bottom:4px;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.front {position:absolute;top:50%;left:50%;width:90px;height:90px;transform:translate(-50%, -50%);}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .zone .tbl-hotcold.front td {vertical-align:middle;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .record {width:284px}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .record dl {padding:7px 39px}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .record dl dd.home {padding-left:52px;}
+.s2i .pc .keyplayer .analysis-area .hotcoldzone .record dl dd.away {padding-right:52px;}
+
+/* 선발라인업 */
+.s2i .pc .lineup .analysis-area .versus .team .name {padding-bottom:13px;}
+.s2i .pc .lineup .analysis-area .versus .team.home .name {padding-left:97px;margin-right:80px;}
+.s2i .pc .lineup .analysis-area .versus .team.away .name {padding-right:97px;margin-left:80px;}
+.s2i .pc .lineup .analysis-area .versus .vs-wrap {margin-top:2px;}
+.s2i .pc .lineup .analysis-area .ground-view {display:flex;justify-content:space-between}
+.s2i .pc .lineup .analysis-area .ground-view .team {position:relative;width:256px;height:202px;margin-top:10px}
+.s2i .pc .lineup .analysis-area .ground-view .team::after {content:"";display:block;clear:both;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground {position:relative;width:100%;height:100%;background:url("../images/bg_ground_pc.png");background-size:100%;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .ground-img {width:100%;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list {position:relative;width:100%;height:100%;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list li {position:absolute;width:75px;height:18px;border:1px solid #666;border-radius:2px;background:#fff;font-size:12px;color:#333;letter-spacing:-1px;text-align:center;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list li .position {display:inline-block;margin-right:2px;font-size:12px;font-weight:700;text-align:center;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .C {bottom:26px;left:50%;transform:translateX(-50%);}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .DH {bottom:26px;right:9px;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .B1 {bottom:66px;right:9px;transform:unset}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .B2 {top:72px;right:28px;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .B3 {bottom:66px;left:9px;transform:unset}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .P {bottom:66px;left:50%;transform:translateX(-50%);}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .SS {top:72px;left:28px;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .LF {top:42px;left:22px;}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .CF {top:11px;left:50%;transform:translateX(-50%);}
+.s2i .pc .lineup .analysis-area .ground-view .team .ground .player-list .RF {top:42px;right:22px;}
+
+/* 경기정보 */
+.s2i .pc .info {padding-bottom:23px;}
+.s2i .pc .info .tit {margin-bottom:14px;}
+.s2i .pc .info .analysis-area .info-name {position:relative;padding:0 1px 10px 114px;border-bottom:1px solid #F2F2F2;line-height:1.2;}
+.s2i .pc .info .analysis-area .info-name label {position:absolute;top:0;left:42px;padding:3px 4px;font-size:12px;font-weight:700;color:#fff;border-radius:4px;background-color:#333;letter-spacing:-0.4px;}
+.s2i .pc .info .analysis-area .info-name span {font-size:12px;color:#333;}
+.s2i .pc .info .analysis-area .info-box {padding:8px 45px 0;max-height:225px;overflow-y:auto;}
+.s2i .pc .info .analysis-area .info-box .info-list {width:100%;}
+.s2i .pc .info .analysis-area .info-box .info-list tr th {padding-bottom:2px;font-size:12px;color:#333;font-weight:400;font-family:inherit;text-align:center;line-height:1.2;}
+.s2i .pc .info .analysis-area .info-box .info-list tr td {padding-left:30px;font-size:12px;color:#666;font-family:inherit;line-height:1.2;word-break:keep-all;}
+.s2i .pc .info .analysis-area .info-box::-webkit-scrollbar-track {border-radius:4px;background-color:#F5F5F5;}
+.s2i .pc .info .analysis-area .info-box::-webkit-scrollbar {width:8px;background-color:#F5F5F5;}
+.s2i .pc .info .analysis-area .info-box::-webkit-scrollbar-thumb {border-radius:4px;background-color:#ddd;}
+
+/* 키플레이어 (WPA) */
+.s2i .pc .wpa .tit {margin-bottom:18px;}
+.s2i .pc .wpa .analysis-area ul {display:flex;justify-content:space-between;}
+.s2i .pc .wpa .analysis-area ul li {width:170px;height:241px;padding:6px;border:1px solid #F2F2F2;border-radius:4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+.s2i .pc .wpa .analysis-area ul li label {display:block;width:33px;height:23px;padding-top:1px;margin-bottom:8xpx;font-size:14px;font-weight:700;color:#fff;text-align:center;border-radius:4px;background-color:#666;letter-spacing:-0.4px;}
+.s2i .pc .wpa .analysis-area ul li .pic {position:relative;width:100px;height:100px;margin:0 auto 19px;border-radius:50%;}
+.s2i .pc .wpa .analysis-area ul li .pic img {width:100%;}
+.s2i .pc .wpa .analysis-area ul li.win label {background-color:#2A63C8;}
+.s2i .pc .wpa .analysis-area ul li.win .percent {color:#2A63C8}
+.s2i .pc .wpa .analysis-area ul li .name {margin-bottom:2px;font-size:14px;color:#333;text-align:center;}
+.s2i .pc .wpa .analysis-area ul li .percent {font-size:16px;color:#666;text-align:center;}
+.s2i .pc .wpa .analysis-area ul li .percent b {font-size:30px;color:inherit;letter-spacing:-0.4px;}
+.s2i .pc .wpa .analysis-area ul li .emb {position:absolute;top:59px;left:64px;width:70px;height:55px;background-size:contain;}
+
+/* slider */
+.s2i .pc .slick-dots.slick-thumb {top:385px;bottom:unset;height:5px;}
+.s2i .pc .slick-dots.slick-thumb li {width:32px;height:5px;margin:0 3px;border-radius:2.5px;transition:all 0.5s ease-in-out;will-change:width;background-color:#000;vertical-align:top;}
+.s2i .pc .slick-dots.slick-thumb li.slick-active {background-color:#07af42;}
+.s2i .pc .slick-dots.slick-thumb li button {width:32px;height:5px;padding:0}
+.s2i .pc .slick-dots.slick-thumb li button::before{display:none;}
+.s2i .pc .slick-prev, 
+.s2i .pc .slick-next {display:none;}

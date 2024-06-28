@@ -15,54 +15,213 @@
 	<link rel="stylesheet" type="text/css" href="resources/css/ico.css" />
 	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="resources/css/s2i.css" />
+	<style>
+		/* test - scroll */
+		.top-scroll-table {width:100%;overflow-y:auto;transform:rotateX(180deg);}
+		.top-scroll-table table {transform:rotateX(180deg);}
+		.top-scroll-table table td[rowspan]:not(:last-child) {border-right:1px solid var(--gray200);}
+		.top-scroll-table table th,
+		.top-scroll-table table td {white-space:nowrap;}
+		.top-scroll-table table th i {display:inline-flex;margin-left:.4rem;cursor:pointer;}
+		@media screen and (max-width:768px) {
+			.top-scroll-table {width:100vw;margin:0 -1.6rem;}
+		}
+
+		.record-tbl table tr th {height:4rem;line-height:1;}
+		.record-tbl table tr td {height:4rem;padding:1.2rem 1.6rem}
+
+		.tbl-wrap {display:grid;grid-template-columns:1fr 3fr;}
+		.tbl-wrap .tbl-box table th,
+		.tbl-wrap .tbl-box table td {white-space:nowrap;}
+		.tbl-wrap .tbl-box table th i {display:inline-flex;margin-left:.4rem;cursor:pointer;}
+		.tbl-wrap .tbl-box .on {background-color:var(--yr50);color:var(--yr500);}
+		.tbl-wrap .tbl-box table tr td {height:6rem;}
+		.tbl-wrap .tbl-box table .border-l {border-left:1px solid var(--gray200);}
+	</style>
 </head>
 
 <body>
-	
-
-
-    
-    
-    
-
-
-    
-    <div style="position:relative">
-		<img src="https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2022/03/16/2321/CJUGH-P039-Exterior-Wide-View.jpg/CJUGH-P039-Exterior-Wide-View.16x9.jpg" style="position:absolute;top:0%;left:0%;width:100%;height:100%;z-index:-1;object-fit:cover">
-	
-		
-		<div style="background-color:rgba(255, 255, 255, 0.9);max-width:800px;margin:20px auto;padding:20px;box-shadow:0 0 10px rgba(0, 0, 0, 0.1);border-radius:10px;position:relative;text-align:center">
-			<div style="padding:10px 0">
-				<img src="https://www.understandinganimalresearch.org.uk/application/files/thumbnails/page_alt_one/3317/0627/2346/Screen_Shot_2024-01-26_at_12.31.07_PM.png" style="height:150px">
-			</div>
-			<div style="padding:20px">
-				<h2 style="color:#333">KIT 연구원분들을 동물학회 2024 추계 학술대회에 초대합니다</h2>
-				<p style="color:#333;line-height:1.6">안녕하세요,</p>
-				<p style="color:#333;line-height:1.6">동물학회는 동물 복지와 건강을 위한 연구와 정보를 제공하는 학술 단체입니다.</p>
-				<p style="color:#333;line-height:1.6">동물학회 2024 추계 학술대회에 초대하여 다양한 연구와 정보를 공유하고자 합니다.</p>
-				<br>
-				<h3 style="color:#333;line-height:1.6">동물학회 2024 추계 학술대회 일정 및 장소</h3>
-				<h4 style="color:#333;line-height:1.6">일정: 9월 23일(월) ~ 25일(수)</h4>
-				<h4 style="color:#333;line-height:1.6">장소: 제주도 Hiyatt 호텔</h4>
-				<br>
-				<p style="color:#333;line-height:1.6">아래 버튼을 클릭하여 학회 페이지로 이동하실 수 있습니다.</p>
-				<br>
-				<div style="margin:20px 0">
-					<a href="{{.URL}}" style="background-color:#007bff;color:#ffffff;padding:10px 20px;border-radius:5px;font-size:16px">학회 페이지로 이동</a>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<main id="contents">
+				<div class="layout" id="s2iZone">
+					<div class="contents">
+						<div class="title desktop short">
+							<h2>선수기록</h2>
+						</div>
+						<!-- 1차 스탯 -->
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>1차 스탯<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button></h3>
+								<div class="page-option">
+									<button title="용어 설명 팝업 열기" class="mobile">
+										<i class="ic-help"></i>
+									</button>
+									<button title="가로 보기 팝업 열기" class="mobile">
+										<i class="ic-horiz"></i>
+									</button>
+									<div class="view-tab">
+										<input type="radio" name="view" id="all" title="선택됨" checked=""><label for="all">전체</label>
+										<input type="radio" name="view" id="compare"><label for="compare">비교</label>
+									</div>
+									<div class="page desktop">
+										<div>
+											<p>Page</p><select>
+												<option>1</option>
+											</select><span>of 5</span>
+										</div>
+										<div>
+											<button title="이전 페이지"><i class="ic-arrow-left-24"></i></button>
+											<button title="다음 페이지"><i class="ic-arrow-right-24"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-100 record-tbl">
+								<div class="tbl-wrap">
+									<div class="tbl-box" style="margin-top: auto;">
+										<table>
+											<thead>
+												<tr>
+													<th rowspan="2" colspan="2">No</th>
+													<th rowspan="2" style="height: 8rem;">Name</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="selection">*</td>
+													<td class="no">9</td>
+													<td class="name">숀 데이브 일데폰소</td>
+												</tr>
+												<tr>
+													<td class="selection">*</td>
+													<td class="no">12</td>
+													<td class="name">문정현</td>
+												</tr>
+												<tr>
+													<td colspan="3">합계</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="top-scroll-table tbl-box">
+										<table>
+											<thead>
+												<tr>
+													<th rowspan="2" style="border-left: 1px solid var(--gray200);">MIN</th>
+													<th rowspan="2">Pts</th>
+													<th colspan="2">2PT</th>
+													<th colspan="2">3PT</th>
+													<th colspan="2">FG</th>
+													<th colspan="2">FT</th>
+													<th colspan="3">REB</th>
+													<th rowspan="2">DK</th>
+													<th rowspan="2">AST</th>
+													<th rowspan="2">TO</th>
+													<th rowspan="2">Stl</th>
+													<th rowspan="2">BS</th>
+													<th rowspan="2">PF</th>
+													<th rowspan="2">FO</th>
+													<th rowspan="2">PP</th>
+												</tr>
+												<tr>
+													<th>M/A</th>
+													<th>%</th>
+													<th>M/A</th>
+													<th>%</th>
+													<th>M/A</th>
+													<th>%</th>
+													<th>M/A</th>
+													<th>%</th>
+													<th>OR</th>
+													<th>DR</th>
+													<th>TOT</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>37:3</td>
+													<td>17</td>
+													<td>4/6</td>
+													<td>66.7</td>
+													<td>3/6</td>
+													<td>50.0</td>
+													<td>7/12</td>
+													<td>58.3</td>
+													<td>0/0</td>
+													<td>0</td>
+													<td>1</td>
+													<td>9</td>
+													<td>10</td>
+													<td>0</td>
+													<td>4</td>
+													<td>1</td>
+													<td>1</td>
+													<td>0</td>
+													<td>3</td>
+													<td>2</td>
+													<td>4</td>
+												</tr>
+												<tr>
+													<td>20:38</td>
+													<td>10</td>
+													<td>5/10</td>
+													<td>50.0</td>
+													<td>0/3</td>
+													<td>0.0</td>
+													<td>5/13</td>
+													<td>38.5</td>
+													<td>0/0</td>
+													<td>0</td>
+													<td>5</td>
+													<td>5</td>
+													<td>10</td>
+													<td>0</td>
+													<td>3</td>
+													<td>3</td>
+													<td>0</td>
+													<td>0</td>
+													<td>4</td>
+													<td>2</td>
+													<td>5</td>
+												</tr>
+												<tr>
+													<td style="border-left: 1px solid var(--gray200);">200:00</td>
+													<td>84</td>
+													<td>27/49</td>
+													<td>55.1</td>
+													<td>9/30</td>
+													<td>30.0</td>
+													<td>36/79</td>
+													<td>45.6</td>
+													<td>3/4</td>
+													<td>75.0</td>
+													<td>14</td>
+													<td>37</td>
+													<td>51</td>
+													<td>1</td>
+													<td>20</td>
+													<td>14</td>
+													<td>5</td>
+													<td>3</td>
+													<td>23</td>
+													<td>15</td>
+													<td>23</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<br>
-				<p style="color:#333;line-height:1.6">여러분의 많은 참여 부탁드립니다.</p>
-				<p style="color:#333;line-height:1.6">감사합니다.</p>
-				<p style="color:#333;line-height:1.6">동물학회 드림</p>
-			</div>
-			<div style="padding:10px 0;color:#999;font-size:12px">
-				<p>동물학회 © 2024</p>
-			</div>
+			</main>
 		</div>
-		</div>
-	
-	
-	
-	
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
 </body>
 </html>
