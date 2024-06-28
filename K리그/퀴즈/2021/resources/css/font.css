@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'campton';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/Campton-BoldItalic.eot');
+  src: url('../font/Campton-BoldItalic.eot?#iefix') format('embedded-opentype'), url('../font/Campton-BoldItalic.woff') format('woff');
+}
+
+@font-face {
+  font-family:'gmarket';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/GmarketSansMedium.eot');
+  src: url('../font/GmarketSansMedium.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansMedium.woff') format('woff');
+}
+@font-face {
+  font-family:'gmarket';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/GmarketSansBold.eot');
+  src: url('../font/GmarketSansBold.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansBold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPub_Dotum_Pro_Light.eot');
+  src: url('../font/KoPub_Dotum_Pro_Light.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Light.woff') format('woff');
+}
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPub_Dotum_Pro_Medium.eot');
+  src: url('../font/KoPub_Dotum_Pro_Medium.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPub_Dotum_Pro_Bold.eot');
+  src: url('../font/KoPub_Dotum_Pro_Bold.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'kopubworld';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPubWorld_Dotum_Pro_Medium.eot');
+  src: url('../font/KoPubWorld_Dotum_Pro_Medium.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorld_Dotum_Pro_Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'kopubworld';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPubWorld_Dotum_Pro_Bold.eot');
+  src: url('../font/KoPubWorld_Dotum_Pro_Bold.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorld_Dotum_Pro_Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumBarunGothic.eot');
+  src: url('../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothic.woff') format('woff');
+}
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumBarunGothicBold.eot');
+  src: url('../font/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicBold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'neodgm';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/neodgm.eot');
+  src: url('../font/neodgm.eot?#iefix') format('embedded-opentype'), url('../font/neodgm.woff') format('woff');
+}
+
+@font-face {
+  font-family:'hy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/HeyNovember.eot');
+  src: url('../font/HeyNovember.eot?#iefix') format('embedded-opentype'), url('../font/HeyNovember.woff') format('woff');
+}

@@ -1,0 +1,163 @@
+﻿@charset "utf-8";
+
+/* default */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, input, p, table, th, td {margin:0; padding:0;}
+table {border-collapse:collapse; border-spacing:0;}
+ol, ul {list-style:none;}
+a {color:#767779; text-decoration:none;}
+em {font-style:normal;}
+img {border:0;}
+hr {display:none;}
+
+/* */
+body {color:#000; font-size:12px; font-family:"맑은 고딕", dotum, "돋움", "arial", "helvetica"; line-height:16px;}
+#edit {padding:0px 10px 0px 10px;}
+
+.headtxt {text-align:center; font-weight:bold; color:Black; padding-bottom:5px; padding-top:5px;font-size:18px;}
+.line {border-top:1px dashed #000; margin-top:-2px; padding-bottom:3px;}
+
+.headtable {font-weight:bold; color:Black; padding-bottom:5px; padding-top:5px;font-size:18px;}
+
+/*.titArea {position:relative; padding:0px 10px 10px 105px; border:1px solid #bbb; text-align:center; background-color:#dbe5f1;}*/
+/*.titArea {position:relative; padding:0px 10px 10px 105px; border:1px solid #bbb; text-align:center; background-color:#264E90;}*/
+.titArea {position:relative; padding:5px; border:1px solid #bbb; text-align:center; background-color:#264E90;}
+/*.titArea h1 {color:#333; font-size:14px;}*/
+.titArea h1 {color:#FFFFFF; font-size:14px;}
+.titArea h1 img {float:left; left:15px; top:3px;}
+.titArea p img{position:absolute; right:15px; top:3px;}
+.titArea address {padding-top:5px; font-style:normal; color:#FFFFFF;}
+.titArea .tit_logo,
+.titArea .right_img,
+.titArea .gameinfo{display:inline-block;}
+.titArea .tit_logo,
+.titArea .right_img{width:15%;height:140px;}
+.titArea .tit_logo img{width:85%;margin-top:5%;}
+.titArea .right_img img{width:65%;}
+.titArea .gameinfo{width:48%;}
+.titArea .tit_logo{float:left;}
+.titArea .right_img{float:right;}
+/*.infoArea {margin-bottom:-15px; padding:10px; border:1px solid #bbb; border-top:0; text-align:center;}*/
+.infoArea {margin-bottom:25px; padding:10px; border:1px solid #bbb; border-top:0; text-align:center;}
+.infoArea p {padding-top:5px;}
+.infoArea.lite {padding:8px 0;margin-bottom:12px;}
+.infoArea.lite p {padding-top:0;font-size:12px;}
+
+/*.infoArea strong {color:#333; font-size:14px; font-weight:bold;}*/
+
+
+
+/*.tbl {width:100%; margin-bottom:20px;}*/
+
+.tbl {width:100%; margin-bottom:7px;}
+.tbl th {padding:2px 0; border:1px solid #333; color:#333;font-size:12px;vertical-align:middle;}
+.tbl .subtitle {padding:2px 0; border:1px solid #bbb; color:#333; background-color:#264E90}
+.tbl th img{text-align:center;vertical-align:middle;} /* 2017-03-29 yeeun, .tbl th img{margin-right:20px;}*/
+.tbl td img{text-align:center;}
+.tbl .tit {position:relative; text-align:left; text-indent:10px;}
+.tbl .tit .tip {position:absolute; right:10px; top:0; font-weight:normal;}
+.tbl td.infoT {color:#333;}
+.tbl td.infoT strong {display:block; padding:3px 0; font-size:14px;}
+.tbl td.txts {padding-left:10px; padding-right:10px; text-align:left;}
+.tbl td.subD{background-color:#fff; font-size:0; line-height:0; height:1px;border-bottom:1px solid #000 !important;}
+.tbl .list li {float:left; margin-right:10px;}
+.tbl .row3 li {width:32%; margin-right:1%;}
+.tbl tfoot th, .cke_editable table tfoot th{border-bottom:1px solid #000 important;}
+.tbl tfoot td{border:1px solid #000 !important;}
+.tbl .line-2 td {height:42px;}
+.tbl .line-3 td {height:65px;}
+.tbl .line-4 td {height:87px;}
+
+/*.row2 {overflow:hidden; margin-bottom:20px;}*/
+.row2 {overflow:hidden; margin-bottom:25px;}
+/*.row2 .tbl {float:left; width:49%; margin-bottom:0;}*/
+
+.row2 .tbl {float:left; margin-bottom:0;}
+.row2 .tbl:first-child {margin-right:2%;}
+
+.cke_editable table,
+.cke_editable_themed table,
+.cke_contents_ltr table { border-collapse: collapse; border-spacing: 0; }
+
+.cke_editable table,
+.cke_editable table th,
+.cke_editable_themed table,
+.cke_editable_themed table th,
+.cke_contents_ltr table,
+.cke_contents_ltr table th{ border:1px solid #000 !important; }
+/*.cke_contents_ltr table td { border-color: #bbb !important; border-style: solid !important; }*/
+
+.cke_editable table, .tbl.cke_show_border table{border:1px solid #000 !important;}
+
+ /* td 가로,세로 모두 없는 경우 (전체일괄적용) */
+/*
+.tbl td {height:18px; padding:4px 0; border:1px solid #fff; text-align:center;border-width:0;}
+.cke_show_borders table.cke_show_border > tbody > tr > td{border:1px solid #fff !important;border-width:0 !important;}
+.tbl th {border-width:1px 0 !important; text-align:center;}
+.cke_show_borders table.cke_show_border > table > tr > th{border-width:1px 0 !important;}
+*/
+
+/* td 가로,세로 모두 있는 경우 (전체일괄적용) */
+.tbl td {height:18px; padding:2px 0; border:1px solid #000 !important; text-align:center;font-size:11px;vertical-align:middle;}
+.cke_show_borders table.cke_show_border > tbody > tr > td{border-bottom:1px solid #000 !important;font-size:11px;}
+
+.cke_editable table th, .tbl.cke_show_border table th, .cke_show_borders table.cke_show_border > tbody > tr > th{border-top:1px solid #000 !important;font-size:11px;}
+.tbl table tr.data_last th, .tbl table tr.data_last td{border-top:1px solid #000 !important;font-size:11px;}
+
+.tbl .subT th,
+.tbl th.subT,
+.cke_editable table th.subT,
+.tbl.cke_show_border table th.subT,
+.cke_show_borders table.cke_show_border > tbody > tr > th.subT{background-color:#264E90;color:#fff;border-bottom:3px double #000 !important;font-size:12px !important;}
+.tbl th.sp {background-color:#fff;color:#000;border:1px solid #000 !important;font-size:11px !important;}
+
+/* 헤더, 데이터 세로줄 없고 가로줄 있는 경우 */
+/* 
+.tbl th.bd_none, .tbl td.bd_none{border-width:1px 0 !important;border-color:#000 !important;}
+ */
+
+/* 데이터 세로줄 있고 가로줄 없는 경우 */
+/* 
+.cke_show_borders table.cke_show_border > tbody > tr > td.bd_be{border-width:0 1px !important;border-color:#000 !important;}
+ */
+
+/* 헤더&데이터 왼쪽세로줄만 있는 경우 */
+/* .cke_editable table th.bd_none_type2, .tbl th.bd_none_type2, .tbl td.bd_none_type2, .cke_show_borders table.cke_show_border > tbody > tr > td.bd_none_type2,
+.cke_show_borders table.cke_show_border > tbody > tr > th.bd_none_type2
+{border-width:0 0 0 1px !important;border-color:#000 !important;}
+*/
+
+/* 데이터 가로,세로 없는 경우 */
+/* 
+.tbl td.bd_none_type3{border-width:0 !important;}
+ */
+
+/* 헤더&데이터 오른쪽 세로줄만 있는 경우 */
+/* 
+.tbl th.bd_none_type4, .tbl td.bd_none_type4, .cke_show_borders table.cke_show_border > tbody > tr > td.bd_none_type4{border-width:0 1px 0 0 !important;border-color:#000 !important;}
+ */
+
+/* 헤더&데이터 오른쪽 세로줄만 없는 경우 */
+/* 
+.tbl th.bd_none_type5, .tbl td.bd_none_type5, .cke_show_borders table.cke_show_border > tbody > tr > td.bd_none_type5{border-width:1px 0 1px 1px !important;border-color:#000 !important;}
+ */
+
+
+/* lite ver */
+.over-hid {overflow:hidden}
+.posi-rel {position:relative;}
+.fl {float:left;}
+.fr {float:right;}
+.in-pic {box-sizing:border-box}
+.in-pic img {width:74px;}
+.footer-box {width:100%;}
+.footer-box img {width:100%;}
+.fixed {table-layout:fixed}
+
+@media print {
+    * {font-size:8px !important;}
+    .infoArea {margin-bottom:10px !important;/*background:green*/}
+    .in-pic img {width:70px}
+/*    .test {background:gray;}
+    .test tr th {background:pink}
+    .test tr td {height:auto;background:orange}*/
+}

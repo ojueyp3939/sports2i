@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/* common */
+* {box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+html, body {}
+body {position:relative;width:100%;}
+#wrap {position:relative;margin-bottom:-143px;background:#fff;}
+
+/* 헤더 */
+header {width:100%;}
+header .logo {width:237px;margin:0 auto 0;padding:11px 0 20px;}
+header #gnb {}
+header #gnb .menu {overflow:hidden;position:relative;}
+header #gnb .menu:after {content:"";display:block;position:absolute;bottom:0;width:100%;border-bottom:1px solid #a9a9a9;}
+header #gnb li {float:left;width:33.3%;text-align:center;}
+header #gnb li a {width:100%;font-size:1.6rem;font-weight:100;color:#888;text-align:center;}
+header #gnb li.on a, header #gnb li:hover a {display:inline-block;position:relative;padding-bottom:7px;font-weight:400;color:#0d378e;border-bottom:2px solid #0d378e;z-index:10;}
+
+#container {padding-top:6px;background:#ebebeb;}
+#contents {background:#fff;}
+
+
+
+/* media query */
+@media(max-width:320px){
+	
+}

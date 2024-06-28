@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/mysolpick.css" />
+	<script>
+		$(document).ready(function () {
+			var swiper = new Swiper('.swiper-menu', {
+				slidesPerView: 'auto',
+				freeMode: true,
+				mousewheel: true,
+			});
+		});
+	</script>
+</head>
+
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="../index_q1.html">쏠픽하기</a></li>
+					<li><a href="../SolGuide/쏠쏠한가이드.html">쏠쏠한 가이드</a></li>
+					<li class="on"><a href="../MySol/My쏠픽.html">MY 쏠픽</a></li>
+					<li><a href="../Rank/월간랭킹.html">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container" class="post">
+			<!-- contents -->
+			<div id="contents" class="my-solpick">
+				<!-- 참여 무 -->
+				<div class="rate-graph no-data">
+					<div class="no-pick">
+						쏠픽에 참여하면 나의 쏠픽 분석 그래프를<br />확인하실 수 있습니다.
+					</div>
+				</div>
+				<div class="swiper-container swiper-menu">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide-active">
+							<ul class="month-list">
+								<li><a href="#none">1월</a></li>
+								<li><a href="#none">2월</a></li>
+								<li class="on"><a href="#none">3월</a></li>
+								<li class="off"><a href="#none">4월</a></li>
+								<li class="off"><a href="#none">5월</a></li>
+								<li class="off"><a href="#none">6월</a></li>
+								<li class="off"><a href="#none">7월</a></li>
+								<li class="off"><a href="#none">8월</a></li>
+								<li class="off"><a href="#none">9월</a></li>
+								<li class="off"><a href="#none">10월</a></li>
+								<li class="off"><a href="#none">11월</a></li>
+								<li class="off"><a href="#none">12월</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="info-box">
+					<ul>
+						<li class="info">
+							<div>
+								<p class="tit">랭킹</p>
+								<p class="num">253 <span>등</span></p>
+							</div>
+						</li>
+						<li class="info">
+							<div>
+								<p class="tit">pick</p>
+								<p class="num">3,000 <span>p</span></p>
+							</div>
+						</li>
+						<li class="info">
+							<div>
+								<p class="tit">참여횟수</p>
+								<p class="num">30 <span>회<span></p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="gift-box">
+					<p class="txt1">월간 랭킹 TOP 100에 도전하세요!</p>
+					<p class="txt2">PICK만 잘해도 쏠쏠한 선물이~!</p>
+					<a href="#none" class="btn-gift">선물 보러가기 ></a>
+				</div>
+				<div class="history">
+					<h3>쏠픽 <span>HISTORY</span></h3>
+					<!-- 참여기록 무 -->
+					<div class="no-histroy">
+						참여기록이 없습니다.
+					</div>
+				</div>
+				<div class="no-participation">
+					<dl class="txt">
+						<dt>쏠픽 <span>미참여</span> 고객이십니다.</dt>
+						<dd>참여하신 쏠픽 정답 발표 후<br /> 나의 쏠픽 참여도, 분석 그래프 등을<br /> 확인하실 수 있습니다.</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

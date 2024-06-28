@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/record.css" />
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#TeamRecord',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+			var myScroll2 = new IScroll('#TopPlayer',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+			var myScroll3 = new IScroll('#PlayerRank .record-area',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+      var myScroll4 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+		}
+	</script>
+</head>
+ <body onload="loaded()">
+  <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header>
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li><a href="../highlight/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+			<a href="javascript:;" class="btn-home"><img src="../resources/images/common/btn_home.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<ul class="select-area">
+					<li class="year">
+						<select name="year" class="year-info">
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+						</select>
+					</li>
+					<li class="season">
+						<select name="season" class="year-info">
+							<option value="정규시즌">정규시즌</option>
+							<option value="시범경기">시범경기</option>
+						</select>
+					</li>
+				</ul>
+
+				<div class="tab-area">
+					<ul class="tab-record">
+						<li><a href="record_1.html">타자</a></li>
+						<li class="on"><a href="record_2.html">투수</a></li>
+						<li><a href="record_3.html">수비</a></li>
+						<li><a href="record_4.html">주루</a></li>
+					</ul>
+				</div>
+
+				<div id="TeamRecord" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="team-list">
+							<li class="total"><a href="#">리그전체</a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_KT.png" alt="" /> <span>KT</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>두산</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>SK</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>넥센</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>KIA</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>삼성</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>롯데</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>LG</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>한화</span></a></li>
+							<li><a href="#"><img src="../resources/images/emb/emb_64x52_HH.png" alt="" /> <span>NC</span></a></li>
+						</ul>
+					</div>
+				</div>
+
+				<h2 class="tit">TOP PLAYER</h2>
+				<div  id="TopPlayer" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="top-list">
+							<li class="player">
+								<div class="record-list">승리</div>
+								<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+								<div class="team-player"><span>LG</span> 김현수현수</div>
+								<div class="record">0.432</div>
+							</li>
+							<li class="player">
+								<div class="record-list">평균자책점</div>
+								<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+								<div class="team-player"><span>넥센</span> 박병호</div>
+								<div class="record">44</div>
+							</li>
+							<li class="player">
+								<div class="record-list">탈삼진</div>
+								<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+								<div class="team-player"><span>두산</span> 김재환</div>
+								<div class="record">133</div>
+							</li>
+							<li class="player">
+								<div class="record-list">세이브</div>
+								<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+								<div class="team-player"><span>LG</span> 김현수</div>
+								<div class="record">0.432</div>
+							</li>
+							<li class="player">
+								<div class="record-list">이닝</div>
+								<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+								<div class="team-player"><span>LG</span> 김현수</div>
+								<div class="record">0.432</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<h2 class="tit">선수순위</h2>
+				<div  id="PlayerRank" class="scroll-wrap player-ranking">
+					<div class="tit-area">
+						<div class="tit">순위</div>
+						<ul class="list">
+							<li class="no1">
+								<span class="rank">1</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">10</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">20</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">30</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">40</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">33</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+							<li>
+								<span class="rank">39</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li><li>
+								<span class="rank">50</span>
+								<span class="emb"><img src="../resources/images/emb/emb_42x34_HH.png" alt="" /></span>
+								<span class="name">김현수현수</span>
+							</li>
+						</ul>
+					</div>
+					<div class="record-area">
+						<div class="scroller">
+							<div class="tbl-area">
+								<table class="tbl">
+									<colgroup>
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+										<col width="5.556%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="sort">평균자책점</th>
+											<th>경기수 </th>
+											<th>이닝</th>
+											<th>안타</th>
+											<th>승</th>
+											<th>패</th>
+											<th>세이브</th>
+											<th>홀드</th>
+											<th>탈삼진</th>
+											<th>피안타</th>
+											<th>피홈런</th>
+											<th>실점</th>
+											<th>볼넷</th>
+											<th>사구</th>
+											<th>승률</th>
+											<th>WHIP</th>
+											<th>WPA</th>
+											<th>WAR</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+										<tr>
+											<td class="sort">9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+											<td>9.000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+ </body>
+
+</html>

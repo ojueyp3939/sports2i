@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />		
+	<link rel="stylesheet" type="text/css" href="../resources/css/product.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// 킬러컨텐츠_슬라이드
+			var mc_Swiper = new Swiper('.product-slider', {				
+				grabCursor: true,
+				centeredSlides: true,
+				freeMode: true,
+				spaceBetween:0,
+				autoplay: 3000,
+				autoplayDisableOnInteraction: false,
+				pagination: {el: '.swiper-pagination',clickable: true}
+			});
+
+			var swiper = new Swiper('.swiper-scroll', {
+				//direction: 'vertical',
+				slidesPerView: 'auto',
+				freeMode: true,
+				mousewheel: true,
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- aside -->
+	<aside>
+		<nav id="navAll">
+			<div class="navdep1 nav-league ">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_league.png" alt="" /></span>KBO 리그</a></h2>
+				<ul class="navdep2"> 
+					<li><a href="#none">경기일정/결과</a></li>
+					<li><a href="#none">팀순위</a></li>
+					<li><a href="#none">선수순위</a></li>
+					<li class="event">
+						<a href="#none">
+							<span>EVENT</span>퀴즈 풀면 쏠쏠하다!<br />쏠픽!
+						</a>
+					</li>
+					<li><a href="#none">가성비</a></li>
+					<li><a href="#none">팟캐스트</a></li>
+					<li><a href="#none">하이라이트</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-product">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_product.png" alt="" /></span>KBO 상품</a></h2>
+				<ul class="navdep2">
+					<li><a href="#none">예금</a></li>
+					<li><a href="#none">적금</a></li>
+					<li><a href="#none">대출</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-sol">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_sol.png" alt="" /></span>쏠픽</a></h2>
+			</div>
+			<div class="navdep1 nav-mvp">	
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_mvp.png" alt="" /></span>월간 MVP</a></h2>
+				<ul class="navdep2">
+					<li><a href="#none">월간 랭킹</a></li>
+					<li><a href="#none">MVP 투표하기</a></li>
+					<li><a href="#none">MVP 결과</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-event">					
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_event.png" alt="" /></span>이벤트</a></h2>
+			</div>
+		</nav>
+		<div class="banner"><a href="javascript:;">배너영역</a></div>
+	</aside>
+	<!-- // aside -->
+	<!-- wrap -->
+	<div id="wrap">		
+		<!-- header -->
+		<header>	
+			<h1 class="tit"><a href="#none">신한 BASEBALL PARK</h1>
+			<a href="#none" class="btn-aside">
+				<span class="menu-icon ">
+					<span class="menu-line menu-line1"></span>
+					<span class="menu-line menu-line2"></span>
+					<span class="menu-line menu-line3"></span>
+				</span>
+			</a>	
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="javascript:;">KBO 리그</a></li>
+					<li class="on"><a href="javascript:;">KBO 상품</a></li>
+					<li><a href="javascript:;">쏠픽</a></li>
+					<li><a href="javascript:;">월간 MVP</a></li>
+					<li><a href="javascript:;">이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr /> 		
+		<!-- container -->
+		<div id="container">			
+			<!-- contents -->
+			<div id="contents" class="saving installment">	
+				<div class="swiper-container product-slider">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide"><a href="#none"><img src="../resources/images/sub/img_product_banner.jpg" alt="" /></a></li>
+						<li class="swiper-slide"><a href="#none"><img src="../resources/images/sub/img_product_banner.jpg" alt="" /></a></li>
+						<li class="swiper-slide"><a href="#none"><img src="../resources/images/sub/img_product_banner.jpg" alt="" /></a></li>
+					</ul>							
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="tab-area tab-depth1">
+					<ul class="tab tab3">
+						<li><a href="#none">예금</a></li>
+						<li class="on"><a href="#none">적금</a></li>
+						<li><a href="#none">대출</a></li>
+					</ul>
+				</div>
+				<div class="product-info">
+					<h3>신한 KBO 리그 정기 적금</h3>
+					<p class="txt">‘적금 가입자수’와 ‘시즌 성적’에 따라 금리우대 혜택 제공!</p>
+					<h4 class="top-rate">최고 금리 <strong>연 3.40%</strong></h4>
+					<div class="rate-info">
+						<dl class="basic">
+							<dt>기본금리</dt>
+							<dd>연 1.50%</dd>
+						</dl>
+						<dl class="special">
+							<dt>우대금리</dt>
+							<dd>
+								<ul>
+									<li>2018년 6월 30일 이전 가입 시 연 0.10%</li>
+									<li>가입자수 1만좌 돌파 시 1만좌 당 연 0.10%</li>
+									<li>정규시즌 최종승률에 따라 최대 연 1.00%</li>
+									<li>포스트시즌 진출 시 연 0.10%</li>
+									<li>한국시리즈 진출 시 연 0.10%</li>
+									<li>한국시리즈 우승 시 연 0.10%</li>
+								</ul>
+							</dd>
+						</dl>						
+					</div>	
+					<p class="notice"><span class="ico"><img src="../resources/images/sub/ico_notice.gif" alt="" /></span><span class="txt">우대금리는 가입한 구단에 한해 적용됩니다.</span></p>
+				</div>
+				<h4 class="tit-teamrank">2018 시즌 순위</h4>
+				<div class="swiper-container swiper-scroll">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<ul class="team-ranking">
+								<li class="top">
+									<dl>
+										<dt>1위</dt>
+										<dd class="team"><img src="../resources/images/emb/embL_OB.png" alt="" /></dd>
+										<dd class="rate">예상 금리<br /><span>연 2.30%</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>2위</dt>
+										<dd class="team"><img src="../resources/images/emb/embL_SK.png" alt="" /></dd>
+										<dd class="rate">예상 금리<br /><span class="rate">연 2.30%</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>3위</dt>
+										<dd class="team"><img src="../resources/images/emb/embL_HH.png" alt="" /></dd>
+										<dd class="rate">예상 금리<br /><span class="rate">연 2.30%</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>4위</dt>
+										<dd class="team"><img src="../resources/images/emb/embL_HT.png" alt="" /></dd>
+										<dd class="rate">예상 금리<br /><span class="rate">연 2.30%</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>5위</dt>
+										<dd class="team"><img src="../resources/images/emb/embL_LG.png" alt="" /></dd>
+										<dd class="rate">예상 금리<br /><span class="rate">연 2.30%</span></dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="btn-area">
+					<a href="#none" class="btn">가입하러 가기</a>
+				</div>
+				<div class="event-banner">
+					<img src="../resources/images/sub/img_event_banner.jpg" alt="" />
+				</div>
+			</div>			
+			<!-- // contents -->			
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->	
+</body>
+</html>

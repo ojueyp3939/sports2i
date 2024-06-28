@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">		
+			<div class="tit-area">
+				<div class="tit-area">
+					<div class="inner">
+						<h2>심판 평가</h2>
+					</div> 
+				</div>
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>심판 행동강령 평가표</a></span></li>
+					<li><a href="#none"><span>심판 종합평가표</a></span></li>
+				</ul>
+			</div>
+			<div class="sub-choice">
+				<p>1. 연도 선택</p>
+				<div>
+					<select>
+						<option>연도</option>
+					</select>
+				</div>
+				<p>2. 월 선택</p>
+				<div>
+					<select>
+						<option>월</option>
+					</select>
+				</div>
+				<p>3. 보고서 항목 선택</p>
+				<div>
+					<a class="on" href="">심판위원장 > 심판팀장평가</a>
+					<a href="">심판위원장 > 심판팀원평가</a>
+					<a href="">심판팀장 > 심판팀원평가</a>
+				</div>
+				<p>4. 피평가자 선택</p>
+				<div>
+					<select>
+						<option>심판명</option>
+					</select>
+					<button>검색</button>
+				</div>
+			</div>
+			<div class="download-box in-subchoice">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap">
+				<h3 class="sub-title">행동강령 평가표(3) - 심판팀장용</h3>
+			</div>
+			<div class="report-wrap">
+				<h4 class="mb5">행동강령 평가표(3)</h4>
+				<p class="sub-txt mb15">피평가자: 심판위원 홍길동</p>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="8%">
+						<col width="10%">
+						<col width="">
+						<col width="13%">
+						<col width="">
+					</colgroup>
+					<tr>
+						<th>구단</th>
+						<th>평가요소</th>
+						<th>평가항목</th>
+						<th>배점기준</th>
+						<th>점수</th>
+					</tr>
+					<tr>
+						<th rowspan="2">품위<br/>유지</th>
+						<td>
+							복장
+						</td>
+						<td class="txt-l">
+							▶ 구장내에서 항상 복장을 단정히 하고 경기 준비자세가 갖추어져 있는지 여부						 
+						</td>
+						<td>
+							우수(5점)<br/>보통(4~3점)<br/>미흡(2~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							언행
+						</td>
+						<td class="txt-l">
+							▶ 선수,감독 또는 코치에게 반말을 하거나 무례한 언사사용 여부<br/>
+							▶ 경기장내의 상황뿐만 아니라 경기외적인 상황에서 심판위원의 품위를 손상시키는 언행 여부
+						</td>
+						<td>
+							우수(15~11점)<br/>보통(10~5점)<br/>미흡(4~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th rowspan="3">청렴</th>
+						<td>
+							친목
+						</td>
+						<td class="txt-l">
+							▶ 심판실, 구단사무실 또는 구단버스에서 구단관계자와 환담을 나누거나 식사, 술자리등 친목적인 모임에 참석하는지 여부
+						</td>
+						<td>
+							우수(5점)<br/>보통(4~3점)<br/>미흡(2~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							청탁/편의
+						</td>
+						<td class="txt-l">
+							▶ 심판실로 구단관계자를 호출하거나 사적인 청탁 여부<br/>
+							▶ 구단관계자로부터 금품,향응 및 각종 편의를 제공받거나 요구하는 행위 여부
+						</td>
+						<td>
+							우수(15~11점)<br/>보통(10~5점)<br/>미흡(4~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							금전 관계							
+						</td>
+						<td class="txt-l">
+							▶ KBO에 속한 타 단체(팀)또는 구단관계자와 직, 간접적으로 금전 대차 혹은 대차의 보증을 서는 행위 여부
+						</td>
+						<td>
+							있음(0점)<br/>없음(10점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th rowspan="2">팀워크</th>
+						<td>
+							희생
+						</td>
+						<td class="txt-l">
+							▶ 개인의 편의보다 심판위원회의 발전을 위해 개인희생 노력 여부<br/>
+							▶ 조직의 화합과 단결을 위해 적극적으로 협조하고 팀분위기를 조정하여 팀워크 형성에 좋은 결과를 얻고자 하는 노력 여부
+						</td>
+						<td>
+							우수(15~11점)<br/>보통(10~5점)<br/>미흡(4~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							규율
+						</td>
+						<td class="txt-l">
+							▶ 규칙이나 지시명령을 잘 지키고 심판위원회내 질서유지 노력 여부
+						</td>
+						<td>
+							우수(15~11점)<br/>보통(10~5점)<br/>미흡(4~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th>열정</th>
+						<td>
+							자기 개발
+						</td>
+						<td class="txt-l">
+							▶ 스스로 자신의 부족한 점을 찾아내고 이를 개선하고자 시도하며 자기개발을 통해 심판기량을 향상시키고자 하는 노력 여부
+						</td>
+						<td>
+							우수(5점)<br/>보통(4~3점)<br/>미흡(2~1점)
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th rowspan="2">기타</th>
+						<td>
+							정확성
+						</td>
+						<td class="txt-l">
+							▶ 비디오 판독 외의 판정 정확성 여부
+						</td>
+						<td  rowspan="2">
+							우수(15~11점)<br/>보통(10~5점)<br/>미흡(4~1점)
+						</td>
+						<td  rowspan="2">
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							태도
+						</td>
+						<td class="border txt-l">
+							▶ 경기장에서의 태도
+						</td>
+					</tr>
+					<tr>
+						<th colspan="3">계</th>
+						<td>100점</td>
+						<td class="point-color">100점</td>
+					</tr>
+				</table>
+
+				<h4 class="mb15">기타사항</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="20%">
+						<col width="">
+					</colgroup>
+					<tr>
+						<th>비디오 판독 결과</th>
+						<td>
+							<textarea></textarea>
+						</td>
+					</tr>	
+					<tr>
+						<th>위원장 또는<br/>팀장의 의견</th>
+						<td>
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>평가일 : </th>
+							<td>
+								2022년 10월 10일(금요일)
+							</td>
+						</tr>
+						<tr>
+							<th>평가자 : </th>
+							<td>심판위원장 허운</td>
+						</tr>
+						<tr>
+							<th>피평가자 : </th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+				
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

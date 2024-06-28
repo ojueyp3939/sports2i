@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css" />
+	<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="../../resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="member-wrap">
+					<h1 class="in-tab">회원 정보 수정</h1>
+					<div class="line">
+						<ul class="tab tab2">
+							<li><a href="#none">비밀번호 변경</a></li>
+							<li class="on"><a href="#none">회원정보 변경</a></li>
+							<li><a href="#none">회원탈퇴</a></li>
+						</ul>
+					</div>
+					
+					<div class="tab-cont">
+						<p class="top-alert">
+							이전 신인지명 신청서 작성 내역이 있는 계정은 회원정보 수정 후 신청서 작성 바랍니다.<br/>회원정보가 일치하지 않는 경우 신청서 작성에 불이익이 있을 수 있습니다.
+						</p>
+						<dl>
+							<dt>휴대폰</dt>
+							<dd>
+								<select class="w80" id="selPhonFirst">
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="019">019</option>
+								</select>
+								<span>-</span>
+								<input type="number" class="w80" id="selPhonSecond" maxlength="4" onkeyup="maxLengthCheck(this);">
+								<span>-</span>
+								<input type="number" class="w80" id="selPhoneThird" maxlength="4" onkeyup="maxLengthCheck(this);">
+								<p class="alert blue">휴대폰 번호 미 입력 시, 임시 비밀번호를 제공받을 수 없습니다.</p>
+							</dd>
+						</dl>
+						<dl>
+							<dt>이메일</dt>
+							<dd>
+								<div class="mb10">
+									<input class="w80" type="text" id="txtEmailFirst">
+									<span>@</span>
+									<input class="w90 mr5" type="text" id="txtEmailSecond">
+									<select class="w90" id="selMailList">
+										<option value="">직접입력</option>
+										<option value="naver.com">naver.com</option>
+										<option value="gmail.com">gmail.com</option>
+										<option value="daum.net">daum.net</option>
+										<option value="nate.com">nate.com</option>
+										<option value="hanmail.net">hanmail.net</option>
+									</select>
+									<a href="#none" class="btn-confirm" id="btnMailConfirm">인증요청</a>
+								</div>
+								<input type="text" id="confirmNumber">
+								<a href="#none" class="btn-confirm" id="mailConfirmCk">인증확인</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>등록구분</dt>
+							<dd>
+								<select class="w160">
+									<option>1234</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								현소속
+								<p>(학교/실업팀)</p>
+							</dt>
+							<dd>
+								<input type="text" name="" id="txtElementarySchool" class="w160" readonly="readonly" disabled="disabled">
+								<a href="#" class="btn btn-blue" id="btnSearchElement" attr-schsc="1,4,8">검색</a>
+								<a href="#" class="btn btn-red" id="btnDeleteElement">삭제</a>
+							</dd>
+						</dl>
+						<dl>
+							<dt>투구타입</dt>
+							<dd>
+								<select class="w160">
+									<option>1234</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>지역</dt>
+							<dd>
+								<select class="w160">
+									<option>1234</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>포지션</dt>
+							<dd>
+								<select class="w160">
+									<option>1234</option>
+								</select>
+							</dd>
+						</dl>
+						<dl>
+							<dt>타격타입</dt>
+							<dd>
+								<select class="w160">
+									<option>1234</option>
+								</select>
+							</dd>
+						</dl>
+						
+						<div class="btn-wrap">
+							<a href="#none" class="submit">확인</a>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>
+
+<!-- <div class="modal">
+	<div id="popup" class="pop-wrap">
+		<a href="javascript:;" class="btn-close"><img src="../../resources/images/common/icon_close.png" alt="" /></a>
+		<div class="pop-cont">
+			비밀번호 변경이 완료되었습니다.
+		</div>
+		<div class="btn-wrap">
+			<a href="#none" class="btn">확인</a>
+		</div>
+	</div>
+</div> -->

@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.board {width:1920px;height:1080px;padding-top:1000px;background:url('../images/img/bg_score.png');background-position:bottom left;}
+.board .data {position:relative;}
+.board .data .inning {position:absolute;top:2px;left:348px;width:65px;height:40px;padding:0 24px 0 0;border-radius:2px;font-size:38px;color:#fff;font-family:'k';text-align:center;background:url('../images/img/inning_1.png') no-repeat;background-position:bottom left;letter-spacing:-1.5px;}
+.board .data .inning.bottom {background-image:url('../images/img/inning_2.png');}
+
+.board .score {position:absolute;top:-3px;left:420px;}
+.board .score span {float:left;font-size:36px;letter-spacing:-1.0px;}
+.board .score .team {width:80px;margin-top:10px;font-family:'gmarket';font-size:36px;color:#000;font-weight:700;}
+.board .score .num {width:46px;font-family:'k';font-size:45px;color:#000;vertical-align:sub;}
+.board .score .num.txt-l {margin-left:32px;}
+.board .score .team.long {letter-spacing:-4px;}
+
+.position {position:absolute;top:7px;left:744px;width:65px;height:31px;background:url('../images/img/base0.png');}
+.position.base1 {background:url('../images/img/base1.png');}
+.position.base12 {background:url('../images/img/base12.png');}
+.position.base13 {background:url('../images/img/base13.png');}
+.position.base123 {background:url('../images/img/base123.png');}
+.position.base2 {background:url('../images/img/base2.png');}
+.position.base23 {background:url('../images/img/base23.png');}
+.position.base3 {background:url('../images/img/base3.png');}
+
+.ball img {float:left;width:18px;height:18px;margin-right:7px;}
+.ball.b {position:absolute;top:15px;left:851px;height:100%;}
+.ball.s {position:absolute;top:15px;left:962px;height:100%;}
+.ball.o {position:absolute;top:15px;left:1052px;height:100%;}
+.count {position:absolute;top:12px;right:703px;min-width:64px;padding-right:32px;font-size:26px;color:#ccff00;font-weight:900;line-height:1;}
+.count img {position:absolute;top:2px;right:0;width:24px;height:23px;}

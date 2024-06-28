@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+html, body {position:relative;min-height:100%;}
+
+header {width:100%;text-align:center;background-color:#fff;border-bottom:1px solid #e5e5e5;}
+header #gnb .menu {position:relative;height:54px;white-space:nowrap}
+header #gnb .menu li {display:inline-block;padding:0 2vw;text-align:center;}
+header #gnb .menu li:first-child {padding-left:5vw}
+header #gnb .menu li:last-child {padding-right:5vw}
+header #gnb .menu li a {display:block;height:54px;text-align:center;}
+header #gnb .menu li a span {display:inline-block;height:54px;padding-top:17px;font-size:1.5rem;color:#858585;font-weight:400;letter-spacing:-1.0px;}
+header #gnb .menu li.on a span {position:relative;color:#c10a3a;font-weight:900;border-bottom:2px solid #c10a3a;z-index:1;}
+header #gnb .menu.post li:first-child a span {padding-top:8px;}
+@media (min-width:321px){
+	html {font-size:11px;}	
+}
+@media (max-width:280px){
+	html {font-size:8px;}
+}

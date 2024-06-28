@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/solpick.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/rank.css" />
+</head>
+<script>
+$(document).ready(function(){
+	
+});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">	
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li class="on"><a href="javascript:;">랭킹&이벤트</a></li>
+				</ul>
+			</nav>
+			<div class="tab-area">
+				<ul class="tab">
+					<li><a href="#none">월간랭킹</a></li>
+					<li class="on"><a href="#none">주간랭킹</a></li>
+					<li><a href="#none">이벤트</a></li>
+				</ul>	
+			</div>
+		</header>		
+		<!-- // header -->
+		<hr /> 
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="ranking-contents">
+				<div class="perfect">
+					<a href="#none"><img src="../resources/images/sub/event_banner_week.png" alt="" /></a>
+				</div>
+				<div class="date-select">
+					<a href="#none" class="btn-prev"><img src="../resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018년 6월 1주차</span>
+					<a href="#none" class="btn-next"><img src="../resources/images/common/btn_date_next.png" alt="" /></a>
+				</div>
+
+				<div class="ranking-area">
+					<div>
+						<span class="tit"><img src="../resources/images/sub/event_rank_title_week.png" alt="" /></span>
+						<span class="ranking-date">6월 20일까지의 랭킹 기준입니다.</span>
+					</div>
+					<div class="my-rank">
+						<div class="temper">
+							<span class="temp-my"></span>
+							<span class="temp-rate" style="width:60%;"></span>
+							<span class="temp-rate-def">
+								<span>1,234,567</span>
+								<span>point</span>
+							</span>
+							<span class="temp-circle-1"></span>
+							<span class="temp-crown"></span>
+							<span class="temp-circle-1-shadow"></span>
+							<span class="temp-circle-2"></span>
+							<span class="temp-circle-2-shadow"></span>
+						</div>
+						<div>현재 위치는? <span>2등급</span> (상위50%)</div>
+						<div>
+							<span><span>340</span>등</span>
+							<span></span>
+							<span><span>9,999,999</span>p</span>
+						</div>
+					</div>
+					<div class="top-rank">
+						<ul class="tit-list">
+							<li>랭킹</li>
+							<li>변동</li>
+							<li>point</li>
+							<li>예상 보상</li>
+						</ul>
+						<div class="tbl-type">
+							<table class="tbl">
+								<colgroup>
+									<col width="17%" />
+									<col width="26%" />
+									<col width="33%" />
+									<col width="24%" />
+								</colgroup>
+								<tbody>
+									<tr class="up">
+										<td><span>1</span>등</td>
+										<td>
+											<span>6</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_up.png" alt="" /></span>
+											<span>(+30)</span>
+										</td>
+										<td>1,234,567</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_1.png" /></span></td>
+									</tr>
+									<tr class="down">
+										<td><span>2</span>등</td>
+										<td>
+											<span>6</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_down.png" alt="" /></span>
+											<span>(+30)</span>
+										</td>
+										<td>1,123,456</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_2.png" /></span></td>
+									</tr>
+									<tr class="up">
+										<td><span>3</span>등</td>
+										<td>
+											<span>25</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_up.png" alt="" /></span>
+											<span>(+350)</span>
+										</td>
+										<td>1,112,345</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_2.png" /></span></td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- 주간랭킹 패키지형 -->
+							<table class="tbl rank-bundle">                                
+								<colgroup>
+									<col width="28%" />
+									<col width="48%" />
+									<col width="24%" />
+								</colgroup>
+								<tbody>
+                                    <tr>
+                                        <td><span>21</span>등 ~ <span>30</span>등</td>
+                                        <td>345,678 ~ 456.789</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_3.png" /></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span>31</span>등 ~ <span>100</span>등</td>
+                                        <td>123,456 ~ 234,567</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_4.png" /></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- 주간랭킹 리스트형 -->
+                            <table class="tbl rank-list">                                
+								<colgroup>
+									<col width="17%" />
+									<col width="26%" />
+									<col width="33%" />
+									<col width="24%" />
+								</colgroup>
+								<tbody>
+                                    <tr class="up">
+										<td><span>1</span>등</td>
+										<td>
+											<span>6</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_up.png" alt="" /></span>
+											<span>(+30)</span>
+										</td>
+										<td>1,234,567</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_1.png" /></span></td>
+									</tr>
+									<tr class="down">
+										<td><span>2</span>등</td>
+										<td>
+											<span>6</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_down.png" alt="" /></span>
+											<span>(+30)</span>
+										</td>
+										<td>1,123,456</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_2.png" /></span></td>
+									</tr>
+									<tr class="up">
+										<td><span>3</span>등</td>
+										<td>
+											<span>25</span>
+											<span><img src="../resources/images/sub/event_rank_arrow_up.png" alt="" /></span>
+											<span>(+350)</span>
+										</td>
+										<td>1,112,345</td>
+										<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_week_2.png" /></span></td>
+									</tr>
+                                </tbody>
+                            </table>							
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

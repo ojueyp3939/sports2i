@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../intro.html"><span>이용안내</span></a></li>
+					<li class="on"><a href="../prediction/prediction_경기전_참여전.html"><span>승리예측</span></a></li>
+					<li><a href="../mission/mission.html"><span>오늘의 미션</span></a></li>
+					<li><a href="../invite/invite.html"><span>초대</span></a></li>
+					<li><a href="../point/point.html"><span>포인트 내역</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="day-wrap">
+					<ul class="day-box">
+						<li class="day-tit">
+							<span class="date">2021</span>년 <span class="date">5</span>월 <span class="date">5</span>일 (금)
+						</li>
+					</ul>
+				</section>
+				<section class="blank-wrap"></section>
+
+				<section class="prediction-wrap">
+					<div class="time-info">
+						<img src="../resources/images/contents/icon_clock.png" alt="clock"><span>00 : 00</span>
+					</div>
+					<!-- case1-1 : 경기전 / 참여하기 후 (좌측팀 선택시) -->
+					<div class="game-box before attend SS">
+						<div class="top">
+							<ul>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+								<li class="center"> 
+									<span class="staus">전력분석</span>
+									<p class="txt">18:30 마산</p>
+								</li>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom choice-l">
+							<div class="rate-bg" style="width:90%;">
+								<input class="left-check" type="radio" id="left">
+								<label for="left" class="left-icon">90%</label>
+								<input class="right-check" type="radio" id="right">
+								<label for="right" class="right-icon">10%</label>
+							</div>
+						</div>
+					</div>
+					<!-- case1-2 : 경기전 / 참여하기 후 (우측팀 선택시) -->
+					<div class="game-box before attend HH">
+						<div class="top">
+							<ul>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+								<li class="center"> 
+									<span class="staus">전력분석</span>
+									<p class="txt">18:30 마산</p>
+								</li>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom choice-r">
+							<div class="rate-bg" style="width:40%;">
+								<input class="left-check" type="radio" id="left">
+								<label for="left" class="left-icon">40%</label>
+								<input class="right-check" type="radio" id="right">
+								<label for="right" class="right-icon">60%</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- case2-1 : 경기전 / 참여하기 후 (미선택) - 참여 시간 내 -->
+					<div class="game-box before no-attend">
+						<div class="top">
+							<ul>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+								<li class="center"> 
+									<span class="staus">전력분석</span>
+									<p class="txt">18:30 마산</p>
+								</li>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom">
+							미참여
+						</div>
+					</div>
+					<!-- case2-2 : 경기전 / 참여하기 후 (미선택) - 참여 마감 -->
+					<div class="game-box before no-attend timeover">
+						<div class="top">
+							<ul>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+								<li class="center">
+									<p class="txt">18:30 마산</p>
+								</li>
+								<li>
+									<img class="emb" src="../resources/images/emb/HH_n_s.png" alt="HH">
+									<p class="name">홍길동동동</p>
+									<p class="info">10승 0.51</p>
+								</li>
+							</ul>
+						</div>
+						<div class="bottom">
+							미참여
+						</div>
+					</div>
+				</section>
+
+				<section class="ment-box new">
+					<p class="tit">LG U+ 프로야구 승리예측 방법</p>
+					<div>
+						<p><span class="numbering">1.</span> KBO 리그 경기가 있는 날 참여 가능합니다.<br>
+						<p><span class="numbering">2.</span> 경기 리스트에서 홈/원정 팀 중 승리가 예상되는 팀을 선택해 주세요. (복수 경기 선택 가능)</p>
+						<p><span class="numbering">3.</span>  해당일의 첫 경기가 시작되기 <span class="point-color">10분 전</span> 까지 참여를 완료해 주세요. (마감 전 까지 수정 가능)</p>
+						<p><span class="numbering">4.</span> 참여한 경기가 취소 또는 서스펜디드 되는 경우 포인트는 지급되지 않습니다.</p>
+						<p><div class="depth">서스펜디드 된 경기는 추후 재 편성 시에도 해당 일자에 선택 및 정산에 포함되지 않습니다.</div></p>
+						<p><span class="numbering">5.</span> 더블헤더는 1, 2차전 모두 참여 가능합니다.</p>
+						<p><span class="numbering">6.</span> 참여한 경기가 무승부 처리된 경기는 예측 실패로 간주되어 포인트가 지급되지 않습니다.</p>
+					</div>
+					<p class="tit">예측 성공 시 획득 포인트</p>
+					<div>
+						<p><span class="numbering">-</span> 1경기당 <span class="point-color">100포인트</span> 획득</p>
+						<p><span class="numbering">-</span> 3경기 이상의 경기가 정상 종료 된 날 진행된 모든 경기 예측 성공 시 추가 <span class="point-color">500포인트</span> 획득</p>
+						<p><span class="numbering">-</span> 승리예측 포인트는 참여한 다음 날 새벽 지급됩니다.</p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

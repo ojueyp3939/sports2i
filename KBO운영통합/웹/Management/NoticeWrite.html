@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자관리</a></li>
+				<li class="on">
+					<a href="#none">시스템 관리</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>NOTICE 등록</h2>					
+				</div> 
+			</div>
+
+			<div class="tbl-board tbl-write mt60">
+				<table class="tbl">
+					<colgroup>
+						<col width="15%" />
+						<col width="*" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">구분</label></th>
+							<td>
+								<select name="" id="">
+									<option value="">구분</option>
+									<option value="">구분</option>
+									<option value="">구분</option>
+									<option value="">구분</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>리그</th>
+							<td>
+								<select name="" id="">
+									<option value="">구분</option>
+									<option value="">구분</option>
+									<option value="">구분</option>
+									<option value="">구분</option>
+								</select>
+							</td>							
+						</tr>
+						<tr>
+							<th>내용</th>
+							<td>
+								<textarea name="" id="" ></textarea>
+							</td>
+						</tr>
+						<tr>
+							<th>날짜</th>
+							<td>2018-01-22</td>
+						</tr>						
+					</tbody>						
+				</table>
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">등록</a>
+				<a class="btn btn-cancel" href="#none">취소</a>
+				<a class="btn btn-list" href="#none">목록</a>
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

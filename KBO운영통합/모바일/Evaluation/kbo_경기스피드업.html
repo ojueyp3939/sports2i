@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">스피드업·복장 규정 위반 보고서</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							스피드업
+						</div>
+						<div class="content">
+							<div>
+								<div class="team-tit">
+									<img src="../resources/images/emb/OB.png" alt="emb" />
+									<span>두산</span>
+								</div>
+								<p class="sub-tit under-txt">이닝교대 위반(2분)</p>
+								<p class="txt txt-r mb10">* 타자는 1분55초 이내에 타석에 들어와야 함(위반 시 경고)</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+										<th>시간</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<input type="text" placeholder="사유입력">
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit under-txt">투수교체 위반(2분20초)</p>
+								<p class="txt txt-r mb10">* 타자는 2분15초 이내에 타석에 들어와야 함</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>위반<br/>이닝</th>
+										<th>선수명</th>
+										<th>시간</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<input type="text" placeholder="사유입력">
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">타석이탈</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+							
+							<div>
+								<p class="sub-tit">BGM 10초 위반</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">볼넷/死구 미질주</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">보호대 해제 위반(홈/1루)</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="group">
+						<div class="header">
+							스피드업
+						</div>
+						<div class="content">
+							<div>
+								<div class="team-tit">
+									<img src="../resources/images/emb/KT.png" alt="emb" />
+									<span>KT</span>
+								</div>
+								<p class="sub-tit under-txt">이닝교대 위반(2분)</p>
+								<p class="txt txt-r mb10">* 타자는 1분55초 이내에 타석에 들어와야 함(위반 시 경고)</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+										<th>시간</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<input type="text" placeholder="사유입력">
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit under-txt">투수교체 위반(2분20초)</p>
+								<p class="txt txt-r mb10">* 타자는 2분15초 이내에 타석에 들어와야 함</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="22%">
+										<col width="43%">
+										<col width="35%">
+									</colgroup>
+									<tr>
+										<th>위반<br/>이닝</th>
+										<th>선수명</th>
+										<th>시간</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+										<td class="time">
+											<select>
+												<option>1</option>
+											</select>
+											:
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="3">
+											<input type="text" placeholder="사유입력">
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">타석이탈</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+							
+							<div>
+								<p class="sub-tit">BGM 10초 위반</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">볼넷/死구 미질주</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">보호대 해제 위반(홈/1루)</p>
+								<table class="tbl-basic mb10">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>선수명</th>
+									</tr>
+									<tr>
+										<td>
+											<select>
+												<option>1</option>
+											</select>
+										</td>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+							<p class="txt txt-r">* 이닝교대 위반, 타석이탈, BGM, 선수소개 10초 위반시: 제재금 20만원</p>
+						</div>
+					</div>
+
+					<div class="group mb0">
+						<div class="header">
+							유니폼
+						</div>
+						<div class="content">
+							<div>
+								<div class="team-tit">
+									<img src="../resources/images/emb/KT.png" alt="emb" />
+									<span>KT</span>
+								</div>
+								<p class="sub-tit">언더셔츠 색상 위반(홈)</p>
+								<table class="tbl-basic vertical mb10">
+									<colgroup>
+										<col width="30%">
+										<col width="60%">
+									</colgroup>
+									<tr>
+										<th>선수명</th>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+
+							<div>
+								<p class="sub-tit">암슬리브(팔토시) 색상위반. 상표표시 위반(홈)</p>
+								<table class="tbl-basic vertical mb10">
+									<colgroup>
+										<col width="30%">
+										<col width="60%">
+									</colgroup>
+									<tr>
+										<th>선수명</th>
+										<td class="txt-c">
+											홍길동 
+											<button class="btn-search">검색</button>
+										</td>
+									</tr>
+								</table>
+								<div class="btn-box">
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_add.png" alt="add" />추가
+									</button>
+									<button class="add-minus">
+										<img src="../resources/images/sub/btn_minus.png" alt="minus" />삭제
+									</button>
+								</div>
+							</div>
+							<p class="txt txt-r">* 유니폼 관련 사항 위반시: 1차 경고, 2차 제재금 20만원,<br/> 3차 제재금 30만원, 4차 이후 제재금 100만원</p>
+						</div>
+					</div>
+
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+	<div id="popup" style="display:none;">
+		<div class="tit-area">
+			<span class="tit">
+				제출완료된 보고서 입니다. 
+			</span>
+		</div>
+		<div class="btn-area">
+			<a href="#none" class="btn-confirm">확 인</a>
+		</div>
+	</div>
+	<div id="popup" style="display:none;">
+		<div class="tit-area">
+			<span class="tit">
+				<b>보고서 제출 시 수정 불가능</b> 합니다.<br/>제출 하시겠습니까? 
+			</span>
+		</div>
+		<div class="btn-area">
+			<a href="#none" class="btn-confirm">확 인</a>
+			<a href="#none" class="btn-cancel">취 소</a>
+		</div>
+	</div>
+	<div id="popup" class="search">
+		<button class="pop-close" href="">
+			<img src="../resources/images/sub/btn_close.png" alt="close">
+		</button>
+		<div class="tit-top">
+			선수명을 입력하세요.
+		</div>
+		<div class="tit-area">
+			<div class="search-box">
+				<input type="text">
+				<a href="">
+					<img src="../resources/images/sub/btn_search2.png" alt="검색">
+				</a>
+			</div>
+			<div class="table-box">			
+				<table>
+					<colgroup>
+						<col width="80%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								정수빈  외야수  두산  1990-10-09
+							</td>
+							<td>
+								<button class="btn-select">
+									선택
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="modal"></div>
+</body>
+</html>

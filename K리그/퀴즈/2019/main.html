@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+  <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2019 K리그 스플릿 라운드 퀴즈</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<img src="resources/images/common/logo.png" alt="K리그 로고" />
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<a class="logout" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="main">
+				<section class="visual-wrap">
+					<img src="resources/images/main/img_final.png" alt="2019 FINAL A B" />
+				</section>
+				<section class="content-wrap">
+					<div class="media">
+						<div class="inner">
+							<img class="txt" src="resources/images/main/img_txt.png" alt="K리그 덕력 시헙평가 #케덕시에 응시하고 여러분의 덕력을 시험해보세요! #케덕시 #K리그덕력시험평가 #K리그" />
+							<div class="video">
+							</div>
+						</div>
+						<div class="schedule">
+							<div class="inner">
+								<img class="txt" src="resources/images/main/txt_schedule.png" alt="FINAL ROUND 경기일정" />
+								<div class="list-schedule"></div>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="inner">
+							<h2>
+								<i class="round-logo"></i>
+							</h2>
+							<i class="quiz-tit"></i>
+							<div class="time-box">
+								<div>제 1 교시: FINAL A</div>
+								<div>제 2 교시: FINAL B</div>
+								<div>제 3 교시: K리그 일반</div>
+							</div>
+							<div class="noti-box">
+								<div>
+									<p>응시 기간 : 2019. 10. 11.(금) 오후 2시 ~ 2019. 10. 16.(수) 오후 2시</p>
+									<p>정답 발표 : 2019. 10. 17.(목) 오후 2시</p>
+									<p class="in no" style="padding-left:25px;">※ 문제별 정답 및 성적 확인 가능</p>
+								</div>
+								<div>
+									<p>응시 안내</p>
+									<p class="in">1개 네이버 아이디당 1회 응시 가능합니다.</p>
+									<p class="in">시험 문제의 정답 혹은 족보를 만들어 온라인상에 공유하는 행위는 자제해주시기 바랍니다.</p>
+									<p class="in">특별한 설명이 없는 경우, 모든 문제의 출제 기준은 2019시즌, 혹은 2019년 9월 25일 기준입니다.</p>
+									<p class="in">개인 정보를 잘못 입력하시어 경품 수령에 문제가 발생하는 경우에는 연맹이 책임지지 않습니다.</p>
+								</div>
+								<div>
+									<p>상품 안내</p>
+									<p class="in">성적 우수자(20명)</p>
+									<p class="in no">2019 K리그 대상 시상식 초청권 + EA FIFA20 게임 타이틀(PC/PS4 중 택1)</p>
+									<p class="in no">"성적 우수자 선정시, 동점자 있을 경우 추첨을 통해 선발"</p>
+									<p class="in no">"@kleague 공식 인스타그램 팔로우하면, 참가상 당첨확률이 올라갑니다!“</p>
+									<p class="in">참여하신 분들 중 추첨을 통해 총 100분에게 "스타벅스 기프티콘"을 드립니다.</p>
+								</div>
+							</div>
+							<div class="login-box">
+								<div class="gray-box">
+									※ 네이버아이디로 응시 가능합니다
+								</div>
+								<div><i class="naver-login"></i></div>
+							</div>
+							<div class="final-box">
+								<a href="quiz.html">
+									<img src="resources/images/main/btn_quiz.png" alt="응시하기">
+								</a>
+							</div>
+							<div class="social-box">
+								<p>K리그 공식 SNS를 팔로우하고 K리그의 최신소식을 받아보세요!</p>
+								<ul>
+									<li>
+										<a href="https://www.facebook.com/withKLEAGUE" target="_blank">
+											<i class="icon-fb"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/kleague/" target="_blank">
+											<i class="icon-insta"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/user/withkleague/" target="_blank">
+											<i class="icon-youtube"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2019 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

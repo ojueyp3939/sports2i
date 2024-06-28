@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 오류 페이지 */
+.error {height:100vh;padding-top:46vh;background:url("../images/common/bg_no.png") no-repeat 50% 26vh;background-size:98px;font-weight:100;color:#888;text-align:center;}
+.error dt {font-size:1.5rem;}
+.error .txt {padding:15px 0 40px;font-size:1.3rem;}
+.error .txt span {display:block;}
+.error dd .btn-error {display:inline-block;width:141px;height:34px;line-height:32px;font-size:1.5rem;font-weight:400;color:#888;border:1px solid #888;border-radius:3px;}
+
+/* 오류페이지 - 사용자가 많아 접속에러 */
+.user {padding-top:49.141vh;}
+.user .txt-user {padding-bottom:52px;font-weight:100;}
+.user .txt-user span {display:block;}
+.user dd .btn-error {min-width:12px;padding-right:2vw;background:url("../images/common/btn_arrow_right.png") no-repeat 90% 50%;background-size:1.667vw;}
+
+/* 공유하기 페이지 */
+.share {height:100vh;padding-top:46vh;background:url("../images/common/tit_login.png") no-repeat 50% 22vh;background-size:167px;color:#888;text-align:center;}
+.share dt {font-size:1.6rem;font-weight:700;color:#1a1a1a;}
+.share dt span {color:#ff4b53;}
+.share .txt {padding:15px 0 40px;font-size:1.3rem;font-weight:100;}
+.share .txt span {display:block;}
+.share dd .btn-move {display:inline-block;width:141px;height:34px;line-height:32px;background:#ff4b53;font-size:1.5rem;color:#fff;border-radius:3px;}
+
+/* seezn 프로야구 시즌종료 */
+#wrap > header .btn-close {display:block;position:absolute;top:12px;right:3.3333%;}
+#wrap > header .btn-close span {width:2px;border-radius:1px;background:#000;}
+#wrap > header .btn-close span:before {height:2px;border-radius:1px;background:#000;}
+#wrap.seezn-end {height:100vh;background:url('../images/common/bg_seezn_end.png') no-repeat 0 100%/57.75%;text-align:center;}
+.seezn-end h2 {width:70.14%;margin:59px auto 79px;}
+.seezn-end dl dt {padding-bottom:9px;font-size:1.8rem;font-weight:700;letter-spacing:-1px;}
+.seezn-end dl dd {font-size:1.5rem;}
+.seezn-end dl dd span {display:block;padding-top:7px;}
+
+/* 미디어쿼리 */
+@media(min-width:1024px){
+	/* 에러 */
+	.error {padding-top:40.7227vw;background:url("../images/common/bg_no.png") no-repeat 50% 27.3437vh;background-size:170px;}
+	.error dt {font-size:1.6rem;font-weight:400;}
+	.error .txt {padding:10px 0 67px;font-size:1.4rem;font-weight:400;}
+	.error .txt span {display:inline;}
+	.error dd .btn-error {width:252px;height:45px;line-height:43px;font-size:1.7rem;}
+
+	/* 오류페이지 - 사용자가 많아 접속에러 */
+	.user {padding-top:40.918vw;}
+	.user .txt-user {padding-bottom:55px;}
+	.user dd .btn-error{background:url("../images/common/btn_arrow_right.png") no-repeat 70% 50%;background-size:0.5859vw;font-size:1.5rem;}
+
+	/* url */
+	.share {height:100vh;padding-top:40.4297vw;background:url("../images/common/tit_login.png") no-repeat 50% 20.6055vw;background-size:231px;}
+	.share .txt {padding:9px 0 67px;font-size:1.4rem;font-weight:400;}
+	.share .txt span {display:inline;}
+	.share dd .btn-move {width:252px;height:46px;line-height:44px;font-size:1.7rem;}
+
+	/* seezn 프로야구 시즌종료 */
+    #wrap.seezn-end {height:100vh;background:url('../images/common/bg_seezn_end_pad.png') no-repeat 50% 226px/29.4922%;text-align:center;}
+    .seezn-end h2 {width:29.4922%;margin:93px auto 48px;}
+    .seezn-end dl dt {padding:23.8281vw 0 9px;font-size:1.9rem;font-weight:700;letter-spacing:-1px;}
+    .seezn-end dl dd {padding-top:6px;font-size:1.5rem;}
+    .seezn-end dl dd span {display:inline;}
+}

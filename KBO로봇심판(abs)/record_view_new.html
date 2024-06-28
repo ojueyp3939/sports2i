@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$('#tab1').click(function () {
+				$('#tab1').addClass('on');
+				$('#tab2').removeClass('on');
+				$('#box1').addClass('on');
+				$('#box2').removeClass('on');
+			});
+			$('#tab2').click(function () {
+				$('#tab2').addClass('on');
+				$('#tab1').removeClass('on');
+				$('#box2').addClass('on');
+				$('#box1').removeClass('on');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="record_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+				</h1>
+				<ul class="menu">
+					<li class="on">
+						<a href="record_list.html">기록 보기</a>
+					</li>
+					<li>
+						<a href="record_insert.html">기록 입력</a>
+					</li>
+				</ul>
+				<ul class="user_menu">
+					<li>
+						<a href="#">비밀번호변경</a>
+						<!-- 비밀번호 변경 레이어 팝업 -->
+						<div class="layer-pw" style="display:none;">
+							<h2>비밀번호 변경</h2>
+							<div>
+								<ul>
+									<li>
+										<label for="pw_now">현재 비밀번호</label>
+										<input type="password" id="pw_now">
+									</li>
+									<li>
+										<label for="pw_new">새 비밀번호</label>
+										<input type="password" id="pw_new">
+									</li>
+									<li>
+										<label for="pw_new_check">새 비밀번호 확인</label>
+										<input type="password" id="pw_new_check">
+									</li>
+								</ul>
+								<ul class="pw_notice">
+									<li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+									<li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+								</ul>
+								<p class="btn_save">
+									<a href="#">저장</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<div class="title-wrap">
+					<h2>2020.05.27 (수) / 이천 (LG)</h2>
+					<button class="btn">삭제하기</button>
+				</div>
+				<div class="score-wrap clear">
+					<div class="team">
+						<p>AWAY<span>11승 3패 1무</span></p>
+						<img src="resources/images/emb/emb_69x51_LG.png" alt="LG">
+						<span class="result">LOSE</span>
+					</div>
+					<div class="score">
+						<table class="tbl-board">
+							<caption>점수판</caption>
+							<colgroup>
+								<col width="12%">
+
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+								<col width="5.5%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col"></th>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+									<th scope="col">6</th>
+									<th scope="col">7</th>
+									<th scope="col">8</th>
+									<th scope="col">9</th>
+									<th scope="col">10</th>
+									<th scope="col">11</th>
+									<th scope="col">12</th>
+									<th scope="col">R</th>
+									<th scope="col">H</th>
+									<th scope="col">E</th>
+									<th scope="col">B</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>롯데</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td class="point">6</td>
+									<td>16</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+								<tr>
+									<td>롯데</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>2</td>
+									<td>0</td>
+									<td>0</td>
+									<td>-</td>
+									<td>-</td>
+									<td>-</td>
+									<td class="point">6</td>
+									<td>16</td>
+									<td>1</td>
+									<td>1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="team">
+						<p>AWAY<span>11승 3패 1무</span></p>
+						<img src="resources/images/emb/emb_69x51_HH.png" alt="HH">
+						<span class="result">WIN</span>
+					</div>
+				</div>
+				<table class="tbl">
+					<thead>
+						<tr>
+							<th>날짜</th>
+							<th>시간</th>
+							<th>경기</th>
+							<th>구장</th>
+							<th>스코어</th>
+							<th>구심</th>
+							<th>일치율</th>
+							<th>심판 콜 수</th>
+							<th>불일치 콜</th>
+							<th>심판 S / PTS B</th>
+							<th>심판 B / PTS S</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>5월 26일(수)</td>
+							<td>13:00</td>
+							<td>삼성 VS 한화</td>
+							<td>서산</td>
+							<td>1:5</td>
+							<td>홍길동</td>
+							<td>
+								<a href="">경기기록</a>
+							</td>
+							<td>88.88%</td>
+							<td>25번</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<ul class="box-tab clear">
+					<li class="on" id="tab1">판정 불일치 내역</li>
+					<li id="tab2">타석별 판정 영상분석</li>
+				</ul>
+				<!-- 판정 불일치 내역 -->
+				<div class="box-area on" id="box1">
+					<h3 class="sub-tit">현장 운영 판단 이슈 투구</h3>
+					<table class="tbl">
+						<thead>
+							<tr>
+								<th>이닝</th>
+								<th>초/말</th>
+								<th>OUT</th>
+								<th>타순</th>
+								<th>타자</th>
+								<th>투수</th>
+								<th>구수</th>
+								<th>PTS 판정</th>
+								<th>심판 판정</th>
+								<th>영상보기</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>2</td>
+								<td>T</td>
+								<td>2</td>
+								<td>6</td>
+								<td>신짱구</td>
+								<td>도라에몽</td>
+								<td>3</td>
+								<td>B</td>
+								<td>S</td>
+								<td>
+									<a href="">
+										<img src="resources/images/common/icon_play.png" />
+									</a>
+								</td>
+							</tr>
+							<tr class="last comment">
+								<td colspan="2">현장 의견</td>
+								<td colspan="7">폭투 발생하여 홈플레이트 앞부분 바운드 되어 포수가 포구, PTS와 심판 모두 B 판정</td>
+								<td>
+									<a class="btn">수정</a>
+									<a class="btn">삭제</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- 타석별 판정 영상분석 -->
+				<div class="box-area" id="box2">
+					<div class="board-wrap clear">
+						<div class="clear mb50">
+							<div class="left-board">
+								<img src="resources/images/common/img_ball.png" alt="B, C, S, F, D">
+								<div class="ball-board">
+									<i class="ball b">2</i>
+									<div class="layer-video" style="display: block;">
+										<div class="title">삼성 VS 키움<i class="btn-close"></i></div>
+										<ul>
+											<li>날짜: 2024. 06. 09</li>
+											<li>타자: 도슨 (27)</li>
+											<li>투수: 이승현 (57)</li>
+											<li>포수: 강민호 (47)</li>
+											<li>신장: 182.0cm</li>
+											<li>타자 존 상,하단: 102.6cm, 50.3cm</li>
+											<li>중간면_좌우 로케이션: 23.54cm</li>
+											<li>중간면_상하 로케이션: 42.42cm</li>
+											<li>끝면_좌우 로케이션: 24.44cm</li>
+											<li>끝면_상하 로케이션: 39.77cm</li>
+											<li>S존과의 차이: 하측 4.26cm (공 0.6개)</li>
+											<li>심판 : B</li>
+										</ul>
+										<div class="link"><a href="#">영상보기</a></div>
+									</div>
+								</div>
+								<p class="txt">
+									홈플레이트 중간면 기준<br/>
+									<span>상단: XX.Xcm, 하단: XX.Xcm</span>
+								</p>
+							</div>
+							<div class="center-board">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:20%;" />
+										<col style="width:20%" />
+										<col style="width:30%" />
+										<col style="width:30%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>이닝</th>
+											<th>초/말</th>
+											<th>투수</th>
+											<th>타자</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="on">
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+										<tr class="last">
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="right-board">
+								<table class="tbl">
+									<colgroup>
+										<col style="width:10%;" />
+										<col style="width:10%" />
+										<col style="width:20%" />
+										<col style="width:20%" />
+										<col style="width:13%" />
+										<col style="width:12%" />
+										<col style="width:15%" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th>이닝</th>
+											<th>초/말</th>
+											<th>투수</th>
+											<th>타자</th>
+											<th>구속</th>
+											<th>콜</th>
+											<th>투구번호</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+										</tr>
+										<tr class="last">
+											<td>1</td>
+											<td>초</td>
+											<td>홍길동</td>
+											<td>홍길동</td>
+											<td>111</td>
+											<td>볼</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="clear">
+							<ul class="coordinate-board">
+								<li>
+									<p class="tit">중간면</p>
+									<div class="first">
+										<div class="square"></div>
+									</div>
+									<div class="second">
+									</div>
+								</li>
+								<li>
+									<p class="tit">끝면</p>
+									<div class="first">
+										<div class="square"></div>
+									</div>
+									<div class="second">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<table class="tbl">
+						<colgroup>
+							<col style="width:4%;" />
+							<col style="width:6%" />
+							<col style="width:6%" />
+							<col style="width:7%" />
+							<col style="width:7%" />
+							<col style="width:7%" />
+							<col style="width:5%" />
+							<col style="width:5%" />
+							<col style="width:6%" />
+							<col style="width:5%" />
+							<col style="width:12%" />
+							<col style="width:15%" />
+							<col style="width:5%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>No</th>
+								<th>심판판정</th>
+								<th>PTS판정</th>
+								<th>타자</th>
+								<th>투수</th>
+								<th>포수</th>
+								<th>구질</th>
+								<th>구속</th>
+								<th>B-S-O</th>
+								<th>점수</th>
+								<th>로케이션(좌우,높이)</th>
+								<th>SZ과의 차이</th>
+								<th>영상</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>B</td>
+								<td>S</td>
+								<td>페르난데스</td>
+								<td>홍길동길동</td>
+								<td>홍길동길동</td>
+								<td>직구</td>
+								<td>150</td>
+								<td>0-1-0</td>
+								<td>없음</td>
+								<td>-27cm, 75cm</td>
+								<td>오른쪽측으로 2cm (공 0.2개)</td>
+								<td class="video">
+									<a href="">
+										<img src="resources/images/common/icon_play.png">
+									</a>
+									<div class="layer-video" style="display: block;"><div class="title">삼성 VS 키움<i class="btn-close"></i></div><ul><li>날짜: 2024. 06. 09</li><li>타자: 도슨 (27)</li><li>투수: 이승현 (57)</li><li>포수: 강민호 (47)</li><li>신장: 182.0cm</li><li>타자 존 상,하단: 102.6cm, 50.3cm</li><li>중간면_좌우 로케이션: 23.54cm</li><li>중간면_상하 로케이션: 42.42cm</li><li>끝면_좌우 로케이션: 24.44cm</li><li>끝면_상하 로케이션: 39.77cm</li><li>S존과의 차이: 하측 4.26cm (공 0.6개)</li><li>심판 : B</li></ul><div class="link"><a href="#" data-srid="0" data-seasonid="2024" data-gameid="20240609SSWO0" data-seqno="220">영상보기</a></div></div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<p class="txt-r">* 투구 로케이션 : 공 중심 기준</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer>
+		<div>
+			<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+			<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+		</div>
+	</footer>
+	<!-- //footer -->
+	</div>
+</body>
+</html>

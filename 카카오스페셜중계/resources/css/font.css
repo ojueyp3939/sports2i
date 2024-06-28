@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'asdg';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/AppleSDGothicNeoM.eot');
+  src: url('../font/AppleSDGothicNeoM.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoM.woff') format('woff');
+ }
+@font-face {
+  font-family:'asdg';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/AppleSDGothicNeoB.eot');
+  src: url('../font/AppleSDGothicNeoB.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoB.woff') format('woff');
+}
+@font-face {
+  font-family:'asdg';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/AppleSDGothicNeoEB.eot');
+  src: url('../font/AppleSDGothicNeoEB.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoEB.woff') format('woff');
+}

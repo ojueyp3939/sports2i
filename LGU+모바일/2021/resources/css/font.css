@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'bebas';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/BebasNeue-Bold.eot');
+  src: url('../font/BebasNeue-Bold.eot?#iefix') format('embedded-opentype'), url('../font/BebasNeue-Bold.woff') format('woff');
+}
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NotoSansCJKkr-Regular.eot');
+  src: url('../font/NotoSansCJKkr-Regular.eot?#iefix') format('embedded-opentype'), url('../font/NotoSansCJKkr-Regular.woff') format('woff');
+}
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NotoSansCJKkr-Medium.eot');
+  src: url('../font/NotoSansCJKkr-Medium.eot?#iefix') format('embedded-opentype'), url('../font/NotoSansCJKkr-Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NotoSansCJKkr-Bold.eot');
+  src: url('../font/NotoSansCJKkr-Bold.eot?#iefix') format('embedded-opentype'), url('../font/NotoSansCJKkr-Bold.woff') format('woff');
+}
+

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+$(document).ready(function(){
+	
+});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">	
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹&이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr /> 
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">				
+				<!-- <img src="resources/images/main/img_pick02.jpg" alt="" /> -->
+				<div class="date-select">
+					<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018.06.13</span>
+					<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+					<a href="#none" class="btn-calandar"><img src="resources/images/common/btn_date_calandar.png" alt="" /></a>
+				</div>
+				<!-- <img src="resources/images/main/img_pick03.jpg" alt="" /> -->
+				<div class="game-cont game-on">
+					<div class="tab-area tab-quiz">
+						<ul class="tab">
+							<li class="tab-tit q1 on"><a href="#none"><span class="list">Q1</span><span class="txt">승리팀 맞추기</span></a></li>
+							<li class="tab-tit q2"><a href="#none"><span class="list">Q2</span><span class="txt">1:10 퀴즈</span></a></li>
+						</ul>
+						<div class="quiz quiz1 q1-app q-game-ing q1-game-ing">
+							<dl class="question">
+								<dt>Quiz</dt>
+								<dd>오늘의 승리팀을 맞춰주세요!</dd>
+							</dl>
+							<dl class="my-result">								
+								<dt>나의 선택 결과</dt>
+								<dd>실시간 예상 : <strong>정답 3개</strong></dd>
+							</dl>
+							<dl class="my-result fail"> <!-- 실패시 fail class 입력 -->
+								<dt>나의 선택 결과</dt>
+								<dd>실시간 예상 : <strong>실패</strong></dd>
+							</dl>
+							<dl class="no-pick-result">								
+								<dt>나의 선택 결과</dt>
+								<dd>
+									<p class="txt1">아이쿠! <strong>쏠픽에 참여하지 않았습니다.</strong></p>
+									<p>다음에는 꼭! <strong>쏠픽 해주세요</strong></p>								
+								</dd>
+							</dl>
+							<ul class="team-select select-result">
+								<li>
+									<div class="ps">
+										<dl class="ing">
+											<dt>9회말</dt>
+											<dd>경기중</dd>
+										</dl>
+										<!-- <span class="end">종료</span>
+										<div class="o">정답</div>
+										<div class="x">오답</div> -->
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_LG.png" alt="" /></div>
+											<div class="name">LG</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_LT.png" alt="" /></div>
+											<div class="name">LG</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+								<li>
+									<div class="ps">										
+										<span class="end">종료</span>										
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_KT.png" alt="" /></div>
+											<div class="name">KT</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_NC.png" alt="" /></div>
+											<div class="name">NC</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+								<li>
+									<div class="ps">										
+										<div class="o">정답</div>
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_WO.png" alt="" /></div>
+											<div class="name">넥센</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_SK.png" alt="" /></div>
+											<div class="name">SK</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+								<li>
+									<div class="ps">
+										<div class="x">오답</div>
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_HT.png" alt="" /></div>
+											<div class="name">KIA</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_OB.png" alt="" /></div>
+											<div class="name">두산</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+								<li>
+									<div class="ps">
+										<dl class="ing">
+											<dt>9회말</dt>
+											<dd>경기중</dd>
+										</dl>
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_SS.png" alt="" /></div>
+											<div class="name">삼성</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_HH.png" alt="" /></div>
+											<div class="name">한화</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+								<li>
+									<div class="ps">
+										<dl class="ing">
+											<dt>9회말</dt>
+											<dd>경기중</dd>
+										</dl>
+									</div>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_LG.png" alt="" /></div>
+											<div class="name">LG</div>
+										</div>
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+									</div>									
+									<div class="team-box home">										
+										<div class="record">
+											<div class="score">99</div>	
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x87_LT.png" alt="" /></div>
+											<div class="name">LG</div>
+										</div>
+									</div>
+									<div class="prediction-rate">										
+										<div class="away win">100<span class="unit">%</span></div>
+										<div class="graph">
+											<span class="bar">70%</span>
+										</div>
+										<div class="home">37<span class="unit">%</span></div>
+										<div class="tit">쏠픽 투표율</div>
+									</div>
+								</li>
+							</ul>							
+						</div>	
+						<div class="quiz quiz2 q2-app q-game-ing q2-game-ing">
+							<dl class="question">
+								<dt>Quiz</dt>
+								<!-- <dd>가장 많은 득점을 기록할 팀은?</dd>
+								<dd>가장 많은 안타를 때려낼 팀은?</dd>
+								<dd>가장 많은 홈런을 쏘아 올릴 팀은?</dd>
+								<dd>볼넷을 가장 많이 얻어낼 팀은?</dd>
+								<dd>삼진을 가장 적게 당할 팀은?</dd>
+								<dd>가장 많은 타석수를 기록할 팀은?</dd>
+								<dd>피안타가 가장 적을 팀은?</dd>
+								<dd>실점이 가장 적을 팀은?</dd>
+								<dd>삼진을 가장 많이 뽑아낼 팀은?</dd>
+								<dd class="line2">선발투수가 가장 긴 이닝을<br />소화할 팀은?</dd> -->
+								<dd class="line2">선발투수가 가장 많은 투구수를<br />기록할 팀은?</dd>
+								<!-- <dd class="line2">선발투수가 삼진을<br />가장 많이 얻어낼 팀은?</dd>
+								<dd>가장 많은 투수가 등판할 팀은?</dd>
+								<dd>실책을 가장 적게 기록할 팀은?</dd> -->
+							</dl>
+							<dl class="my-result">								
+								<dt>나의 선택 결과</dt>
+								<dd>실시간 예상 : <strong>성공</strong></dd>
+							</dl>
+							<dl class="my-result fail"> <!-- 실패시 fail class 입력 -->
+								<dt>나의 선택 결과</dt>
+								<dd>실시간 예상 : <strong>실패</strong></dd>
+							</dl>
+							<dl class="no-pick-result">								
+								<dt>나의 선택 결과</dt>
+								<dd>
+									<p class="txt1">아이쿠! <strong>쏠픽에 참여하지 않았습니다.</strong></p>
+									<p>다음에는 꼭! <strong>쏠픽 해주세요</strong></p>								
+								</dd>
+							</dl>
+							<div class="select-result">
+								<div class="data-info top-data">
+									<div class="player-img">
+										<img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA 한승혁</div>									
+								</div>
+								<div class="data-info select-data">
+									<div class="player-img">
+										<img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">KIA 한승혁</div>
+								</div>
+								<p class="tie-txt">* 중복 정답 : KIA 한승혁, LG 차우찬, 롯데 레일리, NC 왕웨이중, SK 문승원, 넥센 한현희, 한화 윤규진, 삼성 보니야, KT 니퍼트 </p>
+							</div>
+							
+							<!-- 미참여 -->
+							<div class="select-result">
+								<div class="data-info top-data">
+									<div class="player-img">
+										<img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_answer.png" alt="" /></span>
+									</div>
+									<div class="name">KIA 한승혁</div>
+									<div class="record">99구</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="player-img">
+										<img src="resources/images/main/img_nopick_player.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">미참여</div>
+								</div>																
+							</div>
+							
+							<!-- 팀 -->
+							<div class="select-result">
+								<div class="data-info top-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_SS.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_HH.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">베네수엘라</div>
+								</div>	
+								<div class="data-info top-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_SK.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_WO.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">베네수엘라</div>
+								</div>	
+								<div class="data-info top-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_NC.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_HT.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">베네수엘라</div>
+								</div>
+								<div class="data-info top-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_LG.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_LT.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">베네수엘라</div>
+								</div>
+								<div class="data-info top-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_KT.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_no1.png" alt="" /></span>
+									</div>
+									<div class="name">KIA</div>
+								</div>
+								<div class="data-info select-data">
+									<div class="team-img">
+										<img src="resources/images/emb/emb_213x162_SS.png" alt="" />
+										<span class="tag"><img src="resources/images/main/img_tag_select.png" alt="" /></span>
+									</div>
+									<div class="name">베네수엘라</div>
+								</div>
+
+							</div>
+
+							<ul class="select-list">
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_LG.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/embR_119x78_LT.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_KT.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_NC.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/embR_119x78_WO.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_SK.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_HT.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_OB.png" alt="" /></dd>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="select">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_SS.png" alt="" /></dd>
+										<dd class="record">7 2/3</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_HH.png" alt="" /></dd>
+										<dd class="record">99.9</dd>
+									</dl>
+								</li>
+							</ul>	
+							<ul class="select-list list-player">
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_LG.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/embR_119x78_LT.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_KT.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_NC.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/embR_119x78_WO.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_SK.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_HT.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="cancel">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_OB.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">999</dd>
+									</dl>
+								</li>
+								<li class="select">
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_SS.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">7 2/3</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>베네수엘라</dt>
+										<dd class="emb"><img src="resources/images/emb/emb_119x78_HH.png" alt="" /></dd>
+										<div class="player-name">선발 <span class="name">한승혁</span></div>
+										<dd class="record">99.9</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>	
+					</div>
+					<script type="text/javascript">tabMenu(1,'tab-quiz','tab-tit','quiz');</script>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

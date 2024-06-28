@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 탭메뉴 depth1 */
+.tab-depth1 {}
+
+/* 월간 랭킹 */
+.date-select {position:relative;padding:27px 0 7px;font-weight:100;border-bottom:2px solid #e1e1e1;text-align:center;}
+.date-select .today {font-size:1.5rem;}
+.date-select .criteria {padding-top:15px;font-size:1.2rem;}
+.date-select .btn {position:absolute;top:28px;left:50%;width:10px;height:17px;}
+.date-select .btn-prev {margin-left:-80px;}
+.date-select .btn-next {margin-left:70px;}
+
+.top-player-wrap {position:relative;width:100%;margin-bottom:5px;padding-bottom:26px;border-bottom:2px solid #e1e1e1;background:#fff;}
+.top-player-wrap:before {content:"";position:absolute;display:block;top:0;left:0;right:0;height:60px;background:#008bd0;z-index:5;}
+.top-player-wrap .top-player-list {z-index:10;}
+.top-player-wrap .top-player-list .player-wrap {width:33%;text-align:center;}
+.top-player-wrap .top-player-list .player-wrap .player {width:100px;margin:0 auto;}
+.top-player-wrap .top-player-list .player-wrap .subject {color:#fff;margin-top:18px;font-size:1.4rem;font-weight:400;letter-spacing:-1px;}
+.top-player-wrap .top-player-list .player-wrap .photo {position:relative;margin-top:8px;}
+.top-player-wrap .top-player-list .player-wrap .photo img {display:block;width:100%;max-width:78px;margin:0px auto;}
+.top-player-wrap .top-player-list .player-wrap .photo img.team {position:absolute;display:block;width:45px;right:0;bottom:-5px;}
+.top-player-wrap .top-player-list .player-wrap .name {margin:4px 0 10px;font-size:1.3rem;font-weight:400;}
+.top-player-wrap .top-player-list .player-wrap .record {font-size:1.4rem;font-weight:700;color:#008bd0;}
+
+.swiper-menu .swiper-slide {width:auto;min-width:100%;}
+.swiper-menu .swiper-slide ul {padding-right:20px;}
+
+	/* 테이블 */
+.tbl-rank {}
+.tbl-rank .tbl {width:100%;background:#fff;}
+.tbl-rank .tbl td {padding:10px 0;font-size:1.4rem;font-weight:400;text-align:center;border-bottom:1px solid #e5e7ea;vertical-align:middle;}
+.tbl-rank .tbl .no1 .rank {color:#008bd0;}
+.tbl-rank .tbl .record {font-weight:700;color:#008bd0;}
+.tbl-rank .tbl .player-img {display:inline-block;width:52px;border:1px solid #e5e7eb;}
+.tbl-rank .tbl .emb {display:inline-block;width:33px;vertical-align:middle;}
+.tbl-rank .tbl .name {display:inline-block;vertical-align:middle;}
+
+/* 투표하기 */ 
+.vote-area {margin-top:4px;}
+.vote-area a {display:block;}
+
+/* 월간 MVP 결과 */
+.select-area {position:relative;margin-top:15px;text-align:right;z-index:5;}
+.select-area select {width:125px;height:33px;margin-right:16px;}
+.result-area {margin-top:-13px;}
+
+
+
+
+
+/* media query */
+@media(max-width:359px){	
+	.date-select .btn-prev {margin-left:-75px;}
+	.date-select .btn-next {margin-left:65px;}
+}

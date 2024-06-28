@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2021 K리그 덕력시험</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/main/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="cont-wrap">
+					<!-- K리그 일반 -->
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<img src="resources/images/sub/txt_quiz1.png" alt="2021년도 K리그 덕력 시험 평가 문제지 - K리그 일반">
+							</h2>
+							<div class="info-zone">
+								<div class="name-label">
+									<dl>
+										<dt>이름</dt>
+										<dd>홍길동</dd>
+									</dl>
+									<dl>
+										<dt>응원팀</dt>
+										<dd>FC서울</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="description">
+								<p>* 시험 종료 전 답안 제출을 완료해야 하며, 응시 중 시간이 초과될 경우 답안을 제출하실 수 없습니다.</p>
+								<p>* 이미 답변을 제출한 이후에는 답안을 수정하실 수 없습니다. 답안 제출 전, 신중하게 답안을 확인해주세요.</p>
+							</div>
+						</div>
+						<img class="bar" src="resources/images/sub/img_bar.png" alt="bar">
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box">
+										<p class="num">1.</p>
+										<p class="tit">서로 다른 시대에서 K리그를 즐기던 5명의 친구가 시공간의 균열로 인해 한 자리에 모이게 되었다. 각자 어떤 시대의 K리그를 즐겼는지 알기 위해, 각자가 본 K리그를 설명하기로 했다. 그렇다면, 다음 다섯 친구들의 K리그 배경을 시간순서대로 올바르게 나열한 것을 고르시오. (6점)</p>
+										<div class="example">
+											다이 : 프로데뷔 1년차 선수만 받을 수 있었던 "신인왕"의 이름을 "영플레이어 상"으로 바꾸고, 수상 기준을 조금 수정했어.<br/>
+											나믹 : K리그 챌린지에는 총 10개팀이 있어, 개막전은 강원FC와 안산경찰청의 경기였지<br/>
+											피치 : 전북은 다섯번째 우승을 차지했고, 이재성은 MVP를 차지했어<br/>
+											케이 : 올해부터 1부리그 기준으로 23세 이하 선수가 엔트리에 2명은 있어야 하고, 그중 한명은 의무선발 출전해야 해. 안그러면 교체회수에 불이익이 있어<br/>
+											리그 : 올 시즌 K리그 패치는 특이하게 오각형 모양이야
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① 다이-나믹-피치-케이-리그</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② 다이-리그-나믹-피치-케이</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ 케이-리그-다이-나믹-피치</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ 나믹-리그-다이-케이-피치</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ 리그-다이-나믹-케이-피치</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">2.</p>
+										<p class="tit">2021 K리그 최강 다이나믹 팀과 피치 팀의 경기가 펼쳐지던 중 아래와 같은 상황이 발생했다. 상황을 보고 다음 보기 중, 재경기에 대해 올바른 설명을 모두 고르시오. (6점)</p>
+										<div class="example">
+											[9월 11일 토요일, 다이나믹 팀과 피치 팀의 K리그1 경기가 펼쳐지고 있다. 경기 시간은 후반 10분, 두 팀이 2-2로 비기고 있는 상황이다. 다이나믹팀은 선수교체카드를 모두 사용했으며, 피치 팀은 선수 교체카드가 한장 남아있다. 양팀 모두 U22선수 두 명이 선발 출전했다. 하지만, 갑자기 엄청난 우박을 동반한 천둥번개가 몰아쳐 선수와 스탭은 물론 관중의 안전까지 위험할 수 있는 날씨가 되었다. 경기 감독관은 부득이 천재지변에 의한 경기중지를 선언했다. 경기 감독관은 다음날인 9월 12일 일요일의 기상예보가 경기를 치르기에 문제가 없다고 판단하여, 재경기 개최를 결정했다.]
+											<br/><br/>
+											a. 2-2 스코어를 무시하고, 90분 재경기를 실시한다.<br/>
+											b. 2-2 스코어를 유지한 채, 35분 재경기를 실시한다.<br/>
+											c. 2-2 스코어는 유지한 채, 90분 재경기를 실시한다.<br/>
+											d. 다이나믹팀은 선수교체를 실시 할 수 있다.<br/>
+											e. 피치팀은 선수교체를 1회만 실시 할 수 있다.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① a,d</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② b,d</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ c,d</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ a,e</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ b,e</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">3.</p>
+										<p class="tit">김천상무의 주장이자 군 복무 심상민은 올 시즌중 의미있는 선행을 한 바 있다. 김천 구단은 심상민이 지난 4월 천안함 재단에 500만원을 기부한 데 이어 지난 16일 서해 수호 최전선 해군 2함대에 50개의 “이것”을 기증했다고 밝혔다. 심상민은 “나 역시 국방의 의무를 수행하고 있는 대한민국 군인이다. 이번 기증품이 서해 수호의 최전선에서 불철주야 임무를 수행하는 해군 2함대 장병들에게 조금이나마 힘이 되기를 바란다”고 말했다. 그렇다면 다음 보기 중, 군대에 꼭 필요한 물건이자, 축구경기에 없어서는 안 될 물품인 “이것”을 고르시오. (5점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① 축구화</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② 간이 골대</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ 팀 조끼</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ 축구공</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ 스포츠음료</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">4.</p>
+										<p class="tit">포항스틸러스의 방부재 미모를 자랑하는 임상협은 세월이 흘러도 변하지 않는 ‘동안 미모’로 큰 인기를 얻고 있다. 또 임상협은 K리그 여러 클럽을 경험했던 선수로도 알려져 있는데, 그렇다면 다음중 현재 소속팀인 “포항스틸러스”에서 활약중인 임상협의 눈 사진을 고르시오. (5점)</p>
+										<ul class="list in-img">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex4_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex4_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex4_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex4_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex4_5.png"></label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">5.</p>
+										<p class="tit">K리그의 잘 알려지지 않은 재밌는 사실들을 전해주는 "K리그 TMI"라는 콘텐츠가 있다. 올해로 시즌2를 맞이한 K리그 TMI에도 여전히 다양한 이야기거리들이 등장하고 있다. 그렇다면 다음 중, K리그 TMI에서 소개한 사실과 다른 내용을 모두 고르시오. (4점)</p>
+										<div class="example in-img mb10">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/ulricuh7t6E" type="video/mp4"></source>
+											</video>
+										</div>
+										<div class="example">
+											a. 대구 김진혁, 강원 윤석영, 서울E 이상민 선수는 2021시즌 수비수로는 드물게 등번호 7번을 달았다.<br/>
+											b. 울산 이동준 선수을 응원하는 "카드캡터 동준"걸개는 이동준의 리그경기때에만 나타난다.<br/>
+											c. 2021시즌 등록선수 기준, 최장신 선수는 성남의 뮬리치이다.<br/>
+											d. 전북현대의 새로운 마스코트 "나이티"는 과거 전북현대 마스코트였던 "모티"의 아들이다.<br/>
+											e. 2021시즌 공식 개막 1호 득점은 프리킥 득점이다.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ a, c</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ b, e</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ a, b, e</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ c, d, e</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ b, c, d</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">6.</p>
+										<p class="tit">K리그에는 대회 및 경기 운영에 관한 사항은 규정해놓은 "대회요강"이라는 것이 있다. 말하자면, K리그1 이라는 대회를 한 시즌 치르는데 필요한 사항을 정리해 놓은 것이다. 대회요강에는 리그 운영에 관한 다양한 사항들이 엄격하게 정해져 있는데, 그렇다면 다음 중, "하나원큐 K리그1 2021 대회요강"에 대해 옳지 않은 설명을 한 인물을 모두 고르시오. (7점)</p>
+										<div class="example">
+											온유 : 경기장 관중석의 좌석수는 K리그1 10,000석, K리그2 5,000석 이상을 충족해야 해. 이를 미달할 경우에는 어떠한 경우에도 경기를 치를 수 없어<br/>
+											종현 : 한 개 팀벤치는 최소 20명 이상 앉을 수 있어야 해.<br/>
+											기범 : 만약 벤치에 지붕을 설치하고 싶다면 투명한 재질이어야 해.<br/>
+											태민 : 선수 번호는 반드시 1번 ~ 99번 사이에서 선택해야 하고, 1번은 골키퍼 선수만 선택할 수 있어.<br/>
+											민호 : K리그1, 2 전년도 우승 팀은 우승 트로피를 당년도 정규라운드 종료 이후에 연맹에 반납해야 해.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 온유, 종현</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 종현, 기범</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 온유, 민호</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 태민, 민호</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 기범, 태민</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">7.</p>
+										<p class="tit">K리그 공식 SNS중 인스타그램과 페이스북에서는 매 라운드 종료 이후, 그 라운드 베스트팀으로 선정된 팀의 팀 컬러로 K리그 로고를 게시한다. 그리고 K리그1 베스트팀의 경우, K리그 공식 인스타그램과 페이스북의 프로필 사진으로 사용하기도 한다. 그렇다면 보기의 로고는 각각 어느팀의 팀컬러를 이용한 로고인지 알맞게 연결한 것을 고르시오. (4점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex7.png" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ a - 포항 / b - 제주</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ a - 포항 / b - 경남</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ a - 서울 / b - 경남</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ a - 서울 / b - 제주</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ a - 포항 / b - 강원</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">8.</p>
+										<p class="tit">한국프로축구연맹과 하나은행은 올해 탄소중립과 기후위기 대응을 위해 멸종위기 동물로 구성된 K리그의 23번째 구단 '그린킥오프FC'를 창단했다. '그린킥오프FC'는 환경에 대한 인식 확산과 환경 정보 전달에 적극적으로 나서고 있다. 온라인으로 팬들이 참여할 수 있는 '친환경 행동 인증 미션'도 함께 진행하며, '그린킥오프FC 홈페이지(green.kleague.com)'를 통해 매주 미션이 공개된다. 그렇다면 다음 중, 멸종위기종으로 이뤄진 '그린킥오프FC'의 멤버로 올바르지 않은 동물을 고르시오. (4점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex8.jpg" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 혹동고래</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 벵골호랑이</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 노란목도리담비</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 눈덧신토끼</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 그린란드순록</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">9.</p>
+										<p class="tit">다음은 K리그1 포항과 서울의 경기 영상중 일부다. 포항의 강현무 골키퍼가 같은팀 권완규 선수의 흘려주는 패스를 가까스로 잡아내 실점을 면한 장면이다. 팬들은 이 장면을 보고 강현무의 "이것"강제 압수라고 평가하곤 했다. 그렇다면 다음 보기중, 상을 받아도 될 만큼 멋지게 골망을 흔든 자책골을 뜻하는 K리그의 신조어로 알맞은 것을 고르시오. (4점)</p>		
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/u1WSNzP_2MY" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 조원희골</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 조스카스</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 조책골</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 플라잉조원희</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 조운골</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">10.</p>
+										<p class="tit">K리그의 이상윤 해설위원은 이른바 "막걸리 해설"로 불리며, 구수한 입담과 재치로 K리그 팬들에게 큰 인기를 얻고 있다. 이상윤 해설위원은 지난 7월 12일, 안산과 부산의 경기를 중계하며 안산 최건주 선수를 이탈리아 대표팀 "이 선수"에 비유하려고 했으나, 이름을 기억해내지 못했다. 그렇다면 다음 보기중, 이상윤 해설위원이 한참 후에 생각해낸 이탈리아 국가대표팀 공격수 선수의 이름으로 올바른 것을 고르시오. (5점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/2FZjmHIV2fI" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 치로 임모빌레</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 로렌초 인시녜</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 도메니코 베라르디</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 모이스 킨</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 페데리코 키에사</label></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img class="bar" src="resources/images/sub/img_bar.png" alt="bar">
+					</div>
+					<!-- 판정 및 규정 -->
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<img src="resources/images/sub/txt_quiz2.png" alt="2021년도 K리그 덕력 시험 평가 문제지 - 판정 및 규정">
+							</h2>
+							<div class="info-zone">
+								<div class="name-label">
+									<dl>
+										<dt>이름</dt>
+										<dd>홍길동</dd>
+									</dl>
+									<dl>
+										<dt>응원팀</dt>
+										<dd>FC서울</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="description">
+								<p>* 시험 종료 전 답안 제출을 완료해야 하며, 응시 중 시간이 초과될 경우 답안을 제출하실 수 없습니다.</p>
+								<p>* 이미 답변을 제출한 이후에는 답안을 수정하실 수 없습니다. 답안 제출 전, 신중하게 답안을 확인해주세요.</p>
+							</div>
+						</div>
+						<img class="bar" src="resources/images/sub/img_bar.png" alt="bar">
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box">
+										<p class="num">1.</p>
+										<p class="tit">축구에는 선수를 교체할 수 있는 규정과 절차가 정해져 있다. 그렇다면 다음 중, 교체해 들어가는 선수의 투입상황에 대한 설명으로 알맞은 것을 모두 고르시오. (4점)</p>
+										<div class="example">
+											a. 플레이가 중단되었을 때만 필드에 들어갈 수 있다.<br/>
+											b. 주심의 신호를 받고 필드에 들어갈 수 있다.<br/>
+											c. 하프웨이 라인을 통해서만 필드에 들어갈 수 있다.<br/>
+											d. 교체아웃되는 선수가 부상으로 필드를 떠난경우엔, 별도의 주심 신호 없이 들어갈 수 있다.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① a, b</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② a, b, c</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ a, b, c, d</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ a, c, d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ a, b, d</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">2.</p>
+										<p class="tit">축구에서 가장 어려운 규정중 하나가 바로 "오프사이드"규정이다. 오프사이드 반칙에 해당하지 않는 경우가 있다. 바로 선수가 "이 상황"에서 직접 볼을 받는 경우엔 오프사이드 반칙이 아니라고 한다. 다음 보기중, "이 상황"에 해당하는 상황을 모두 고른것으로 알맞은 것을 고르시오. (3점)</p>
+										<div class="example">
+											a. 간접프리킥 / b. 골킥 / c. 스로인 / d. 코너킥
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① a, c, d</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② a, b, c, d</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ a, b, c</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ b, c, d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ c, d</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">3.</p>
+										<p class="tit">축구의 꽃은 "득점"이다. 그렇다면 다음 중, "득점"에 대한 설명으로 옳지 않은 것을 모두 고르시오. (3점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① a, e</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② b, c</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ c, d</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ b, d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ d, e</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">4.</p>
+										<p class="tit">K리그 최강의 두 팀 다이나믹팀과 피치팀이 경기를 준비중이다. 다이나믹팀의 개성파 신세계 선수는 유니폼 안에 별도의 상의 속옷, 하의 속옷(이너웨어)를 입으려고 한다. 두 팀의 유니폼 배정이 아래 사진과 같을 때, 다이나믹팀 소속의 신세계 선수가 착용할 수 있는 상/하의 이너웨어 조합으로 알맞은 것을 고르시오. (7점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex4_ver2.png" alt="quiz">
+										</div>
+										<ul class="list in-img">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex4_ver2_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex4_ver2_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex4_ver2_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex4_ver2_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex4_ver2_5.png"></label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">5.</p>
+										<p class="tit">축구의 꽃이 골이라면, 골 셀러브레이션(득점 축하 행동)은 그 골을 더욱 빛나게 해주는 존재이다. 하지만 여기에도 엄연한 규칙이 존재하며, 최근에는 이 규정이 조금 더 엄격해졌다고 한다. 그렇다면 영상의 보기 중, 당시에는 경고나 퇴장조치를 받지 않았지만, 20/21 경기 규칙 기준으로 경고에 해당하는 득점 축하 행동의 예시로 알맞은 것을 고르시오. (7점)</p>
+										<div class="example in-img mb10">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/xcuJMzCYBgA" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ a</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ b</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ c</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ e</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">6.</p>
+										<p class="tit">한국프로축구연맹 김연맹 대리는 연맹의 멋진 다이나믹피치 엠블럼을 경기장 내부에도 활용하고 싶어했다. 하지만, 경기규칙으로 인해 엠블럼을 그려 넣는 데에 어려움을 겪었다고 한다. 그렇다면 다음 중, 클럽을 상징하는 로고 또는 엠블럼을 그려 넣거나 구성 할 수 있는 지역을 고르시오. (5점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 골네트</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 플래그 포스트 (코너기 깃대)</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 골네트로 둘러싸인 지역</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 골대</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 플래그 포스트의 깃발(코너기 깃발)</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">7.</p>
+										<p class="tit">주심은 경기규칙 시행과 관련한 모든 권한을 갖고 경기를 관리하는 사람이다. 주심은 경기규칙과 ‘경기의 정신’에 따라 최선을 다해 판정해야 하며, 경기규칙의 기본 틀 안에서 자신의 견해에 기초해 재량권을 갖고 적절한 조치를 취해야 한다. 특히 주심은, 다양한 수신호를 이용하여 선수들에게 판정을 알려줄 수 있다. 그렇다면 다음 그림들 중, "간접프리킥"을 의미하는 수신호로 알맞은 것을 고르시오. (7점)</p>
+										<ul class="list in-img">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex7_ver2_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex7_ver2_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex7_ver2_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex7_ver2_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex7_ver2_5.png"></label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">8.</p>
+										<p class="tit">다이나믹 팀과 피치 팀의 경기, 공격팀인 다이나믹 팀은 수비팀인 피치 팀의 골 에어리어 안의 한 위치(노란색▲)에서 간접 프리킥 기회를 얻었다. 그렇다면 그림의 보기 위치 중, 다이나믹 팀이 실제로 간접 프리킥을 실시 하게 되는 위치로 알맞은 것을 고르시오. (6점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex8_ver2.png" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ a</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ b</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ c</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ e</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">9.</p>
+										<p class="tit">절대적 룰을 지키고 싶은 심판 지망생 다섯 친구들은 평소 K리그를 보며 열심히 심판 공부를 하고 있었다. 그러던 중, 아래 영상을 보고 서로의 의견이 갈라졌다. 그렇다면 다음 친구들 중, 영상의 상황을 가장 올바르게 판단한 사람을 고르시오. (4점)</p>		
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/rAYNjc76JW4" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 리나</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 지젤</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 윈터</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 닝닝</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 수만</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">10.</p>
+										<p class="tit">축구에서는 단순히 볼이 골라인을 넘었다고 해서 모두 골이 되는 것이 아니다. 득점인지 아닌지 애매한 상황에서는 모두가 심판의 득점 신호를 숨죽여 기다리곤 한다. 그렇 다면 다음 중, 득점으로 인정이 되는 경우를 모두 고르시오. (4점)
+										</p>
+										<div class="example">
+											a. 골킥으로 찬 공이 상대편 골문으로 직접 들어갔다.<br/>
+											b. 스로인을 한 볼이 상대팀 골문에 직접 들어갔다.<br/>
+											c. 페널티킥을 얻어낸 상황에서, 키커가 골대를 등지고 발 뒤꿈치로 공을 차 골문으로 넣었다.<br/>
+											d. 직접 프리킥한 볼이 자기 팀의 골문으로 직접 들어갔다.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ a, b</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ a, c</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ c, d</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ b, d</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ a, d</label></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<img class="bar" src="resources/images/sub/img_bar.png" alt="bar">
+					</div>
+					<a class="btn-quiz" href="quiz_finish.html">
+						<img src="resources/images/sub/btn_submit.png" alt="제출하기">
+					</a>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2021 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

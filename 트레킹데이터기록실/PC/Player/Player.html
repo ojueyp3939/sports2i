@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, 트레킹데이터기록실" />
+		<title>KBO 트레킹데이터기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/tracking.css" />
+		<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var dataGraph = $(".data-list li:nth-child(1)");
+				var dataPitcher = $(".data-list li:nth-child(2)");
+				var dataHitter = $(".data-list li:nth-child(3)");
+				$(".data-list li:nth-child(1)").on('click',function(){
+					if (dataGraph) {
+						$(this).addClass('on');
+						$(".data-list li:nth-child(2), .data-list li:nth-child(3)").removeClass('on');
+						$("#dvGraph").removeClass("dp-none");
+						$("#dvHit, #dvPitch").addClass("dp-none");
+					}
+				});
+				$(".data-list li:nth-child(2)").on('click',function(){
+					if (dataPitcher) {
+						$(this).addClass('on');
+						$(".data-list li:nth-child(1), .data-list li:nth-child(3)").removeClass('on');
+						$("#dvHit").removeClass("dp-none");
+						$("#dvGraph, #dvPitch").addClass("dp-none");
+					}
+				});
+				$(".data-list li:nth-child(3)").on('click',function(){
+					if (dataHitter) {
+						$(this).addClass('on');
+						$(".data-list li:nth-child(1), .data-list li:nth-child(2)").removeClass('on');
+						$("#dvPitch").removeClass("dp-none");
+						$("#dvGraph, #dvHit").addClass("dp-none");
+					}
+				});
+				$('#btnCalendar').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImageOnly: false,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+				$('#btnCalendarEnd').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImageOnly: false,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+
+				// 그래프 호버시 팝업창 on
+				$(".graph-wrap").mousemove(function(e){
+					$(this).find(".tip-box").removeClass("dp-none");
+					$(this).find(".tip-box").css({
+						top:e.pageY - $(this).offset().top,
+						left:e.pageX - $(this).offset().left
+					});
+				});
+				$(".graph-wrap").mouseleave(function(e){
+					$(this).find(".tip-box").addClass("dp-none");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="header-wrap">
+					<h1><a href="../Main.html"><img src="../resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a></h1>
+					<div class="search-area">
+						<input type="text" class="ipt ipt-search" />
+						<a href="../Player/Player.html" class="btn-search"><img src="../resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list">
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu-list clear">
+						<li><a href="../Preview/Preview.html">선발투수 프리뷰</a></li>
+						<li><a href="../PlayerRank/PlayerRank.html">선수 순위</a></li>
+						<li><a href="../TeamRank/TeamRank.html">팀 순위</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="player-record">
+						<h2><span class="emb"><img src="../resources/images/emb/emb_62x40_HH.png" alt="한화"></span>윌슨 (투수 / 우투, #35)</h2>
+						<!-- 시즌랭킹, 릴리스포인트 -->
+						<div class="player-info-box clear">
+							<div class="player clear">
+								<h3>2019시즌 랭킹</h3>
+								<ul class="record">
+									<li>
+										<dl>
+											<dt>직구 평균 구속</dt>
+											<dd class="graph-wrap rate"><!-- 그래프가 51% 이상일 경우 rate 클래스 추가 -->
+												<canvas></canvas>
+												<div class="tip-box dp-none">상위99%</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>인플레이 타구 평균 속도</dt>
+											<dd class="graph-wrap">
+												<canvas></canvas>
+												<div class="tip-box dp-none">상위99%</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>직구 평균 상하 무브먼트</dt>
+											<dd class="graph-wrap rate">
+												<canvas></canvas>
+												<div class="tip-box dp-none">상위99%</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>강한 타구 비율</dt>
+											<dd class="graph-wrap">
+												<canvas></canvas>
+												<div class="tip-box dp-none">상위99%</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								<ul class="record-info clear">
+									<li>하위</li>
+									<li>평균</li>
+									<li>상위</li>
+								</ul>
+							</div>
+							<div class="graph-box-wrap">
+								<h3>2019시즌 리그 릴리스포인트 (직구)</h3>
+								<div class="graph-box dotted-graph no-record"><!-- 기록이 없을 경우 no-record 클래스 추가 및 자식요소로 p 태그 추가, canvas 주석처리 -->
+									<!-- <canvas></canvas> -->
+									<p>데이터가 없습니다.</p>
+									<span class="copyright">Copyright 스포츠투아이(주) All Rights Reserved.</span>
+								</div>
+								<p class="tip">※ 빨간색 점이 해당 투수를 나타냄</p>
+							</div>
+						</div>
+						<!-- // 시즌랭킹, 릴리스포인트 -->
+						<!-- 광고 영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="../resources/images/common/test11.jpg" alt=""></a>
+						</div>
+						<!-- // 광고 영역 -->
+						<!-- 구종별 히트맵 -->
+						<div class="player-info-box">
+							<h3>2019시즌 구종별 히트맵</h3>
+							<div class="graph-box hitmap-graph no-record">
+								<!-- <canvas></canvas> -->
+								<p>데이터가 없습니다.</p>
+								<span class="copyright">Copyright 스포츠투아이(주) All Rights Reserved.</span>
+							</div>
+							<p class="tip">※ 포수가 투수를 바라보는 시점, 검은 선은 스트라이크 존을 나타냄</p>
+						</div>
+						<!-- // 구종별 히트맵 -->
+						<!-- 타구 속도 구간별 비율 -->
+						<div class="player-info-box">
+							<h3>2019시즌 타구 속도 구간별 비율</h3>
+							<div class="graph-box hitmap-graph">
+								<canvas></canvas>
+								<span class="copyright">Copyright 스포츠투아이(주) All Rights Reserved.</span>
+							</div>
+						</div>
+						<!-- // 타구 속도 구간별 비율 -->
+						<!-- PTS/HTS 데이터 -->
+						<div class="player-info-box">
+							<h3>PTS/HTS 데이터</h3>
+							<ul class="data-list tab3 clear">
+								<li class="on"><a href="#none">그래프</a></li>
+								<li><a href="#none">투구</a></li>
+								<li><a href="#none">타구</a></li>
+							</ul>
+							<!-- PTS/HTS 데이터 > 그래프 -->
+							<div id="dvGraph">
+								<div class="data-box clear">
+									<div class="select-area select-type1">
+										<select>
+											<option>검색</option>
+										</select>
+										<select>
+											<option>연도</option>
+										</select>
+										<select>
+											<option>단위</option>
+										</select>
+										<select>
+											<option>구종</option>
+										</select>
+									</div>
+									<div class="btn-area">
+										<a href="#none" class="btn btn-search">검색</a>
+										<a href="#none" class="btn btn-reset">초기화</a>
+									</div>
+								</div>
+								<p class="txt-state">▶ 선택 항목 - 기록 : 구사% | 연도 : 전체 | 단위 : 시즌 | 구종 : 전체</p>
+								<!-- 그래프 -->
+								<div class="graph-box brokenline-graph no-record">
+									<!-- <canvas></canvas> -->
+									<!-- <ul class="download-list">
+										<li><a href="#none">다운로드</a></li>
+									</ul> -->
+									<p>데이터가 없습니다.</p>
+									<span class="copyright">Copyright 스포츠투아이(주) All Rights Reserved.</span>
+								</div>
+							</div>
+							<!-- // PTS/HTS 데이터 > 그래프 -->
+							<!-- PTS/HTS 데이터 > 투구 -->
+							<div id="dvPitch" class="dp-none">
+								<div class="data-box clear">
+									<div class="select-area select-type2">
+										<select>
+											<option>검색</option>
+										</select>
+										<label>시작일</label>
+										<input type="text" class="ipt ipt-calendar" id="btnCalendar" />
+										<label>종료일</label>
+										<input type="text" class="ipt ipt-calendar" id="btnCalendarEnd" />
+										<select>
+											<option>구종</option>
+										</select>
+									</div>
+									<div class="btn-area">
+										<a href="#none" class="btn btn-search">검색</a>
+										<a href="#none" class="btn btn-reset">초기화</a>
+									</div>
+								</div>
+								<p class="txt-state">▶ 선택 항목 - 기록 : 구사% | 연도 : 전체 | 단위 : 시즌 | 구종 : 전체</p>
+								<!-- 투구 -->
+								<div class="tbl-box pitcher">
+									<p>이닝별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 이닝별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>볼카운트별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 볼카운트별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>주자상황별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 주자상황별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- // 투구 -->
+							</div>
+							<!-- // PTS/HTS 데이터 > 투구 -->
+							<!-- PTS/HTS 데이터 > 타구 -->
+							<div id="dvHit" class="dp-none">
+								<div class="data-box clear">
+									<div class="select-area select-type2">
+										<select>
+											<option>검색</option>
+										</select>
+										<label>시작일</label>
+										<input type="text" class="ipt ipt-calendar" id="btnCalendar" />
+										<label>종료일</label>
+										<input type="text" class="ipt ipt-calendar" id="btnCalendarEnd" />
+										<select>
+											<option>구종</option>
+										</select>
+									</div>
+									<div class="btn-area">
+										<a href="#none" class="btn btn-search">검색</a>
+										<a href="#none" class="btn btn-reset">초기화</a>
+									</div>
+								</div>
+								<p class="txt-state">▶ 선택 항목 - 기록 : 구사% | 연도 : 전체 | 단위 : 시즌 | 구종 : 전체</p>
+								<!-- 타구 -->
+								<div class="tbl-box hitter">
+									<p>이닝별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 이닝별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>볼카운트별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 볼카운트별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+									<p>주자상황별</p>
+									<table class="tbl tbl-data" summary="PTS/HTS 데이터">
+										<caption>PTS/HTS 데이터 주자상황별</caption>
+										<colgroup>
+											<col style="width: 10.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 8.3333%;" />
+											<col style="width: 14%;" />
+											<col style="width: 14%;" />
+											<col style="width: 13%;" />
+											<col style="width: 16%;" />
+											<col style="width: 26%;" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>구사%</th>
+												<th>구속</th>
+												<th>좌우 무브먼트</th>
+												<th>상하 무브먼트</th>
+												<th>분당 회전수</th>
+												<th>좌우 릴리스포인트</th>
+												<th>상하 릴리스포인트</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>투심</td>
+												<td>33.5%</td>
+												<td>142.2</td>
+												<td>-11.3</td>
+												<td>12.3</td>
+												<td>0.218</td>
+												<td>0.218</td>
+												<td>0.238</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- // 타구 -->
+							</div>
+							<!-- // PTS/HTS 데이터 > 타구 -->
+						</div>
+						<!-- // PTS/HTS 데이터 -->
+						<!-- 광고 영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="../resources/images/common/test11.jpg" alt=""></a>
+						</div>
+						<!-- // 광고 영역 -->
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box clear">
+					<div class="company">
+						<h1><img src="../resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+						<p>Copyright © sports2i Corp.</p>
+					</div>
+					<div class="txt-company">
+						<p>
+							※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우 반드시 스포츠투아이㈜에 문의하시기 바랍니다.<br/>
+							<span>※ 본 사이트는 PTS 및 HTS를 통해 추적된 투구, 타구를 바탕으로 구현됐으며, 제 2 구장(포항, 울산, 청주 등)에서 열린 경기는 포함하지 않습니다.</span>
+						</p>
+						<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+						<p>전화: 02-3445-7116 팩스: 031-707-7165</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

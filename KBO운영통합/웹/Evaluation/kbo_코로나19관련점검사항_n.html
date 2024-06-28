@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li><a href="#none"><span>경기 영상 모니터링 </a></span></li>
+					<li><a href="#none"><span>운영위원 모니터링</a></span></li>
+					<li class="on"><a href="#none"><span>코로나 19 주요사항</a></span></li>
+					<li><a href="#none"><span>분쟁 및 사고</a></span></li>
+					<li><a href="#none"><span>경기 스피드업 위반</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box long">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap mt30">
+				<h3 class="sub-title">KBO 코로나19 주요상황 보고서</h3>
+			</div>
+			<div class="report-wrap">
+				<h4 class="mb15">점검사항</h4>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="15%">
+						<col width="72%">
+					</colgroup>
+					<tr>
+						<th colspan="2">내용</th>
+						<th class="no-border">Y</th>
+						<th>N</th>
+					</tr>	
+					<tr>
+						<td rowspan="4">출입 안전</td>
+						<td class="txt-l">선수단/관계자 출입구 발열체크 및 방문일지 작성 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">원정 선수단 도착 직후 열화상 카메라 또는 비접촉 체온계로 발열 체크 실시 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">원정 선수단 승/하차 시 관람객과 밀접 접촉 방지 위해 최소 3m 이상 차단봉 설치 및 핵심 구역 안전요원 배치 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">원정 선수단의 지정된 구역(원정 식당, 라커룸, 감독실, 코치실, 불펜, 덕아웃, 샤워실, 화장실 등)외 출입 금지 규정 준수 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					
+					<tr>
+						<td>위생 관리</td>
+						<td class="txt-l">선수 및 코칭스태프, 훈련보조의 마스크 착용 여부(그라운드 및 덕아웃 제외)</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>거리 유지</td>
+						<td class="txt-l">프런트, 리그 관계자와 선수단의 공간 및 동선 분리 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">의료</td>
+						<td class="txt-l">경기장 내 또는 출입구에 코로나19 전담 의료진 배치 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">경기장 내 의심 증상자용 별도 격리실 준비 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">미디어</td>
+						<td class="txt-l">인터뷰 및 취재 가능 구역의 지정, 운영 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">인터뷰 시 미디어 및 선수단의 마스크 착용 및 안전 거리(2m) 유지 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="4">선수단<vr/>안전</td>
+						<td class="txt-l">맨손 하이파이브 및 악수 등 자제 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">침 뱉는 행위 금지 규정 준수 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">씹는 담배 사용 금지 규정 준수 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">1루, 3루 주루코치의 마스크 착용 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">심판 안전</td>
+						<td class="txt-l">심판위원과 선수간의 불필요한 직접 접촉 금지 규정 준수 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">심판위원의 마스크 및 장갑 착용 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">관계자<br/>안전</td>
+						<td class="txt-l">볼보이/걸, 배트보이/걸, 비디오판독 요원의 마스크 및 위생장갑 착용 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td class="txt-l">전광판, 장내방송을 통한 예방수칙 안내 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+				</table>
+				
+				<h4 class="mb15">특이사항</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="15%">
+						<col width="72%">
+					</colgroup>
+					<tr>
+						<th colspan="2">구분</th>
+						<th class="no-border">Y</th>
+						<th>N</th>
+					</tr>	
+					<tr>
+						<td colspan="2" class="txt-l">선수단 또는 관계자 이상징후(유증상, 확진 등) 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" class="txt-l">관람객 이상징후(유증상, 확진 등) 여부승부조작 모의 및 불법스포츠 베팅 관련 이상 징후 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>특이사항</td>
+						<td colspan="3">
+							<p class="reference">코로나19 관련 경기운영위원 의견 / 이상징후(유증상, 확진 등) 발견 시 서술 및 대응</p>
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>KBO 경기운영위원 : </th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+				
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

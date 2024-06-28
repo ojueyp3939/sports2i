@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+input[type="text"], input[type="password"] {-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0px;-webkit-border-radius:0;}
+input[type="password"] {font-family:'malgun gothic';} 
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+
+.w100 {width:100%;}
+.mr0 {margin-right:0 !important}
+.mb10 {margin-bottom:10px !important;}
+.mb30 {margin-bottom:30px !important;}
+
+/* 내부스크롤 */
+.scroll-wrap {
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.scroll-wrap .scroller {
+	display:inline-block;
+	/* Prevent elements to be highlighted on tap */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/* Put the scroller into the HW Compositing layer right from the start */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+/* 
+.LG {background-color:#c10a3a;}
+.HH {background-color:#da5a17;}
+.HT {background-color:#ac1020;}
+.LT {background-color:#c30025;}
+.SS {background-color:#0063ab;}
+.KT {background-color:#000000;}
+.NC {background-color:#1f477b;}
+.WO {background-color:#5b0016;}
+.OB {background-color:#131230;}
+.SSG {background-color:#c8132f;}
+ */

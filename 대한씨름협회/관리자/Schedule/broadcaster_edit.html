@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>대한씨름협회 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>승희포에버</span>님께서 사용 중입니다.(YYYY-MM-DD A/PM HH:MM:SS)</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 메뉴 -->
+				<nav>
+					<ul class="clear">
+						<li><a href="../Player/player_list.html">선수/지도자 관리</a></li>
+						<li class="on"><a href="../Schedule/game_manage.html">경기일정 관리</a></li>
+						<li><a href="../TeamEnroll/team.html">팀 등록 관리</a></li>
+						<li><a href="../Notice/specialty.html">게시판 관리</a></li>
+						<li><a href="../Member/member.html">회원 관리</a></li>
+						<li><a href="../SeasonWizard/season_wizard.html">시즌 마법사</a></li>
+					</ul>
+				</nav>
+				<!-- 메뉴 -->
+			</div>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 중메뉴 -->
+			<aside>
+				<h2>선수관리</h2>
+				<nav>
+					<ul>
+						<li><a href="../Schedule/game_manage.html"><span>대회 등록 관리</span></a></li>
+						<li><a href="../Schedule/schedule_manage.html"><span>경기 일정 관리</span></a></li>
+						<li><a href="../Schedule/stadium_manage.html"><span>경기장 관리</span></a></li>
+						<li><a href="../Schedule/code_manage.html"><span>대회코드 관리</span></a></li>
+						<li class="on"><a href="../Schedule/broadcaster_manage.html"><span>중계방송 코드 관리</span></a></li>
+					</ul>
+				</nav>
+			</aside>
+			<!-- // 중메뉴 -->
+			<!-- 본문 -->
+			<article>
+				<h3>방송사 신규 등록</h3>
+				<div class="content">
+					<table class="tbl-type2 mt30">
+						<colgroup>
+							<col style="width:130px">
+							<col style="width:auto">
+							<col style="width:130px">
+							<col style="width:auto">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>방송사코드 <span class="must">*</span></th>
+								<td>
+									<input type="text" class="ipt" />
+								</td>
+								<th>사용여부</th>
+								<td>
+									<input type="radio" /><label>등록</label>
+									<input type="radio" /><label>미등록</label>
+								</td>
+							</tr>
+							<tr>
+								<th>코드명칭 <span class="must">*</span></th>
+								<td>
+									<input type="text" class="ipt" />
+								</td>
+								<th>한글상세</th>
+								<td>
+									<input type="text" class="ipt" />
+								</td>
+							</tr>
+							<tr>
+								<th>영문이름</th>
+								<td colspan="3">
+									<input type="text" class="ipt" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="final-btn">
+						<a class="btn-white" href="">뒤로가기</a>
+						<a class="btn-blue" href="">등록</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

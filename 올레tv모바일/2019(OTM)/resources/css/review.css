@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+
+/* 리뷰 공통 */
+/** 상단 **/
+.review {color:#fff;}
+.review h1 {padding:9.0278vw 0 1.6667vw;font-size:1.3rem;font-weight:400;text-align:center;}
+.review .info-box {overflow:hidden;padding:0 3.3334vw 0.6945vw;color:#fff;}
+.review .info-box .team {float:left;width:33.0556vw;}
+.review .info-box .away {}
+.review .info-box .team .team-info {float:left;width:23.3334vw;}
+.review .info-box .team .team-info .emb {width:19.1667vw;max-width:90px;margin:0 auto 2.0834vw;}
+.review .info-box .team .team-info .player-info {min-height:13.1945vw;}
+.review .info-box .team .team-info .player-info .player {width:100%;padding-bottom:1.6667vw;text-align:center;}
+.review .info-box .team .team-info .player-info .player .win {padding:0 1.1112vw;font-size:0.9rem;font-style:normal;color:#fff;background:#ff4b53;border-radius:2px;vertical-align:middle;}
+.review .info-box .team .team-info .player-info .player .lose {padding:0 1.1112vw;font-size:0.9rem;font-style:normal;color:#fff;background:#403b3b;border-radius:2px;vertical-align:middle;}
+.review .info-box .team .team-info .player-info .player .save {padding:0 1.1112vw;font-size:0.9rem;font-style:normal;color:#fff;background:#919191;border-radius:2px;vertical-align:middle;}
+.review .info-box .team .team-info .player-info .player .name {padding-top:0;font-size:1.4rem;vertical-align:top;letter-spacing:-0.05em;}
+.review .info-box .team .score {float:left;width:9.7223vw;margin-top:5vw;font-size:3.0rem;font-weight:700;text-align:center;}
+.review .info-box .team .score.win {color:#d64249;}
+.review .info-box .game-info {float:left;width:20.4167vw;margin:0 3.1945vw;padding-top:7.3612vw;text-align:center;}
+.review .info-box .game-info .end {line-height:1.7;background:#000;font-size:1.4rem;}
+.review .info-box .game-info .place {padding-top:2.5vw;font-size:1.3rem;color:#fff;}
+.review .description {display:block;padding:3.1111vw 0;background:none;font-size:1.3rem;color:#fff;text-align:center;border-top:1px solid #2b2828;}
+
+/** 득점상황 **/
+.score-point {}
+.score-point .game-end {display:table;overflow:hidden;width:100%;padding:16px 0;background:#b6b6b6;color:#fff;vertical-align:middle;}
+.score-point .game-end h2 {display:table-cell;width:50%;font-size:1.4rem;vertical-align:middle;text-align:center;}
+.score-point .game-end .player-list {display:table-cell;width:50%;}
+.score-point .game-end .player-list li {padding-bottom:6px;}
+.score-point .game-end .player-list li:last-child {padding:0;}
+
+/** 그래픽중계 **/
+.txt-relay {}
+.txt-relay .relay-list {}
+.txt-relay .relay-list .end {background:#b6b6b6;color:#fff;}
+.txt-relay .relay-list .end h2 {display:table-cell;width:50%;font-size:1.4rem;vertical-align:middle;text-align:center;}
+.txt-relay .relay-list .end .player-list {display:table-cell;width:50%;}
+.txt-relay .relay-list .end .player-list li {padding-bottom:6px;}
+.txt-relay .relay-list .end .player-list li:last-child {padding:0;}
+
+/* 하이라이트영상 */
+#MainCont .broadcast {position:absolute;top:0;}
+#MainCont .broadcast .btn-area {position:absolute;top:10px;right:10px;}
+#MainCont .broadcast .btn-area .btn-result {display:inline-block;width:21.6667vw;height:9.5833vw;padding-left:5.08333vw;background:#2f2f2f url("../images/common/ico_result.png") no-repeat 10% 50%/3.6111vw;color:#fff;border-radius:4px;line-height:9.5833vw;text-align:center;box-sizing:border-box;}
+/* 버튼 */
+#MainCont .broadcast .control-box {position:absolute;top:0;left:0;width:100%;height:calc(56.25vw - 3em);z-index:5;color:#fff;}
+#MainCont .broadcast .control-box .btn-player {position:absolute;top:50%;left:50%;width:18.6112vw;height:18.6112vw;margin:-4.6528vw 0 0 -9.3056vw;}
+#MainCont .broadcast .control-box .btn-player .btn-play {display:block;width:100%;height:100%;background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/37.2224vw;text-indent:-99999vw;border:none;border-radius:inherit;}
+#MainCont .broadcast .control-box .btn-player .stop {background-position:-18.6112vw;}
+#MainCont .broadcast .control-box .btn-control {position:absolute;right:12px;bottom:11px;}
+#MainCont .broadcast .control-box .btn-control .btn-mode {float:left;width:6.6667vw;margin:3px 0 0 8px;}
+#MainCont .broadcast .control-box .btn-control .btn-mode img:first-child {display:block;}
+#MainCont .broadcast .control-box .btn-control .btn-mode img:last-child {display:none;}
+#MainCont .broadcast .control-box .btn-control .btn-volume {float:left;width:7.2223vw;height:7.2223vw;margin-left:8px;background:url("../images/playball/btn_streaming_volume.png") no-repeat 0 0/100%;text-indent:-9999vw;}
+#MainCont .broadcast .control-box .btn-control .btn-volume.on {background-position:0 100%;}
+
+
+@media(orientation:landscape){
+	/* full 화면일 때 영상비율 조정 */
+	#contents #MainCont {height:100vh;}
+	/* full 화면일 때 경기결과 버튼 */
+	#MainCont .broadcast .control-box {height:100vh;}
+	#MainCont .broadcast .control-box.highlight-control {height:calc(100vh - 3em);}
+	#MainCont .broadcast .btn-area .btn-result {width:14.6667vw;height:5.5833vw;line-height:5.5833vw;}
+	#MainCont .broadcast .control-box .btn-player {width:10.5469vw;height:10.5469vw;margin:-5.27345vw 0 0 -5.27345vw;}
+	#MainCont .broadcast .control-box .btn-player .btn-play {background-size:200%;}
+	#MainCont .broadcast .control-box .btn-player .btn-play.stop {background-position:100%;background-size:200%;}
+	#contents .broadcast .control-box .btn-control .btn-volume {width:5.8438vw;height:5.8438vw;}
+	#contents .broadcast .control-box .btn-control .btn-mode {width:4.8438vw;height:4.8438vw;margin:5px 0 0 8px;}
+	#MainCont .broadcast .control-box .btn-control .btn-mode img:first-child {display:none;}
+	#MainCont .broadcast .control-box .btn-control .btn-mode img:last-child {display:block;}
+}
+
+@media (min-width:1024px){
+	/** 상단 **/
+	.review h1 {padding:6.2988vw 0 1.3672vw;font-size:2.0rem;font-weight:100;}
+	.review .info-box {padding:0 3.90625vw 1.293vw;}
+	.review .info-box .team {width:23.97461vw;}
+	.review .info-box .away {padding-left:2.8320vw;}
+	.review .info-box .team .score {width:7.71484vw;margin-top:4.1016vw;font-size:5.0rem;}
+	.review .info-box .team .team-info {width:13.4277vw;}
+	.review .info-box .team .team-info .emb {width:13.4277vw;max-width:137px;margin:0 auto 1.1719vw;}
+	.review .info-box .team .team-info .player-info {min-height:9.962vw;}
+	.review .info-box .team .team-info .player-info .player {padding-bottom:0.53711vw;}
+	.review .info-box .team .team-info .player-info .player .win {padding:0 0.5859vw;font-size:1.4rem;}
+	.review .info-box .team .team-info .player-info .player .lose {padding:0 0.5859vw;font-size:1.4rem;}
+	.review .info-box .team .team-info .player-info .player .save {padding:0 0.5859vw;font-size:1.4rem;}
+	.review .info-box .team .team-info .player-info .player .name {font-size:2.0rem;vertical-align:middle;}
+	.review .info-box .game-info {width:8.3985vw;margin:0 1.2695vw;padding-top:5.02923vw;}
+	.review .info-box .game-info .end {padding:0.78125vw 0;font-size:1.6rem;}
+	.review .info-box .game-info .place {padding-top:0.53711vw;font-size:2.0rem;}
+	.review .info-box .home {padding-right:2.8320vw;}
+	.review .description {padding:1.5137vw 0;font-size:1.8rem;}
+	/* 득점상황 */
+	.score-point .game-end {width:50%;padding:22px 0;}
+	.score-point .game-end h2 {font-size:2.0rem;}
+	.score-point .game-end .player-list li {padding-bottom:7px;font-size:1.5rem;}
+	/* 그래픽중계 */
+	.txt-relay .relay-list .end {padding:21px 129px;}
+	.txt-relay .relay-list .end h2 {font-size:1.9rem;}
+	.txt-relay .relay-list .end .player-list {padding:0 68px;font-size:1.5rem;}
+	/* 하이라이트영상 */
+	#contents #MainCont {height:387px;}
+	#MainCont .broadcast .btn-area .btn-result {width:9.8633vw;height:4.3945vw;padding-left:1.865vw;background:#2f2f2f url("../images/common/ico_result.png") no-repeat 10% 50%/1.6111vw;border-radius:6px;font-size:1.5rem;line-height:4.3945vw;}
+	/* 버튼 */
+	#MainCont .broadcast .control-box {width:688px;height:387px;}
+	#MainCont .broadcast .control-box.highlight-control {height:calc(387px - 3em);}
+	#MainCont .broadcast .control-box .btn-player {width:9.082vw;height:9.082vw;margin:-4.541vw 0 0 -4.541vw;}
+	#MainCont .broadcast .control-box .btn-player .btn-play {background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/18.5547vw;}
+	#MainCont .broadcast .control-box .btn-control {right:15px;bottom:12px;}
+	#MainCont .broadcast .control-box .btn-control .btn-mode {width:3.223vw;height:auto;margin:8px 0 0 12px;}
+	#MainCont .broadcast .control-box .btn-control .btn-mode img:first-child {display:block;}
+	#MainCont .broadcast .control-box .btn-control .btn-mode img:last-child {display:none;}
+	#MainCont .broadcast .control-box .btn-control .btn-volume {width:4.15039vw;height:4.15039vw;}
+}
+@media(orientation:landscape) and (min-width:1024px){
+	/* 풀모드일 경우 영상 */
+	#wrap.full-mode {background:#000;}
+	#wrap.full-mode > header.playball-sub {display:none;}
+	.full-mode #contents {width:100%;}
+	.full-mode #contents #MainCont {width:100vw;height:56.25vw;}
+	.full-mode #contents #MainCont .control-box.highlight-control {width:100%;height:calc(100% - 3em);}
+	.full-mode #contents #SubCont {display:none;}
+	.full-mode #MainCont .broadcast .control-box .btn-control .btn-mode {width:4.223vw;margin:2px 0 0 8px;}
+	.full-mode #MainCont .broadcast .control-box .btn-control .btn-mode img:first-child {display:none;}
+	.full-mode #MainCont .broadcast .control-box .btn-control .btn-mode img:last-child {display:block;}
+}

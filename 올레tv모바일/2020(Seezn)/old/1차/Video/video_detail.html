@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/video.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/full.css" />
+  <script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			showOn: "button",
+			buttonImage: "../resources/images/common/btn_calendar_icon.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+				$("body").append("<div id='Modal' />");
+				setTimeout(function () {
+					var dateOffset = $("#ui-datepicker-div").height() / 2;
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				}, 0);
+			},
+			onSelect: function (dateText, inst) {
+				$("#Modal").remove();
+				//component.setDate(dateText.toDate('yyyy-MM-dd'));
+			},
+			onClose: function () {
+				$("#Modal").remove();
+			}
+		});
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#GameList',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+      var myScroll2 = new IScroll('#RelationVideo',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap" class="full-mode">
+		<!-- header -->
+    <header class="fixed bg-none">
+			<h1 class="tit">타이틀 <span class="roboto">Title</span></h1> <!-- 영문사용 시 span에 roboto 클래스 추가 -->
+      <a href="video.html" class="btn-back2"><img src="../resources/images/common/img_back.png" alt="" /></a>
+			<!-- <a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a> -->
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="contents" class="video video-detail">
+      <div id="MainCont">
+        <div class="live-wrapper">
+          <section class="broadcast">
+            <iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </section>
+          <div class="control-box">
+            <h2 class="tit-game on">키움 히어로즈 <span class="roboto">VS</span> 삼성 라이온즈</h2>
+            <div class="realtime-box on"> <!-- 관련영상 목록이 나올 경우 on 클래스 추가 -->
+              <a href="#none" class="btn-realtime roboto">LIVE</a>
+            </div>
+            <div class="back-box">
+              <a href="javascript:;" class="btn-back">뒤로가기</a>
+            </div>
+            <div class="detail-box clear">
+              <a href="#none" class="btn-volume">음량</a> <!-- 음소거 시 mute 클래스 추가  -->
+              <a href="#none" class="btn-function">더보기</a>
+            </div>
+            <div class="lock-box">
+              <a href="#none" class="btn-lock on">화면잠금</a>
+            </div>
+            <div class="player-box">
+              <a href="#none" class="btn-play">PLAY</a> <!-- 정지 시 stop 클래스 추가 -->
+            </div>
+            <div class="relation-box">
+              <a href="#none" class="btn-relation">관련영상</a>
+            </div>
+            <div class="screen-box clear">
+              <a href="#none" class="btn-popupmode"><img src="../resources/images/common/img_mode01.png" alt="팝업플레이어" /></a>
+              <a href="#none" class="btn-screenmode">화면크기</a> <!-- 하프모드로 돌릴시 half 클래스 추가 -->
+            </div>
+            <div class="play-end">
+              <p>재생이 종료되었습니다.</p>
+              <a href="#none" class="btn-replay">다시보기</a>
+            </div>
+            <div class="layer">
+              <div class="content">
+                <div class="relation-video">
+                  <h3 class="tit-relation"><strong>강백호</strong> 관련 영상</h3>
+                  <div id="RelationVideo" class="scroll-wrap">
+                    <div class="scroller">
+                      <ul>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#none">
+                            <span class="screenshot"><span class="time roboto">03:00</span></span>
+                            <span class="video-name">잔루,만루 위기 상황에 승리를 지켜잔루,만루 위기 상황에 승리를 지켜</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tit-box clear">
+          <dl class="tit-video">
+            <dt>[전체HL] '박경수 결승포' KT, NC 제압하여 창단 첫 70승 달성</dt>
+            <dd>하이라이트<span class="roboto">2020.03.28</span></dd>
+          </dl>
+          <div class="btn-area">
+            <a href="#none" class="btn-collection">찜하기</a> <!-- 찜했을 경우 add 클래스 추가 -->
+            <a href="#none" class="btn-result">경기기록</a>
+          </div>
+        </div>
+      </div>
+      <div id="SubCont">
+        <h2 class="dp-none">영상</h2>
+        <div class="vs-team">
+          <div class="roster clear">
+            <h2><span class="hash-tag">#강백호</span> 검색결과<span class="roboto">2</span></h2>
+            <a href="#none" class="btn-pst">최신순</a>
+          </div>
+          <div class="vs-box">
+            <ul>
+              <li class="clear on">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">하이라이트</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear on">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear on">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear on">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear on">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+              <li class="clear">
+                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                <dl>
+                  <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                  <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                </dl>
+              </li>
+            </ul>
+            <p class="no-record">경기 영상이 없습니다.</p>
+          </div>
+        </div>
+      </div>
+		</div>
+	</div>
+  <!-- // wrap -->
+  <!-- 액션시트 -->
+  <!--<div class="action-sheet on">
+     <ul class="action-list video">
+      <li><a href="#none"><span class="on">전체</span></a></li>
+      <li><a href="#none"><span>하이라이트</span></a></li>
+      <li><a href="#none"><span>명장면</span></a></li>
+      <li><a href="#none"><span>일반</span></a></li>
+      <li><a href="#none"><span>일반</span></a></li>
+    </ul>
+
+    <ul class="action-list video">
+      <li><a href="#none"><span class="on">최신순</span></a></li>
+      <li><a href="#none"><span>인기순</span></a></li>
+    </ul>
+    <a href="#none" class="btn-cancel">취소</a>
+  </div> -->
+  <!-- // 액션시트 -->
+</body>
+</html>

@@ -1,0 +1,401 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/live.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".today-games h1").click(function(){
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+
+			$(".btn-ground label").click(function(){
+				$(".ground ").toggleClass("on");
+				$(".lineup-list").toggleClass("on");
+				$(".description").toggleClass("on");
+			});
+
+			$(".hitter-list").bxSlider({
+				pager:false
+			});
+
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#GameList',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+
+			var myScroll2 = new IScroll('#TabDepth1',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+			/*myScroll4 = new IScroll('#ScrollTblRecord .record-area',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});*/
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="playball-sub">
+			<h1 class="tit">스마트중계</h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+					<li><a href="../My/my.html"><span>MY</span></a></li>
+				</ul>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="playball-sub">
+				<div id="MainCont">
+					<section class="broadcast">
+						<iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+				</div>
+				<div id="SubCont">
+					<section class="today-games">
+						<h1><a href="#none">타구장</a></h1>
+						<div id="GameList" class="scroll-wrap">
+							<div class="scroller">
+								<ul class="game-list">
+									<li class="preview">
+										<div class="team away">
+											<span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+											<span class="score"></span>
+										</div>
+										<span class="state">18:30</span>
+										<div class="team home">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+											<div class="score"></div>
+										</div>
+									</li>
+									<li class="live">
+										<div class="team away">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+											<div class="score">99</div>
+										</div>
+										<span class="state">3회초</span>
+										<div class="team home">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+											<div class="score">99</div>
+										</div>
+									</li>
+									<li class="review">
+										<div class="team away">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+											<div class="score">99</div>
+										</div>
+										<span class="state">종료</span>
+										<div class="team home">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+											<div class="score">99</div>
+										</div>
+									</li>
+									<li class="cancel">
+										<div class="team away">
+											<div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+											<div class="score"></div>
+										</div>
+										<span class="state">18:30</span>
+										<div class="team home">
+											<div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+											<div class="score"></div>
+										</div>
+									</li>
+									<li class="preview">
+										<div class="team away">
+											<span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+											<span class="score"></span>
+										</div>
+										<span class="state">18:30</span>
+										<div class="team home">
+											<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+											<div class="score"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+					<div id="TabDepth1" class="tab-area scroll-wrap">
+						<div class="scroller">
+              <ul class="tab tab-depth1">
+								<li><a href="../Playball/playball_스마트중계_관전포인트.html">관전포인트</a></li>
+								<li><a href="../Playball/playball_스마트중계_키플레이어.html">키플레이어</a></li>
+								<li><a href="../Playball/playball_스마트중계_경기기록.html">경기기록</a></li>
+                <li><a href="../Playball/playball_스마트중계_하이라이트.html">하이라이트</a></li>
+								<li class="on"><a href="../Playball/playball_스마트중계_득점상황.html">득점상황</a></li>
+								<li><a href="../Playball/playball_스마트중계_그래픽중계.html">그래픽중계</a></li>
+							</ul>
+						</div>
+					</div>
+					<section class="score-point">
+						<ul class="point-list">
+							<li class="home">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균태균</strong>  vs 엄상백상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team">KT</div>
+							</li>
+							<li class="home">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균태균</strong>  vs 엄상백상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team KT">KT</div>
+							</li>
+							<li class="away">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균</strong> vs 엄상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team HH">한화</div>
+							</li>
+							<li class="away">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균</strong> vs 엄상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team HH">한화</div>
+							</li>
+							<li class="home">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균태균</strong>  vs 엄상백상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team KT">KT</div>
+							</li>
+							<li class="away">
+								<div class="point-info">
+									<div class="player-info">
+										<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+										<div class="scored">
+											<div class="vs"><strong>김태균</strong> vs 엄상백</div>
+											<div class="situation">- 좌중간 1루타(2점)</div>
+										</div>
+									</div>
+									<div class="btn-area">
+										<a href="javascript:;" class="btn-more">득점상황 보기</a>
+									</div>
+								</div>
+								<div class="score-info">
+									<div class="inning">9회말</div>
+									<div class="score-wrap">
+										<span class="team">한화</span><span class="score">16 : <strong>20</strong></span><span class="team">KT</span>
+									</div>
+								</div>
+								<div class="score-team HH">한화</div>
+							</li>
+
+
+						</ul>
+						<div class="no-record">득점 내용이 없습니다.</div>
+					</section>
+				</div>
+				<ul class="quick-button">
+					<li><a href="javascript:;"><img src="../resources/images/playball/btn_chat.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="../resources/images/playball/btn_refresh.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="PopScore" class="">
+		<header>
+			<a href="#none" class="btn-close"><span>닫기</span></a>
+		</header>
+		<div class="content">
+			<div class="info-graphic night"> <!-- 밤경기일때 night class 추가 -->
+				<div class="pts-area">
+					pst영역
+				</div>
+				<div class="strike-zone">
+					스트라이크존
+				</div>
+				<div class="btn-area">
+					<a href="javascript:;" class="btn btn-play">PLAY</a>
+					<a href="javascript:;" class="btn btn-replay">REPLAY</a>
+				</div>
+				<div class="player-info">
+					<dl>
+						<dt>투수</dt>
+						<dd>엄상백</dd>
+					</dl>
+					<dl>
+						<dt>타자</dt>
+						<dd>김태균</dd>
+					</dl>
+				</div>
+				<div class="homerun">
+					<h2>강백호호호 HOMERUN <span class="num">(시즌20호)</span></h2>
+					<ul class="tracking">
+						<li class="ag1"><span class="graph"><span class="ball"><img src="../resources/images/playball/img_ball.png" alt="" /></span></span></li>
+						<li class="ag2"><span class="graph"><span class="ball"><img src="../resources/images/playball/img_ball.png" alt="" /></span></span></li>
+						<li class="ag3"><span class="graph"><span class="ball"><img src="../resources/images/playball/img_ball.png" alt="" /></span></span></li>
+						<li class="ag4"><span class="graph"><span class="ball"><img src="../resources/images/playball/img_ball.png" alt="" /></span></span></li>
+						<li class="ag5"><span class="graph"><span class="ball"><img src="../resources/images/playball/img_ball.png" alt="" /></span></span></li>
+					</ul>
+					<div class="info-list">
+						<dl>
+							<dt>타구속도</dt>
+							<dd>165km/h</dd>
+						</dl>
+						<dl>
+							<dt>상하각도</dt>
+							<dd>22°</dd>
+						</dl>
+						<dl>
+							<dt>좌우각도</dt>
+							<dd>22°</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<ul class="info-txt">
+				<li class="ball-list">
+					<dl>
+						<dt class="balltype b">1</dt>
+						<dd class="result">스트라이크</dd>
+						<dd class="ball-info"><span>145km/h</span><span>슬라이더</span></dd>
+						<dd class="ballcount">0-1</dd>
+					</dl>
+				</li>
+				<li class="ball-list">
+					<dl>
+						<dt class="balltype s">2</dt>
+						<dd class="result">볼</dd>
+						<dd class="ball-info"><span>145km/h</span><span>슬라이더</span></dd>
+						<dd class="ballcount">0-1</dd>
+					</dl>
+				</li>
+				<li class="ball-list">
+					<dl>
+						<dt class="balltype h">3</dt>
+						<dd class="result">홈런</dd>
+						<dd class="ball-info"><span>145km/h</span><span>슬라이더</span></dd>
+						<dd class="ballcount">0-1</dd>
+					</dl>
+				</li>
+				<li class="ball-list">
+					<dl>
+						<dt class="balltype s">4</dt>
+						<dd class="result">헛스윙</dd>
+						<dd class="ball-info"><span>145km/h</span><span>슬라이더</span></dd>
+						<dd class="ballcount">0-1</dd>
+					</dl>
+				</li>
+				<li class="bat-result">우익수 뒤 홈런 (홈런거리 : 120M)</li>
+				<li class="game-result">1루주자 하주석 : 홈인</li>
+				<li class="game-result">1루주자 하주석 : 포스아웃(3루수→2루수 2루 터치아웃)</li>
+				<li class="game-result">2루주자 하주석 : 3루수 실책으로 3루까지 진루(3루수 실책→2루수)</li>
+				<li class="game-score">
+					<span class="team away"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span><span class="score away">16</span>:<span class="score home win">20</span><span class="team home"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/gameinfo.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+        });
+
+        function loaded() {
+            var myScroll1 = new IScroll('#GameList', {
+                eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+            });
+        }
+    </script>
+</head>
+<body onload="loaded()">
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header class="fixed bg-none">
+            <h1 class="tit">경기 정보</h1>
+            <a href="#none" class="btn-share">공유</a>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <header class="fixed playball-sub clear dp-none">
+            <div class="team-info">
+                <div class="team away roboto">KT</div>
+                <div class="game-info">
+                    <span class="info"><span class="roboto">18:30</span> 수원</span>
+                </div>
+                <div class="team home">한화</div>
+            </div>
+            <a href="#none" class="btn-share on">공유</a>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents" class="playball-sub analysis-cont">
+                <div id="MainCont">
+                    <div id="GameList" class="scroll-wrap">
+                        <div class="scroller">
+                            <ul class="kind-list">
+                                <li class="live on">
+                                    <div class="state roboto">18:30</div>
+                                    <div class="team-info clear">
+                                        <span class="emb away"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></span>
+                                        <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                                        <span class="emb home"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                                    </div>
+                                </li>
+                                <li class="live">
+                                    <div class="state"><span class="roboto">3</span>회초</div>
+                                    <div class="team-info clear">
+                                        <span class="emb away"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></span>
+                                        <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                                        <span class="emb home"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                                    </div>
+                                </li>
+                                <li class="review">
+                                    <div class="state">경기 종료</div>
+                                    <div class="team-info clear">
+                                        <span class="emb away"><img src="../resources/images/emb/emb_144x123_SS.png" alt="" /></span>
+                                        <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                                        <span class="emb home"><img src="../resources/images/emb/emb_144x123_HT.png" alt="" /></span>
+                                    </div>
+                                </li>
+                                <li class="cancel">
+                                    <div class="state">취소</div>
+                                    <div class="team-info clear">
+                                        <span class="emb away"><img src="../resources/images/emb/embR_144x123_SS.png" alt="" /></span>
+                                        <span class="info"><span class="place">사직</span></span>
+                                        <span class="emb home"><img src="../resources/images/emb/embR_144x123_HT.png" alt="" /></span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="progress analysis">
+                        <div class="info-box clear">
+                            <div class="team away">
+                                <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                                <div class="name">KT 위즈</div>
+                            </div>
+                            <div class="game-info">
+                                <div class="date"><span class="roboto">03. 28</span> [토]</div>
+                                <time class="roboto">18:30</time>
+                                <div class="place">대전</div>
+                            </div>
+                            <div class="team home">
+                                <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                                <div class="name">한화 이글스</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 날씨정보 -->
+                    <div class="weather">
+                        <div class="today">
+                            <h1 class="tit-weather"><strong>수원</strong> 경기장 날씨</h1>
+                            <p class="temperature"><span class="roboto condition">27.6˚</span> <span class="">구름많음</span><i class="cloud"></i></p> <!-- 값이 없을 때 쓰이는 "-" 사용할 경우 empty 클래스 추가 // i - 맑음 : sun, 비 : rain, 눈 : snow, 흐름 : cloud  -->
+                        </div>
+                        <ul class="dust">
+                            <li>
+                                <dl class="holomicroscopic">
+                                    <dt><i></i>초미세먼지</dt>
+                                    <dd class="normal">보통</dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>미세먼지</dt>
+                                    <dd class="good">좋음</dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // 날씨정보 -->
+                </div>
+                <div id="SubCont" class="analysis-sub">
+                    <section class="game-before">
+                        <!-- 전적비교 -->
+                        <div class="comparison analysis-area">
+                            <div class="tit-box">
+                                <h1 class="tit-game">전적비교</h1>
+                            </div>
+                            <div class="info-box no-record">
+                                <!-- 기록 제공 전일 경우 no-record 클래스 추가 // 제공되는 경우 클래스 삭제 -->
+                                <div class="versus clear">
+                                    <div class="team away HT">
+                                        <div class="divide win"><span class="oswald">1</span>위</div>
+                                        <div class="result clear"><span class="roboto">99</span>승 <span class="roboto">99</span>무 <span class="roboto">99</span>패</div>
+                                    </div>
+                                    <div class="vs-wrap oswald">vs</div>
+                                    <div class="team home NC">
+                                        <div class="divide"><span class="oswald">1</span>위</div>
+                                        <div class="result clear">-</div>
+                                    </div>
+                                </div>
+                                <div class="record">
+                                    <dl>
+                                        <dt>최근 경기</dt>
+                                        <dd class="away"><span class="win">승</span><span class="lose">패</span><span class="win">승</span><span class="lose">패</span><span class="draw">무</span></dd>
+                                        <dd class="home"><span class="win">승</span><span class="lose">패</span><span class="win">승</span><span class="lose">패</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>시즌 승률</dt>
+                                        <dd class="away roboto overwhelming">9.999</dd>
+                                        <dd class="home roboto">9.999</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>시즌 타율</dt>
+                                        <dd class="away roboto">9.999</dd>
+                                        <dd class="home roboto overwhelming">9.999</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>평균자책</dt>
+                                        <dd class="away roboto overwhelming">9.99</dd>
+                                        <dd class="home roboto">9.99</dd>
+                                    </dl>
+                                </div>
+                                <p>첫 경기 이후 전적 비교가 제공됩니다.</p>
+                            </div>
+                        </div>
+                        <!-- // 전적비교 -->
+                        <!-- 승부예측 -->
+                        <div class="prediction analysis-area">
+                            <div class="tit-box">
+                                <h1 class="tit-game">
+                                    승부예측
+                                    <a href="#none">
+                                        <img src="../resources/images/playball/ico_tip.png" alt="도움말">
+                                        <span class="tip">
+                                            승부예측은 최근 30년간의 KBO공식기록을 기반으로 한 시뮬레이션 예측시스템에 의해 나온 결과입니다.
+                                            선발투수 정보, 최근 경기 등이 반영되었으며 스포츠투아이가 제공합니다.
+                                        </span>
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="info-box">
+                                <div class="versus clear">
+                                    <div class="team away HH">
+                                        <div class="divide win"><span class="oswald">99</span>%</div>
+                                    </div>
+                                    <div class="vs-wrap oswald">vs</div>
+                                    <div class="team home LT">
+                                        <div class="divide"><span class="oswald">-</span>%</div>
+                                    </div>
+                                </div>
+                                <div class="record">
+                                    <dl class="team-record">
+                                        <dt>상대 전적</dt>
+                                        <dd class="away overwhelming"><span class="roboto">99</span>승 <span class="roboto">99</span>무 <span class="roboto">99</span>패</dd>
+                                        <dd class="home"><span class="roboto">99</span>승 <span class="roboto">99</span>무 <span class="roboto">99</span>패</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><span class="roboto">03. 28 [금]</span></dt>
+                                        <dd class="away roboto overwhelming">9.999</dd>
+                                        <dd class="home roboto">9.999</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><span class="roboto">03. 29 [토]</span></dt>
+                                        <dd class="away roboto">9.999</dd>
+                                        <dd class="home roboto overwhelming">9.999</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><span class="roboto">03. 30 [일]</span></dt>
+                                        <dd class="away roboto">9.99</dd>
+                                        <dd class="home roboto overwhelming">9.99</dd>
+                                    </dl>
+                                </div>
+                                <!-- <p>승부 예측 전입니다.</p> -->
+                            </div>
+                        </div>
+                        <!-- // 승부예측 -->
+                        <!-- 선발투수 -->
+                        <div class="pitcher analysis-area">
+                            <div class="tit-box">
+                                <h1 class="tit-game">
+                                    선발투수
+                                    <a href="#none">
+                                        <img src="../resources/images/playball/ico_tip.png" alt="도움말">
+                                        <span class="tip">WHIP : 이닝당 출루 허용율<br />WAR : 대체 선수 대비 승리 기여도</span>
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="info-box ">
+                                <div class="versus clear">
+                                    <div class="team away HT">
+                                        <div class="player-img">
+                                            <img src="../resources/images/common/test.png" alt="" />
+                                            <img src="../resources/images/emb/init_40x40_HT.png" alt="" class="emb-init" />
+                                        </div>
+                                        <div class="name">다이아몬드</div>
+                                    </div>
+                                    <div class="vs-wrap oswald">vs <span class="season">시즌</span></div>
+                                    <div class="team home NC">
+                                        <div class="player-img">
+                                            <img src="../resources/images/common/test.png" alt="" />
+                                            <img src="../resources/images/emb/init_40x40_HT.png" alt="" class="emb-init" />
+                                        </div>
+                                        <div class="name">다이아몬드</div>
+                                    </div>
+                                </div>
+                                <div class="record">
+                                    <dl class="team-record">
+                                        <dt>승패</dt>
+                                        <dd class="away overwhelming"><span class="roboto">144</span>경기 <span class="roboto">99</span>승 <span class="roboto">99</span>패</dd>
+                                        <dd class="home"><span class="roboto">144</span>경기 <span class="roboto">99</span>승 <span class="roboto">99</span>패</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>맞대결</dt>
+                                        <dd class="away overwhelming"><span class="roboto">99</span>승 <span class="roboto">99</span>패</dd>
+                                        <dd class="home"><span class="roboto">99</span>승 <span class="roboto">99</span>패</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>평균자책</dt>
+                                        <dd class="away roboto">9.99</dd>
+                                        <dd class="home roboto overwhelming">9.99</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>이닝</dt>
+                                        <dd class="away roboto overwhelming">70 1/2</dd>
+                                        <dd class="home roboto">70 1/2</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>탈삼진</dt>
+                                        <dd class="away roboto">999</dd>
+                                        <dd class="home roboto overwhelming">999</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>WHIP</dt>
+                                        <dd class="away roboto">1.440</dd>
+                                        <dd class="home roboto overwhelming">1.440</dd>
+                                    </dl>
+                                    <dl class="team-record">
+                                        <dt>WAR</dt>
+                                        <dd class="away roboto overwhelming">1.020</dd>
+                                        <dd class="home roboto">1.020</dd>
+                                    </dl>
+                                </div>
+                                <!-- <p>선발투수 정보 입수 전입니다.</p> -->
+                            </div>
+                            <div class="sub-box pitching-arsenal">
+                                <h2 class="tit-sub">주요 구종</h2>
+                                <div class="graph-box clear">
+                                    <div class="record away">
+                                        <ul class="info-graph SS">
+                                            <li class="rank1" style="height:40%;"><span class="roboto">40%</span></li> <!-- %에 따라 height 동일값으로 추가 -->
+                                            <li class="rank2" style="height:20%;"><span class="roboto">20%</span></li>
+                                            <li class="rank3" style="height:30%;"><span class="roboto">30%</span></li>
+                                            <li class="rank4" style="height:10%;"><span class="roboto">10%</span></li>
+                                        </ul>
+                                        <ul class="info-list">
+                                            <li style="height:40%;">
+                                                <!-- 그래프 높이에 따라 동일한 height 동일값으로 추가 -->
+                                                <dl>
+                                                    <dt>투심</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:20%;">
+                                                <dl>
+                                                    <dt>체인지업</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:30%;">
+                                                <dl>
+                                                    <dt>커브</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:10%;">
+                                                <dl>
+                                                    <dt>그외</dt>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="record home">
+                                        <ul class="info-graph HH">
+                                            <li class="rank1" style="height:40%;"><span class="roboto">40%</span></li>
+                                            <li class="rank2" style="height:20%;"><span class="roboto">20%</span></li>
+                                            <li class="rank3" style="height:30%;"><span class="roboto">30%</span></li>
+                                            <li class="rank4" style="height:10%;"><span class="roboto">10%</span></li>
+                                        </ul>
+                                        <ul class="info-list">
+                                            <li style="height:40%;">
+                                                <dl>
+                                                    <dt>직구</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:20%;">
+                                                <dl>
+                                                    <dt>슬라이더</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:30%;">
+                                                <dl>
+                                                    <dt>커브</dt>
+                                                    <dd class="roboto">142km/h</dd>
+                                                </dl>
+                                            </li>
+                                            <li style="height:10%;">
+                                                <dl>
+                                                    <dt>그외</dt>
+                                                </dl>
+                                            </li>
+                                        </ul>
+                                        <!-- <p class="no-record">시즌 등판<br />기록이 없습니다.</p> -->
+                                    </div>
+                                    <!-- <p class="no-record-full">시즌 등판 기록이 없습니다.</p> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 선발투수 -->
+                        <!-- 키플레이 -->
+                        <div class="keyplayer analysis-area">
+                            <div class="tit-box">
+                                <h1 class="tit-game">
+                                    키플레이어
+                                    <a href="#none">
+                                        <img src="../resources/images/playball/ico_tip.png" alt="도움말">
+                                        <span class="tip">시즌 내 양팀 맞대결 경기 중 50% 이상 경기 출장, 가장 타율이 높은 선수를 키플레이어로 선정합니다</span>
+                                    </a>
+                                </h1>
+                            </div>
+                            <div class="info-box">
+                                <div class="versus clear">
+                                    <div class="team away HT">
+                                        <div class="player-img">
+                                            <img src="../resources/images/common/test.png" alt="" />
+                                            <img src="../resources/images/emb/init_40x40_HT.png" alt="" class="emb-init" />
+                                        </div>
+                                        <div class="name">엄상백백백</div>
+                                    </div>
+                                    <div class="vs-wrap oswald">vs</div>
+                                    <div class="team home NC">
+                                        <div class="player-img">
+                                            <img src="../resources/images/common/test.png" alt="" />
+                                            <img src="../resources/images/emb/init_40x40_HT.png" alt="" class="emb-init" />
+                                        </div>
+                                        <div class="name">다이아몬드</div>
+                                    </div>
+                                </div>
+                                <div class="graph-box">
+                                    <canvas></canvas>
+                                </div>
+                                <div class="record">
+                                    <dl>
+                                        <dt>경기</dt>
+                                        <dd class="away roboto overwhelming">7</dd>
+                                        <dd class="home roboto">7</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>타율</dt>
+                                        <dd class="away roboto">0.999</dd>
+                                        <dd class="home roboto overwhelming">0.999</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>안타</dt>
+                                        <dd class="away roboto">99</dd>
+                                        <dd class="home roboto overwhelming">99</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>홈런</dt>
+                                        <dd class="away roboto overwhelming">99</dd>
+                                        <dd class="home roboto">-</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>타점</dt>
+                                        <dd class="away roboto overwhelming">99</dd>
+                                        <dd class="home roboto">-</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>WPA</dt>
+                                        <dd class="away roboto">1.440</dd>
+                                        <dd class="home roboto overwhelming">1.440</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>WAR</dt>
+                                        <dd class="away roboto overwhelming">1.020</dd>
+                                        <dd class="home roboto">1.020</dd>
+                                    </dl>
+                                </div>
+                                <div class="sub-box graph-area">
+                                    <h2 class="tit-sub">핫콜드존</h2>
+                                    <div class="hotcoldzone">
+                                        <div class="zone away">
+                                            <table class="tbl-hotcold back roboto">
+                                                <colgroup>
+                                                    <col width="50%" />
+                                                    <col width="50%" />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev3">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev3">9.999</td>
+                                                        <td class="lev4">9.999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="tbl-hotcold front roboto">
+                                                <colgroup>
+                                                    <col width="33.3334%" />
+                                                    <col width="33.3334%" />
+                                                    <col width="33.3334%" />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="lev1">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev3">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev4">9.999</td>
+                                                        <td class="lev1">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev3">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev4">9.999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="zone-name">김태균</p>
+                                        </div>
+                                        <div class="zone home">
+                                            <table class="tbl-hotcold back">
+                                                <colgroup>
+                                                    <col width="50%" />
+                                                    <col width="50%" />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev3">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev3">9.999</td>
+                                                        <td class="lev4">9.999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="tbl-hotcold front">
+                                                <colgroup>
+                                                    <col width="33.3334%" />
+                                                    <col width="33.3334%" />
+                                                    <col width="33.3334%" />
+                                                </colgroup>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="lev1">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev3">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev4">9.999</td>
+                                                        <td class="lev1">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="lev3">9.999</td>
+                                                        <td class="lev2">9.999</td>
+                                                        <td class="lev4">9.999</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="zone-name">김태균</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <p>시즌 두번째 맞대결 경기 이후 제공됩니다.</p> -->
+                            </div>
+                        </div>
+                        <!-- // 키플레이 -->
+                        <!-- 라인업 -->
+                        <div class="lineup">
+                            <div class="tit-box clear">
+                                <h1 class="tit-game">라인업</h1>
+                                <ul class="lineup-list">
+                                    <li class="on"><a href="#none">리스트 뷰</a></li> <!-- 선택했을 경우 on 클래스 추가 -->
+                                    <li><a href="#none">그라운드 뷰</a></li>
+                                </ul>
+                            </div>
+                            <div class="info-box">
+                                <!-- 라인업 > 리스트뷰 -->
+                                <div class="list-view">
+                                    <ol>
+                                        <li>
+                                            <ul class="team clear">
+                                                <li class="away"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></li>
+                                                <li class="home"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">1</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">-</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">2</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">3</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">-</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">4</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">5</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">-</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">6</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">7</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">8</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">9</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt class="roboto">p</dt>
+                                                <dd class="away">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">선발투수, 우타</span>
+                                                        <span class="roboto score">0.999</span>
+                                                    </span>
+                                                </dd>
+                                                <dd class="home">
+                                                    <span class="name">페르난데스</span>
+                                                    <span class="info">
+                                                        <span class="pst">유격수, 우타</span>
+                                                        <span class="roboto score">-</span>
+                                                    </span>
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ol>
+                                </div>
+                                <!-- 라인업 > 리스트뷰 -->
+                                <!-- 라인업 > 그라운드뷰 -->
+                                <div class="ground-view">
+                                    <div class="team away">
+                                        <div class="info-box">
+                                            <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                                            <div class="ground">
+                                                <div class="ground-img"><img src="../resources/images/playball/img_ground_292.png" alt="" /></div>
+                                                <ul class="player-list KT">
+                                                    <li class="C"><span class="position roboto">C</span>다이아</li>
+                                                    <li class="DH"><span class="position roboto">DH</span>다이아</li>
+                                                    <li class="B1"><span class="position roboto">1B</span>다이아</li>
+                                                    <li class="B2"><span class="position roboto">2B</span>다이아</li>
+                                                    <li class="B3"><span class="position roboto">3B</span>다이아</li>
+                                                    <li class="P"><span class="position roboto">P</span>다이아</li>
+                                                    <li class="SS"><span class="position roboto">SS</span>다이아</li>
+                                                    <li class="LF"><span class="position roboto">LF</span>다이아</li>
+                                                    <li class="CF"><span class="position roboto">CF</span>다이아</li>
+                                                    <li class="RF"><span class="position roboto">RF</span>다이아</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="team home">
+                                        <div class="info-box">
+                                            <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                                            <div class="ground">
+                                                <div class="ground-img"><img src="../resources/images/playball/img_ground_292.png" alt="" /></div>
+                                                <ul class="player-list HH">
+                                                    <li class="C"><span class="position roboto">C</span>다이아몬드</li>
+                                                    <li class="DH"><span class="position roboto">DH</span>다이아몬드</li>
+                                                    <li class="B1"><span class="position roboto">1B</span>다이아몬드</li>
+                                                    <li class="B2"><span class="position roboto">2B</span>다이아몬드</li>
+                                                    <li class="B3"><span class="position roboto">3B</span>다이아몬드</li>
+                                                    <li class="P"><span class="position roboto">P</span>다이아몬드</li>
+                                                    <li class="SS"><span class="position roboto">SS</span>다이아몬드</li>
+                                                    <li class="LF"><span class="position roboto">LF</span>다이아몬드</li>
+                                                    <li class="CF"><span class="position roboto">CF</span>다이아몬드</li>
+                                                    <li class="RF"><span class="position roboto">RF</span>다이아몬드</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // 라인업 > 그라운드뷰 -->
+                                <!-- <p>라인업 정보 입수 전입니다.</p> -->
+                            </div>
+                        </div>
+                        <!-- // 라인업 -->
+                        <!-- 경기 정보 입수 전 -->
+                        <dl class="no-game">
+                            <dt>아직 경기 정보가 입수되지 않았습니다.</dt>
+                            <dd>전력분석은 경기 정보 입수 후 제공됩니다.</dd>
+                        </dl>
+                        <!-- // 경기 정보 입수 전 -->
+                    </section>
+                    <!-- 퀵버튼 -->
+                    <ul class="quick-button">
+                        <li><a href="#none"><img src="../resources/images/playball/img_chatting.png" alt=""></a></li>
+                        <li><a href="#none"><img src="../resources/images/playball/img_refresh.png" alt=""></a></li>
+                    </ul>
+                    <!-- // 퀵버튼 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPubBatangPL.eot');
+  src: url('../font/KoPubBatangPL.eot?#iefix') format('embedded-opentype'), url('../font/KoPubBatangPL.woff') format('woff');
+}
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPubBatangPM.eot');
+  src: url('../font/KoPubBatangPM.eot?#iefix') format('embedded-opentype'), url('../font/KoPubBatangPM.woff') format('woff');
+}
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPubBatangPB.eot');
+  src: url('../font/KoPubBatangPB.eot?#iefix') format('embedded-opentype'), url('../font/KoPubBatangPB.woff') format('woff');
+}
+
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPubDotumPL.eot');
+  src: url('../font/KoPubDotumPL.eot?#iefix') format('embedded-opentype'), url('../font/KoPubDotumPL.woff') format('woff');
+}
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPubDotumPM.eot');
+  src: url('../font/KoPubDotumPM.eot?#iefix') format('embedded-opentype'), url('../font/KoPubDotumPM.woff') format('woff');
+}
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPubDotumPB.eot');
+  src: url('../font/KoPubDotumPB.eot?#iefix') format('embedded-opentype'), url('../font/KoPubDotumPB.woff') format('woff');
+}
+
+@font-face {
+  font-family:'gs';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/GmarketSansMedium.eot');
+  src: url('../font/GmarketSansMedium.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansMedium.woff') format('woff');
+}
+@font-face {
+  font-family:'gs';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/GmarketSansBold.eot');
+  src: url('../font/GmarketSansBold.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansBold.woff') format('woff');
+}

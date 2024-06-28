@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">		
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li><a href="#none"><span>경기운영위원 모니터링</a></span></li>
+					<li><a href="#none"><span>경기 영상 모니터링</a></span></li>
+					<li><a href="#none"><span>분쟁 및 사고</a></span></li>
+					<li class="on"><a href="#none"><span>스피드업·복장 규정 위반</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box long">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap mt30">
+				<h3 class="sub-title">2021년 스피드업•복장 규정 위반 보고서</h3>
+			</div>
+			<div class="report-wrap">
+				<div class="report-header">
+					<img src="../resources/images/sub/img_logo.png" alt="kbo">
+					<p>KBO 리그 경기 영상 모니터링 보고서</p>
+				</div>
+				<h4 class="mb15">스피드업</h4>
+				<table class="tbl mb40">
+					<tr>
+						<th colspan="5" class="txt-l pl30">
+							이닝 교대 위반 (2분)
+							<span class="noti">* 타자는 1분55초 이내에 타석에 들어와야 함(위반 시 경고)</span>
+						</th>
+					</tr>
+					<tr>
+						<th>구단</th>
+						<th>위반 이닝</th>
+						<th>선수명</th>
+						<th>시간</th>
+						<th>사유</th>
+					</tr>
+					<tr>
+						<td rowspan="3" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>		
+					<tr class="add">
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="emb">
+							<img src="../resources/images/emb/LT.png" alt="emb">
+							<span>LT</span>
+						</th>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>		
+					<tr class="add">
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+						<th colspan="5" class="txt-l pl30">
+							투수교체 위반 (2분20초)
+							<span class="noti">* 타자는 2분15초 이내에 타석에 들어와야 함</span>
+						</th>
+					</tr>
+					<tr>
+						<th>구단</th>
+						<th>위반 이닝</th>
+						<th>선수명</th>
+						<th>시간</th>
+						<th>사유</th>
+					</tr>
+					<tr>
+						<td rowspan="3" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>		
+					<tr class="add">
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="3" class="emb">
+							<img src="../resources/images/emb/LT.png" alt="emb">
+							<span>LT</span>
+						</th>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>	
+					<tr>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+						</td>
+					</tr>		
+					<tr class="add">
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+							:
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<input type="text">
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+				</table>
+
+				<table class="tbl">
+					<tr>
+						<th>구단</th>
+						<th>내용</th>
+						<th>이닝</th>
+						<th>선수명</th>
+					</tr>
+					<tr>
+						<td rowspan="4" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>타석 이탈</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>BGM 10초 위반</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>볼넷/死구 미질주</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>보호대 해제 위반(홈/1루)</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="4" class="emb">
+							<img src="../resources/images/emb/HH.png" alt="emb">
+							<span>HH</span>
+						</th>
+						<td>타석 이탈</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>BGM 10초 위반</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>볼넷/死구 미질주</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td>보호대 해제 위반(홈/1루)</td>
+						<td>
+							<select>
+								<option>1</option>
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+				</table>
+				<p class="noti mt10 pr40">* 이닝교대 위반, 타석이탈, BGM, 선수소개 10초 위반시: 제재금 20만원</p>
+
+				<h4 class="mb15 mt40">유니폼</h4>
+				<table class="tbl">
+					<tr>
+						<th colspan="4" class="txt-l pl30">
+							언더셔츠 색상 위반
+						</th>
+					</tr>
+					<tr>
+						<th>구단</th>
+						<th>선수명</th>
+						<th>구단</th>
+						<th>선수명</th>
+					</tr>
+					<tr>
+						<td rowspan="2" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td rowspan="2" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr class="add">
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+					<tr>
+						<th colspan="4" class="txt-l pl30">
+							암슬리브(팔토시) 색상위반. 상표표시 위반
+						</th>
+					</tr>
+
+					<tr>
+						<th>구단</th>
+						<th>선수명</th>
+						<th>구단</th>
+						<th>선수명</th>
+					</tr>
+					<tr>
+						<td rowspan="2" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td rowspan="2" class="emb">
+							<img src="../resources/images/emb/LG.png" alt="emb">
+							<span>LG</span>
+						</th>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+					</tr>
+					<tr class="add">
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+						</td>
+						<td>
+							<select>
+								<option>선수명</option>	
+							</select>
+							<button class="btn-add">
+								<img src="../resources/images/sub/icon_plus.png">
+							</button>
+							<button class="btn-minus">
+								<img src="../resources/images/sub/icon_minus.png">
+							</button>
+						</td>
+					</tr>
+				</table>
+				<p class="noti pr40 mt10 mb30">* 유니폼 관련 사항 위반시: 1차 경고, 2차 제재금 20만원, 3차 제재금 30만원, 4차 이후 제재금 100만원</p>
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>KBO 경기운영위원 : </th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="report-fotter">
+					KBO FAX: 02-3460-4649
+				</div>
+			</div>
+			
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

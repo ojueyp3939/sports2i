@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 예상 달성기록</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.gnb li').hover(function(){
+			$('.sub-menu',this).show();
+		}, function(){
+			$('.sub-menu',this).hide();
+		});
+	});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>KBO홍보팀</span>님 환영합니다.</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav>
+				<ul class="gnb clear">
+					<li class="on">
+						<a href="../AchievementRecord/daily.html">예상 달성기록</a>
+						<ul class="sub-menu">
+							<li><a href="../AchievementRecord/daily.html">일간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/weekly.html">주간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/season.html">시즌 예상 달성기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../SystemAdmin/standard_manage.html">시스템 관리</a>
+						<ul class="sub-menu max">
+							<li><a href="../SystemAdmin/standard_manage.html">예상 달성기록 기준</a></li>
+							<li><a href="../SystemAdmin/commendation_manage.html">표창관리</a></li>
+							<li><a href="../SystemAdmin/achievement_manage.html">시즌 예상 달성기록 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../UserManage/user_manage.html">사용자 관리</a>
+					</li>
+					<li>
+						<a href="../FileManage/daily.html">파일 생성</a>
+						<ul class="sub-menu max">
+							<li><a href="../FileManage/daily.html">일일 예상달성기록</a></li>
+							<li><a href="../FileManage/weekly.html">주간 예상달성기록</a></li>
+							<li><a href="../FileManage/season.html">시즌 예상달성기록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section>
+			<!-- 본문 -->
+			<article>
+				<h3>시즌 예상 달성기록</h3>
+				<div class="content">
+					<div class="btw-wrap">
+						<dl>
+							<dd class="tab on">팀 투수</dd>
+							<dd class="tab">팀 타자</dd>
+							<dd class="tab">개인투수</dd>
+							<dd class="tab">개인타자</dd>
+							<dd class="tab">연속투수</dd>
+							<dd class="tab">연속타자</dd>
+							<dd class="tab">감독</dd>
+							<dd class="tab">심판위원</dd>
+							<dd class="tab">기록위원</dd>
+						</dl>
+					</div>
+					<div class="select-wrap">
+						<ul class="clear">
+							<li>
+								<select>
+									<option>팀</option>
+								</select>
+							</li>
+							<li>
+								<a href="" class="btn-enroll">검색</a>
+							</li>
+						</ul>
+					</div>
+					<table class="tbl-type1" summary="시즌 예상 달성기록">
+						<caption>시즌 예상 달성기록</caption>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>내용</th>
+								<th>이름</th>
+								<th>팀</th>
+								<th>현재기록</th>
+								<th>잔여기록</th>
+								<th>달성여부</th>
+								<th>비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>개인타자</td>
+								<td><i class=""></i> 300홈런</td>
+								<td>이대호</td>
+								<td>롯데</td>
+								<td>200</td>
+								<td>4</td>
+								<td>달성</td>
+								<td>12번째</td>
+							</tr>
+							<tr>
+								<td rowspan="2">개인타자(2개)</td>
+								<td>20홈런</td>
+								<td rowspan="2">손아섭</td>
+								<td rowspan="2">롯데</td>
+								<td>20홈런</td>
+								<td>-</td>
+								<td></td>
+								<td rowspan="2">50번째</td>
+							</tr>
+							<tr>
+								<td>20도루</td>
+								<td>19도루</td>
+								<td>1도루</td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="pagenation">
+						<a class="prev" href="">
+							<span>prev</span>
+						</a>
+						<span class="num">
+							<a href="">1</a>
+							<a href="">2</a>
+							<a class="on" href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+						</span>
+						<a class="next" href="">
+							<span>next</span>
+						</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

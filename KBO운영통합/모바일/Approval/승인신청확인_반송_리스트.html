@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">승인신청 확인</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">				
+				<ul class="tab-area tab-approval">
+					<li><a href="#none"><span>접수중<em class="case">2건</em></span></a></li>
+					<li><a href="#none"><span>접수완료<em class="case">2건</em></span></a></li>
+					<li class="on"><a href="#none"><span>반송<em class="case return">2건</em></span></a></li>
+					<li><a href="#none"><span>공시<em class="case confirm">2건</em></span></a></li>
+				</ul>
+				<div class="approval-list-wrap">
+					<div class="select-area">
+						<select name="" id="">
+							<option value="">연도</option>
+							<option value="">2018</option>
+							<option value="">2017</option>
+						</select>
+						<select name="" id="">
+							<option value="">구단</option>
+							<option value="">KIA</option>
+						</select>
+					</div>
+					<h3>반송</h3>
+					<ul class="approval-list">
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+									<span class="item">선수 계약 양도(웨이버)</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<span class="list-info01">
+									<span class="team">KIA</span>
+									<span class="date">2018-08-22</span>
+								</span>
+								<span class="list-info02">
+									<span class="separation">경기정보</span>
+								</span>
+								<span href="#none" class="btn"><img src="../resources/images/sub/btn_app_list.png" alt="" /></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-more">
+					<a href="#none">15개 더보기<img src="../resources/images/common/bg_more_arrdown.gif" alt="" /></a>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

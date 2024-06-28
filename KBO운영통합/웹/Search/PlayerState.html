@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none" id="gnb03">통합 조회</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none" id="lnb0301">선수/코치 검색</a></li>
+                            <li class="on"><a href="#none" id="lnb0302">선수 상태 확인</a></li>
+                            <li><a href="#none" id="lnb0303">팀 FA 등록일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">승인·공시 접수</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">선수단</a></li>
+							<li><a href="#none">경기</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반 업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">메리트 운영 계획서</a></li>
+							<li><a href="#none">신분조회</a></li>
+							<li><a href="#none">등록확인서</a></li>
+							<li><a href="#none">경찰야구단 지원 선수</a></li>
+							<li><a href="#none">상무야구단 지원 선수</a></li>
+							<li><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></li>
+							<li><a href="#none">스페셜 유니폼 착용</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>선수 상태 확인</h2>					
+				</div> 
+			</div>
+			<div class="select-area mt40">
+				<select class="mr5">
+					<option value="">KBO 리그</option>
+					<option value="">KBO 리그</option>
+					<option value="">KBO 리그</option>
+					<option value="">KBO 리그</option>
+				</select>
+				<select class="mr5">
+					<option value="">2018년</option>
+					<option value="">2018년</option>
+					<option value="">2018년</option>
+				</select>
+				<select class="mr5">
+					<option value="">구단</option>
+					<option value="HT">KIA</option>
+					<option value="OB">두산</option>
+					<option value="LT">롯데</option>
+					<option value="NC">NC</option>
+					<option value="SK">SK</option>
+					<option value="LG">LG</option>
+					<option value="WO">넥센</option>
+					<option value="HH">한화</option>
+					<option value="SS">삼성</option>
+					<option value="KT">KT</option>
+					<option value="SM">상무</option>
+					<option value="PL">경찰</option>
+				</select>
+				<select class="mr5">
+					<option value="">상태</option>
+					<option value="">현역</option>
+					<option value="">은퇴</option>
+					<option value="">육성</option>
+					<option value="">임의탈퇴</option>
+					<option value="">군보류</option>
+				</select>
+				<span class="search">
+					<a href="#none" class="btn-search" id="btnSearch">검색</a>
+				</span>
+			</div>
+			<div class="tbl-board">
+				<table class="tbl" summary="">
+					<colgroup>
+						<col width="16%" />
+						<col width="16%" />
+						<col width="16%" />
+						<col width="16%" />
+						<col width="16%" />
+						<col width="16%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선수명</th>
+							<th>구단</th>
+							<th>포지션</th>
+							<th>등번호</th>
+							<th>생년월일</th>
+							<th>상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>이병규</td>
+							<td>LG</td>
+							<td>외야수</td>
+							<td>99</td>
+							<td>19871212</td>
+							<td>은퇴</td>
+						</tr>
+						<tr>
+							<td>이병규</td>
+							<td>LG</td>
+							<td>외야수</td>
+							<td>99</td>
+							<td>19871212</td>
+							<td>은퇴</td>
+						</tr>
+						<tr>
+							<td>이병규</td>
+							<td>LG</td>
+							<td>외야수</td>
+							<td>99</td>
+							<td>19871212</td>
+							<td>은퇴</td>
+						</tr>
+						<tr>
+							<td>이병규</td>
+							<td>LG</td>
+							<td>외야수</td>
+							<td>99</td>
+							<td>19871212</td>
+							<td>은퇴</td>
+						</tr>
+						<tr>
+							<td>이병규</td>
+							<td>LG</td>
+							<td>외야수</td>
+							<td>99</td>
+							<td>19871212</td>
+							<td>은퇴</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging"><a class="btn btn-first">이전으로</a><a class="btn btn-prev">이전</a><a class="on">1</a><a>2</a><a class="btn btn-next">다음</a><a class="btn btn-last">맨끝으로</a></div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

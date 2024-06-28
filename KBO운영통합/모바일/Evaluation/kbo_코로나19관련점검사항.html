@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">코로나19 주요 상황</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							코로나19 관련 점검사항
+						</div>
+						<div class="content">
+							<div>
+								<div class="sub-tit">출입 안전</div>
+								<p class="q-tit">&#183; 선수단/관계자 출입구 발열체크 및 방문일지 작성 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 원정 선수단 도착 직후 열화상 카메라 또는 비접촉 체온계로 발열 체크 실시 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 원정 선수단 승/하차 시 관람객과 밀접 접촉 방지 위해 최소 3m 이상 차단봉 설치 및 핵심 구역 안전요원 배치 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 원정 선수단의 지정된 구역(원정 식당, 라커룸, 감독실, 코치실, 불펜, 덕아웃, 샤워실, 화장실 등)외 출입 금지 규정 준수 여부
+									</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">위생 관리</div>
+								<p class="q-tit">&#183; 선수 및 코칭스태프, 훈련보조의 마스크 착용 여부(그라운드 및 덕아웃 제외)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">거리 유지</div>
+								<p class="q-tit">&#183; 프런트, 리그 관계자와 선수단의 공간 및 동선 분리 여부 </p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">의료</div>
+								<p class="q-tit">&#183; 경기장 내 또는 출입구에 코로나19 전담 의료진 배치 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 경기장 내 의심 증상자용 별도 격리실 준비 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">미디어</div>
+								<p class="q-tit">&#183; 인터뷰 및 취재 가능 구역의 지정, 운영 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 인터뷰 시 미디어 및 선수단의 마스크 착용 및 안전 거리(2m) 유지 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">선수단 안전</div>
+								<p class="q-tit">&#183; 맨손 하이파이브 및 악수 등 자제 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 침 뱉는 행위 금지 규정 준수 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 씹는 담배 사용 금지 규정 준수 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 1루, 3루 주루코치의 마스크 착용 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">심판 안전</div>
+								<p class="q-tit">&#183; 심판위원과 선수간의 불필요한 직접 접촉 금지 규정 준수 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 심판위원의 마스크 및 장갑 착용 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">관계자 안전</div>
+								<p class="q-tit">&#183; 볼보이/걸, 배트보이/걸, 비디오판독 요원의 마스크 및 위생장갑 착용 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 전광판, 장내방송을 통한 예방수칙 안내 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="group mb0">
+						<div class="header">
+							특이사항
+						</div>
+						<div class="content">
+							<div>
+								<p class="q-tit">&#183; 선수단 또는 관계자 이상징후(유증상, 확진 등) 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 관람객 이상징후(유증상, 확진 등) 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+
+								<textarea class="mt10" placeholder="코로나19 관련 경기운영위원 의견 / 이상징후(유증상, 확진 등) 발견 시 서술 및 대응"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

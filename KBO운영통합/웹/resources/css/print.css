@@ -1,0 +1,92 @@
+﻿@charset "utf-8";
+
+/* 인쇄 영역 */
+.print {background:none;}
+.print .page-break {position:relative;width:775px;height:1096px;margin:0 auto 20px;padding:25px;-webkit-print-adjust:exact;background:#fff;border:1px solid #ebebeb;box-sizing:border-box;}
+.print .print-header {overflow:hidden;}
+.print .print-header .logo {float:left;width:98px;}
+.print .print-header .logo-2 {float:right;width:171px;}
+.print .print-header img {width:100%;}
+.print .print-info {padding:25px 0 15px;font-size:16px;border-bottom:2px solid #000;}
+.print .print-info dl {overflow:hidden;margin-bottom:5px;}
+.print .print-info dt {float:left;width:75px;}
+.print .print-info dd {float:left;width:645px;font-weight:700;}
+.print .print-info .info01 {line-height:1.5;}
+
+/* 테이블타입 베이스 */
+.print .document {}
+.print .document .comment {overflow:hidden;padding-top:15px;height:95px;font-size:16px;line-height:1.4;text-indent:10%;}
+.print .document .cmt-high {height:auto;min-height:95px;max-height:550px;}
+.print .document .tbl-type .tbl {width:100%;border:2px solid #000;}
+.print .document .tbl-type .tbl th {padding:6px 5px;background:#e2e2e2;font-size:13px;font-weight:normal;border-right:1px solid #888;border-bottom:1px solid #888;word-break:keep-all;vertical-align:middle;}
+.print .document .tbl-type .tbl td {padding:6px 5px;font-size:13px;border-top:1px solid #888;border-right:1px solid #888;border-bottom:1px solid #888;word-break:keep-all;vertical-align:middle;}
+.print .document .tbl-type .tbl tbody th {background:#f6f6f6;}
+.print .document .tbl-type .tbl tr th:last-child, .print .document .tbl-type .tbl tr td:last-child {border-right:none;}
+.print .document .tbl-type .tbl tr:last-child th:last-child, .print .document .tbl-type .tbl tr:last-child td:last-child {border-right:1px solid #888;}
+.print .document .tbl-type .tbl tr:last-child td {border-bottom:none;}
+.print .document .tbl-type .tbl td.txt-over {font-size:15px;}
+.print .document .tbl-type .tbl td .eng-name {font-size:12px;}
+.print .document .tbl-type .tbl tfoot td, .print .document .tbl-type .tbl tfoot th {background:#e2e2e2;border-top:2px solid #000;}
+.print .document .end {margin-top:10px;font-size:16px;}
+/* 2단 테이블 */
+.print .document .tbl-wrap {overflow:hidden;}
+.print .document .tbl-wrap .tbl-type {float:left;width:361px;font-size:12px;margin-left:-2px;}
+/* 2단 테이블 외국인 */
+.print .document .tbl-wrap .tbl-type-row2:nth-child(2) {float:left;width:362px;}
+.print .document .tbl-wrap .tbl-type-row2 .tbl th, .print .document .tbl-wrap .tbl-type-row2 .tbl td {font-size:11px;}
+.print .document .tbl-wrap .tbl-type-row2 td {padding:2px 3px;}
+.print .document .tbl-wrap .tbl-type-row2 td .eng-name {display:block;}
+/* 3단 테이블 선수계약승인 */
+.print .document .tbl-wrap {padding-left:3px;}
+.print .document .tbl-wrap .tbl-type-row3 {width:243px;margin-left:-3px;}
+.print .document .tbl-wrap .tbl-type-row3:nth-child(2) {width:243px;}
+.print .document .tbl-wrap .tbl-type-row3 td {padding:5px 3px;}
+.print .document .tbl-wrap .tbl-type-row3 td .eng-name {display:block;}
+/* 선수명단 테이블 */
+.print .document h3 {padding:25px 0;font-size:25px;font-weight:bold;text-align:center;}
+.print .document .total-num {padding-bottom:10px;font-size:17px;font-weight:bold;text-align:right;}
+.print .document .tbl-playerlist {}
+.print .document .tbl-playerlist tbody td.keep {color:#0062ad;}
+.print .document .tbl-playerlist tbody td.year, .print .document .tbl-playerlist tbody td.re {color:#d10000;}
+/* 개막전 소속선수 명단 */
+.print .document .tbl-opening .tbl {border:1px solid #000;}
+.print .document .tbl-opening .tbl th {font-weight:bold; font-size:10px; text-align:center; padding: 5px 0 1px 0; border-right:1px solid #000;}
+.print .document .tbl-opening .tbl tbody td {font-size:10px; text-align:center; vertical-align:top; padding: 1px 0 1px 0; border-top: 1px solid #000; border-right:1px solid #000;height:55px;line-height:11px;}
+.print .document .tbl-opening .tbl tbody td.admin{vertical-align:middle;}
+.print .document .tbl-opening .tbl ul {padding:0px; margin:0px;}
+.print .document .tbl-opening .tbl ul.list-style1 {padding:0px; margin:0px; text-align:center;}
+.print .document .tbl-opening .tbl ul.list-style1 li {list-style:none outside none; padding:1px 0 1px 0; float:left; width:100%; text-align:center;}
+.print .document .tbl-opening .tbl ul.list-style2 li {list-style:none outside none; padding:1px 0 1px 0; float:left; width:50%; text-align:center;}
+.print .document .tbl-opening .tbl ul.list-style3 li {list-style:none outside none; padding:1px 0 1px 0; float:left; width:33.3%; text-align:center;}
+.print .document .tbl-opening .date {font-size:12px;margin-bottom:10px;text-align:right;}
+.print .document .tbl-opening .notice {margin-top:10px;font-size:12px;font-weight:bold;text-align:right;}
+.print .document .tbl-opening .rookie {border:1px solid #d60909;}
+/* 프린트 페이지 하단 */
+.print .print-footer {position:absolute;height:210px;left:25px;right:25px;bottom:35px;text-align:center;}
+.print .print-footer .ceo {margin:0 auto;padding:27px 0;background:url("../images/sub/print_stamp.png") no-repeat;background-size:84px 84px;background-position:524px 0px;}
+.print .print-footer .ceo > span:nth-child(1) {font-size:20px;margin-right:18px;}
+.print .print-footer .ceo > span:nth-child(2) {font-size:26px;font-weight:700;}
+.print .print-footer .print-signature {margin-top:15px;padding-top:15px;border-top:2px solid #000;font-size:14px;text-align:left;}
+.print .print-footer .print-signature .row-group {position:relative;margin-bottom:5px;}
+.print .print-footer .print-signature .row-group .conservative {position:absolute;top:0;left:495px;}
+/* 프린트 페이징 */
+.print-page {position:absolute;bottom:15px;width:723px;text-align:center;color:#666;}
+.print-page .current {font-weight:700;}
+
+/* 증명서 프린트 */
+@media print {
+	html, body {position:relative;width:21cm;height:29.7cm;}
+	header, nav, .tit-area, .btn-area-board, footer {display:none;}
+	#container {padding:0;}
+	#PrintArea {width:21cm;height:29.7cm;margin:0 auto;}
+	#PrintArea .page-break {width:21cm;height:29.7cm;margin:0 auto;padding:8mm;border:none;page-break-after:always;}
+	#PrintArea .document {}
+	.print .document .tbl-wrap .tbl-type-row3 {width:246px;margin-left:-3px;}
+	.print .document .tbl-wrap .tbl-type-row3:nth-child(2) {width:245px;}
+}
+
+@page {
+	size:A4;
+	margin:0;
+	padding:0;
+}

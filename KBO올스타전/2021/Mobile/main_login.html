@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/allstar.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="main_appvote.html" class="logo"><img src="resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-login">
+			<div class="login-info">
+				<p class="txt-allstar">올스타 투표는 로그인 후 참여 가능합니다.</p>
+				<label for="" class="lb-login">ID</label>
+				<input type="text" placeholder="아이디" class="ipt">
+				<label for="" class="lb-login">Password</label>
+				<input type="password" placeholder="비밀번호" class="ipt">
+				<div class="save-id">
+					<input type="checkbox" id="saveid">
+					<label for="saveid" class="save">아이디 저장</label>
+				</div>
+				<a href="#none" class="btn-loginpage">로그인</a>
+				<p class="txt-warning" style="visibility:hidden;"><span class="dp-b">가입된 회원이 아니거나 비밀번호가 틀립니다.</span>로그인 정보를 다시 확인 해주세요.</p>
+			</div>
+			<p class="txt-tip">
+				<span class="dp-b">회원가입 및 아이디/비밀번호 찾기는</span>
+				KBO 홈페이지(PC)에서 가능합니다.
+			</p>
+			<div class="btn-area">
+				<a href="#none" class="btn-kbopc">KBO 홈페이지(PC) 바로가기</a>
+			</div>
+		</section>
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="../event/event.html" class="btn-shinhan">신한 SOL 앱 투표하기</a></li>
+				<li class="on"><a href="main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="#none" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

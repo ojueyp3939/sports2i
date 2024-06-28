@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll3 = new IScroll('#tab-sm',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+
+	$(document).ready(function(){
+		var gnbOffset = $( '#gnb' ).offset();
+		$( window ).scroll( function() {
+			if ( $( document ).scrollTop() > gnbOffset.top ) {
+				$( '#gnb' ).addClass( 'fixed' );
+			}
+			else {
+				$( '#gnb' ).removeClass( 'fixed' );
+			}
+		});
+
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			showOn: "button",
+			buttonImage: "../resources/images/common/btn_calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true
+		});
+	});
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+			<nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li class="on"><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Vod/index.html">VOD</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li class="on"><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<article>
+					<div class="content no-top">
+						<div class="banner">
+							<h2 class="banner-tit live-ing">
+								<img src="../resources/images/sub/sponser_l.png" alt="sponser">
+								위더스제약 2019 설날장사씨름대회
+							</h2>
+						</div>
+						<div class="inner">
+							<ul class="day-box">
+								<li class="prev">
+									<a href="#"></a>
+								</li>
+								<li class="day-tit">
+									<span class="date">2019.08.15 (목)</span> <input id="btnCalendar">
+								</li>
+								<li class="next">
+									<a href="#"></a>
+								</li>
+							</ul>
+							<div class="team-box">
+								<ul class="team-tab">
+									<li><a href="">태백</a></li>
+									<li class="on"><a href="">금강</a></li>
+									<li><a href="">백두</a></li>
+									<li><a href="">한라</a></li>
+									<li><a href="">단체</a></li>
+								</ul>
+							</div>
+							<div id="tab-sm" class="scroll-wrap">
+								<div class="scroller btw-wrap">
+									<ul class="tab-sm">
+										<li class="on"><a href="">통산</a></li>
+										<li><a href="">시즌</a></li>
+										<li><a href="">16강</a></li>
+										<li><a href="">8강</a></li>
+										<li><a href="">4강</a></li>
+										<li><a href="">순위결정전</a></li>
+										<li><a href="">결승전</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="sche-box">
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list end">
+										<div class="player win">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+											<div class="state play">
+												경기영상
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list now">
+										<div class="player win">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기중
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="../resources/images/main/default_pic.png">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기전
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="../Livecenter/tournament.html">
+									<div class="sche-list">
+										<div class="player win">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">제주특별자치도청씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+										<div class="versus">
+											<p class="league">16강</p>
+											<p>정읍 국민체육센터</p>
+											<i class="vs-ico"></i>
+											<div class="state">
+												경기종료
+											</div>
+										</div>
+										<div class="player">
+											<div class="pic">
+												<img src="">
+											</div>
+											<div class="info">
+												<p class="name">윤정수</p>
+												<p class="sosok">영암군민속씨름단</p>
+												<p class="result">WIN</p>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="pagenation">
+								<a class="prev" href="">
+									<span>prev</span>
+								</a>
+								<span class="num">
+									<a href="">1</a>
+									<a href="">2</a>
+									<a class="on" href="">3</a>
+									<a href="">4</a>
+									<a href="">5</a>
+								</span>
+								<a class="next" href="">
+									<span>next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+			<!-- // container -->
+		</div>
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+				<p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+			</address>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,78 @@
+﻿@charset "utf-8";
+
+#contents.video {width:100%;overflow:hidden;padding:0 30px;}
+.video .data-wrap {clear:both;}
+.video .data-wrap .kind-list {padding-bottom:60px;}
+.video .data-wrap .swiper-container {width:1380px;margin:0 auto;}
+.video #MainCont {float:left;width:56.40625vw;}
+.video #MainCont .live-box {position:relative;height:31.77083vw;margin:0 auto;}
+
+/* 영상리스트 */
+.video #SubCont {float:left;position:relative;width:calc(100% - 56.40625vw);padding-left:20px;}
+.video #SubCont .vs-team {overflow:hidden;}
+.video #SubCont .vs-team .tab {float:left;height:42px;margin-top:0;padding-top:0;line-height:1.2;}
+.video #SubCont .vs-team .tab li + li {margin-left:40px;}
+.video #SubCont .vs-team .roster {float:right;height:42px;}
+.video #SubCont .vs-team .roster .btn-pst {margin-top:3px;}
+.video #SubCont .vs-team .roster .more-list {top:34px;}
+.video #SubCont .vs-team .vs-box {clear:both;overflow-y:scroll;height:calc(31.77083vw + 104px - 42px);}
+.video #SubCont .vs-team .vs-box ul li {width:100%;height:5.833vw;padding:0 32px 0 20px;}
+.video #SubCont .vs-team .vs-box ul li .screenshot {width:7.3vw;height:4.1vw;}
+.video #SubCont .vs-team .vs-box ul li dl {width:calc(100% - 7.3vw)}
+/* 영상 - 영상없음 */
+.video #SubCont .vs-team .vs-box.no-record {overflow-y:hidden;}
+.video #SubCont .vs-team .vs-box.no-record p {padding-top:294px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_no.png') no-repeat 50% 214px/58px;color:#828282;font-size:18px;text-align:center;}
+
+/* 영상 > 상세페이지 */
+.video.video-detail #SubCont .vs-team .roster {float:none;height:auto;}
+.video.video-detail #SubCont .vs-team .roster .btn-pst {margin-top:41px;}
+.video.video-detail #SubCont .vs-team .roster .more-list {top:70px;}
+.video.video-detail #SubCont .vs-team .vs-box {height:calc(31.77083vw + 104px - 71px)}
+
+@media (max-width:1500px) {
+	#contents.video {width:100%;min-width:100%;}
+	.video #MainCont {width:56.40625vw;}
+	.video .data-wrap .swiper-container {width:95%;}
+	.video #MainCont .live-box {height:31.77083vw;}
+	.video .live-box .control-box {height:31.77083vw;}
+
+	/* 영상리스트 */
+	.video #SubCont {width:calc(100% - 56.40625vw);}
+	.video #SubCont .vs-team .vs-box ul li {height:8.833vw;}
+	.video #SubCont .vs-team .vs-box ul li .screenshot {width:10.453vw;height:5.76vw;}
+	.video #SubCont .vs-team .vs-box ul li dl {width:calc(100% - 10.453vw);}
+
+	/* 영상 > 상세페이지 */
+	.video.video-detail #SubCont .vs-team .vs-box {height:calc(476px + 104px - 71px);}
+}
+
+@media (max-width:1136px) {
+	#contents.video {width:1072px;min-width:1072px;padding:0;}
+	.video #MainCont {width:641px;}
+	.video #MainCont .live-box {height:361px;}
+	.video .live-box .control-box {height:361px;}
+
+	/* 영상리스트 */
+	.video #SubCont {width:427px;}
+	.video #SubCont .vs-team .vs-box {height:423px;}
+	.video #SubCont .vs-team .vs-box ul li {height:100px;}
+	.video #SubCont .vs-team .vs-box ul li .screenshot {width:118px;height:65px;}
+	.video #SubCont .vs-team .vs-box ul li dl {width:calc(100% - 118px);} 
+}
+
+@media (min-width:1921px) {
+	#contents.video {width:1920px;margin:0 auto;}
+	.video #MainCont {width:1083px;}
+	.video #MainCont .live-box {height:609px;}
+	.video .live-box .control-box {height:609px;}
+	.video #SubCont {width:700px;}
+	.video #SubCont .vs-team .vs-box {height:calc(609px + 104px - 42px);}
+
+	/* 영상리스트 */
+	.video #SubCont .vs-team .vs-box ul li {height:111px;}
+	.video #SubCont .vs-team .vs-box ul li .screenshot {width:140px;height:78px;}
+	.video #SubCont .vs-team .vs-box ul li dl {width:calc(100% - 140px);} 
+
+	/* 영상 > 상세페이지 */
+	.video.video-detail #SubCont .vs-team .vs-box {height:calc(609px + 104px - 71px);}
+}

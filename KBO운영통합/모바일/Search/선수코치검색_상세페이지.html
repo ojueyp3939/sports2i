@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">선수/코치 검색</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">				
+				<div class="search-area">
+					<input type="text" name="" id="" class="ipt" placeholder="선수/코치명을 입력하세요." />
+					<a href="javascript:;" class="btn"><img src="../resources/images/sub/btn_search.png" alt="" /></a>
+				</div>
+				<div class="search-detail">
+					<div class="tit-area">
+						<div class="team-name LG">LG</div>
+						<!-- <div class="team-name HT">KIA</div>
+						<div class="team-name LT">롯데</div>
+						<div class="team-name NC">NC</div>
+						<div class="team-name HH">한화</div>
+						<div class="team-name OB">두산</div>
+						<div class="team-name SK">SK</div>
+						<div class="team-name SS">삼성</div>
+						<div class="team-name WO">넥센</div>
+						<div class="team-name KT">KT</div> -->
+						<div class="date">2018년 08월 06일 기준</div>
+					</div>
+					<div class="player-info">
+						<div class="player">
+							<div class="player-img"><img src="https://kbojson.sports2i.com/appFile/120x140/76290.jpg" alt="" /></div>
+							<div class="name">김현수</div>
+						</div>
+						<div class="info-list">
+							<dl>
+								<dt>상 태</dt>
+								<dd><strong>군보류 자유계약선수</strong></dd>
+							</dl>
+							<dl>
+								<dt>생 년 월 일</dt>
+								<dd>1988년 01월 12일</dd>
+							</dl>
+							<dl>
+								<dt>포 지 션</dt>
+								<dd>외야수</dd>
+							</dl>
+							<dl>
+								<dt>입 단·연 차</dt>
+								<dd>06두산·13년</dd>
+							</dl>
+							<dl>
+								<dt>경 력</dt>
+								<dd>쌍문초-신일중-신일고-<br />두산-볼티모어-필라델피아</dd>
+							</dl>
+						</div>
+					</div>
+
+					<h3 class="tit-area">경력</h3>
+					<div class="tbl-type career">
+						<table class="tbl">
+							<colgroup>
+								<col width="40%" />
+								<col width="30%" />
+								<col width="30%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>연도</th>
+									<th>분류</th>
+									<th>소속구단</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>2006~2006.06.30</td>
+									<td>육성선수</td>
+									<td>두산</td>
+								</tr>
+								<tr>
+									<td>2006~2006.06.30</td>
+									<td>육성선수</td>
+									<td>두산</td>
+								</tr>
+								<tr>
+									<td>2006~2006.06.30</td>
+									<td>육성선수</td>
+									<td>두산</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h3 class="tit-area">등록일수</h3>
+					<div class="tbl-type register">
+						<table class="tbl">
+							<colgroup>
+								<col width="20%" />
+								<col width="20%" />
+								<col width="30%" />
+								<col width="30%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>팀</th>
+									<th>연도</th>
+									<th>팀 등록일</th>
+									<th>선수 등록일수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>KIA</td>
+									<td>2018</td>
+									<td>999</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2018</td>
+									<td>999</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2018</td>
+									<td>999</td>
+									<td>999</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h3 class="tit-area">KBO 리그 엔트리 등록일수</h3>
+					<div class="tbl-type kbo-register">
+						<table class="tbl">
+							<colgroup>
+								<col width="25%" />
+								<col width="27%" />
+								<col width="27%" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>시작</th>
+									<th>종료</th>
+									<th>일수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>시즌합계</th>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>88</td>
+								</tr>
+							</tfoot>
+						</table>						
+					</div>
+					<h3 class="tit-area">KBO 리그 엔트리 말소일수</h3>
+					<div class="tbl-type kbo-erasure">
+						<table class="tbl">
+							<colgroup>
+								<col width="25%" />
+								<col width="27%" />
+								<col width="27%" />
+								<col width="20%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>구분</th>
+									<th>시작</th>
+									<th>종료</th>
+									<th>일수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+								<tr>
+									<td>KIA</td>
+									<td>2108-03-31</td>
+									<td>2108-03-31</td>
+									<td>999</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<th>시즌합계</th>
+									<td>&nbsp;</td>
+									<td>&nbsp;</td>
+									<td>88</td>
+								</tr>
+							</tfoot>
+						</table>	
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

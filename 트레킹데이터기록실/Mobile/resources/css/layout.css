@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* common */
+body {width:100%;background:#ebebeb;}
+#wrap {overflow:hidden;background:#eee;}
+
+header {position:relative;padding:16px 0 11px;background:#206cbb;}
+header h1 {width:115px;margin:0 auto 15px;}
+header h1 a {display:block;height:18px;}
+/* 햄버거메뉴 */
+header .btn-hamburger {position:absolute;top:16px;right:5%;z-index:30;width:20px;height:17px;transform:translateY(0);}
+header .btn-hamburger li {position:absolute;right:0;width:100%;height:3px;border-radius:2px;background:#fff;transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;}
+header .btn-hamburger li.bar-top {top:0;}
+header .btn-hamburger li.bar-mid {top:7px;width:85%;}
+header .btn-hamburger li.bar-bot {top:14px;}
+header .btn-hamburger.on li.bar-top {top:6px;width:100%;background:#206cbb;transform:rotate(45deg);-webkit-transform:rotate(45deg);}
+header .btn-hamburger.on li.bar-bot {top:6px;width:100%;background:#206cbb;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
+header .btn-hamburger.on li.bar-mid {width:0;}
+/* 검색 */
+header .search-area {position:relative;width:90%;margin:0 auto;}
+header .search-area .ipt-search {width:100%;height:37px;padding-left:18px;border-radius:10px;background:#fff;font-size:1.4rem;}
+header .search-area .btn-search {display:block;position:absolute;top:4px;right:14px;width:28px;padding:5px;}
+header .search-area .search-list {position:absolute;top:29px;left:0;z-index:10;width:100%;padding-bottom:9px;border-radius:0 0 9px 9px;background:#fff;}
+header .search-area .search-list li {width:88.889%;margin:0 auto;border-bottom:1px solid #bcd3ea;font-size:1.4rem;}
+header .search-area .search-list li:first-child {border-top:1px solid #206cbb;}
+header .search-area .search-list li a {display:block;padding:11px 0;color:#222;}
+/* 메뉴 */
+header .menu-box {position:absolute;top:0;right:-100%;z-index:20;width:100%;height:100vh;background:#fff;transition:all 0.3s;}
+header .menu-box.on {right:0;}
+header .menu-box h1 {padding-top:16px;}
+header .menu-box .ipt-search {border:1px solid #eee;border-radius:9px;}
+header .menu-box .search-list {border:1px solid #eee;border-top:0;}
+header .menu-box .menu-list {margin-top:11px;border-top:1px solid #eee;}
+header .menu-box .menu-list li {padding:0 18px;}
+header .menu-box .menu-list li a {display:block;position:relative;padding:34px 0 33px 54px;border-bottom:1px solid #eee;background:url('../images/common/btn_arrow_right.png') no-repeat 94.444% 50%/7px;color:#000;font-size:1.8rem;}
+header .menu-box .menu-list li a i {position:absolute;top:30px;left:18px;width:25px;height:26px;background:url('../images/common/ico_menu.png') no-repeat;background-size:cover;}
+header .menu-box .menu-list li:nth-child(1) a i {background-position:0 0;}
+header .menu-box .menu-list li:nth-child(2) a i {background-position:-24px 0;}
+header .menu-box .menu-list li:nth-child(3) a i {background-position:-52px 0;}
+
+/* 메인, 선발투수 프리뷰 공통 */
+.schedule-preview {padding:25px 0 18px;background:#f8f8f8;}
+.schedule-preview .schedule-data {position:relative;padding:0 0 18px 5%;color:#000;font-size:1.6rem;font-weight:700;}
+.schedule-preview .schedule-data .ipt-calendar {height:20px;}
+.schedule-preview .date {width:90%;margin:0 auto;text-align:center;}
+.schedule-preview .date li {float:left;}
+.schedule-preview .date li:nth-child(2) {display:inline-block;float:none;}
+.schedule-preview .date li:last-child {float:right;}
+.schedule-preview .date .prev {width:30px;height:30px;background:url('../images/common/btn_date.png') no-repeat 0 0/cover;text-indent:-9999px;}
+.schedule-preview .date .next {width:30px;height:30px;background:url('../images/common/btn_date.png') no-repeat -50px 0/cover;text-indent:-9999px;}
+.schedule-preview .date .prev.on {background:url('../images/common/btn_date.png') no-repeat -100px 0/cover;}
+.schedule-preview .date .next.on {background:url('../images/common/btn_date.png') no-repeat -150px 0/cover;}
+.schedule-preview .date li > a {display:block;width:30px;height:30px;}
+.schedule-preview .date .week div {float:left;width:15px;margin:0 8px;text-align:center;}
+.schedule-preview .date .week div a {display:block;}
+.schedule-preview .date .week div.past a {color:#888;}
+.schedule-preview .date .week div.present a {color:#206cbb;}
+.schedule-preview .date .week div a span {display:block;}
+.schedule-preview .date .week div a span.day {padding-bottom:2px;}
+.schedule-preview .game-list {width:100%;padding:25px 18px 15px;white-space:nowrap;}
+.schedule-preview .game-list li {display:inline-block;width:140px;margin-right:12px;}
+.schedule-preview .game-list li:last-child {margin-right:0;}
+.schedule-preview .game-list li .info {margin-bottom:5px;padding:5px 0 4px;border-radius:5px;background:#e2eaf2;color:#2e2e2e;text-align:center;}
+.schedule-preview .game-list li.on .info {background:#2a2a2a;}
+.schedule-preview .game-list li .info div {display:inline-block;font-size:1.4rem;}
+.schedule-preview .game-list li.on .info div {color:#fff; }
+.schedule-preview .game-list li .info .place {position:relative;padding-right:22px;}
+.schedule-preview .game-list li .info .place::before {content:"";position:absolute;top:6px;right:8px;width:4px;height:4px;border-radius:4px;background:#2e2e2e;}
+.schedule-preview .game-list li.on .info .place::before {content:"";background:#fff;}
+.schedule-preview .game-list li .match {position:relative;padding:18px 20px;border-radius:5px;background:#f1f4f6;border:1px solid #f1f4f6;}
+.schedule-preview .game-list li.on .match {border:1px solid #e3eaf2;background:#fff;}
+.schedule-preview .game-list li .match .team {text-align:left;}
+.schedule-preview .game-list li .match .team.away {margin-bottom:3px;}
+.schedule-preview .game-list li .match .team .emb {display:inline-block;width:31px;margin-right:8px;}
+.schedule-preview .game-list li .match .team .name {display:inline-block;padding-top:5px;}
+
+.schedule-preview .box-wrap {padding:0 18px;}
+.schedule-preview .box-wrap .player-info-box {padding:30px 28px 28px;border:1px solid #e2eaf2;border-radius:5px;background:#fff;}
+.schedule-preview .box-wrap .player-info-box .tit-preview {padding:27px 0 0;background:url('../images/common/bg_top.png') no-repeat 50% 0/26px;}
+.schedule-preview .box-wrap .player-info-box .player.away {margin-bottom:40px;}
+.schedule-preview .box-wrap .player-info-box .player .info-box .photo {width:91px;margin:0 auto;}
+.schedule-preview .box-wrap .player-info-box .player .info-box .player-info {margin:8px 0;text-align:center;}
+.schedule-preview .box-wrap .player-info-box .player .info-box .player-info .emb {display:inline-block;width:40px;margin-right:6px;}
+.schedule-preview .box-wrap .player-info-box .player .info-box .player-info .name {display:inline-block;padding-top:5px;color:#000;font-size:1.6rem;font-weight:700;}
+.schedule-preview .box-wrap .player-info-box .btn-area {padding-top:28px;text-align:center;}
+.schedule-preview .box-wrap .player-info-box .btn-area .btn-more {padding-right:11px;background:url('../images/common/bg_arrow_right.png') no-repeat 100% 50%/4px;color:#206cbb;}
+
+/* 범례 */
+.record-info {width:125px;margin:28px auto;background:url('../images/common/bg_record_info.png') no-repeat 0 0/125px;}
+.record-info li {float:left;width:33.333%;padding-top:24px;color:#2e2e2e;font-size:1.1rem;font-weight:700;text-align:center;}
+.record-info li:nth-child(1) {color:#206cbb;text-align:left;}
+.record-info li:nth-child(3) {color:#e00020;text-align:right;}
+
+/* 가로막대그래프 */
+.player .record li dl dt {padding:13px 0 8px;color:#2e2e2e;font-size:1.4rem;font-weight:700;}
+.player .record li dl .graph-wrap {position:relative;width:100%;height:25px;padding:4px 9px;border:1px solid #2f2f2f;}
+.player .record li dl .graph-wrap::before {content:"";position:absolute;top:4px;left:50%;width:1px;height:15px;border-right:1px dotted #2f2f2f;transform:translateX(-50%);}
+.player .record li dl .graph-wrap.rate::before {content:"";border-right:1px dotted #fff;}
+.player .record li dl .graph-wrap canvas {height:15px;border-radius:5px;background:#206cbb;}
+.player .record li dl .graph-wrap.rate canvas {background:#e00020;}
+.player .record li dl .graph-wrap .tip-box {position:absolute;z-index:50;width:66px;padding:12px 0 11px;border-radius:3px;background:rgba(42,42,42,0.9);color:#fff;text-align:center;}
+
+/* table */
+.tbl-box .tbl-fixed {float:left;width:90px;}
+.tbl-box .tbl-fixed thead tr th,
+.tbl-box .tbl-fixed tbody tr td,
+.tbl-box .tbl-fixed tbody tr th {padding:13px 0;text-align:center;}
+.tbl-box .tbl-fixed thead tr th {position:relative;background:#206cbb;color:#fff;}
+.tbl-box .tbl-fixed thead tr th:last-child::before {content:"";position:absolute;top:14px;right:0;width:1px;height:12px;background:#fff;}
+.tbl-box .tbl-fixed tbody tr td {border-right:1px solid #eee;border-bottom:1px solid #eee;background:#fff;color:#000;}
+.tbl-box .tbl-record-wrap .tbl-record thead tr th {padding:13px 19px;background:#206cbb;color:#fff;}
+.tbl-box .tbl-record-wrap .tbl-record thead tr th a {padding:13px 0;background:url('../images/common/tbl_align.png') no-repeat 50% 80%/4px;color:#fff;}
+.tbl-box .tbl-record-wrap .tbl-record tbody tr td,
+.tbl-box .tbl-record-wrap .tbl-record tbody tr th {padding:13px 0;background:#f7f8fa;border-bottom:1px solid #eee;text-align:center;}
+.tbl-box .tbl-record-wrap .tbl-record tbody tr td.on {background:#ccdced;font-weight:700;}
+
+footer {padding:20px 0 19px;background:#2a2a2a;text-align:center;}
+footer h1 {width:78px;margin:0 auto;}
+footer p,
+footer address {color:#fff;font-style:normal;font-size:1.1rem;line-height:1.3;}
+footer .inquire {padding:19px 0 13px;word-break:keep-all;}
+footer .call {padding-bottom:12px;}
+
+/* 광고 */
+.menu-box .ad-area {position:absolute;bottom:0;}
+.ad-area {padding:8px 0;background:#e2e2e2;}
+.ad-area a {display:block;}
+
+/* calendar custom */
+.ui-datepicker-trigger {position:absolute;width:50%;text-indent:-9999px;}
+.schedule-preview .schedule-data .ui-datepicker-trigger {width:16px;margin:2px 0 0 15px;}
+#ui-datepicker-div {left:50% !important;z-index:50 !important;width:270px;padding:0;background:none;transform:translateX(-50%);box-shadow:11px 26px 31px rgba(0,0,0,0.3);}
+.ui-widget.ui-widget-content {border:0;}
+.ui-datepicker .ui-datepicker-header {padding:11px 0 10px;border:0;border-radius:13px 13px 0 0;background:#206cbb;}
+.ui-datepicker .ui-datepicker-title {margin:0;color:#fff;font-size:1.4rem;}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {width:auto;margin-right:3px;border:0;background:none;color:#fff;text-align-last:center;}
+.ui-datepicker select.ui-datepicker-month {margin-left:5px;}
+.ui-datepicker select.ui-datepicker-month option,
+.ui-datepicker select.ui-datepicker-year option {color:#000;}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {top:13px;}
+.ui-datepicker .ui-datepicker-prev {left:19px;}
+.ui-datepicker .ui-datepicker-next {right:9px;}
+.ui-datepicker .ui-datepicker-prev span {background:url('../images/common/btn_calendar.png') no-repeat 0 0/cover;}
+.ui-datepicker .ui-datepicker-next span {background:url('../images/common/btn_calendar.png') no-repeat -25px 0/cover;}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {border:0;background:none;}
+.ui-datepicker table {margin:0;background:#fff;}
+.ui-datepicker td span, .ui-datepicker td a {text-align:center;}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {border:0;color:#2a2a2a;font-size:13px;}
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button, html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {padding:11px 3px;background:none;}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {border:0;border-radius:50%;background:#206cbb;color:#fff;}
+.ui-datepicker td {width:14.286%;vertical-align:middle;}
+.ui-datepicker td span {width:100%;text-align:center;}
+.ui-datepicker .ui-datepicker-buttonpane {overflow:hidden;margin:0;}
+.ui-state-default,
+
+/* media query */
+@media (max-width:320px){
+  /* 메인, 선발투수 프리뷰 */
+  .schedule-preview .date .week {margin:0 6px;}
+  .schedule-preview .date .week div {margin:0 7px;}
+}

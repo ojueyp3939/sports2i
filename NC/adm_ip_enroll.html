@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="NC 다이노스 D-Base 관리자"/>
+    <meta name="author" content="NC 다이노스 D-Base 관리자"/>
+	<meta name="keywords" content="NC 다이노스 D-Base 관리자" />
+	<title>NC 다이노스 D-Base 관리자</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			showOn: "button",
+			buttonImage: "resources/images/contents/icon_calendar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true
+		});
+	});
+	</script>
+</head>
+
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<ul class="nav-tab">
+						<li>
+							<a href="http://dfoto.i234.me:8080/photo" target="_blank">사진서버</a>
+						</li>
+						<li>
+							<a href="https://www.ncdinos.com/" target="_blank">홈페이지</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@ncdinos" target="_blank">엔튜브</a>
+						</li>
+						<li>
+							<a href="http://2istats.sports2i.com/" target="_blank">2iSTATS</a>
+						</li>
+						<li>
+							<a href="https://www.koreabaseball.com/" target="_blank">KBO</a>
+						</li>
+					</ul>
+					<div class="user-info">
+						<i class="icon-login"></i>
+						<b>NC다이노스 홍보팀</b> 님께서 사용중이십니다.
+						<span>2023-08-04 오전 09:00:00</span>
+						<a href="#" class="btn-logout">
+							LOGOUT
+						</a>
+					</div>
+				</div>
+			</div>
+            <div class="gnb adm">
+				<div class="wrap">
+					<a class="logo" href="adm_release_list.html">
+						<img src="resources/images/contents/logo.png" alt="NC다이노스" />
+					</a>
+					<ul class="menu">
+						<li>
+							<a href="adm_release_list.html">RELEASE 관리</a>
+						</li>
+						<li>
+							<a href="adm_notice_list.html">NOTICE 관리</a>
+						</li>
+						<li>
+							<a href="adm_data_manage.html">홈경기 자료 관리</a>
+						</li>
+						<li>
+							<a href="adm_account_list.html">계정 관리</a>
+						</li>
+						<li>
+							<a href="adm_authority.html">권한 관리</a>
+						</li>
+						<li class="on">
+							<a href="adm_ip_list.html">IP 관리</a>
+						</li>
+						<li>
+							<a href="adm_page.html">페이지 ON/OFF 관리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<h3>IP 관리(등록)</h3>
+				<section>
+
+					<div class="board">
+						<table class="tb type-row">
+							<colgroup>
+								<col width="235px">
+							</colgroup>
+							<tr>
+								<th>IP</th>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+							<tr>
+								<th>장소명</th>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+							<tr>
+								<th>등록날짜</th>
+								<td>
+									<input id="btnCalendar">
+								</td>
+							</tr>
+							
+						</table>
+						<div class="btn-wrap">
+							<a class="btn">저장</a>
+							<a class="btn cancel">취소</a>
+							<a class="btn list">목록</a>
+						</div>
+					</div>
+
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+
+	<!-- <div class="modal"></div>
+	<div class="popup">
+		<div class="content">
+			내용을 확인해주세요.
+		</div>
+		<div class="btn-wrap">
+			<button>확인</button>
+		</div>
+	</div> -->
+	<!-- // popup -->
+</body>
+</html>

@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2022 K리그 마스코트 반장선거</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// services bxSlider
+			$("#mascot-box").bxSlider({
+				controls: true,
+				mode: 'horizontal',
+				pager: false,
+				moveSlides: 1,
+				maxSlides: 8,
+				ariaHidden: true,
+				touchEnabled: false,
+				infiniteLoop: false,
+				hideControlOnEnd: true
+			});
+		});
+		function loaded() {
+			var myScroll1 = new IScroll('#mascot-live', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+		$(document).on("click", ".event-link", function () {
+            $(".event-list").toggle();
+        });
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+                    <div class="evnet-wrap">
+                        <div class="event-link">
+                            다른 이벤트 보기<img src="resources/images/main/icon_down.png" />
+                        </div>
+                        <ul class="event-list">
+                            <li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+                            <li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+                        </ul>
+                    </div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png" />
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="main">
+				<section class="visual-wrap">
+					<img src="resources/images/main/tit_main.png" alt="반장 2022 K리그 마스코트 반장선거" />
+				</section>
+				<section class="media-wrap">
+					<div class="inner">
+						<div class="video">
+							<div>
+								<img src="resources/images/main/img_video.png" alt="comming soon" />
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="main-wrap">
+					<div class="inner">
+						<div class="noti-box">
+							<img class="pc" src="resources/images/main/txt_noti.png" alt="하나원큐 K리그 2021 여러분의 최애 마스코트를 뽑아주세요! 가장 많은 표를 받은 마스코트는 2021 K리그 마스코트 반장이 되어
+								K리그 현장에서 여러분과 함께 할 예정입니다." />
+							<img class="mobile" src="resources/images/main/txt_noti_s.png" alt="하나원큐 K리그 2021 여러분의 최애 마스코트를 뽑아주세요! 가장 많은 표를 받은 마스코트는 2021 K리그 마스코트 반장이 되어
+									K리그 현장에서 여러분과 함께 할 예정입니다." />
+						</div>
+						<a class="link-goods" href="https://marpple.shop/kr/kleague" target="_blank">
+							<img src="resources/images/main/btn_goods.png" alt="K리그 마스코트 반장선거 굿즈샵 ">
+						</a>
+					</div>
+				</section>
+				
+				<section class="">
+					<div class="vote">
+						<div class="mascot-bg2">
+							<img src="resources/images/main/txt_vote1_on.png" alt="구단 마스코트 소개" />
+							<div>
+								<ul class="mascot-list">
+									<li>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/JJ.png" />
+												<div class="emb">
+													<img src="resources/images/emb/JJ.png" />
+												</div>
+											</div>
+											<p>감규리</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/BC.png" />
+												<div class="emb">
+													<img src="resources/images/emb/BC.png" />
+												</div>
+											</div>
+											<p>부천</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/JJ.png" />
+												<div class="emb">
+													<img src="resources/images/emb/JJ.png" />
+												</div>
+											</div>
+											<p>감규리</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/BC.png" />
+												<div class="emb">
+													<img src="resources/images/emb/BC.png" />
+												</div>
+											</div>
+											<p>부천</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/JJ.png" />
+												<div class="emb">
+													<img src="resources/images/emb/JJ.png" />
+												</div>
+											</div>
+											<p>감규리</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="resources/images/round/BC.png" />
+												<div class="emb">
+													<img src="resources/images/emb/BC.png" />
+												</div>
+											</div>
+											<p>부천</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+										<div>
+											<div class="pic">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<a href="https://blog.naver.com/crownoffcial" target="_blank">
+								<img src="resources/images/main/banner.png" alt="crownsns">
+							</a>
+						</div>
+					</div>
+					<!-- 투표중 - PC -->
+					<div class="vote live">
+						<img class="txt" src="resources/images/main/txt_vote2.png" alt="실시간 투표 순위" />
+						<p class="time">2022.00.00 00:00 기준</p>
+						<div class="mascot-bg">
+							<div class="mascot-wrap">
+								<ul class="mascot-box" id="mascot-box">
+									<li>
+										<div class="first">
+											<div class="pic">
+												<div class="grade">1위</div>
+												<img src="resources/images/round/JJ.png" />
+												<div class="emb">
+													<img src="resources/images/emb/JJ.png" />
+												</div>
+											</div>
+											<p>감규리</p>
+											<p class="num">100%</p>
+										</div>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">2위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">3위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">4위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">5위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">6위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">7위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">8위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">9위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">10위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">11위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">12위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">13위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">14위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">15위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">16위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">17위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">18위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">19위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">20위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">21위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">22위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<a href="https://blog.naver.com/crownoffcial" target="_blank">
+								<img src="resources/images/main/banner.png" alt="crownsns">
+							</a>
+						</div>
+						<div class="vote-box">
+							<div>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_vote.png" alt="투표하기">
+								</a>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_pick.png" alt="내 투표내역 확인하기">
+								</a>
+							</div>
+							<p class="vote-before">마스코트 투표는 로그인 후 참여 가능합니다.</p>
+							<ul class="vote-noti">
+								<li>마스코트를 클릭하여 자세한 소개를 확인해보세요.</li>
+								<li>투표하기 클릭 시 로그인 페이지로 이동합니다.</li>
+								<li>K리그 이벤트 홈페이지 회원이 아니신 분은</li>
+								<li class="no">회원가입 후 마스코트 투표를 진행해주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 투표중 - MOBILE -->
+					<div class="vote live mb">
+						<img class="txt" src="resources/images/main/txt_vote2.png" alt="실시간 투표 순위" />
+						<p class="time">2022.00.00 00:00 기준</p>
+						<div class="mascot-bg scroll-wrap" id="mascot-live">
+							<div class="scroller">
+								<ul class="mascot-box">
+									<li>
+										<div class="first">
+											<div class="pic">
+												<div class="grade">1위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">2위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">3위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">4위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">5위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">6위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">7위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<a href="https://blog.naver.com/crownoffcial" target="_blank">
+								<img src="resources/images/main/banner.png" alt="crownsns">
+							</a>
+						</div>
+						<div class="vote-box">
+							<div class="double">
+								<a href="vote.html">
+									<img src="resources/images/main/btn_vote.png" alt="투표하기">
+								</a>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_pick.png" alt="내 투표내역 확인하기">
+								</a>
+							</div>
+							<p class="vote-before">마스코트 투표는 로그인 후 참여 가능합니다.</p>
+							<ul class="vote-noti">
+								<li>마스코트를 클릭하여 자세한 소개를 확인해보세요.</li>
+								<li>투표하기 클릭 시 로그인 페이지로 이동합니다.</li>
+								<li>K리그 이벤트 홈페이지 회원이 아니신 분은</li>
+								<li class="no">회원가입 후 마스코트 투표를 진행해주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 투표종료 - PC -->
+					<div class="vote live">
+						<img class="txt" src="resources/images/main/txt_vote4.png" alt="온라인투표 최종순위" />
+						<p class="time">2022.00.00 00:00 기준</p>
+						<div class="mascot-bg">
+							<div class="mascot-wrap">
+								<ul class="mascot-box" id="mascot-box">
+									<li>
+										<div class="first">
+											<div class="pic">
+												<div class="grade">1위</div>
+												<img src="resources/images/round/JJ.png" />
+												<div class="emb">
+													<img src="resources/images/emb/JJ.png" />
+												</div>
+											</div>
+											<p>감규리</p>
+											<p class="num">100%</p>
+										</div>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">2위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">3위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">4위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">5위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">6위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">7위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">8위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">9위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">10위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">11위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">12위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">13위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">14위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">15위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">16위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">17위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">18위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">19위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">20위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">21위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+										<div>
+											<div class="pic">
+												<div class="grade">22위</div class="grade">
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<a href="https://blog.naver.com/crownoffcial" target="_blank">
+								<img src="resources/images/main/banner.png" alt="crownsns">
+							</a>
+						</div>
+						<div class="vote-box">
+							<div>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_vote.png" alt="투표하기">
+								</a>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_pick.png" alt="내 투표내역 확인하기">
+								</a>
+							</div>
+							<p class="vote-before">마스코트 투표는 로그인 후 참여 가능합니다.</p>
+							<ul class="vote-noti">
+								<li>마스코트를 클릭하여 자세한 소개를 확인해보세요.</li>
+								<li>투표하기 클릭 시 로그인 페이지로 이동합니다.</li>
+								<li>K리그 이벤트 홈페이지 회원이 아니신 분은</li>
+								<li class="no">회원가입 후 마스코트 투표를 진행해주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- 투표종료 - MOBILE -->
+					<div class="vote live mb">
+						<img class="txt" src="resources/images/main/txt_vote4.png" alt="온라인투표 최종순위" />
+						<p class="time">2022.00.00 00:00 기준</p>
+						<div class="mascot-bg scroll-wrap" id="mascot-live">
+							<div class="scroller">
+								<ul class="mascot-box">
+									<li>
+										<div class="first">
+											<div class="pic">
+												<div class="grade">1위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">2위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div class="second">
+											<div class="pic">
+												<div class="grade">3위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">4위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">5위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">6위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="pic">
+												<div class="grade">7위</div>
+												<img src="" />
+												<div class="emb">
+													<img src="" />
+												</div>
+											</div>
+											<p>마스코트</p>
+											<p class="num">100%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="box">
+							<a href="https://blog.naver.com/crownoffcial" target="_blank">
+								<img src="resources/images/main/banner.png" alt="crownsns">
+							</a>
+						</div>
+						<div class="vote-box">
+							<div class="double">
+								<a href="vote.html">
+									<img src="resources/images/main/btn_vote.png" alt="투표하기">
+								</a>
+								<a href="vote.html">
+									<img src="resources/images/main/btn_pick.png" alt="내 투표내역 확인하기">
+								</a>
+							</div>
+							<p class="vote-before">마스코트 투표는 로그인 후 참여 가능합니다.</p>
+							<ul class="vote-noti">
+								<li>마스코트를 클릭하여 자세한 소개를 확인해보세요.</li>
+								<li>투표하기 클릭 시 로그인 페이지로 이동합니다.</li>
+								<li>K리그 이벤트 홈페이지 회원이 아니신 분은</li>
+								<li class="no">회원가입 후 마스코트 투표를 진행해주시기 바랍니다.</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="social">
+						<p class="pc">K리그 공식 SNS를 팔로우하고 K리그의 최신소식을 받아보세요!</p>
+						<p class="mobile">K리그 공식 SNS를 팔로우하고<br/>K리그의 최신소식을 받아보세요!</p>
+						<ul>
+							<li>
+								<a href="https://www.facebook.com/withKLEAGUE" target="_blank">
+									<i class="icon-fb"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/kleague/" target="_blank">
+									<i class="icon-insta"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.youtube.com/user/withkleague/" target="_blank">
+									<i class="icon-youtube"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.tiktok.com/@kleague_official" target="_blank">
+									<i class="icon-music"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://twitter.com/kleague" target="_blank">
+									<i class="icon-twitter"></i>
+								</a>
+							</li>
+							<li>
+								<a href="https://www.afreecatv.com/?hash=sports" target="_blank">
+									<i class="icon-tv"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2022 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

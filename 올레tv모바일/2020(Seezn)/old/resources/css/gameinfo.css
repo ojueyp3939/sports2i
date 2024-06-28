@@ -1,0 +1,918 @@
+@charset "utf-8";
+
+#contents.playball-sub {padding-top:48px;}
+#contents.playball-sub.analysis-cont #MainCont {height:inherit;}
+#contents.playball-sub #MainCont .kind-list {height:70px;margin-bottom:20px;padding-top:10px;}
+#contents #SubCont {background:#fff;}
+
+/* 경기전, 중, 후 상단 공통 */
+.progress {margin:0 16px;border:1px solid #d9d9d9;border-radius:7px;background:#fdfdfd;}
+
+/* 경기중, 후 탭 */
+.tab-depth1 {text-align:center;}
+.tab-depth1 li {margin-right:-3px;padding:0 4vw;}
+.tab-depth1 li:first-child {padding:0 4.4444vw 0 1.8056vw;}
+.tab-depth1 li:last-child {padding:0 1.8056vw 0 4.4444vw;}
+.tab-depth1 li a {display:block;padding:16px 0;font-size:1.4rem;}
+.tab-depth1 li.on a::before {content:"";position:absolute;left:50%;bottom:0;width:4px;height:4px;border-radius:50%;background:#0766cc;transform:translateX(-50%);}
+
+/* 퀵 버튼 */
+.quick-button {position:fixed;right:4.4444vw;bottom:4.4444vw;z-index:100;}
+.quick-button li {display:table;width:66px;height:66px;margin-bottom:8px;border-radius:50%;background:#fff;box-shadow:2px 4px 11px rgba(0,0,0,0.15);}
+.quick-button li:last-child {margin-bottom:0;}
+.quick-button li.smart_vod,
+.quick-button li.smart_live {background:none;}
+.quick-button li a {display:table-cell;width:100%;height:100%;text-align:center;vertical-align:middle;}
+.quick-button li a img {width:23px;margin:0 auto;}
+.quick-button li.smart_vod a img,
+.quick-button li.smart_live a img {width:100%;}
+
+/* 전력분석 상단 - 게임정보 */
+.progress.analysis {height:156px;border:0;background:#fafafa;}
+.progress.analysis .info-box .team {float:left;width:40.4%;padding-top:33px;text-align:center;}
+.progress.analysis .info-box .team.away {padding-left:2.744%;}
+.progress.analysis .info-box .team.home {padding-right:2.744%;}
+.progress.analysis .info-box .team .emb {width:56.98%;max-width:75px;margin:0 auto;}
+.progress.analysis .info-box .team .name {padding-top:12px;color:#333;font-size:1.4rem;font-weight:700;}
+.progress.analysis .info-box .game-info {float:left;width:19.2%;margin-top:47px;text-align:center;}
+.progress.analysis .info-box .game-info .date {color:#666;}
+.progress.analysis .info-box .game-info time {display:block;width:100%;padding:4px 0 5px;color:#333;font-size:1.6rem;font-weight:400;}
+.progress.analysis .info-box .game-info .place {color:#333;font-size:1.6rem;}
+
+/* 전력분석 공통 */
+.game-before .tit-game {display:block;padding:25px 0 16px;font-size:2.4rem;font-weight:700;}
+.game-before .tit-game a {display:inline-block;position:relative;width:24px;height:24px;margin-left:8px;padding:5px;vertical-align:bottom;}
+.game-before .tit-box {height:auto;padding:0;border:0;}
+.game-before .tit-box .tit-game a .tip {display:none;position:absolute;top:0;left:0;z-index:10;width:72.2222vw;margin:8.8889vw 0 0 -22.6389vw;padding:3.0556vw 4.0278vw;border-radius:5px;background:#323232;color:#fff;font-size:1.4rem;font-weight:100;line-height:1.4;word-break:keep-all;}
+.game-before .tit-box .tit-game a .tip::before {content:"";position:absolute;top:-6px;left:24.1667vw;width:11px;height:6px;background:url('../images/playball/bg_speech_bubble.png') no-repeat 0 0/100%;}
+.game-before .analysis-area {margin:0 16px;}
+.game-before .analysis-area .info-box .versus {position:relative;}
+.game-before .analysis-area .info-box .versus .team {float:left;width:50%;padding-top:18px;text-align:center;}
+.game-before .analysis-area .info-box .versus .team .divide {font-weight:700;}
+.game-before .analysis-area .info-box .versus .team .divide span {display:inline-block;margin-right:4px;font-size:3.0rem;}
+.game-before .analysis-area .info-box .versus .team .divide.win span {color:#06c;}
+.game-before .analysis-area .info-box .versus .team .result {color:#6e6e6e;}
+.game-before .analysis-area .info-box .versus .vs-wrap {position:absolute;left:50%;color:#828282;font-size:1.3rem;font-weight:700;transform:translateX(-50%);}
+.game-before .analysis-area .info-box .record {padding:10px 0 0;}
+.game-before .analysis-area .info-box .record dl {position:relative;overflow:hidden;padding:4px 0;}
+.game-before .analysis-area .info-box .record dl dt {position:absolute;left:50%;color:#666;transform:translateX(-50%);}
+.game-before .analysis-area .info-box .record dl dd {float:left;width:50%;}
+.game-before .analysis-area .info-box .record dl dd.away {padding-right:41px;text-align:right;}
+.game-before .analysis-area .info-box .record dl dd.home {padding-left:41px;}
+.game-before .analysis-area .info-box .record dl dd.overwhelming {color:#0064c9;}
+.game-before .analysis-area .sub-box .tit-sub {padding:30px 0 21px;font-size:1.6rem;text-align:center;}
+/* 전력분석 - 기록없음 */
+.game-before .no-game {color:#333;font-size:1.4rem;text-align:center;}
+.game-before .no-game dt {padding:100px 0 10px;background:url('../images/playball/no_analysis.png') no-repeat 50% 41px/31px;font-weight:700;}
+.game-before .no-game dd {padding-bottom:108px;}
+/* 전력분석 - 기록없음 부분 */
+.game-before .info-box.no-record {display:table;width:100%;height:100%;}
+.game-before .info-box.no-record p {display:table-cell;height:142px;color:#828282;font-size:1.4rem;text-align:center;vertical-align:middle;}
+
+/* 전력분석 > 전적비교 */
+.game-before .comparison .info-box .versus .team {height:90px;}
+.game-before .comparison .info-box .versus .team .result {padding-top:4px;}
+.game-before .comparison .info-box .versus .vs-wrap {padding-top:37px;}
+.game-before .comparison .info-box .record dl dd span {display:inline-block;width:15px;height:15px;border-radius:3px;color:#fff;font-size:0.9rem;line-height:15px;text-align:center;}
+.game-before .comparison .info-box .record dl dd.away span {float:right;margin-left:2px;}
+.game-before .comparison .info-box .record dl dd.home span {float:left;margin-right:2px;}
+.game-before .comparison .info-box .record dl dd.away span:last-child,
+.game-before .comparison .info-box .record dl dd.home span:last-child {margin:0;}
+.game-before .comparison .info-box .record dl dd span.win {background:#0064c9;}
+.game-before .comparison .info-box .record dl dd span.lose {background:#ccc;}
+.game-before .comparison .info-box .record dl dd span.draw {background:#666;}
+
+/* 전력분석 > 승부예측 */
+.game-before .prediction .info-box .versus .team .divide {padding-bottom:28px;}
+.game-before .prediction .info-box .versus .vs-wrap {padding-top:28px;}
+
+/* 전력분석 > 선발투수, 키플레이어 공통 */
+.game-before .analysis-area .info-box .versus .team .player-img {position:relative;width:48px;max-width:48px;margin:0 auto;}
+.game-before .analysis-area .info-box .versus .team .player-img img:last-child {position:absolute;right:-4px;bottom:-3px;width:20px;}
+.game-before .analysis-area .info-box .versus .team .name {padding:7px 0 14px;}
+/* 전력분석 > 선발투수 */
+.game-before .pitcher .info-box .versus .vs-wrap {padding-top:44px;text-align:center;}
+.game-before .pitcher .info-box .versus .vs-wrap .season {display:block;width:24px;height:14px;margin:5px auto 0;border-radius:1.5px;background:#06c;color:#fff;font-size:0.9rem;line-height:14px;}
+/* 전력분석 > 선발투수 > 주요 구종 */
+.game-before .pitcher .pitching-arsenal .graph-box {display:table;width:100%;}
+.game-before .pitcher .pitching-arsenal .graph-box .record {float:left;width:50%;height:200px;}
+.game-before .pitcher .pitching-arsenal .graph-box .record.away {padding:0 20px 0 0;}
+.game-before .pitcher .pitching-arsenal .graph-box .record.home {padding:0 0 0 20px;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph {float:right;width:36px;height:200px;}
+.game-before .pitcher .pitching-arsenal .graph-box .record.home .info-graph {float:left;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph li {display:table;width:100%;color:#fff;text-align:center;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph li span {display:table-cell;vertical-align:middle;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SK .rank1 {background:#cb1733;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HT .rank1 {background:#9c0925;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.OB .rank1 {background:#24233e;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LT .rank1 {background:#002d62;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.NC .rank1 {background:#26589a;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SS .rank1 {background:#0073bd;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LG .rank1 {background:#b60059;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.WO .rank1 {background:#740720;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HH .rank1 {background:#ec6016;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.KT .rank1 {background:#343435;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SK .rank2 {background:rgba(203,23,51,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HT .rank2 {background:rgba(156,9,37,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.OB .rank2 {background:rgba(36,35,62,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LT .rank2 {background:rgba(0,45,98,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.NC .rank2 {background:rgba(38,88,154,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SS .rank2 {background:rgba(0,115,189,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LG .rank2 {background:rgba(182,0,89,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.WO .rank2 {background:rgba(116,7,32,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HH .rank2 {background:rgba(236,96,22,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.KT .rank2 {background:rgba(52,52,53,0.6);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SK .rank3 {background:rgba(203,23,51,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HT .rank3 {background:rgba(156,9,37,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.OB .rank3 {background:rgba(36,35,62,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LT .rank3 {background:rgba(0,45,98,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.NC .rank3 {background:rgba(38,88,154,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SS .rank3 {background:rgba(0,115,189,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LG .rank3 {background:rgba(182,0,89,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.WO .rank3 {background:rgba(116,7,32,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HH .rank3 {background:rgba(236,96,22,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.KT .rank3 {background:rgba(52,52,53,0.4);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SK .rank4 {background:rgba(203,23,51,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HT .rank4 {background:rgba(156,9,37,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.OB .rank4 {background:rgba(36,35,62,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LT .rank4 {background:rgba(0,45,98,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.NC .rank4 {background:rgba(38,88,154,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.SS .rank4 {background:rgba(0,115,189,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.LG .rank4 {background:rgba(182,0,89,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.WO .rank4 {background:rgba(116,7,32,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.HH .rank4 {background:rgba(236,96,22,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-graph.KT .rank4 {background:rgba(52,52,53,0.2);}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-list {float:right;height:200px;margin-right:10px;}
+.game-before .pitcher .pitching-arsenal .graph-box .record.home .info-list {float:left;margin-left:2.6389vw;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-list li {display:table;width:100%;height:100%;}
+.game-before .pitcher .pitching-arsenal .graph-box .record.away .info-list li {text-align:right;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-list li dl {display:table-cell;line-height:1.2;vertical-align:middle;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .info-list li dl dd {padding-top:0.5556vw;color:#6e6e6e;}
+.game-before .pitcher .pitching-arsenal .graph-box .record .no-record {display:table-cell;height:200px;color:#676767;vertical-align:middle;}
+.game-before .pitcher .pitching-arsenal .graph-box .no-record-full {display:table-cell;width:100%;height:100px;color:#676767;text-align:center;vertical-align:middle;}
+
+/* 전력분석 > 키플레이어 */
+.game-before .keyplayer .info-box .versus .vs-wrap {padding-top:45px;}
+.game-before .keyplayer .info-box .graph-box {width:100%;height:250px;margin:0 auto;padding-top:19px;}
+.game-before .keyplayer .info-box .graph-box canvas {width:100%;height:100%;}
+.game-before .keyplayer .graph-area {width:95.7317%;margin:0 auto;}
+.game-before .keyplayer .graph-area .hotcoldzone .zone.home {float:right;}
+
+/* 전력분석 > 라인업 */
+.game-before .lineup .tit-box .tit-game {float:left;}
+.game-before .lineup .tit-box .lineup-list {float:right;padding-top:38px;}
+.game-before .lineup .tit-box .lineup-list li {float:left;margin-right:17px;}
+.game-before .lineup .tit-box .lineup-list li:last-child {margin-right:0;}
+.game-before .lineup .tit-box .lineup-list li a {display:inline-block;color:#828282;}
+.game-before .lineup .tit-box .lineup-list li.on a {color:#323232;font-weight:700;}
+
+/* 전력분석 > 라인업 > 리스트뷰 */
+.game-before .lineup {margin:0 16px;padding-bottom:45px;}
+.game-before .lineup .info-box .list-view {padding-top:17px;}
+.game-before .lineup .info-box .list-view li {padding-bottom:26px;}
+.game-before .lineup .info-box .list-view li:first-child,
+.game-before .lineup .info-box .list-view li:last-child {padding-bottom:0;}
+.game-before .lineup .info-box .list-view li .team {width:155px;margin:0 auto;padding-bottom:17px;}
+.game-before .lineup .info-box .list-view li .team li {float:left;width:47px;max-width:47px;padding-bottom:0;}
+.game-before .lineup .info-box .list-view li .team li:last-child {float:right;}
+.game-before .lineup .info-box .list-view li dl {position:relative;overflow:hidden;}
+.game-before .lineup .info-box .list-view li dl dt {position:absolute;top:50%;left:50%;color:#0064c9;font-size:2.0rem;font-weight:700;transform:translate(-50%, -50%);}
+.game-before .lineup .info-box .list-view li dl dd {float:left;width:50%;}
+.game-before .lineup .info-box .list-view li dl dd.away {padding-right:30px;text-align:right;}
+.game-before .lineup .info-box .list-view li dl dd.home {padding-left:30px;}
+.game-before .lineup .info-box .list-view li dl dd .name {display:block;padding-bottom:4px;font-size:1.4rem;}
+.game-before .lineup .info-box .list-view li dl dd .info {display:block;}
+.game-before .lineup .info-box .list-view li dl dd .info span {display:inline-block;position:relative;color:#666;text-align:center;}
+.game-before .lineup .info-box .list-view li dl dd .info .pst {margin-right:3px;padding-right:7px;}
+.game-before .lineup .info-box .list-view li dl dd .info .pst::before {content:"";position:absolute;top:4px;right:0;width:1px;height:8px;background:#e5e5e5;}
+.game-before .lineup .info-box .list-view li dl dd .info .score {min-width:35px;font-weight:700;}
+
+/* 전력분석 > 라인업 > 그라운드뷰 */
+.game-before .lineup .info-box .ground-view .team.away {margin-bottom:6px;}
+.game-before .lineup .info-box .ground-view .team .info-box {overflow:hidden;height:202px;border:1px solid #ebebeb;border-radius:7px;}
+
+/* 경기중 */
+#contents.live-cont #SubCont.subcont-scroll {overflow-y:scroll;height:calc(100vh - 48px - 56.25vw - 48px);}
+/* 경기중 상단 - 게임 정보 */
+.playball-sub .progress.live {height:70px;}
+.playball-sub .progress.live .team {float:left;width:37.9573%;margin-top:17px;}
+.playball-sub .progress.live .team.away {padding-left:5.0305%;}
+.playball-sub .progress.live .team.home {padding-right:5.0305%;}
+.playball-sub .progress.live .team .player-info {float:left;width:78.2407%;}
+.playball-sub .progress.live .team .player-info .emb {width:38.4615%;max-width:32px;margin:0 auto;}
+.playball-sub .progress.live .team .player-info .player {padding-top:6px;text-align:center;}
+.playball-sub .progress.live .team .player-info .player span {display:inline-block;}
+.playball-sub .progress.live .team .player-info .player .position {color:#666;}
+.playball-sub .progress.live .team .score {float:left;width:21.7593%;margin-top:3px;font-size:2.0rem;font-weight:700;text-align:center;}
+.playball-sub .progress.live .team .score.win {color:#0064c9;}
+.playball-sub .progress.live .game-info {float:left;width:24.0854%;margin-top:8px;;text-align:center;}
+.playball-sub .progress.live .game-info .current-info strong {color:#333;font-weight:100;}
+.playball-sub .progress.live .game-info .current-info .situation-box {display:inline-block;}
+.playball-sub .progress.live .game-info .current-info .situation-box .dh {color:#2c9eff;font-size:1.2rem;font-weight:700;}
+.playball-sub .progress.live .game-info .base {position:relative;width:100%;height:20px;margin:3px 0;}
+.playball-sub .progress.live .game-info .base > li {position:absolute;width:0;height:0;border:6px solid transparent;border-bottom-color:#f2f2f2;text-indent:-99999px;}
+.playball-sub .progress.live .game-info .base > li::before {content:'';position:absolute;top:6px;left:-6px;width:0;height:0;border:6px solid transparent;border-top-color:#f2f2f2;}
+.playball-sub .progress.live .game-info .base > li.on {border-bottom-color:#ffd800;}
+.playball-sub .progress.live .game-info .base > li.on::before {border-top-color:#ffd800;}
+.playball-sub .progress.live .game-info .base > .b1 {top:2px;left:50%;margin-left:2px;}
+.playball-sub .progress.live .game-info .base > .b2 {top:-6px;left:50%;margin-left:-6px;}
+.playball-sub .progress.live .game-info .base > .b3 {top:2px;left:50%;margin-left:-14px;}
+.playball-sub .progress.live .game-info .ballcount {color:#333;}
+.playball-sub .progress.live .game-info .ballcount .b .num {color:#00c989;}
+.playball-sub .progress.live .game-info .ballcount .s .num {color:#ff7800;}
+
+/* 경기중 상단 - 이닝 */
+.playball-sub .scoreboard {margin:0 16px;padding:16px 0 15px;}
+.playball-sub .scoreboard .team {float:left;width:14.634%;}
+.playball-sub .scoreboard .team table tr td {max-width:45px;font-size:1.0rem;text-align:left;}
+.playball-sub .scoreboard .team .emb {float:left;width:17px;max-width:17px;}
+.playball-sub .scoreboard .team .tit-team {float:left;padding:1px 0 0 8px;}
+.playball-sub .scoreboard .team table.tbl-sb tbody tr:first-child td {padding:0 0 1px;}
+.playball-sub.live-cont .scoreboard .team table tbody tr:first-child td {padding:6px 0 1px;}
+.playball-sub .match-box .scoreboard .team table tbody tr:first-child td {padding:0;}
+.playball-sub .scoreboard .inning {float:left;width:65.091%;font-size:1.0rem;}
+.playball-sub .scoreboard .inning table {table-layout:fixed;}
+.playball-sub .scoreboard .inning table th,
+.playball-sub .scoreboard .inning table td {min-width:17px;font-size:1.0rem;}
+.playball-sub .scoreboard .result {position:relative;z-index:10;float:right;overflow:hidden;width:20.275%;}
+.playball-sub .scoreboard .result table thead th:last-child,
+.playball-sub .scoreboard .result table tbody td:last-child {padding-right:3px}
+.playball-sub .scoreboard .result table tbody td:first-child {color:#facf31;}
+.playball-sub .scoreboard table {width:100.8%}
+.playball-sub .scoreboard table th,
+.playball-sub .scoreboard table td {height:15px;font-size:1.0rem;text-align:center;vertical-align:middle;}
+.playball-sub .scoreboard table tbody tr:first-child th,
+.playball-sub .scoreboard table tbody tr:first-child td {padding:7px 0 4px;}
+.playball-sub .scoreboard table td.on {color:#fa2b1c;}
+.playball-sub .scoreboard table caption {overflow:hidden;position:absolute !important;width:1px;height:1px;font-size:1px;line-height:1px;clip:rect(1px,1px,1px,1px)}
+.playball-sub .scoreboard table .hidden {position:absolute;clip:rect(0 0 0 0);width:0;height:0;margin:-1px;overflow:hidden;}
+.playball-sub .scoreboard .inning {display:inline-block;white-space:nowrap;}
+.playball-sub .scoreboard .inning .tbl-scroll {table-layout:auto;}
+.playball-sub .scoreboard .inning .tbl-sb th,
+.playball-sub .scoreboard .inning .tbl-sb td {min-width:17px;}
+.playball-sub .scoreboard .inning .tbl-scroll th,
+.playball-sub .scoreboard .inning .tbl-scroll td {min-width:19px;}
+.playball-sub .scoreboard .inning .tbl-scroll th {padding:0 4px;}
+
+/* 경기중 상단 - 라이브 영상, 그래픽중계 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+.playball-sub.live-cont .live-wrapper.vanish-broadcast.fixed,
+.playball-sub.live-cont .live-wrapper.vanish-graphic.fixed {position:fixed;top:48px;left:50%;z-index:20;width:100%;transform:translateX(-50%);} /* 1차 */
+.playball-sub.live-cont .info-wrapper.fixed {position:fixed;top:48px;z-index:20;width:100%;}
+.playball-sub.live-cont .graphic-box.fixed {position:fixed;top:48px;z-index:20;width:100%;}
+/* 경기중 상단 - 라이브 영상 */
+
+.playball-sub .live-wrapper {position:relative;height:56.25vw;}
+.playball-sub .live-wrapper .control-box .tit-game {display:none;}
+
+/* 경기중 상단 영역 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+#contents.playball-sub.live-cont #MainCont {/*height:calc(90px + 70px + 87px + 56.25vw + 48px);*/height:auto;}
+#contents.playball-sub.live-cont #MainCont.maincont-fixed {overflow:hidden;height:calc(56.25vw + 48px);}
+
+/* 경기중 상단 - 그래픽중계 */
+#MainCont .graphic-box {height:56.25vw;}
+
+/* 경기중 상단 - 탭 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+.live-cont .tab-depth1.fixed {position:fixed;top:calc(48px + 56.25vw);z-index:30;width:100%;background:#fff;}
+
+/* 경기중 공통 */
+#contents.playball-sub.live-cont #SubCont.subcont-fixed {top:calc(55.26vw + 48px);}
+.view-point {padding-bottom:86px;}
+.view-point .player {margin:0 16px;}
+.view-point .player .tit-live {padding:32px 0 26px;font-size:2.4rem;}
+/* 경기중 > 관전포인트 - 공통 */
+.view-point .player .player-info {position:relative;padding-bottom:13px;}
+.view-point .player .player-info .player-img {float:left;position:relative;width:48px;margin-right:26px;padding-top:3px;}
+.view-point .player .player-info .player-img img:first-child {max-width:48px;}
+.view-point .player .player-info .player-img img:last-child {position:absolute;right:-4px;bottom:-3px;width:20px;}
+.view-point .player .player-info .player-record {float:left;width:calc(100% - 74px);}
+.view-point .player .player-info .player-record dt {padding-bottom:9px;font-size:1.4rem;font-weight:700;}
+.view-point .player .player-info .player-record dt span {color:#828282;}
+.view-point .player .player-info .player-record dd {display:inline-block;margin-right:15px;}
+.view-point .player .player-info .player-record dd:last-child {margin-right:0;}
+.view-point .player .player-info .player-record dd > span {display:block;}
+.view-point .player .player-info .player-record dd .sort {padding-bottom:3px;color:#828282;}
+.view-point .player .player-info .player-record dd .num {font-weight:400;}
+.view-point .player .graph-box {width:100%;height:178px;border:1px solid #f0f0f0;border-radius:7px;text-align:center;}
+.view-point .player .graph-box .tit-sub {padding:19px 0 18px;color:#828282;font-size:1.2rem;}
+.view-point .player .graph-box .tit-sub strong {color:#323232;}
+.view-point .player .no-data {padding:27px 0 41px;color:#828282;font-size:1.4rem;text-align:center;}
+.view-point .description {margin:0 16px;padding-top:9px;color:#ccc;}
+
+/* 경기중 > 관전포인트 - 세로그래프 */
+.view-point .player .graph-box .vertical-graph {padding-top:23px;}
+.view-point .player .graph-box .vertical-graph li {display:inline-block;width:60px;}
+.view-point .player .graph-box .vertical-graph li:first-child {margin-right:12px;}
+.view-point .player .graph-box .vertical-graph li dl {position:relative;height:60px;text-align:center;letter-spacing:-0.5px;}
+.view-point .player .graph-box .vertical-graph li dl dt {position:absolute;bottom:-19px;left:0;width:100%;font-weight:100;}
+.view-point .player .graph-box .vertical-graph li dl dd {position:absolute;bottom:0;left:50%;width:36px;background:rgba(105,104,104,0.8);transform:translateX(-50%);}
+.view-point .player .graph-box .vertical-graph li dl dd.on {background:#0064c9;}
+.view-point .player .graph-box .vertical-graph li dl dd span {position:absolute;top:4px;left:50%;color:#fff;transform:translateX(-50%);}
+.view-point .player .graph-box .vertical-graph li dl dd.min span {top:-14px;color:#323232;}
+/* 경기중 > 관전포인트 - 핫콜드존 */
+.view-point .player .graph-box .hotcoldzone-area .zone {position:relative;width:107px;height:107px;margin:0 auto;}
+.view-point .player .graph-box .hotcoldzone-area .zone .tbl-hotcold td {font-size:0.7rem;}
+.view-point .player .graph-box .hotcoldzone-area .zone .tbl-hotcold.front {width:82px;height:82px;}
+.view-point .player .graph-box .hotcoldzone-area .zone .tbl-hotcold.back tr:first-child td {padding-top:3px;}
+.view-point .player .graph-box .hotcoldzone-area .zone .tbl-hotcold.back tr:last-child td {padding-bottom:3px;}
+/* 경기중 > 관전포인트 - 타구방향 */
+.view-point .player .graph-box .batting-way {position:relative;width:113px;height:92px;margin:15px auto 0;background:url("../images/playball/bg_batting_way.png") no-repeat 0 0/100%;}
+.view-point .player .graph-box .batting-way ul {position:absolute;top:0;right:0;bottom:0;left:0;}
+.view-point .player .graph-box .batting-way li {position:absolute;width:29px;padding:1px 0;border-radius:3px;background:rgba(0,0,0,0.75);color:#fff;transform:translateX(-50%);}
+.view-point .player .graph-box .batting-way li.left {top:10px;left:6px;}
+.view-point .player .graph-box .batting-way li.center {top:-7px;left:50%;transform:translateX(-50%);}
+.view-point .player .graph-box .batting-way li.right {top:10px;right:-20px;}
+/* 경기중 > 관전포인트 - 가로그래프 */
+.view-point .player .graph-box .horizontal-graph {width:240px;margin:0 auto;padding-top:13px;}
+.view-point .player .graph-box .horizontal-graph li {margin-bottom:6px;}
+.view-point .player .graph-box .horizontal-graph li dl {position:relative;width:100%;height:22px;}
+.view-point .player .graph-box .horizontal-graph li dl dt {position:absolute;top:50%;left:3px;z-index:10;font-weight:100;color:#fff;transform:translateY(-50%);}
+.view-point .player .graph-box .horizontal-graph li dl .graph-area {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(105,104,104,0.8);}
+.view-point .player .graph-box .horizontal-graph li dl .graph-area .graph {position:absolute;top:0;left:0;height:100%;background:#0064c9;}
+.view-point .player .graph-box .horizontal-graph li dl .percent {position:absolute;top:50%;right:3px;color:#fff;transform:translateY(-50%);}
+/* 경기중 > 관전포인트 - 연도별 피OPS */
+.view-point .player .graph-box .brokenline-graph {width:141px;height:83px;margin:0 auto;padding-top:10px;}
+.view-point .player .graph-box .brokenline-graph canvas {width:100%;height:100%;}
+/* 경기중 > 관전포인트 - 기록없음 */
+.view-point .player .graph-box .no-record {padding-top:83px;color:#828282;}
+
+/* 경기중 > 관전포인트 - 타자 */
+.view-point .hitter {margin:0;}
+.view-point .hitter .tit-live {margin-left:16px;}
+.view-point .hitter .hitter-record li {padding:0 16px;}
+.view-point .hitter .hitter-record li .player-info .order {position:absolute;top:1px;right:9px;width:26px;font-weight:700;text-align:center;transform:translateX(-50%);}
+.view-point .hitter .player-info .player-record dt {display:inline-block;}
+.view-point .hitter .hitter-record li .player-info .player-record dd {display:block;margin-right:0;padding-bottom:4px;color:#828282;}
+.view-point .hitter .hitter-record li .player-info .player-record dd:last-child {padding-bottom:0;}
+.view-point .hitter .hitter-record li .player-info .player-record dd span {display:inline-block;color:#828282;}
+.view-point .hitter .hitter-record li .player-info .player-record .batting-average span {position:relative;padding-left:13px;}
+.view-point .hitter .hitter-record li .player-info .player-record .batting-average span::before {content:"";position:absolute;top:3px;left:5px;width:1px;height:8px;background:#e5e5e5;}
+.view-point .hitter .hitter-record li .player-info .player-record .bat span {color:#323232;font-weight:700;}
+.view-point .hitter .hitter-record li .player-info .player-record .hit span {margin-right:15px;}
+.view-point .hitter .hitter-record li .player-info .player-record .hit span:last-child {margin-right:0;}
+.view-point .hitter .bx-wrapper .bx-controls-direction a {top:-5px;z-index:10;overflow:hidden;width:22px;height:26px;margin-top:0;padding:8px;}
+.view-point .hitter .bx-wrapper .bx-controls-direction a.bx-prev {left:auto;right:63px;background:url('../images/playball/bx_prev.png') no-repeat 50% 50%/6px;}
+.view-point .hitter .bx-wrapper .bx-controls-direction a.bx-next {right:15px;background:url('../images/playball/bx_next.png') no-repeat 50% 50%/6px;}
+/* 경기중 > 관전포인트 - 타자 - 세로그래프 */
+.view-point .hitter .graph-box .vertical-graph li {padding:0;}
+
+/* 경기중 > 문자중계 */
+.letter-live {padding:24px 0 45px;}
+
+/* 경기중 > 문자중계 - 승리확률 */
+.letter-live .win-probability {overflow:hidden;margin:0 16px;border-radius:7px;background:#f0f0f0;}
+.letter-live .win-probability .tit-live {padding:21px 0 10px;font-size:1.2rem;text-align:center;}
+.letter-live .win-probability .team {text-align:right;margin-right:16px;}
+.letter-live .win-probability .team li {display:inline-block;position:relative;margin-right:28px;color:#828282;}
+.letter-live .win-probability .team li:last-child {margin-right:0;}
+.letter-live .win-probability .team li::before {content:"";position:absolute;top:50%;left:-16px;width:12px;height:4px;border-radius:3px;background:#fa2a5d;transform:translateY(-50%);}
+.letter-live .win-probability .team li:last-child::before {content:"";background:#0868c6;}
+.letter-live .win-probability .graph-box {width:301px;height:137px;margin:0 auto;padding:1px 0 17px;}
+.letter-live .win-probability .graph-box canvas {width:100%;height:100%;}
+.letter-live .win-probability .progression-box {background:#f7fafd;}
+.letter-live .win-probability .progression-box dl {margin:0 16px;padding:16px 0 13px;color:#828282;}
+.letter-live .win-probability .progression-box dl dt {padding:0 0 9px 27px;background:url('../images/playball/ico_tip.png') no-repeat 5px 0/15px;}
+.letter-live .win-probability .progression-box dl dd {padding-left:27px;letter-spacing:-0.5px;}
+.letter-live .win-probability .progression-box .btn-area {margin:0 16px;padding:14px 0;border-top:1px solid #e9eff5;text-align:center;}
+.letter-live .win-probability .progression-box .btn-area a {display:inline-block;padding-right:17px;background:url('../images/common/bg_arrow_more.png') no-repeat 100% 50%/11px;color:#828282;}
+/* 경기중 > 문자중계 - 경기현황 */
+.letter-live .game-live .tit-box {display:block;float:none;width:auto;height:auto;margin:0 16px;padding:46px 0 12px;border:0;}
+.letter-live .game-live .tit-box .tit-live {float:left;font-size:2.4rem;}
+.letter-live .game-live .tit-box .list {float:right;padding-top:12px;}
+.letter-live .game-live .tit-box .list li {float:left;margin-right:16px;}
+.letter-live .game-live .tit-box .list li:last-child {margin-right:0;}
+.letter-live .game-live .tit-box .list li a {display:block;color:#828282;}
+.letter-live .game-live .tit-box .list li.on a {color:#323232;font-weight:700;}
+.letter-live .game-live .inning-list li .number {border-bottom:1px solid #eef3f8;}
+.letter-live .game-live .inning-list li .number a {display:block;height:48px;padding:0 16px;background:url('../images/playball/accodian_off.png') no-repeat 89.1667vw 50%/18px;font-size:1.6rem;font-weight:700;line-height:48px;}
+.letter-live .game-live .inning-list li.on .number a {background:url('../images/playball/accodian_on.png') no-repeat 89.1667vw 50%/18px;}
+.letter-live .game-live .inning-list li .cont-wrap {display:none;padding:18px 0 40px;background:#fff;}
+.letter-live .game-live .inning-list li .cont-wrap > li {padding:0 16px;}
+.letter-live .game-live .inning-list li .cont-wrap > li:last-child {margin:0 16px;}
+.letter-live .game-live .inning-list li .cont-wrap .present {padding:0 16px 24px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass,
+.letter-live .game-live .inning-list li .cont-wrap .assault,
+.letter-live .game-live .inning-list li .cont-wrap .change {margin:0 16px 12px;border-radius:7px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass {padding:18px 16px 11px;background:#fff;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area {display:table;position:relative;width:100%;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-img {display:table-cell;width:48px;max-width:48px;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .player-area .player-img {vertical-align:top;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info {display:table-cell;padding-left:9px;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dt {color:#323232;font-size:1.4rem;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .player-area .player-info dt {padding-top:5px;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dt span {color:#828282;font-weight:100;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dt .name {color:#323232;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dd {display:block;padding:10px 0 20px;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dd.on {border-bottom:1px solid #f2f2f2;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dd a {display:block;background:url('../images/playball/sub_accodian_off.png') no-repeat 100% 50%/10px;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .player-info dd.on a {background:url('../images/playball/sub_accodian_on.png') no-repeat 100% 50%/10px;}
+.letter-live .game-live .inning-list li .cont-wrap li .player-area .out {position:absolute;top:1.1111vw;right:0;width:32px;height:14px;border-radius:2px;background:#fa2b1c;color:#fff;font-size:0.9rem;font-weight:700;line-height:14px;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list {padding-top:16px;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li {padding-bottom:4px;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li:last-child {padding-bottom:0;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl {overflow:hidden;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt {float:left;position:relative;z-index:10;width:20px;height:20px;margin-right:7px;color:#fff;font-size:1.1rem;font-weight:700;line-height:20px;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt::before {content:"";position:absolute;top:50%;left:50%;z-index:-10;width:16px;height:16px;border-radius:50%;transform:translate(-50%, -50%);}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt.e::before {background:#facf31;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt.b::before {background:#00c989;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt.h::before {background:#0064c9;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dt.h::after {content:"";position:absolute;top:0;right:0;bottom:0;left:0;z-index:-20;border-radius:50%;background:#36ebf8;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl dd {float:left;margin-top:3px;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl .result {position:relative;padding-right:19px;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl .result::before {content:"";position:absolute;top:4px;right:8px;width:1px;height:8px;background:#e5e5e5;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl .ball-info {color:#6e6e6e;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li dl .ballcount {float:right;color:#6e6e6e;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li .detail-result {clear:both;padding:0 48px 4px 25px;color:#828282;}
+.letter-live .game-live .inning-list li .cont-wrap li .ball-list li .detail-result:last-child {padding:0 48px 0 25px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind {padding:14px 0 2px;text-align:right;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li {display:inline-block;width:20px;height:18px;margin-right:12px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li:last-child {margin-right:0;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li a {display:block;overflow:hidden;height:100%;line-height:9999px;text-indent:9999px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li:first-child a {background:url('../images/playball/bg_pass01.png') no-repeat 50% 2px/17px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li.on:first-child a {background-position:50% -18px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li:last-child a {margin-right:0;background:url('../images/playball/bg_pass02.png') no-repeat 50% 0/20px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind li.on:last-child a {background-position:50% -24.5px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box {padding-top:13px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen {position:relative;height:191px;background:url('../images/playball/bg_ground_day_s.png') no-repeat 0 0/100%;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen.no-data {padding-top:101px;;background:url('../images/common/bg_no.png') no-repeat 50% 56px/36px;color:#828282;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .pts-area {position:absolute;top:50%;left:50%;z-index:10;width:148px;height:186px;transform:translate(-50%, -50%);}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .strike-zone {position:absolute;top:50%;left:50%;width:74px;height:93px;background:url('../images/playball/bg_strikezone.png') no-repeat 0 0/100%;transform:translate(-50%, -50%);}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result {position:absolute;top:0;right:0;bottom:0;left:0;z-index:20;background:rgba(0,0,0,0.7);color:#fff;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result p {padding-top:18px;font-size:1.4rem;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result p .emb {display:block;width:33px;max-width:33px;margin:0 auto 6px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info {padding-top:20px;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li {display:inline-block;width:70px;height:82px;margin-right:5px;border-radius:8px;background:rgba(0,100,201,0.5)}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li:last-child {margin-right:0;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl dt {padding-top:40px;font-size:1.1rem;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl.speed dt {background:url('../images/playball/bg_graphic01.png') no-repeat 50% 13px/19px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl.angle01 dt {background:url('../images/playball/bg_graphic03.png') no-repeat 50% 12px/11px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl.angle02 dt {background:url('../images/playball/bg_graphic02.png') no-repeat 50% 17px/23px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl dd {padding-top:2px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen .screen-result .screen-info li dl dd span {font-size:1.6rem;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen.no-data + .play-box {display:none;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box {padding-top:7px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team {float:left;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li {padding-bottom:4px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li:last-child {padding-bottom:0;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li span {display:inline-block;font-size:1.0rem;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li .emb {width:19px;max-width:19px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li .position {margin:0 1px 0 3px;color:#323232;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .team li .name {color:rgba(50,50,50,0.8);}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .btn-area {float:right;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .btn-area a {display:block;height:32px;margin-top:2px;padding-left:31px;border-radius:3px;color:#fff;line-height:32px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .btn-area .btn-play {width:65px;background:#0064c9 url('../images/playball/bg_play.png') no-repeat 14px 50%/11px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box .btn-area .btn-refresh {width:83px;background:#969696 url('../images/playball/btn_refresh.png') no-repeat 11px 50%/14px;}
+.letter-live .game-live .inning-list li .txt-info {padding:25px 0 19px;}
+.letter-live .game-live .inning-list li .txt-info .bat-result {padding-bottom:6px;font-weight:700;}
+.letter-live .game-live .inning-list li .txt-info .game-result {padding-bottom:3px;color:#828282;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .team-score {padding-top:12px;border-top:1px solid #f0f0f0;text-align:center;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .team-score span {display:inline-block;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .team-score .emb {width:20px;max-width:20px;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .team-score .score {margin:0 3px;font-size:1.4rem;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap .pass .team-score .score.win {color:#0064c9;}
+.letter-live .game-live .inning-list li .cont-wrap .assault {display:table;width:-webkit-fill-available;height:39px;background:#dfeffb;}
+.letter-live .game-live .inning-list li .cont-wrap .assault dl {display:table-cell;height:100%;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .assault dl dt {display:inline-block;width:26px;max-width:26px;margin-right:3px;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .assault dl dd {display:inline-block;font-weight:700;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .change {display:table;width:-webkit-fill-available;min-height:39px;padding:13px;background:#fff;}
+.letter-live .game-live .inning-list li .cont-wrap .change dl {display:table-cell;height:100%;color:#6e6e6e;vertical-align:middle;}
+.letter-live .game-live .inning-list li .cont-wrap .change dl dt {display:table-cell;padding-right:10px;font-weight:700;}
+.letter-live .game-live .inning-list li .cont-wrap .change dl dd {display:table-cell;}
+.letter-live .game-live .inning-list li .cont-wrap .change dl dd span {display:block;padding-bottom:3px;}
+.letter-live .game-live .inning-list li .cont-wrap .change dl dd span:last-child {padding-bottom:0;}
+/* 경기중 > 문자중계 - 경기현황 - 기록없음 */
+.letter-live .game-live .no-record {padding-top:83px;background:url('../images/common/bg_no.png') no-repeat 50% 38px/36px;color:#828282;font-size:1.4rem;text-align:center;}
+
+/* 경기중 > 영상 */
+.video .roster {margin:0 16px;}
+.video .vs-team .vs-box ul {margin-top:0;}
+.video .vs-team .vs-box ul li {margin-bottom:0;}
+
+/* 경기중, 경기후 기록 공통 */
+.playball-sub.live-cont .record,
+.playball-sub.end-cont .record {padding-bottom:45px;}
+/* 경기중 */
+.playball-sub .record .tit-live {padding:31px 0 15px;font-size:2.4rem;}
+
+/* 경기중 > 실시간 WPA 순위 - 공통 */
+.record .wpa {margin:0 16px;}
+.record .wpa .wpa-list li .player-img {position:relative;width:48px;max-width:48px;}
+.record .wpa .wpa-list li .player-img img:last-child {position:absolute;right:-4px;bottom:-3px;width:20px;max-width:20px;}
+/* 경기중 > 실시간 WPA 순위 - 1위 */
+.record .wpa .wpa-list .top-wrap {float:none;width:100%;height:inherit;margin:0 0 10px 0;padding:31px 16px 12px;border:1px solid #f0f0f0;background:none;}
+.record .wpa .wpa-list .top-wrap .player {position:relative;margin:0 8px;padding-bottom:24px;}
+.record .wpa .wpa-list .top-wrap .player .top {position:absolute;top:12px;right:0;width:47px;height:29px;background:url('../images/playball/bg_top.png') no-repeat 0 0/47px;font-size:1.4rem;line-height:29px;text-align:center;}
+.record .wpa .wpa-list .top-wrap .player .top span {font-size:1.5rem;font-weight:700;}
+.record .wpa .wpa-list .top-wrap .player .player-img {float:left;}
+.record .wpa .wpa-list .top-wrap .player dl {float:left;padding-left:25px;font-size:1.4rem;font-weight:700;text-align:left;}
+.record .wpa .wpa-list .top-wrap .player dl dt {padding:10px 0 7px;}
+.record .wpa .wpa-list .top-wrap .player dl dd {color:#1770cf;}
+.record .wpa .wpa-list .top-wrap .record-list {padding-top:13px;border-top:1px solid #f0f0f0;}
+.record .wpa .wpa-list .top-wrap .record-list li {float:left;width:25%;text-align:center;}
+.record .wpa .wpa-list .top-wrap .record-list li dl dt {padding-bottom:9px;color:#828282;}
+.record .wpa .wpa-list .top-wrap .record-list li dl dd {font-size:1.6rem;font-weight:700;}
+/* 경기중 > 실시간 WPA 순위 */
+.record .wpa .wpa-list > li {display:table;float:left;width:29.1667vw;height:44.4444vw;margin-right:1.6667vw;border-radius:7px;background:#f6f6f6;text-align:center;}
+.record .wpa .wpa-list > li:nth-child(4) {margin-right:0;}
+.record .wpa .wpa-list > li.fifth {display:none;}
+.record .wpa .wpa-list li .player-box {display:table-cell;height:100%;vertical-align:middle;}
+.record .wpa .wpa-list li .player-box .player-img {margin:0 auto;}
+.record .wpa .wpa-list li .player-box .rank {padding-bottom:3.1944vw;font-size:1.4rem;font-weight:700;}
+.record .wpa .wpa-list li .player-box dl dt {padding:5vw 0 2.2222vw;font-weight:700;}
+.record .wpa .wpa-list li .player-box dl dd span {color:#0064c9;}
+
+/* 경기중 > 경기 기록 */
+.record .game-record .tit-live,
+.record .game-record .tab {margin:0 16px;}
+.record .game-record .tit-live {padding:36px 0 32px;}
+.record .game-record .tab .team {display:none;}
+.record .game-record .league-ranking .tit-sub {padding:26px 0 11px;font-size:1.4rem;}
+.record .game-record .league-ranking .playrecord-pad:nth-of-type(2) {display:none;}
+.record .game-record .league-ranking .record-area .tbl-area .tbl thead tr th {padding:0 10px;}
+
+/* 응원하기 채팅창 팝업 */
+.chat-tab {display:none;}
+#PopChat {position:fixed;bottom:0;z-index:90;width:100vw;height:calc(100vh - 48px - 56.25vw);background:#fff;}
+#PopChat header {position:absolute;top:0;left:0;z-index:5;overflow:hidden;width:100%;height:13.8889vw;border-bottom:1px solid #f0f0f0;background:#fff;}
+#PopChat header .btn-close {float:right;overflow:hidden;margin:12px 15px 0 0;}
+#PopChat .content {overflow-y:auto;height:100%;padding:13.8889vw 0 16.6667vw;}
+#PopChat .content .chat-box {padding:0 4.4444vw;}
+#PopChat .content .chat-box li {overflow:hidden;width:100%;padding:2.5vw 0;}
+#PopChat .content .chat-box .intro {padding:6.6667vw 0 9.1667vw;font-size:1.0rem;color:#c8c8c8;text-align:center;}
+#PopChat .content .chat-box .lowest {position:fixed;bottom:20vw;left:50%;width:30px;padding:0;transform:translateX(-50%);}
+#PopChat .content .chat-box .lowest a {display:block;height:30px;background:url('../images/playball/bg_lowest.png') no-repeat 0 0/30px;text-indent:-9999px;}
+#PopChat .content .chat-box li dl {display:inline-block;float:left;position:relative;max-width:100%;padding:11px 12px 12px;background:#f5f7fb;}
+#PopChat .content .chat-box li.away dl {border-radius:0 15px 15px 15px;}
+#PopChat .content .chat-box li.home dl {float:right;border-radius:15px 0 15px 15px;}
+#PopChat .content .chat-box li.me dl {background:#eaf8fe;}
+#PopChat .content .chat-box li dl .user-info {padding-bottom:7px;}
+#PopChat .content .chat-box li dl .user-info .emb {display:inline-block;width:14px;max-width:14px;vertical-align:middle;}
+#PopChat .content .chat-box li dl .user-info .nickname {color:#828282;font-size:1.0rem;vertical-align:middle;}
+#PopChat .content .chat-box li dl dd {font-size:1.4rem;word-break:break-all;}
+#PopChat .content .btn-chat-go {display:none;}
+#PopChat footer {position:absolute;left:0;bottom:0;width:100%;height:13.3333vw;padding:0 16px;background:#fff;border-top:1px solid #f0f0f0 ;}
+#PopChat footer.cheerup {height:16.6667vw;background:#f5f7fb;}
+#PopChat footer.cheerup ul {padding-top:12px;}
+#PopChat footer.cheerup ul li {float:left;}
+#PopChat footer.cheerup ul .team {width:100px;;}
+#PopChat footer.cheerup ul .team a {display:block;padding:10px 0;background:#fff;text-align:center;}
+#PopChat footer.cheerup ul .away a {border-radius:0 20px 20px 20px;}
+#PopChat footer.cheerup ul .home a {border-radius:20px 0 20px 20px;}
+#PopChat footer.cheerup ul .team a span {display:inline-block;}
+#PopChat footer.cheerup ul .team a .emb {position:relative;top:-1px;width:21px;max-width:21px;}
+#PopChat footer.cheerup ul .team a .name {margin:0 0.5556vw;color:#6e6e6e;font-weight:700;}
+#PopChat footer.cheerup ul .team a .count {color:#828282;font-size:1.1rem;}
+#PopChat footer.cheerup ul .btn-cheerup {width:calc(100% - 200px);}
+#PopChat footer.cheerup ul .btn-cheerup a {display:block;height:36px;color:#c8c8c8;font-weight:700;line-height:36px;text-align:center;}
+#PopChat footer .input-box {width:100%;padding-top:1.6667vw;}
+#PopChat footer .input-box label {float:left;width:77.9167vw;height:10vw;line-height:10vw;}
+#PopChat footer .input-box label input {float:left;width:68.0556vw;height:10vw;color:#323232;line-height:10vw;}
+#PopChat footer .input-box label input::placeholder {color:#828282;}
+#PopChat footer .input-box label .txt-info {float:right;font-size:1.1rem;color:#c8c8c8;}
+#PopChat footer .input-box .btn-send {float:right;width:10vw;height:10vw;border-radius:3px;background:#0064c9 url('../images/playball/bg_send.png') no-repeat 50% 50%/15px;line-height:10vw;text-indent:-9999px;}
+
+/* 경기후 */
+/* 경기후 상단 영역 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+#contents.playball-sub.end-cont #MainCont {height:calc(90px + 70px + 87px + 48px);}
+#contents.playball-sub.end-cont #MainCont.maincont-fixed {overflow:hidden;height:48px;}
+#contents.playball-sub.end-cont #SubCont.subcont-fixed {top:247px;}
+/* 경기후 - 게임 정보 */
+.end-cont .conclusion {height:70px;}
+.end-cont .conclusion .team {float:left;width:41.311%;padding-top:15px;}
+.end-cont .conclusion .team.away {padding-left:7.012%;}
+.end-cont .conclusion .team.home {padding-right:7.012%;}
+.end-cont .conclusion .team .team-info {float:left;width:68%;}
+.end-cont .conclusion .team .team-info .emb {width:34px;max-width:34px;margin:0 auto;}
+.end-cont .conclusion .team .team-info .player {padding-top:4px;text-align:center;}
+.end-cont .conclusion .team .team-info .player .result {display:inline-block;width:14px;height:14px;margin-left:4px;border-radius:3px;color:#fff;font-size:0.9rem;text-align:center;line-height:14px;}
+.end-cont .conclusion .team .team-info .player .result.win {background:#0064c9;}
+.end-cont .conclusion .team .team-info .player .result.lose {background:#ccc;}
+.end-cont .conclusion .team .score {float:left;width:32%;padding-top:4px;font-size:2.0rem;font-weight:700;text-align:center;}
+.end-cont .conclusion .team .score.win {color:#0064c9;}
+.end-cont .conclusion .game-info {float:left;width:17.378%;padding-top:25px;text-align:center;}
+.end-cont .conclusion .game-info.dh-end {padding-top:16px;}
+.end-cont .conclusion .game-info .situation-box .dh {color:#2c9eff;font-weight:700;}
+
+/* 경기후 탭 */
+.end-cont .tab-depth1.fixed {top:48px;height:48px;}
+.end-cont .tab-depth1 li {padding:0 5.8333vw;}
+.end-cont .tab-depth1 li:first-child {padding:0 5.8333vw 0 1.9444vw;}
+.end-cont .tab-depth1 li:last-child {padding:0 1.9444vw 0 5.8333vw;}
+
+/* 경기후 > 경기종료 */
+.letter-live .play-end {margin:0 16px 12px;padding:12px 16px 13px;border-radius:10px;background:#eaf8fe;}
+.letter-live .play-end dt {padding-bottom:11px;font-size:1.4rem;font-weight:700;}
+.letter-live .play-end.no-data dt {padding-bottom:0;text-align:center;}
+.letter-live .play-end dd {padding-bottom:6px;white-space:nowrap;}
+.letter-live .play-end dd .name {position:relative;margin-left:7px;padding-left:10px;color:#626262;}
+.letter-live .play-end dd .name::before {content:"";position:absolute;top:6px;left:0;width:1px;height:8px;background:#cae2ed;}
+
+/* 경기후 > 영상 */
+.end-cont .video {position:relative;}
+.end-cont .video.on {height:calc(100vh - 96px);}
+.end-cont .video.on .video-wrap {position:absolute;top:0;z-index:20;width:100%;}
+.end-cont .video .tit-box {display:none;}
+.end-cont .video.on .list-wrap {position:relative;top:56.25vw;overflow-y:scroll;height:calc(100vh - 96px - 56.25vw);padding-bottom:45px;}
+.end-cont .video .list-wrap .roster {margin:0 16px;}
+.end-cont .video .list-wrap .roster.inning h2 {margin:21px 0 11px;font-size:1.4rem;}
+.end-cont .video .list-wrap .roster.inning h2 span {color:#323232;}
+.end-cont .video .list-wrap .vs-team .vs-box ul li dl {width:calc(100% - 108px);}
+
+/* 경기후 > 뉴스 */
+.end-cont .news {padding:16px 0 45px;}
+.end-cont .news .bx-viewport {height:300px !important;}
+.end-cont .news .bx-wrapper .bx-controls-auto, .bx-wrapper .bx-pager {bottom:17px;}
+.end-cont .news .bx-wrapper .bx-pager.bx-default-pager a {width:6px;height:6px;margin:0 4px;background:#d6d6d6;}
+.end-cont .news .bx-wrapper .bx-pager.bx-default-pager a.active {background:#323232;}
+.end-cont .news .photo-news li .photo {overflow:hidden;height:202px;padding:0 16px;border-radius:8px;}
+.end-cont .news .photo-news li dl {margin:0 16px;}
+.end-cont .news .photo-news li dl dt {display:-webkit-box;overflow:hidden;margin:12px 0 5px;font-weight:700;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+.end-cont .news .photo-news li dl dd {color:#ccc;}
+.end-cont .news .major-news .roster {padding:0;}
+/* 경기후 > 뉴스 - 뉴스없음 */
+.end-cont .news .no-edit {padding-top:129px;background:url('../images/common/bg_no.png') no-repeat 50% 76px/42px;color:#828282;font-size:1.4rem;text-align:center;}
+
+/** 그래픽중계 상단 pts 영역 **/
+.graphic-relay {position:relative;width:100%;height:100%;background:url("../images/playball/bg_ground_day_full.png") no-repeat 50% 50%/100.5%;}
+.graphic-relay.night {background:url("../images/playball/bg_ground_night_full.png") no-repeat 0 0/100%;}
+.graphic-relay .match-box {z-index:70;position:relative;width:210px;margin:0 auto;border-radius:0 0 10px 10px;background:#16253d;font-weight:100;}
+.graphic-relay .match-box .scoreboard {overflow:hidden;margin:0;padding:0 12px 7px;font-size:0.9rem;color:#fff;}
+.graphic-relay .match-box .scoreboard .team {float:left;width:25.93%;padding-top:14px;}
+.graphic-relay .match-box .scoreboard .team table td {max-width:45px;padding:0;text-align:left;}
+.graphic-relay .match-box .scoreboard .team .emb {display:inline-block;width:17px;vertical-align:middle;}
+.graphic-relay .match-box .scoreboard .team .team-name {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;padding-left:4px;}
+.graphic-relay .match-box .scoreboard > .inning {display:none;}
+.graphic-relay .match-box .scoreboard .record {float:left;width:9.678%;padding:14px 0 0;}
+.graphic-relay .match-box .scoreboard .record table tbody tr td {height:12px;}
+.graphic-relay .match-box .scoreboard .record table tbody tr:first-child td {padding:2px 0;}
+.graphic-relay .match-box .scoreboard .state {float:left;width:31.25%;}
+.graphic-relay .match-box .scoreboard .state > .ballcount {display:none;}
+.graphic-relay .match-box .scoreboard .state > .current {width:100%;padding-top:3px;}
+.graphic-relay .match-box .scoreboard .state > .current .base {position:relative;width:24px;height:18px;margin:4px auto 1px;}
+.graphic-relay .match-box .scoreboard .state > .current .base li {position:absolute;top:0;width:8px;height:8px;background:rgba(255,255,255,0.4);text-indent:-99999vw;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);}
+.graphic-relay .match-box .scoreboard .state > .current .base li.on {background:#ffda00;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b1 {top:6px;right:2px;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b2 {top:0;left:50%;margin-left:-4px;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b3 {top:6px;left:2px;}
+.graphic-relay .match-box .scoreboard .state > .current .ballcount {color:#fff;font-size:0.8rem;text-align:center;}
+.graphic-relay .match-box .scoreboard .state > .current .inning {width:100%;color:#fff;font-size:0.8rem;text-align:center;}
+.graphic-relay .match-box .scoreboard table {width:100.8%}
+.graphic-relay .match-box .scoreboard table tbody tr th, .graphic-relay .scoreboard table tbody tr td {font-weight:100;text-align:center;vertical-align:middle;}
+.graphic-relay .match-box .scoreboard table thead th {display:none;}
+.graphic-relay .match-box .scoreboard table td:not(:first-child) {display:none;}
+.graphic-relay .match-box .player-info {float:left;width:33.142%;padding-top:19px;font-size:0.9rem;color:#6cbcff;text-align:center;}
+.graphic-relay .match-box .player-info li:nth-child(1) {padding-bottom:4px;}
+.graphic-relay .hitter-graphic {position:absolute;bottom:1.9444vw;left:50%;width:20.4723vw;margin-left:-32.5834vw;}
+.graphic-relay .hitter-graphic.left {margin-left:11.1111vw;}
+.graphic-relay .pts-area {position:absolute;bottom:2.2223vw;left:50%;width:26.9446vw;height:34.1668vw;margin-left:-13.4723vw;z-index:5;}
+.graphic-relay .strike-zone {position:absolute;bottom:10.6945vw;left:50%;width:13.4723vw;height:17.0834vw;margin-left:-6.7362vw;background:url("../images/playball/bg_strikezone_full.png") no-repeat 0 0;background-size:100%;text-indent:-9999vw;}
+.graphic-relay .btn-area {position:absolute;bottom:2.2223vw;right:1.6667vw;width:10vw;}
+.graphic-relay .btn-area a {display:block;width:100%;padding:1.6667vw;}
+.graphic-relay .no-data {position:absolute;display:table;top:0;left:0;z-index:70;width:100%;height:100.5%;background:url('../images/playball/bg_error.png') no-repeat 0 0/100%;color:#fff;}
+.graphic-relay .no-data .txt {display:table-cell;font-size:1.4rem;font-weight:100;line-height:1.5;text-align:center;vertical-align:middle;}
+
+#StreamingFull,
+#PtsFull {display:none;}
+@media (max-width:320px){
+	/* 경기중 상단 - 이닝 */
+	.playball-sub .scoreboard .team .tit-team {padding:1px 0 0 5px;}
+	/* 경기중 > 실시간 WPA 순위 */
+	.record .wpa .wpa-list > li {margin-right:1.4111vw;}
+
+	.end-cont .conclusion .team.away {padding-left:5.012%;}
+	.end-cont .conclusion .team.home {padding-right:5.012%;}
+}
+@media (orientation:landscape) {
+
+	#contents.playball-sub.chatting {padding:0;}
+	#contents.playball-sub.chatting #MainCont {height:100vh;padding-top:0;}
+
+	/* #StreamingFull,
+	#PtsFull {display:block;} */
+}
+
+@media (min-width:1024px) {
+	#wrap > header.playball-sub {position:fixed;}
+
+	#contents.analysis-cont #MainCont,
+	#contents.live-cont #MainCont,
+	#contents.end-cont #MainCont {width:100%;}
+	#contents.analysis-cont #SubCont {overflow:inherit;background:#f4f7fa;}
+	#contents.analysis-cont #SubCont section {background:#fff;}
+
+	/* 퀵버튼 */
+	.quick-button {right:16px;bottom:16px;}
+
+	/* 경기전, 중, 후 상단 공통 */
+	.playball-sub #MainCont {overflow:hidden;}
+	.playball-sub #MainCont .info-wrapper {float:left;width:59.4726vw;;background:#fff;}
+
+	/* 1차에만 적용 */
+	.playball-sub #MainCont .live-wrapper.vanish-broadcast,
+	.playball-sub #MainCont .live-wrapper.vanish-graphic {width:59.4726vw;height:33.3007vw;margin:0 auto;}
+	.playball-sub #MainCont .live-wrapper.vanish.fixed {position:fixed;top:48px;left:50%;left:50%;transform:translateX(-50%);}
+	.playball-sub #MainCont .live-wrapper.vanish .broadcast {height:33.3007vw;}
+
+	.playball-sub #MainCont .info-wrapper .live-wrapper {height:33.3007vw;}
+	.playball-sub #MainCont .info-wrapper.right {float:right;width:40.5273vw;}
+	.playball-sub #MainCont .info-wrapper.right.fixed {top:48px;right:0;}
+	.playball-sub #MainCont .info-wrapper.right .progress.live {height:17.578vw;margin:1.5625vw 1.5625vw;border:1px solid #d9d9d9;background:#fff;}
+	.playball-sub #MainCont .info-wrapper.right .progress.live .team {margin-top:6.93359vw;}
+	.playball-sub #MainCont .info-wrapper.right .progress.live .team .score {margin-top:0.2929vw;}
+	.playball-sub #MainCont .info-wrapper.right .progress.live .game-info {margin-top:6.0547vw;}
+	/* .playball-sub #MainCont .info-wrapper.right .progress.live .game-info .base {margin:0.2929vw;} */
+	.playball-sub #MainCont .info-wrapper.right .scoreboard {width:auto;height:12.5977vw;margin:0 1.5625vw;padding:3.8086vw 3.6133vw 0 1.953vw;border:1px solid #d9d9d9;border-radius:7px;}
+	.playball-sub #MainCont .info-wrapper.right .scoreboard .inning .tbl-scroll th,
+	.playball-sub #MainCont .info-wrapper.right .scoreboard .inning .tbl-scroll td {min-width:17px;}
+	.playball-sub #MainCont .graphic-box {height:33.3007vw;}
+	.playball-sub #MainCont .control-box {height:33.3007vw;}
+
+	/* 경기중, 후 탭 */
+	.tab-depth1 li {padding:0 22px;}
+	.tab-depth1 li:first-child {padding:0 16px 0 36px;}
+	.tab-depth1 li:last-child {padding:0 36px 0 16px;}
+
+	/* 게임리스트 */
+	#GameList {background:#fff;text-align:center;}
+	/* 전력분석 상단 - 게임정보 */
+	.progress.analysis .info-box {width:576px;margin:0 auto;}
+	.progress.analysis .info-box .team.away {padding-left:0.9615%;}
+	.progress.analysis .info-box .team.home {padding-right:0.9615%;}
+
+	/* 전력분석 */
+	#contents.analysis-cont #MainCont {height:auto;} /**/
+
+	/* 전력분석 공통 */
+	.game-before .tit-box {float:none;}
+	.game-before .tit-box .tit-game a .tip {width:360px;margin:40px 0 0 -70px;padding:11px 15px;}
+	.game-before .tit-box .tit-game a .tip::before {left:76px;}
+	.game-before .analysis-area .info-box .versus .team.away {padding:18px 11.8164vw 0 26.3672vw;}
+	.game-before .analysis-area .info-box .versus .team.home {padding:18px 26.3672vw 0 11.8164vw;}
+	.game-before .analysis-area .info-box .record dl dd.away {padding-right:11.8164vw;}
+	.game-before .analysis-area .info-box .record dl dd.home {padding-left:11.8164vw;}
+
+	/* 전력분석 > 키플레이어 */
+	.game-before .keyplayer .graph-area {width:334px;}
+	/* 전력분석 > 라인업 */
+	.game-before .lineup .tit-box .lineup-list {margin-right:128px;}
+	/* 전력분석 > 라인업 > 리스트뷰 */
+	.game-before .lineup .info-box .list-view li .team {width:235px;}
+	.game-before .lineup .info-box .list-view li dl dd.away {padding-right:70px;}
+	.game-before .lineup .info-box .list-view li dl dd.home {padding-left:70px;}
+	/* 전력분석 > 라인업 > 그라운드뷰 */
+	.game-before .lineup .info-box .ground-view {overflow:hidden;}
+	.game-before .lineup .info-box .ground-view .team {float:left;width:47.65625vw;}
+	.game-before .lineup .info-box .ground-view .team.home {float:right;}
+
+	/* 경기중 */
+	/* 경기중 상단 영역 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+	#contents.live-cont #MainCont.maincont-fixed {height:calc(33.3007vw + 48px);}
+	#contents.playball-sub #MainCont.maincont-fixed .info-wrapper.right .progress.live {display:block;}
+
+	/* 경기중 상단 - 탭 (#SubCont에 높이값을 주면 생긴 문제에 다른 방안) */
+	.live-cont .tab {clear:both;background:#fff;}
+	.live-cont .tab.fixed {clear:both;top:calc(48px + 33.3007vw);}
+
+	/* 경기중 공통 */
+	#contents.playball-sub.live-cont #MainCont.maincont-fixed {z-index:30;position:fixed;height:calc(33.3007vw + 48px);background:#fff;} /* 1차에만 position 속성 부여 */
+	#contents.playball-sub.live-cont #MainCont.maincont-fixed #GameList,
+	#contents.playball-sub.live-cont #MainCont.maincont-fixed .progress,
+	#contents.playball-sub.live-cont #MainCont.maincont-fixed > .scoreboard {display:none;} /* 1차에만 적용 */
+	#contents.playball-sub.live-cont #SubCont.subcont-fixed {position:relative;top:calc(33.3007vw + 48px);}  /* 1차에만 position 속성 부여 */
+	.view-point {overflow:hidden;margin:0 16px;}
+	.view-point .player {float:left;width:46.875vw;margin:0;}
+	.view-point .player.hitter {float:right;}
+	.view-point .description {clear:both;margin:0;text-align:center;}
+
+	/* 경기중 > 관전포인트 - 타자 */
+	.view-point .hitter .tit-live {margin-left:0;}
+	.view-point .hitter .hitter-record li {padding:0;}
+	.view-point .hitter .hitter-record li .player-info .order {right:1px;}
+	.view-point .hitter .hitter-record li .player-info .player-record dd.batting-average {position:absolute;right:0;}
+	.view-point .hitter .bx-wrapper .bx-controls-direction a.bx-prev {right:44px;}
+	.view-point .hitter .bx-wrapper .bx-controls-direction a.bx-next {right:-3px;}
+	/* 경기중 > 문자중계 - 승리확률 */
+	.letter-live .win-probability .graph-box {width:96.7742%;height:15.234vw;}
+	/* 경기중 > 문자중계 - 경기현황 */
+	.letter-live .game-live .inning-list li .number a {background:url('../images/playball/accodian_off.png') no-repeat 98% 50%/18px;}
+	.letter-live .game-live .inning-list li.on .number a {background:url('../images/playball/accodian_on.png') no-repeat 98% 50%/18px;}
+	.letter-live .game-live .inning-list li .cont-wrap .present {padding:0 32px 24px;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box {overflow:hidden;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .kind {display:none;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .list-box {float:left;width:28.5156vw;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box {float:left;width:36.71875vw;padding-bottom:15px;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .graphic-box .screen {width:296px;margin:0 auto;}
+	.letter-live .game-live .inning-list li .cont-wrap .pass .pass-box .play-box {width:296px;margin:0 auto;}
+	.letter-live .game-live .inning-list li .txt-info {float:left;width:28.5156vw;padding:13px 0 19px;}
+	/* 경기중 > 문자중계 - 경기현황 - 기록없음 */
+
+	/* 경기중 > 영상 */
+	.live-cont .video .vs-team .vs-box ul {overflow:hidden;}
+	.live-cont .video .vs-team .vs-box ul li {float:left;width:50%;}
+
+	/* 경기중 > 실시간 WPA 순위 - 1위 */
+	.record .wpa .wpa-list .top-wrap {float:left;width:46.875vw;height:15.625vw;margin:0;padding:2.14844vw 2.3438vw 0.6836vw;}
+	.record .wpa .wpa-list .top-wrap .player {padding-bottom:2.344vw;}
+	.record .wpa .wpa-list .top-wrap .record-list {padding-top:1.2695vw;}
+	.record .wpa .wpa-list .top-wrap .record-list li dl dt {padding-bottom:0.87891vw;}
+	/* 경기중 > 실시간 WPA 순위 */
+	.record .wpa .wpa-list > li {width:11.9141vw;height:15.625vw;margin-right:0.586vw;}
+	.record .wpa .wpa-list > li:nth-child(2) {margin-left:0.586vw;}
+	.record .wpa .wpa-list > li:nth-child(3),
+	.record .wpa .wpa-list > li:nth-child(4) {margin-right:0.586vw;}
+	.record .wpa .wpa-list > li:nth-child(5) {margin-right:0;}
+	.record .wpa .wpa-list > li.fifth {display:table;}
+	.record .wpa .wpa-list li .player-box .rank {padding-bottom:1.1719vw;}
+	.record .wpa .wpa-list li .player-box dl dt {padding:1.7578vw 0 0.7813vw;}
+
+	/* 경기중 > 경기 기록 */
+	.record .game-record {overflow:hidden;}
+	.record .game-record .tab {overflow:hidden;}
+	.record .game-record .tab li {display:block;float:left;width:50%;margin-right:0;}
+	.record .game-record .tab li a {display:none;}
+	.record .game-record .tab li .team {display:block;}
+	.record .game-record .tab li .team .emb {display:block;width:47px;max-width:47px;margin:0 auto 9px;}
+	.record .game-record .league-ranking {overflow:hidden;padding:0 16px;}
+	.record .game-record .league-ranking .playrecord-pad {float:left;width:48.3871%;}
+	.record .game-record .league-ranking .playrecord-pad:nth-of-type(2) {display:block;float:right;}
+	.record .game-record .league-ranking .tit-area {width:144px;}
+	.record .game-record .league-ranking .tit-area .list li .rank {width:27px;}
+	.record .game-record .league-ranking .tit-area .list li .emb {width:22px;}
+	.record .game-record .league-ranking .record-area .scroller {width:100%;padding-right:0;}
+	.record .game-record .league-ranking .record-area .tbl-area {padding-left:144px;}
+	.record .game-record .league-ranking .record-area .tbl-area .tbl {width:100%;}
+
+	/* 응원하기 채팅창 팝업 */
+	#PopChat {position:absolute;top:calc(48px + 90px + 1.5625vw);right:1.5625vw;bottom:auto;width:37.4023vw;height:31.7383vw;}
+	#PopChat header {position:relative;height:4.8828vw;border:1px solid #d9d9d9;border-bottom:0;border-radius:7px 7px 0 0;background:none;}
+	#PopChat header::before {content:"";position:absolute;bottom:0;left:50%;width:37.3047vw;height:1px;background:#d9d9d9;transform:translateX(-50%);}
+	#PopChat .content {position:absolute;top:4.8828vw;width:37.4023vw;height:20.9961vw;padding:0;border-right:1px solid #d9d9d9;border-left:1px solid #d9d9d9;}
+	#PopChat .content .chat-box {padding:0 16px;}
+	#PopChat .content .chat-box .intro {padding:24px 0 33px;}
+	#PopChat .content .chat-box .lowest {position:fixed;top:50%;right:193px;bottom:auto;left:auto;transform:none;}
+	#PopChat .content .chat-box li {padding:9px 0;}
+	#PopChat footer {position:fixed;bottom:0;left:0;width:100vw;height:4.6875vw;padding:0;border-top:0;}
+	#PopChat footer .input-box {padding-top:0;background:#f2f2f2;}
+	#PopChat footer .input-box label {width:93.79883vw;height:4.6875vw;line-height:4.6875vw;}
+	#PopChat footer .input-box label input {width:89vw;height:3.5156vw;margin:0.5859vw 0 0 1.5625vw;padding-left:1.4648vw;border-radius:3px;line-height:3.5156vw;}
+	#PopChat footer .input-box .btn-send {width:3.5156vw;height:3.5156vw;margin:0.5859vw 1.5625vw 0 0;}
+	#PopChat footer.cheerup {position:absolute;top:auto;left:0;bottom:0;width:100%;height:5.8594vw;padding:0 27px;border:1px solid #d9d9d9;border-radius:0 0 7px 7px;}
+	#PopChat footer.cheerup ul {padding-top:1.5625vh;}
+	#PopChat footer.cheerup ul .team a {padding:1.3021vh 0;}
+
+	/* 응원하기 채팅창 팝업 */
+	#PopChat.chat-fixed {position:fixed;top:66px;}
+	#PopChat.chat-fixed .content .chat-box .lowest {top:38.5%;}
+
+	/* 경기후 */
+	#contents.playball-sub.end-cont #MainCont {height:calc(48px + 90px + 100px + 87px);}
+	#contents.playball-sub.end-cont #MainCont.maincont-fixed {height:48px;}
+	.end-cont .conclusion {height:100px;border:1px solid #d9d9d9;background:#fff;}
+	.end-cont .conclusion .team {padding-top:32px;}
+	.end-cont .conclusion .team.away {padding-left:27.2177%;}
+	.end-cont .conclusion .team.home {padding-right:27.2177%;}
+	.end-cont .conclusion .game-info {padding-top:42px;}
+	.end-cont .conclusion .game-info.dh-end {padding-top:34px;}
+	/* 경기후 - 스코어보드 */
+	.end-cont .scoreboard {width:462px;margin:0 auto;}
+
+	/* 경기후 탭 */
+	.end-cont .tab-depth1 li,
+	.end-cont .tab-depth1 li:first-child,
+	.end-cont .tab-depth1 li:last-child {padding:0 38px;}
+	.end-cont .tab.fixed {clear:both;top:48px;}
+	#contents.playball-sub.end-cont #SubCont.subcont-fixed {top:0;}
+
+	/* 경기후 > 뉴스 */
+	.end-cont .news {/*width:768px;margin:16px auto 0;*/margin-top:16px;}
+	#contents.analysis-cont.end-cont #SubCont .news {padding:0 0 45px;background:#f4f7fa;}
+	.end-cont .news .bx-wrapper {width:768px;margin:0 auto;padding-top:16px;border-radius:9px 9px 0 0;background:#fff;}
+	.end-cont .news .bx-wrapper .bx-viewport {height:524px !important;}
+	.end-cont .news .photo-news li {width:768px !important;}
+	.end-cont .news .photo-news li .photo {height:453px;}
+	.end-cont .news .major-news {width:768px;margin:0 auto;border-radius:0 0 9px 9px;background:#fff;}
+	.end-cont .news .no-edit {padding:129px 0 474px;}
+
+	/* 경기후 > 뉴스 - 뉴스없음 */
+
+	/* 경기후 > 경기종료 */
+	.letter-live .play-end {text-align:center;}
+	.letter-live .play-end dd {display:inline-block;margin:0 15px;}
+
+	/* 경기후 > 영상 */
+	.end-cont .video {overflow:hidden;padding-bottom:0;}
+	.end-cont .video .video-wrap {float:left;width:59.47% !important;height:auto;}
+	.end-cont .video .video-wrap .live-wrapper {height:37.793vw;}
+	.end-cont .video .video-wrap .live-wrapper .control-box {height:100%;}
+	.end-cont .video .tit-box {display:table;}
+	/* .end-cont .video .tit-box .btn-area {width:calc(100% - 490px);} */
+	.end-cont .video .list-wrap {float:right;top:0 !important;overflow-y:scroll;width:40.53%;height:calc(100vh - 96px) !important;}
+	.end-cont .video .list-wrap .vs-team .vs-box ul li {float:none;width:100%;}
+
+	/* hitter */
+	.graphic-relay .hitter-graphic.left {margin-left:6.4941vw;}
+	.graphic-relay .hitter-graphic {width:13.9649vw;margin:0 0 0.9766vw -20.6055vw;}
+	.graphic-relay .pts-area {bottom:4.4922vw;width:15.9180vw;height:18.9454vw;margin-left:-7.959vw;}
+	.graphic-relay .strike-zone {bottom:9.0332vw;width:7.9590vw;height:9.4727vw;margin-left:-3.9795vw;}
+	.graphic-relay .btn-area {bottom:0.2223vw;right:0.2223vw;width:7vw;}
+	.graphic-relay .no-data .txt {font-size:1.7rem;}
+}

@@ -1,0 +1,114 @@
+﻿@charset "utf-8";
+
+/* 월간,주간 랭킹*/
+.ranking-area {overflow: hidden;padding: 20px 12px 30px;border-top: 10px solid #e3e5e9;}
+.ranking-contents .date-select {padding: 4px 0 4px;}
+.ranking-area .tit {display:inline-block;width:113px;margin:0 10px 0 20px;}
+.ranking-area .ranking-date {display:inline-block;font-weight:100;color:#888;vertical-align:bottom;}
+
+	/* 마이 랭킹 */
+.ranking-area .my-rank {width:100%;margin-top:6px;background:#eceff4;border-radius:20px;padding:10px 14px 18px 13px;}
+.ranking-area .my-rank > div {display:inline-block;width:100%;text-align:center;}
+.ranking-area .my-rank .temper {position:relative;padding-bottom:20.2%;}
+.ranking-area .my-rank .temper > span {position:absolute;}
+.ranking-area .my-rank .temper .temp-my {width:24px;height:25px;top:50%;margin-top:-12px;left:22px;background:url('/resources/images/sub/event_my_icon_rate.png') center center no-repeat;background-size:cover;z-index:220;}
+.ranking-area .my-rank .temper .temp-rate {width:0%;height:40px;top:50%;margin-top:-20px;left:4px;border-radius:17px;background:#4d91ff;z-index:210;}
+.ranking-area .my-rank .temper .temp-rate-def {z-index:200;width:65px;height:26px;top:50%;margin-top:-7px;right:53px;text-align:right;color:#4d91ff;line-height:1.2rem;}
+.ranking-area .my-rank .temper .temp-rate-def > span:nth-child(1) {font-size:1.3rem;}
+.ranking-area .my-rank .temper .temp-rate-def > span:nth-child(2) {font-size:0.9rem;}
+.ranking-area .my-rank .temper .temp-crown {width:31px;height:37px;top:50%;margin-top:-18px;right:14px;background:url('/resources/images/sub/event_my_crown.png') center center no-repeat;background-size:cover;z-index:200;}
+.ranking-area .my-rank .temper .temp-circle-1 {width:calc(100% - 8px);height:38px;left:4px;top:50%;margin-top:-19px;border-radius:17px;background:#fffae7;z-index:110;}
+.ranking-area .my-rank .temper .temp-circle-1-shadow {width:100%;height:46px;left:0;top:50%;margin-top:-23px;border-radius:21px;background:#fff;z-index:20;}
+.ranking-area .my-rank .temper .temp-circle-2 {width:54px;height:54px;right:4px;top:50%;margin-top:-27px;border-radius:27px;background:#fffae7;z-index:100;}
+.ranking-area .my-rank .temper .temp-circle-2-shadow {width:62px;height:62px;right:0;top:50%;margin-top:-31px;border-radius:31px;background:#fff;z-index:10;}
+	/* 마이 랭킹 엘리먼트 */
+.ranking-area .my-rank > div:nth-child(2) {font-size:1.4rem;color:#888;margin-top:10px;}
+.ranking-area .my-rank > div:nth-child(2) > span {color:#4d91ff;}
+.ranking-area .my-rank > div:nth-child(3) {margin-top:11px;}
+.ranking-area .my-rank > div:nth-child(3) > span {float:left;width:49%;color:#222;font-size:1.3rem;}
+.ranking-area .my-rank > div:nth-child(3) > span:nth-child(2) {width:3px;height:18px;background:#b4b4b4;margin-top:4px;}
+.ranking-area .my-rank > div:nth-child(3) > span:nth-child(3) {text-align:center;}
+.ranking-area .my-rank > div:nth-child(3) > span span {font-size:2.1rem;font-weight:700;}
+	/* 랭킹 기본 */
+.ranking-area .top-rank {margin-top:10px;}
+.ranking-area .top-rank .tit-list {overflow:hidden;margin-bottom:5px;padding:5px 0px;font-size:1.4rem;background:#ffc969;border-radius:4px;}
+.ranking-area .top-rank .tit-list li {float:left;width:30%;color:#fff;text-align:center;}
+.ranking-area .top-rank .tit-list li:nth-child(1) {width:20%;}
+.ranking-area .top-rank .tit-list li:nth-child(2) {width:28%;}
+.ranking-area .top-rank .tit-list li:nth-child(3) {width:27%;}
+.ranking-area .top-rank .tit-list li:nth-child(4) {width:25%;}
+.ranking-area .top-rank .tbl-type {margin-top:0px;}
+.ranking-area .top-rank .tbl {width:100%;margin-bottom:2px;}
+.ranking-area .top-rank .tbl td {padding:0px;height:45px;line-height:45px;font-size:1.4rem;color:#111;background:#f8f6d2;text-align:center;vertical-align:middle;}
+.ranking-area .top-rank .tbl tr td:first-child {padding-left:6%;font-size:1.0rem;font-weight:700;border-radius:5px 0px 0px 5px;text-align:left;}
+.ranking-area .top-rank .tbl tr td:nth-child(1) > span {font-size:1.4rem;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) {padding-left:3%;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) > span {float:left;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) > span:nth-child(1) {width:40%;color:#666;font-size:1.4rem;font-weight:700;text-align:right;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) > span:nth-child(2) {width:12px;margin:0 5px;vertical-align:middle;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) > span:nth-child(2) img {width:100%;vertical-align:middle;}
+.ranking-area .top-rank .tbl tr td:nth-child(2) > span:nth-child(3) {width:30%;font-size:1rem;color:#666;text-align:left;}
+.ranking-area .top-rank .tbl tr td:nth-child(3) {text-align:center;}
+.ranking-area .top-rank .tbl tr td:last-child {border-radius:0px 5px 5px 0px;}
+
+	/* 순위 변동 화살표 아이콘 */
+.ranking-area .top-rank .tbl tr.up td:nth-child(2) > span:nth-child(1) {color:#bc0631;}
+.ranking-area .top-rank .tbl tr.down td:nth-child(2) > span:nth-child(1) {color:#0056a6;}
+
+	/* 랭킹 4위이후 리스트표출 */
+.ranking-area .top-rank .tbl.rank-list tr td {background:#e5f2f7;}
+.ranking-area .top-rank .tbl.rank-list tr td:nth-child(1) {color:#111;}
+
+	/* 4위이후 묶음표출 */
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(1) {padding-left:3%;color:#111;text-align:left;letter-spacing:-0.03em;}
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(2) {padding-right:4%;font-size:1.2rem;letter-spacing:-0.03em;text-align:right;}
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(3) {padding-right:0%;text-align:center;}
+.ranking-area .top-rank .tbl.rank-bundle tr td {background:#dadde2;color:#888;}
+
+	/* 기프트 아이콘 */
+.ranking-area .tbl .gift {display:block;width:53px;height:30px;margin:0 auto;}
+.ranking-area .tbl .gift img {max-width:100%;}
+
+
+
+/* 이벤트 */
+.banner-row {margin-bottom:10px;}
+
+
+/* 쏠픽랭킹추가 - 20181213 */
+.sol-date-select {padding:17px 0 13px;text-align:center;}
+.sol-date-select .btn-prev-sol {display:inline-block;width:7px;margin:3px 5px 0 0;vertical-align:middle;box-sizing:border-box;}
+.sol-date-select .sol-today {vertical-align:middle;font-size:2.1rem;letter-spacing:-1px;}
+
+.sol-review {width:311px;margin:0 auto;}
+.sol-review .tit-area {overflow:hidden;}
+.sol-review .tit-area .tit {display:inline-block;width:113px;margin:0 17px 0 11px;vertical-align:bottom;}
+.sol-review .tit-area .txt {display:inline-block;font-weight:100;color:#888;vertical-align:bottom; letter-spacing:-0.5px}
+.sol-review .graph {position:relative;width:100%;padding-top:31px;}
+.sol-review .graph .list {display:inline-block;width:100%;padding-left:38px;background:url("/resources/images/sub/bg_graph_review.png") no-repeat 0 0;background-size:100%;}
+.sol-review .graph .list li {float:left;width:22px;margin-right:12px;}
+.sol-review .graph .list .ps {bottom:6px;}
+.sol-review .graph .list dl {position:relative;width:100%;height:139px;font-size:1.1rem;text-align:center;}
+.sol-review .graph .list dl dt {position:absolute;bottom:0;width:23px;margin:0 auto;}
+.sol-review .graph .list dl .bar {position:absolute;bottom:35px;width:16px;margin:0 3px;background:#0061ff;border-radius:20px 20px 0 0}
+.sol-review .graph .list dl .bar:last-chlid{margin:0;}
+.sol-review .graph .list dl .bar .point{position:absolute;top:-19px;left:-3px;width:22px;margin:0 auto;}
+
+.league-wrap{margin-top:24px;}
+.league-d-day{font-size:1.9rem;color:#4d91ff;}
+.league-d-day .d-day{width:91px;height:26px;display:block;margin:3px auto 21px;background:#0061ff;border:2px  solid #062d6e;border-radius:10px;font-size:1.8rem;color:#fff;}
+.league-end-img {margin:0 auto;overflow:hidden;width:190px;}
+.league-end-img li{float:left;width:38px;}
+.league-txt{padding:16px 0 19px;font-size:1.3rem;line-height:1.9;text-align:center;}
+.league-txt strong {background:#fff799;border-radius:10px;font-size:1.4rem;}
+/* 쏠픽랭킹추가 - 20181213 */
+
+
+/* media query */
+@media(max-width:359px){	
+	.ranking-area .tit {width:110px;margin:0 5px 0 10px;}   
+	.sol-review {width:312px;}
+	.sol-review .garph .list {padding-left:33px;}
+	.sol-review .garph .list li {margin-right:10px;}
+	.sol-review .garph .list dl .bar {bottom:38px;}
+}

@@ -1,0 +1,40 @@
+@charset "utf-8";
+html, body {height:100%;}
+#wrap {width:100%;min-width:1320px;min-height:calc(100% - 151px);margin:0 auto;}
+#wrap.manage {min-width:1200px;}
+#wrap.manage #contents {width:1200px;}
+.login #wrap {min-height:calc(100% - 51px);}
+.login #wrap #container {padding-top:0;}
+#container {padding-top:150px;}
+#contents {display:flex;-webkit-display:flex;width:1320px;margin:0 auto;padding-top:44px;flex-wrap:wrap;}
+#contents::after {content:"";display:block;clear:both;}
+
+header {position:fixed;top:0;left:0;width:100%;background-color:#fff;z-index:1;}
+header .top {width:100%;height:32px;border-bottom:1px solid #E2E2E2}
+header .top .wrap {width:1320px;height:100%;padding-top:8px;margin:0 auto;font-size:10px;color:#111;text-align:right;}
+header .top .wrap b {font-size:10px;}
+header .top .wrap .btn-logout {display:inline-block;height:17px;padding:3px 16px;margin-left:13px;font-size:8px;color:#002561;text-align:center;border-radius:11px;border:1px solid #002561;vertical-align:middle;letter-spacing:0.1px;}
+header .top .user_menu {float:right;padding-top:13px;}
+header .top .user_menu > li {float:left;margin-left:24px;position:relative;}
+header .top .user_menu > li a {color:#baeaf5;}
+header .top .user_menu > li a img {vertical-align:text-bottom;}
+header .gnb {width:100%;height:68px;}
+header .gnb .wrap {width:1320px;margin:0 auto;}
+header .gnb .wrap .logo {float:left;margin-top:11px;margin-right:200px;}
+header .gnb .menu li {display:inline-block;position:relative;margin-right:100px;}
+header .gnb .menu li:last-child {margin-right:0 !important}
+header .gnb .menu li a {display:inline-block;padding:24px 0 22px;font-size:18px;color:rgba(17, 17, 17, 0.60);}
+header .gnb .menu li.on a {color:#111;font-weight:700;}
+header .lnb {width:100%;height:50px;background-color:#002561;}
+header .lnb .wrap {width:1320px;padding-top:6px;padding-left:411px;margin:0 auto;}
+header .lnb.depth-2 .wrap {padding-left:620px;}
+header .lnb.depth-3 .wrap {padding-left:790px;}
+header .lnb.depth-4 .wrap {padding-left:976px;}
+header .lnb .wrap .menu li {display:inline-block;position:relative;margin-right:60px;}
+header .lnb .wrap .menu li:last-child {margin-right:0 !important}
+header .lnb .wrap .menu li a {display:inline-block;padding:10px 0;font-size:16px;color:rgba(255, 255, 255, 0.60);}
+header .lnb .wrap .menu li.on a {color:#fff;font-weight:700;}
+
+footer {height:50px;margin-top:100px;line-height:50px;text-align:center;border-top:1px solid #CED0D4;}
+footer span {color:#9DA1A9;font-size:12px;}
+.login footer {height:50px;margin-top:0;line-height:50px;background-color:#fff;}

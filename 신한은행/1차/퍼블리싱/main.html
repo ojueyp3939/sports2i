@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한은행 MY CAR KBO리그</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.rwdImageMaps.min.js"></script>	
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>	
+			<h1 class="logo"><img src="resources/images/common/h1_logo.png" alt="신한은행 MY CAR KBO리그" /></h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">KBO 상품</a></li>
+					<li><a href="javascript:;">월간 MVP</a></li>
+					<li><a href="javascript:;">이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">			
+			<!-- contents -->
+			<div id="contents">	
+				<div class="product"><a href="https://tong.shinhan.com/rib/any/index.jsp#250KO0100000" target="_blank"><img src="resources/images/main/product01.png" alt="" /></a></div>
+				<div class="product"><img src="resources/images/main/product02.png" alt="" usemap="#map1" /></div>
+				<map name="map1" id="map1">
+					<area shape="rect" coords="26,353,336,418" href="#none" target="_self" alt="" />
+					<area shape="rect" coords="26,433,336,498" href="#none" target="_self" alt="" />	
+				</map>
+				<!-- <div class="product"><a href="#none" target="_blank"><img src="resources/images/main/product03.png" alt="" /></a></div> -->
+			</div>			
+			<!-- // contents -->			
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

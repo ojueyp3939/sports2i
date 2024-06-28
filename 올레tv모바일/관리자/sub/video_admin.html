@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Olleh tv Mobile 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.spin.js" ></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery.spin.css" />
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- contents -->
+		<header>
+			<div class="tit-area">
+				<h1><img src="../resources/images/common/h1_logo.gif" alt="Olleh tv Mobile" /></h1>
+				<h2 class="tit">프로야구<span class="line">|</span>관리자</h2>
+				<div class="user-info">
+					<span class="name">관리자님</span>
+					<a href="#none" class="btn-logout">로그아웃</a>
+				</div>
+			</div>
+		</header>
+		<div id="gnb">
+			<ul class="menu">
+				<li><a href="#none">라이브 운영</a></li>
+				<li><a href="#none">금기어 관리</a></li>
+				<li class="on"><a href="#none">동영상 관리</a></li>
+			</ul>
+		</div>
+		<div id="contents" class="video">
+			<h3 class="tit-video">동영상 관리 - 등록/수정</h3>
+			<div class="video-admin">
+				<div class="upload"></div>
+				<table class="tbl-info mt20">
+					<colgroup>
+						<col width="20%"/>
+						<col width="80%"/>
+					</colgroup>
+					<tbody>
+						<tr>
+							<th class="upload">동영상 업로드</th>
+							<td class="upload"><input type="file" title=""></td>
+						</tr>
+						<tr>
+							<th>날짜</th>
+							<td>
+								<input type="text" class="date-area">
+								<a href="#none" class="btn-calendar"><img src="../resources/images/common/btn_calendar.png" alt="달력"></a>
+							</td>
+						</tr>
+						<tr>
+							<th>경기 선택</th>
+							<td>
+								<select id="GameSelect" class="btn-select">
+									<option value="">경기선택</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>분류</th>
+							<td>
+								<select id="Kind" class="btn-select">
+									<option value="">일반 영상</option>
+									<option value="">저화질 영상</option>
+									<option value="">고화질 영상</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>이닝</th>
+							<td>
+								<select id="Kind" class="btn-select">
+									<option value="">1회초</option>
+									<option value="">2회초</option>
+									<option value="">3회초</option>
+									<option value="">4회초</option>
+									<option value="">5회초</option>
+									<option value="">6회초</option>
+									<option value="">7회초</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th>제목</th>
+							<td><input type="text" class="tit-area"></td>
+						</tr>
+						<tr>
+							<th class="img-area">썸네일 이미지</th>
+							<td class="img-area">
+								<div class="img-box">
+									<img src="../resources/images/sub/img_news.png" alt="">
+								</div>
+								<input type="file" title=" ">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="btn-area">
+					<a href="#none" class="btn btn-config">영상연결확인</a>
+					<a href="#none" class="btn btn-config">썸네일연결확인</a>
+					<a href="#none" class="btn btn-cancel">취소</a>
+					<a href="#none" class="btn btn-register">등록</a>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // wrap -->
+	<!-- 로딩 -->
+	<div id="Modal"></div>
+	<div class="loading">
+		<div class="spin" data-spin/></div>
+	</div>
+	<!-- // 로딩 -->
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css" />
+	<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="../../resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="join-wrap confirm">
+					<h1>회원가입</h1>
+					<ul class="step step3">
+						<li>Step1. 이용약관 동의</li>
+						<li>Step2. 회원정보 입력</li>
+						<li class="on">Step3. 선수정보 입력</li>
+						<li>Step5. 회원가입 완료</li>
+					</ul>
+					<div class="player-info">
+						<h2>선수정보</h2>
+						<div class="data-info">
+							<table class="tbl">
+								<colgroup>
+									<col width="120px">
+									<col width="290px">
+									<col width="120px">
+									<col width="290px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>이름</th>
+										<td>
+											홍길동
+										</td>
+										<th>생년월일</th>
+										<td>
+											1999년 07월 29일
+										</td>
+									</tr>
+									<tr>
+										<th>등록구분</th>
+										<td>
+											<select class="w160">
+												<option>1234</option>
+											</select>
+										</td>
+										<th>지역</th>
+										<td>
+											<select class="w160">
+												<option>1234</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											현소속
+											<p>(학교/실업팀)</p>
+										</th>
+										<td>
+											<input type="text" name="" id="txtElementarySchool" class="w160" readonly="readonly" disabled="disabled">
+											<a href="#" class="btn btn-blue" id="btnSearchElement" attr-schsc="1,4,8">검색</a>
+											<a href="#" class="btn btn-red" id="btnDeleteElement">삭제</a>
+										</td>
+										<th>포지션</th>
+										<td>
+											<select class="w160">
+												<option>1234</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th>투구타입</th>
+										<td>
+											<select class="w160">
+												<option>1234</option>
+											</select>
+										</td>
+										<th>타격타입</th>
+										<td>
+											<select class="w160">
+												<option>1234</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<!-- <ul class="sub-script">
+								<li>- 입력하신 회원정보와 일치하는 선수정보입니다. </li>
+								<li>- 선수정보가 맞지 않으시다면 KBO에 문의해주시기 바랍니다.  문의 후 회원가입을 진행해주시기 바랍니다.</li>
+							</ul> -->
+						</div>
+					</div>
+					<div class="player-info">
+						<div class="info-list">
+							<dl>
+								<dt>아이디</dt>
+								<dd>kboID</dd>
+							</dl>
+							<dl>
+								<dt>이메일</dt>
+								<dd>KBO123@koreabaseball.com</dd>
+							</dl>
+							<dl>
+								<dt>휴대폰번호</dt>
+								<dd>010-1111-1111</dd>
+							</dl>
+						</div>
+					</div>				
+					<div class="btn-wrap">
+						<a href="#none" class="submit">로그인 페이지로 이동</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>
+
+
+
+
+<div class="modal" style="display:none;">
+	<div id="popup" class="pop-wrap pop-search-school">
+		<a href="javascript:;" class="btn-close"><img src="../../resources/images/common/icon_close.png" alt="" /></a>
+		
+		<h1>학교 검색</h1>
+		<div class="contents">
+			<table class="tbl mb10">
+				<colgroup>
+					<col width="30%">
+					<col width="70%">
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>학교명</th>
+						<td class="txt-l">
+							<input type="text" name="" id="txtSearchSchool"	style="width:220px;">
+							<a href="#none" class="btn id="btnLayerSearch">검색</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<p>KBSA에 등록된 학교명으로 검색 가능합니다.<br />KBSA에 등록된 학교명과 다를 시,<br />신청서 승인에 불이익이 있을 수 있습니다.<br />ex) 등록명 : 한국고 → '한국', '한국고'로 검색<br/>ex) 등록구분 [기타] 선택 시, 팀명 검색 후 직접입력 선택</p>
+			<h2>&lt;검색결과&gt;</h2>
+			<table class="tbl">
+				<colgroup>
+					<col width="30%">
+					<col width="40%">
+					<col width="30%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>지역</th>
+						<th>학교명</th>
+						<th>확인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td>경기</td>
+						<td>구성초</td>
+						<td>
+							<a href="#none" class="btn">선택</a>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">검색결과 없음</td>
+					</tr>
+					<tr>
+						<td colspan="3"><b>삼성고</b> 직접입력 <a href="#none" class="btn">선택</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>

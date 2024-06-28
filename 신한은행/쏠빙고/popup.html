@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 SOL 빙고</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/bingo.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		var swiper = new Swiper('.swiper-menu', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			mousewheel: true,
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<a class="btn-back" href=""></a>
+			<span>신한 SOL 빙고</span>
+			<a class="btn-close" href=""></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="bingo">
+				<div class="my-bingo">
+					<a href="" class="btn-guide">쏠빙고란? ></a>
+					<img class="bingo-img" src="resources/images/main/img_bingo.png" alt="쏠빙고">
+					<div class="tit-box">
+						<p class="tit">마이빙고</p>
+						<a href="" class="btn-plus">더보기 ></a>
+					</div>
+					<!-- [D] 참여 이력 O -->
+					<div class="my-point clear">
+						<dl>
+							<dt>스코어</dt>
+							<dd><span class="num">00,000</span> Line</dd>
+						</dl>
+						<dl>
+							<dt>랭킹</dt>
+							<dd><span class="num">33</span> 등</dd>
+						</dl>
+					</div>
+					<!-- [D] 참여 이력 X -->
+					<div class="my-point clear">
+						<dl>
+							<dt>스코어</dt>
+							<dd><span class="num">-</span> Line</dd>
+						</dl>
+						<dl>
+							<dt>랭킹</dt>
+							<dd><span class="num">-</span> 등</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="game-wrap">
+					<div class="tit-box">
+						<p class="tit">이달의 퀴즈</p>
+					</div>
+					<div class="game-cont">
+						<div class="quiz">
+							<dl class="quiz-box">
+								<dt>타자</dt>
+								<dd>오늘의 UP&DOWN<br/>오늘의 UP&DOWN을 예측 해보세요!</dd>
+							</dl>
+							<div class="bingo-box">
+								<div class="date-select play">
+									<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+									<span class="today">
+										2099.06.13 (금)
+										<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+									</span>
+									<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+								</div>
+								<div class="bingo-ground">
+									<ul>
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">예측하기</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud">
+												<span>UP</span>
+											</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud down">
+												<span>down</span>
+											</a>
+										</li>
+										<li class="bonus">
+											<div>
+												<span>BONUS!</span><br/>
+												쏠픽 참여하기
+											</div>
+											<a href="">바로가기</a>
+										</li>
+										<li>
+											<div>
+												안타 94개<br/>안타 94개
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+										
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">예측하기</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud">
+												<span>UP</span>
+											</a>
+										</li>
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+									</ul>
+								</div>
+								<a href="" class="btn-random clear">
+									랜덤선택
+								</a>
+							</div>
+							<button class="btn-submit">
+								<span>참여하기</span>
+							</button>
+							<div class="notice-area">
+								마감까지 <time>00 : 00</time> 남았습니다.
+							</div>
+						</div>
+						<img src="resources/images/main/img_info.png" alt="유의사항">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>
+
+<!-- [D] 응모완료 - 쏠픽 미참여 -->
+<!-- <div class="modal">
+	<div id="popup">
+		<div class="cont">
+			<p class="txt blue">응모 완료!</p>
+			<p class="txt">마이신한포인트 6P에<br/>당첨되셨습니다!</p>
+			<p class="noti">* 쏠빙고 수정은<br/>18시 20 까지 가능 합니다.</p>
+			<p class="noti">* 쏠픽 미참여 시 올빙고를<br/>달성할 수 없습니다.</p>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 응모완료 - 쏠픽 참여 -->
+<!-- <div class="modal">
+	<div id="popup">
+		<div class="cont">
+			<p class="txt blue">응모 완료!</p>
+			<p class="txt">마이신한포인트 6P에<br/>당첨되셨습니다!</p>
+			<p class="noti">* 쏠빙고 수정은<br/>18시 20 까지 가능 합니다.</p>
+			<p class="noti">* 적립된 마이신한포인트는<br/>신한플러스에서 확인 가능합니다.</p>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 쏠픽 참여하기 -->
+<!-- <div class="modal">
+	<div id="popup">
+		<a class="btn-close" href=""><img src="resources/images/common/btn_close2.png" alt="close"></a>
+		<div class="cont">
+			<p class="txt blue">쏠빙고 BONUS</p>
+			<p class="noti">지금 바로 쏠픽에 참여하시겠습니까?</p>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 답안 입력 -->
+<!-- <div class="modal">
+	<div id="popup">
+		<a class="btn-close" href=""><img src="resources/images/common/btn_close2.png" alt="close"></a>
+		<div class="cont">
+			<p class="txt pink">답안을 모두 입력해주세요.</p>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 수정 완료 -->
+<!-- <div class="modal">
+	<div id="popup">
+		<a class="btn-close" href=""><img src="resources/images/common/btn_close2.png" alt="close"></a>
+		<div class="cont">
+			<p class="txt navy">수정이 완료 되었습니다.</p>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 선수선택 -->
+<!-- <div class="modal">
+	<div id="popup" class="pick">
+		<a class="btn-close" href=""><img src="resources/images/common/btn_close2.png" alt="close"></a>
+		<p class="tit">선수선택</p>
+
+		<div class="swiper-container swiper-menu">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide-active">
+					<ul class="emb-wrap">
+						<li class="on">
+							<a href="#none">
+								<img src="resources/images/emb/HH.png" alt="HH">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/KT.png" alt="KT">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/LG.png" alt="LG">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/LT.png" alt="LT">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/NC.png" alt="NC">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/OB.png" alt="OB">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/SK.png" alt="SK">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/SS.png" alt="SS">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/WO.png" alt="WO">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="cont">
+			<ul class="player-list">
+				<li class="on">
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+			</ul>
+		</div>
+		<div class="btn-area">
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div> -->
+
+<!-- [D] 선수선택 - 경기 취소팀 -->
+<div class="modal">
+	<div id="popup" class="pick">
+		<a class="btn-close" href=""><img src="resources/images/common/btn_close2.png" alt="close"></a>
+		<p class="tit">선수선택</p>
+
+		<div class="swiper-container swiper-menu">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide swiper-slide-active">
+					<ul class="emb-wrap">
+						<li class="on">
+							<a href="#none">
+								<img src="resources/images/emb/HH.png" alt="HH">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/KT.png" alt="KT">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/LG.png" alt="LG">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/LT.png" alt="LT">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/NC.png" alt="NC">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/OB.png" alt="OB">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/SK.png" alt="SK">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/SS.png" alt="SS">
+							</a>
+						</li>
+						<li>
+							<a href="#none">
+								<img src="resources/images/emb/WO.png" alt="WO">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="cont">
+			<div class="blind-wrap">
+				<p>
+					해당 팀의 경기가 취소 되었습니다.<br/>
+					다른 팀을 선택해주세요.
+				</p>
+			</div>
+			<ul class="player-list">
+				<li class="on">
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+				<li>
+					<img src="resources/images/common/test.png" alt="test">
+					<p>홍길동</p>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<a href="#none" class="btn-confirm">확인</a>
+		</div>
+	</div>
+</div>

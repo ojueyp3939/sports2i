@@ -1,0 +1,217 @@
+﻿@charset "utf-8";
+
+/* 공유하기 */
+.share {height:100vh;padding-top:46vh;background:url("../images/common/bg_share.png") no-repeat 50% 24vh;background-size:134px;color:#888;text-align:center;}
+.share dt {color:#1a1a1a;font-size:1.6rem;font-weight:700;}
+.share dt span {color:#ff1f5a;}
+.share .txt {padding:15px 0 40px;font-size:1.3rem;font-weight:100;}
+.share .txt span {display:block;}
+.share dd .btn-move {display:inline-block;width:141px;height:34px;border-radius:3px;background:#ff1f5a;color:#fff;font-size:1.5rem;line-height:32px;}
+
+/* seezn 프로야구 시즌종료 */
+#wrap.seezn-end > header .btn-close {display:block;position:absolute;top:12px;right:3.3333%;}
+#wrap.seezn-end > header .btn-close span {width:2px;border-radius:1px;background:#000;}
+#wrap.seezn-end > header .btn-close span:before {height:2px;border-radius:1px;background:#000;}
+#wrap.seezn-end {height:100vh;background:url('../images/common/bg_seezn_end.png') no-repeat 0 100%/57.75%;text-align:center;}
+.seezn-end h2 {width:70.14%;margin:59px auto 79px;}
+.seezn-end dl dt {padding-bottom:9px;font-size:1.8rem;font-weight:700;letter-spacing:-1px;}
+.seezn-end dl dd {font-size:1.5rem;}
+.seezn-end dl dd span {display:block;padding-top:7px;}
+
+/* 오류 페이지 */
+.error {position:relative;height:100vh;margin:0 16px;text-align:center;}
+.error dt {padding:260px 0 7px;background:url("../images/sub/bg_error.png") no-repeat 50% 188px/45px;font-size:1.6rem;}
+.error dd {color:#828282;font-size:1.4rem;}
+.error dd span {display:block;}
+.error dd.btn a {position:absolute;bottom:17px;left:0;width:100%;height:48px;border-radius:3px;background:#06c;color:#fff;font-size:1.4rem;line-height:48px;}
+
+/* 팝업 */
+/* 팝업공통 */
+.popup {position:absolute;top:50%;left:50%;z-index:110;width:280px;border-radius:10px;background:#fff;transform:translate(-50%, -50%);}
+.popup header h1 {padding:16px 0 13px;font-size:2.0rem;font-weight:100;text-align:center;}
+.popup header .btn-close {position:absolute;top:10px;right:10px;}
+.popup .content {position:relative;padding:18px 16px 20px;font-size:1.4rem;text-align:center;}
+.popup .content::before {content:"";position:absolute;bottom:0;left:50%;width:88.57%;height:1px;background:#f0f0f0;transform:translateX(-50%);}
+.popup .content p {color:#828282;}
+.popup .btn-area {text-align:center;}
+.popup .btn-area a {float:left;display:block;height:47px;font-size:1.4rem;line-height:47px;}
+.popup .btn-area a.btn-cancel {color:#6e6e6e;}
+.popup .btn-area a.btn-confirm {color:#fa2a5d;}
+
+/* 푸시알림 */
+.my-wrap .tit-set {padding:20px 0 0;}
+.my-wrap .txt {padding:5px 0 18px;color:#828282;}
+
+/* 제3자 제공 동의 */
+#PopAgree .content {overflow:auto;height:278px;margin:0 16px;padding:21px 0 21px;border-bottom:1px solid #f0f0f0;text-align:left;}
+#PopAgree .content::before {content:none;}
+#PopAgree .content p {color:#333;}
+#PopAgree .content .question {padding-top:27px;color:#fa2a5d;font-size:1.2rem;}
+#PopAgree .content span {display:block;padding-top:4px;color:#828282;}
+#PopAgree .content .agree-service strong {color:#fa2a5d;font-weight:100;}
+#PopAgree .content ol li {padding-top:25px;}
+#PopAgree .content ol li:last-child {padding-bottom:25px;}
+
+/* 알림 설정 동의 */
+#PopAlertAgree .content {margin:0 16px;padding:21px 0 33px;border-bottom:1px solid #f0f0f0;text-align:left;}
+#PopAlertAgree .content::before {content:none;}
+#PopAlertAgree .content ul li {font-size:1.5rem;letter-spacing:-0.5px;}
+#PopAlertAgree .content ul li span {display:block;padding-top:8px;color:#828282;font-size:1.4rem;}
+
+/* 관심 선수 추가 */
+#PopPlayer .content.player {padding:21px 0 23px;}
+#PopPlayer .content.player .scroller {padding:0 16px;}
+#PopPlayer .content.player ul {width:100%;margin-top:19px;white-space:nowrap;}
+#PopPlayer .content.player ul li {display:inline-block;width:90px;height:162px;margin-right:6px;border-radius:7px;background:#f6f6f6;}
+#PopPlayer .content.player ul li:last-child {margin-right:0;}
+#PopPlayer .content.player ul li .player-wrapper {display:table;width:100%;height:100%;}
+#PopPlayer .content.player ul li .player-wrapper .player-box {display:table-cell;vertical-align:middle;}
+#PopPlayer .content.player ul li .player-wrapper .player-box .photo {width:45px;max-width:45px;margin:0 auto;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dt {padding:8px 0 5px;font-size:1.4rem;font-weight:700;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dd {padding-bottom:2px;color:#666;font-size:1.2rem;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dd:last-child {padding-bottom:0;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dd.player-select {padding-top:4px;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dd.player-select .btn-select {display:inline-block;width:22px;height:22px;background:url('../images/sub/bg_select.png') no-repeat 0 0/22px;text-indent:-99999px;}
+#PopPlayer .content.player ul li .player-wrapper .player-box dl dd.player-select .btn-select.add {background-position:0 -25px;}
+
+/* 관심 선수 추가시 표출 */
+.success-box {position:fixed;bottom:17px;left:50%;z-index:110;width:91.111%;text-align:center;transform:translateX(-50%);}
+.success-box .btn-success {display:block;width:100%;height:52px;border-radius:14px;background:#323232;color:#fff;font-size:1.4rem;line-height:52px;}
+.success-box .btn-success strong {color:#32a1ff;}
+
+/* 기기 버전체크 */
+#PopOs header h1 {padding:124px 0 0;background:url('../images/sub/bg_seezn.png') no-repeat 50% 30px/63px;}
+#PopOs .content .again-view {padding-top:21px;text-align:center;}
+#PopOs .content .again-view a {display:inline-block;padding-left:28px;height:22px;background:url('../images/sub/bg_confirm.png') no-repeat 0 1px/21px;line-height:22px;}
+#PopOs .content .again-view a.on {background-position:0 -25px;}
+
+/* 로그인 */
+#PopLogin header h1 {padding:114px 0 0;background:url('../images/sub/bg_seezn.png') no-repeat 50% 20px/63px;}
+
+/* 관심선수 등록 */
+#PlayerAdd .content p {color:#969696;line-height:1.4;}
+
+/* 관심선수 해제 */
+#PlayerCancel .content {padding:18px 11px 20px;}
+#PlayerCancel .content p {color:#969696;line-height:1.4;}
+
+/* 튜토리얼 */
+#PopTutorial {display:none;top:0;left:0;z-index:110;width:100vw;height:100vh;margin:0 auto;padding:0;border-radius:0;background:rgba(0,0,0,0.2);transform:none;}
+#PopTutorial .bx-wrapper {width:100%;margin:0 auto;background:rgba(0,0,0,0.75);}
+#PopTutorial .bx-wrapper .bx-viewport {height:100vh !important;}
+#PopTutorial .bx-wrapper .bx-controls-auto,
+#PopTutorial .bx-wrapper .bx-pager {bottom:16.1111vh;left:50.63vw;width:auto;}
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a {width:4px;height:4px;margin:0 6px 0 0;background:#5a5857;}
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a.active,
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a:focus,
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a:hover {background:#fff;}
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager:nth-of-type(4) a {margin:0;}
+#PopTutorial .tutorial-list {position:relative;overflow:hidden;}
+#PopTutorial .tutorial-list li {height:100vh;margin:0 auto;text-indent:-9999px;}
+#PopTutorial .tutorial-list .tut01 {background:url('../images/playball/bg_tutorial01.png') no-repeat 50% 0/contain;}
+#PopTutorial .tutorial-list .tut02 {background:url('../images/playball/bg_tutorial02.png') no-repeat 50% 0/contain;}
+#PopTutorial .tutorial-list .tut03 {background:url('../images/playball/bg_tutorial03.png') no-repeat 50% 0/contain;}
+#PopTutorial .chk-box {position:absolute;bottom:3.23813vw;left:4.063vw;}
+#PopTutorial .chk-box label {color:#fff;vertical-align:top;}
+#PopTutorial .chk-box input[type="checkbox"] + label {padding-left:23px;color:rgba(255,255,255,0.5);}
+#PopTutorial .chk-box input[type="checkbox"] + label::after {top:1px;left:0;width:16px;height:16px;}
+#PopTutorial .chk-box input[type="checkbox"]:checked + label::after {background-position:0 -20px;}
+#PopTutorial .btn-confirm {position:absolute;right:2.422vw;bottom:2.813vw;padding:5px;color:#0064c9;}
+
+/* 달력 */
+#Calendar {position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;height:100vh;background:#fff;}
+#Calendar header {position:relative;height:13.6111vw;padding:12px 0;border-bottom:1px solid #f0f0f0;}
+#Calendar header .my-team {position:absolute;top:15px;left:16px;font-size:1.2rem;}
+#Calendar header .my-team span {display:inline-block;vertical-align:middle;}
+#Calendar header .my-team .emb {width:25px;}
+#Calendar header .date-select {width:46.6667%;margin:0 auto;}
+#Calendar header .date-select li {float:left;}
+#Calendar header .date-select .prev,
+#Calendar header .date-select .next {padding-top:3px;}
+#Calendar header .date-select .prev a,
+#Calendar header .date-select .next a {display:block;width:12px;height:16px;padding:3px;}
+#Calendar header .date-select .date {width:calc(100% - 24px);font-size:2.0rem;text-align:center;}
+#Calendar header .btn-close {position:absolute;top:12px;right:16px;overflow:hidden;}
+#Calendar .content {display:block;overflow-y:scroll;width:100%;height:calc(100vh - 13.6111vw);padding-bottom:5vw;}
+#Calendar .content .tbl thead tr th {padding:22px 0;color:#828282;background:#fff;font-size:1.4rem;}
+#Calendar .content .tbl thead tr th:first-child {padding-left:5px;}
+#Calendar .content .tbl thead tr th:last-child {padding-right:5px;}
+#Calendar .content .tbl tbody tr td {height:27.5vw;padding:0;border-bottom:1px solid #f0f0f0;font-size:1.2rem;line-height:1.2;}
+#Calendar .content .tbl tbody tr td:first-child {padding:0 0 0 5px;}
+#Calendar .content .tbl tbody tr td:last-child {padding:0 5px 0 0;}
+#Calendar .content .tbl tbody tr td span {display:block;}
+#Calendar .content .tbl tbody tr td .day {width:24px;height:24px;margin:10px auto 0;font-size:1.4rem;font-weight:700;line-height:24px;}
+#Calendar .content .tbl tbody tr td .day.today,
+#Calendar .content .tbl tbody tr td .day.active {border-radius:50%;background:#0063d0;color:#fff;}
+#Calendar .content .tbl tbody tr td .day.not {color:#ccc;}
+#Calendar .content .tbl tbody tr td .number {display:inline-block;position:relative;width:6px;padding-left:8px;box-sizing:content-box;}
+#Calendar .content .tbl tbody tr td .number i {display:block;position:absolute;top:50%;left:0;width:4px;height:4px;border-radius:50%;background:#0063d0;transform:translateY(-50%);}
+#Calendar .content .tbl tbody tr td .vs {color:#828282;font-size:1.0rem;}
+#Calendar .content .tbl tbody tr td .vs .emb {display:block;width:18px;margin:5px auto 3px;}
+
+/* 팝업형태 */
+.popup-type {position:absolute;top:0;z-index:110;width:100vw;min-height:100vh;background:#fff;}
+/* 선수 자세히 보기 */
+.popup-type .player-info.detail-view {padding-top:48px;}
+.popup-type .player-info.detail-view .player-wrap {padding:22px 16px 0;}
+.popup-type .player-info.detail-view .player-wrap .tit-detail {padding-bottom:19px;color:#333;font-size:1.4rem;font-weight:700;}
+.popup-type .player-info.detail-view .player-wrap > div {padding-bottom:39px;}
+.popup-type .player-info.detail-view .player-wrap .info-list li {padding-bottom:14px;color:#333;font-size:1.4rem;}
+.popup-type .player-info.detail-view .player-wrap .info-list li:last-child {padding-bottom:0;}
+.popup-type .player-info.detail-view .player-wrap .info-list li dl {overflow:hidden;}
+.popup-type .player-info.detail-view .player-wrap .info-list li dl dt {float:left;width:52px;}
+.popup-type .player-info.detail-view .player-wrap .info-list li dl dd {float:left;width:calc(100% - 52px);color:#626262;word-break:keep-all;}
+.popup-type .player-info.detail-view .player-wrap .btn-area {padding-top:39px;text-align:center;}
+
+@media(orientation:landscape) {
+  #PopTutorial {display:block;}
+}
+
+@media(max-width:320px){
+  /* 오류 페이지 */
+  .error dd span {letter-spacing:-0.5px;}
+}
+@media(min-width:1024px){
+	/* seezn 프로야구 시즌종료 */
+  #wrap.seezn-end {height:100vh;background:url('../images/common/bg_seezn_end_pad.png') no-repeat 50% 226px/29.4922%;text-align:center;}
+  .seezn-end h2 {width:29.4922%;margin:93px auto 48px;}
+  .seezn-end dl dt {padding:23.8281vw 0 9px;font-size:1.9rem;font-weight:700;letter-spacing:-1px;}
+  .seezn-end dl dd {padding-top:6px;font-size:1.5rem;}
+  .seezn-end dl dd span {display:inline;}
+
+	/* 에러 */
+	.error {width:736px;margin:0 auto;}
+	.error dt {padding:32.324vw 0 7px;background:url("../images/sub/bg_error.png") no-repeat 50% 25.1953vw/45px;}
+
+	/* 관심 선수 추가시 표출 */
+	.success-box {width:320px;}
+
+	/* 튜토리얼 */
+  #PopTutorial {}
+  #PopTutorial .bx-wrapper .bx-controls-auto,
+  #PopTutorial .bx-wrapper .bx-pager {bottom:24.0885vh;left:51.6601vw;}
+  #PopTutorial .tutorial-list {top:12.5vh;}
+  #PopTutorial .tutorial-list li {max-width:100vw;height:75vh;margin:0 auto;text-indent:-9999px;}
+  #PopTutorial .tutorial-list .tut01 {background:url('../images/playball/bg_tutorial_pad01.png') no-repeat 0 0/100%;}
+  #PopTutorial .tutorial-list .tut02 {background:url('../images/playball/bg_tutorial_pad02.png') no-repeat 0 0/100%;}
+  #PopTutorial .tutorial-list .tut03 {background:url('../images/playball/bg_tutorial_pad03.png') no-repeat 0 0/100%;}
+  #PopTutorial .chk-box {bottom:18.4896vh;left:21.338vw;}
+  #PopTutorial .btn-confirm {bottom:18.034vh;right:20.1172vw;}
+
+	/* 달력 */
+	#Calendar {top:50%;left:50%;width:360px;height:640px;border-radius:10px;transform:translate(-50%, -50%);}
+  #Calendar header {height:49px;}
+  #Calendar .content {height:591px;padding-bottom:18px;}
+  #Calendar .content .tbl tbody tr td {height:99px;}
+
+  /* 팝업형태 */
+  .popup-type {top:50%;left:50%;overflow:hidden;width:360px;min-height:640px;border-radius:9px;transform:translate(-50%, -50%);}
+  /* My팀 관심선수 */
+  .popup-type .my-wrap {overflow-y:scroll;width:100%;height:592px;min-height:auto;border-radius:0 0 9px 9px;}
+	.popup-type .my-wrap .team-list {margin-bottom:26px;}
+	.popup-type .my-wrap .team-list li {margin-right:9px;}
+
+  /* 선수명 상세보기 */
+  .popup-type .player-info.detail-view .player-wrap {overflow-y:scroll;width:100%;height:592px;}
+
+}

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+  <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2019 K리그 스플릿 라운드 퀴즈</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<img src="resources/images/common/logo.png" alt="K리그 로고" />
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<a class="logout" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container" class="sub">
+			<div id="contents">
+				<section class="cont-wrap end">
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<i class="sub-quiz-tit"></i>
+								<p>100</p>
+							</h2>
+							<div class="emb-zone">
+								<img src="resources/images/sub/icon_emb.png" alt="emb">
+							</div>
+							<div class="level-zone">
+								상위 : <span>15%</span>
+							</div>
+							<div class="info-zone">
+								<div class="time-label">제 1교시</div>
+								<div class="name-label">
+									<p>이름</p>
+									<div>홍길동</div>
+								</div>
+							</div>
+						</div>
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box good">
+										<p class="num">1.</p>
+										<p class="tit">아래는 K리그 유튜브의 영상 중 일부다. 전북현대 한승규에게 다짜고짜 “사랑해”라고 고백했을 때, 한승규의 반응으로 알맞은 것을 고르시오.</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex1_answer.png">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ “저도 사랑합니다♥”</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ “여자에요?”</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ “갑자기...?”</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ “ㅋㅋㅋ 전북현대도 사랑해주세요!”</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ “잘못보내셨어요~”</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➀ “저도 사랑합니다♥” </p>
+									</div>
+									<div class="quiz-box bad">
+										<p class="num">2.</p>
+										<p class="tit">울산현대는 개성 넘치는 선수들의 끈끈한 조직력으로 유명한 팀이다. 선수들의 넘치는 개성만큼이나 각 선수들을 표현하는 다양한 별명이 있는데, 다음 중 선수의 이름과 별명이 잘못 짝지어진 것은?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 김태환 – 치타</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 믹스 - 쌈장</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 박주호 – 파추호</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 김보경 – 국민MC</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 김승규 – 희동이</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 울산현대의 수문장 김승규선수의 별명은 마이콜이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">3.</p>
+										<p class="tit">FC서울은 K리그를 대표하는 명문 클럽인 만큼 다양한 기록을 보유하고 있다. 특히, 2010년 5월 5일 어린이날 서울과 성남과의 K리그 경기를 통해, FC서울은 프로스포츠 단일 경기 최다 관중 신기록을 달성했다. 그렇다면 이 경기에 모인 총 관중의 수는 몇 명인가?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 60,743 명</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 60,745 명</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 60,747 명</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 60,749 명</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 60,751 명</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➂ FC서울은 2010년 5월 5일 어린이날 총 60,747명이 경기장을 찾으며 프로 스포츠 단일 경기 최다 관중 신기록을 달성하였다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">4.</p>
+										<p class="tit">2019 K리그의 예능을 담당하는 강원FC는 최근 다채롭고 재미있는 영상 콘텐츠로 큰 인기를 끌고 있다. 아래는 강원FC의 “2019 강원FC 추석 전통놀이 이벤트” 영상이다. 영상에서 치마를 펄럭이지 않은 강원FC 선수는 보기중 누구인지 고르시오.</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://www.youtube.com/watch?v=is5BG8prK6s" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 한국영</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 신광훈</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 윤석영</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 발렌티노스</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 이광연</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 영상에서 골키퍼 이광연 선수만 유일하게 펄럭이지 않았다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">5.</p>
+										<p class="tit">대구FC는 수많은 미남 축구선수를 보유하고 있는 팀으로 알려져있다. 그중에서도 대구 아이돌로 불리는 정승원 선수가 큰 인기를 끌고 있다. 보기 중 정승원의 신체부위가 아닌 사진을 고르시오.</p>
+										<ul class="list in-img">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex5_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex5_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex5_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex5_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex5_5.png"></label></li>
+										</ul>
+										<div class="end-txt">해설 : ➁ 오른팔 문신의 주인공은 김대원 선수이다.<img style="width:60%;"src="resources/images/quiz/ex5_answer.jpg"></div>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">6.</p>
+										<p class="tit">수원삼성의 외국인 스트라이커 타가트 선수는 7월 “EA 이달의 선수상”을 수상했습니다. 이 상을 수상한 선수는 유니폼에 “이달의 선수상” 수상을 의미하는 패치를 부착합니다. 타가트 선수의 패치 부착 위치는 어디일까요?</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex6_answer.jpg">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 킷스폰서 로고 위</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 가슴 가운데</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 팀엠블럼 아래</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 팀엠블럼 위</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 리그패치 아래</label></li>
+										</ul>
+										<div class="end-txt">해설 : ➁ 7월 “EA 이달의 선수상”수상자인 수원삼성의 타가트선수는 가슴 가운데 패치를 부착하였다.</div>
+									</div>
+									<div class="quiz-box">
+										<p class="num">7.</p>
+										<p class="tit">상주상무는 국군체육부대 산하의 축구단으로 대한축구협회 소속 선수들이 대한민국 헌법에서 규정된 국가의 의무인 국방의 의무를 수행하기 위하여 입단하는 팀이자 K리그의 당당한 한 구성원입니다. 다음 중 상주상무의 공식 용품 판매 온라인 쇼핑몰의 이름은 무엇일까요?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 상상온라인몰</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ P.X</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 상무영외마트</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 황금마차</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 충성마트</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 상주상무의 유니폼, 머플러 등을 구매할 수 있는 공식 온라인 쇼핑몰의 이름은 충성마트이다.<img src="resources/images/quiz/ex7_answer.png">  </p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">8.</p>
+										<p class="tit">아래는 포항스틸러스의 홈구장에 관한 설명이다. 내용 중 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)에 들어갈 말로 올바른 것은?</p>
+										<div class="example">Q. 포항스틸러스의 홈구장인 포항 “스틸야드”는 1990년 11월 1일에 준공되었다. 대한민국 최초의 축구 전용구장인 스틸야드는 최근에 건축된 신축 경기장 못지 않은 뛰어난 시야를 자랑하며, 포항팬들의 뜨거운 축구열기를 온몸으로 체험할 수 있는 곳이다.<br/>특히, 지난 2013년에는 창단 40주년을 맞아서 구단 창립자인 박태준 전 회장의 호를 따서 E석 스탠드명을 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(으)로 명명하기도 했다.</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 포철스탠드</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 스틸파크</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 철강왕스탠드</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 쇠돌이존</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 청암존</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 청암존은 국내 프로축구 경기장 최초의 구역 네이밍 실시된 곳이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">9.</p>
+										<p class="tit">아래는 성남FC 유튜브의 “K리그 선배&후배 “솔직하게 말해보자!” [까치톡]”영상 이다. 보기중 성남 팀 동료들이 꼽은 박태준 선수의 흑역사는 무엇인가?</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://www.youtube.com/watch?v=SDoLhau1Y88" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 감독님께 혼나서 울었던 일</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 모쏠이라 연애를 못해봤다</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 삭발을 하고 나타난 적이 있다</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 비행기 탈 때 신발을 벗었다</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 경기장을 못 찾아온 적이 있다</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➁ 성남FC 팀 동료들의 증언에 따르면 박태준 선수는 모쏠이라 연애를 못해본 것으로 보인다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">10.</p>
+										<p class="tit">아래는 경남FC 마스코트의 사진이다. 각 마스코트의 설명으로 옳지 않은 것은?</p>
+										<div class="example in-img">
+											<p>Q. 지훈 : 우리 경남FC의 마스코트를 소개할게.</p>
+											<img src="resources/images/quiz/ex10.png">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 왼쪽은 “군함이”, 오른쪽은 “경남이”야.</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 군함이의 포지션은 미드필더, 경남이는 서포터즈야.</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 군함이의 키는 200cm로 몸집은 크지만 발이 매우 빠르지.</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 경남이의 키는 160cm 몸무게는 50kg으로 작고 귀여워보이지만,</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 사람들에게 행복과 웃음을 주는 최고의 응원단장이야.</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➃ 경남이의 키는 150cm 몸무게는 50kg다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="cont-wrap end">
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<i class="sub-quiz-tit2"></i>
+							</h2>
+							<div class="emb-zone">
+								<img src="resources/images/sub/icon_emb.png" alt="emb">
+							</div>
+							<div class="info-zone">
+								<div class="time-label">제 2교시</div>
+								<div class="name-label">
+									<p>이름</p>
+									<div>홍길동</div>
+								</div>
+							</div>
+						</div>
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box">
+										<p class="num">11.</p>
+										<p class="tit">아래는 제주유나이티드 유튜브의 “캐스터 해설 당황시키는 제주 삼춘 팬 목청 ㅋㅋㅋㅋㅋㅋㅋㅋ”영상 이다. 영상에 등장하는 제주 “막아라 삼촌”의 대사로 옳지 않은 것은?</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/Hj8lP_aLTIg" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 막아라!!!</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 야이~ 막아!! 막아!!</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 핸드링!</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 야 경남 너무 그칠다!</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 경남 선수 여러분! 제주까지 오셔서 멋진 승부 펼쳐주셔서 고맙습니다!</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 영상에서 삼촌은 “경남 선수 여러분! 제주까지 오셔서 멋진 승부 펼쳐주셔서 고맙습니다!” 라는 말을 한 적이 없다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">12.</p>
+										<p class="tit">아래는 인천유나이티드 소속 한 선수의 어릴 적 사진이다. 보기 중 사진의 주인공을 고르시오.</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex12.png">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 정산</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 김정호</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 김도혁</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 김진야</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 김보섭</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➃ 사진은 김진야 선수의 어릴 적 귀여운 사진이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">13.</p>
+										<p class="tit">한국프로축구연맹 K리그는 현재 승강제도를 운영하고 있다. 1부 리그인 K리그1에서 12위를 기록한 팀은 2부 리그인 K리그2로 강등, K리그2에서 우승을 차지한 팀은 K리그1으로 승격합니다. 그렇다면 다음 보기 중, 승강제를 통해 1부와 2부 리그 승강을 경험해 본 적이 없는 팀은 어디일까요?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 대구FC</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 전남드래곤즈</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 강원FC</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 대전시티즌</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 인천유나이티드</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 인천유나이티드. 인천은 승강제 도입 이후 줄곧 K리그1에만 있었다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">14.</p>
+										<p class="tit">다음은 EA 이달의 선수상에 관해 친구들이 나눈 대화이다. 친구들 중 옳지 않은 설명을 하는 사람을 고르시오.</p>
+										<div class="example">
+											<p>은비 : 대구 세징야는 K리그 최초의 이달의 선수상 수상자야.</p>
+											<p>세은 : 상주 김진혁은 입대 전, 이달의 선수상을 받아서 상주에선 패치를 달지 않아.</p>
+											<p>상수 : 전북 김신욱의 이달의 선수상 수상소감은 K리그 유튜브에서 볼 수 있어.</p>
+											<p>충희 : 강원 조재완은 춘천송암스포츠타운에서 이달의 선수상 시상식을 가졌어.</p>
+											<p>은호 : 수원 타가트는 7월 리그 전경기 득점으로 이달의 선수상을 수상했어.</p>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 은비</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 세은</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 상수</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 충희</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 은호</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➁ 세은. 김진혁은 상주에서도 패치를 부착한다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">15.</p>
+										<p class="tit">한국프로축구연맹은 유소년 선수들이 체계적으로 축구를 할 수 있는 환경 마련에 앞장서고 있다. 2008년 “K리그 주니어” 대회를 시작으로 유스시스템 강화를 위해 지속적인 관심과 투자를 기울이고 있으며, 각 연령대별 대회의 숫자도 꾸준히 늘려가고 있다. 그렇다면, 2019년 기준, 한국프로축구연맹에서 운영 중인 유소년 대회(대한축구협회 비공식 대회 포함)의 개수는 총 몇 개일까?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 11개</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 10개</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 9개</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 8개</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 7개</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➁ 10개. 프로축구연맹은 5개의 공식 유소년 대회와 5개의 비공식 유소년 대회를 운영하고 있다.</p>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">16.</p>
+										<p class="tit">K리그는 유튜브, 페이스북, 인스타그램 등 다양한 SNS채널을 통해 콘텐츠를 제공하고 팬과 소통하고 있다. 각 플랫폼의 정확한 계정, 혹은 주소를 알맞게 짝지은 것은?</p>
+										<div class="example">
+											Q. 유튜브 - 페이스북 - 인스타그램
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ youtube.com/withkleague - facebook.com/withKLEAGUE - @kleague</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ youtube.com/withkleague - facebook.com/withKLEAGUE - @withkleague</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ youtube.com/withkleague - facebook.com/KLEAGUE - @kleague</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ youtube.com/kleague - facebook.com/KLEAGUE - @kleague</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ youtube.com/kleague - facebook.com/withKLEAGUE - @whthkleague</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➀ K리그의 공식 SNS를 모두 팔로우 중이라면 답을 알 수 있다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">17.</p>
+										<p class="tit">K리그1 시즌의 대미를 장식하는 스플릿 라운드. 2019년 스플릿 라운드는 “파이널 라운드”로 이름을 바꾸며 새로운 로고를 발표했다. 다음 중 “파이널 라운드”의 로고로 옳은 것을 고르시오.</p>
+										<ul class="list in-logo">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex17_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex17_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex17_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex17_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex17_5.png"></label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ “파이널 라운드”의 새로운 로고는 ➄이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">18.</p>
+										<p class="tit">다음은 파이널 라운드에 관한 K리그 대회요강 중 일부를 발췌한 것이다. 괄호에 들어갈 말로 옳은 것을 고르시오.</p>
+										<div class="example">
+											Q. 파이널 라운드(34~38R) 경기일정은 홈경기 수 불일치를 최소화하고 대진의 공정성을 확보하기 위해 정규 라운드(1~33R) 홈경기 수 및 대진을 고려하여 최대한 보완되도록 생성하며, 파이널 라운드 홈 3경기 배정 우선순위는 다음과 같다.<br/>
+											1) 정규 라운드 홈경기를 적게 개최한 클럽(정규 라운드 홈 16경기)<br/>2) (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 정규 라운드 다득점 순위 상위 클럽</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 정규 라운드 성적 상위 클럽</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 정규 라운드 최소 경고 및 퇴장기록 클럽</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 정규 라운드 평균관중 순위 상위 클럽</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 정규 라운드 평균시청자 순위 상위 클럽</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➁ 두 번째 우선순위 기준은 “정규 라운드 성적 상위 클럽”이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">19.</p>
+										<p class="tit">상위 6개 팀 그룹의 이름과 하위 6개 팀 그룹의 이름이 각각 알맞게 짝지어진 것은?</p>
+										<div class="example">
+											Q. 상위 6개 팀 그룹 – 하위 6개 팀 그룹
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 업 식스 – 다운 식스</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 스플릿 가 – 스플릿 나</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 육청룡 - 육백호</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ FINAL A – FINAL B</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 알파 리그 – 베타 리그</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➃ 이 시험을 열심히 풀었다면 이번 문제의 정답은 “FINAL A – FINAL B”인 것을 쉽게 알 수 있다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">20.</p>
+										<p class="tit">한국프로축구연맹은 매 라운드 주간베스트팀을 선정해 발표하고 있다. K리그 인스타그램과 페이스북 공식계정의 프로필 이미지 역시 주간베스트팀에 선정된 클럽의 고유색을 따라 매 라운드 변경하고 있다. 그렇다면 보기중 주간베스트팀을 선정하는 기준에 포함되지 않는 것은 무엇인가?</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 역전승 여부</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 파울 개수</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 유효 슈팅 횟수</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 경기 종료 15분 내 득점 여부</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 패스 정확도</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 패스 정확도도 물론 중요하지만 주간베스트팀 선정에 있어서는 고려되지 않는다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="final-box">
+					<a href="quiz_finish.html">
+						<img src="resources/images/sub/btn_back.png" alt="뒤로가기">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2019 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@charset "utf-8";
+
+/* 알림 */
+.notice-wrap {padding:10px 0;border-top:1px solid #e4e4e4;}
+.notice-wrap .notice-list {background:#fff;}
+.notice-wrap .notice-list li {padding:17px 20px;border-bottom:1px solid #e4e4e4;letter-spacing:-1px;line-height:1.5;}
+.notice-wrap .notice-list li.no-data {padding:17px 0;background:#fff;font-size:1.5rem;text-align:center;}
+.notice-wrap .notice-list li .tit {margin-right:2px;font-size:1.5rem;font-weight:bold;color:#cf1f1f;}
+.notice-wrap .notice-list li .tit-team {color:#000;}
+.notice-wrap .notice-list li .txt {font-size:1.5rem;color:#555;}
+.notice-wrap .notice-list li .date {display:block;font-size:1.3rem;color:#9f9f9f;}
+.notice-wrap .delete-area {position:relative;width:90%;margin:25px auto 0;}
+.notice-wrap .delete-area p {padding:9px 0;font-size:1.3rem;font-weight:bold;color:#444;letter-spacing:-1px;}
+.notice-wrap .delete-area .btn-delete {position:absolute;top:0;right:0;display:inline-block;width:82px;height:32px;line-height:30px;background:#fff;border:1px solid #444;font-size:1.3rem;font-weight:bold;color:#444;text-align:center;}
+.notice-wrap .notice-new li {padding-left:65px;background:url("../images/sub/bg_notice_new.gif") no-repeat 20px 17px;background-size:34px;}
+.btn-more {margin:8px 0 25px;background:#f4f4f4;border-top:1px solid #e4e4e4;border-bottom:1px solid #e4e4e4;text-align:center;font-size:1.5rem;font-weight:bold;color:#444;}
+.btn-more a {display:block;width:100%;padding:13px 0 15px;}
+.btn-more a img {display:inline-block;width:13px;margin:6px 0 0 10px;}
+
+/* 엔트리 등록/말소 이력 */
+.entry-history {padding:15px 20px 20px;background:#fff;}
+.entry-history .select-area {overflow:hidden;margin-bottom:17px;}
+.entry-history .select-area select {float:left;width:47%;height:30px;line-height:30px;padding:0 15px;margin-right:6%;color:#555;border-radius:4px;}
+.entry-history .select-area select:last-child {margin:0;}
+.entry-history .tbl-entry {}
+.entry-history .tbl-entry .tbl {width:100%;font-size:1.3rem;text-align:center;}
+.entry-history .tbl-entry .tbl thead th {padding:5px 0;color:#333;border-bottom:2px solid #969696;}
+.entry-history .tbl-entry .tbl tbody td {padding:13px 0;color:#333;border-bottom:1px solid #d8d8d8;}
+.entry-history .tbl-entry .tbl tbody td img {width:14px;}
+
+/* 승인공시업무 알림 */
+.notice-official .select-area select {width:31.334%;margin-right:3%;}
+
+.pop-entry-history {}
+#popup.pop-entry-history .tit-area .date {display:inline-block;margin-bottom:8px;border-bottom:1px solid #104aad;}
+#popup.pop-entry-history .tit-area .team {display:block;font-size:1.5rem;color:#104aad;}
+#popup.pop-entry-history .cont-area {padding:20px 22px 0;}
+#popup.pop-entry-history .cont-area .tbl {width:100%;font-size:1.4rem;text-align:left;}
+#popup.pop-entry-history .cont-area .tbl th {vertical-align:top;}
+#popup.pop-entry-history .cont-area .tbl td {font-size:1.4rem;font-weight:normal;color:#555;}
+#popup.pop-entry-history .cont-area .tbl td ul {overflow:hidden;margin-bottom:5px;}
+#popup.pop-entry-history .cont-area .tbl td ul li {float:left;min-width:70px;margin:0 5px 5px 0;}
+#popup.pop-entry-history .btn-close {position:absolute;top:8px;right:8px;width:32px;padding:7px;}
+
+/* media query */
+@media(max-width:320px){	
+	#popup.pop-entry-history .cont-area .tbl td ul li {min-width:65px;}
+}

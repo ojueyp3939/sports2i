@@ -1,0 +1,326 @@
+@charset "utf-8";
+
+@import url("reset.css");
+
+/* default style definition */
+body {margin:0;padding:0;font-size:1.2rem;font-weight:400;line-height:1.2;font-family:"NanumSquare","AppleGothicNeoSD","Apple SD 산돌고딕 Neo","Microsoft NeoGothic","Droid sans","맑은 고딕","malgun gothic",sans-serif;color:#333;}
+form {margin:0;padding:0;}
+hr {display:none;}
+p, div, th, td, select, input {color:#333;}
+a:link, a:visited {color:#666;text-decoration:none;}
+a:active, a:hover {color:#000;text-decoration:none;}
+a img, input.type-image {border:0 none;}
+input.type-text, textarea {border:1px solid #ddd;background:#fff;padding:1px;}
+input, select, textarea {vertical-align: middle;font-size:1.2rem;color: #333;}
+select {font-size: 1.2rem;font-family: Dotum, '돋움', sans-serif;}
+span.button, img.button, a.button {cursor: pointer;vertical-align: middle;}
+form select, form input {vertical-align:middle;}
+img {width:100%;vertical-align:top;}
+strong {font-weight:bold;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.row {overflow:hidden;position:relative;clear:both;width:100%;}
+.section-left {float:left !important;}
+.section-right {float:right !important;}
+
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+.w30p {width:30%;}
+.w35p {width:35%;}
+.w45p {width:45%;}
+.w48p {width:48%;}
+.w50p {width:50%;}
+.w60p {width:60%;}
+.w65p {width:65%;}
+.w70p {width:70%;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+/* font */
+.fb {font-family:"ngb";}
+.f14 {font-size:14px !important;}
+.f15 {font-size:15px !important;}
+.f16 {font-size:16px !important;}
+
+/* margin, padding */
+.mt0 {margin-top:0 !important;}
+.mt5 {margin-top:5px;}
+.mt10 {margin-top:10px;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt25 {margin-top:25px !important;}
+.mt30 {margin-top:30px !important;}
+.mt35 {margin-top:35px !important;}
+.mt40 {margin-top:40px !important;}
+.mt50 {margin-top:50px !important;}
+
+.mtm20 {margin-top:-20px !important;}
+
+.mb0 {margin-bottom:0px !important;}
+.mb5 {margin-bottom:5px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb25 {margin-bottom:25px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb35 {margin-bottom:35px !important;}
+.mb40 {margin-bottom:40px !important;}
+.mb50 {margin-bottom:50px !important;}
+
+.ml0 {margin-left:0 !important;}
+.ml5 {margin-left:5px !important;}
+.ml10 {margin-left:10px !importan;}
+.ml15 {margin-left:15px !important;}
+.ml20 {margin-left:20px !important;}
+.ml25 {margin-left:25px !important;}
+
+.mr5 {margin-right:5px !important;}
+.mr10 {margin-right:10px !important;}
+.mr15 {margin-right:15px !important;}
+.mr20 {margin-right:20px !important;}
+.mr15 {margin-right:15px !important;}
+.mr30 {margin-right:30px !important;}
+.mr35 {margin-right:35px !important;}
+
+.pt0 {padding-top:0 !important;}
+.pt5 {padding-top:5px !important;}
+.pt10 {padding-top:10px !important;}
+.pt15 {padding-top:15px !important;}
+.pt20 {padding-top:20px !important;}
+.pt25 {padding-top:25px !important;}
+.pt30 {padding-top:30px !important;}
+.pt35 {padding-top:35px !important;}
+.pt40 {padding-top:40px !important;}
+.pt45 {padding-top:45px !important;}
+.pt50 {padding-top:50px !important;}
+
+.pb0 {padding-bottom:0 !important;}
+.pb5 {padding-bottom:5px !important;}
+.pb10 {padding-bottom:10px !important;}
+.pb15 {padding-bottom:15px !important;}
+.pb20 {padding-bottom:20px !important;}
+.pb25 {padding-bottom:25px !important;}
+.pb30 {padding-bottom:30px !important;}
+.pb35 {padding-bottom:35px !important;}
+.pb40 {padding-bottom:40px !important;}
+.pb45 {padding-bottom:45px !important;}
+.pb50 {padding-bottom:50px !important;}
+
+.pl0 {padding-left:0 !important;}
+.pl5 {padding-left:5px !important;}
+.pl10 {padding-left:10px !important;}
+.pl15 {padding-left:15px !important;}
+.pl20 {padding-left:20px !important;}
+.pl25 {padding-left:25px !important;}
+.pl30 {padding-left:30px !important;}
+.pl35 {padding-left:35px !important;}
+.pl40 {padding-left:40px !important;}
+.pl45 {padding-left:45px !important;}
+.pl50 {padding-left:50px !important;}
+
+.pr0 {padding-right:0 !important;}
+.pr5 {padding-right:5px !important;}
+.pr10 {padding-right:10px !important;}
+.pr15 {padding-right:15px !important;}
+.pr20 {padding-right:20px !important;}
+.pr25 {padding-right:25px !important;}
+.pr30 {padding-right:30px !important;}
+.pr35 {padding-right:35px !important;}
+.pr40 {padding-right:40px !important;}
+.pr45 {padding-right:45px !important;}
+.pr50 {padding-right:50px !important;}
+
+
+/* tab */
+.tab {overflow:hidden;position:relative;}
+.tab li {float:left;}
+.tab li a {display:block;text-align:center;}
+.tab li a span {display:inline-block;position:relative;padding-bottom:8px;font-size:1.5rem;z-index:10;color:#222;}
+.tab li.on a span {padding-bottom:5px;font-weight:700;color:#058fd3;border-bottom:3px solid #058fd3;}
+.tab:after {content:"";display:block;position:absolute;bottom:0;width:100%;height:1px;border-bottom:1px solid #dcddd7;}
+
+.tab2 {}
+.tab2 li {width:50%;}
+
+.tab3 {}
+.tab3 li {width:33.3%;}
+.tab3 li a, .section-live .tab2 li a {padding-top:7px;}
+
+/* 2019 탭5 */
+ .tab5 li {width:20%;}
+/* // 2019 탭5 */
+
+.dot-tab2 {}
+.dot-tab2 li {width:50%;}
+.dot-tab2 li a {padding:10px 0 2px;}
+.dot-tab2 li a span {position:relative;color:#dcddd7;}
+.dot-tab2 li.on a span {border-bottom:0;color:#333;}
+.dot-tab2 li a span:before {content:"";position:absolute;left:-13px;width:6px;height:6px;margin-top:8px;background:#dcddd7;border-radius:50px;}
+.dot-tab2 li.on a span:before {background:#333;}
+
+/* 2019 날짜선택 */
+.date-select {padding:8px 0;border-bottom:1px solid #f4f4f4;}
+.date-select .date {overflow:hidden;position:relative;min-height:19px;}
+.date-select .date .prev {position:absolute;top:-3px;left:5%;-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform: rotate(180deg);}
+.date-select .date .prev a {display:block;width:10px;padding:5px;}
+.date-select .date .today {width:100%;padding:2px 0 0 0;text-align:center;}
+.date-select .date .today .date-txt {font-size:1.5rem;font-weight:700;color:#222;}
+.date-select .date .today .date-txt .day {padding:0 5px;font-size:1.4rem;color:#888;}
+.date-select .date .today .ui-datepicker-trigger {display:inline-block;width:15px;padding:3px 0 0 8px;vertical-align:top;}
+.date-select .date .next {position:absolute;top:-3px;right:5%;}
+.date-select .date .next a {display:block;width:10px;padding:5px;}
+
+.team-day-select {overflow:hidden;position:relative;padding:12px 12px;background:#fff;border-bottom:1px solid #ebebeb;}
+.team-day-select .day {float:left;}
+.team-day-select .day .prev {display:inline-block;width:17px;height:25px;-ms-transform:rotate(180deg);-webkit-transform:rotate(180deg);transform:rotate(180deg);}
+.team-day-select .day .prev a {display:inline-block;padding:4px;}
+.team-day-select .day .today {display:inline-block;margin:0 12px;font-size:1.5rem;vertical-align:text-bottom;}
+.team-day-select .day .today .date-txt {font-weight:800;}
+.team-day-select .day .next {display:inline-block;width:17px;height:25px;}
+.team-day-select .day .next a {display:inline-block;padding:4px;}
+.team-day-select .sel {float:right;}
+/* // 2019 날짜선택 */
+
+/* 경기일정 */
+.today-game {}
+.game-list {}
+.game-list li {overflow:hidden;position:relative;min-height:70px;border-bottom:1px solid #e5e5e5;}
+.game-list li.game-cancel {background:#f4f4f4;}
+.game-list li .game-info {position:absolute;top:0;left:50%;width:166px;margin-left:-83px;}
+.game-list li .game-info .state {line-height:1;text-align:center;}
+.game-list li .game-info .state span {display:inline-block;height:14px;line-height:14px;padding:0 5px 1px;font-size:0.8rem;font-weight:bold;color:#fff;text-align:center;vertical-align:middle;}
+.game-list li .game-info .state .before {background:#058fd3;}
+.game-list li .game-info .state .during {background:#e60021;}
+.game-list li .game-info .state .end {background:#999;}
+.game-list li .game-info .state .cancel {background:#999;}
+.game-list li .game-info .state .value {position:absolute;top:0;left:-30%;background:#fcc800;color:#282828;}
+.game-list li .game-info .info {position:absolute;top:18px;left:50%;width:28px;margin-left:-14px;text-align:center;}
+.game-list li .game-info .info span {display:block;font-size:0.9rem;font-weight:bold;color:#888;line-height:1.3;}
+.game-list li .game-info .info .place {padding:0 2px;border-bottom:1px solid #dcdcdc;}
+.game-list li .game-info .info-live .place {color:#058fd3;}
+.game-list li .game-info .team {overflow:hidden;margin-top:4px;}
+.game-list li .game-info .team .emb {float:left;width:31px;}
+.game-list li .game-info .team .emb-nation {width:29px;}
+.game-list li .game-info .team .emb-allstar {width:43px;}
+.game-list li .game-info .team .score {float:left;font-size:1.3rem;font-weight:bold;line-height:1.2;}
+.game-list li .game-info .team .win {color:#e60021;}
+.game-list li .game-info .team .lose {color:#0020c3;}
+.game-list li .game-info .away {float:left;margin-left:8px;}
+.game-list li .game-info .away .score {padding:3px 0 0 14px;}
+.game-list li .game-info .home {float:right;margin-right:8px;}
+.game-list li .game-info .home .score {padding:3px 14px 0 0;}
+.game-list li .game-info .broadcasting {clear:both;padding-top:2px;font-size:0.7rem;color:#999;text-align:center;line-height:1.2;}
+
+.game-list li .away-info {float:left;min-height:55px;line-height:50px;width:50%;padding:5px 83px 0 0;font-size:0.9rem;text-align:center;vertical-align:middle;box-sizing:border-box;}
+.game-list li .away-info .result {padding-top:15px;}
+.game-list li .away-info .result > span {display:block;line-height:1.2;vertical-align:middle;}
+.game-list li .away-info .result .win {font-weight:bold;color:#e60021;}
+.game-list li .home-info {float:right;min-height:55px;line-height:50px;width:50%;padding:5px 0 0 83px;font-size:0.9rem;text-align:center;vertical-align:middle;box-sizing:border-box;}
+.game-list li .value-info {position:absolute;width:50%;padding:0 83px 0 0;line-height:0;box-sizing:border-box;text-align:center;}
+.game-list li .value-info .value {display:inline-block;height:14px;line-height:14px;padding:0 5px 1px;font-size:0.8rem;font-weight:bold;vertical-align:middle;background:#fcc800;color:#282828;}
+
+/* 2019 일정 */
+.today-game .play-list {}
+.today-game .play-list .list {overflow:hidden;position:relative;padding:13px 13px 11px;border-bottom:1px solid #e5e5e5;}
+.today-game .play-list .list .game-box {float:right;width:31%;padding-left:2%;text-align:center;font-size:1.3rem;font-weight:700;}
+.today-game .play-list .list .game-box .game {margin-top:3px;color:#174da5;}
+.today-game .play-list .list .game-box .place {color:#888;}
+.today-game .play-list .list .info-box {float:right;width:57.7812%;padding-left:9.2188%;}
+.today-game .play-list .list .info-box .team {display:inline-block;width:100%;}
+.today-game .play-list .list .info-box .team dt {float:left;font-size:1.3rem;font-weight:700;}
+.today-game .play-list .list .info-box .team dt span {margin-right:6px;}
+.today-game .play-list .list .info-box .team dt .emb img {width:27px;padding-top:2px;vertical-align:top;}
+.today-game .play-list .list .info-box .team dt .allstar img {width:22px;}
+.today-game .play-list .list .info-box .team dd {float:right;position:relative;padding-right:5.2805%;font-size:1.3rem;font-weight:800;}
+.today-game .play-list .list .info-box .team dd.play:after {content:"";position:absolute;top:50%;right:0;width:5px;height:5px;margin-top:-2px;background:#333;border-radius:50%;}
+.today-game .play-list .list .info-box .team dd.win {color:#ea2c2c;}
+.today-game .play-list .list .info-box .away {margin-bottom:3px;}
+.today-game .play-list .list .btn-wrap a {position:absolute;top:5px;left:0;width:100%;height:60px;background:url("../images/common/btn_circle_arrow.png") no-repeat 4.688% 50%/12px;transition:0.4s;text-indent:-9999px;}
+.today-game .play-list .list .btn-wrap a.on {background:url("../images/common/btn_circle_arrow_on.png") no-repeat 4.688% 50%/12px;}
+/* 박스공통 */
+.today-game .play-list .list #GameList {clear:both;}
+.today-game .play-list .list #GameList .record-box {display:inline-block;width:100%;margin:12px 0 8px;padding:7px 0;background:#fff;border:1px solid #e6e6e6;border-radius:4px;box-sizing:border-box;text-align:center;}
+/* 게임정보 */
+.today-game .play-list .list #GameList .record-box .player-info {float:left;width:37%;padding-left:10%;}
+.today-game .play-list .list #GameList .record-box .player-info .team {overflow:hidden;}
+.today-game .play-list .list #GameList .record-box .player-info .team .player-img {float:left;width:19px;margin-right:3.276%;border:1px solid #e7e7e7;border-radius:50%;vertical-align:sub;}
+.today-game .play-list .list #GameList .record-box .player-info .team .name {float:left;padding-top:2px;font-size:1.3rem;font-weight:700;}
+.today-game .play-list .list #GameList .record-box .player-info .team .name .part {font-size:1.1rem;vertical-align:bottom;}
+.today-game .play-list .list #GameList .record-box .player-info .away {margin-bottom:6px;}
+.today-game .play-list .list #GameList .record-box .btn-area {overflow:hidden;float:right;width:45%;padding:7px 2.4138%}
+.today-game .play-list .list #GameList .record-box .btn-area a {width:44.138%;padding:9px 3px;background:#4c4c4c;color:#fff;border-radius:2px;font-size:1.1rem;font-weight:800;text-align:center;}
+.today-game .play-list .list #GameList .record-box .btn-area a.btn-live {float:left;margin-right:1px;background:#174da5;}
+.today-game .play-list .list #GameList .record-box .btn-area a.btn-record {float:right;}
+/* 중계 */
+.today-game .play-list .list .game-box .live {}
+.today-game .play-list .list #GameList .live {padding:10px 0 9px;}
+.today-game .play-list .list #GameList .live .info {display:inline-block;font-size:1.3rem;font-weight:100;}
+.today-game .play-list .list #GameList .live .info dt {float:left;margin-right:12px;color:#888;}
+.today-game .play-list .list #GameList .live .info dd {float:left;color:#333;}
+/* 종료 */
+.today-game .play-list .list .end {margin-top:3px;}
+.today-game .play-list .list .end.endline1 {margin-top:12px;}
+.today-game .play-list .list .end .info-end {float:left;width:35%;padding-left:12%;}
+.today-game .play-list .list .end .info-end.line2 {padding-top:12px;}
+.today-game .play-list .list #GameList .end .info {display:inline-block;width:100%;font-size:1.3rem;font-weight:700;}
+.today-game .play-list .list #GameList .end .info dt {float:left;width:12px;margin-right:12px;color:#888;text-align:center;}
+.today-game .play-list .list #GameList .end .info dd {float:left;color:#333;}
+.today-game .play-list .list #GameList .end .btn-area {padding:17px 3.125%;}
+/* 취소 */
+.today-game .play-list .cancel-list {background:#f5f5f5;}
+.today-game .play-list .cancel-list .info-box {color:#aaa;}
+.today-game .play-list .cancel-list .game-box .end {color:#666;}
+/* // 2019 일정 */
+
+
+/* 2019 테이블 */
+.tbl {width:100%;}
+
+.scroll-wrap {position:relative;width:100%;}
+.rank .list-wrap {position:relative;width:101px;border-right:1px solid rgba(242,242,242,0.6);box-sizing:border-box;z-index:10;}
+.rank .list-wrap .tit-wrap {display:table;width:100%;height:30px;background:#2563cb;font-size:1.1rem;font-weight:700;line-height:30px;}
+.rank .list-wrap .tit-wrap li {display:table-cell;width:50%;color:#fff;text-align:center;}
+.rank .list-wrap .list {font-weight:700;}
+.rank .list-wrap .list li {display:table;width:100%;height:44px;background:#fff;border-bottom:1px solid #f8f8f8;box-sizing:border-box;}
+.rank .list-wrap .list li .rank {display:table-cell;width:48%;text-align:center;vertical-align:middle;}
+.rank .list-wrap .list li .name {display:table-cell;width:52%;text-align:center;vertical-align:middle;}
+.rank .list-wrap .list li.no1 .rank,.rank .list-wrap .list li.no1 .name,.team-rank .list-wrap .list li.no1 .rank, .team-rank .list-wrap .list li.no1 .name {color:#2563cb;}
+.rank .list-wrap .list li .info {padding-left:12.94%;}
+
+.rank .record-area {position:absolute;top:0;left:0;right:0;bottom:0;}
+.rank .record-area .scroller {display:inline-block;}
+.rank .record-area .tbl-area {padding-left:101px;box-sizing:border-box;-webkit-box-sizing:border-box;}
+.rank .record-area .tbl-area .tbl {width:100%;white-space:nowrap;text-align:center;border-collapse:separate;}
+.rank .record-area .tbl-area .tbl th {height:30px;padding:0 11px;background:#2563cb;color:#fff;font-size:1.1rem;font-weight:700;vertical-align:middle;}
+.rank .record-area .tbl-area .tbl td {height:44px;padding:0 11px;background:#fff;color:#000;border-bottom:1px solid #f8f8f8;font-size:1.2rem;font-weight:400;vertical-align:middle;box-sizing:border-box;}
+.update {margin-top:2px;padding-right:7px;background:#fff;text-align:right;font-size:0.8rem;color:#717171;}
+/* // 2019 테이블 */
+
+/* 2019 팀순위 */
+.section-teamrank {padding-bottom:8px;background:#f6f6f6;}
+.section-teamrank .tit-area {overflow:hidden;padding:10px;background:#fff;}
+.section-teamrank .tit-area h4 {float:left;font-size:1.3rem;font-weight:bold;background:#fff;}
+.section-teamrank .tit-area .sel {float:right;height:20px;border:1px solid #b4b4b4;color:#666;box-sizing:border-box;}
+
+
+/* media query */
+@media (max-width:320px){
+	html {font-size:10px;}
+	#Modal .login .content .user .retain input[type="checkbox"]:checked + label {background-position: 0 -12px;}
+	#Modal .login .content .user .retain label {display:inline-block;padding-left:17px;background:url('../images/common/bg_checkbox.png') no-repeat 0 0/11px;}
+}
+@media (min-width:321px){
+	html {font-size:10px;}
+}
+@media (min-width:568px){
+	.rank .record-area .scroller {width:100%;}
+}

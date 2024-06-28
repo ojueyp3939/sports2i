@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>Olleh tv Mobile 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">	
+		<!-- contents -->
+		<header>
+			<div class="tit-area">
+				<h1><img src="../resources/images/common/h1_logo.gif" alt="Olleh tv Mobile" /></h1>
+				<h2 class="tit">프로야구<span class="line">|</span>관리자</h2>
+				<div class="user-info">
+					<span class="name">관리자님</span>
+					<a href="#none" class="btn-logout">로그아웃</a>
+				</div>
+			</div>
+		</header>
+		<div id="gnb">
+			<ul class="menu">
+				<li class="on"><a href="#none">라이브 운영</a></li>
+				<li><a href="#none">금기어 관리</a></li>
+			</ul>
+		</div>
+		<div id="contents">	
+			<h3>라이브 운영</h3>
+			<div class="date-select">
+				<a href="#none" class="prev"><img src="../resources/images/common/btn_cal_prev.gif" alt="" /></a>
+				<span class="date">2018년 10월</span>
+				<a href="#none" class="next"><img src="../resources/images/common/btn_cal_next.gif" alt="" /></a>
+			</div>
+			<div class="etc-area">
+				<p class="notice">* 경기 있는 날 운영  /  채널 리스트와 비교 필수</p>
+				<a href="#none" class="btn btn-black">채널 리스트</a>
+			</div>
+			<div class="tbl-type">
+				<table class="tbl">
+					<colgroup>
+						<col width="20%" />
+						<col width="13%" />
+						<col width="13%" />
+						<col width="13%" />
+						<col width="13%" />
+						<col width="13%" />
+						<col width="13%" />
+					</colgroup>	
+					<thead>
+						<tr>
+							<th>날짜</th>
+							<th>원정</th>
+							<th>홈</th>
+							<th>채널번호</th>
+							<th>채널매칭</th>
+							<th>채널수동 입력</th>
+							<th>On Air</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="bd-r">2018년 10월 23일(화)</td>
+							<td>KT</td>
+							<td>한화</td>
+							<td><input type="text" class="ipt" /></td>
+							<td><a href="#none" class="btn">불러오기</a></td>
+							<td><a href="#none" class="btn">저장</a></td>
+							<td>18:30</td>
+						</tr>
+						<tr>
+							<td class="bd-r">2018년 10월 23일(화)</td>
+							<td>KT</td>
+							<td>한화</td>
+							<td><input type="text" class="ipt" /></td>
+							<td><a href="#none" class="btn">불러오기</a></td>
+							<td><a href="#none" class="btn">저장</a></td>
+							<td>18:30</td>
+						</tr>
+						<tr>
+							<td class="bd-r">2018년 10월 23일(화)</td>
+							<td>KT</td>
+							<td>한화</td>
+							<td><input type="text" class="ipt" /></td>
+							<td><a href="#none" class="btn">불러오기</a></td>
+							<td><a href="#none" class="btn">저장</a></td>
+							<td>18:30</td>
+						</tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // wrap -->
+<div class="modal"></div>
+<div id="popup" style="width:520px;margin:-137px 0 0 -260px;">
+	<div class="tit">채널 리스트</div>
+	<a href="#none" class="btn-close"><img src="../resources/images/common/btn_close.gif" alt="" /></a>
+	<div class="content">
+		<div class="date">2018년 10월 23일 (화)</div>
+		<div class="tbl-type">
+			<table class="tbl">
+				<colgroup>
+					<col width="20%" />
+					<col width="80%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th>채널 번호</th>
+						<th>채널명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>999</td>
+						<td>KBO 리그 롯데 자이언츠 vs 삼성 라이온즈</td>
+					</tr>
+					<tr>
+						<td>999</td>
+						<td>롯데 자이언츠 vs 삼성 라이온즈</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>		
+</div>  
+</body>
+</html>

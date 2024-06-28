@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+html, body {position:relative;height:100%;}
+body {}
+#wrap {position:relative;min-height:100%;padding-bottom:65px;}
+.inner {overflow:hidden;position:relative;width:1000px;margin:0 auto;}
+
+header {}
+header .header-info {overflow:hidden;width:1000px;margin:0 auto;padding:19px 0;}
+header .header-info .logo {float:left;font-size:20px;font-weight:700;}
+header .header-info .login-info {float:right;padding-top:7px;}
+header .header-info .login-info .id-info {font-size:15px;font-weight:500;color:#1a1a1a;vertical-align:middle;}
+header .header-info .login-info .btn-logout {display:inline-block;width:82px;height:22px;line-height:24px;margin-left:22px;background:#058fd3;font-size:14px;color:#fff;vertical-align:middle;border-radius:8px;text-align:center;}
+
+#gnb {background:#058fd3;}
+#gnb .menu {overflow:hidden;width:1000px;margin:0 auto;padding:8px 0 7px;}
+#gnb .menu > li {position:relative;float:left;width:16.6%;}
+#gnb .menu > li:after {content:"";position:absolute;top:3px;right:0;display:block;width:1px;height:20px;background:#50b1e0;}
+#gnb .menu > li:first-child:before {content:"";position:absolute;top:3px;left:0;display:block;width:1px;height:20px;background:#50b1e0;}
+#gnb .menu > li > a {display:block;width:100%;padding:5px 0;font-size:14px;color:#fff;text-align:center;}
+#gnb .menu > li > a:hover,#gnb .menu > li.on > a {font-weight:500;}
+
+#container {overflow:hidden;width:1000px;margin:50px auto 0;padding-bottom:80px;}
+
+aside {float:left;width:200px;margin:24px 20px 0 0;}
+aside .tit {margin-bottom:1px;padding:10px 0 12px 19px;background:#058fd3;font-size:15px;font-weight:500;color:#fff;}
+#snb {}
+#snb .menu {}
+#snb .menu li {}
+#snb .menu li a {display:block;width:100%;padding:11px 0 14px 19px;background:#edeff0;font-size:13px;color:#1a1a1a;box-sizing:border-box;}
+#snb .menu li > a:hover, #snb .menu li.on > a {background:#56b2de;color:#fff;}
+#snb .menu li .depth2 {}
+#snb .menu li .depth2 li a {padding:5px 10px 5px 20px;background:#dceaf1;font-size:12px;}
+#snb .menu li .depth2 li a:hover, #snb .menu li .depth2 li.on a {background:#98cae2;color:#fff;}
+
+#contents {float:left;width:780px;}
+#contents .tit-area {overflow:hidden;padding-bottom:7px;border-bottom:1px solid #abaeb3;}
+#contents .tit-area .tit {float:left;font-size:15px;font-weight:500;color:#1b1b1b;}
+#contents .tit-area .btn-reg {float:right;}
+
+#contents .search-area {position:relative;margin-bottom:15px;padding:15px 0;border-bottom:1px solid #abaeb3;}
+#contents .search-area .calender a {display:inline-block;vertical-align:middle;}
+#contents .search-area label, #contents .search-area input {vertical-align:middle;}
+#contents .search-area .btn-search {margin-left:10px;}
+
+footer {width:100%;margin-top:-65px;padding:24px 0 25px;border-top:1px solid #cdcdcd;text-align:center;}
+footer address {font-size:13px;color:#838383;}
+
+/* 팝업 */
+.pop-on {overflow:hidden;}
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.5;z-index:15;}
+#popup {position:fixed;top:132px;left:50%;background:#fff;z-index:20;}

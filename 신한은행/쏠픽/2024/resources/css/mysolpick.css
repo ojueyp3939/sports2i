@@ -1,0 +1,86 @@
+﻿@charset "utf-8";
+
+
+.my-solpick-wrap {padding-top:93.9815vw;background:url("../images/sub/bg_solpick_info.png") no-repeat 0 0/100%;}
+.my-solpick-wrap .my-solpick-info {padding:24px 0;border-radius:40px 40px 0 0;border-bottom:1px solid #4e55e1;text-align:center;background:#f4f7ff;}
+.my-solpick-wrap .my-solpick-info .tit {margin-bottom:4px;font-size:1.2rem;color:#444;}
+.my-solpick-wrap .my-solpick-info .txt {color:#1e226f;text-align:center;font-size:2.7rem;font-weight:700;}
+
+.rate-graph {padding:60px 30px 46px;overflow:hidden;}
+.rate-full {position:absolute;left:0;bottom:0;width:43px;height:152px;text-align:center;background:#f3f4f9;border-radius:8px;}
+.rate-graph .rate-box {text-align:center;}
+.rate-graph .rate-box .rate-img {float:left;width:42px;height:152px}
+.rate-graph .rate-box .graph {position:relative;float:left;width:calc(50% - 21px);height:152px;text-align:center;}
+.rate-graph .rate-box .graph dt {position:absolute;top:-34px;left:0;display:block;width:108px;padding-bottom:8px;border-bottom:1px solid #ddd;font-size:1.2rem;color:#000;}
+.rate-graph .rate-box .graph dd {position:absolute;bottom:0;width:43px;text-align:center;font-size:1.3rem;}
+.rate-graph .rate-box .graph dd .rate-txt {position:absolute;left:0;bottom:-20px;width:100%;color:#a0a2b8;}
+.rate-graph .rate-box .graph dd .rate {position:absolute;left:0;bottom:0;width:100%;border-radius:0 0 8px 8px;background:#babbc3;}
+.rate-graph .rate-box .graph dd .rate.full {border-radius:8px;}
+.rate-graph .rate-box .graph dd .rate .num {display:inline-block;padding-top:8px;font-size:1.2rem;color:#eff1ff;}
+.rate-graph .rate-box .graph dd .rate .num .unit {font-size:1.3rem;font-weight:400;}
+.rate-graph .rate-box .graph dd.my .rate-txt {color:#7d73fd;}
+.rate-graph .rate-box .graph dd.my .rate {background:linear-gradient(70deg, #1e226f, #23299f);}
+.rate-graph .rate-box .graph dd.all {left:64px;}
+.rate-graph .rate-box .graph:last-child {margin-right:0;}
+.rate-graph .rate-box .graph:last-child dt {left:auto;right:0;}
+.rate-graph .rate-box .graph:last-child dd,
+.rate-graph .rate-box .graph:last-child dd.all {left:auto;right:0;}
+.rate-graph .rate-box .graph:last-child dd.my {right:63px;}
+.rate-graph.no-data {padding:85px 0 !important;}
+.rate-graph.no-data .no-pick {line-height:1.5;font-size:1.7rem;color:#fff;text-align:center;}
+
+.swiper-menu .swiper-slide {width:auto;min-width:100%;white-space:nowrap;}
+.swiper-menu .swiper-slide .month-list {overflow:hidden;border-top:1px solid #969696;border-bottom:1px solid #ddd;font-size:1.4rem;background-color:#f9fafb;}
+.swiper-menu .swiper-slide .month-list li {float:left;width:43px;height:43px;margin:12px;border-radius:7px;}
+.swiper-menu .swiper-slide .month-list li a {display:block;width:100%;height:100%;padding:14px 0;border-radius:7px;color:#000;font-weight:100;text-align:center;}
+.swiper-menu .swiper-slide .month-list li.off a {color:#ced0d6;}
+.swiper-menu .swiper-slide .month-list li.on a {position:relative;color:#fff;font-weight:400;box-shadow:1px 2px 8px 2px #dbdcdc;background-color:#1e226f;}
+
+.info-box {overflow:hidden;padding:25px 0px 25px 35px;background-color:#fff;}
+.info-box .info {float:left;width:33.3%;}
+.info-box .info div .tit {color:#000;font-size:1.1em;}
+.info-box .info div .num {padding-top:8px;color:#1e226f;font-size:1.7rem;}
+.info-box .info div .num span {font-size:1.7rem;font-weight:100;}
+
+.gift-box {position:relative;width:100%;padding:20px 25px 27px;color:#fff;background:url("../images/sub/bg_mysolpick_banner.png") no-repeat;background-size:cover;}
+.gift-box .txt1 {padding-bottom:4px;font-size:1.5rem;}
+.gift-box .txt2 {font-size:1.1rem;font-weight:100;}
+.gift-box .btn-gift {position:absolute;bottom:15px;right:25px;display:inline-block;padding:5px 9px;border-radius:10px;color:#fff;font-size:1.1rem;background-color:#4e55e1;}
+
+.no-participation {padding:252px 0 199px 0;background:url("../images/sub/bg_no_participation_new.png") #fff no-repeat center 95px/100px;}
+.no-participation .txt {text-align:center;font-weight:100;}
+.no-participation .txt dt {display:inline-block;padding:8px 23px;margin-bottom:15px;color:#444;font-size:1.4rem;font-weight:400;border-radius:16px;background-color:#f4f7ff;}
+.no-participation .txt dt span {font-size:1.4rem;color:#232f5a}
+.no-participation .txt dd {line-height:1.4;color:#444;font-size:1.1rem;}
+
+.history {padding:30px 12px 17px;background-color:#fff;}
+.history h3 {font-size:1.5rem;font-weight:400;}
+.history h3 span {font-size:1.6rem;}
+.history .tit-list {overflow:hidden;margin-top:8px;padding:10px 0 9px;border-top:1px solid #000;border-bottom:1px solid #ddd;background:#f8f8f8;}
+.history .tit-list li {float:left;width:30%;font-size:1.2rem;color:#000;text-align:center;}
+.history .tit-list li:nth-child(1),.history .tit-list li:nth-child(2) {width:20%;}
+.history .tit-list li:first-child {padding-left:10px;}
+.history .tit-list li:last-child {padding-right:10px;}
+.history .tbl {width:100%;}
+.history .tbl td {padding:8px 0;color:#858585;border-bottom:1px solid #ddd;text-align:center;font-size:1.3rem;vertical-align:middle;}
+.history .tbl tr:last-child td {border:none;}
+.history .tbl tr td:first-child {padding-left:10px;}
+.history .tbl tr td:last-child {padding-right:10px;}
+.history .tbl tr.all td {color:#4e55e1;}
+.history .no-histroy {padding:64px 0;margin-top:8px;border-radius:7px;font-size:1.2rem;color:#858585;text-align:center;background-color:#f8f8f8;}
+.history .btn-area {margin-top:17px;text-align:center;}
+.history .btn-area .btn-more {display:inline-block;margin:0 auto;padding:7px 13px 6px 23px;background:url("../images/sub/btn_more.png") no-repeat 14% 50%/9px;border:1px solid #bbb;}
+
+/* post */
+.post .rate-graph {width:100vw;padding:13.61111vw 10.27778vw 10vw 8.14815vw;background:url("../images/sub/bg_graph_p.png") no-repeat;background-size:cover;}
+.post .rate-graph .rate-box .graph dt {color:#f3f4f9}
+.post .rate-graph .rate-box .graph dd .rate-txt {font-size:1.0rem;color:#babbc3}
+.post .rate-graph .rate-box .graph dd.my .rate {background:linear-gradient(to bottom, #4aa4ee, #306eed);}
+.post .rate-graph .rate-box .graph dd.my .rate-txt {color:#4aa4ee}
+.post .swiper-menu .swiper-slide .month-list li.on a {background-color:#275cca;}
+.post .info-box .info div .num {color:#275cca}
+.post .gift-box {background-image:url("../images/sub/bg_mysolpick_banner_p.png");}
+.post .gift-box .btn-gift {background-color:#275cca;}
+
+.post .history .no-histroy {background-color:#f2f3f4}
+/* .post .no-participation {background:url("../images/sub/bg_no_participation_p.png") #f4f4f4 no-repeat center 104px/140px;} */

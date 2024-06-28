@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2019 K리그 스플릿 라운드 퀴즈</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/main/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="cont-wrap">
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<img src="resources/images/sub/txt_quiz1.png" alt="2020년도 K리그 덕력 시험 평가 문제지 - K리그 1영역">
+							</h2>
+							<div class="info-zone">
+								<div class="time-label">제1시험</div>
+								<table class="name-label">
+									<tr>
+										<th>이&nbsp;&nbsp;&nbsp;름</th>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<th>응원팀</th>
+										<td>FC서울</td>
+									</tr>
+								</table>
+							</div>
+							<div class="description">
+								<p>* 응원팀은 케덕시 “반석차”에 영향을 미칩니다.</p>
+								<p>* 응원팀을 설정 하시려면, 답안지를 제출하지 않은 상태에서 회원 정보수정에서 확인해주시기 바랍니다.</p>
+								<p>* 첫 시험 답안 제출 후 모든 시험이 끝날때까지 응원팀 설정 변경이 제한됩니다.</p>
+								<p>* 시험 종료 전 답안 제출을 완료해야 하며, 응시 중 시간이 초과될 경우 답안을 제출하실 수 없습니다.</p>
+							</div>
+						</div>
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box">
+										<p class="num">1.</p>
+										<p class="tit">다음은 오세훈 상병의 주말 일과다. "일요일 오전, K리그 상주상무의 오세훈 상병은 일조점호와 구보를 마치고 폐급이었던 축구화를 수입했다. 전세진 일병의 관물함 시건장치를 푼 오세훈 상병은 전세진 일병의 건빵을 불출해 짬타이거에게 나눠주러 나갔다가, 입수보행을 해 행보관님께 지적을 받았다." 다음 중, 오세훈 일병이 하지 않은 일을 고르시오. (6점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://www.youtube.com/watch?v=is5BG8prK6s" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① 아침에 달리기를 했다</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② 고양이에게 먹을것을 주러갔다</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ 해외에서 축구화를 직구했다</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ 관물대 잠금장치를 풀었다</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ 주머니에 손을 넣고 걸었다</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">2.</p>
+										<p class="tit">K리그1의 전북현대는 K리그에서 일곱번의 우승을 차지한 자타공인 명문 클럽이다. 그렇다면 다음중 전북의 우승 시즌과 해당 시즌의 승점이 알맞지 않게 이어진 것을 고르시오. (6점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① 2009시즌 - 57점</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② 2011시즌 - 63점</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ 2014시즌 - 81점</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ 2015시즌 - 73점</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ 2017시즌 - 74점</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">3.</p>
+										<p class="tit">성남의 영플레이어 홍시후 선수는 어린 나이에도 훌륭한 기량과 앳된 외모로 주목받았다. 또한 홍시후는 축구 유망주 "근본론"에 입각해 대성할 만한 재목으로 꼽히기도 했는데, 다음중 홍시후의 "근본론"을 부각시킨 홍시후의 특징을 고르시오. 배OO(으)로 유명세를 타기도 했는데,  (7점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① 바지</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② 철수</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ 치기</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ 구장</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ 그왕</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">4.</p>
+										<p class="tit">울산현대의 국가대표 수문장 조현우는 한때 “이 게임”의 유저였다. 2013년 6월 2일 그가 SNS에 남긴 다음 글의 빈칸을 순서대로 채우시오. (3점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex4.png" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">① ⓐ 카트 ⓑ 0000</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">② ⓐ 카트 ⓑ 1234</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">③ ⓐ 카트 ⓑ 1111</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">④ ⓐ 크아 ⓑ 1111</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">⑤ ⓐ 크아 ⓑ 1234</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">5.</p>
+										<p class="tit">최근 대구FC의 마스코트 "빅토"는 카카오TV 오리지널 예능 <내 꿈은 라이언>에 출연한다는 소식을 밝히며 공식 기자회견을 가졌다. 이 자리에서 빅토는 처음으로 말을 하는 모습을 선보이며  큰 관심을 받기도 했다. 그렇다면, 빅토가 갑자기 말을 하게 된 이유로 다음 중 옳은 것은? (5점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/OsUKTGg1AuY" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 감독님과 소통하기 위해서</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 그냥 말이 하고 싶어져서</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 말을 하게 되는 약을 먹어서</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 팬들과 소통하기 위해서</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 선수들과 소통하기 위해서</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">6.</p>
+										<p class="tit">2020시즌 여름 이적시장에서 FC서울은 팀의 프랜차이즈 스타이자 대한민국의 축구스타인 기성용을 다시 영입했다. 프로 데뷔 2년차였던 2007년 당시, 기성용은 구단과의 인터뷰 영상에서 즐겨듣는 노래로 "이 노래"를 꼽으며 풋풋한 노래실력을 뽐냈었다. 당시 기성용이 불렀던 노래의 제목으로 알맞을 것을 고르시오. (5점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 비밀번호 484</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 비밀번호 485</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 비밀번호 486</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 비밀번호 487</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 비밀번호 488</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">7.</p>
+										<p class="tit">수원삼성은 최근 박건하 감독에 지휘봉을 맡기며 새로운 출발을 예고했다. 다음중 박건하 감독에 관한 설명으로 옳지 않을 설명을 고르시오. (6점)</p>
+										<div class="example">
+											① 기훈 : 옷깃을 세우는 멋진 세리머니로 유명하셨잖아<br/>
+											② 가트 : 현역시절 등번호가 나와 같은 18번이었잖아<br/>
+											③ 석희 : 공격수는 물론, 선수 말년에는 수비수로도 활약하셨지<br/>
+											④ 상민 : 수원삼성 원클럽맨 출신 감독님이 오셔서 기대가 커!<br/>
+											⑤ 의권 : K리그 지도자로는 수원이 첫번째 클럽이셔
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 기훈</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 가트</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 석희</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 상민</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 의권</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">8.</p>
+										<p class="tit">하나원큐 K리그1 2020에는 총 열두개 팀이 참가한다. 12개 팀은 각자의 홈구장을 지정하고 있다. 그렇다면 다음 보기에 나온 홈경기장을 수용인원이 많은 순으로 알맞게 나열된 것을 고르시오. (5점)</p>
+										<div class="example">
+											ⓐ DGB대구은행파크<br/>
+											ⓑ 광주축구전용경기장<br/>
+											ⓒ 수원월드컵경기장<br/>
+											ⓓ 스틸야드<br/>
+											ⓔ 전주월드컵경기장
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ ⓔ-ⓒ-ⓐ-ⓑ-ⓓ</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ ⓔ-ⓒ-ⓓ-ⓐ-ⓑ</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ ⓒ-ⓔ-ⓐ-ⓓ-ⓑ</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ ⓒ-ⓔ-ⓓ-ⓑ-ⓐ</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ ⓒ-ⓔ-ⓓ-ⓐ-ⓑ</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">9.</p>
+										<p class="tit">2019년 K리그 영플레이어상을 수상한 강원FC의 김지현은 경기에 뛰고 있으면 볼이 빨갛게 달아올라 "호빵맨"이라는 별명을 가지고 있다. 그렇다면 다음 중, 김지현의 볼 사진이 아닌 것을 고르시오. (8점)</p>		
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex9.png" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ ⓐ</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ ⓑ</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ ⓒ</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ ⓓ</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ ⓔ</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">10.</p>
+										<p class="tit">부산아이파크는 최근 종이봉투를 뒤집어쓰고 경기를 관람하던 한 어린이 팬의 출연으로 화제가 되었다. 부산 구단과의 인터뷰에 응한 이 팬은 영상을 통해 부라이머리 가면에 관한 이야기를 재미있게 소개하기도 했다. 그렇다면, 다음 중 부라이머리에 대해 옳지 않은 설명을 한 선수를 고르시오. (6점)</p>
+										<div class="example mb10">
+											① 물로 : 부라이머리 팬분의 실명은 "이동건"이야<br/>
+											② 씽코 : 온라인 수업을 계기로 이 가면을 만들게 됐다고 하네<br/>
+											③ 동준 : 이 봉투를 쓰면 부산이 더 잘하는 것 처럼 보여<br/>
+											④ 문환 : 부라이머리는 호물로 선수를 제일 좋아해<br/>
+											⑤ 정협 : 화장실에 갈때도 컨셉유지를 위해 봉투를 벗진 않는다고 해
+										</div>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/sFmcW49ik3U" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 물로</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 씽코</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 동준</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 문환</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 정협</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">11.</p>
+										<p class="tit">K리그1에는 직전시즌에 우승한 팀만이 사용할 수 있는 "K리그 우승팀 패치"가 있다. 그렇다면 다음중, K리그 우승팀 패치에 대해 옳은 설명을 하는 사람을 고르시오. (4점)</p>
+										<div class="example">
+											"K리그 우승팀 패치는 우승팀에 대한 예우의 일환으로 ⓐ 일반 패치보다 사이즈가 조금 더 크다. 또한, ⓑ 패치의 K리그 로고 색깔은 금색이다. ⓒ 패치의 하단에는 CHAMPION이라는 글자가 써있다. 우승팀패치는 ⓓ 선수 유니폼의 양 소매에 각각 하나씩 부착해야 한다. 그리고 패치의 특별함을 위해 ⓔ 기본 패치와 달리 후원사의 로고가 들어가 있지 않다"
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ ⓐ</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ ⓑ</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ ⓒ</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ ⓓ</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ ⓔ</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">12.</p>
+										<p class="tit">대구FC의 정승원은 훈훈한 외모와 출중한 실력으로 인기몰이를 하고 있는 선수이다. 다음중 정승원에 대한 설명으로 옳지 않은 것을 고르시오. (6점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 향수를 모으기가 취미다</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 복숭아 알레르기가 있다</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 대구FC의 유스 출신이다</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 고교 졸업후 프로에 직행했다</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 팀동료 김대원과 입단 동기다</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">13.</p>
+										<p class="tit">K리그1 에서 우승한 팀은 시상식에서 K리그 트로피를 들어올릴 수 있는 자격이 주어진다. K리그1 우승 트로피에 대한 설명으로 다음중 옳지 않은 것을 고르시오. (5점)</p>
+										<div class="example">
+											ⓐ : 이 트로피를 처음 손에 쥔 팀은 수원삼성이다.<br/>
+											ⓑ : 이 트로피의 재질은 24K 도금이다.<br/>
+											ⓒ : 트로피의 받침대는 분리가 가능하다.<br/>
+											ⓓ : 트로피의 높이는 50cm이다.<br/>
+											ⓔ : 트로피의 무게는 7kg이다.
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ ⓐ</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ ⓑ</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ ⓒ</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ ⓓ</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ ⓔ</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">14.</p>
+										<p class="tit">포항스틸러스는 홈 경기장인 스틸야드의 건립 30주년을 맞이하여 기념 유니폼 디자인 팬 공모를 진행했다. 최종 당선된 최태민 님의 유니폼 디자인은 포항과 스틸야드의 역사가 유니폼 곳곳에 녹아들며 큰 호평을 받았다. 그렇다면, 포항 팬들이 경기장에 매번 내거는 걸개의 문구이자, 기념 유니폼의 목 뒷부분에 새겨진 문구로 알맞은 것을 고르시오. (4점)</p>
+										<div class="example in-img">
+											
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 우리는 포항일지도 모른다</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 족보없는 축구는 가라</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 족발없는 야식은 가라</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 포항축구 떡상 가즈아!</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 갈매기 나래 위에~♪</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">15.</p>
+										<p class="tit">인천유나이티드 유튜브에서는 코로나19로 인한 축구팬들의 콘텐츠 갈증을 해소하기 위해 온라인 토크쇼 콘텐츠, "인유보라"를 론칭했다. 지난 "인유보라"에서는 인천에 새로 부임한 조성환 감독의 랜선 인터뷰를 선보였다. 인터뷰 막바지에, 조성환 감독이 인천의 시그니처 포즈를 취하며 외친 한마디로 다음 중 옳은 것은? (5점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/SB5amD_VApw" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 인천은 살아남는다!</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 인천은 할 수 있다!</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 인천은 이긴다!</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 인천은 강하다!</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 인천은 지지않는다!</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">16.</p>
+										<p class="tit">2020시즌 K리그1에는 K리그가 낳은 최고의 스타들이 복귀하며, 큰 화제를 일으켰다. 특히, 울산현대의 이청용은 매경기 수준 높은 경기력을 선보이며 울산팬들은 물론 축구팬 모두에게 즐거움을 주고 있다. 그렇다면, 다음의 기록을 모두 더한 숫자로 옳은 것을 고르시오.<br/>
+											&lt;2007시즌 정규리그 득점 + 울산 입단 발표일(日) + 유럽에서 활약한 팀의 수&gt; (6점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 3</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 6</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 9</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 12</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 15</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">17.</p>
+										<p class="tit">K리그의 시즌 종료 이후엔 시즌 성적에 따라 팀과 개인에게 시상을 하게 된다. 그렇다면, 다음중 "우승팀"의 시상내역으로 옳은 것을 고르시오. (3점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 상금</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 상금, 트로피</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 상금, 트로피, 메달</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 상금, 트로피, 메달, 반지</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 상금, 트로피, 메달, 반지, 우승인증서</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">18.</p>
+										<p class="tit">K리그는 매라운드 종료이후 각 라운드의 최우수선수인 "라운드 MVP"를 선발해 발표한다. 그렇다면 다음 중 올시즌 정규라운드(R1~22) 동안 Round MVP를 두번째로 많이 받은 선수와 수상 횟수를 바르게 짝지은 것을 고르시오. (5점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 울산 주니오 - 3회</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 포항 일류첸코 - 2회</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 상주 강상우 - 2회</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 울산 이청용 - 2회</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 서울 한승규 - 2회</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">19.</p>
+										<p class="tit">다음 사진은 광주FC 한 선수의 어릴적 사진이다. 이 선수는 광주FC 유소년팀 출신으로, 빠른 주력과 성실한 플레이가 장점이다. 지난 14라운드 인천전에서 멀티골을 터트리며 팀의 역전승을 이끌기도 했던 이 선수는 누구일까? (*사진출처 : 광주FC 인스타그램) (3점)</p>
+										<div class="example in-img">
+											<img src="resources/images/quiz/ex19.jpg" alt="quiz">
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 펠리페</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 여름</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 이으뜸</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 김창수</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 엄원상</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">20.</p>
+										<p class="tit">K리그의 프로모션 비디오 "A day without K LEAGUE"에서는 K리그를 대표하는 여러 스타선수들이 독특한 모습으로 등장한다. 이는 K리그가 없어진 세상에서 새로운 직업을 가지게된 선수들을 표현한 모습인데, 그렇다면 다음중 선수와 선수의 새로운 직업으로 알맞게 이어지지 않은 것을 고르시오. (2점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://youtu.be/oN-q-mz9XZ0" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 조재완 : 회오리 감자 판매</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 주니오 : 공무원</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 염기훈 : 택배기사</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 헨리 : 주차 안내요원</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 정승원 : 영화배우</label></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="quiz_finish.html">
+						<img src="resources/images/sub/btn_submit.png" alt="제출하기">
+					</a>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2019 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">		
+		$(document).ready(function(){
+			myScroll1 = new IScroll('.tbl-scroll',{
+				scrollX: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">승인신청 확인</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="approval-wrap">
+					<h3>육성선수 - 배번 변경</h3>
+					<div class="filedown-area">
+						<a href="#none">육성선수 – 선수 계약 양도(웨이버)선수 계약 양도(웨이버)선수 계약 양도(웨이버).doc</a>
+					</div>	
+					<div class="tbl-scroll">
+						<div class="scroll">
+							<div class="tbl-type">							
+								<table class="tbl">
+									<thead>
+										<tr>
+											<th rowspan="2">구단</th>
+											<th rowspan="2">선수명</th>									
+											<th rowspan="2">생년월일</th>
+											<th rowspan="2">위치</th>
+											<th colspan="2">배번</th>										
+											<th rowspan="2">비고</th>
+										</tr>
+										<tr>
+											<th>변경 전</th>
+											<th>변경 후</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>											
+											<td>롯데 자이언츠</td>
+											<td>다이아몬드</td>
+											<td>1996. 5. 30</td>
+											<td>외야수</td>
+											<td>999</td>
+											<td>
+												<input type="text" name="" class="ipt" value="" placeholder="" />
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="" selected>직접입력</option>
+													<option value="">텍스트정리 파일 참조</option>
+												</select>
+												<input type="text" name="" class="ipt direct" value="" placeholder="직접입력 내용" />
+											</td>											
+										</tr>
+										<tr>											
+											<td>롯데 자이언츠</td>
+											<td>다이아몬드</td>
+											<td>1996. 5. 30</td>
+											<td>외야수</td>
+											<td>999</td>
+											<td>
+												<input type="text" name="" class="ipt" value="" placeholder="" />
+											</td>
+											<td>
+												<select name="" id="">
+													<option value="" selected>직접입력</option>
+													<option value="">텍스트정리 파일 참조</option>
+												</select>
+												<input type="text" name="" class="ipt direct" value="" placeholder="직접입력 내용" />
+											</td>											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="btn-area">
+						<a href="#none" class="btn-modify">수정</a>
+						<a href="#none" class="btn-cancel">취소</a>
+					</div>
+				</div>				
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

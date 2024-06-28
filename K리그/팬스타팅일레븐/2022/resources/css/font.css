@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'scd';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/S-CoreDream-3Light.eot');
+  src: url('../font/S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'), url('../font/S-CoreDream-3Light.woff') format('woff');
+}
+@font-face {
+  font-family:'scd';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/S-CoreDream-5Medium.eot');
+  src: url('../font/S-CoreDream-5Medium.eot?#iefix') format('embedded-opentype'), url('../font/S-CoreDream-5Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'scd';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/S-CoreDream-6Bold.eot');
+  src: url('../font/S-CoreDream-6Bold.eot?#iefix') format('embedded-opentype'), url('../font/S-CoreDream-6Bold.woff') format('woff');
+}
+@font-face {
+  font-family:'scd';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/S-CoreDream-7ExtraBold.eot');
+  src: url('../font/S-CoreDream-7ExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/S-CoreDream-7ExtraBold.woff') format('woff');
+}

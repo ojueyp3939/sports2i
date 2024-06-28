@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2020 K리그 마스코트 반장선거</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// services bxSlider
+			$("#profile").bxSlider({
+				controls: true,
+				mode: 'horizontal',
+				pager: false,
+				moveSlides: 1,
+				maxSlides: 8,
+				ariaHidden: true,
+				touchEnabled: false,
+				infiniteLoop: false,
+				hideControlOnEnd: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<!-- <div class="my-box">
+					<div class="profile">
+						<img src="">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div> -->
+				<div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="profile-wrap">
+					<div class="info-box big">
+						<div class="emb">
+							<img src="resources/images/emb/AY.png" />
+						</div>
+						<p class="info">
+							<span>강원FC</span>
+							<span class="mascot-name">강웅이</span>
+						</p>
+						<a href="" target="_blank">
+							<!-- <i class="insta"></i> -->
+							<i class="twitter"></i>
+						</a>
+					</div>
+					<div>
+						<ul class="porfile-pic" id="profile">
+							<li>
+								<img src="resources/images/mascot/AY/AY-00.png" />
+							</li>
+							<li>
+								<img src="resources/images/mascot/AY/AY-01.png" />
+							</li>
+							<li>
+								<img src="resources/images/mascot/AY/AY-02.png" />
+							</li>
+						</ul>
+					</div>
+					<div class="profile-box">
+						<!-- PC ver -->
+						<table class="tbl">
+							<colgroup>
+								<col width="150px">
+								<col width="300px">
+								<col width="200px">
+								<col width="300px">
+							</colgroup>
+							<tr>
+								<th>이름</th>
+								<td>
+									<div>
+										경남이
+									</div>
+								</td>
+								<th>등번호</th>
+								<td><div>234</div></td>
+							</tr>
+							<tr>
+								<th>영어이름</th>
+								<td><div></div></td>
+								<th>좋아하는 선수</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td><div></div></td>
+								<th>좋아하는 음식</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>성별</th>
+								<td><div></div></td>
+								<th>고향</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>종족</th>
+								<td><div></div></td>
+								<th>가족관계</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>키</th>
+								<td><div></div></td>
+								<th>취미</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>몸무게</th>
+								<td><div></div></td>
+								<th>특기</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>MBTI</th>
+								<td colspan="3">
+									<div>ㅎㅁㄴㅇㅎㅁㄴㅇ</div>
+								</td>
+							</tr>
+							<tr class="big">
+								<th>자기소개<br />한마디</th>
+								<td colspan="3">
+									<div></div>
+								</td>
+							</tr>
+						</table>
+						<!-- MOBILE ver  -->
+						<table class="tbl mb">
+							<colgroup>
+								<col width="140px">
+								<col width="*">
+							</colgroup>
+							<tr>
+								<th>이름</th>
+								<td>
+									<div>
+										경남이
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>등번호</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>영어이름</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>좋아하는 선수</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>좋아하는 음식</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>성별</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>고향</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>종족</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>가족관계</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>키</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>취미</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>몸무게</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th>특기</th>
+								<td><div></div></td>
+							</tr>
+							<tr>
+								<th colspan="2">자기소개 한마디</th>
+							</tr>
+							<tr class="big">
+								<td colspan="2">
+									<div></div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="video"></div>
+					<p class="color-tit red">[<span>응원댓글</span>]</p>
+					<div class="chat-wrap">
+						<ul class="chat-box">
+							<li class="team">
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li class="team">
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이
+									응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li class="team">
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이
+									응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li class="team">
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이
+									응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ 강웅이
+									응원해주세요~~~ 여러분~~~ 강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+						</ul>
+						<div class="input-box">
+							<input type="text" maxlength="100" placeholder="응원 댓글을 입력해주세요.">
+							<i class="remove-btn"></i></i>
+							<button class="input-btn">
+								전송
+							</button>
+						</div>
+					</div>
+					<div class="pagenation">
+						<a class="prev" href="">
+							<span>prev</span>
+						</a>
+						<span class="num">
+							<a href="">1</a>
+							<a href="">2</a>
+							<a class="on" href="">3</a>
+							<a href="">4</a>
+							<a href="">5</a>
+						</span>
+						<a class="next" href="">
+							<span>next</span>
+						</a>
+					</div>
+				</section>
+				<div class="final-box">
+					<a class="btn" href="vote.html">
+						<img class="pc" src="resources/images/sub/btn_vote.png" alt="투표하기">
+						<img class="mobile" src="resources/images/sub/btn_vote_s.png" alt="투표하기">
+					</a>
+					<a class="btn" href="main.html">
+						<img class="pc" src="resources/images/sub/btn_back.png" alt="뒤로가기">
+						<img class="mobile" src="resources/images/sub/btn_back_s.png" alt="뒤로가기">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

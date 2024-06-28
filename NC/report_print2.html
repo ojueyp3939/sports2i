@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="NC 다이노스 D-Base"/>
+    <meta name="author" content="NC 다이노스 D-Base"/>
+	<meta name="keywords" content="NC 다이노스 D-Base" />
+	<title>NC 다이노스 D-Base</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<style>
+		html,body {background-color:#fff;}
+		.print-tit {margin-bottom:20px;}
+		.print-tit span {font-size:25px;color:#04152b;font-weight:700;vertical-align:bottom;}
+		.print-tit img {width:49px;margin-right:12px;}
+
+		#contents .board {border:1px solid #ddd;}
+		.report .left-zone .board.date {height:386px;}
+		.report .left-zone .board.date .box {padding:40px 18px 25px;}
+		.report .left-zone .board.date.in-dh .box {padding-bottom:0;}
+		.report .left-zone .board.date.in-dh .box.in-img {text-align:left;}
+		.report .left-zone .board.date.in-dh .box.in-img {height:155px}
+		.report .right-zone .board {padding-right:17px !important;}
+	</style>
+</head>
+
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="report">
+				<div class="print-tit">
+					<img src="resources/images/print/icon_logo.png" al="NC Dinos">
+					<span>벤치리포트</span>
+				</div>
+				<section class="left-zone">
+					<div class="board date in-dh">
+						<div class="box">
+							<ul class="day-box">
+								<li class="prev">
+									<a href="#"></a>
+								</li>
+								<li class="day-tit">
+									<span class="date">2023.08.04 (금)</span>
+								</li>
+								<li class="next">
+									<a href="#"></a>
+								</li>
+							</ul>
+							<p class="tit-team">키움<span>vs</span>NC</p>
+							<ul class="toggle">
+								<li class="on"><a href="">DH1</a></li>
+								<li><a href="">DH2</a></li>
+							</ul>
+							<ul class="list">
+								<li>
+									<span>이닝</span>
+									<select>
+										<option value="">1</option>
+									</select>
+								</li>
+								<li>
+									<span>초말</span>
+									<select>
+										<option value="">초</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div class="box in-img">
+							<img src="resources/images/contents/img_footnote.png" alt="구질 - 직, 커, 우슬, 좌슬, 체, 포, 싱, 투, 컷, 너 / 결과 - 스트, 볼, 스윙, 파울, 안타, 범타 / 옵션 / 타구 랭크">
+						</div>
+					</div>
+					<div class="board date">
+						<div class="box">
+							<ul class="day-box">
+								<li class="prev">
+									<a href="#"></a>
+								</li>
+								<li class="day-tit">
+									<span class="date">2023.08.04 (금)</span>
+								</li>
+								<li class="next">
+									<a href="#"></a>
+								</li>
+							</ul>
+							<p class="tit-team">키움<span>vs</span>NC</p>
+							<ul class="list">
+								<li>
+									<span>이닝</span>
+									<select>
+										<option value="">1</option>
+									</select>
+								</li>
+								<li>
+									<span>초말</span>
+									<select>
+										<option value="">초</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+						<div class="box in-img">
+							<img src="resources/images/contents/img_footnote.png" alt="구질 - 직, 커, 우슬, 좌슬, 체, 포, 싱, 투, 컷, 너 / 결과 - 스트, 볼, 스윙, 파울, 안타, 범타 / 옵션 / 타구 랭크">
+						</div>
+					</div>
+					<div class="board data">
+						<div class="box">
+							<img class="pic" src="resources/images/contents/img_pic.png" alt="신짱구구구">
+							<dl>
+								<dt>
+									<span>NO.17</span> 신짱구구구구
+								</dt>
+								<dd>
+									· 투구수 10개    
+								</dd>
+								<dd>
+									· K:0
+								</dd>
+							</dl>
+							<div class="tb-box">
+								<table class="tb-mini fixed">
+									<colgroup>
+										<col width="">
+										<col width="32px">
+										<col width="32px">
+										<col width="32px">
+										<col width="32px">
+										<col width="32px">
+										<col width="32px">
+									</colgroup>
+									<tr>
+										<th>구종</th>
+										<th>최저</th>
+										<th>최고</th>
+										<th>평균</th>
+										<th>S</th>
+										<th>B</th>
+										<th>총투구</th>
+									</tr>
+									<tr>
+										<td>직/투/싱</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>슬라/컷</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>체인</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>포크</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>커/너</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="right-zone">
+					<div class="board">
+						<div class="box">
+							<table class="tb-xs">
+								<colgroup>
+									<col width="60px">
+								</colgroup>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">투</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">포</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">타</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td>3B 1S</td>
+									<td>무사 주자없음</td>
+								</tr>
+								<tr>
+									<td>6-2</td>
+									<td>볼넷</td>
+								</tr>
+							</table>
+							<div class="location">
+								<div class="s2i_point"></div>
+							</div>
+							<div class="tb-scroll">
+								<table class="tb-xs">
+									<colgroup>
+										<col width="23px;">
+									</colgroup>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="box">
+							<table class="tb-xs">
+								<colgroup>
+									<col width="60px">
+								</colgroup>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">투</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">포</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">타</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td>3B 1S</td>
+									<td>무사 주자없음</td>
+								</tr>
+								<tr>
+									<td>6-2</td>
+									<td>볼넷</td>
+								</tr>
+							</table>
+							<div class="location">
+								<div class="s2i_point"></div>
+							</div>
+							<div class="tb-scroll">
+								<table class="tb-xs">
+									<colgroup>
+										<col width="23px;">
+									</colgroup>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="box">
+							<table class="tb-xs">
+								<colgroup>
+									<col width="60px">
+								</colgroup>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">투</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">포</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">타</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td>3B 1S</td>
+									<td>무사 주자없음</td>
+								</tr>
+								<tr>
+									<td>6-2</td>
+									<td>볼넷</td>
+								</tr>
+							</table>
+							<div class="location">
+								<div class="s2i_point"></div>
+							</div>
+							<div class="tb-scroll">
+								<table class="tb-xs">
+									<colgroup>
+										<col width="23px;">
+									</colgroup>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="box">
+							<table class="tb-xs">
+								<colgroup>
+									<col width="60px">
+								</colgroup>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">투</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">포</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">타</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td>3B 1S</td>
+									<td>무사 주자없음</td>
+								</tr>
+								<tr>
+									<td>6-2</td>
+									<td>볼넷</td>
+								</tr>
+							</table>
+							<div class="location">
+								<div class="s2i_point"></div>
+							</div>
+							<div class="tb-scroll">
+								<table class="tb-xs">
+									<colgroup>
+										<col width="24px;">
+									</colgroup>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="box on">
+							<table class="tb-xs">
+								<colgroup>
+									<col width="60px">
+								</colgroup>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">투</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">포</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<span class="point-txt">타</span>
+										99 홍길동 左
+									</td>
+								</tr>
+								<tr>
+									<td>3B 1S</td>
+									<td>무사 주자없음</td>
+								</tr>
+								<tr>
+									<td>6-2</td>
+									<td>볼넷</td>
+								</tr>
+							</table>
+							<div class="location">
+								<div class="s2i_point"></div>
+							</div>
+							<div class="tb-scroll">
+								<table class="tb-xs">
+									<colgroup>
+										<col width="23px;">
+									</colgroup>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td></td>
+										<td class="point-txt">C</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+					<div class="board graphic">
+						<div class="left">
+							<table>
+								<colgroup>
+									<col width="30px;">
+								</colgroup>
+								<tr>
+									<th>우타자</th>
+									<td>
+										<ul>
+											<li>
+												<div></div>
+												<p class="tit">직/투/싱 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">슬라/컷 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">체인 (4)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">포크 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">커/너 (7)</p>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+							<table>
+								<colgroup>
+									<col width="30px;">
+								</colgroup>
+								<tr>
+									<th>좌타자</th>
+									<td>
+										<ul>
+											<li>
+												<div></div>
+												<p class="tit">직/투/싱 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">슬라/컷 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">체인 (4)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">포크 (7)</p>
+											</li>
+											<li>
+												<div></div>
+												<p class="tit">커/너 (7)</p>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</table>
+						</div>
+						<div class="right">
+							<table>
+								<colgroup>
+									<col width="30px;">
+									<col width="142px;">
+									<col width="30px;">
+									<col width="142px;">
+								</colgroup>
+								<tr>
+									<th>현재이닝분포도</th>
+									<td>
+										<div></div>
+									</td>
+									<th>초구</th>
+									<td>
+										<div></div>
+									</td>
+								</tr>
+							</table>
+							<table>
+								<colgroup>
+									<col width="30px;">
+									<col width="142px;">
+									<col width="30px;">
+									<col width="142px;">
+								</colgroup>
+								<tr>
+									<th>1S 이후</th>
+									<td>
+										<div></div>
+									</td>
+									<th>2S 이후</th>
+									<td>
+										<div></div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'nbg';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumBarunGothic.eot');
+  src: url('../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothic.woff') format('woff');
+}
+@font-face {
+  font-family:'nbg';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumBarunGothicBold.eot');
+  src: url('../font/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicBold.woff') format('woff');
+}

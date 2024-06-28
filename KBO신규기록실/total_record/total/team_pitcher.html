@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, KBO 신규기록실" />
+		<title>KBO 신규기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/tracking.css" />
+		<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="header-wrap">
+					<h1><a href="../Main.html"><img src="../../resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a></h1>
+					<div class="search-area">
+						<input type="text" class="ipt ipt-search" />
+						<a href="" class="btn-search"><img src="../../resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list">
+							<li><a href="#none">김현수 (74) LG</a></li>
+							<li><a href="#none">김현수 (82) 롯데</a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu-list clear">
+						<li class="on"><a href="">전반 기록실</a></li>
+						<li><a href="">팀 기록실</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="player-record">
+						<!-- 통산 기록실 -->
+						<div class="player-info-box">
+							<h2>통산 기록실</h2>
+							<ul class="data-list tab2 clear">
+								<li><a href="#none">개인 타자</a></li>
+								<li><a href="#none">개인 투수</a></li>
+								<li><a href="#none">팀 타자</a></li>
+								<li class="on"><a href="#none">팀 투수</a></li>
+							</ul>
+							
+							<div class="data-box clear">
+								<input type="checkbox"><label>팀명으로 구분</label>
+							</div>
+							<div class="btn-tbl-area">
+								<a href="" class="btn-none btn-prev">prev</a>
+								<a href="" class="btn-next on">next</a>
+							</div>
+
+							<div class="tbl-box">
+								<table class="tbl tbl-data" summary="통산 기록실">
+									<caption>통산 기록실</caption>
+									<colgroup>
+										<col style="width:7%;"/>
+										<col style="width:8%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+										<col style="width:7%;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th><a href="#none" class="th-fix">구단</a></th>
+											<th><a href="#none" class="btn-align">경기</a></th>
+											<th><a href="#none" class="btn-align">평균자책점</a></th>
+											<th><a href="#none" class="btn-align">승</a></th>
+											<th><a href="#none" class="btn-align">패</a></th>
+											<th><a href="#none" class="btn-align">세이브</a></th>
+											<th><a href="#none" class="btn-align">홀드</a></th>
+											<th><a href="#none" class="btn-align">승률</a></th>
+											<th><a href="#none" class="btn-align">이닝</a></th>
+											<th><a href="#none" class="btn-align">탈삼진</a></th>
+											<th><a href="#none" class="btn-align">실점</a></th>
+											<th><a href="#none" class="btn-align">자책</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-fix">1</td>
+											<td class="col-fix">삼성</td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="col-fix">1</td>
+											<td class="col-fix">삼성</td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="col-fix" colspan="2">합계</td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="tbl-box">
+								<table class="tbl tbl-data" summary="팀 투수">
+									<caption>팀 투수</caption>
+									<colgroup>
+										<col style="width:7.3%;"/>
+										<col style="width:7.4%;"/>
+										<col style="width:7.3%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+										<col style="width:6.5%;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th><a href="#none" class="th-fix">구단</a></th>
+											<th><a href="#none" class="btn-align">경기</a></th>
+											<th><a href="#none" class="btn-align">피안타</a></th>
+											<th><a href="#none" class="btn-align">피홈런</a></th>
+											<th><a href="#none" class="btn-align">볼넷</a></th>
+											<th><a href="#none" class="btn-align">HP</a></th>
+											<th><a href="#none" class="btn-align">완투</a></th>
+											<th><a href="#none" class="btn-align">완봉</a></th>
+											<th><a href="#none" class="btn-align">투구수</a></th>
+											<th><a href="#none" class="btn-align">WHIP</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-fix">1</td>
+											<td class="col-fix">삼성</td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="col-fix">2</td>
+											<td class="col-fix"><a href="">키움</a></td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="col-fix" colspan="2">합계</td>
+											<td class="on">0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box clear">
+					<div class="company">
+						<h1><img src="../../resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+						<p>Copyright © sports2i Corp.</p>
+					</div>
+					<div class="txt-company">
+						<p>
+							※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우 반드시 스포츠투아이㈜에 문의하시기 바랍니다.<br/>
+							<span>※ 본 사이트는 PTS 및 HTS를 통해 추적된 투구, 타구를 바탕으로 구현됐으며, 제 2 구장(포항, 울산, 청주 등)에서 열린 경기는 포함하지 않습니다.</span>
+						</p>
+						<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+						<p>전화: 02-3445-7116   팩스: 031-707-7165</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

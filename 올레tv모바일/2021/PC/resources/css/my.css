@@ -1,0 +1,139 @@
+﻿@charset "utf-8";
+
+#contents.my {padding-top:80px;}
+
+.my-wrap .txt-cancel {width:26px;padding:5px;}
+/* My */
+.set-user {padding-bottom:45px;text-align:center;}
+.set-user .tit-user {display:inline-block;position:relative;color:#323232;font-size:26px;font-weight:100;}
+.set-user .set-alert {position:absolute;top:0;right:-40px;width:32px;height:32px;padding:5px;}
+.my-wrap .tit {margin:45px 0 16px;}
+.my-wrap .tit-my {display:inline-block;margin:0 0 16px;padding-right:40px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/sub/ico_my.png') no-repeat 100% 50%/24px;cursor:pointer;}
+.my-wrap .my-team .team-info {padding:18px 0 18px 30px;border-radius:20px;background:#eaf8fe;}
+.my-wrap .my-team .team-info .emb {float:left;position:relative;width:80px;height:80px;border-radius:50%;background:#fff;}
+.my-wrap .my-team .team-info .emb img {position:absolute;top:50%;left:50%;width:60px;transform:translate(-50%, -50%);}
+.my-wrap .my-team .team-info .info-record {float:left;padding-left:18px;}
+.my-wrap .my-team .team-info .info-record dt {padding:15px 0 7px;color:#06c;font-size:20px;font-weight:700;}
+.my-wrap .my-team .team-info .info-record dd {font-size:16px;}
+.my-wrap .my-team .team-info .info-record dd strong {font-weight:700;}
+
+/* My > 서브타이틀 공통 */
+.tit-sub {display:inline-block;padding:50px 0 18px;color:#333;font-size:24px;}
+
+/* My > 설정 타이틀 공통 */
+.my-wrap .tit-set {padding:20px 0 18px;color:#333;font-size:16px;}
+
+/* My > 주간 경기 일정 */
+.my-wrap .my-team .week-game .tit-sub span {margin-left:5px;color:#06c;}
+.my-wrap .my-team .week-game .game-list ul li {position:relative;border-bottom:0;cursor:inherit;}
+.my-wrap .my-team .week-game .game-list ul li .date {position:absolute;top:50%;left:-13.542vw;width:80px;font-size:20px;text-align:center;transform:translateY(-50%);}
+.my-wrap .my-team .week-game .game-list ul li .date .num {padding-top:3px;font-weight:700;}
+
+/* My > 시즌 순위 */
+.my-wrap .season-rank .season-date {display:inline-block;position:relative;padding-left:12px;}
+.my-wrap .season-rank .season-date::before {content:"";position:absolute;top:3px;left:5px;width:1px;height:8px;background:#e5e5e5;}
+.my-wrap .season-rank .season-graph {height:324px;}
+.my-wrap .season-rank .season-graph canvas {width:100%;height:100%;}
+
+/* My > 관심선수 */
+.my-wrap .attention-player .tit {margin:50px 0 24px;}
+.my-wrap .attention-player ul li {/*width:322px !important;*/height:220px;margin-right:26px;}
+.my-wrap .attention-player ul li:hover {transform:none;box-shadow:none;}
+.my-wrap .attention-player ul li.add {width:152px !important;}
+.my-wrap .attention-player ul li dl dt {padding:13px 0 5px;font-size:18px;}
+.my-wrap .attention-player ul li dl dd.record {font-size:16px;}
+.my-wrap .attention-player ul li .sb {right:-54px;bottom:-26px;width:260px;height:167px;}
+.my-wrap .attention-player ul li.SK .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_SK.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.HT .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_HT.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.OB .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_OB.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.LT .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_LT.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.NC .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_NC.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.SS .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_SS.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.LG .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_LG.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.WO .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_WO.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.HH .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_HH.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player ul li.KT .sb {background:url('https://image-ktotm.sports2i.com/Web/resources/images/emb/sb_409_283_KT.png') no-repeat 100% 100%/260px;}
+.my-wrap .attention-player .bx-wrapper .bx-controls-direction a {transform:none;}
+.my-wrap .attention-player .swiper-button-prev {top:-72px;right:56px;left:auto;width:48px;height:48px;margin-top:0;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -384px/48px;}
+.my-wrap .attention-player .swiper-button-prev:hover {background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -576px/48px;}
+.my-wrap .attention-player .swiper-button-next {top:-72px;right:0;width:48px;height:48px;margin-top:0;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -480px/48px;}
+.my-wrap .attention-player .swiper-button-next:hover {background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -672px/48px;}
+
+/* My > 찜영상 */
+.my-wrap .vs-team .tit {margin:50px 0 12px;}
+.my-wrap .vs-team .vs-box {margin-right:23px;}
+.my-wrap .vs-team .vs-box ul li {padding:17px 0;}
+.my-wrap .vs-team .swiper-button-prev {top:-60px;right:56px;left:auto;width:48px;height:48px;margin-top:0;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -384px/48px;}
+.my-wrap .vs-team .swiper-button-prev:hover {background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -576px/48px;}
+.my-wrap .vs-team .swiper-button-next {top:-60px;right:0;width:48px;height:48px;margin-top:0;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -480px/48px;}
+.my-wrap .vs-team .swiper-button-next:hover {background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bx_button.png') no-repeat 0 -672px/48px;}
+
+/* My팀 미설정 '~하기'버튼 공통 */
+.my-wrap.no-team .btn-due {display:inline-block;padding-right:13px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_due.png') no-repeat 100% 64%/6px;}
+
+/* My팀 미설정 */
+.my-wrap.no-team .my-team .team-info {padding:38px 0;}
+.my-wrap.no-team .my-team .team-info dl {text-align:center;}
+.my-wrap.no-team .my-team .team-info dl dt {padding-top:122px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/playball/bg_noteam.png') no-repeat 50% 19px/90px;font-size:20px;font-weight:700;}
+.my-wrap.no-team .my-team .team-info dl .txt {padding:8px 0 29px;font-size:18px;}
+
+/* My팀 미설정 > 찜영상 */
+.my-wrap .vs-team .no-video {padding:123px 0 55px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_no.png') no-repeat 50% 45px/58px;color:#828282;font-size:18px;text-align:center;}
+
+/* 관심선수 공통 */
+#contents.my-player {padding:48px 0 72px;}
+
+/* 관심선수 */
+#contents.my-player {height:100%;padding:24px 0 17px;background:#fff;}
+.my-wrap .player-box .selected-list li {display:table;float:left;width:46.8521%;height:120px;border-bottom:1px solid #f0f0f0;}
+.my-wrap .player-box .selected-list li:nth-child(2n+2) {float:right;}
+.my-wrap .player-box .selected-list li div {display:table-cell;vertical-align:middle;cursor:pointer;}
+.my-wrap .player-box .selected-list li .player-img {width:93px;}
+.my-wrap .player-box .selected-list li .player-img .init {display:block;position:relative;width:91px;}
+.my-wrap .player-box .selected-list li .player-img .init img:first-child {width:91px;height:91px;}
+.my-wrap .player-box .selected-list li .player-img .init img:last-child {position:absolute;right:-4px;bottom:-2px;width:40px;}
+.my-wrap .player-box .selected-list li .name {width:229px;padding-left:40px;font-size:16px;font-weight:700;}
+.my-wrap .player-box .selected-list li .record {width:318px;text-align:right;}
+.my-wrap .player-box .selected-list li .record p {display:inline-block;color:#333;font-size:16px;}
+.my-wrap .player-box .selected-list li .record p span {padding-left:7px;color:#0064c9;font-weight:700;}
+.my-wrap .player-box .selected-list li .record p:nth-child(2) {padding-left:16px;}
+.my-wrap .player-box .player-add {clear:both;padding-top:60px;text-align:center;}
+.my-wrap .player-box .player-add a {display:inline-block;padding-right:24px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/sub/bg_add.png') no-repeat 100% 50%/14px;color:#828282;}
+
+/* 관심선수 > 관심선수 추가 */
+.my-player {padding-top:30px;}
+.my-player .my-wrap .search-box {position:relative;height:40px;margin:9px 0 20px;}
+.my-player .my-wrap .search-box input {width:100%;height:40px;padding-left:44px;border-bottom:1px solid #323232;color:#000;font-size:16px;line-height:40px;}
+.my-player .my-wrap .search-box input::placeholder {font-size:16px;}
+.my-player .my-wrap .search-box input:focus {outline:none;}
+.my-player .my-wrap .search-box .btn-search {position:absolute;top:4px;left:2px;width:32px;padding:5px;}
+.my-player .my-wrap .search-box .txt-cancel {position:absolute;top:6px;right:-5px;width:30px;}
+
+/* 관심선수 추가 > 팀선택 */
+.my-wrap .roster-wrap .player-area .roster-list li .pst {display:table-cell;width:32.482%;padding-left:10px;vertical-align:middle;}
+.my-wrap .roster-wrap .player-area .roster-list li .edit {display:table-cell;vertical-align:middle;}
+.my-wrap .roster-wrap .player-area .roster-list li .btn-edit {display:block;overflow:hidden;height:20px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/sub/bg_interest.png') no-repeat 50% 2px/19px;text-indent:-9999px;}
+.my-wrap .roster-wrap .player-area .roster-list li .btn-edit.delete {background-position:50% -18px;}
+
+/* 관심선수 추가 > 검색결과 없음 */
+.my-wrap .no-result {padding:123px 0 55px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_no.png') no-repeat 50% 45px/58px;color:#828282;font-size:18px;text-align:center;}
+
+/* 찜 영상 */
+.my-video {padding-top:46px;}
+.my-video .my-wrap .player-box .vs-team .vs-box {margin-right:0;}
+.my-video .my-wrap .player-box .vs-team .vs-box ul {overflow:hidden;}
+.my-video .my-wrap .player-box .vs-team .vs-box ul li {float:left;width:46.8521%;padding:17px 0;border-bottom:1px solid #f0f0f0;}
+.my-video .my-wrap .player-box .vs-team .vs-box ul li:nth-child(2n-2) {float:right;}
+.my-video .my-wrap .player-box .vs-team .vs-box .no-video {padding:123px 0 55px;background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_no.png') no-repeat 50% 45px/58px;color:#828282;font-size:18px;text-align:center;}
+.my-video .my-wrap .player-box .player-add {padding-top:60px;}
+.my-video .my-wrap .player-box .player-add a {background:url('https://image-ktotm.sports2i.com/Web/resources/images/common/bg_arrow_more.png') no-repeat 100% 50%/14px;}
+
+@media (max-width:1136px) {
+	/* My > 주간 경기 일정 */
+	.my-wrap .my-team .week-game .game-list ul li .date {left:-153px;}
+}
+
+@media (max-width:1921px) {
+	/* My > 주간 경기 일정 */
+	.my-wrap .my-team .week-game .game-list ul li .date {left:-260px;}
+}

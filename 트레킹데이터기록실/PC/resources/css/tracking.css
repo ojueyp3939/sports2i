@@ -1,0 +1,124 @@
+@charset "utf-8";
+
+/* 메인 */
+.main {padding-bottom:109px;}
+.schedule-preview .player-info-box .record-info {position:absolute;top:73px;right:95px;}
+.schedule-preview .player-info-box .player .record {margin-top:12px;}
+
+/* 타자, 투수 */
+.top-player {padding-top:41px;}
+.top-player .tit-preview {padding:40px 0 49px;}
+.top-player .player-list li {float:left;width:25%;text-align:center;}
+.top-player .player-list li dl dt {padding-bottom:17px;color:#2e2e2e;font-size:16px;}
+.top-player .player-list li dl .player .photo {display:block;width:140px;margin:0 auto;}
+.top-player .player-list li dl .player .name {display:block;padding:13px 0 11px;color:#000;font-size:16px;font-weight:700;}
+.top-player .player-list li dl .speed {display:inline-block;padding:11px 27px;border-radius:8px;background:#eef3fa;color:#000;font-size:24px;font-weight:700;}
+.top-player .player-list li dl .speed span {margin-left:3px;color:#5b5b5b;font-size:16px;}
+.top-player .tip-box {padding:47px 0;}
+.top-player .tip-box .tip {float:left;color:#2e2e2e;font-size:14px;}
+.top-player .tip-box .btn-area {float:right;text-align:right;}
+
+/* 선발투수 프리뷰 */
+.top-player-record {padding-bottom:24px;}
+.top-player-record .tit-preview {width:1340px;background:none;font-weight:900;}
+.top-player-record .record-box {width:1340px;margin-bottom:10px;}
+.top-player-record .record-box .player {float:left;padding-top:5px;}
+.top-player-record .record-box .player .emb {float:left;width:44px;margin-right:10px;}
+.top-player-record .record-box .player .name {float:left;padding-top:2px;color:#000;font-size:20px;font-weight:700;}
+.top-player-record .record-box .record-list {float:right;position:relative;z-index:20;}
+.top-player-record .record-box .record-list::before {content:"";position:absolute;top:0;left:0;z-index:-10;width:298px;height:38px;border:1px solid #2a2a2a;border-radius:20px;}
+.top-player-record .record-box .record-list li {float:left;width:100px;text-align:center;}
+.top-player-record .record-box .record-list li a {display:block;padding:12px 0;color:#2a2a2a;font-size:14px;}
+.top-player-record .record-box .record-list li.on a {background:#2a2a2a;color:#fff;border-radius:20px;}
+.top-player-record .tbl-record {}
+.top-player-record .tbl-record thead tr th {padding:11px 0;background:#206cbb;color:#fff;font-size:16px;font-weight:700;}
+.top-player-record .tbl-record thead tr th:first-child {border-radius:8px 0 0 8px;}
+.top-player-record .tbl-record thead tr th:last-child {border-radius:0 8px 8px 0;}
+.top-player-record .tbl-record tbody tr td {padding:22px 0 21px;border-bottom:1px solid #eee;color:#000;font-size:16px;text-align:center;}
+
+/* 선수 */
+/* 선수 공통 */
+.player-record .player-info-box h3 {padding-bottom:27px;color:#206cbb;font-size:26px;font-weight:900;}
+.player-record .player-info-box .tip {padding-top:10px;color:#2e2e2e;font-size:14px;font-weight:700;text-align:right;}
+.player-record .player-info-box .graph-box {position:relative;}
+.player-record .player-info-box .graph-box .copyright {position:absolute;right:14px;bottom:6px;font-size:11px;}
+.player-record .no-record {display:table;width:100%;background:url('../images/common/no_record.png') no-repeat 50% 45%/60px;}
+.player-record .no-record p {display:table-cell;padding-top:70px;color:#666;font-size:14px;font-weight:700;vertical-align:middle;}
+
+
+.player-record {position:relative;padding:0 0 109px;}
+.player-record h2 {position:relative;z-index:10;padding:40px 0 39px;color:#000;font-size:26px;font-weight:700;}
+.player-record h2::before {content:"";position:absolute;top:0;left:-500%;z-index:-10;width:1000%;height:110px;background:#f8f8f8;}
+.player-record h2 .emb {display:inline-block;width:44px;margin-right:5px;}
+
+/* 선수 > 시즌랭킹, 리그 릴리스포인트 */
+.player-record .player-info-box {padding:47px 0 49px;text-align:center;}
+.player-record .player-info-box .player {float:left;width:226px;}
+.player-record .player-info-box .player h3 {text-align:left;}
+.player-record .player-info-box .player .record {padding-left:6px;}
+.player-record .player-info-box .player .record li {margin-bottom:36px;text-align:left;}
+.player-record .player-info-box .player .record-info {position:relative;top:32px;left:6px;}
+.player-record .player-info-box .graph-box-wrap {float:right;width:934px;}
+.player-record .player-info-box .graph-box-wrap h3 {text-align:left;}
+.player-record .player-info-box .graph-box-wrap .dotted-graph {height:475px;border:1px solid #2f2f2f;border-radius:9px;}
+/* 선수 > 히트맵 */
+.player-record .player-info-box .hitmap-graph {height:669px;border:1px solid #2f2f2f;border-radius:9px;}
+/* 선수 > PTS/HTS 데이터 */
+.player-record .data-list {text-align:center;}
+.player-record .data-list li {display:inline-block;position:relative;padding:0 46px;}
+.player-record .data-list li::before {content:"";position:absolute;top:5px;right:0;width:2px;height:10px;background:#e5e5e5;}
+.player-record .data-list li:last-child::before {content:none;}
+.player-record .data-list li a {display:block;color:#2a2a2a;font-size:18px;font-weight:700;}
+.player-record .data-list li.on a {color:#206cbb;}
+.player-record .data-box {padding:31px 0 11px;}
+.player-record .data-box .select-area {float:left;position:relative;}
+.player-record .data-box .select-area select {width:144px;height:40px;margin-right:-4px;padding-left:20px;border:1px solid #2a2a2a;background:url('../images/common/bg_select.png') no-repeat 94% 50%/8px;color:#2a2a2a;font-size:14px;font-weight:700;vertical-align:middle;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.player-record .data-box .select-area select:first-child {border-radius:4px 0 0 4px;}
+.player-record .data-box .select-area select:last-child {border-radius:0 4px 4px 0;}
+/* 시작일, 종료일 달력 */
+.player-record .data-box .select-area label,
+.player-record .data-box .select-area.select-type2 label {display:inline-block;width:144px;height:40px;margin-right:-4px;padding:12px 0 0 20px;border:1px solid #2a2a2a;font-family:'돋움';font-size:14px;font-weight:700;text-align:left;vertical-align:middle;box-sizing:border-box;}
+.player-record .data-box .select-area .ipt-calendar,
+.player-record .data-box .select-area.select-type2 .ipt-calendar {position:absolute;top:0;right:auto;left:144px;height:40px;}
+.player-record .data-box .select-area button,
+.player-record .data-box .select-area.select-type2 button {position:absolute;top:0;left:144px;width:144px;height:40px;background:url('../images/common/bg_select.png') no-repeat 94% 50%/8px;font-family:'NanumSquare';font-size:14px;text-indent:-9999px;}
+.player-record .data-box .select-area button:nth-of-type(2),
+.player-record .data-box .select-area.select-type2 button:nth-of-type(2) {left:286px;}
+
+.player-record .data-box .btn-area {float:right;padding:0;text-align:center;}
+.player-record .data-box .btn-area a {display:block;float:left;padding:12px 0;border-radius:20px;font-size:14px;font-weight:700;}
+.player-record .data-box .btn-area .btn-search {width:100px;margin-right:10px;background:#2a2a2a;color:#fff;}
+.player-record .data-box .btn-area .btn-reset {width:80px;border:1px solid #2a2a2a;color:#2a2a2a;}
+.player-record .txt-state {padding-bottom:15px;color:#444;text-align:left;}
+.player-record .brokenline-graph {position:relative;height:669px;border:1px solid #2f2f2f;border-radius:9px;}
+.player-record .brokenline-graph .download-list {position:absolute;top:30px;right:15px;}
+.player-record .brokenline-graph .download-list li a {display:block;width:22px;height:22px;background:url('../images/common/ico_download.png') no-repeat 0 0;text-indent:-9999px;}
+.player-record .tbl-box p {position:relative;padding:0 0 19px 12px;color:#000;font-size:16px;font-weight:700;text-align:left;}
+.player-record .tbl-box p::before {content:"";position:absolute;top:6px;left:0;width:4px;height:4px;background:#000;}
+.player-record .tbl-box .tbl-data {margin-bottom:29px;text-align:center;}
+.player-record .tbl-box .tbl-data thead tr th {padding:11px 0;background:#206cbb;color:#fff;font-size:16px;font-weight:700;}
+.player-record .tbl-box .tbl-data thead tr th:first-child {border-radius:10px 0 0 10px;}
+.player-record .tbl-box .tbl-data thead tr th:last-child {border-radius:0 10px 10px 0;}
+.player-record .tbl-box .tbl-data tbody tr td {padding:21px 0;border-bottom:1px solid #eee;font-size:16px;}
+
+/* 순위 */
+.player-record.rank h2::before {content:none;}
+.player-record.rank .btn-tbl-area {padding-bottom:8px;text-align:right;}
+.player-record.rank .btn-tbl-area a {display:inline-block;width:32px;height:32px;text-indent:9999px}
+.player-record.rank .btn-tbl-area .btn-prev {background:url('../images/common/btn_calendar.png') no-repeat 0 0/cover;cursor:default;}
+.player-record.rank .btn-tbl-area .btn-next {background:url('../images/common/btn_calendar.png') no-repeat -31px 0/cover;cursor:default;}
+.player-record.rank .btn-tbl-area .btn-prev.on {background:url('../images/common/btn_calendar.png') no-repeat -64px 0/cover;cursor:pointer}
+.player-record.rank .btn-tbl-area .btn-next.on {background:url('../images/common/btn_calendar.png') no-repeat -96px 0/cover;cursor:pointer}
+.player-record.rank .btn-tbl-area .btn-none {cursor:default;}
+.player-record.rank .tbl-box {display:block;}
+.player-record.rank .tbl-box.hitter {}
+.player-record.rank .tbl-box .tbl-data thead tr th {position:relative;padding:21px 0;}
+.player-record.rank .tbl-box .tbl-data thead tr .th-fix::before {content:"";position:absolute;top:25px;right:0;width:2px;height:10px;background:#fff;}
+.player-record.rank .tbl-box .tbl-data thead tr th a {color:#fff;}
+.player-record.rank .tbl-box .tbl-data thead tr th .btn-align {position:relative;}
+.player-record.rank .tbl-box .tbl-data thead tr th .btn-align::before {content:"";position:absolute;bottom:-8px;left:50%;width:6px;height:3px;background:url('../images/common/tbl_align.png') no-repeat 0 0;transform:translateX(-50%);}
+.player-record.rank .tbl-box .tbl-data tbody tr td {background:#f7f8fa;}
+.player-record.rank .tbl-box .tbl-data tbody tr td.on {background:#ccdced;font-weight:700;}
+.player-record.rank .tbl-box .tbl-data tbody tr .col-fix {background:#fff;}
+.player-record.rank .tbl-box .tbl-data tbody tr .col-fix:nth-of-type(3) {border-right:1px solid #eee;}
+.player-record.rank .tbl-box .tbl-data tbody tr .accentuate {color:#206cbb;font-weight:700;}

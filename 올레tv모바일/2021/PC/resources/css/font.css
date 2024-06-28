@@ -1,0 +1,93 @@
+﻿@charset "utf-8";
+
+/* Noto */
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/NotoSans-Regular.eot');
+  src: url('../font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('../font/NotoSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NotoSans-Medium.eot');
+  src: url('../font/NotoSans-Medium.eot?#iefix') format('embedded-opentype'), url('../font/NotoSans-Medium.woff') format('woff');
+ }
+@font-face {
+  font-family:'noto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NotoSans-Bold.eot');
+  src: url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../font/NotoSans-Bold.woff') format('woff');
+}
+
+/* Spoqa */
+@font-face {
+  font-family:'spoqa';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/Spoqa Han Sans Light.eot');
+  src: url('../font/Spoqa Han Sans Light.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Light.woff') format('woff');
+ }
+ @font-face {
+   font-family:'spoqa';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../font/Spoqa Han Sans Regular.eot');
+   src: url('../font/Spoqa Han Sans Regular.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Regular.woff') format('woff');
+  }
+@font-face {
+  font-family:'spoqa';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/Spoqa Han Sans Bold.eot');
+  src: url('../font/Spoqa Han Sans Bold.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Bold.woff') format('woff');
+ }
+
+ /* Roboto */
+ @font-face {
+   font-family:'roboto';
+   font-style: normal;
+   font-weight: 100;
+   src: url('../font/Roboto-Regular.eot');
+   src: url('../font/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Roboto-Regular.woff') format('woff');
+ }
+ @font-face {
+   font-family:'roboto';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../font/Roboto-Medium.eot');
+   src: url('../font/Roboto-Medium.eot?#iefix') format('embedded-opentype'), url('../font/Roboto-Medium.woff') format('woff');
+ }
+  @font-face {
+    font-family:'roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../font/Roboto-Bold.eot');
+    src: url('../font/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('../font/Roboto-Bold.woff') format('woff');
+  }
+
+  /* Oswald */
+  @font-face {
+    font-family:'oswald';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../font/Oswald-Regular.eot');
+    src: url('../font/Oswald-Regular.eot?#iefix') format('embedded-opentype'), url('../font/Oswald-Regular.woff') format('woff');
+  }
+  @font-face {
+    font-family:'oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../font/Oswald-Medium.eot');
+    src: url('../font/Oswald-Medium.eot?#iefix') format('embedded-opentype'), url('../font/Oswald-Medium.woff') format('woff');
+  }
+   @font-face {
+     font-family:'oswald';
+     font-style: normal;
+     font-weight: 700;
+     src: url('../font/Oswald-Bold.eot');
+     src: url('../font/Oswald-Bold.eot?#iefix') format('embedded-opentype'), url('../font/Oswald-Bold.woff') format('woff');
+   }

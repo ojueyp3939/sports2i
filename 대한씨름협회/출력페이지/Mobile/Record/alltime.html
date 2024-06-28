@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll3 = new IScroll('#sosok',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+	</script>
+</head>
+
+<body onload="loaded()">
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header class="sub">
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+			<nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li class="on"><a href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+      <div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li><a href="../Record/top.html">TOP 5</a></li>
+							<li><a href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li class="on"><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전  -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd class="on"><a href="">개인전</a></dd>
+								<dd><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<!-- 선수  -->
+						<div class="btw-wrap">
+							<ul class="tab-sm">
+								<li class="on"><a href="">선수</a></li>
+								<li><a href="">팀</a></li>
+							</ul>
+							<select>
+								<option>통산</option>
+								<option>시즌</option>
+							</select>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										<span>항목1</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목2</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목3</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<div class="sosok-wrap many">
+							<div id="sosok" class="scroll-wrap">
+								<div class="scroller">
+									<ul class="sosok-tab">
+										<li><a href="">전체</a></li>
+										<li class="on"><a href="">동작</a></li>
+										<li><a href="">연수</a></li>
+										<li><a href="">부산</a></li>
+										<li><a href="">울산</a></li>
+										<li><a href="">안산</a></li>
+										<li><a href="">용인</a></li>
+										<li><a href="">수원</a></li>
+										<li><a href="">양평</a></li>
+										<li><a href="">경기광주</a></li>
+										<li><a href="">태안</a></li>
+										<li><a href="">증평</a></li>
+										<li><a href="">정읍</a></li>
+										<li><a href="">영월</a></li>
+										<li><a href="">의성</a></li>
+										<li><a href="">구미</a></li>
+										<li><a href="">창원</a></li>
+										<li><a href="">제주</a></li>
+										<li><a href="">영암</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<table class="tbl" summary="역대기록">
+							<caption>역대기록</caption>
+							<thead>
+								<tr>
+									<th>순위</th>
+									<th>기록</th>
+									<!-- 시즌 : 통산에는 hidden  -->
+									<th>시즌</th>
+									<!-- 팀 : 팀에는 hidden  -->
+									<th>이름</th>
+									<th>당시 소속팀</th>
+									<th>경기수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>12</td>
+									<!-- 시즌 : 통산에는 hidden  -->
+									<td>2019</td>
+									<!-- 팀 : 팀에는 hidden  -->
+									<td>김현수</td>
+									<td>동작구청씨름단</td>
+									<td>72</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+						<!-- 팀 -->
+						<div class="btw-wrap">
+							<ul class="tab-sm">
+								<li><a href="">선수</a></li>
+								<li class="on"><a href="">팀</a></li>
+							</ul>
+							<select>
+								<option>통산</option>
+								<option>시즌</option>
+							</select>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										<span>항목1</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목2</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목3</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<div class="sosok-wrap">
+							<ul class="sosok-tab">
+								<li><a href="">전체</a></li>
+								<li class="on"><a href="">동작</a></li>
+								<li><a href="">연수</a></li>
+								<li><a href="">부산</a></li>
+								<li><a href="">울산</a></li>
+								<li><a href="">안산</a></li>
+								<li><a href="">용인</a></li>
+								<li><a href="">수원</a></li>
+								<li><a href="">양평</a></li>
+								<li><a href="">경기광주</a></li>
+								<li><a href="">태안</a></li>
+								<li><a href="">증평</a></li>
+								<li><a href="">정읍</a></li>
+								<li><a href="">영월</a></li>
+								<li><a href="">의성</a></li>
+								<li><a href="">구미</a></li>
+								<li><a href="">창원</a></li>
+								<li><a href="">제주</a></li>
+								<li><a href="">영암</a></li>
+							</ul>
+						</div>
+						<table class="tbl" summary="역대기록">
+							<caption>역대기록</caption>
+							<thead>
+								<tr>
+									<th>순위</th>
+									<th>기록</th>
+									<!-- 시즌 : 통산에는 hidden  -->
+									<th>시즌</th>
+									<th>당시 소속팀</th>
+									<th>경기수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>12</td>
+									<!-- 시즌 : 통산에는 hidden  -->
+									<td>2019</td>
+									<td>동작구청씨름단</p></td>
+									<td>72</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<!-- 단체전 -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd><a href="">개인전(승점)</a></dd>
+								<dd class="on"><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<!-- 선수 -->
+						<div class="btw-wrap">
+							<ul class="tab-sm">
+								<li class="on"><a href="">통산</a></li>
+								<li><a href="">시즌</a></li>
+							</ul>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										<span>항목1</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목2</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+									<li>
+										<span>항목3</span>
+										<select>
+											<option>항목</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<table class="tbl" summary="역대기록">
+							<caption>역대기록</caption>
+							<thead>
+								<tr>
+									<th>순위</th>
+									<th>기록</th>
+									<th>시즌</th>
+									<th>팀</th>
+									<th>경기수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>12</td>
+									<td>2019</td>
+									<td>동작구청씨름단</td>
+									<td>72</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+				<p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+			</address>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

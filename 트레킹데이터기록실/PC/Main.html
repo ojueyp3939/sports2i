@@ -1,0 +1,499 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, 트레킹데이터기록실" />
+		<title>KBO 트레킹데이터기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" /><!-- css 순서 중요 -->
+		<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="resources/css/tracking.css" />
+		<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+		<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// calendar
+				$('#btnCalendar').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImage: "resources/images/common/img_calendar.png",
+						buttonImageOnly: true,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+				// game bxSlider
+        var bxSlider = $(".game-list").bxSlider({
+          controls:true,
+          mode:'horizontal',
+          pager:false,
+          moveSlides:1,
+          minSlides:5,
+          maxSlides:5,
+          ariaHidden:true,
+          touchEnabled:false,
+          infiniteLoop:false,
+          hideControlOnEnd:true,
+					slideWidth:'252px'
+        });
+				// game-list 화살표 표출을 위한 높이 고정
+				$(".bx-viewport").css({height:'200px'});
+				// game-list 클릭시 정보 표출
+				$(".schedule-preview .game-list li").on('click',function(){
+					if ($(this).hasClass('on')) {
+						$(".schedule-preview .player-info-box").css({display:'none'});
+						$(this).removeClass('on');
+					} else {
+						$(".schedule-preview .player-info-box").css({display:'block'});
+						$(this).parent().children().removeClass('on');
+						$(this).addClass('on');
+					}
+				});
+				// 그래프 호버시 팝업창 on
+				$(".graph-wrap").mousemove(function(e){
+					$(this).find(".tip-box").removeClass("dp-none");
+					$(this).find(".tip-box").css({
+						top:e.pageY - $(this).offset().top,
+						left:e.pageX - $(this).offset().left
+					});
+				});
+				$(".graph-wrap").mouseleave(function(e){
+					$(this).find(".tip-box").addClass("dp-none");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="header-wrap">
+					<h1>
+						<a href="Main.html"><img src="resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a>
+					</h1>
+					<div class="search-area">
+						<input type="text" class="ipt ipt-search" />
+						<a href="Player/Player.html" class="btn-search"><img src="resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list dp-none">
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu-list clear">
+						<li><a href="Preview/Preview.html">선발투수 프리뷰</a></li>
+						<li><a href="PlayerRank/PlayerRank.html">선수 순위</a></li>
+						<li><a href="TeamRank/TeamRank.html">팀 순위</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="main">
+						<!-- 일정 -->
+						<div class="schedule-preview">
+							<div>
+								<p class="schedule-data"><span>2019년 10월</span><input type="text" class="ipt ipt-calendar" id="btnCalendar"/></p>
+								<ul class="date clear">
+								<li class="prev"><a href="#none">prev</a></li>
+								<li class="week clear">
+									<div class="past">
+										<span class="day">토</span>
+										<span class="num">3</span>
+									</div>
+									<div class="past">
+										<span class="day">일</span>
+										<span class="num">4</span>
+									</div>
+									<div class="past">
+										<span class="day">월</span>
+										<span class="num">5</span>
+									</div>
+									<div class="present">
+										<span class="day">화</span>
+										<span class="num">6</span>
+									</div>
+									<div class="future">
+										<span class="day">수</span>
+										<span class="num">7</span>
+									</div>
+									<div class="future">
+										<span class="day">목</span>
+										<span class="num">8</span>
+									</div>
+									<div class="future">
+										<span class="day">금</span>
+										<span class="num">9</span>
+									</div>
+								</li>
+								<li class="next on"><a href="#none">next</a></li><!-- 버튼 활성화 시 on 클래스 추가 -->
+							</ul>
+							</div>
+							<ul class="game-list clear">
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="info">
+										<div class="place">잠실</div>
+										<div class="time">18:30</div>
+									</div>
+									<div class="match">
+										<div class="team away clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스</div>
+										</div>
+										<div class="team home clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_LT.png" alt="롯데"></div>
+											<div class="name">윌슨</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<!-- 시즌 랭킹 -->
+							<div class="player-info-box">
+								<h2 class="tit-preview">2019시즌 랭킹</h2>
+								<ul class="record-info clear">
+									<li>하위</li>
+									<li>평균</li>
+									<li>상위</li>
+								</ul>
+								<div class="player away clear">
+									<div class="info-box">
+										<div class="photo">
+											<img src="resources/images/common/test.png" alt=""/>
+										</div>
+										<div class="player-info clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">윌슨 (우투, #35)</div>
+										</div>
+									</div>
+									<ul class="record">
+										<li>
+											<dl>
+												<dt>직구 평균 구속</dt>
+												<dd class="graph-wrap rate"><!-- 그래프가 51% 이상일 경우 rate 클래스 추가 -->
+													<canvas style="width:80%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>인플레이 타구 평균 속도</dt>
+												<dd class="graph-wrap">
+													<canvas style="width:20%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>직구 평균 상하 무브먼트</dt>
+												<dd class="graph-wrap rate">
+													<canvas style="width:60%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>강한 타구 비율</dt>
+												<dd class="graph-wrap">
+													<canvas style="width:30%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="player home clear">
+									<div class="info-box">
+										<div class="photo">
+											<img src="resources/images/common/test.png" alt=""/>
+										</div>
+										<div class="player-info clear">
+											<div class="emb"><img src="resources/images/emb/emb_62x40_HH.png" alt="한화"></div>
+											<div class="name">페르난데스 (우투, #35)</div>
+										</div>
+									</div>
+									<ul class="record">
+										<li>
+											<dl>
+												<dt>직구 평균 구속</dt>
+												<dd class="graph-wrap">
+													<canvas style="width:40%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+												<dl>
+													<dt>인플레이 타구 평균 속도</dt>
+													<dd class="graph-wrap rate">
+														<canvas style="width:100%;"></canvas>
+														<div class="tip-box dp-none">상위99%</div>
+													</dd>
+												</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>직구 평균 상하 무브먼트</dt>
+												<dd class="graph-wrap rate">
+													<canvas style="width:86%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<dl>
+												<dt>강한 타구 비율</dt>
+												<dd class="graph-wrap">
+													<canvas style="width:46%;"></canvas>
+													<div class="tip-box dp-none">상위99%</div>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<div class="btn-area">
+									<a href="Preview/Preview.html" class="btn btn-more">더보기</a>
+								</div>
+							</div>
+							<!-- // 시즌 랭킹 -->
+						</div>
+						<!-- // 일정 -->
+						<!-- 광고 영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="resources/images/common/test11.jpg" alt=""></a>
+						</div>
+						<!-- // 광고 영역 -->
+						<!-- 타자 1위 -->
+						<div class="top-player mb10">
+							<h2 class="tit-preview">타자 1위</h2>
+							<ul class="player-list clear">
+								<li>
+									<dl>
+										<dt>인플레이 타구 평균 속도</dt>
+										<dd class="player">
+											<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+											<span class="name">윌슨 (우투, #35)</span>
+										</dd>
+										<dd class="speed">144.0<span>km/h</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>안타 평균 속도</dt>
+										<dd class="player">
+											<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+											<span class="name">윌슨 (우투, #35)</span>
+										</dd>
+										<dd class="speed">144.0<span>km/h</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>장타 평균 속도</dt>
+										<dd class="player">
+											<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+											<span class="name">윌슨 (우투, #35)</span>
+										</dd>
+										<dd class="speed">144.0<span>km/h</span></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>강한 타구 비율</dt>
+										<dd class="player">
+											<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+											<span class="name">윌슨 (우투, #35)</span>
+										</dd>
+										<dd class="speed">144.0<span>km/h</span></dd>
+									</dl>
+								</li>
+							</ul>
+							<div class="tip-box clear">
+								<p class="tip">※ 2019년 8월 5일 기준 규정 타석 내 순위</p>
+								<div class="btn-area">
+									<a href="PlayerRank/PlayerRank.html" class="btn btn-more">더보기</a>
+								</div>
+							</div>
+						</div>
+						<!-- // 타자 1위 -->
+						<!-- 투수 1위 -->
+						<div class="top-player">
+								<h2 class="tit-preview">투수 1위</h2>
+								<ul class="player-list clear">
+									<li>
+										<dl>
+											<dt>직구 평균 속도</dt>
+											<dd class="player">
+												<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+												<span class="name">윌슨 (우투, #35)</span>
+											</dd>
+											<dd class="speed">144.0<span>km/h</span></dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>직구 평균 상하 무브먼트</dt>
+											<dd class="player">
+												<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+												<span class="name">윌슨 (우투, #35)</span>
+											</dd>
+											<dd class="speed">144.0<span>km/h</span></dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>직구 평균 릴리스포인트</dt>
+											<dd class="player">
+												<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+												<span class="name">윌슨 (우투, #35)</span>
+											</dd>
+											<dd class="speed">144.0<span>km/h</span></dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>인플레이 타구 평균 속도</dt>
+											<dd class="player">
+												<span class="photo"><img src="resources/images/common/test.png" alt=""/></span>
+												<span class="name">윌슨 (우투, #35)</span>
+											</dd>
+											<dd class="speed">144.0<span>km/h</span></dd>
+										</dl>
+									</li>
+								</ul>
+								<div class="tip-box clear">
+									<p class="tip">※ 2019년 8월 5일 기준 규정 타석 내 순위</p>
+									<div class="btn-area">
+										<a href="PlayerRank/PlayerRank.html" class="btn btn-more">더보기</a>
+									</div>
+								</div>
+							</div>
+						<!-- // 투수 1위 -->
+						<!-- 광고 영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="resources/images/common/test11.jpg" alt=""></a>
+						</div>
+						<!-- // 광고 영역 -->
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box clear">
+					<div class="company">
+						<h1><img src="resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+						<p>Copyright © sports2i Corp.</p>
+					</div>
+					<div class="txt-company">
+						<p>
+							※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우 반드시 스포츠투아이㈜에 문의하시기 바랍니다.<br/>
+							<span>※ 본 사이트는 PTS 및 HTS를 통해 추적된 투구, 타구를 바탕으로 구현됐으며, 제 2 구장(포항, 울산, 청주 등)에서 열린 경기는 포함하지 않습니다.</span>
+						</p>
+						<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+						<p>전화: 02-3445-7116   팩스: 031-707-7165</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

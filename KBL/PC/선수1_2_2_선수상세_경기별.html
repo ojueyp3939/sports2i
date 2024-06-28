@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBL"/>
+    <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="스포츠투아이, KBL" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/ico.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/s2i.css" />
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<main id="contents">
+				<div class="layout" id="s2iZone">
+					<div class="contents detail">
+						
+						<div class="cont-box">
+							<ul class="tab-style2">
+								<li><a href="선수1_2_1_선수상세_부문별.html">부문별</a></li>
+								<li><a title="선택됨" class="active" href="선수1_2_2_선수상세_경기별.html">경기별</a></li>
+								<li><a href="선수1_2_3_선수상세_시즌별.html">시즌별</a></li>
+								<li><a href="선수1_2_4_선수상세_한경기최다.html">한경기최다</a></li>
+							</ul>
+							<!-- 경기별 -->
+							<div class="box">
+								<div class="mid-title">
+									<h3>정규경기 경기 기록<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button></h3>
+									<div>
+										<button title="용어 설명 팝업 열기" class="mobile"><i class="ic-help"></i></button>
+										<button title="가로 보기 팝업 열기" class="mobile"><i class="ic-horiz"></i></button>
+									</div>
+								</div>
+								<div class="table-100">
+									<table class="player-detail-table4">
+										<caption>정규경기 경기 기록 테이블</caption>
+										<thead>
+											<tr>
+												<th class="fixed">일자</th>
+												<th class="fixed">대진팀</th>
+												<th class="fixed">W/L</th>
+												<th class="fixed">득점</th>
+												<th class="fixed">실점</th>
+												<th title="시간">Min</th>
+												<th title="총 득점">PTS</th>
+												<th title="2점슛 성공" class="sorting down">2PM</th>
+												<th title="2점슛 시도">2PA</th>
+												<th title="2점슛 성공률">2P%</th>
+												<th title="3점슛 성공">3PM</th>
+												<th title="3점슛 시도">3PA</th>
+												<th title="3점슛 성공률">3P%</th>
+												<th title="야투 성공">FGM</th>
+												<th title="야투 시도">FGA</th>
+												<th title="야투 성공률">FG%</th>
+												<th title="자유투 성공">FTM</th>
+												<th title="자유투 시도">FTA</th>
+												<th title="자유투 성공률">FT%</th>
+												<th title="공격 리바운드">OREB</th>
+												<th title="수비 리바운드">DREB</th>
+												<th title="리바운드">REB</th>
+												<th title="어시스트">AST</th>
+												<th title="스틸">STL</th>
+												<th title="블록">BLK</th>
+												<th title="굿디펜스">GD</th>
+												<th title="덩크 성공">DK</th>
+												<th title="덩크 시도">DKA</th>
+												<th title="턴오버">TO</th>
+												<th title="개인파울">PF</th>
+												<th title="페인트존 득점 성공">PP</th>
+												<th title="페인트존 득점 시도">PPA</th>
+												<th title="페인트존 득점 성공률">PP%</th>
+												<th title="득실마진">+/-</th>
+												<th title="더블더블">DD2</th>
+												<th title="트리플더블">TD3</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2022.10.29</td>
+												<td>
+													<div class="team-name"><i class="ic-emblem pega"></i>
+														<p>대구한국공사</p>
+													</div>
+												</td>
+												<td>W</td>
+												<td>99</td>
+												<td>99</td>
+												<td>36’18”</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="box">
+								<div class="mid-title">
+									<h3>정규경기 경기 기록(D리그)<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button></h3>
+									<div>
+										<button title="용어 설명 팝업 열기" class="mobile"><i class="ic-help"></i></button>
+										<button title="가로 보기 팝업 열기" class="mobile"><i class="ic-horiz"></i></button>
+									</div>
+								</div>
+								<div class="table-100">
+									<table class="player-detail-table4">
+										<caption>정규경기 경기 기록 테이블(D리그)</caption>
+										<thead>
+											<tr>
+												<th class="fixed">일자</th>
+												<th class="fixed">대진팀</th>
+												<th class="fixed">W/L</th>
+												<th class="fixed">득점</th>
+												<th class="fixed">실점</th>
+												<th title="시간" class="sorting down">Min</th>
+												<th title="총 득점">PTS</th>
+												<th title="2점슛 성공">2PM</th>
+												<th title="2점슛 시도">2PA</th>
+												<th title="2점슛 성공률">2P%</th>
+												<th title="3점슛 성공">3PM</th>
+												<th title="3점슛 시도">3PA</th>
+												<th title="3점슛 성공률">3P%</th>
+												<th title="야투 성공">FGM</th>
+												<th title="야투 시도">FGA</th>
+												<th title="야투 성공률">FG%</th>
+												<th title="자유투 성공">FTM</th>
+												<th title="자유투 시도">FTA</th>
+												<th title="자유투 성공률">FT%</th>
+												<th title="공격 리바운드">OREB</th>
+												<th title="수비 리바운드">DREB</th>
+												<th title="리바운드">REB</th>
+												<th title="어시스트">AST</th>
+												<th title="스틸">STL</th>
+												<th title="블록">BLK</th>
+												<th title="굿디펜스">GD</th>
+												<th title="덩크 성공">DK</th>
+												<th title="덩크 시도">DKA</th>
+												<th title="턴오버">TO</th>
+												<th title="개인파울">PF</th>
+												<th title="페인트존 득점 성공">PP</th>
+												<th title="페인트존 득점 시도">PPA</th>
+												<th title="페인트존 득점 성공률">PP%</th>
+												<th title="득실마진">+/-</th>
+												<th title="더블더블">DD2</th>
+												<th title="트리플더블">TD3</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>2022.10.29</td>
+												<td>
+													<div class="team-name"><i class="ic-emblem pega"></i>
+														<p>대구한국공사</p>
+													</div>
+												</td>
+												<td>W</td>
+												<td>99</td>
+												<td>99</td>
+												<td>36’18”</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+											</tr>
+											<tr class="bor-b">
+												<td>2022-2023</td>
+												<td>
+													<div class="team-name"><i class="ic-emblem pega"></i>
+														<p>대구한국공사</p>
+													</div>
+												</td>
+												<td>W</td>
+												<td>99</td>
+												<td>99</td>
+												<td>36’18”</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+											</tr>
+											<tr>
+												<td colspan="2">경기당 평균</td>
+												<td>W</td>
+												<td>W</td>
+												<td>99</td>
+												<td>99</td>
+												<td>36’18”</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+												<td>99.99</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<!-- 1. 용어설명 클릭시 1차 스탯 (pc ver) -->
+			<div id="s2iZone" class="pop">
+				<div class="pop-wrap lg2">
+					<div class="pop-tit">
+						<h2>용어 설명</h2>
+						<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+					</div>
+					<div class="pop-cont">
+						<table>
+							<caption>용어 설명</caption>
+							<colgroup>
+								<col style="width: 10.5%;">
+								<col style="width: 22.83%;">
+								<col style="width: 10.5%;">
+								<col style="width: 22.84%;">
+								<col style="width: 10.5%;">
+								<col style="width: 22.83%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>명칭</th>
+									<th>설명</th>
+									<th>명칭</th>
+									<th>설명</th>
+									<th>명칭</th>
+									<th>설명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>Min</th>
+									<td>시간</td>
+									<th>PTS</th>
+									<td>총 득점</td>
+									<th>2PM</th>
+									<td>2점슛 성공</td>
+								</tr>
+								<tr>
+									<th>2PA</th>
+									<td>2점슛 시도</td>
+									<th>2P%</th>
+									<td>2점슛 성공률</td>
+									<th>3PM</th>
+									<td>3점슛 성공</td>
+								</tr>
+								<tr>
+									<th>3PA</th>
+									<td>3점슛 시도</td>
+									<th>3P%</th>
+									<td>3점슛 성공률</td>
+									<th>FGM</th>
+									<td>야투 성공</td>
+								</tr>
+								<tr>
+									<th>FGA</th>
+									<td>야투 시도</td>
+									<th>FG%</th>
+									<td>야투 성공률</td>
+									<th>FTM</th>
+									<td>자유투 성공</td>
+								</tr>
+								<tr>
+									<th>FTA</th>
+									<td>자유투 시도</td>
+									<th>FT%</th>
+									<td>자유투 성공률</td>
+									<th>OREB</th>
+									<td>공격 리바운드</td>
+								</tr>
+								<tr>
+									<th>DREB</th>
+									<td>수비 리바운드</td>
+									<th>REB</th>
+									<td>리바운드</td>
+									<th>AST</th>
+									<td>어시스트</td>
+								</tr>
+								<tr>
+									<th>STL</th>
+									<td>스틸</td>
+									<th>BLK</th>
+									<td>블록</td>
+									<th>GD</th>
+									<td>굿디펜스</td>
+								</tr>
+								<tr>
+									<th>DK</th>
+									<td>덩크 성공</td>
+									<th>DKA</th>
+									<td>덩크 시도</td>
+									<th>TO</th>
+									<td>턴오버</td>
+								</tr>
+								<tr>
+									<th>PF</th>
+									<td>개인파울</td>
+									<th>PP</th>
+									<td>페인트존 득점 성공</td>
+									<th>PPA</th>
+									<td>페인트존 득점 시도</td>
+								</tr>
+								<tr>
+									<th>PP%</th>
+									<td>페인트존 득점 성공률</td>
+									<th>+/-</th>
+									<td>득실마진</td>
+									<th>DD2</th>
+									<td>더블더블</td>
+								</tr>
+								<tr>
+									<th>TD3</th>
+									<td>트리플더블</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="pop-btn single">
+						<button>확인</button>
+					</div>
+				</div>
+			</div>
+			<!-- 1-1. 용어설명 클릭시 1차 스탯 (m ver) -->
+			<div id="s2iZone" class="pop">
+				<div class="pop-wrap">
+					<div class="pop-tit">
+						<h2>용어설명</h2>
+						<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+					</div>
+					<div class="pop-cont">
+						<div class="mobile-table1">
+							<table>
+								<caption>용어 설명</caption>
+								<colgroup>
+									<col style="width: 8rem;">
+									<col style="width: auto;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Min</td>
+										<td>시간</td>
+									</tr>
+									<tr>
+										<td>PTS</td>
+										<td>총 득점</td>
+									</tr>
+									<tr>
+										<td>2PM</td>
+										<td>2점슛 성공</td>
+									</tr>
+									<tr>
+										<td>2PA</td>
+										<td>2점슛 시도</td>
+									</tr>
+									<tr>
+										<td>2P%</td>
+										<td>2점슛 성공률</td>
+									</tr>
+									<tr>
+										<td>3PM</td>
+										<td>3점슛 성공</td>
+									</tr>
+									<tr>
+										<td>3PA</td>
+										<td>3점슛 시도</td>
+									</tr>
+									<tr>
+										<td>3P%</td>
+										<td>3점슛 성공률</td>
+									</tr>
+									<tr>
+										<td>FGM</td>
+										<td>야투 성공</td>
+									</tr>
+									<tr>
+										<td>FGA</td>
+										<td>야투 시도</td>
+									</tr>
+									<tr>
+										<td>FG%</td>
+										<td>야투 성공률</td>
+									</tr>
+									<tr>
+										<td>FTM</td>
+										<td>자유투 성공</td>
+									</tr>
+									<tr>
+										<td>FTA</td>
+										<td>자유투 시도</td>
+									</tr>
+									<tr>
+										<td>FT%</td>
+										<td>자유투 성공률</td>
+									</tr>
+									<tr>
+										<td>OREB</td>
+										<td>공격 리바운드</td>
+									</tr>
+									<tr>
+										<td>DREB</td>
+										<td>수비 리바운드</td>
+									</tr>
+									<tr>
+										<td>REB</td>
+										<td>리바운드</td>
+									</tr>
+									<tr>
+										<td>AST</td>
+										<td>어시스트</td>
+									</tr>
+									<tr>
+										<td>STL</td>
+										<td>스틸</td>
+									</tr>
+									<tr>
+										<td>BLK</td>
+										<td>블록</td>
+									</tr>
+									<tr>
+										<td>GD</td>
+										<td>굿디펜스</td>
+									</tr>
+									<tr>
+										<td>DK</td>
+										<td>덩크 성공</td>
+									</tr>
+									<tr>
+										<td>DKA</td>
+										<td>덩크 시도</td>
+									</tr>
+									<tr>
+										<td>TO</td>
+										<td>턴오버</td>
+									</tr>
+									<tr>
+										<td>PF</td>
+										<td>개인파울</td>
+									</tr>
+									<tr>
+										<td>PP</td>
+										<td>페인트존 득점 성공</td>
+									</tr>
+									<tr>
+										<td>PPA</td>
+										<td>페인트존 득점 시도</td>
+									</tr>
+									<tr>
+										<td>PP%</td>
+										<td>페인트존 득점 성공률</td>
+									</tr>
+									<tr>
+										<td>+/-</td>
+										<td>득실마진</td>
+									</tr>
+									<tr>
+										<td>DD2</td>
+										<td>더블더블</td>
+									</tr>
+									<tr>
+										<td>TD3</td>
+										<td>트리플더블</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pop-btn single">
+						<button>확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

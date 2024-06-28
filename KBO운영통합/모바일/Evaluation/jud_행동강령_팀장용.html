@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">행동강령 평가표</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							행동강령 평가표
+						</div>
+						<div class="content">
+							<div>
+								<p class="sub-tit purple">리더십 관련</p>
+								<table class="tbl-basic">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>평가요소</th>
+										<th>평가항목</th>
+										<th>점수</th>
+									</tr>
+									<tr>
+										<td>리더 역량</td>
+										<td>
+											▶ 공동의 목표를 위해 친밀감과 협력적인 분위기를 조성하고 갈등관리에 노력하는지 여부<br/>
+										 	▶ 원활한 경기운영과 공정한 경기진행을 위해 항상 연구하고 개선방향을 적절히 팀원들에게 제시하는지 여부<br/>
+										 	▶ 팀원들과의 유대관계 향상 및 사기진작에 노력하는지 여부   
+										 </td>
+										<td>
+											<select>
+												<option>우수(20점)</option>
+												<option>우수(19점)</option>
+												<option>우수(18점)</option>
+												<option>우수(17점)</option>
+												<option>우수(16점)</option>
+												<option>우수(15점)</option>
+												<option>보통(14점)</option>
+												<option>보통(13점)</option>
+												<option>보통(12점)</option>
+												<option>보통(11점)</option>
+												<option>미흡(10점)</option>
+												<option>미흡(9점)</option>
+												<option>미흡(8점)</option>
+												<option>미흡(7점)</option>
+												<option>미흡(6점)</option>
+												<option>미흡(5점)</option>
+												<option>미흡(4점)</option>
+												<option>미흡(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+							
+							<div>
+								<p class="sub-tit purple">품위 유지</p>
+								<table class="tbl-basic">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>평가요소</th>
+										<th>평가항목</th>
+										<th>점수</th>
+									</tr>
+									<tr>
+										<td>복장</td>
+										<td>▶ 구장내에서 항상 복장을 단정히 하고 경기 준비자세가 갖추어져 있는지 여부</td>
+										<td>
+											<select>
+												<option>우수(5점)</option>
+												<option>보통(4점)</option>
+												<option>보통(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>언행</td>
+										<td>
+											▶ 선수,감독 또는 코치에게 반말을 하거나 무례한 언사사용 여부<br/>
+											▶ 경기장내의 상황뿐만 아니라 경기외적인 상황에서 심판위원의 품위를 손상시키는 언행 여부 
+										</td>
+										<td>
+											<select>
+												<option>우수(20점)</option>
+												<option>우수(19점)</option>
+												<option>우수(18점)</option>
+												<option>우수(17점)</option>
+												<option>우수(16점)</option>
+												<option>우수(15점)</option>
+												<option>보통(14점)</option>
+												<option>보통(13점)</option>
+												<option>보통(12점)</option>
+												<option>보통(11점)</option>
+												<option>미흡(10점)</option>
+												<option>미흡(9점)</option>
+												<option>미흡(8점)</option>
+												<option>미흡(7점)</option>
+												<option>미흡(6점)</option>
+												<option>미흡(5점)</option>
+												<option>미흡(4점)</option>
+												<option>미흡(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div>
+								<p class="sub-tit purple">청렴</p>
+								<table class="tbl-basic">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>평가요소</th>
+										<th>평가항목</th>
+										<th>점수</th>
+									</tr>
+									<tr>
+										<td>친목</td>
+										<td>
+											▶ 심판실, 구단사무실 또는 구단버스에서 구단관계자와 환담을 나누거나 식사, 술자리등 친목적인 모임에 참석하는지 여부
+										 </td>
+										<td>
+											<select>
+												<option>우수(5점)</option>
+												<option>보통(4점)</option>
+												<option>보통(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>청탁/편의</td>
+										<td>
+											▶ 심판실로 구단관계자를 호출하거나 사적인 청탁 여부<br/>
+											▶ 구단관계자로부터 금품,향응 및 각종 편의를 제공받거나 요구하는 행위 여부
+										</td>
+										<td>
+											<select>
+												<option>우수(15점)</option>
+												<option>우수(14점)</option>
+												<option>우수(13점)</option>
+												<option>우수(12점)</option>
+												<option>우수(11점)</option>
+												<option>보통(10점)</option>
+												<option>보통(9점)</option>
+												<option>보통(8점)</option>
+												<option>보통(7점)</option>
+												<option>보통(6점)</option>
+												<option>보통(5점)</option>
+												<option>미흡(4점)</option>
+												<option>미흡(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>금전 관계</td>
+										<td>
+											▶ KBO에 속한 타 단체(팀)또는 구단관계자와 직, 간접적으로 금전 대차 혹은 대차의 보증을 서는 행위 여부
+										</td>
+										<td>
+											<select>
+												<option>있음(0점)</option>
+												<option>없음(10점)</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div>
+								<p class="sub-tit purple">팀워크</p>
+								<table class="tbl-basic">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>평가요소</th>
+										<th>평가항목</th>
+										<th>점수</th>
+									</tr>
+									<tr>
+										<td>희생</td>
+										<td>
+											▶ 개인의 편의보다 심판위원회의 발전을 위해 개인희생 노력 여부
+											▶ 조직의 화합과 단결을 위해 적극적으로 협조하고 팀분위기를 조정하여 팀워크 형성에 좋은 결과를 얻고자 하는 노력 여부
+										</td>
+										<td>
+											<select>
+												<option>우수(5점)</option>
+												<option>보통(4점)</option>
+												<option>보통(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td>규율</td>
+										<td>
+											▶ 규칙이나 지시명령을 잘 지키고 심판위원회내 질서유지 노력 여부
+										</td>
+										<td>
+											<select>
+												<option>우수(15점)</option>
+												<option>우수(14점)</option>
+												<option>우수(13점)</option>
+												<option>우수(12점)</option>
+												<option>우수(11점)</option>
+												<option>보통(10점)</option>
+												<option>보통(9점)</option>
+												<option>보통(8점)</option>
+												<option>보통(7점)</option>
+												<option>보통(6점)</option>
+												<option>보통(5점)</option>
+												<option>미흡(4점)</option>
+												<option>미흡(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div>
+								<p class="sub-tit purple">열정</p>
+								<table class="tbl-basic">
+									<colgroup>
+										<col width="22%">
+										<col width="50%">
+										<col width="28%">
+									</colgroup>
+									<tr>
+										<th>평가요소</th>
+										<th>평가항목</th>
+										<th>점수</th>
+									</tr>
+									<tr>
+										<td>자기 개발</td>
+										<td>▶ 스스로 자신의 부족한 점을 찾아내고 이를 개선하고자 시도하며 자기개발을 통해 심판기량을 향상시키고자 하는 노력여부</td>
+										<td>
+											<select>
+												<option>우수(5점)</option>
+												<option>보통(4점)</option>
+												<option>보통(3점)</option>
+												<option>미흡(2점)</option>
+												<option>미흡(1점)</option>
+											</select>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="total-count">
+								점수합계
+								<span>100점</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="group">
+						<div class="header">
+							비디오 판독 결과
+						</div>
+						<div class="content">
+							<div>
+								<textarea></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="group mb0">
+						<div class="header">
+							위원장의 의견
+						</div>
+						<div class="content">
+							<div>
+								<textarea></textarea>
+							</div>
+							<div class="mb0">
+								<table class="tbl-mini">
+									<tr>
+										<th>평가자</th>
+										<td>심판위원장 홍길동</td>
+									</tr>
+									<tr>
+										<th>피평가자</th>
+										<td>
+											<button>검색</button>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

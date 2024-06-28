@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* 버튼 */
+.btn-area {margin:20px 0 0;text-align:center;}
+.btn-area a {margin:0 3px;}
+a.btn-reg, a.btn-search {display:inline-block;width:44px;height:25px;line-height:23px;background:#058fd3;font-size:13px;font-weight:500;color:#fff;border-radius:3px;text-align:center;vertical-align:middle;color:#fff;box-sizing:border-box;}
+a.btn-list {display:inline-block;width:80px;height:40px;line-height:40px;background:#252525;font-size:13px;font-weight:500;color:#fff;border-radius:3px;text-align:center;vertical-align:middle;color:#fff;box-sizing:border-box;}
+a.btn-modify {display:inline-block;width:80px;height:40px;line-height:40px;background:#04a4f3;font-size:13px;font-weight:500;color:#fff;border-radius:3px;text-align:center;vertical-align:middle;color:#fff;box-sizing:border-box;}
+a.btn-save {display:inline-block;width:80px;height:40px;line-height:40px;background:#058fd3;font-size:13px;font-weight:500;color:#fff;border-radius:3px;text-align:center;vertical-align:middle;color:#fff;box-sizing:border-box;}
+a.btn-cancel {display:inline-block;width:80px;height:40px;line-height:40px;background:#757984;font-size:13px;font-weight:500;color:#fff;border-radius:3px;text-align:center;vertical-align:middle;color:#fff;box-sizing:border-box;}
+a.btn-modify-s {display:inline-block;width:45px;height:21px;line-height:19px;font-size:12px;font-weight:500;color:#058fd3;border:1px solid #058fd3;box-sizing:border-box;}
+a.btn-delete-s {display:inline-block;width:45px;height:21px;line-height:19px;background:#757984;font-size:12px;font-weight:500;color:#fff;border:1px solid #505050;box-sizing:border-box;}
+
+/* 탭 */ 
+.tab {overflow:hidden;width:100%;padding:15px 0;border-bottom:1px solid #abaeb3;}
+.tab li {float:left;width:33.3%;}
+.tab li a {display:block;width:100%;padding:10px 15px;background:#eee;font-size:13px;text-align:center;box-sizing:border-box;border-right:1px solid #fff;}
+.tab li:last-child a {border:none;}
+.tab li.on a, .tab li a:hover {background:#98cae2;color:#fff;border:none;}
+
+.tab2 {overflow:hidden;margin-bottom:15px;padding:15px 20px 10px;border:1px solid #ddd;}
+.tab2 .all {float:left;width:50px;text-align:center;}
+.tab2 .menu-list {float:left;}
+.tab2 .menu-list .code {overflow:hidden;}
+.tab2 .menu-list .code1 {margin-bottom:10px;}
+.tab2 .menu-list .code li {float:left;width:65px;text-align:center;}
+.tab2 .menu-list .code li a {display:inline-block;padding-bottom:5px;}
+.tab2 .all a:hover, .tab2 .on a, .tab2 .menu-list .code li a:hover {padding-bottom:3px;color:#058fd3;border-bottom:2px solid #058fd3;}
+
+/* 테이블 */
+.tbl-col, .tbl-row {border-top:1px solid #2e3441;border-bottom:1px solid #2e3441;}
+.tbl {width:100%;}
+.tbl th, .tbl td {font-size:14px;color:#717379;border-bottom:1px solid #e1e2e6;text-align:center;vertical-align:middle;}
+.tbl th {padding:11px 5px 12px;font-size:13px;font-weight:500;background:#edeff0;color:#1a1a1a;}
+.tbl td {padding:9px 5px 10px;font-size:12px;}
+.tbl td input, .tbl td label {vertical-align:middle;}
+.tbl td .calender .btn {display:inline-block;vertical-align:middle;}
+.tbl td .select {margin-right:15px;}
+.tbl tr:last-child td {border:none;}
+.tbl-row {}
+.tbl-row td {padding-left:30px;text-align:left;}
+
+/* 인풋박스 */
+.ipt {display:inline-block;width:106px;height:25px;line-height:25px;margin:0 5px;padding:0 10px;font-size:12px;color:#555;border-radius:3px;vertical-align:middle;border:1px solid #a4a7a9;box-sizing:border-box;}
+
+/* 페이징 */
+.paging {margin-top:40px;text-align:center;}
+.paging a {display:inline-block;width:28px;height:28px;padding:6px 0;font-size:13px;color:#111;vertical-align:middle;box-sizing:border-box;}
+.paging a.on, .paging a:hover {padding:5px 0 ;color:#058fd3;border:1px solid #058fd3;font-weight:500;}
+.paging img {vertical-align:middle;}
+.paging a.btn {min-width:auto;border:none;padding:0;background:url("../images/common/btn_paging.png") no-repeat 0 0;text-indent:-9999px;}
+.paging a.btn-first {background-position:0 0;}
+.paging a.btn-first:hover,.paging a.btn-first.on {background-position:0 -28px;}
+.paging a.btn-prev {background-position:-28px 0;}
+.paging a.btn-prev:hover,.paging a.btn-prev.on {background-position:-28px -28px;}
+.paging a.btn-next {background-position:0 -56px;}
+.paging a.btn-next:hover,.paging a.btn-next.on {background-position:0 -84px;}
+.paging a.btn-last {background-position:-28px -56px;}
+.paging a.btn-last:hover,.paging a.btn-last.on {background-position:-28px -84px;}

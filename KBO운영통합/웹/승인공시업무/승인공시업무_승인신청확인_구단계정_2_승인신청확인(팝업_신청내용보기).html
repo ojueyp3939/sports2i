@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub2.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">승인신청</a></li>
+							<li class="on"><a href="#none">승인신청확인</a></li>
+							<li><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명관리</a></li>
+							<li><a href="#none">텍스트관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">	
+			<div class="tit-area">
+				<div class="inner">
+					<h2>승인신청확인</h2>
+				</div> 
+			</div>
+			<div class="select-area">
+				<select name="" id="">
+					<option value="">연도</option>
+					<option value="" selected>2018</option>
+				</select>
+				<select name="" id="">
+					<option value="">구분</option>
+					<option value="">경기정보</option>
+					<option value="">소속 선수</option>
+					<option value="">육성 선수</option>
+					<option value="">감독∙코치</option>
+					<option value="">신규승인신청</option>
+				</select>
+				<select name="" id="">
+					<option value="">변경항목</option>
+				</select>
+				<select name="" id="">
+					<option value="">진행상태</option>
+					<option value="">접수중</option>
+					<option value="">접수완료</option>
+					<option value="">승인∙공시</option>
+					<option value="">반송</option>
+				</select>
+				<a href="#none" class="btn-app ml5">추가</a>
+			</div>
+			<div class="tbl-board">
+				<table class="tbl">
+					<colgroup>
+						<col width="6%" />
+						<col width="9%" />
+						<col width="13%" />
+						<col width="20%" />
+						<col width="12%" />
+						<col width="8%" />
+						<col width="10%" />
+						<col width="12%" />
+						<col width="10%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>신청팀</th>
+							<th>구분</th>
+							<th>변경항목</th>
+							<th>신청일자</th>
+							<th>내용</th>
+							<th>진행상태</th>
+							<th>공시날짜</th>
+							<th>공시확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>LG</td>
+							<td>경기정보</td>
+							<td>경기개시 시간</td>
+							<td>2018-07-03</td>
+							<td><a href="javascript:;" class="btn-view">보기</a></td>
+							<td>승인∙공시</td>
+							<td>2018-07-04</td>
+							<td><a href="javascript:;" class="btn-submit on">확인</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>LG</td>
+							<td>경기정보</td>
+							<td>구장</td>
+							<td>2018-07-03</td>
+							<td><a href="javascript:;" class="btn-view">보기</a></td>
+							<td>접수완료</td>
+							<td>-</td>
+							<td><a href="javascript:;" class="btn-submit">확인</a></td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>LG</td>
+							<td>소속선수</td>
+							<td>개명</td>
+							<td>2018-07-03</td>
+							<td><a href="javascript:;" class="btn-view">보기</a></td>
+							<td>접수중</td>
+							<td>-</td>
+							<td><a href="javascript:;" class="btn-submit">확인</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging">    
+				<a class="btn btn-first" href="#none">처음으로</a>
+				<a class="btn btn-prev" href="#none">다음</a>
+				<a class="on" href="#none">1</a>
+				<a href="#none">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none">6</a>
+				<a href="#none">7</a>
+				<a href="#none">8</a>
+				<a href="#none">9</a>
+				<a href="#none">10</a>
+				<a class="btn btn-next" href="#none">다음</a>
+				<a class="btn btn-last" href="#none">맨끝으로</a>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+<!-- 승인신청 확인 팝업 -->
+<div id="popup" class="pop-submit-confirm">
+	<h1>경기정보 - 경기개시 시간</h1>
+	<div class="contents">
+		<table class="tbl">
+			<colgroup>
+				<col width="9%" />
+				<col width="13%" />
+				<col width="9%" />
+				<col width="9%" />
+				<col width="10%" />
+				<col width="10%" />
+				<col width="15%" />
+				<col width="25%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th rowspan="2">신청팀</th>
+					<th rowspan="2">경기일자</th>
+					<th rowspan="2">구장</th>
+					<th colspan="2">대진팀</th>
+					<th colspan="2">경기개시 시간</th>
+					<th rowspan="2">변경사유</th>
+				</tr>
+				<tr>
+					<th>원정</th>
+					<th>홈</th>
+					<th>변경전</th>
+					<th>변경후</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>LG</td>
+					<td>2018.12.31(월)</td>
+					<td>잠실</td>
+					<td>한화</td>
+					<td>LG</td>
+					<td>17:00</td>
+					<td>
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+						:
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+					</td>
+					<td>
+						<select name="" id="" style="width:170px;">
+							<option value="">텍스트 입력</option>
+						</select>
+						<a href="javascript:;" class="btn-modify btn-group-select">수정</a>
+					</td>
+				</tr>
+				<tr>
+					<td>LG</td>
+					<td>2018.12.31(월)</td>
+					<td>잠실</td>
+					<td>한화</td>
+					<td>LG</td>
+					<td>17:00</td>
+					<td>
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+						:
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+					</td>
+					<td>
+						<select name="" id="" style="width:170px;">
+							<option value="">텍스트 입력</option>
+						</select>
+						<a href="javascript:;" class="btn-modify btn-group-select">수정</a>
+					</td>
+				</tr>
+				<tr>
+					<td>LG</td>
+					<td>2018.12.31(월)</td>
+					<td>잠실</td>
+					<td>한화</td>
+					<td>LG</td>
+					<td>17:00</td>
+					<td>
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+						:
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+					</td>
+					<td>
+						<select name="" id="" style="width:170px;">
+							<option value="">텍스트 입력</option>
+						</select>
+						<a href="javascript:;" class="btn-modify btn-group-select">수정</a>
+					</td>
+				</tr>
+				<tr>
+					<td>LG</td>
+					<td>2018.12.31(월)</td>
+					<td>잠실</td>
+					<td>한화</td>
+					<td>LG</td>
+					<td>17:00</td>
+					<td>
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+						:
+						<select name="" id="" class="sel-time">
+							<option value="">00</option>
+						</select>
+					</td>
+					<td>
+						<select name="" id="" style="width:170px;">
+							<option value="">텍스트 입력</option>
+						</select>
+						<a href="javascript:;" class="btn-modify btn-group-select">수정</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="filebox-area">
+			<div class="filebox preview-image">
+				<label for="ex_filename">파일 선택</label> 
+				<input class="ipt upload-name" value="파일선택" disabled="disabled">
+				<input type="file" id="ex_filename" class="upload-hidden">
+			</div>
+		</div>
+		<div class="btn-area-board">    
+			<a class="btn btn-reg" href="#none">제출</a>
+			<a class="btn btn-cancel" href="#none">취소</a>
+		</div>
+	</div>
+	<a href="#none" class="btn-close"><img src="../resources/images/common/btn_pop_close.gif" alt="" /></a>
+</div>
+<div class="modal"></div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+/* 발급신청내역 삭제 팝업 */
+.pop-delete {width:464px;margin-left:-232px;padding:40px 15px 20px;}
+.pop-delete .txt {padding-top:80px;background:url("../images/popup/bg_certificate_delete.gif") no-repeat 50% 0;font-size:16px;font-weight:bold;text-align:center;}
+.pop-delete .btn-area {margin-top:35px;text-align:center;}
+.pop-delete .btn-area .btn {display:inline-block;width:130px;height:38px;line-height:34px;font-size:16px;font-weight:bold;color:#333;border:1px solid #4c4c4c;box-sizing:border-box;text-align:center;}
+.pop-delete .btn-area .btn-confirm {margin-right:3px;background:#058fd3;color:#fff;border:1px solid #036493;}
+.pop-delete .btn-close {position:absolute;top:15px;right:14px;}
+
+.pop-certificate-view {width:506px;margin-left:-253px;}
+.pop-certificate-view header {overflow:hidden;padding:12px 20px;background:#058fd3;}
+.pop-certificate-view header .tit {float:left;font-size:15px;font-weight:bold;color:#fff;}
+.pop-certificate-view header .btn-close {float:right;}
+.pop-certificate-view .contents {padding:10px 14px 20px;}
+.pop-certificate-view .contents .tbl-type01 {border-color:#abaeb3;}
+.pop-certificate-view .contents .tbl-type01 .tbl th, .pop-certificate-view .contents .tbl-type01 .tbl td {padding:11px 10px 12px;text-align:left;}
+.pop-certificate-view .contents .view {padding:10px;text-align:center;}
+.pop-certificate-view .btn-area {text-align:center;}
+.pop-certificate-view .btn-area .btn-confirm {display:inline-block;width:130px;height:38px;line-height:34px;background:#058fd3;color:#fff;font-size:16px;font-weight:bold;border:1px solid #036493;box-sizing:border-box;text-align:center;}

@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+#wrap {width:540px;margin:270px auto 0;}
+h1 {text-align:center;}
+.tit {padding:20px 0;font-size:17px;text-align:center;}
+.tit .line {display:inline-block;margin-top:3px;font-size:12px;font-weight:100;vertical-align:top;}
+.login-box {}
+.login-box .input-area {float:left;width:400px;}
+.login-box .input-area .id {margin-bottom:10px;}
+.login-box .input-area .ipt {width:100%;padding:21px 10px;border:1px solid #ccc;font-size:14px;}
+.login-box .input-area .ipt:focus {border:1px solid #ea1b1b;}
+.login-box .input-area .save {margin-top:10px;}
+.login-box .btn-area {float:right;}
+.login-box .btn-area .btn-login {display:block;width:130px;height:130px;line-height:130px;background:#ea1b1b;font-size:17px;color:#fff;text-align:center;}
+.login-box .notice {clear:both;padding:20px 0 10px 23px;color:#ea1b1b;background:url("../images/common/ico_notice.gif") no-repeat 0 20px;}

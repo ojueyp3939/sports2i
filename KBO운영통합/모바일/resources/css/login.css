@@ -1,0 +1,46 @@
+﻿@charset "utf-8";
+
+* {box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;}
+html, body {height:100%;}
+body {position:relative;width:100%;}
+#wrap {position: relative;min-height:100%;padding-bottom:53px;}
+
+header {padding:50px 0 40px;}
+header .logo {width:84px;margin:0 auto 10px;}
+header .logo img {width:100%;}
+header .greeting {line-height:1.5;font-size:2.3rem;font-weight:bold;color:#104aad;text-align:center;}
+header .greeting span {display:block;font-size:1.7rem;}
+
+#container {}
+#contents {padding:0 20px;}
+
+.ipt-area {margin-bottom:40px;}
+.ipt-area .ipt {width:100%;height:46px;line-height:46px;margin-bottom:9px;padding:0 15px;border:1px solid #104aad;font-size:1.5rem;font-weight:bold;color:#969696;}
+.ipt-area .id-chk {}
+.ipt-area .id-chk input[type="checkbox"] {vertical-align:middle;}
+.ipt-area .id-chk label {margin-left:5px;font-size:1.4rem;font-weight:bold;color:#444;vertical-align:middle;}
+.btn-area {text-align:center;}
+.btn-area input[type="submit"].btn-login {display:inline-block;width:250px;height:48px;line-height:48px;background:#104aad;font-size:1.8rem;font-weight:bold;color:#fff;text-align:center;border-radius:24px;}
+.err-txt {margin-top:15px;font-size:1.4rem;color:#104aad;line-height:1.5;text-align:center;}
+.err-txt span {display:block;}
+
+footer {position:absolute;bottom:0;left:0;right:0;width:100%;padding:10px 0 25px;}
+footer address {font-size:1.5rem;font-style:normal;color:#666;text-align:center;}
+
+
+/* media query */
+@media (max-width:320px){
+	
+}
+
+@media (min-width:375px){	
+
+}
+
+@media (min-width:414px){	
+
+}
+
+@media (orientation:landscape){
+
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+ 
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, 
+img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+embed, output, ruby, summary, time, mark, audio, video, input,button {margin:0;padding:0;border:0;vertical-align:baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, canvas {display: block;}
+body {margin:0;padding:0;font-size:10px;line-height:1.2;font-family:"sol","AppleGothicNeoSD","Apple SD 산돌고딕 Neo","Droid sans",sans-serif;color:#222;-webkit-text-size-adjust:none;-moz-text-size-adjust: none;-ms-text-size-adjust: none;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none;}
+table {border-collapse: collapse;border-spacing:0;}
+button {background:none;border:0 none;cursor:pointer;}
+legend,caption{overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+address {font-style:normal;}
+form {margin:0;padding:0;}
+hr {display:none;}
+a {color:#666;}
+a:link, a:visited {text-decoration:none;}
+a:active, a:hover {text-decoration:none;}
+a img, input.type-image {border:0 none;}
+input.type-text, textarea {border:1px solid #ddd;background:#fff;padding:1px;}
+input, select, textarea {vertical-align: middle;font-size:10px;color:#333;}
+select {padding:0 5px;font-size:10px;font-family:"sol","AppleGothicNeoSD","Apple SD 산돌고딕 Neo","Droid sans",sans-serif;border:1px solid #7e7d7d;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:url("../images/common/btn_arrow_select.png") no-repeat top 12px right 14px;background-size:11px 7px;border-radius: 0px;}
+select::-ms-expand {display:none;}
+span.button, img.button, a.button {cursor: pointer;vertical-align: middle;}
+form select, form input {vertical-align:middle;}
+img {width:100%;vertical-align:top;}
+strong {font-weight:bold;}
+html {font-size:10px;}
+* {box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+			<div class="user">
+				<p>
+					<img src="resources/images/main/icon_user.png" />
+					<span class="name">홍길동</span>님
+				</p>
+				<a class="link" href=""><b>회원정보 수정</b></a>
+				<a class="link" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="application">
+				<h1>개인정보 제공 동의서 작성</h1>
+				<h2 class="txt-c">개인 정보 수집, 이용 및 제3자 제공 동의서</h2>
+				<section class="application-wrap">
+					<div class="application-box agree">
+						<div class="agree-box">
+							KBO 신인드래프트 참가와 관련하여 (사)한국야구위원회(KBO)가 본인의 개인정보를 수집·이용하거나<br/>
+							제3자에게 제공하고자 하는 경우에는 「개인정보보호법」에 따라 본인의 동의를 얻어야 합니다.<br/>
+							이에 본인은 귀 사가 아래의 내용과 같이 본인의 개인정보를 수집·이용하는 것에 동의합니다.
+						</div>
+
+						<h3>1. 개인 정보 수집 및 이용에 대한 동의</h3>
+						<table class="tbl des">
+							<colgroup>
+								<col width="345px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>개인 정보 수집 및 이용 목적</th>
+								<td>신인드래프트 참가에 대한 심사 및 지원</td>
+							</tr>
+							<tr>
+								<th>수집 및 이용하는 개인 정보 내용</th>
+								<td>참가신청서류 등 제출된 서류상의 개인 정보</td>
+							</tr>
+							<tr>
+								<th>개인 정보 이용 및 보유 기간</th>
+								<td>동의서 작성일로부터 5년간 이용 및 보유</td>
+							</tr>
+							<tr>
+								<th>동의 거부 권리 및 동의 거부에 따른<br/>불이익 내용 또는 제한사항</th>
+								<td>귀하는 개인 정보 수집 및 이용을 거부할 권리가 있습니다.<br/>단, 동의를 거부할 경우 지원이 제한될 수 있습니다.</td>
+							</tr>
+						</table>
+						<div class="check-box in-txt">
+							<span>위와 같이 개인 정보 수집 및 이용에 동의하십니까?</span>
+							<input type="checkbox" id="no"><label for="no">동의합니다.</label>
+							<input type="checkbox" id="yes"><label for="yes">동의하지 않습니다.</label>
+						</div>
+						<div class="line"></div>
+
+						<h3>2. 민감 정보 수집 및 이용에 대한 동의</h3>
+						<table class="tbl des">
+							<colgroup>
+								<col width="345px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>민감 정보의 수집 및 이용 목적</th>
+								<td>신인드래프트 참가에 대한 심사 및 지원</td>
+							</tr>
+							<tr>
+								<th>수집 및 이용하는 민감 정보 내용</th>
+								<td>참가신청서류 등 제출된 서류상의 개인 정보</td>
+							</tr>
+							<tr>
+								<th>민감 정보 이용 및 보유 기간</th>
+								<td>동의서 작성일로부터 5년간 이용 및 보유</td>
+							</tr>
+							<tr>
+								<th>동의 거부 권리 및 동의 거부에 따른<br/>불이익 내용 또는 제한사항</th>
+								<td>귀하는 민감 정보 수집 및 이용을 거부할 권리가 있습니다. 단, 동의를 거부할 경우 지원이 제한될 수 있습니다.</td>
+							</tr>
+						</table>
+						
+						<div class="check-box in-txt">
+							<span>위와 같이 민감 정보 수집 및 이용에 동의하십니까?</span>
+							<input type="checkbox" id="no"><label for="no">동의합니다.</label>
+							<input type="checkbox" id="yes"><label for="yes">동의하지 않습니다.</label>
+						</div>
+
+						<div class="line"></div>
+
+						<h3>3. 개인 및 민감 정보 제3자 제공에 대한 동의</h3>
+						<table class="tbl des">
+							<colgroup>
+								<col width="345px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>개인 및 민감 정보를 제공 받는 자</th>
+								<td>㈜엔씨다이노스, ㈜두산베어스, ㈜케이티스포츠, ㈜엘지스포츠, ㈜서울히어로즈, <br/>㈜기아타이거즈, ㈜롯데자이언츠, ㈜삼성라이온즈, ㈜신세계야구단, ㈜한화이글스</td>
+							</tr>
+							<tr>
+								<th>개인 및 민감 정보 이용 목적</th>
+								<td>신인드래프트 대상자 선정을 위한 심사</td>
+							</tr>
+							<tr>
+								<th>제공되는 개인 및 민감 정보 내용</th>
+								<td>참가신청서류 등 제출된 서류상의 개인 정보</td>
+							</tr>
+							<tr>
+								<th>제공된 개인 및 민감 정보 이용 및 보유 기간</th>
+								<td>동의서 작성일로부터 5년간 이용 및 보유</td>
+							</tr>
+							<tr>
+								<th>동의 거부 권리 및 동의 거부에 따른<br/>불이익 내용 또는 제한사항</th>
+								<td>귀하는 개인 및 민감 정보 제3자 제공을 거부할 권리가 있습니다. 단, 동의를 거부할 경우 지원이 제한될 수 있습니다.</td>
+							</tr>
+						</table>
+						
+						<div class="check-box in-txt">
+							<span>위와 같이 제3자 제공에 동의하십니까?</span>
+							<input type="checkbox" id="no"><label for="no">동의합니다.</label>
+							<input type="checkbox" id="yes"><label for="yes">동의하지 않습니다.</label>
+						</div>
+
+						<div class="line"></div>
+						
+						<h3>4. 지원 사례 공개에 대한 동의</h3>
+						<table class="tbl des">
+							<colgroup>
+								<col width="345px">
+								<col width="120px">
+								<col width="">
+								<col width="120px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>지원 사례의 수집 및 이용 목적</th>
+								<td colspan="4">신인드래프트 지원에 따른 홈페이지 공시</td>
+							</tr>
+							<tr>
+								<th rowspan="2">수집 및 이용하는 지원 사례 내용</th>
+								<td>이름</td>
+								<td class="choice">
+									<input type="checkbox"><label for="">실명</label>
+									<input type="checkbox"><label for="">가명</label>
+								</td>
+								<td>인적사항</td>
+								<td class="choice">
+									<input type="checkbox"><label for="">동의</label>
+									<input type="checkbox"><label for="">비동의</label>
+								</td>
+							</tr>
+							<tr>
+								<td>지원내용</td>
+								<td class="choice">
+									<input type="checkbox"><label for="">동의</label>
+									<input type="checkbox"><label for="">비동의</label>
+								</td>
+								<td>사진공개</td>
+								<td class="choice">
+									<input type="checkbox"><label for="">동의</label>
+									<input type="checkbox"><label for="">비동의</label>
+								</td>
+							</tr>
+							<tr>
+								<th>개인 정보 활용 기간</th>
+								<td colspan="4">동의서 작성일로부터 5년간 이용 및 보유</td>
+							</tr>
+							<tr>
+								<th>동의 거부 권리 및 동의 거부에 따른<br>불이익 내용 또는 제한사항</th>
+								<td colspan="4">귀하는 지원 사례 공개를 거부할 권리가 있습니다.<br>단, 동의를 거부할 경우 지원이 제한될 수 있습니다.</td>
+							</tr>
+						</table>
+
+						<div class="check-box in-txt">
+							<span>위와 같이 지원 사례 공개에 동의하십니까?</span>
+							<input type="checkbox" id="no"><label for="no">동의합니다.</label>
+							<input type="checkbox" id="yes"><label for="yes">동의하지 않습니다.</label>
+						</div>
+						
+						<div class="line"></div>
+
+						<div class="agree-check txt-c">
+							<input type="checkbox" id="check">
+							<label for="check">전체동의</label>   
+						</div>
+						<div class="line"></div>
+
+						<p class="txt">개인정보보호법 등 관련 법률에 의거해 상기 본인은 위와 같이 개인 정보 수집, 이용, 제공 및 활용에 동의합니다.</p>
+						<p class="date">2021년 01월 01일</p>
+
+						<div class="line"></div>
+
+						<table class="tbl agree">
+							<colgroup>
+								<col width="510px;">
+								<col width="236px;">
+							</colgroup>
+							<tr>
+								<th>성명 : </th>
+								<td>
+									<input type="text" />
+								</td>
+								<td>
+									(서명)
+								</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+
+				<div class="btn-wrap">
+					<a href="">취소</a>
+					<a href="" class="blue">다음</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

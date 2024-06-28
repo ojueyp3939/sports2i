@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/guide.css" />
+</head>
+<script>
+$(document).ready(function(){
+	var swiper = new Swiper('.slide-scroll', {
+		slidesPerView: 'auto',
+		freeMode: true,
+	});
+});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">	
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="javascript:;">쏠픽하기</a></li>
+					<li class="on"><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹&이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr /> 
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<h2 class="today"><span class="num">6</span>월 <span class="num">12</span>일 화요일 <span class="txt">TODAY</span></h2>
+				<a class="btn-guide" href="#none">쏠픽이란</a>
+				<div class="swiper-container slide-scroll">
+					<div class="game-list swiper-wrapper">
+						<ul class="swiper-slide">
+							<li class="on">
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_LG.png" alt="" /></span>
+									<span class="name">LG</span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_LT.png" alt="" /></span>
+									<span class="name">롯데</span>
+								</div>
+							</li>
+							<li>
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_KT.png" alt="" /></span>
+									<span class="name">KT</span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_NC.png" alt="" /></span>
+									<span class="name">NC</span>
+								</div>
+							</li>
+							<li>
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_WO.png" alt="" /></span>
+									<span class="name">넥센</span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_HT.png" alt="" /></span>
+									<span class="name">KIA</span>
+								</div>
+							</li>
+							<li class="cancel">
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/embR_78x54_WO.png" alt="" /></span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/embR_78x54_HT.png" alt="" /></span>
+								</div>
+								<p>경기취소</p>
+							</li>
+							<li>
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_SK.png" alt="" /></span>
+									<span class="name">SK</span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_OB.png" alt="" /></span>
+									<span class="name">두산</span>
+								</div>
+							</li>
+							<li>
+								<div class="team away">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_HH.png" alt="" /></span>
+									<span class="name">한화</span>
+								</div>
+								<div class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_78x54_SS.png" alt="" /></span>
+									<span class="name">삼성</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="game-cont">
+					<!-- <img src="../resources/images/sub/guide02.jpg" alt="" /> -->
+					<div class="team-record">						
+						<div class="away">
+							<div class="team">
+								<div class="emb">
+									<img src="../resources/images/emb/emb_135x87_LG.png" alt="" />
+								</div>
+								<div class="name">LG</div>
+							</div>
+							<div class="record">
+								<div class="rank">1위</div>
+								<div class="info">18승 99무 20패</div>
+							</div>
+						</div>
+						<div class="vs">
+							<div class="ico">VS</div>
+							<div class="place">18:30 광주</div>
+						</div>
+						<div class="home">
+							<div class="record">
+								<div class="rank">8위</div>
+								<div class="info">18승 99무 20패</div>
+							</div>
+							<div class="team">
+								<div class="emb">
+									<img src="../resources/images/emb/emb_135x87_LT.png" alt="" />
+								</div>
+								<div class="name">롯데</div>
+							</div>							
+						</div>					
+					</div>
+					<!-- <img src="../resources/images/sub/guide03.jpg" alt="" /> -->
+					<div class="prediction">						
+						<h3>승부예측</h3>
+						<div class="graph LT"><!-- 홈팀코드 추가 -->
+							<span class="away-g LG" style="width:67%;"></span><!-- 어웨이팀 코드 추가 -->
+							<span class="rate-txt rate-away">67<span>%</span></span>
+							<span class="rate-txt rate-home">37<span>%</span></span>
+							<span class="result">LG 우세</span>		
+						</div>
+						<p class="sub-script">승부예측은 선발투수 정보, 최근 경기 등을 반영한 시뮬레이션  예측시스템에 의해 나온 결과 입니다.</p>
+					</div>
+					<!-- <img src="../resources/images/sub/guide04.jpg" alt="" /> -->
+					<div class="vs-record">
+						<ul class="tab">							
+							<li><a href="#none">최근 3시즌 맞대결</a></li>
+							<li class="on"><a href="#none">시즌 기록</a></li>
+						</ul>
+						<dl class="total">
+							<dt class="item">상대전적</dt>
+							<dd class="away-record">25승 5무 25패</dd>							
+							<dd class="home-record">24승 5무 25패</dd>
+						</dl>
+						<ul class="record-list">
+							<li>
+								<dl>
+									<dt class="item">승률</dt>
+									<dd class="away-record">0.124</dd>
+									<dd class="home-record">0.124</dd>
+								</dl>
+								<div class="rate-bar">
+									<span class="away LG"><span class="bar">60%</span></span><!-- 어웨이팀 코드 추가 -->
+									<span class="home LT"><span class="bar">60%</span></span><!-- 홈팀코드 추가 -->
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt class="item">타율</dt>
+									<dd class="away-record">0.999</dd>
+									<dd class="home-record">0.999</dd>
+								</dl>
+								<div class="rate-bar">
+									<span class="away LG"><span class="bar">60%</span></span>
+									<span class="home LT"><span class="bar">60%</span></span>
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt class="item">평균자책점</dt>
+									<dd class="away-record">0.124</dd>
+									<dd class="home-record">0.124</dd>
+								</dl>
+								<div class="rate-bar">
+									<span class="away LG"><span class="bar">60%</span></span><!-- 어웨이팀 코드 추가 -->
+									<span class="home LT"><span class="bar">60%</span></span><!-- 홈팀코드 추가 -->
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt class="item">홈런</dt>
+									<dd class="away-record">30%</dd>
+									<dd class="home-record">60%</dd>
+								</dl>
+								<div class="rate-bar">
+									<span class="away LG"><span class="bar" style="width:30%;">30%</span></span>
+									<span class="home LT"><span class="bar" style="width:80%;">60%</span></span>
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt class="item">실책</dt>
+									<dd class="away-record"><span class="bar">60%</span></dd>
+									<dd class="home-record"><span class="bar">60%</span></dd>
+								</dl>
+								<div class="rate-bar">
+									<span class="away LG"><span class="bar">60%</span></span>
+									<span class="home LT"><span class="bar">60%</span></span>
+								</div>
+							</li>
+						</ul>
+						<dl class="recent">
+							<dt class="item">최근경기</dt>
+							<dd class="away-record">
+								<ul class="result-list">
+									<li class="win">승</li>
+									<li class="win">승</li>
+									<li>패</li>
+									<li>패</li>
+									<li>패</li>
+								</ul>
+							</dd>
+							<dd class="home-record">
+								<ul class="result-list">
+									<li class="win">승</li>
+									<li class="win">승</li>
+									<li>패</li>
+									<li>패</li>
+									<li>패</li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<!-- <img src="../resources/images/sub/guide05.jpg" alt="" /> -->
+					<div class="pitcher">						
+						<div class="pitcher-info">
+							<div class="team away">
+								<div class="player-img">
+									<img src="https://kbojson.sports2i.com/appFile/120x140/77829.jpg" alt="" />
+								</div>
+								<div class="name">SK 김광현</div>
+								<div class="record">
+									<span class="season">시즌 99승 99패</span>VS KIA 99승 99패</div>
+							</div>
+							<div class="vs">
+								<div class="ico">VS</div>
+								<div class="txt">선발투수</div>							
+							</div>
+							<div class="team home">
+								<div class="player-img">
+									<img src="https://kbojson.sports2i.com/appFile/120x140/67815.jpg" alt="" />
+								</div>
+								<div class="name">KIA 다이아몬드</div>
+								<div class="record">
+									<span class="season">시즌 99승 99패</span>VS KIA 99승 99패
+								</div>
+							</div>
+						</div>
+						<div class="pitcher-record">							
+							<dl>
+								<dt class="item">평균자책점</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+							<dl>
+								<dt class="item">WHIP</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+							<dl>
+								<dt class="item">탈삼진</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+							<dl>
+								<dt class="item">WAR</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+							<dl>
+								<dt class="item">K/9</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+							<dl>
+								<dt class="item">BB/9</dt>
+								<dd class="away-record">0.999</dd>
+								<dd class="home-record">0.999</dd>
+							</dl>
+						</div>
+						<ul class="explanation">
+							<li><span class="tit">WHIP</span><span> 이닝당 출루 허용율</span></li>
+							<li><span class="tit">WAR</span><span> 대체 선수 대비 승리 기여도</span></li>
+							<li><span class="tit">WPA</span><span> 선수가 각 플레이마다 팀 승리확률을 얼마나 변화시켰는지 나타낸 수치</span></li>
+							<li><span class="tit">K/9</span><span> 9이닝당 탈삼진 수</span></li>
+							<li><span class="tit">BB/9</span><span> 9이닝당 볼넷 허용 수</span></li>
+						</ul>
+					</div>
+					<!-- <img src="../resources/images/sub/guide06.jpg" alt="" /> -->
+					<div class="key-player">						
+						<div class="header">
+							<h3>키플레이어</h3>
+							<ul class="tab">																					
+								<li><a href="#none">KIA</a></li>
+								<li class="on"><a href="#none">SK</a></li>
+								<li><a href="#none">전 체</a></li>
+							</ul>
+						</div>
+						<div class="record-area">
+							<p class="sub-script">최근 10경기 기록 상위 랭킹입니다.</p>
+							<ul class="record-list">
+								<li class="tit">
+									<div class="record-tit">랭킹</div>
+									<div class="player no1">
+										<div class="rank">1위</div>
+									</div>
+									<div class="player">
+										<div class="rank">2위</div>
+									</div>
+									<div class="player">
+										<div class="rank">3위</div>
+									</div>
+								</li>
+								<li>
+									<div class="record-tit">타율</div>
+									<div class="player no1">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_NC.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_SK.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+								</li>
+								<li>
+									<div class="record-tit">타율</div>
+									<div class="player no1">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_SS.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_KT.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_HH.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+								</li>
+								<li>
+									<div class="record-tit">홈런</div>
+									<div class="player no1">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_HT.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_OB.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LT.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+								</li>
+								<li>
+									<div class="record-tit">OPS</div>
+									<div class="player no1">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_WO.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+								</li>
+								<li>
+									<div class="record-tit">WPA</div>
+									<div class="player no1">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+									<div class="player">
+										<div class="player-img">
+											<span class="photo"><img src="https://www.koreabaseball.com/file/person/kbo/2018/60841.png" alt="" /></span>
+											<span class="emb"><img src="../resources/images/emb/emb_102x84_LG.png" alt="" /></span>
+										</div>
+										<div class="name">다이아몬드</div>
+										<div class="record">0.999</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<ul class="explanation">
+							<li><span class="tit">OPS</span><span> 출루율과 장타율을 더한 수치</span></li>
+							<li><span class="tit">WPA</span><span> 선수가 각 플레이마다 팀 승리확률을 얼마나 변화시켰는지 나타낸 수치</span></li>
+						</ul>
+					</div>
+					<!-- <img src="../resources/images/sub/guide07.jpg" alt="" /> -->
+					<div class="btn-area">
+						<a href="#none" class="btn"><img src="../resources/images/sub/btn_guide.gif" alt="" /></a>						
+					</div>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

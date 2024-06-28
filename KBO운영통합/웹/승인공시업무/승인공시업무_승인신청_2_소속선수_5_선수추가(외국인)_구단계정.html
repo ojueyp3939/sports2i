@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub2.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li class="on"><a href="#none">승인신청</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명관리</a></li>
+							<li><a href="#none">텍스트관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">	
+			<div class="tit-area">
+				<div class="inner">
+					<h2>승인신청</h2>
+				</div> 
+			</div>
+			<div class="tab-official">
+				<div class="inner">
+					<dl>
+						<dt>1. 구분 선택</dt>
+						<dd>
+							<ul class="tab">
+								<li><a href="#none"><span>경기정보</span></a></li>
+								<li class="on"><a href="#none"><span>소속선수</span></a></li>
+								<li><a href="#none"><span>육성선수</span></a></li>
+								<li><a href="#none"><span>감독∙코치</span></a></li>
+								<li><a href="#none"><span>신규승인신청</span></a></li>
+							</ul>
+						</dd>
+						<dt>2. 변경항목 선택</dt>
+						<dd>
+							<ul class="tab">
+								<li><a href="#none"><span>선수 개명</span></a></li>
+								<li><a href="#none"><span>배번 변경</span></a></li>
+								<li><a href="#none"><span>선수추가(육성말소)</span></a></li>
+								<li><a href="#none"><span>선수추가(군보류 해제)</span></a></li>
+								<li class="on"><a href="#none"><span>선수추가(외국인)</span></a></li>
+								<li><a href="#none"><span>선수추가(신규)</span></a></li>
+								<li><a href="#none"><span>군보류</span></a></li>
+								<li><a href="#none"><span>임의탈퇴</span></a></li>
+								<li><a href="#none"><span>임의탈퇴 복귀</span></a></li>
+								<li><a href="#none"><span>임의탈퇴 공시말소</span></a></li>
+								<li><a href="#none"><span>자유계약</span></a></li>
+								<li><a href="#none"><span>자유계약(웨이버)</span></a></li>
+								<li><a href="#none"><span>웨이버</span></a></li>
+								<li><a href="#none"><span>선수 계약 양도(웨이버)</span></a></li>
+								<li><a href="#none"><span>선수 계약 양도</span></a></li>
+							</ul>
+						</dd>
+						<dt>3. 세부항목 선택</dt>
+						<dd>
+							<div class="select-area">
+								<input type="text" name="" class="ipt" value="" style="width:200px;" placeholder="성명" onClick="search_input_view(0);" />
+								<a href="#none" class="btn-app ml5">검색</a>
+								<a href="#none" class="btn-app ml5">신규추가</a>
+								<!-- 검색 레이어 -->								
+								<ul class="search-detail">
+									<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">선택</a></li>
+									<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">선택</a></li>
+									<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">선택</a></li>
+									<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">선택</a></li>
+									<li class="txt-c">검색 결과가 없습니다.</li>
+								</ul>
+							</div>
+						</dd>
+					</dl>
+				</div> 
+			</div>
+			<div class="official-cont">
+				<h3>소속선수 - 선수추가(외국인)</h3>
+				<!-- 선수 검색시 // -->
+				<div class="tbl-type">
+					<table class="tbl">
+						<colgroup>
+							<col width="7%" />
+							<col width="10%" />
+							<col width="14%" />
+							<col width="16%" />
+							<col width="10%" />
+							<col width="11%" />
+							<col width="9%" />
+							<col width="9%" />
+							<col width="7%" />
+							<col width="5%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>신청팀</th>
+								<th>구단</th>
+								<th>선수명</th>
+								<th>영문명</th>
+								<th>등록명</th>
+								<th>생년월일</th>
+								<th>위치</th>
+								<th>투타</th>
+								<th>배번</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>넥센</td>
+								<td>넥센 히어로즈</td>
+								<td>에릭 해커</td>
+								<td>Eric Hacker</td>
+								<td>해커</td>
+								<td>1990. 6. 18</td>
+								<td>투수</td>
+								<td>우우</td>
+								<td><input type="text" name="" class="ipt" value="23" /></td>
+								<td><a href="javascript:;" class="btn-delete">삭제</a></td>
+							</tr>
+						</tbody>						
+					</table>
+				</div>
+				<!-- // 선수 검색시 -->
+				<!-- 신규 추가시 // -->
+				<p>검색 결과 없을 때 - 신규추가시</p><!-- 삭제하세요 -->
+				<div class="tbl-type">
+					<table class="tbl">
+						<colgroup>
+							<col width="7%" />
+							<col width="10%" />
+							<col width="14%" />
+							<col width="16%" />
+							<col width="10%" />
+							<col width="11%" />
+							<col width="9%" />
+							<col width="9%" />
+							<col width="7%" />
+							<col width="5%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>신청팀</th>
+								<th>구단</th>
+								<th>선수명</th>
+								<th>영문명</th>
+								<th>등록명</th>
+								<th>생년월일</th>
+								<th>위치</th>
+								<th>투타</th>
+								<th>배번</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>삼성</td>
+								<td>삼성 라이온즈</td>
+								<td><input type="text" name="" class="ipt" value="리살베르토 보니야" /></td>
+								<td><input type="text" name="" class="ipt" value="Lisalverto Bonilla" /></td>
+								<td><input type="text" name="" class="ipt" value="보니야" /></td>
+								<td><input type="text" name="" class="ipt" value="1983. 3. 26." /></td>
+								<td>
+									<select name="" id="">
+										<option value="" selected>투수</option>
+									</select>
+								</td>
+								<td>
+									<select name="" id="">
+										<option value="" selected>우우</option>
+									</select>
+								</td>
+								<td><input type="text" name="" class="ipt" value="23" /></td>
+								<td><a href="javascript:;" class="btn-delete">삭제</a></td>
+							</tr>
+						</tbody>						
+					</table>
+				</div>
+				<!-- // 신규 추가시 -->
+				<div class="filebox-area">
+					<div class="filebox preview-image">
+						<label for="ex_filename">파일 선택</label> 
+						<input class="ipt upload-name" value="파일선택" disabled="disabled">
+						<input type="file" id="ex_filename" class="upload-hidden">
+					</div>
+				</div>				
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">제출</a>
+				<a class="btn btn-cancel" href="#none">취소</a>
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

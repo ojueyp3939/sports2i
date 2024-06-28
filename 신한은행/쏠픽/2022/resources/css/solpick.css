@@ -1,0 +1,581 @@
+﻿@charset "utf-8";
+
+#contents.solpick {min-height:calc(100vh - 35px);background:url("../images/main/bg_pick_info_2022.png") top left no-repeat;background-size:100%;background-color:#190355;}
+#contents.solpick .game-wrap {width:100%;padding:0 18px;border-radius:40px 40px 0 0;background-color:#fff;}
+/* solpick main */
+.my-pick-info {overflow:hidden;padding-top:15px;}
+.my-pick-info .my-point {width:100%;padding:0 50px;margin-bottom:35px;}
+.my-pick-info .my-point .my {margin-bottom:18px;color:#fff}
+.my-pick-info .my-point .my .my-label {margin-bottom:8px;font-size:1.1rem;color:#fff;}
+.my-pick-info .my-point .my p::after {content:"";display:block;clear:both;}
+.my-pick-info .my-point .my p span {float:left;font-size:2.7rem;font-weight:400}
+.my-pick-info .my-point .my p .pick {margin-top:7px;margin-left:7px;}
+.my-pick-info .my-point .pick {display:inline-block;padding:2px 7px 4px;border-radius:7px;background-color:#4e55e1;font-size:1.2rem !important;font-weight:100 !important}
+.my-pick-info .my-point .info {color:#fff;}
+.my-pick-info .my-point .info dl:first-child {float:left;}
+.my-pick-info .my-point .info dl:last-child {float:right;}
+.my-pick-info .my-point .info dl dt {display:block;margin-bottom:8px;font-size:1.1rem;color:#fff;font-weight:100;}
+.my-pick-info .my-point .info dl dd {font-size:2.0rem;font-weight:400}
+.my-pick-info .my-point .info dl dd span {float:left;margin-right:5px;}
+.my-pick-info .my-point .info dl dd .num {line-height:1;font-size:2.0rem;font-weight:400;vertical-align:text-top;}
+.my-pick-info .my-point .info dl dd .date {font-size:1.5rem;font-weight:100;}
+.my-pick-info .my-point .mascot {position:absolute;top:62px;right:45px;width:72px}
+.my-pick-info.first .date-select {margin-bottom:20px;}
+.my-pick-info.first .my-point {padding:0;margin-bottom:7.12962vw;text-align:center;}
+.my-pick-info.first .my-point img {width:53.88888vw;}
+
+/* calendar */
+.date-select {position:relative;margin-bottom:27px;text-align:center;}
+.date-select .today {color:#fff;font-size:1.6rem;vertical-align:middle;}
+.date-select .btn-prev,
+.date-select .btn-next {display:inline-block;width:8px;margin-top:2px;padding:10px;vertical-align:middle;box-sizing:content-box;}
+.date-select .btn-calendar {display:inline-block;width:15px;margin-left:6px;}
+.date-select.play {position:relative;padding:8px 0 26px;margin-bottom:0}
+/* tab */
+.tab {overflow:hidden;padding:13px 18px 22px;}
+.tab li {position:relative;float:left;}
+.tab li:first-child {margin-right:25px;}
+.tab li a {position:relative;display:block;width:100%;padding:5px 0;font-size:1.3rem;color:#9ca2b7;z-index:1;}
+.tab li.on a {color:#35393e;font-weight:700;}
+.tab li.on a::before {content:'';position:absolute;top:-2px;left:calc(50% - 8px);width:16px;height:4px;border-radius:2px;background-color:#232f5a;}
+
+/* main */
+.game-cont {position:relative;}
+.index .game-cont .quiz {padding:0 9px 15px;}
+.game-cont .quiz-num {position:absolute;top:-22px;right:18px;width:45px;height:45px;padding:15px 0;border-radius:50%;font-size:1.3rem;color:#fff;text-align:center;background-color:#4e55e1;box-shadow:1px 2px 5px 0px #cecece;}
+.game-cont .quiz-num.q2  {background-color:#43c4b6;}
+.game-cont .quiz {padding:0 0 15px;border-radius:9px;text-align:center;}
+.game-cont .quiz .quiz-box .tit {margin-bottom:17px;font-size:1.9rem;color:#222;font-weight:700}
+.game-cont .quiz .quiz-box .txt {font-size:1.1rem;color:#8a8c8e;text-align:right;}
+.game-cont .quiz .quiz-box .question {margin-bottom:15px;line-height:1.3;font-size:1.9rem;color:#333;letter-spacing:-1px;word-break:keep-all;}
+.game-cont .countdown {display:inline-block;padding:7px 15px;margin-bottom:18px;border-radius:16px;font-size:1.6rem;color:#444;background-color:#f4f7ff;}
+.game-cont .countdown span {color:#475ffd;font-weight:700;}
+.game-cont .countdown img {width:26px;margin-right:5px;vertical-align:bottom;}
+.game-cont .countdown.q2  span {color:#43c4b6;}
+.game-cont .quiz .user-choice {margin-bottom:10px;font-size:1.2rem;color:#2c4792;text-align:center;}
+.game-cont .quiz .graph .top5 {width:300px;margin:0 auto;}
+.game-cont .quiz .graph .top5 li {float:left;margin:0 3px 10px;text-align:center;}
+.game-cont .quiz .graph .top5 li img {width:36px;margin-bottom:7px;}
+.game-cont .quiz .graph .top5 li dl {width:54px;height:63px;}
+.game-cont .quiz .graph .top5 li dl dd {width:100%;height:100%;padding-top:14px;border-radius:10px;text-align:center;background:#f5f4f9;}
+.game-cont .quiz .graph .top5 li dl dd .rank {margin-bottom:3px;font-size:1.3rem;color:#444;font-weight:700;}
+.game-cont .quiz .graph .top5 li dl dd .rate {font-size:1.2rem;color:#444;}
+.game-cont .quiz .graph .top5 li.first dl dd {background-color:#4e55e1;box-shadow:3px 3px 6px 1px #e1e1e1;}
+.game-cont .quiz .graph .top5 li.first dl dd .rank,
+.game-cont .quiz .graph .top5 li.first dl dd .rate {color:#fff;}
+.game-cont .quiz .graph .top5 li.second dl dd {background-color:#f4f7ff;}
+.game-cont .quiz .graph .top5 li.second dl dd .rank,
+.game-cont .quiz .graph .top5 li.second dl dd .rate {color:#475ffd;}
+.game-cont .quiz .etc {width:290px;margin:0 auto;}
+.game-cont .quiz .etc li {float:left;margin-right:18px;font-size:1.1rem;color:#858585;}
+.game-cont .quiz .noti-txt {margin-bottom:20px;font-size:1.1rem;word-break:keep-all}
+.q2 .game-cont .quiz .graph .top5 li.high dl dd {background-color:#43c4b6;}
+
+/* state */
+.game-cont .quiz.noti {padding:10px 0;font-size:1.7rem;text-align:center;}
+.game-cont .quiz.noti img {width:55.55556vw}
+.game-cont .quiz.noti p {margin-bottom:33px;}
+.game-cont .quiz.noti .round-state {display:inline-block;padding:7px 23px;margin-bottom:15px;font-size:1.6rem;color:#444!important;font-weight:400;border-radius:16px;background-color:#f4f7ff;}
+.game-cont .quiz.noti.no p {margin-bottom:10px;font-size:1.5rem;color:#444}
+.game-cont .quiz.noti.no .round-state {margin-bottom:26px;}
+.game-cont .quiz.noti.no .round-state span {color:#232f5a!important;}
+.game-cont .quiz.noti.point .round-state span {color:#475ffd!important;}
+.game-cont .quiz.noti.cancel .round-state span {color:#ec5c73!important;}
+.game-cont .quiz.noti.no-attend .round-state {margin-bottom:26px;}
+.game-cont .quiz.noti.no-attend .round-state span {color:#475ffd!important;}
+.game-cont .quiz.noti.no-attend {font-size:1.5rem;color:#ec5c73;font-weight:100;}
+.game-cont .quiz.noti.no-attend p {margin-bottom:10px;}
+.game-cont .quiz.noti.no-attend span {display:inline-block;margin-bottom:3px;font-size:1.5rem;font-weight:400;}
+.game-cont .quiz.noti.no-attend img {width:46.2962vw}
+.game-cont .quiz.noti.point {padding:36px 0 33px;background:#fff;}
+.game-cont .quiz.noti.point .total-point {margin-bottom:27px;}
+.game-cont .quiz.noti.point .total-point dt {margin-bottom:11px;font-size:1.7rem;color:#2c4792;font-weight:700}
+.game-cont .quiz.noti.point .total-point dt span {font-size:1.3rem;font-weight:100}
+.game-cont .quiz.noti.point .total-point dd {width:216px;padding:16px 0;margin:0 auto;color:#fff;border-radius:12px;font-size:1.5rem;font-weight:100;background-image:linear-gradient(to right, #4e55e1, #43c4b6);box-shadow:-1px 3px 8px 0px rgba(0, 0, 0, 0.2);}
+.game-cont .quiz.noti.point .total-point dd span {font-size:2.0rem;font-weight:400;}
+.game-cont .quiz.noti.point .point-list dl {width:190px;margin:0 auto 15px;overflow:hidden;}
+.game-cont .quiz.noti.point .point-list dl:last-child {margin-bottom:0;}
+.game-cont .quiz.noti.point .point-list dl dt {position:relative;float:left;width:105px;padding-left:13px;font-size:1.4rem;color:#555;text-align:left;}
+.game-cont .quiz.noti.point .point-list dl dt::before {content:'';position:absolute;top:5px;left:0;width:3px;height:3px;background-color:#6175ee;}
+.game-cont .quiz.noti.point .point-list dl dd {position:relative;float:left;width:75px;font-size:1.3rem;color:#535353;font-weight:100;text-align:right;}
+.game-cont .quiz.noti.point .point-list dl dd::before {content:'';position:absolute;top:5px;left:0;width:5px;height:3px;background-color:#efefef;}
+.game-cont .quiz.noti.point .point-list dl dd span {margin-right:5px;font-size:1.4rem;color:#43c4b6;font-weight:700}
+.game-cont .quiz.noti.end {padding:25.27778vw 18px;}
+.game-cont .quiz.noti.end.add {padding-top:10.1851vw;}
+.game-cont .quiz.noti.end img {width:80vw;font-size:1.3rem;text-align:center;}
+.game-cont .quiz.noti.end .countdown {padding:12px 0;margin-bottom:12.2222vw;border-radius:3px;background-color:#f6f3f3;}
+.game-cont .quiz.noti.end .countdown p {margin-bottom:0;font-size:1.5rem;color:#43c4b6;font-weight:700}
+.game-cont .quiz.noti.end .txt {margin:7.0370vw}
+.game-cont .quiz.noti.end .txt .big {margin-bottom:12px;font-size:1.4rem;color:#093182;font-weight:700}
+.game-cont .quiz.noti.end .txt .small {line-height:1.5;margin-bottom:0;font-size:1.2rem;color:#000}
+/* q1, q2 - 공용 */
+/* q1, q2 - 공용_경기전 */
+.game-cont .before .quiz-box {margin-bottom:15px;}
+.game-cont .quiz-header {height:30px;border-radius:9px 9px 0 0;color:#fff;background-color:#0a3256;}
+.game-cont .quiz-header dt {position:relative;float:left;width:auto;height:30px;line-height:30px;padding-left:13px;border-radius:9px 0 0 0;font-size:1.3rem;background-color:#4fa0fa;}
+.game-cont .quiz-header dt::after {content:'';position:absolute;right:-13px;padding-left:3px;border-top:30px solid #4fa0fa;border-right:10px solid transparent}
+.game-cont .quiz-header dd {float:left;line-height:30px;padding-left:18px;font-size:1.3rem;color:#fff;letter-spacing:0;}
+/* q1, q2 - 공용_경기후 */
+.game-cont .after .my-result {position:relative;width:100%;height:63px;margin-bottom:10px;border-radius:10px;background:#f8f8f8;}
+.game-cont .after .my-result img {width:65px;padding-top:2px;margin-right:9px;}
+.game-cont .after .my-result p {display:inline-block;padding-top:12px;font-size:1.4rem;font-weight:100;color:#232f5a;line-height:1.3;}
+.game-cont .after .my-result.fail {background:#fee8ea}
+.game-cont .after .my-result.fail p {color:#ec5c73;}
+.game-cont .after .my-result.all-fail {background:#fee8ea}
+.game-cont .after .my-result.all-fail p {color:#ec5c73;}
+.game-cont .after .my-result.pass {background:#eeeffd}
+.game-cont .after .my-result.pass p {color:#4e55e1;}
+.game-cont .after .my-result.ing.fail p {padding-top:22px;}
+.game-cont .after .my-result.all-pass {background:#eeeffd}
+.game-cont .after .my-result.all-pass p {padding-top:12px;color:#4e55e1;}
+.game-cont .after .my-result.ing.pass p {padding-top:22px;}
+
+/* q1 - 공용 */
+.game-cont .q1-app .team-select li {margin-bottom:14px;border:1px solid #d3d3d3;border-radius:10px;box-shadow:0px 2px 5px 2px #eaeaea;overflow:hidden;}
+.game-cont .q1-app .team-select li:last-child {margin-bottom:0;}
+.game-cont .q1-app .team-select li .team-box {float:left;width:calc(50% - 7.5%);height:80px;padding:13px 15px;font-size:1.2rem;color:#222;cursor:pointer;}
+.game-cont .q1-app .team-select li .team-box .team {float:left;width:45px;}
+.game-cont .q1-app .team-select li .team-box .team .emb {margin:0 auto 2px;}
+.game-cont .q1-app .team-select li .team-box .away {border-radius:10px 0 0 10px;}
+.game-cont .q1-app .team-select li .team-box .home {border-radius:0 10px 10px 0;}
+
+.game-cont .q1-app .team-select li .team-box .record {float:left;width:calc(100% - 45px);}
+.game-cont .q1-app .team-select li .team-box .record .rank {padding:8px 0 11px;}
+.game-cont .q1-app .team-select li .team-box .record .win-rate {font-weight:100;letter-spacing:-1px;}
+.game-cont .q1-app .team-select li .team-box.select {color:#fff;background:linear-gradient(to right, #2d33b5, #5a60e1);background-position:left bottom;transition:background .5s ease-in;animation:shake 0.82s cubic-bezier(.36,.07,.19,.97) both 0.5s;}
+.game-cont .q1-app .team-select li.cancel .team-box {border-color:#ebebeb;color:#a8adb3;background:#ebebeb;}
+.game-cont .q1-app .team-select li.cancel .vs {border-color:#ebebeb !important;background:#ebebeb;}
+.game-cont .q1-app .team-select li.cancel .vs .txt {font-size:0.9rem;font-weight:100;color:#a8adb3;letter-spacing:-1px;}
+.game-cont .q1-app .team-select li .prediction-rate {clear:both;width:100%;padding:5px 25px 4px 30px;margin:0 auto;border-top:1px solid #d3d3d3;font-size:1.3rem;color:#b5bac0;overflow:hidden;}
+.game-cont .q1-app .team-select li .prediction-rate .rate {float:left;width:calc(100% - 16.7592vw);padding:0 10px}
+.game-cont .q1-app .team-select li .prediction-rate .rate .away {float:left;width:34px;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .home {float:right;width:34px;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .graph {position:relative;float:left;width:calc(100% - 84px);margin:6px 8px 0;height:4px;background:#d6d9df;border-radius:2px;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .graph .bar {position:absolute;top:0;left:0;width:100%;height:4px;background:#6175ee;border-radius:2px;text-indent:-9999px;transition:all 0.4s ease-in-out 0.35s;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .graph .bar.home {left:inherit;right:0;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .unit {font-size:1.0rem;}
+.game-cont .q1-app .team-select li .prediction-rate .rate .win {color:#6175ee;font-weight:700}
+.game-cont .q1-app .team-select li .prediction-rate .rate .prediction-before {clear:both;padding-top:3px;font-size:1.1rem;color:#999;}
+/* q1 - 경기전 */
+.game-cont .q1-app.before .quiz-box .toggle {text-align:center;}
+.game-cont .q1-app.before .quiz-box .toggle .tit {margin-right:3px;font-size:1.2rem;color:#8a8c8e;font-weight:100}
+.game-cont .q1-app.before .quiz-box .toggle .switch {position:relative;display:inline-block;width:32px;height:18px;vertical-align:text-top;}
+.game-cont .q1-app.before .quiz-box .toggle .switch input {display:none;}
+.game-cont .q1-app.before .quiz-box .toggle .slider {position:absolute;top:0;left:0;right:0;bottom:0;padding:3px 6px;background-color:#ebebeb;font-size:1.4rem;color:#fff;text-align:right;border-radius:40px;-webkit-transition:.4s;transition:.4s;cursor:pointer;}
+.game-cont .q1-app.before .quiz-box .toggle .slider:before {content:"";position:absolute;left:0;bottom:0;width:16px;height:16px;border:1px solid #d7d7d7;border-radius:50%;background-color:#fff;-webkit-transition:.4s;transition:.4s;}
+.game-cont .q1-app.before .quiz-box .toggle input:checked + .slider {background-color:#4e55e1;text-align:left;}
+.game-cont .q1-app.before .quiz-box .toggle input:checked + .slider:before {-webkit-transform: translateX(12px);-ms-transform:translateX(15px);transform:translateX(15px);}
+
+.game-cont .q1-app .team-select li .vs {float:left;width:15%;height:80px;padding-top:27px;border-left:1px solid #d3d3d3;border-right:1px solid #d3d3d3;color:#8a8c8e;}
+.game-cont .q1-app .team-select li .vs .txt {font-size:1.0rem;font-weight:700;}
+.game-cont .q1-app .team-select li .vs .place {font-size:1.0rem;color:#0076be;font-weight:100;}
+.game-cont .q1-app .team-select li .vs .end {padding-top:8px;}
+.game-cont .q1-app .team-select li .vs .ing dt {margin-bottom:2px;color:#8a8c8e;font-weight:700;}
+.game-cont .q1-app .team-select li .vs .ing dd {color:#0076be;font-weight:100}
+.game-cont .q1-app.before .team-select li .prediction-rate {padding-top:5px;}
+.game-cont .q1-app.before .team-select li .prediction-rate .rate {float:unset;margin:0 auto;}
+.game-cont .q1-app.before .team-select li .prediction-rate .prediction-before {font-size:1.3rem}
+/* q1 - 경기중,후 */
+.game-cont .q1-app.after .team-select li {border-radius:9px;background-color:#f6f7f7;}
+.game-cont .q1-app.after .team-select li .group {padding:6px 4px 6px 9px;}
+.game-cont .q1-app.after .team-select li .group::after {content:"";display:block;clear:both;}
+/* .game-cont .q1-app.after .team-select li .team-box {padding:6px 5px 7px;border:1px solid #fff}
+.game-cont .q1-app.after .team-select li .team-box .team .name {margin-top:3px;font-size:1.1rem;color:#444} */
+.game-cont .q1-app.after .team-select li .prediction-rate .tit {float:left;width:16.7592vw;margin-bottom:0;font-size:0.9rem;color:#7e7d7d;font-weight:100;}
+.game-cont .q1-app.after .team-select li .prediction-rate .tit img {width:4px;margin-left:2px;vertical-align:unset;}
+.game-cont .q1-app.after .team-select li .ps {position:relative;float:left;width:16.7592vw;padding-right:8px;margin-top:18px;}
+.game-cont .q1-app.after .team-select li .ps .ing {padding-top:4px;font-size:1.0rem;}
+.game-cont .q1-app.after .team-select li .ps .ing dt {color:#444;}
+.game-cont .q1-app.after .team-select li .ps .ing dd {color:#6175ee;font-weight:100}
+.game-cont .q1-app.after .team-select li .ps .end {padding-top:8px;font-size:1.1rem;color:#444;}
+.game-cont .q1-app.after .team-select li .o {width:27px;height:27px;margin:0px auto;background:url("../images/main/icon_o.png") no-repeat 0 0;background-size:100%;text-indent:-9999999px;}
+.game-cont .q1-app.after .team-select li .x {width:27px;height:27px;margin:0px auto;background:url("../images/main/icon_x.png") no-repeat 0 0;background-size:100%;text-indent:-99999px;}
+.game-cont .q1-app.after .team-select li .ps .txt {margin-top:8px;}
+/* .game-cont .q1-app.after .team-select li .team-box {width:38%;} */
+/* .game-cont .q1-app.after .team-select li .team-box.home {float:right;} */
+.game-cont .q1-app.after .team-select li .team-box .record .score {margin-top:13px;font-size:1.8rem;}
+
+/* q2 - 공용 */
+.game-cont .q2-app .quiz-box .record-box .box {float:left;position:relative;width:50%;height:156px;padding-top:13px;border-radius:10px;text-align:center;background:#eeeffd;}
+.game-cont .q2-app .quiz-box .record-box .box .tit {position:absolute;top:13px;left:50%;width:70px;padding:5px 7px 6px;font-size:1.0rem;color:#fff;border-radius:0 0 13px 13px;background-color:#4e55e1;transform:translate(-50%, 0);}
+.game-cont .q2-app .quiz-box .record-box .box .top {width:126px;height:99px;padding-top:26px;margin:0 auto;border-radius:7px;background:#fff;}
+.game-cont .q2-app .quiz-box .record-box .box .top .emb-bg {width:60px;height:60px;margin:0 auto;}
+.game-cont .q2-app .quiz-box .record-box .box .top .emb-bg img {width:100%;padding-top:7px;}
+.game-cont .q2-app .quiz-box .record-box .box .top .emb-bg.player {border-radius:50%;background-color:#ebebeb;}
+.game-cont .q2-app .quiz-box .record-box .box .top .emb-bg.player img {padding:0;border-radius:50%;}
+.game-cont .q2-app .quiz-box .record-box .box .bottom {padding:13px 0;font-size:1.3rem;color:#000;}
+.game-cont .q2-app .quiz-box .record-box .box .bottom span {position:relative;margin-left:5px;color:#000}
+.game-cont .q2-app .quiz-box .record-box .box.my .tit {background-color:#232f5a}
+.game-cont .q2-app .quiz-box .record-box .box.my .bottom {color:#000;font-weight:700;}
+.game-cont .q2-app .quiz-box .record-box .box.my .bottom span {color:#000;font-weight:400;}
+.game-cont .q2-app .quiz-box .record-box .box.my.fail .tit {background-color:#ec5c73}
+.game-cont .q2-app .quiz-box .record-box .box.my.fail {background-color:#fee8ea}
+.game-cont .q2-app .quiz-box .record-box .box.my.fail .bottom {color:#ec5c73;}
+.game-cont .q2-app .quiz-box .record-box .box.my.fail .bottom span {color:#ec5c73;}
+.game-cont .q2-app .quiz-box .record-box .box.my.success .tit {background-color:#43c4b6}
+.game-cont .q2-app .quiz-box .record-box .box.my.success {background-color:#eaf9f7}
+.game-cont .q2-app .quiz-box .record-box .box.my.success .bottom {color:#43c4b6;}
+.game-cont .q2-app .quiz-box .record-box .box.my.success .bottom span {color:#43c4b6;}
+.game-cont .q2-app .quiz-box .txt-gray {padding:10px 0 14px;font-size:1.0rem;color:#666;font-weight:100;text-align:left;}
+.game-cont .q2-app .select-list li {position:relative;width:100%;margin-bottom:12px;z-index:5;cursor:pointer;}
+.game-cont .q2-app .select-list li:last-child {margin-bottom:0}
+.game-cont .q2-app .select-list li dl {height:37px;padding:2px 5px 3px 20px;background:#f5f4f9;border-radius:100px;}
+.game-cont .q2-app .select-list li dl dt {float:left;width:30px;padding-top:10px;font-size:1.1rem;font-weight:700;color:#858585;text-align:left;}
+.game-cont .q2-app .select-list li dl dd {float:left;}
+.game-cont .q2-app .select-list li dl dd .choice {float:right;width:27px;height:27px;margin-top:3px;margin-left:15px;border-radius:50%;background-color:#fff;}
+.game-cont .q2-app .select-list li dl .emb {width:36px;}
+.game-cont .q2-app .select-list li dl .player {float:right;padding-bottom:3px;color:#a8adb3;font-size:1.0rem;}
+.game-cont .q2-app .select-list li dl .player .choice {background-image:url("../images/main/icon_check_fff.png");background-size:100%;}
+.game-cont .q2-app .select-list li dl .player div {float:right;padding-top:8px;color:#686666}
+.game-cont .q2-app .select-list li dl .player div .name {margin:0 2px;font-size:1.3rem;}
+.game-cont .q2-app .select-list li dl .player div .record {font-size:1.1rem;}
+.game-cont .q2-app .select-list li.select dl {background:#343abc;z-index:5;}
+.game-cont .q2-app .select-list li.select dl {background:linear-gradient(to right, #343abc 50%, #fff 50%);background-size:200% 100%;background-position:left bottom;transition:background .5s ease-in;animation:shake 0.82s cubic-bezier(.36,.07,.19,.97) both 0.5s;box-shadow:0px 3px 5px 2px #cfcfcf;}
+.game-cont .q2-app .select-list li.select dl dt {color:#fff;}
+.game-cont .q2-app .select-list li.select dl .player {color:#fff}
+.game-cont .q2-app .select-list li.select dl .player .choice {background-image:url("../images/main/icon_check_blue.png");background-size:100%;}
+.game-cont .q2-app .select-list li.select dl .player div {color:#fff}
+.game-cont .q2-app .select-list li.select dl .player div .name {color:inherit}
+.game-cont .q2-app .select-list li.select dl .player div .record {color:inherit;}
+.game-cont .q2-app .select-list li.cancel dl {background:#ebebeb;}
+.game-cont .q2-app .select-list li.cancel dl dt {color:#a8adb3;}
+.game-cont .q2-app .select-list li.cancel::after {display:none;}
+/* q2 - 경기전 */
+.game-cont .q2-app.before .quiz-header dt {background-color:#26c9e7;}
+.game-cont .q2-app.before .quiz-header dt::after {border-top:30px solid #26c9e7;}
+.game-cont .q2-app.before .top-record {border-radius:8px;background-color:#f8f8f8;}
+.game-cont .q2-app.before .top-record .top-info01 {height:126px;padding:13px 0 13px 46px;}
+.game-cont .q2-app.before .top-record .top-info01 .top-img .tit {position:absolute;top:0;left:50%;width:70px;padding:5px 7px 6px;font-size:1.0rem;color:#fff;border-radius:0 0 13px 13px;background-color:#4e55e1;transform:translate(-50%, 0);}
+.game-cont .q2-app.before .top-record .top-info01 .top-img {position:relative;float:left;width:126px;height:99px;padding-top:26px;margin-right:15px;border-radius:7px;background:#fff;}
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg {width:60px;height:60px;margin:0 auto;}
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg img {width:100%;padding-top:7px;}
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg.no-attend,
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg.player {border-radius:50%;background-color:#ebebeb;}
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg.no-attend img,
+.game-cont .q2-app.before .top-record .top-info01 .top-img .emb-bg.player img {padding:0;border-radius:50%;}
+
+.game-cont .q2-app.before .top-record .top-info01 dl {float:left;padding-top:26px;text-align:left;}
+.game-cont .q2-app.before .top-record .top-info01 dl .tit {display:inline-block;padding:2px 7px;margin-bottom:5px;border:1px solid #231c3a;border-radius:7px;font-size:1.0rem;color:#231c3a}
+.game-cont .q2-app.before .top-record .top-info01 dl .data {margin-bottom:4px;font-size:1.3rem;color:#4e55e1;font-weight:700}
+.game-cont .q2-app.before .top-record .top-info01 dl .data span {font-size:2.3rem;}
+.game-cont .q2-app.before .top-record .top-info01 dl .txt {font-size:1.3rem;color:#000;font-weight:100;text-align:left;}
+.game-cont .q2-app.before .top-record .top-info02 {overflow:hidden;padding:9px 0 8px;background:#eeeffd;border-radius:0 0 8px 8px;}
+.game-cont .q2-app.before .top-record .top-info02 dl {position:relative;float:left;width:50%;color:#000;}
+.game-cont .q2-app.before .top-record .top-info02 dl dt {margin-bottom:3px;font-size:1.1rem;font-weight:100;}
+.game-cont .q2-app.before .top-record .top-info02 dl dd {font-size:1.7rem;color:#4e55e1;font-weight:700;}
+
+/* btn */
+.btn-solpick {padding-bottom:20px;text-align:center;}
+.btn-solpick .btn {display:inline-block;width:100%;padding:13px 0;border-radius:12px;font-size:1.6rem;color:#fff;background:#000;}
+.btn-solpick .btn-start {display:inline-block;}
+
+.btn-nogame {padding:19px 15px 23px;text-align:center;}
+.btn-nogame .btn {display:inline-block;width:160px;padding:7px 0;background:#1e2f5d;color:#fff;border-radius:10px;font-size:1.6rem;}
+.btn-nogame .btn-guide {margin-right:5px;background:#008cb2;}
+.btn-nogame .btn-event-go {background:#0061fe;}
+
+.notice-area {padding-bottom:15px;line-height:1.5;font-size:1.6rem;color:#444;text-align:center;}
+.notice-area .before time {display:inline-block;line-height:1.2;padding:0 5px 1px;border-radius:2px;font-weight:700;color:#fff;background:#2b2b2b;}
+.notice-area .ing .num {color:#6175ee;}
+
+/* 카카오톡 공유 */
+.ad-wrap {padding:12px;}
+.kakao {padding:10px 11px;background:#fff;border-radius:10px;}
+.kakao .info {overflow:hidden;margin-bottom:12px;}
+.kakao .info .txt {float:left;width:77%;}
+.kakao .info .txt .bul {float:left;width:13%;padding-top:10px;}
+.kakao .info .txt .txt-wrap {float:right;width:84%;}
+.kakao .info .txt .txt-wrap .script {padding:7px 0 5px 0;font-size:1.66rem;font-weight:700;color:#f35556;letter-spacing:-1px;}
+.kakao .info .txt .txt-wrap .guide {font-size:0.9rem;color:#919090;letter-spacing:-1px;}
+.kakao .info .num {float:right;width:23%;padding:3px 0 5px;border:2px solid #e3e5e9;border-radius:10px;text-align:center;background:#fff;}
+.kakao .info .num .count {font-size:2.0rem;font-weight:100;color:#a8adb3;}
+.kakao .info .num .count .current {font-weight:400;color:#6175ee;}
+.kakao .info .num .script {font-size:0.9rem;color:#a8adb3;}
+.game {padding:0 12px 16px;background:#fff;}
+.game .kakao {background:#eff2f7;}
+
+/* 팝업 - 카톡 공유 */
+#Popup.pop-kakao {width:75%;margin:0 0 0 -37.5%;}
+#Popup.pop-kakao .cont .txt {font-size:1.0rem;}
+.pop-kakao .kakao {margin-top:20px;padding:14px 8px;background:#eff2f7;border-radius:10px;}
+.pop-kakao .kakao .info {overflow:hidden;margin-bottom:0;}
+.pop-kakao .kakao .info .txt {overflow:hidden;float:none;width:100%;}
+.pop-kakao .kakao .info .txt .bul {float:left;width:13%;padding-top:10px;}
+.pop-kakao .kakao .info .txt .txt-wrap {float:right;width:84%;}
+.pop-kakao .kakao .info .txt .txt-wrap .script {padding:7px 0 5px 0;font-size:1.66rem;font-weight:700;color:#f35556;letter-spacing:-1px;}
+.pop-kakao .kakao .info .txt .txt-wrap .guide {font-size:0.9rem;color:#919090;letter-spacing:-1px;}
+.pop-kakao .kakao .info .num {float:none;width:31%;margin:9px auto 6px;padding:3px 0 5px;border:2px solid #e3e5e9;border-radius:10px;text-align:center;}
+.pop-kakao .kakao .info .num .count {font-size:2.0rem;font-weight:100;color:#a8adb3;}
+.pop-kakao .kakao .info .num .count .current {font-weight:400;color:#0061ff;}
+.pop-kakao .kakao .info .num .script {font-size:0.9rem;color:#a8adb3;}
+.pop-kakao .kakao .btn-area {width:95%;margin:0 auto;}
+
+/* 20181130 리그개막 추가 S */
+.league-d-day{font-size:1.9rem;color:#4d91ff;}
+.league-d-day .d-day{width:91px;height:26px;display:block;margin:3px auto 21px;background:#0061ff;border:2px  solid #062d6e;border-radius:10px;font-size:1.8rem;color:#fff;}
+.league-end-img {overflow:hidden;width:190px;margin:0 auto;}
+.league-end-img li{float:left;width:38px;}
+.league-txt{padding:16px 0 17px;font-size:1.3rem;line-height:1.9;}
+.league-txt strong {background:#fff799;border-radius:10px;font-size:1.4rem;}
+.notice{padding-top:14px;background:#e3e5e9;color:#555555;font-size:1.5rem;text-align:center;}
+
+.game-cont-league {padding-top:13px;background:#e3e5e9;}
+.game-cont-league.game-on {padding:13px 0 30px;}
+.game-cont-league .tab-area {width:336px;margin:0 auto;}
+.game-cont-league .tab-area .tab {overflow:hidden;background:transparent;}
+.game-cont-league .tab-area .tab li {position:relative;float:left;width:50%;text-align:center;}
+.game-cont-league .tab-area .tab li a {position:relative;display:block;width:100%;height:41px;padding:10px 0;font-size:1.4rem;color:#a8adb3;border-radius:5px 5px 0 0;z-index:1;}
+.game-cont-league .tab-area .tab li a:hover, .game-cont-league .tab-area .tab li.on a {background:#fff;color:#095feb;}
+.game-cont-league .tab-area .tab li.on:after {content:"";display:block;position:absolute;top:0;right:-23px;bottom:0;width:27px;height:41px;background:url("../images/main/bg_tab_q1.png") no-repeat 0 0;background-size:27px;}
+.game-cont-league .tab-area .tab .q2.on:after {content:"";display:block;position:absolute;top:0;left:-23px;right:0;bottom:0;width:27px;height:41px;background:url("../images/main/bg_tab_q2.png") no-repeat 0 0;background-size:27px;}
+.game-cont-league .tab-area .tab li .list {display:inline-block;width:29px;margin:0 7px;padding:3px 0;background:#a8adb3;font-size:1.0rem;color:#fff;border-radius:10px;text-align:center;}
+.game-cont-league .tab-area .tab li.on .list, .game-cont-league .tab-area .tab li a:hover .list {background:#095feb;color:#fff;}
+.game-cont-league .tab-area .tab li a span {vertical-align:middle;}
+.game-cont-league .quiz-league.on {position:relative;border-radius:0 6px 6px 6px;background:#fff;z-index:0;}
+.game-cont-league .quiz-league.on:after {content:"";display:block;position:absolute;top:0;left:0;right:-5px;bottom:-5px;border-radius:9px;border-right:7px solid #d6d9df;border-bottom:7px solid #d6d9df;z-index:-1;}
+.game-cont-league .quiz {width:336px;margin:0 auto;padding:20px 24px 19px;text-align:center;}
+
+/* postseason */
+.post #contents.solpick {min-height:calc(100vh - 35px);background:url("../images/main/bg_pick_q_post2.png") top left no-repeat;background-size:100%;}
+.post #contents.solpick.index {min-height:calc(100vh - 35px);background:url("../images/main/bg_pick_q_post.png") top left no-repeat;background-size:100%;}
+.post #contents.solpick .game-wrap {width:100%;padding:0;background-color:#fff;}
+.post #contents.solpick .game-wrap.first {padding:33px 18px}
+.post #contents.solpick .game-wrap.index {text-align:center;}
+
+/* solpick main */
+.post .my-pick-info.first .my-point {padding:0 13.88889vw;margin-bottom:5.55556vw}
+.post .my-pick-info.first .my-point img {width:100%;}
+.post .first.in-tab .my-pick-info .my-point.first {margin-bottom:22vw;}
+.post .first.in-tab .tab-area .tab::after {background-color:#9aadde;opacity:1;}
+.post .tab-area .tab {padding-bottom:10px;text-align:center;}
+.post .tab-area .tab li {float:none;display:inline-block;margin:0 2.5vw}
+.post .tab-area .tab li.on a::before {top:unset;bottom:-4px;}
+.post .tab-area .tab-team {margin:0 auto 10px;}
+.post .tab-area .tab-team::after {content:'';display:block;clear:both}
+.post .tab-area .tab-team li {float:left;width:50%;}
+.post .tab-area .tab-team li.on:after {display:none;}
+.post .tab-area .tab-team li a {display:block;width:35.27778vw;height:18.9814vw;padding:3vw 0;border-radius:12px;background-color:#f6f7f7;margin:0 auto;color:#222;}
+
+.post .tab-area .tab-team li a .emb {width:10.555vw;margin:0 auto 4px;text-align:center;}
+.post .tab-area .tab-team li a .team {font-size:1.1rem;color:#8a8c8e}
+.post .tab-area .tab-team li.on a {background-color:#4e55e1;}
+.post .tab-area .tab-team li.on a .team {color:#fff;}
+
+/* main */
+.post .game-cont {position:relative;width:100%}
+.post .game-cont .quiz {padding:17px 8.8vw 15px;border-radius:0;text-align:center;}
+.post .game-cont .quiz .tit {font-size:1.9rem;color:#141414;font-weight:700}
+.post .game-cont .quiz .user-choice {color:#2c4792}
+.post .game-cont .quiz .etc li {display:inline-block;float:none}
+/* state */
+.post .game-cont .quiz.noti.no {padding-top:68px;}
+.post .game-cont .quiz.noti.no img {width:46.0185vw;margin-bottom:0}
+.post .game-cont .quiz.noti.no-attend {color:#ec5c73;font-weight:100;}
+.post .game-cont .quiz.noti p {margin-bottom:32px;font-size:1.7rem;color:#ec5c73}
+.post .game-cont .quiz.noti.link {padding:0}
+.post .game-cont .quiz.noti.link a {display:block;margin-bottom:17px;}
+.post .game-cont .quiz.noti.link a:last-child {margin-bottom:0;}
+.post .game-cont .quiz.noti.link a img {width:100%;margin-bottom:0;}
+.post .game-cont .quiz.noti.point .total-point dd {width:216px;padding:14px 0;margin:0 auto;font-size:1.5rem;color:#fff;background-image:linear-gradient(to right, #4e55e1, #fe849c);box-shadow:none;}
+.post .game-cont .quiz.noti.point .total-point dd span {font-size:2.0rem;}
+.post .game-cont .quiz.noti.point .point-list dl dt::before {background-color:#4e55e1;}
+.post .game-cont .quiz.noti.point .point-list dl dd span {margin-right:5px;font-size:1.4rem;color:#ff849c;font-weight:700}
+.post .game-cont .noti.post {padding-top:33px;}
+.post .game-cont .noti.post img {width:38.148vw;margin-bottom:12px;}
+.post .game-cont .noti.post p {margin-bottom:0;font-size:1.7rem;color:#0b1966;font-weight:700;line-height:1.4}
+.post .game-cont .noti.link {padding:47px 5vw;}
+.post .game-cont .noti.link a {display:block;margin-bottom:5.83333vw}
+
+.post .btn-solpick {padding:20px 33px}
+.post .btn-nogame .btn-guide {width:43.33333vw;padding:13px 0;font-size:1.4rem;background-color:#002561;}
+.post .btn-nogame .btn-event-go {width:43.33333vw;padding:13px 0;font-size:1.4rem;background-color:#2c88d5;}
+.post .notice-area .ing .num {color:#21c0bd}
+
+/* q1, q2, q3 - 공용 */
+.post .game-cont .quiz-num {right:11.94444vw;width:60px;height:30px;padding:6px;border-radius:15px;box-shadow:1px 2px 6px 0px #8a8c8e;}
+.post .game-cont .quiz-num.q3 {background-color:#f65e76;}
+.post .game-cont .quiz {position:relative;}
+.post .game-cont .quiz .quiz-box .txt {color:#858585}
+.post .game-cont .quiz .etc {margin-top:12px;}
+
+/* q1, q2, q3 - 결과값 */
+.post .game-cont .after .quiz-box {padding:0 0 10px;}
+.post .game-cont .after .quiz-box .my-result dt {color:#0093a4}
+.post .game-cont .after .quiz-box .my-result dd {display:inline-block;padding:0 12px;font-size:1.4rem;font-weight:100;color:#fe9b00;}
+.post .game-cont .after .quiz-box .my-result.pass dt {margin-bottom:13px;}
+.post .game-cont .after .quiz-box .my-result.pass dd::before {content:'';position:absolute;left:-12px;bottom:8px;width:15px;height:35px;background:url("../images/main/bg_left_pass_post.png") no-repeat 0 0;background-size:100%;}
+.post .game-cont .after .quiz-box .my-result.pass dd::after {content:'';position:absolute;right:-20px;bottom:8px;width:24px;height:36px;background:url("../images/main/bg_right_pass_post.png") no-repeat 0 0;background-size:100%;}
+.post .game-cont .after .quiz-box .my-result.pass dd p::after {content:'';position:absolute;left:0;bottom:0;width:100%;height:7px;background-color:#fff5a5;z-index:-1;}
+.post .game-cont .after .quiz-box .my-result.no-attend dd p {color:#ec5c73}
+.post .game-cont .after .quiz-box .my-result.only-txt {height:auto;margin-bottom:12px;background-color:#fff;}
+.post .game-cont .after .quiz-box .my-result.only-txt p {padding:0}
+
+/* q1 */
+.post .game-cont .q1-app .graph .top5 {padding:0.8333vw 11.9444vw 0 11.9444vw}
+.post .game-cont .q1-app .graph .top5 li {float:none;display:inline-block;width:9.72222vw;margin:0 3.33333vw}
+.post .game-cont .q1-app .graph .top5 li.high dl dd .rate .num {font-size:1.4rem;}
+.post .game-cont .q1-app .graph .top5 li dl dd {width:100%;margin:0;}
+.post .game-cont .q1-app .graph .top5 li dl dd .rank {left:4px;}
+.post .game-cont .q1-app .team-select li {border:0;box-shadow:none;}
+.post .game-cont .q1-app .team-select li .vs {height:auto;border:0;}
+.post .game-cont .q1-app .team-select li .vs .txt {color:#000}
+.post .game-cont .q1-app .team-select li .team-box .team {width:38px;}
+.post .game-cont .q1-app .team-select li .team-box .record {width:calc(100% - 38px);}
+.post .index .game-cont .quiz .user-choice {color:#2c4792}
+.post .index .game-cont .q1-app .team-select li .team-box {display:inline-block;float:none;color:#4e55e1;border:0;background-color:#f4f7ff;}
+.post .index .game-cont .q1-app .team-select li .team-box:first-child {margin-right:10px;}
+.post .index .game-cont .q1-app .team-select li .team-box.select .record {font-weight:700;}
+
+.post .game-cont .q1-app .team-select li .team-box {float:left;height:auto;padding:9px 12px 10px;border-radius:9px;font-size:1.2rem;color:#222;cursor:pointer;}
+.post .game-cont .q1-app .team-select li .team-box.select {border:none !important;color:#fff;background:#4e55e1;box-shadow:1px 2px 5px 0px #cecece;}
+
+.post .game-cont .q1-app .team-select li .prediction-rate .rate {width:100%;padding:0}
+.post .game-cont .q1-app .team-select li .prediction-rate .rate .home {float:right;width:34px;color:#b5bac0}
+.post .game-cont .q1-app .team-select li .prediction-rate .rate .graph .bar {background:#4e55e1;}
+.post .game-cont .q1-app .team-select li .prediction-rate .rate .win {color:#4e55e1;font-weight:700}
+.post .game-cont .q1-app .team-select.long li .team-box .record .rank {padding:2px 0;}
+
+.post .game-cont .q1-app.before .quiz-box .toggle .tit {font-size:1.3rem;color:#858585;font-weight:400;}
+.post .game-cont .q1-app.before .quiz-box .toggle input:checked + .slider {background-color:#4e55e1;text-align:left;}
+.post .game-cont .q1-app.before .team-select {padding:0}
+.post .game-cont .q1-app.before .team-select li .vs .place {color:#4e55e1;}
+.post .game-cont .q1-app.before .team-select li .team-box {border:1px solid #ccc;}
+.post .game-cont .q1-app.before .team-select li .prediction-rate {padding:10px 5px 0 5px;border-top:none}
+
+.post .game-cont .q1-app.after .team-select li .team-box {width:38%;padding:3px 12px 4px;}
+.post .game-cont .q1-app.after .team-select li .team-box .record .score {font-size:1.6rem;}
+.post .game-cont .q1-app.after .team-select li .team-box.select .team .name {color:#fff}
+.post .game-cont .q1-app.after .team-select li .ps {margin-top:14px;}
+.post .game-cont .q1-app.after .team-select li .prediction-rate .rate {width:calc(100% - 16.7592vw);padding:0 7px}
+.post .game-cont .q1-app.after.exception .quiz-box .my-result {margin-bottom:0}
+.post .game-cont .q1-app.after.exception.only .my-result dt {margin-bottom:0}
+.post .game-cont .q1-app.after .team-select li.cancel .team-box {background-color:unset;}
+.post .game-cont .q1-app.after .team-select li.cancel {color:#a8adb3 !important}
+.post .game-cont .q1-app.after .team-select li.cancel .team-box .record .score {color:#a8adb3}
+.post .game-cont .q1-app.after .team-select li.cancel .team-box .team {color:#a8adb3 }
+.post .game-cont .q1-app.after .team-select li.cancel .prediction-rate .tit {color:#a8adb3}
+.post .game-cont .q1-app.after .team-select li .prediction-rate {padding:5px 10px;border-color:#fff}
+
+/* q3 공통 */
+.post .game-cont .q3-app .select-list {overflow:hidden;padding:0 0 7px !important;}
+.post .game-cont .q3-app .select-list li {position:relative;float:left;width:31%;height:auto;padding:2.7vw 0;border:1px solid #e1e1e1;border-radius:10px;font-size:1.3rem;color:#8a8c8e;text-align:center;}
+.post .game-cont .q3-app .select-list li:nth-child(3n+2) {margin:0 3.5%;}
+.post .game-cont .q3-app .select-list li.select:after {content:"";display:none;}
+
+/* q2 */
+.post .game-cont .q2-app .quiz-box {margin-bottom:24px;}
+.post .game-cont .q2-app .quiz-box:last-child {margin-bottom:0;}
+.post .game-cont .q2-app .quiz-box .tit {margin-bottom:10px;}
+.post .game-cont .q2-app .ox-select li {margin-bottom:14px;border-radius:10px;background-color:#f6f7f7;overflow:hidden;}
+.post .game-cont .q2-app .ox-select li:last-child {margin-bottom:0;}
+.post .game-cont .q2-app .ox-select li .ox-box {float:left;width:50%;padding:18px 0;font-size:1.2rem;color:#222;cursor:pointer;}
+.post .index .game-cont .q2-app .ox-select li .ox-box:first-child {border-right:1px solid #fff}
+.post .index .game-cont .q2-app .ox-select li .ox-box.left .icon-o {display:inline-block;width:58px;height:58px;background-image:url(../images/main/icon_o2_p.png);background-size:contain;}
+.post .index .game-cont .q2-app .ox-select li .ox-box.left.select .icon-o {background-image:url(../images/main/icon_o_p.png);background-size:contain;}
+.post .index .game-cont .q2-app .ox-select li .ox-box.right .icon-x {display:inline-block;width:58px;height:58px;background-image:url(../images/main/icon_x2_p.png);background-size:contain;}
+.post .index .game-cont .q2-app .ox-select li .ox-box.right.select .icon-x {background-image:url(../images/main/icon_x_p.png);background-size:contain;}
+
+.post .game-cont .q2-app .ox-select li.cancel .ox-box {border-color:#ebebeb;color:#a8adb3;background:#ebebeb;}
+.post .game-cont .q2-app .ox-select li.cancel .vs {border-color:#ebebeb !important;background:#ebebeb;}
+.post .game-cont .q2-app .ox-select li.cancel .vs .txt {font-size:0.9rem;font-weight:100;color:#a8adb3;letter-spacing:-1px;}
+.post .game-cont .q2-app .ox-select li .prediction-rate {clear:both;width:100%;padding:5px 15px 4px 10px;margin:0 auto;border-top:1px solid #fff;font-size:1.3rem;color:#b5bac0;overflow:hidden;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate {float:left;width:calc(100% - 16.7592vw);padding:0 10px}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .left {float:left;width:34px;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .right {float:right;width:34px;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .graph {position:relative;float:left;width:calc(100% - 84px);margin:6px 8px 0;height:4px;background:#d6d9df;border-radius:2px;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .graph .bar {position:absolute;top:0;left:0;width:100%;height:4px;background:#6175ee;border-radius:2px;text-indent:-9999px;transition:all 0.4s ease-in-out 0.35s;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .graph .bar.right {left:inherit;right:0;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .unit {font-size:1.0rem;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .win {color:#6175ee;font-weight:700}
+.post .game-cont .q2-app .ox-select li .prediction-rate .rate .prediction-before {clear:both;padding-top:3px;font-size:1.1rem;color:#999;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .tit {float:left;width:16.7592vw;margin-bottom:0;font-size:0.9rem;color:#7e7d7d;font-weight:100;}
+.post .game-cont .q2-app .ox-select li .prediction-rate .tit img {width:4px;margin-left:2px;vertical-align:unset;}
+
+.post .game-cont .q2-app .ox-select li .ox-box.left .icon-o {display:inline-block;width:27px;height:27px;background-image:url(../images/main/icon_o_g.png);background-size:contain;}
+.post .game-cont .q2-app .ox-select li .ox-box.left.select .icon-o {background-image:url(../images/main/icon_o_w.png);background-size:contain;}
+.post .game-cont .q2-app .ox-select li .ox-box.right .icon-x {display:inline-block;width:27px;height:27px;background-image:url(../images/main/icon_x_g.png);background-size:contain;}
+.post .game-cont .q2-app .ox-select li .ox-box.right.select .icon-x {background-image:url(../images/main/icon_x_w.png);background-size:contain;}
+
+.post .game-cont .q2-app.before .ox-select li .ox-box,
+.post .game-cont .q2-app.before .ox-select li .ox-box.right {float:none !important;display:inline-block;}
+.post .game-cont .q2-app.before .ox-select li {background-color:#fff;}
+.post .game-cont .q2-app.before .ox-select li .ox-box {width:35.27778vw;height:69px;padding:20px 0;margin:0 1.67777vw;border-radius:10px;border:1px solid #e1e1e1}
+.post .game-cont .q2-app.before .ox-select li .ox-box.right {float:right;}
+.post .game-cont .q2-app.before .ox-select li .ox-box.right.select {border:0;background-color:#4e55e1;}
+.post .game-cont .q2-app.before .ox-select li .prediction-rate {padding:10px 0 4px}
+.post .game-cont .q2-app.before .ox-select li .prediction-rate .rate {width:100%;padding:0;}
+
+.post .game-cont .q2-app.after .ox-select li .ox-box {float:left;width:calc(50% - 9.16667vw - 7px);padding:13px 0;margin:7px 7px 5px 0;font-size:1.2rem;color:#222;cursor:pointer;}
+.post .game-cont .q2-app.after .ox-select li .ox-box.right {float:right;}
+.post .game-cont .q2-app.after .ox-select li .ox-box.select {border-radius:10px;background-color:#4e55e1;}
+.post .game-cont .q2-app.after .ox-select li .ox-box.select.wrong {background-color:#ec5c73;}
+.post .game-cont .q2-app.after .ox-select li .vs {position:relative;float:left;width:18.33334vw;margin-top:18px;}
+.post .game-cont .q2-app.after .ox-select li .vs .ing {padding-top:4px;font-size:1.0rem;}
+.post .game-cont .q2-app.after .ox-select li .vs .ing dt {color:#444;}
+.post .game-cont .q2-app.after .ox-select li .vs .ing dd {color:#6175ee;font-weight:100}
+.post .game-cont .q2-app.after .ox-select li .vs .end {padding-top:8px;font-size:1.1rem;color:#444;}
+.post .game-cont .q2-app.after .ox-select li .vs.in-icon {margin-top:20px;}
+.post .game-cont .q2-app.after .ox-select li .o {width:27px;height:27px;margin:0px auto;background:url("../images/main/icon_o.png") no-repeat 0 0;background-size:100%;text-indent:-9999999px;}
+.post .game-cont .q2-app.after .ox-select li .x {width:27px;height:27px;margin:0px auto;background:url("../images/main/icon_x.png") no-repeat 0 0;background-size:100%;text-indent:-99999px;}
+.post .game-cont .q2-app.after .ox-select li .vs .txt {margin-top:8px;}
+
+.post .game-cont .q2-app .etc {text-align:right;}
+.post .game-cont .q2-app .etc li {margin-right:0;}
+
+/* q3 */
+.post .game-cont .q3-app .quiz-box .question {margin-bottom:5px}
+.post .game-cont .q3-app .graph .top5 li {position:relative;margin-bottom:0}
+.post .game-cont .q3-app .graph .top5 li.first::before {content:'';position:absolute;top:-12px;left:50%;width:15px;height:12px;background-image:url(../images/sub/icon_mvp2_p.png);background-size:contain;transform:translate(-50%, 0);}
+
+.post .game-cont .q3-app .record-box {position:relative;height:170px;border-radius:10px;background:#eeeffd;}
+.post .game-cont .q3-app .record-box p {padding:80px 5px 0;font-size:1.4rem;color:#4e55e1;word-break:keep-all;}
+.post .game-cont .q3-app .record-box .box {float:left;width:50%;height:100%;text-align:center;}
+.post .game-cont .q3-app .record-box .box:first-child {border-radius:4px 0 0 4px;}
+.post .game-cont .q3-app .record-box .box:last-child {border-radius:0 4px 4px 0;}
+.post .game-cont .q3-app .record-box .tit {position:absolute;top:0;left:50%;padding:4px 20px 5px;font-size:1.1rem;color:#fff;border-radius:0 0 12px 12px;background-color:#4e55e1;transform:translate(-50%, 0);z-index:10;}
+.post .game-cont .q3-app .record-box .box .top {position:relative;height:132px;}
+.post .game-cont .q3-app .record-box .box .top .bg {position:absolute;top:32px;left:50%;width:112px;height:100px;border-radius:10px;background-color:#fff;transform:translate(-50%, 0);}
+.post .game-cont .q3-app .record-box .box .top .pic {position:absolute;top:50%;left:50%;width:76px;height:76px;padding:0;border-radius:50%;background-color:#ebebeb;transform:translate(-50%, -50%);}
+.post .game-cont .q3-app .record-box .box .top .pic.no-attend {padding-top:12px;}
+.post .game-cont .q3-app .record-box .box .top .pic.no-attend .user {width:60px;}
+.post .game-cont .q3-app .record-box .box .top .emb {position:absolute;bottom:-2px;right:-8px;width:8.51vw;height:6.38888vw;}
+.post .game-cont .q3-app .record-box .box .bottom {height:38px;padding-top:10px;font-size:1.2rem;color:#222;}
+.post .game-cont .q3-app .record-box .box .bottom span {position:relative;padding-left:5px;margin-left:5px;font-size:1.1rem;color:#444}
+.post .game-cont .q3-app .record-box .box .bottom span::before {content:'';position:absolute;top:3px;left:0;width:1px;height:9px;background-color:#f3f8f9;}
+
+.post .game-cont .q3-app .player-list {text-align:left;}
+.post .game-cont .q3-app .player-list .script {color:#e4778e;font-size:1.2rem;text-align:center;}
+.post .game-cont .q3-app .player-list h4 {padding:6px 0;font-size:1.2rem;color:#444}
+.post .game-cont .q3-app .select-list li.select {border:0;color:#fff;background-color:#4e55e1;background-position:left bottom;transition:background .5s ease-in;animation:shake 0.82s cubic-bezier(.36,.07,.19,.97) both 0.5s;z-index:5;}
+
+.post .game-cont .q3-app.after .quiz-box .my-result.no-bg {height:auto;background-color:unset;}
+.post .game-cont .q3-app.after .quiz-box .my-result::after,
+.post .game-cont .q3-app.after .quiz-box .my-result dd::after {content:"";display:block;clear:both;}
+.post .game-cont .q3-app.after .quiz-box .my-result.pass dd.mvp::before {content:'';position:absolute;top:-1px;left:9px;width:7.5vw;height:6.1111vw;background:url('../images/sub/icon_mvp_p.png');background-size:7.5vw 6.1111vw;}
+.post .game-cont .q3-app.after .quiz-box .my-result.pass dd.mvp::after {background:none;}
+.post .game-cont .q3-app.after .quiz-box .my-result.pass dd p {position:relative;color:inherit;font-weight:400;z-index:1;}
+.post .game-cont .q3-app.after .quiz-box .my-result.pass dd p span {color:inherit;font-weight:700}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp {position:relative;display:block;width:29.074vw;height:31.6667vw;padding:0;margin:10px auto 0;background:url('../images/sub/img_mvp_p.png');background-size:29.074vw 26.6667vw;}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp::before {content:'';position:absolute;top:-1px;left:9px;width:7.5vw;height:6.1111vw;background:url('../images/sub/icon_mvp_p.png');background-size:7.5vw 6.1111vw;}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp div {width:22.222vw;height:22.222vw;margin:0 auto;border-radius:50%;border:1px solid #4e55e1;background-color:#eeeffd;}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp div img {width:100%;}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp .name {margin-top:4.8vw;padding:0;font-size:1.2rem;color:#000;font-weight:700}
+.post .game-cont .q3-app.after .quiz-box .my-result .mvp .name::after {display:none}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(0, -0.5px, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(0, 0.75px, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(0, -1px, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(0, 1.25px, 0);
+  }
+}

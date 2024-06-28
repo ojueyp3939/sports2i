@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 예상 달성기록</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+		$(function() {
+			$('.gnb li').hover(function(){
+				$('.sub-menu',this).show();
+			}, function(){
+				$('.sub-menu',this).hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>KBO홍보팀</span>님 환영합니다.</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav>
+				<ul class="gnb clear">
+					<li>
+						<a href="../AchievementRecord/daily.html">예상 달성기록</a>
+						<ul class="sub-menu">
+							<li><a href="../AchievementRecord/daily.html">일간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/weekly.html">주간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/season.html">시즌 예상 달성기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../SystemAdmin/standard_manage.html">시스템 관리</a>
+						<ul class="sub-menu max">
+							<li><a href="../SystemAdmin/standard_manage.html">예상 달성기록 기준</a></li>
+							<li><a href="../SystemAdmin/commendation_manage.html">표창관리</a></li>
+							<li><a href="../SystemAdmin/achievement_manage.html">시즌 예상 달성기록 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../UserManage/user_manage.html">사용자 관리</a>
+					</li>
+					<li class="on">
+						<a href="../FileManage/daily.html">파일 생성</a>
+						<ul class="sub-menu max">
+							<li><a href="../FileManage/daily.html">일일 예상달성기록</a></li>
+							<li><a href="../FileManage/weekly.html">주간 예상달성기록</a></li>
+							<li><a href="../FileManage/season.html">시즌 예상달성기록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 본문 -->
+			<article>
+				<h3>일일 예상달성기록</h3>
+				<div class="content">
+					<div class="title">
+						<div class="tit-detail">
+							<img class="sponser-logo" src="../resources/images/sub/logo_shinhan.png" alt="신한은행 SOL 2021">
+							<span class="txt">2021년 7월 11일 일요일 예상 달성기록</span>
+							<p>★ 기념상</p>
+						</div>
+						<div class="detail">
+							<img src="../resources/images/sub/logo_kbo.png" alt="신한은행 SOL 2021">
+							<p>자료: KBO 홍보팀(www.koreabaseball.com)</p>
+						</div>
+					</div>
+					<div class="tbl-wrap">
+						<table class="tbl-print" style="float:left;width:90%" summary="일일 예상달성기록">
+							<caption>일일 예상달성기록</caption>
+							<colgroup>
+								<col style="width:4%">
+								<col style="width:6%">
+								<col style="width:6%">
+								<col style="width:auto">
+								<col style="width:10%">
+								<col style="width:6%">
+								<col style="width:auto">
+								<col style="width:11%">
+								<col style="width:11%">
+								<col style="width:6%">
+								<col style="width:6%">
+								<col style="width:6%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">구장</th>
+									<th rowspan="2">구단</th>
+									<th rowspan="2">최근<br/>10경기</th>
+									<th rowspan="2">연승·연패<br/>특이사항</th>
+									<th rowspan="2">예상 달성기록</th>
+									<th rowspan="2">선발투수</th>
+									<th rowspan="2">연승·연패<br/>특이사항</th>
+									<th colspan="2">예상달성기록</th>
+									<th colspan="3">최근 5경기 TOP3</th>
+								</tr>
+								<tr class="sub-th">
+									<th>투수</th>
+									<th>타자</th>
+									<th>타율</th>
+									<th>특점권 타율</th>
+									<th>타점</th>
+								</tr>
+								<tr>
+									<td class="bg game" rowspan="2">사직<br/>12차전</td>
+									<td class="emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								<tr class="set">
+									<td class="emb">
+										<img src="../resources/images/sub/emb/OB.png" alt="OB">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+
+								<tr>
+									<td class="bg game" rowspan="2">사직<br/>12차전</td>
+									<td class="emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								<tr class="set">
+									<td class="emb">
+										<img src="../resources/images/sub/emb/OB.png" alt="OB">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+
+								<tr>
+									<td class="bg game" rowspan="2">사직<br/>12차전</td>
+									<td class="emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								<tr class="set">
+									<td class="emb">
+										<img src="../resources/images/sub/emb/OB.png" alt="OB">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+
+								<tr>
+									<td class="bg game" rowspan="2">사직<br/>12차전</td>
+									<td class="emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								<tr class="set">
+									<td class="emb">
+										<img src="../resources/images/sub/emb/OB.png" alt="OB">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								
+								<tr>
+									<td class="bg game" rowspan="2">사직<br/>12차전</td>
+									<td class="emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+								<tr class="set">
+									<td class="emb">
+										<img src="../resources/images/sub/emb/OB.png" alt="OB">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>
+										3승 6패 1무
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										3,700홈런(-4) 4번째<br/>
+										1,100이닝(-3 1/3) 66번째
+									</td>
+									<td class="bg">
+										<p>스트레일리</p>
+										27G 10W 10L<br/>
+										평균자책점 4.44
+									</td>
+									<td>
+										최근 2연패 (6/16 대전 한화 DH1~)<br/>
+										對롯데 3연패 (21.06.10 사직 ~)<br/>
+										잠실 4연패 (21.06.23 키움 ~)<br/>
+										홈 4연패 (21.06.23 잠실 키움 ~)<br/>
+										일요일 3연패 (21.06.06 잠실 SSG ~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										김현수 2,900루타(-8) 19번째<br/>
+										채은성 7G 연속 타점(6/19 잠실 KIA~)<br/>
+										5G 연속 득점(6/22 문학 SSG~)<br/>
+										홍창기 11G 연속 안타(6/15 고척 키움~)
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+									<td>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499)<br/>
+										페르난데스(0.499) 
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table class="tbl-print" style="float:right;width:calc(10% - 5px)" summary="개인통산순위">
+							<tr>
+								<th>개인통산순위</th>
+							</tr>
+							<tr class="sub-th">
+								<th>승리</th>
+							</tr>
+							<tr>
+								<td>
+									<p>1. 송진우(한) 210</p>
+									<p>2. 송진우(한) 210</p>
+									<p>3. 송진우(한) 210</p>
+									<p>4. 송진우(한) 210</p>
+									<p>5. 송진우(한) 210</p>
+									<p>6. 송진우(한) 210</p>
+									<p>7. 송진우(한) 210</p>
+									<p>8. 송진우(한) 210</p>
+									<p>9. 송진우(한) 210</p>
+									<p>10. 송진우(한) 210</p>
+								</td>
+							</tr>
+							<tr class="sub-th">
+								<th>타점</th>
+							</tr>
+							<tr>
+								<td>
+									<p>1. 송진우(한) 210</p>
+									<p>2. 송진우(한) 210</p>
+									<p>3. 송진우(한) 210</p>
+									<p>4. 송진우(한) 210</p>
+									<p>5. 송진우(한) 210</p>
+									<p>6. 송진우(한) 210</p>
+									<p>7. 송진우(한) 210</p>
+									<p>8. 송진우(한) 210</p>
+									<p>9. 송진우(한) 210</p>
+									<p>10. 송진우(한) 210</p>
+								</td>
+							</tr>
+							<tr class="sub-th">
+								<th>루타</th>
+							</tr>
+							<tr>
+								<td>
+									<p>1. 송진우(한) 210</p>
+									<p>2. 송진우(한) 210</p>
+									<p>3. 송진우(한) 210</p>
+									<p>4. 송진우(한) 210</p>
+									<p>5. 송진우(한) 210</p>
+									<p>6. 송진우(한) 210</p>
+									<p>7. 송진우(한) 210</p>
+									<p>8. 송진우(한) 210</p>
+									<p>9. 송진우(한) 210</p>
+									<p>10. 송진우(한) 210</p>
+								</td>
+							</tr>
+							<tr class="sub-th">
+								<th>심판·기록위원</th>
+							</tr>
+							<tr>
+								<td>
+									이민호 1,000경기(-1) 11번째<br/>
+									김준현 1,000경기(-1) 11번째
+								</td>
+							</tr>
+						</table>
+					</div>
+					
+					
+					<table class="tbl-print" summary="일일 예상달성기록">
+						<caption>일일 예상달성기록</caption>
+						<colgroup>
+							<col style="width:5%">
+							<col style="width:35%">
+							<col style="width:5%">
+							<col style="width:35%">
+							<col style="width:20%">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th colspan="4">엔트리 등록·말소</th>
+								<th>특이사항</th>
+							</tr>
+							<tr>
+								<td class="bg">등록</td>
+								<td>
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K)
+								</td>
+								<td class="bg">말소</td>
+								<td>
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K),
+									장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K), 장운호(한), 권혁경(K), 장운호(한), 권혁경(K) , 권혁경(K)
+								</td>
+								<td>
+									텍스트 입력란
+									텍스트 입력란
+									텍스트 입력란
+									텍스트 입력란
+									텍스트 입력란
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+
+
+					<div class="final-btn">
+						<a class="btn-blue" href="#none">저장</a>
+						<a class="btn-white" href="#none">취소</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한은행 MY CAR KBO리그</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.rwdImageMaps.min.js"></script>	
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>	
+			<h1 class="logo"><img src="resources/images/common/h1_logo.png" alt="신한은행 MY CAR KBO리그" /></h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">KBO 상품</a></li>
+					<li><a href="javascript:;">월간 MVP</a></li>
+					<li><a href="javascript:;">이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<div class="btn-area">
+				<a href="#none" class="btn"><img src="resources/images/sub/btn_product_back.gif" alt="" /></a>
+			</div>
+			<!-- contents -->		
+			<div id="contents">					
+				<div class="kbo-product">
+					<p class="txt"><img src="resources/images/sub/txt_kbo_product02.gif" alt="" /></p>
+					<div><img src="resources/images/sub/img_product_list02.gif" alt="" usemap="#map1" /></div>
+					<map name="map1" id="map1">
+						<area shape="rect" coords="0,0,343,120" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012301" target="_self" alt="KIA타이거즈 예금" />
+						<area shape="rect" coords="343,0,683,120" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012302" target="_self" alt="두산베어스 예금" />	
+						<area shape="rect" coords="0,120,343,238" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012303" target="_self" alt="롯데자이언츠 예금" />
+						<area shape="rect" coords="343,120,683,238" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012304" target="_self" alt="NC다이노스 예금" />	
+						<area shape="rect" coords="0,238,343,356" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012305" target="_self" alt="SK와이번스 예금" />
+						<area shape="rect" coords="343,238,683,356" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012306" target="_self" alt="LG트윈스 예금" />	
+						<area shape="rect" coords="0,356,343,474" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012307" target="_self" alt="넥센히어로즈 예금" />
+						<area shape="rect" coords="343,356,683,474" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012308" target="_self" alt="한화이글스 예금" />	
+						<area shape="rect" coords="0,474,343,592" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012309" target="_self" alt="삼성라이온즈 예금" />
+						<area shape="rect" coords="343,474,683,592" href="https://sol.shinhan.com/sms.jsp?screenid=PR03010102101&prdCode=230012310" target="_self" alt="KT위즈 예금" />	
+					</map>
+				</div>
+			</div>
+			<!-- // contents -->		
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

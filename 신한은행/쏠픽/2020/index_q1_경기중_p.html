@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container" class="post">
+			<!-- contents -->
+			<div id="contents" class="solpick q1">
+				<div class="date-select play">
+					<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018.06.13</span>
+					<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+					<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+				</div>
+				<div class="game-wrap">
+					<div class="game-cont">
+						<div class="tab-area solpick">
+							<ul class="tab">
+								<li class="q1 on"><a href="#none">Q1 팀</a></li>
+								<li class="q2"><a href="#none">Q2 점수 차</a></li>
+								<li class="q3"><a href="#none">Q3 MVP</a></li>
+							</ul>
+							<!-- [D] 참여일 경우 -->
+							<div class="quiz q1-app after exception only">
+								<div class="quiz-box">
+									<dl class="my-result">
+										<dt><img src="resources/images/main/icon_check_q1_2.png" alt="나의 선택 결과">나의 선택 결과</dt>
+									</dl>
+								</div>
+							</div>
+							<!-- [D] 미참여일 경우 -->
+							<div class="quiz q1-app after exception">
+								<div class="quiz-box">
+									<dl class="my-result no-attend">
+										<dt><img src="resources/images/main/icon_check_q1_2.png" alt="나의 선택 결과">나의 선택 결과</dt>
+										<dd>
+											<p>아이쿠! 쏠픽에 참여하지 않았습니다.<br />다음에는 꼭! 쏠픽 해주세요!</p>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<div class="quiz q1-app after">
+								<dl class="quiz-header">
+									<dt>Q1-1.</dt>
+									<dd>승리팀 맞히기</dd>
+								</dl>
+								<div class="quiz-box">
+									<p class="tit">오늘의 승리팀을 맞혀주세요!</p>
+									<dl class="my-result">
+										<dd>실시간 예상 : <strong>정답!</strong></dd>
+									</dl>
+									<dl class="my-result fail">
+										<dd>실시간 예상 : <strong>실패</strong></dd>
+									</dl>
+								</div>
+								<ul class="team-select result">
+									<li>
+										<div class="ps">
+											<dl class="ing">
+												<dt>9회말</dt>
+												<dd>경기중</dd>
+											</dl>
+										</div>
+										<div class="team-box away select">
+											<div class="team">
+												<div class="emb"><img src="resources/images/emb/emb_135x87_LG.png"
+														alt="" /></div>
+												<div class="name">LG</div>
+											</div>
+											<div class="record">
+												<div class="score">99</div>
+											</div>
+										</div>
+										<div class="team-box home">
+											<div class="record">
+												<div class="score">99</div>
+											</div>
+											<div class="team">
+												<div class="emb"><img src="resources/images/emb/emb_135x87_LT.png"
+														alt="" /></div>
+												<div class="name">LG</div>
+											</div>
+										</div>
+										<div class="prediction-rate">
+											<div class="tit">쏠픽 투표율<img src="resources/images/main/icon_right.png" alt="아이콘"></div>
+											<div class="rate">
+												<div class="away win">100<span class="unit">%</span></div>
+												<div class="graph">
+													<span class="bar" style="width:40%">40%</span>
+												</div>
+												<div class="home">40<span class="unit">%</span></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="quiz q1-app mt15 after">
+								<dl class="quiz-header">
+									<dt>Q1-2.</dt>
+									<dd>높은팀 맞히기</dd>
+								</dl>
+								<div class="quiz-box">
+									<p class="tit">선발투수가 더 많은 투구수를<br />기록할 팀은?</p>
+									<dl class="my-result">
+										<dd>실시간 예상 : <strong>정답!</strong></dd>
+									</dl>
+									<dl class="my-result fail">
+										<dd>실시간 예상 : <strong>실패</strong></dd>
+									</dl>
+								</div>
+								<ul class="team-select">
+									<li>
+										<div class="ps">
+											<p class="end">미참여</p>
+										</div>
+										<div class="team-box away">
+											<div class="team">
+												<div class="emb"><img src="resources/images/emb/emb_135x87_KT.png"
+														alt="" /></div>
+												<div class="name">KT</div>
+											</div>
+											<div class="record">
+												<div class="score">999개</div>
+											</div>
+										</div>
+										<div class="team-box home">
+											<div class="record">
+												<div class="score">999개</div>
+											</div>
+											<div class="team">
+												<div class="emb"><img src="resources/images/emb/emb_135x87_NC.png"
+														alt="" /></div>
+												<div class="name">NC</div>
+											</div>
+										</div>
+										<div class="prediction-rate">
+											<div class="tit">쏠픽 투표율<img src="resources/images/main/icon_right.png"
+													alt="아이콘"></div>
+											<div class="rate">
+												<div class="away win">100<span class="unit">%</span></div>
+												<div class="graph">
+													<span class="bar" style="width:40%">40%</span>
+												</div>
+												<div class="home">40<span class="unit">%</span></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-app">다음</a>
+					</div>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

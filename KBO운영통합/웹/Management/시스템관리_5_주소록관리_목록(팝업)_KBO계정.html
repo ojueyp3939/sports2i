@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub2.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">승인신청</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li class="on">
+					<a href="#none">시스템 관리</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명 관리</a></li>
+							<li><a href="#none">텍스트 관리</a></li>
+							<li class="on"><a href="#none">주소록 관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">
+			<div class="tit-area">
+				<div class="inner">
+					<h2>주소록 관리</h2>
+				</div> 
+			</div>
+			<div class="select-area row">
+				<div class="section-left">
+					<select name="" id="">
+						<option value="">그룹</option>
+						<option value="" selected>KBO 리그(10)</option>
+						<option value="">퓨처스리그(12)</option>
+						<option value="">미지정(31)</option>
+					</select>
+					<a href="#none" class="btn-app ml5">추가</a>
+				</div>
+				<div class="section-right">
+					<select name="" id="">
+						<option value="">이동</option>
+						<option value="">KBO 리그</option>
+						<option value="">퓨처스리그</option>
+						<option value="">미지정</option>
+					</select>
+					<a href="#none" class="btn-app ml5">이동</a>
+					<a href="#none" class="btn-regist ml5">삭제</a>
+				</div>
+			</div>
+			<div class="tbl-board">
+				<table class="tbl">
+					<colgroup>
+						<col width="10%" />
+						<col width="30%" />
+						<col width="20%" />
+						<col width="20%" />
+						<col width="20%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선택</th>
+							<th>그룹</th>
+							<th>이름</th>
+							<th>아이디</th>
+							<th>구단</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="checkbox" name="" /></td>
+							<td>KBO 리그</td>
+							<td>KIA 일반</td>
+							<td>KIA1</td>
+							<td>KIA</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="" checked /></td>
+							<td>KBO 리그</td>
+							<td>두산 일반</td>
+							<td>Doosan1</td>
+							<td>두산</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="" checked /></td>
+							<td>퓨처스리그</td>
+							<td>경찰 일반</td>
+							<td>Police1</td>
+							<td>경찰</td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" name="" checked /></td>
+							<td>중계팀</td>
+							<td>ABC 일반</td>
+							<td>Press</td>
+							<td>-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+    <div id="popup" class="pop-address-group-reg">
+        <h1>그룹추가</h1>
+        <div class="contents">
+                <input type="text" name="" id="" class="ipt" placeholder="텍스트 입력" />
+        </div>
+        <div class="btn-area">
+            <a href="#none" class="btn-confirm">확인</a>
+            <a href="#none" class="btn-cancel">취소</a>
+        </div>
+    </div>
+    <div class="modal"></div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@charset "utf-8";
+
+/* 타이틀 */
+.tit {padding:15px 0 7px 10px;font-size:1.4rem;font-weight:400;}
+
+/* 테이블 */
+.tbl-rank {margin:0 auto;width:100%;text-align:center;}
+.tbl-rank td:first-child {padding:0 0 0 10px;text-align:left;font-weight:700;}
+.tbl-rank td:nth-child(2) {padding:0 4px 0 0;}
+.tbl-rank td:nth-child(3) {padding:0 10px 0 0;text-align:left;}
+.tbl-rank td.no1 {color:#ff4b53;}
+.tbl-rank td img {width:25px;vertical-align:middle;}
+
+/* 정규시즌 */
+.vs-wrap{}
+.vs-wrap {overflow:hidden;width:100%;padding:0 12px 19px;background:linear-gradient(to top,#f5f5f5 90%, #fff 10%);text-align:center;}
+.vs-wrap .record-box {float:left;position:relative;width:49%;min-height:305px;height:auto;padding-bottom:23px;background:#fff;border:1px solid #e2e2e2;}
+.vs-wrap .record-box .txt {color:#000;padding:8px 0;font-size:1.1rem;}
+.vs-wrap .record-box .team-list {overflow:hidden;width:85%;margin:0 auto;text-align:left;}
+.vs-wrap .record-box .team-list .team{float:left;width:48%;margin-right:4%;padding-bottom:10px;}
+.vs-wrap .record-box .team-list .team:nth-child(2n+2) {margin-right:0;}
+.vs-wrap .record-box .team-list .team dt {width:75%;max-width:54px;margin:0 auto;}
+.vs-wrap .record-box .team-list .team dd {font-size:1.0rem;color:#888;text-align:center;}
+.vs-wrap .superior {margin-right:2%;border-top:1px solid #ff4b53;}
+.vs-wrap .superior .txt {color:#ff4b53;}
+.vs-wrap .inferiority {border-top:1px solid #000;}
+.vs-wrap .record-box .team-sum {position:absolute;bottom:0;width:100%;padding:5px 0;background:#b6b6b6;color:#fff;}
+
+/* 시범경기 도움말 */
+.exhibition {padding:60px 0 64px;border-top:1px solid #ededed;text-align:center;}
+.exhibition span{display:inline-block;width:109px;margin-bottom:37px;}
+.exhibition .txt{color:#888;font-size:1.5rem;font-weight:100;letter-spacing:-1px;}
+
+.eng {font-family:dotum,sans-serif;}
+
+@media (min-width:1024px){
+	.select-area li select {height:50px;padding:0 42%;font-size:1.8rem;background:url("../images/common/btn_arrow_bottom.png") no-repeat 56% 50%;background-size:6px;}
+	.select-area li.season select {background:url("../images/common/btn_arrow_bottom.png") no-repeat 58% 50%;background-size:6px;}
+
+	.tit {padding:25px 40px 14px;font-size:1.9rem;font-weight:700;}
+	/* 팀순위 */
+	.tbl thead th {padding:11px 5px 10px;font-size:1.5rem;font-weight:700;}
+	.tbl tr td {font-size:1.5rem;}
+	.tbl-rank td:first-child {padding:0 0 0 40px;}
+	.tbl-rank td.no1 {font-weight:700;}
+	/* 정규시즌 > 팀간전적 */
+	#TeamRecord {padding:15px 0 22px;}
+	#TeamRecord .scroller .team-list {padding:0 40px;}
+	#TeamRecord .scroller .team-list li {width:101px;height:65px;margin-right:12px;}
+	#TeamRecord .scroller .team-list li:last-child {margin-right:0;}
+	#TeamRecord .scroller .team-list li a {padding:12.79px 9px;}
+	#TeamRecord .scroller .team-list li img {width:48px;}
+	#TeamRecord .scroller .team-list li span {font-size:1.5rem;}
+	/* vs */
+	.vs-wrap {padding:0 40px 19px;}
+	.vs-wrap .superior {border-top:2px solid #ff4b53;}
+	.vs-wrap .inferiority {border-top:2px solid #000;}
+	.vs-wrap .record-box {min-height:210px;}
+	.vs-wrap .record-box .txt {padding:11px 0 18px;font-size:1.6rem;font-weight:700;}
+	.vs-wrap .record-box .team-list {width:90%;}
+	.vs-wrap .record-box .team-list .team {width:17.854%;margin-right:2.044%;}
+	.vs-wrap .record-box .team-list .team:nth-child(5) {margin-right:0;}
+	.vs-wrap .record-box .team-list .team:nth-child(2n+2) {margin-right:2.044%;}
+	.vs-wrap .record-box .team-list .team dt {max-width:54px;}
+	.vs-wrap .record-box .team-list .team dd	{text-align:center;}
+	.vs-wrap .record-box .team-sum {padding:6px 0 5px;font-size:1.5rem;font-weight:700;}
+	/* 시범경기 */
+	.exhibition {padding:53px 0 61px;}
+	.exhibition .txt {font-size:1.6rem;font-weight:400;}
+	.exhibition span {width:199px;margin-bottom:21px;}
+}

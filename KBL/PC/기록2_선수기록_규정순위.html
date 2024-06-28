@@ -1,0 +1,1917 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBL"/>
+    <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="스포츠투아이, KBL" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, Minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/ico.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/s2i.css" />
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<main id="contents">
+				<div class="layout" id="s2iZone">
+					<div class="contents">
+						<div class="title desktop short">
+							<h2>선수기록</h2>
+						</div>
+						<div class="filter-wrap">
+							<ul>
+								<!-- <li>
+									<select>
+										<option>2022-2023</option>
+									</select>
+								</li>
+								<li>
+									<select>
+										<option>정규경기</option>
+									</select>
+								</li>
+								<li>
+									<select>
+										<option>1차</option>
+										<option>2차</option>
+									</select>
+								</li> -->
+								<li>
+									<select>
+										<option>정규기록</option>
+										<option>일반기록</option>
+									</select>
+								</li>
+								<li id="bottomSheet">
+									<p class="app-select1">바텀시트</p>
+								</li>
+								<li class="more"><input type="checkbox" id="setting"><label for="setting">세부설정<i class="ic-more-down"></i></label></li>
+							</ul>
+							<div class="setting active">
+								<ul class="option">
+									<li>
+										<p>팀 선택</p>
+										<select>
+											<option>대구 한국가스공사</option>
+										</select>
+									</li>
+									<li>
+										<p>팀VS</p>
+										<select>
+											<option>원주 DB</option>
+										</select>
+									</li>
+									<li>
+										<p>PER</p>
+										<select>
+											<option>평균</option>
+										</select>
+									</li>
+									<li>
+										<p>LAST</p>
+										<select>
+											<option>최근경기</option>
+										</select>
+									</li>
+									<li>
+										<p>승/패</p>
+										<select>
+											<option>승리경기</option>
+										</select>
+									</li>
+									<li>
+										<p>홈/원정</p>
+										<select>
+											<option>홈경기</option>
+										</select>
+									</li>
+									<li>
+										<p>쿼터</p>
+										<select>
+											<option>1</option>
+										</select>
+									</li>
+									<li>
+										<p>전/후반</p>
+										<select>
+											<option>전반</option>
+										</select>
+									</li>
+									<li>
+										<p>클러치</p>
+										<select>
+											<option>4쿼터</option>
+										</select>
+									</li>
+									<li>
+										<p>월별</p>
+										<select>
+											<option>10월</option>
+										</select>
+									</li>
+									<li>
+										<p>라운드별</p>
+										<select>
+											<option>1라운드</option>
+										</select>
+									</li>
+									
+									<li>
+										<p>요일별</p>
+										<select>
+											<option>월</option>
+										</select>
+									</li>
+									<li>
+										<p>포지션</p>
+										<select>
+											<option>가드</option>
+										</select>
+									</li>
+									<li>
+										<p>선수구분</p>
+										<select>
+											<option>선발출전</option>
+										</select>
+									</li>
+									<li>
+										<p>선발구분</p>
+										<select>
+											<option>선발출전</option>
+										</select>
+									</li>
+									<li>
+										<p>경력</p>
+										<select>
+											<option>신인</option>
+										</select>
+									</li>
+									<li>
+										<p>드래프트 연도</p>
+										<select>
+											<option>2024</option>
+										</select>
+									</li>
+									<li>
+										<p>드래프트 선발</p>
+										<select>
+											<option>1라운드</option>
+										</select>
+									</li>
+									<li>
+										<p>키</p>
+										<select>
+											<option>&gt;200</option>
+										</select>
+									</li>
+									<li class="app-select2">
+										<p>바텀시트</p>
+										<div>바텀시트Option</div>
+									</li>
+								</ul>
+								<ul class="result">
+									<li>
+										<p>팀</p><span>대구 한국가스공사<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>팀VS</p><span>원주 DB<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>PER</p><span>평균<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>LAST</p><span>최근경기<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>승/패</p><span>승리경기<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>홈/원정</p><span>홈경기<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>쿼터</p><span>1<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>전/후반</p><span>전반<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>클러치</p><span>4쿼터<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="desktop">
+										<p>월별</p><span>10월<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="mobile">
+										<p>구분</p><span>평균<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+									<li class="mobile">
+										<p>포지션</p><span>포지션가드<button title="선택 삭제"><i class="ic-delete-16"></i></button></span>
+									</li>
+								</ul>
+								<div><button class="line black">설정 초기화</button><button>적용</button></div>
+							</div>
+						</div>
+						<!-- 1차 스탯 -->
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>1차 스탯<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button></h3>
+								<div class="page-option">
+									<button title="용어 설명 팝업 열기" class="mobile">
+										<i class="ic-help"></i>
+									</button>
+									<button title="가로 보기 팝업 열기" class="mobile">
+										<i class="ic-horiz"></i>
+									</button>
+									<div class="view-tab">
+										<input type="radio" name="view" id="all" title="선택됨" checked=""><label for="all">전체</label>
+										<input type="radio" name="view" id="compare"><label for="compare">비교</label>
+									</div>
+									<div class="page desktop">
+										<div>
+											<p>Page</p><select>
+												<option>1</option>
+											</select><span>of 5</span>
+										</div>
+										<div>
+											<button title="이전 페이지"><i class="ic-arrow-left-24"></i></button>
+											<button title="다음 페이지"><i class="ic-arrow-right-24"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-100">
+								<table class="record-table1 division-2 table-cursor">
+									<caption>1차 스탯 선수기록</caption>
+									<colgroup>
+										<col style="width: 4.2rem;">
+										<col style="width: 12rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="fixed">순위</th>
+											<th class="fixed">팀 / 선수 </th>
+											<th class="sorting" title="시간">Min</th>
+											<th title="총 득점">PTS</th>
+											<th title="2점슛 성공" class="sorting down">2PM</th>
+											<th title="2점슛 시도">2PA</th>
+											<th title="2점슛 성공률">2P%</th>
+											<th title="3점슛 성공">3PM</th>
+											<th title="3점슛 시도">3PA</th>
+											<th title="3점슛 성공률">3P%</th>
+											<th title="야투 성공">FGM</th>
+											<th title="야투 시도">FGA</th>
+											<th title="야투 성공률">FG%</th>
+											<th title="자유투 성공">FTM</th>
+											<th title="자유투 시도">FTA</th>
+											<th title="자유투 성공률">FT%</th>
+											<th title="공격 리바운드">OREB</th>
+											<th title="수비 리바운드">DREB</th>
+											<th title="리바운드">REB</th>
+											<th title="어시스트">AST</th>
+											<th title="스틸">STL</th>
+											<th title="블록">BLK</th>
+											<th title="굿디펜스">GD</th>
+											<th title="덩크 성공">DK</th>
+											<th title="덩크 시도">DKA</th>
+											<th title="턴오버">TO</th>
+											<th title="개인파울">PF</th>
+											<th title="페인트존 득점 성공">PP</th>
+											<th title="페인트존 득점 시도">PPA</th>
+											<th title="페인트존 득점 성공률">PP%</th>
+											<th title="득실마진">+/-</th>
+											<th title="더블더블">DD2</th>
+											<th title="트리플더블">TD3</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+											<td>50.0</td>
+											<td>1</td>
+											<td>5</td>
+											<td>20.0</td>
+											<td>2</td>
+											<td>7</td>
+											<td>28.6</td>
+											<td>2</td>
+											<td>2</td>
+											<td>100.0</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>50.0</td>
+											<td>1</td>
+											<td>5</td>
+											<td>20.0</td>
+											<td>2</td>
+											<td>7</td>
+											<td>28.6</td>
+											<td>2</td>
+											<td>2</td>
+											<td>100.0</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<!-- 비교 탭 (스텟) -->
+							<div class="table-100">
+								<table class="record-table1 division-2 table-cursor">
+									<caption>1차 스탯 선수기록</caption>
+									<colgroup>
+										<col style="width: 4.2rem;">
+										<col style="width: 12rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="fixed">순위</th>
+											<th class="fixed">팀 / 선수</th>
+											<th class="sorting" title="시간">Min</th>
+											<th title="총 득점">PTS</th>
+											<th title="2점슛 성공" class="sorting down">2PM</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- 2차 스탯 -->
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>2차 스탯<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button></h3>
+								<div class="page-option">
+									<button title="용어 설명 팝업 열기" class="mobile">
+										<i class="ic-help"></i>
+									</button>
+									<button title="가로 보기 팝업 열기" class="mobile">
+										<i class="ic-horiz"></i>
+									</button>
+									<div class="view-tab">
+										<input type="radio" name="view" id="all" title="선택됨" checked=""><label for="all">전체</label>
+										<input type="radio" name="view" id="compare"><label for="compare">비교</label>
+									</div>
+									<div class="page desktop">
+										<div>
+											<p>Page</p><select>
+												<option>1</option>
+											</select><span>of 5</span>
+										</div>
+										<div>
+											<button title="이전 페이지"><i class="ic-arrow-left-24"></i></button>
+											<button title="다음 페이지"><i class="ic-arrow-right-24"></i></button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="table-100">
+								<table class="record-table1 division-2 table-cursor">
+									<caption>2차 스탯 선수기록</caption>
+									<colgroup>
+										<col style="width: 4.2rem;">
+										<col style="width: 12rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="fixed">No</th>
+											<th class="fixed">선수</th>
+											<th title="시간" class="sorting">Min</th>
+											<th title="선수 생산성 지수">PER</th>
+											<th title="100 포제션 당 득점">OFFRTG</th>
+											<th title="100 포제션 당 허용하는 득점">DEFRTG</th>
+											<th title="100 포제션 당 득실차">NETRTG</th>
+											<th title="3점슛 가치를 반영한 야투율">EFG%</th>
+											<th title="3점슛 및 자유투 가치를 반영한 성공률">TS%</th>
+											<th title="동료의 필드골에 대한 어시스트 비율">AST%</th>
+											<th title="어시스트 대비 턴오버 수">AST/TO</th>
+											<th title="어시스트 비율">AST Ratio</th>
+											<th title="코트에 있을 때 얻은 공격 리바운드의 비율">OREB%</th>
+											<th title="코트에 있을 때 얻은 수비 리바운드의 비율">DREB%</th>
+											<th title="코트에 있을 때 얻은 리바운드의 비율">REB%</th>
+											<th title="해당 선수의 포제션 점유율">USG%</th>
+											<th title="48분 동안의 포제션 수">PACE</th>
+											<th title="100 포제션 당 평균적으로 범하는 턴오버 수">TO RATIO</th>
+											<th title="선수 임팩트 지수">PIE</th>
+											<th title="선수나 팀의 포제션 수">POSS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="player-name">
+													<div>
+														<img src="">
+													</div>
+													<p>홍길동</p>
+												</div>
+											</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- POPUP -->
+				<!-- 1. 비교 버튼 클릭시 -> 1차 스탯설정 (pc ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap lg">
+						<div class="pop-tit">
+							<h2>스탯설정</h2>
+							<div>
+								<input type="checkbox" id="all">
+								<label for="all">
+									<p>전체선택</p>
+								</label>
+								<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+							</div>
+						</div>
+						<div class="pop-cont">
+							<table>
+								<caption>스탯설정</caption>
+								<colgroup>
+									<col style="width: 12%;">
+									<col style="width: 21.33%;">
+									<col style="width: 12%;">
+									<col style="width: 21.34%;">
+									<col style="width: 12%;">
+									<col style="width: 21.33%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>Min</p></label>
+										</td>
+										<td>시간</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>PTS</p></label>
+										</td>
+										<td>총 득점</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>2PM</p></label>
+										</td>
+										<td>2점슛 성공</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>2PA</p></label>
+										</td>
+										<td>2점슛 시도</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>2P%</p></label>
+										</td>
+										<td>2점슛 성공률</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>3PM</p></label>
+										</td>
+										<td>3점슛 성공</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>3PA</p></label>
+										</td>
+										<td>3점슛 시도</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>3P%</p></label>
+										</td>
+										<td>3점슛 성공률</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FGM</p></label>
+										</td>
+										<td>야투 성공</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FGA</p></label>
+										</td>
+										<td>야투 시도</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FG%</p></label>
+										</td>
+										<td>야투 성공률</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FTM</p></label>
+										</td>
+										<td>자유투 성공</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FTA</p></label>
+										</td>
+										<td>자유투 시도</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>FT%</p></label>
+										</td>
+										<td>자유투 성공률</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>OREB</p></label>
+										</td>
+										<td>공격 리바운드</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>DREB</p></label>
+										</td>
+										<td>수비 리바운드</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>REB</p></label>
+										</td>
+										<td>리바운드</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>AST</p></label>
+										</td>
+										<td>어시스트</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>STL</p></label>
+										</td>
+										<td>스틸</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>BLK</p></label>
+										</td>
+										<td>블록</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>GD</p></label>
+										</td>
+										<td>굿디펜스</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>DK</p></label>
+										</td>
+										<td>덩크 성공</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>DKA</p></label>
+										</td>
+										<td>덩크 시도</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>TO</p></label>
+										</td>
+										<td>턴오버</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>PF</p></label>
+										</td>
+										<td>개인파울</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>PP</p></label>
+										</td>
+										<td>페인트존 득점 성공</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>PPA</p></label>
+										</td>
+										<td>페인트존 득점 시도</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>PP%</p></label>
+										</td>
+										<td>페인트존 득점 성공률</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>+/-</p></label>
+										</td>
+										<td>득실마진</td>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>DD2</p></label>
+										</td>
+										<td>더블더블</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="checkbox" id=""><label for=""><p>TD3</p></label>
+										</td>
+										<td>트리플더블</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pop-btn">
+							<button class="line gray">취소</button>
+							<button disabled>스탯비교</button>
+						</div>
+					</div>
+				</div>
+				<!-- 1-1. 비교 버튼 클릭시 -> 1차 스탯설정 (m ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>스탯설정</h2>
+							<div>
+								<input type="checkbox" id="all"><label for="all"><p>전체선택</p></label>
+								<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+							</div>
+						</div>
+						<div class="pop-cont">
+							<div class="mobile-table1">
+								<table>
+									<caption>스탯설정</caption>
+									<colgroup>
+										<col style="width: 8rem;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>명칭</th>
+											<th>설명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk1"><label for="chk1"><p>Min</p></label>
+											</td>
+											<td>출전시간</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk4"><label for="chk4"><p>PTS</p></label>
+											</td>
+											<td>총 득점</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk7"><label for="chk7"><p>2PM</p></label>
+											</td>
+											<td>2점슛 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk10"><label for="chk10"><p>2PA</p></label>
+											</td>
+											<td>2점슛 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk13"><label for="chk13"><p>2P%</p></label>
+											</td>
+											<td>2점슛 성공률</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk16"><label for="chk16"><p>3PM</p></label>
+											</td>
+											<td>3점슛 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk19"><label for="chk19"><p>3PA</p></label>
+											</td>
+											<td>3점슛 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk22"><label for="chk22"><p>3P%</p></label>
+											</td>
+											<td>3점슛 성공률</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk24"><label for="chk24"><p>FGM</p></label>
+											</td>
+											<td>야투 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk2"><label for="chk2"><p>FGA</p></label>
+											</td>
+											<td>야투 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk5"><label for="chk5"><p>FG%</p></label>
+											</td>
+											<td>야투 성공률</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk8"><label for="chk8"><p>FTM</p></label>
+											</td>
+											<td>자유투 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk11"><label for="chk11"><p>FTA</p></label>
+											</td>
+											<td>자유투 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk14"><label for="chk14"><p>FT%</p></label>
+											</td>
+											<td>자유투 성공률</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk17"><label for="chk17"><p>OREB</p></label>
+											</td>
+											<td>공격 리바운드</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk20"><label for="chk20"><p>DREB</p></label>
+											</td>
+											<td>수비 리바운드</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk23"><label for="chk23"><p>REB</p></label>
+											</td>
+											<td>리바운드</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk25"><label for="chk25"><p>AST</p></label>
+											</td>
+											<td>어시스트</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk3"><label for="chk3"><p>STL</p></label>
+											</td>
+											<td>스틸</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk6"><label for="chk6"><p>BLK</p></label>
+											</td>
+											<td>블록</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>GD</p></label>
+											</td>
+											<td>굿디펜스</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>DK</p></label>
+											</td>
+											<td>덩크 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>DKA</p></label>
+											</td>
+											<td>덩크 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk9"><label for="chk9"><p>TO</p></label>
+											</td>
+											<td>턴오버</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk12"><label for="chk12"><p>PF</p></label>
+											</td>
+											<td>개인파울</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>PP</p></label>
+											</td>
+											<td>페인트존 득점 성공</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>PPA</p></label>
+											</td>
+											<td>페인트존 득점 시도</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>PP%</p></label>
+											</td>
+											<td>페인트존 득점 성공률</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id=""><label for=""><p>+/-</p></label>
+											</td>
+											<td>득실마진</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk18"><label for="chk18"><p>DD2</p></label>
+											</td>
+											<td>더블더블</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="checkbox" id="chk21"><label for="chk21"><p>TD3</p></label>
+											</td>
+											<td>트리블더블</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pop-btn">
+							<button class="line gray">취소</button>
+							<button disabled>스탯비교</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2. 비교 버튼 클릭시 -> 2차 스탯설정 (pc ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap lg">
+						<div class="pop-tit">
+							<h2>스탯설정</h2>
+							<div>
+								<input type="checkbox" id="all">
+								<label for="all">
+									<p>전체선택</p>
+								</label>
+								<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+							</div>
+						</div>
+						<div class="pop-cont">
+							<table>
+								<caption>스탯설정</caption>
+								<colgroup>
+									<col style="width: 14%;">
+									<col style="width: 26%;">
+									<col style="width: 14%;">
+									<col style="width: 26%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>Min</td>
+										<td>시간</td>
+										<td><input type="checkbox" id=""><label for=""><p>PER</td>
+										<td>선수 생산성 지수</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>OFFRTG</td>
+										<td>100 포제션 당 득점</td>
+										<td><input type="checkbox" id=""><label for=""><p>DEFRTG</td>
+										<td>100 포제션 당 허용하는 득점</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>NETRTG</p></label></td>
+										<td>100 포제션 당 득실차</td>
+										<td><input type="checkbox" id=""><label for=""><p>EFG%</p></label></td>
+										<td>3점슛 가치를 반영한 야투율</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>TS%</p></label></td>
+										<td>3점슛 및 자유투 가치를 반영한 성공률</td>
+										<td><input type="checkbox" id=""><label for=""><p>AST%</p></label></td>
+										<td>동료의 필드골에 대한 어시스트 비율</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>AST/TO</p></label></td>
+										<td>어시스트 대비 턴오버 수</td>
+										<td><input type="checkbox" id=""><label for=""><p>AST Ratio</p></label></td>
+										<td>어시스트 비율</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>OREB%</p></label></td>
+										<td>코트에 있을 때 얻은 공격 리바운드의 비율</td>
+										<td><input type="checkbox" id=""><label for=""><p>DREB%</p></label></td>
+										<td>코트에 있을 때 얻은 수비 리바운드의 비율</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>REB%</p></label></td>
+										<td>코트에 있을 때 얻은 리바운드의 비율</td>
+										<td><input type="checkbox" id=""><label for=""><p>USG%</p></label></td>
+										<td>해당 선수의 포제션 점유율</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>PACE</p></label></td>
+										<td>48분 동안의 포제션 수</td>
+										<td><input type="checkbox" id=""><label for=""><p>TO RATIO</p></label></td>
+										<td>100 포제션 당 평균적으로 범하는 턴오버 수</td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id=""><label for=""><p>PIE</p></label></td>
+										<td>선수 임팩트 지수</td>
+										<td><input type="checkbox" id=""><label for=""><p>POSS</p></label></td>
+										<td>선수나 팀의 포제션 수</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pop-btn">
+							<button class="line gray">취소</button>
+							<button disabled>스탯비교</button>
+						</div>
+					</div>
+				</div>
+				<!-- 2-1. 비교 버튼 클릭시 -> 2차 스탯설정 (m ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>스탯설정</h2>
+							<div>
+								<input type="checkbox" id="all"><label for="all"><p>전체선택</p></label>
+								<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+							</div>
+						</div>
+						<div class="pop-cont">
+							<div class="mobile-table1">
+								<table>
+									<caption>스탯설정</caption>
+									<colgroup>
+										<col style="width: 12rem;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>명칭</th>
+											<th>설명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>Min</td>
+											<td>시간</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>PER</td>
+											<td>선수 생산성 지수</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>OFFRTG</td>
+											<td>100 포제션 당 득점</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>DEFRTG</td>
+											<td>100 포제션 당 허용하는 득점</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>NETRTG</p></label></td>
+											<td>100 포제션 당 득실차</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>EFG%</p></label></td>
+											<td>3점슛 가치를 반영한 야투율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>TS%</p></label></td>
+											<td>3점슛 및 자유투 가치를 반영한 성공률</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>AST%</p></label></td>
+											<td>동료의 필드골에 대한 어시스트 비율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>AST/TO</p></label></td>
+											<td>어시스트 대비 턴오버 수</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>AST Ratio</p></label></td>
+											<td>어시스트 비율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>OREB%</p></label></td>
+											<td>코트에 있을 때 얻은 공격 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>DREB%</p></label></td>
+											<td>코트에 있을 때 얻은 수비 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>REB%</p></label></td>
+											<td>코트에 있을 때 얻은 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>USG%</p></label></td>
+											<td>해당 선수의 포제션 점유율</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>PACE</p></label></td>
+											<td>48분 동안의 포제션 수</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>TO RATIO</p></label></td>
+											<td>100 포제션 당 평균적으로 범하는 턴오버 수</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>PIE</p></label></td>
+											<td>선수 임팩트 지수</td>
+										</tr>
+										<tr>
+											<td><input type="checkbox" id=""><label for=""><p>POSS</p></label></td>
+											<td>선수나 팀의 포제션 수</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pop-btn">
+							<button class="line gray">취소</button>
+							<button disabled>스탯비교</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 3. 용어설명 클릭시 1차 스탯 (pc ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap lg2">
+						<div class="pop-tit">
+							<h2>용어 설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<table>
+								<caption>용어 설명</caption>
+								<colgroup>
+									<col style="width: 10.5%;">
+									<col style="width: 22.83%;">
+									<col style="width: 10.5%;">
+									<col style="width: 22.84%;">
+									<col style="width: 10.5%;">
+									<col style="width: 22.83%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Min</th>
+										<td>시간</td>
+										<th>PTS</th>
+										<td>총 득점</td>
+										<th>2PM</th>
+										<td>2점슛 성공</td>
+									</tr>
+									<tr>
+										<th>2PA</th>
+										<td>2점슛 시도</td>
+										<th>2P%</th>
+										<td>2점슛 성공률</td>
+										<th>3PM</th>
+										<td>3점슛 성공</td>
+									</tr>
+									<tr>
+										<th>3PA</th>
+										<td>3점슛 시도</td>
+										<th>3P%</th>
+										<td>3점슛 성공률</td>
+										<th>FGM</th>
+										<td>야투 성공</td>
+									</tr>
+									<tr>
+										<th>FGA</th>
+										<td>야투 시도</td>
+										<th>FG%</th>
+										<td>야투 성공률</td>
+										<th>FTM</th>
+										<td>자유투 성공</td>
+									</tr>
+									<tr>
+										<th>FTA</th>
+										<td>자유투 시도</td>
+										<th>FT%</th>
+										<td>자유투 성공률</td>
+										<th>OREB</th>
+										<td>공격 리바운드</td>
+									</tr>
+									<tr>
+										<th>DREB</th>
+										<td>수비 리바운드</td>
+										<th>REB</th>
+										<td>리바운드</td>
+										<th>AST</th>
+										<td>어시스트</td>
+									</tr>
+									<tr>
+										<th>STL</th>
+										<td>스틸</td>
+										<th>BLK</th>
+										<td>블록</td>
+										<th>GD</th>
+										<td>굿디펜스</td>
+									</tr>
+									<tr>
+										<th>DK</th>
+										<td>덩크 성공</td>
+										<th>DKA</th>
+										<td>덩크 시도</td>
+										<th>TO</th>
+										<td>턴오버</td>
+									</tr>
+									<tr>
+										<th>PF</th>
+										<td>개인파울</td>
+										<th>PP</th>
+										<td>페인트존 득점 성공</td>
+										<th>PPA</th>
+										<td>페인트존 득점 시도</td>
+									</tr>
+									<tr>
+										<th>PP%</th>
+										<td>페인트존 득점 성공률</td>
+										<th>+/-</th>
+										<td>득실마진</td>
+										<th>DD2</th>
+										<td>더블더블</td>
+									</tr>
+									<tr>
+										<th>TD3</th>
+										<td>트리플더블</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- 3-1. 용어설명 클릭시 1차 스탯 (m ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>용어설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="mobile-table1">
+								<table>
+									<caption>용어 설명</caption>
+									<colgroup>
+										<col style="width: 8rem;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>명칭</th>
+											<th>설명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Min</td>
+											<td>시간</td>
+										</tr>
+										<tr>
+											<td>PTS</td>
+											<td>총 득점</td>
+										</tr>
+										<tr>
+											<td>2PM</td>
+											<td>2점슛 성공</td>
+										</tr>
+										<tr>
+											<td>2PA</td>
+											<td>2점슛 시도</td>
+										</tr>
+										<tr>
+											<td>2P%</td>
+											<td>2점슛 성공률</td>
+										</tr>
+										<tr>
+											<td>3PM</td>
+											<td>3점슛 성공</td>
+										</tr>
+										<tr>
+											<td>3PA</td>
+											<td>3점슛 시도</td>
+										</tr>
+										<tr>
+											<td>3P%</td>
+											<td>3점슛 성공률</td>
+										</tr>
+										<tr>
+											<td>FGM</td>
+											<td>야투 성공</td>
+										</tr>
+										<tr>
+											<td>FGA</td>
+											<td>야투 시도</td>
+										</tr>
+										<tr>
+											<td>FG%</td>
+											<td>야투 성공률</td>
+										</tr>
+										<tr>
+											<td>FTM</td>
+											<td>자유투 성공</td>
+										</tr>
+										<tr>
+											<td>FTA</td>
+											<td>자유투 시도</td>
+										</tr>
+										<tr>
+											<td>FT%</td>
+											<td>자유투 성공률</td>
+										</tr>
+										<tr>
+											<td>OREB</td>
+											<td>공격 리바운드</td>
+										</tr>
+										<tr>
+											<td>DREB</td>
+											<td>수비 리바운드</td>
+										</tr>
+										<tr>
+											<td>REB</td>
+											<td>리바운드</td>
+										</tr>
+										<tr>
+											<td>AST</td>
+											<td>어시스트</td>
+										</tr>
+										<tr>
+											<td>STL</td>
+											<td>스틸</td>
+										</tr>
+										<tr>
+											<td>BLK</td>
+											<td>블록</td>
+										</tr>
+										<tr>
+											<td>GD</td>
+											<td>굿디펜스</td>
+										</tr>
+										<tr>
+											<td>DK</td>
+											<td>덩크 성공</td>
+										</tr>
+										<tr>
+											<td>DKA</td>
+											<td>덩크 시도</td>
+										</tr>
+										<tr>
+											<td>TO</td>
+											<td>턴오버</td>
+										</tr>
+										<tr>
+											<td>PF</td>
+											<td>개인파울</td>
+										</tr>
+										<tr>
+											<td>PP</td>
+											<td>페인트존 득점 성공</td>
+										</tr>
+										<tr>
+											<td>PPA</td>
+											<td>페인트존 득점 시도</td>
+										</tr>
+										<tr>
+											<td>PP%</td>
+											<td>페인트존 득점 성공률</td>
+										</tr>
+										<tr>
+											<td>+/-</td>
+											<td>득실마진</td>
+										</tr>
+										<tr>
+											<td>DD2</td>
+											<td>더블더블</td>
+										</tr>
+										<tr>
+											<td>TD3</td>
+											<td>트리플더블</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4. 용어설명 클릭시 2차 스탯 (pc ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap lg2">
+						<div class="pop-tit">
+							<h2>용어 설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<table>
+								<caption>용어 설명</caption>
+								<colgroup>
+									<col style="width: 14%;">
+									<col style="width: 26%;">
+									<col style="width: 14%;">
+									<col style="width: 26%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Min</th>
+										<td>시간</td>
+										<th>PER</th>
+										<td>선수 생산성 지수</td>
+									</tr>
+									<tr>
+										<th>OFFRTG</th>
+										<td>100 포제션 당 득점</td>
+										<th>DEFRTG</th>
+										<td>100 포제션 당 허용하는 득점</td>
+									</tr>
+									<tr>
+										<th>NETRTG</th>
+										<td>100 포제션 당 득실차</td>
+										<th>EFG%</th>
+										<td>3점슛 가치를 반영한 야투율</td>
+									</tr>
+									<tr>
+										<th>TS%</th>
+										<td>3점슛 및 자유투 가치를 반영한 성공률</td>
+										<th>AST%</th>
+										<td>동료의 필드골에 대한 어시스트 비율</td>
+									</tr>
+									<tr>
+										<th>AST/TO</th>
+										<td>어시스트 대비 턴오버 수</td>
+										<th>AST Ratio</th>
+										<td>어시스트 비율</td>
+									</tr>
+									<tr>
+										<th>OREB%</th>
+										<td>코트에 있을 때 얻은 공격 리바운드의 비율</td>
+										<th>DREB%</th>
+										<td>코트에 있을 때 얻은 수비 리바운드의 비율</td>
+									</tr>
+									<tr>
+										<th>REB%</th>
+										<td>코트에 있을 때 얻은 리바운드의 비율</td>
+										<th>USG%</th>
+										<td>해당 선수의 포제션 점유율</td>
+									</tr>
+									<tr>
+										<th>PACE</th>
+										<td>48분 동안의 포제션 수</td>
+										<th>TO RATIO</th>
+										<td>100 포제션 당 평균적으로 범하는 턴오버 수</td>
+									</tr>
+									<tr>
+										<th>PIE</th>
+										<td>선수 임팩트 지수</td>
+										<th>POSS</th>
+										<td>선수나 팀의 포제션 수</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 4-1. 용어설명 클릭시 2차 스탯 (m ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>용어설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="mobile-table1">
+								<table>
+									<caption>용어 설명</caption>
+									<colgroup>
+										<col style="width: 8rem;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>명칭</th>
+											<th>설명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>Min</th>
+											<td>시간</td>
+										</tr>
+										<tr>
+											<th>PER</th>
+											<td>선수 생산성 지수</td>
+										</tr>
+										<tr>
+											<th>OFFRTG</th>
+											<td>100 포제션 당 득점</td>
+										</tr>
+										<tr>
+											<th>DEFRTG</th>
+											<td>100 포제션 당 허용하는 득점</td>
+										</tr>
+										<tr>
+											<th>NETRTG</th>
+											<td>100 포제션 당 득실차</td>
+										</tr>
+										<tr>
+											<th>EFG%</th>
+											<td>3점슛 가치를 반영한 야투율</td>
+										</tr>
+										<tr>
+											<th>TS%</th>
+											<td>3점슛 및 자유투 가치를 반영한 성공률</td>
+										</tr>
+										<tr>
+											<th>AST%</th>
+											<td>동료의 필드골에 대한 어시스트 비율</td>
+										</tr>
+										<tr>
+											<th>AST/TO</th>
+											<td>어시스트 대비 턴오버 수</td>
+										</tr>
+										<tr>
+											<th>AST Ratio</th>
+											<td>어시스트 비율</td>
+										</tr>
+										<tr>
+											<th>OREB%</th>
+											<td>코트에 있을 때 얻은 공격 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<th>DREB%</th>
+											<td>코트에 있을 때 얻은 수비 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<th>REB%</th>
+											<td>코트에 있을 때 얻은 리바운드의 비율</td>
+										</tr>
+										<tr>
+											<th>USG%</th>
+											<td>해당 선수의 포제션 점유율</td>
+										</tr>
+										<tr>
+											<th>PACE</th>
+											<td>48분 동안의 포제션 수</td>
+										</tr>
+										<tr>
+											<th>TO RATIO</th>
+											<td>100 포제션 당 평균적으로 범하는 턴오버 수</td>
+										</tr>
+										<tr>
+											<th>PIE</th>
+											<td>선수 임팩트 지수</td>
+										</tr>
+										<tr>
+											<th>POSS</th>
+											<td>선수나 팀의 포제션 수</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 5. 1차 스탯 가로모드 (m ver) -->
+				<div id="s2iZone" class="pop landscape">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>1차 스탯</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="table-100">
+								<table class="record-table1 division-2 table-cursor">
+									<caption>1차 스탯 선수기록</caption>
+									<colgroup>
+										<col style="width: 4.2rem;">
+										<col style="width: 12rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="fixed">순위</th>
+											<th class="fixed">팀 / 선수 </th>
+											<th class="sorting" title="시간">Min</th>
+											<th title="총 득점">PTS</th>
+											<th title="2점슛 성공" class="sorting down">2PM</th>
+											<th title="2점슛 시도">2PA</th>
+											<th title="2점슛 성공률">2P%</th>
+											<th title="3점슛 성공">3PM</th>
+											<th title="3점슛 시도">3PA</th>
+											<th title="3점슛 성공률">3P%</th>
+											<th title="야투 성공">FGM</th>
+											<th title="야투 시도">FGA</th>
+											<th title="야투 성공률">FG%</th>
+											<th title="자유투 성공">FTM</th>
+											<th title="자유투 시도">FTA</th>
+											<th title="자유투 성공률">FT%</th>
+											<th title="공격 리바운드">OREB</th>
+											<th title="수비 리바운드">DREB</th>
+											<th title="리바운드">REB</th>
+											<th title="어시스트">AST</th>
+											<th title="스틸">STL</th>
+											<th title="블록">BLK</th>
+											<th title="굿디펜스">GD</th>
+											<th title="덩크 성공">DK</th>
+											<th title="덩크 시도">DKA</th>
+											<th title="턴오버">TO</th>
+											<th title="개인파울">PF</th>
+											<th title="페인트존 득점 성공">PP</th>
+											<th title="페인트존 득점 시도">PPA</th>
+											<th title="페인트존 득점 성공률">PP%</th>
+											<th title="득실마진">+/-</th>
+											<th title="더블더블">DD2</th>
+											<th title="트리플더블">TD3</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+											<td>50.0</td>
+											<td>1</td>
+											<td>5</td>
+											<td>20.0</td>
+											<td>2</td>
+											<td>7</td>
+											<td>28.6</td>
+											<td>2</td>
+											<td>2</td>
+											<td>100.0</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="team-name"><i class="ic-emblem pega"></i>
+													<p>론제이 아바리엔토스</p>
+												</div>
+											</td>
+											<td>10.5</td>
+											<td>1</td>
+											<td>2</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>50.0</td>
+											<td>1</td>
+											<td>5</td>
+											<td>20.0</td>
+											<td>2</td>
+											<td>7</td>
+											<td>28.6</td>
+											<td>2</td>
+											<td>2</td>
+											<td>100.0</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 5-1. 2차 스탯 가로모드 (m ver) -->
+				<div id="s2iZone" class="pop landscape">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>1차 스탯</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="table-100">
+								<table class="record-table1 division-2 table-cursor">
+									<caption>2차 스탯 선수기록</caption>
+									<colgroup>
+										<col style="width: 4.2rem;">
+										<col style="width: 12rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th class="fixed">No</th>
+											<th class="fixed">선수</th>
+											<th title="시간" class="sorting">Min</th>
+											<th title="선수 생산성 지수">PER</th>
+											<th title="100 포제션 당 득점">OFFRTG</th>
+											<th title="100 포제션 당 허용하는 득점">DEFRTG</th>
+											<th title="100 포제션 당 득실차">NETRTG</th>
+											<th title="3점슛 가치를 반영한 야투율">EFG%</th>
+											<th title="3점슛 및 자유투 가치를 반영한 성공률">TS%</th>
+											<th title="동료의 필드골에 대한 어시스트 비율">AST%</th>
+											<th title="어시스트 대비 턴오버 수">AST/TO</th>
+											<th title="어시스트 비율">AST Ratio</th>
+											<th title="코트에 있을 때 얻은 공격 리바운드의 비율">OREB%</th>
+											<th title="코트에 있을 때 얻은 수비 리바운드의 비율">DREB%</th>
+											<th title="코트에 있을 때 얻은 리바운드의 비율">REB%</th>
+											<th title="해당 선수의 포제션 점유율">USG%</th>
+											<th title="48분 동안의 포제션 수">PACE</th>
+											<th title="100 포제션 당 평균적으로 범하는 턴오버 수">TO RATIO</th>
+											<th title="선수 임팩트 지수">PIE</th>
+											<th title="선수나 팀의 포제션 수">POSS</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>
+												<div class="player-name">
+													<div>
+														<img src="">
+													</div>
+													<p>홍길동</p>
+												</div>
+											</td>
+											<td>2</td>
+											<td>2</td>
+											<td>4</td>
+											<td>2</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+											<td>1</td>
+											<td>127</td>
+											<td>54.3</td>
+											<td>1</td>
+											<td>8</td>
+											<td>0</td>
+											<td>4</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 6. 바텀시트 일반 텍스트 (app ver) -->
+				 <div id="s2iZone" class="pop bottom-sheet">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>bottomSheetTitle</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<ul>
+								<li class="active">bottomSheetOption</li>
+								<li>bottomSheetOption</li>
+								<li>bottomSheetOption</li>
+								<li>bottomSheetOption</li>
+								<li>bottomSheetOption</li>
+								<li>bottomSheetOption</li>
+							</ul>
+						</div>
+					</div>
+				 </div>
+
+				 <!-- 7. 바텀시트 팀 선택 (app ver) -->
+				 <div id="s2iZone s2iZonBottomSheet" class="pop bottom-sheet">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>bottomSheetTitle</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<ul>
+								<li class="active">
+									<i class="ic-emblem kgc"></i>
+									<p>안양 정관장 레드부스터스</p>
+								</li>
+								<li>
+									<i class="ic-emblem lg"></i>
+									<p>창원 LG 세이커스</p>
+								</li>
+								<li>
+									<i class="ic-emblem sk"></i>
+									<p>서울 SK 나이츠</p>
+								</li>
+								<li>
+									<i class="ic-emblem hd"></i>
+									<p>울산 현대모비스 피버스</p>
+								</li>
+								<li>
+									<i class="ic-emblem sono"></i>
+									<p>고양 소노 스카이거너스</p>
+								</li>
+								<li>
+									<i class="ic-emblem kcc"></i>
+									<p>부산 KCC 이지스</p>
+								</li>
+								<li>
+									<i class="ic-emblem db"></i>
+									<p>원주 DB 프로미</p>
+								</li>
+								<li>
+									<i class="ic-emblem kt"></i>
+									<p>수원 KT 소니붐</p>
+								</li>
+								<li>
+									<i class="ic-emblem pega"></i>
+									<p>대구 한국가스공사 페가수스</p>
+								</li>
+								<li>
+									<i class="ic-emblem ss"></i>
+									<p>서울 삼성 썬더스</p>
+								</li>
+							</ul>
+						</div>
+						<div class="pop-btn">
+							<button class="line gray">취소</button>
+							<button>선택완료</button>
+						</div>
+					</div>
+				 </div>
+			</main>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	 <script>
+		const eleBottomSheet = document.getElementById("bottomSheet");
+		const popS2iZonBottomSheet = document.getElementById("s2iZone s2iZonBottomSheet");
+		
+		// bottomSheet 팝업 활성화
+		function handlePopSheetOpen() {
+			popS2iZonBottomSheet.classList.add("pop-app")
+		}
+
+		eleBottomSheet.addEventListener("click", handlePopSheetOpen);
+	 </script>
+</body>
+</html>

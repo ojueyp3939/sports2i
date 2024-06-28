@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2019 K리그 스플릿 라운드 퀴즈</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/main/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container" class="sub">
+			<div id="contents">
+				<section class="cont-wrap end">
+					<div class="quiz-wrap">
+						<div class="title">
+							<h2>
+								<img src="resources/images/sub/txt_quiz3.png" alt="2020년도 K리그 덕력 시험 평가 문제지 - K리그 일반 영역">
+								<p>85</p>
+							</h2>
+							<div class="info-zone">
+								<div class="time-label">제1시험</div>
+								<table class="name-label">
+									<tr>
+										<th>이&nbsp;&nbsp;&nbsp;름</th>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<th>응원팀</th>
+										<td>FC서울</td>
+									</tr>
+								</table>
+							</div>
+							<div class="description">
+								<p>* 응원팀은 케덕시 “반석차”에 영향을 미칩니다.</p>
+								<p>* 응원팀을 설정 하시려면, 답안지를 제출하지 않은 상태에서 회원 정보수정에서 확인해주시기 바랍니다.</p>
+								<p>* 첫 시험 답안 제출 후 모든 시험이 끝날때까지 응원팀 설정 변경이 제한됩니다.</p>
+								<p>* 시험 종료 전 답안 제출을 완료해야 하며, 응시 중 시간이 초과될 경우 답안을 제출하실 수 없습니다.</p>
+							</div>
+						</div>
+						<div class="exam">
+							<div class="inner">
+								<div class="box left">
+									<div class="quiz-box good">
+										<p class="num">1.</p>
+										<p class="tit">2019 K리그의 예능을 담당하는 강원FC는 최근 다채롭고 재미있는 영상 콘텐츠로 큰 인기를 끌고 있다. 아래는 강원FC의 “2019 강원FC 추석 전통놀이 이벤트” 영상이다. 영상에서 치마를 펄럭이지 않은 강원FC 선수는 보기 중 누구인지 고르시오. (4점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://www.youtube.com/watch?v=is5BG8prK6s" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 김지현</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 김현욱</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 윤석영</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 발렌티노스</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 이광연</label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 울산현대의 수문장 김승규선수의 별명은 마이콜이다.</p>
+									</div>
+									<div class="quiz-box bad">
+										<p class="num">2.</p>
+										<p class="tit">대구FC는 수많은 미남 축구선수를 보유하고 있는 팀으로 알려져있다. 그중에서도 '대구 아이돌'로 불리는 정승원 선수가 큰 인기를 끌고 있다. 보기 중 정승원의 신체부위가 아닌 사진을 고르시오. (5점)</p>
+										<ul class="list in-img">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ <img src="resources/images/quiz/ex5_1.png"></label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ <img src="resources/images/quiz/ex5_2.png"></label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ <img src="resources/images/quiz/ex5_3.png"></label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ <img src="resources/images/quiz/ex5_4.png"></label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ <img src="resources/images/quiz/ex5_5.png"></label></li>
+										</ul>
+										<p class="end-txt">해설 : ➄ 울산현대의 수문장 김승규선수의 별명은 마이콜이다.</p>
+									</div>
+									<div class="quiz-box">
+										<p class="num">3.</p>
+										<p class="tit">FC서울은 K리그를 대표하는 명문 클럽인 만큼 다양한 기록을 보유하고 있다. 특히, 2010년 5월 5일 어린이날 서울과 성남과의 K리그 경기를 통해, FC서울은 프로스포츠 단일 경기 최다 관중 신기록을 달성했다. 그렇다면, 이 경기에 모인 총 관중의 수로 옳은 것을 고르시오. (5점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 60,743 명</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 60,745 명</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 60,747 명</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 60,749 명</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 60,751 명</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="box right">
+									<div class="quiz-box">
+										<p class="num">4.</p>
+										<p class="tit">울산현대는 개성 넘치는 선수들의 끈끈한 조직력으로 유명한 팀이다. 선수들의 넘치는 개성만큼이나 각 선수들을 표현하는 다양한 별명이 있는데, 다음 중 선수의 이름과 별명이 잘못 짝지어진 것을 고르시오. (6점)</p>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 김태환 – 치타</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 믹스 - 쌈장</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 박주호 – 파추호</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 김보경 – 국민MC</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 김승규 – 희동이</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">5.</p>
+										<p class="tit">아래는 K리그 유튜브의 영상 콘텐츠  중 일부이다. 전북현대 한승규에게 다짜고짜 “사랑해”라고 고백했을 때, 한승규의 반응으로 알맞은 것을 고르시오. (3점)</p>
+										<div class="example in-img">
+											<video oncontextmenu="return false;" id="myVideo" controls autoplay>
+												<source src="https://www.youtube.com/watch?v=_bGqEOf_D64" type="video/mp4"></source>
+											</video>
+										</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ “저도 사랑합니다♥”</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ “여자에요?”</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ “갑자기...?”</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ “ㅋㅋㅋ 전북현대도 사랑해주세요!”</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ “잘못보내셨어요~”</label></li>
+										</ul>
+									</div>
+									<div class="quiz-box">
+										<p class="num">6.</p>
+										<p class="tit">아래는 포항스틸러스의 홈구장에 관한 설명이다. 내용 중 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)에 들어갈 말로 올바른 것을 고르시오. (3점)</p>
+										<div class="example">Q. 포항스틸러스의 홈구장인 포항 “스틸야드”는 1990년 11월 1일에 준공되었다. 대한민국 최초의 축구 전용구장인 스틸야드는 최근에 건축된 신축 경기장 못지 않은 뛰어난 시야를 자랑하며, 포항팬들의 뜨거운 축구열기를 온몸으로 체험할 수 있는 곳이다.<br/>특히, 지난 2013년에는 창단 40주년을 맞아서 구단 창립자인 박태준 전 회장의 호를 따서 E석 스탠드명을 (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)(으)로 명명하기도 했다.</div>
+										<ul class="list">
+											<li><input type="radio" name="1" id="1"><label for="1">➀ 포철스탠드</label></li>
+											<li><input type="radio" name="1" id="2"><label for="2">➁ 스틸파크</label></li>
+											<li><input type="radio" name="1" id="3"><label for="3">➂ 철강왕스탠드</label></li>
+											<li><input type="radio" name="1" id="4"><label for="4">➃ 쇠돌이존</label></li>
+											<li><input type="radio" name="1" id="5"><label for="5">➄ 청암존</label></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a class="btn" href="main.html">메인 페이지로 돌아가기</a>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2019 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

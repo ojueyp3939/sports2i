@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="container" class="s2i">
+            <div id="contents" class="m">
+                <div class="graphic-wrap">
+                    <a href="M_new_문자중계on.html" class="btn-open">
+                        문자<br/>중계
+                    </a>
+                    <div class="score-box">
+                        <div class="inning">
+                            <div class="triangle-top"></div>
+                            <p>1</p>
+                            <div class="triangle-bottom on"></div>
+                        </div>
+                        <div class="vs">
+                            <div class="top">
+                                <div class="team WO">키움</div>
+                                <p class="num">88</p>
+                            </div>
+                            <div class="bottom">
+                                <div class="team NC">NC</div>
+                                <p class="num">2</p>
+                            </div>
+                        </div>
+                        <div class="state">
+                            <ul class="base">
+                                <li class="b1 on">1루</li>
+                                <li class="b2">2루</li>
+                                <li class="b3">3루</li>
+                            </ul>
+                            <div class="score">
+                                <span>0</span>-<span>0</span>
+                                <span class="out-num">0</span>
+                                <img class="icon" src="resources/images/txt_out.png" alt="OUT">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player-box">
+                        <div>
+                            <b>P : </b>김김김김김 <b>H : </b>김김김김김
+                        </div>
+                    </div>
+                    <div class="speen-box">
+                        투수 <strong>에르난데스</strong>
+                        100구
+                        S<b>40</b>
+                        B<b>40</b>
+                    </div>
+
+                    <div class="set-box left">
+                        <div class="hitter-graphic">
+                            <img src="resources/images/player/player_HH_l.png" alt="hitter_left_home" />
+                        </div>
+                    </div>
+
+                    <div class="pts-zone">
+                        pts영역
+                    </div>
+                    <!-- <div class="strike-zone">
+                        스트라이크존
+                    </div> -->
+                    <div class="strike-zone notworking">
+                        그래픽 중계가 제공되지 않습니다.
+                    </div>
+
+                    <!-- !!!!!!! 문자중계_on !!!!!!! -->
+                    <div class="popup-wrap">
+                        <div class="popup">
+                            <a href="M_new_문자중계off.html" class="btn-close">
+                                <img src="resources/images/icon_close.png" alt="콘텐츠 닫기">
+                            </a>
+                            <ul class="tab">
+                                <li class="on"><a href="M_new_문자중계on.html">문자중계</a></li>
+                                <li><a href="M_new_투수.html">투수</a></li>
+                                <li><a href="M_new_타자.html">타자</a></li>
+                            </ul>
+                            <div class="cont">
+                                <p class="tit">투구정보</p>
+                                <p class="player-txt">
+                                    <span>99번</span>
+                                    페르난데스 : 우익수 옆 안타
+                                </p>
+                                <div class="realtime">
+                                    <table>
+                                        <colgroup>
+                                            <col width="18px">
+                                            <col width="60px">
+                                            <col width="35px">
+                                            <col width="40px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tr>
+                                            <td>
+                                                <div class="round S">6</div>
+                                            </td>
+                                            <td>스트라이크</td>
+                                            <td class="txt right">148km/h</td>
+                                            <td class="txt left">슬라이더</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round B">6</div>
+                                            </td>
+                                            <td>볼</td>
+                                            <td class="txt right">18km/h</td>
+                                            <td class="txt left">볼</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round S">6</div>
+                                            </td>
+                                            <td>스트라이크</td>
+                                            <td class="txt right">8km/h</td>
+                                            <td class="txt left">볼</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round B">6</div>
+                                            </td>
+                                            <td>볼</td>
+                                            <td class="txt right">148km/h</td>
+                                            <td class="txt left">볼</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round B">6</div>
+                                            </td>
+                                            <td>볼</td>
+                                            <td class="txt right">148km/h</td>
+                                            <td class="txt left">슬라이더</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round S">6</div>
+                                            </td>
+                                            <td>볼</td>
+                                            <td class="txt right">148km/h</td>
+                                            <td class="txt left">슬라이더</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="round H">12</div>
+                                            </td>
+                                            <td>타격</td>
+                                            <td class="txt right">148km/h</td>
+                                            <td class="txt left">슬라이더</td>
+                                            <td>99-88</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+#contents {width:1200px;padding:80px 0;margin:0 auto;}
+
+.day-wrap {height:70px;padding:13px 0;margin-bottom:40px;border-radius:10px;text-align:center;background:#f2f3f6;}
+.day-wrap .day-box {display:inline-block;vertical-align:top}
+.day-wrap .day-box li {float:left;}
+.day-wrap .day-box li.day-tit {position:relative;padding:0 30px 0 50px;margin-top:7px;}
+.day-wrap .day-box li.day-tit span {font-size:24px;font-weight:700;line-height:1.4;}
+.day-wrap .day-box li.day-tit img {margin-left:8px;cursor:pointer;}
+.day-wrap .day-box li.day-tit .today {display:inline-block;padding:4px 7px;margin-left:6px;font-size:16px;color:#747479;font-weight:700;border:1px solid #e3e5e9;border-radius:4px;background-color:#fff;vertical-align:top;}
+.day-wrap .day-box li.prev a {display:inline-block;width:40px;height:40px;background:url('/resources/images/contents/icon_left.png');}
+.day-wrap .day-box li.next a {display:inline-block;width:40px;height:40px;background:url('/resources/images/contents/icon_right.png');}
+.day-wrap .day-box li.prev.disable a {background:url('/resources/images/contents/icon_left.png');}
+.day-wrap .day-box li.next.disable a {background:url('/resources/images/contents/icon_right.png');}
+.day-wrap .day-box li.day-tit input {width:0;outline:none;visibility:hidden;}
+.day-wrap .day-box li.day-tit .game-tit {margin-bottom:0;}
+
+.score-wrap .score {width:calc(100% - 300px);height:120px;padding:0 10px;background-color:#131b26;}
+.score-wrap .score .tbl-board {width:100%;}
+.score-wrap .score .tbl-board tr th {height:42px;border-bottom:2px solid #252f38;color:#a4a4a4;font-weight:400;vertical-align:middle;}
+.score-wrap .score .tbl-board tbody tr td {height:20px;color:#fff;font-weight:400;text-align:center;vertical-align:middle;}
+.score-wrap .score .tbl-board tbody tr td.point {color:#ed1c24;}
+.score-wrap .score .tbl-board tbody tr:first-child td {height:40px;padding-top:10px;}
+.score-wrap .score .tbl-board tbody tr td:first-child {padding-left:20px;text-align:left;}
+
+.schedule-wrap {height:230px;}
+.schedule-wrap .schedule-cont {position:relative;float:left;width:228px;height:100%;margin:0 15px 20px 0;text-align:center;border:1px solid #e2e5ed;border-radius:20px;box-shadow:0 5px 12px 2px #cecece;}
+.schedule-wrap .schedule-cont:nth-child(5n) {margin-right:0 !important;}
+.schedule-wrap .schedule-cont .dh {position:absolute;top:12px;left:12px;width:42px;height:20px;padding-top:4px;border-radius:10px;font-size:12px;color:#fff;font-weight:900;text-align:center;background-color:#142a63;}
+.schedule-wrap .schedule-cont .top {position:relative;padding-top:20px;margin-bottom:12px;letter-spacing:-0.7px;}
+.schedule-wrap .schedule-cont .top span {display:inline-block;min-width:35px;margin:0 10px;color:#121212;font-weight:700;}
+.schedule-wrap .schedule-cont .top::after {content:'';position:absolute;top:22px;left:calc(50% - 2px);width:1px;height:10px;margin-right:-1px;background-color:#bdbec0;}
+.schedule-wrap .schedule-cont .middle {height:134px;padding:0 3px;}
+.schedule-wrap .schedule-cont .middle::after {content:'';display:block;clear:both;}
+.schedule-wrap .schedule-cont .middle .team {float:left;width:90px;}
+.schedule-wrap .schedule-cont .middle .team.home {float:right;}
+.schedule-wrap .schedule-cont .middle .team .emb {margin-bottom:8px;}
+.schedule-wrap .schedule-cont .middle .team .emb p {margin-top:7px;font-size:18px;font-weight:900;}
+.schedule-wrap .schedule-cont .middle .vs {position:absolute;top:67px;left:50%;font-size:22px;font-weight:900;transform:translate(-50%, 0);}
+.schedule-wrap .schedule-cont .middle .vs span {display:inline-block;min-width:26px;margin:0 3px;font-size:22px;font-weight:900;}
+.schedule-wrap .schedule-cont .middle .vs span:last-child {text-align:left;}
+.schedule-wrap .schedule-cont .middle .today {font-size:11px;color:#888;line-height:1.2;overflow:hidden;}
+.schedule-wrap .schedule-cont .middle .today p {margin-bottom:3px;color:#666;letter-spacing:-1px;}
+.schedule-wrap .schedule-cont .middle .today p span {margin-right:5px;color:#3f72ff;font-weight:700}
+.schedule-wrap .schedule-cont .middle .today p span.win {color:#3875ff;}
+.schedule-wrap .schedule-cont .middle .today p span.lose {color:#f14960;}
+.schedule-wrap .schedule-cont .middle .today p span.save {color:#33c850;}
+.schedule-wrap .schedule-cont .middle .today p span.draw {color:#010101;}
+.schedule-wrap .schedule-cont .bottom {width:100%;height:46px;padding-top:14px;border-radius:0 0 20px 20px;font-size:16px;color:#fff;font-weight:700;text-align:center;background:#89acec}
+.schedule-wrap .schedule-cont.ing {border-color:#3f72ff}
+.schedule-wrap .schedule-cont.ing .bottom {background:#3f72ff}
+.schedule-wrap .schedule-cont.end .bottom {background:#111}
+.schedule-wrap .schedule-cont.cancel {background-color:#f2f3f6;}
+.schedule-wrap .schedule-cont.cancel .top span,
+.schedule-wrap .schedule-cont.cancel .middle .vs,
+.schedule-wrap .schedule-cont.cancel .middle .team .emb p {color:#999 !important}
+.schedule-wrap .schedule-cont.cancel .bottom {background:#959699}
+
+.btn {display:inline-block;width:100px;height:29px;padding-top:7px;border-radius:4px;font-size:14px;font-weight:700;text-align:center;}
+.btn.view {color:#4764ad;border:1px solid #4764ad}
+.btn.down {color:#fff;background-color:#4764ad}
+.btn + .btn {margin-left:5px;}
+.btn.reset {width:150px;height:48px;padding-top:16px;font-size:16px;color:#fff;background-color:#757880;}
+
+.tbl {width:100%;margin-bottom:32px;border-top:2px solid #111}
+.tbl tr th {padding:12px 0;border-bottom:1px solid #e3e5e9;border-right:1px solid #e3e5e9;background-color:#f2f3f6;}
+.tbl tr th:last-child {border-right:0;}
+.tbl tr td {height:40px;padding:0 10px;border-bottom:1px solid #e3e5e9;border-right:1px solid #e3e5e9;text-align:center;vertical-align:middle;}
+.tbl tr td:last-child {border-right:0;}
+.tbl tr td input[type=text] {width:100%;height:28px;padding:0 5px;border:1px solid #ccc;border-radius:5px;}
+.tbl tr td select {height:28px;border:1px solid #ccc;border-radius:5px;}
+.tbl tr td .btn {vertical-align:middle;}
+.tbl tr td label {cursor:pointer;}
+.tbl tr td input[type=radio] {vertical-align:top;}
+.tbl tr td input[type=radio] + label {margin-left:7px;}
+.tbl tr:last-child td {border-bottom:1px solid #111}
+.tbl tr.detail td {border-bottom:1px solid #505050;background-color:#f5f5f5;}
+.tbl.b-gray {border:1px solid #e3e5e9}
+.tbl.b-gray tr:last-child td {border-color:#e3e5e9}
+
+.score {margin-bottom:60px;}
+.score .top {height:52px;padding-top:10px;border-radius:10px 10px 0 0;border-bottom:1px solid #445387;background-color:#142a63;}
+.score .bottom {position:relative;height:80px;padding-top:7px;border-radius:0 0 10px 10px;background-color:#011241;}
+
+.score table {margin:0 auto;text-align:center;}
+.score table tr th {width:47px;padding:7px;font-size:16px;color:#fff;}
+.score table tr th.point.r {width:60px;padding-left:20px;}
+.score table tr td {padding:3px 7px;font-size:16px;color:#fff;}
+.score table tr .team {width:65px;font-size:18px;font-weight:700;}
+.score table tr td a {display:inline-block;width:33px;height:26px;padding:5px;font-size:16px;color:#fff;vertical-align:middle;}
+.score table tr td a.on {border-radius:5px;background-color:#2d55c6;}
+.score table tr td.point {width:47px;color:#c6ff00}
+.score table tr td.point.r {width:60px;padding-left:20px;font-weight:900;color:#c6ff00}
+.score .btn.away {position:absolute;top:7px;right:80px;}
+.score .btn.home {position:absolute;bottom:12px;right:80px;}
+
+.search-wrap {padding:23px 30px;margin-bottom:20px;border-radius:10px;background-color:#f2f3f6;}
+.search-wrap input[type=text] {height:32px;padding:0 10px;border-radius:5px;border:1px solid #ccc;outline:none}
+.search-wrap label {margin:0 5px 0 15px;}
+.search-wrap label:first-child {margin-left:0}
+.search-wrap select {height:32px;padding:0 10px;border-radius:5px;border:1px solid #ccc;outline:none}
+.search-wrap .btn-box {float:right;margin-top:-7px;}
+.search-wrap .btn-box .btn.search {width:150px;height:48px;padding-top:16px;font-size:16px;color:#fff;background-color:#102863}
+.search-wrap .btn-box .btn.reset {width:150px;height:48px;padding-top:16px;font-size:16px;color:#fff;background-color:#757880;}
+
+.between-wrap {padding:0 10px 17px;}
+.between-wrap .reset img {margin-right:3px;vertical-align:middle;}
+
+.ui-datepicker {font-family:'ns' !important;}
+.ui-datepicker .ui-datepicker-title {margin:0 !important}
+.ui-datepicker .ui-datepicker-title select {width:60px !important;margin:1px 5px !important;}
+
+#contents.popup {width:auto;padding:20px;}
+#contents.popup h3 {font-size:20px;margin-bottom:15px;}

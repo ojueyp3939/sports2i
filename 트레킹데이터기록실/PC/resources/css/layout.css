@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+html, body {position:relative;}
+body {width:100%;}
+#container {overflow:hidden;min-width:1340px;background:#fff;}
+
+/* header */
+header {min-width:1340px;background:#206cbb;}
+header .header-wrap {position:relative;width:1340px;margin:0 auto;}
+header .header-wrap h1 {width:207px;margin:0 auto;padding:31px 0;}
+header .header-wrap .search-area {position:absolute;top:26px;right:0;z-index:20;font-size:13px;}
+header .header-wrap .search-area .btn-search {position:absolute;top:10px;right:9px;width:18px;height:18px;}
+header nav {background:#2a2a2a;}
+header nav .menu-list {width:720px;margin:0 auto;}
+header nav .menu-list li {float:left;margin:0 62px;padding:31px 0;text-align:center;}
+header nav .menu-list li:first-child {margin:0 62px 0 125px;}
+header nav .menu-list li:last-child {margin:0 125px 0 62px;}
+header nav .menu-list li a {color:#fff;font-size:16px;}
+header nav .menu-list li.on a {color:#91c7ff;}
+
+/* section */
+section {max-width:1340px;margin:0 auto;}
+
+/* 선발투수 프리뷰 */
+.preview-page {padding-bottom:50px;}
+
+/* 달력 */
+.schedule-preview {position:relative;width:1340px;margin:0 auto;padding:40px 0 41px;text-align:center;}
+.schedule-preview::before {content:"";position:absolute;top:0;left:-500%;z-index:-10;width:1000%;height:100%;background:#f8f8f8;}
+.schedule-preview .schedule-data {display:inline-block;position:relative;margin-bottom:25px;font-size:22px;font-weight:700;}
+.schedule-preview .date {text-align:center;}
+.schedule-preview .date li {display:inline-block;vertical-align:top;}
+.schedule-preview .date .prev {width:42px;height:44px;background:url('../images/common/btn_calendar.png') no-repeat 0 0;text-indent:-9999px;cursor:default;}
+.schedule-preview .date .next {width:42px;height:44px;background:url('../images/common/btn_calendar.png') no-repeat -50px 0;text-indent:-9999px;cursor:default;}
+.schedule-preview .date .prev.on {background:url('../images/common/btn_calendar.png') no-repeat -100px 0;cursor:pointer;}
+.schedule-preview .date .next.on {background:url('../images/common/btn_calendar.png') no-repeat -150px 0;cursor:pointer;}
+.schedule-preview .date li a {display:block;height:44px;}
+.schedule-preview .date .week {margin:0 48px;}
+.schedule-preview .date .week div {float:left;width:22px;margin:0 14px;cursor:pointer;}
+.schedule-preview .date .week .past {color:#888;cursor:default;}
+.schedule-preview .date .week .present {color:#206cbb;}
+.schedule-preview .date .week div span {display:block;}
+.schedule-preview .date .week div .day {margin-bottom:8px;font-size:13px;}
+.schedule-preview .date .week div .num {font-size:18px;font-weight:700;}
+.schedule-preview .ui-datepicker-trigger {position:absolute;top:-4px;left:150px;width:30px;height:30px;cursor:pointer;}
+
+/* 게임정보 */
+.schedule-preview .game-list li {float:left;width:252px;margin-right:20px;cursor:pointer;}
+.schedule-preview .game-list li:last-child {margin-right:0;}
+.schedule-preview .game-list li .info {margin-bottom:9px;padding:12px 0 11px;border-radius:8px;background:#e2eaf2;color:#2e2e2e;font-size:16px;text-align:center;}
+.schedule-preview .game-list li.on .info,
+.schedule-preview .game-list li:hover .info {background:#2a2a2a;color:#fff;}
+.schedule-preview .game-list li .info div {display:inline-block;}
+.schedule-preview .game-list li .info .place {position:relative;padding-right:30px;}
+.schedule-preview .game-list li .info .place::before {content:"";position:absolute;top:6px;right:9px;width:6px;height:6px;border-radius:3px;background:#2e2e2e;}
+.schedule-preview .game-list li.on .info .place::before,
+.schedule-preview .game-list li:hover .info .place::before {content:"";background:#fff;}
+.schedule-preview .game-list li .match {position:relative;padding:21px 0 23px 43px;border:2px solid #f1f4f6;border-radius:8px;background:#f1f4f6;}
+.schedule-preview .game-list li.on .match::before,
+.schedule-preview .game-list li:hover .match::before {content:"";position:absolute;bottom:-14px;left:50%;border-right:8px solid transparent;border-top:12px solid #e2eaf2;border-left:8px solid transparent;transform:translateX(-50%);}
+.schedule-preview .game-list li.on .match,
+.schedule-preview .game-list li:hover .match {border:2px solid #e2eaf2;background:#fff}
+.schedule-preview .game-list li .match .team {text-align:left;}
+.schedule-preview .game-list li .match .team.away {margin-bottom:11px;}
+.schedule-preview .game-list li .match .team .emb {float:left;width:62px;margin-right:15px;vertical-align:middle;}
+.schedule-preview .game-list li .match .team .name {float:left;padding-top:12px;color:#000;font-size:18px;vertical-align:middle;}
+
+/* 프리뷰 선수정보 */
+.schedule-preview .player-info-box {position:relative;padding:30px 95px;border:2px solid #e2eaf2;border-radius:13px;background:#fff;}
+.schedule-preview .player-info-box .player {margin:0 100px;padding:0 30px;}
+.schedule-preview .player-info-box .player.home {margin-top:21px;padding-top:29px;border-top:2px solid #f8f8f8;}
+.schedule-preview .player-info-box .player .info-box {float:left;width:280px;}
+.schedule-preview .player-info-box .player .info-box .photo {width:140px;margin:0 auto;}
+.schedule-preview .player-info-box .player .info-box .player-info {padding-top:9px;}
+.schedule-preview .player-info-box .player .info-box .player-info .emb {float:left;width:62px;margin-right:8px;}
+.schedule-preview .player-info-box .player .info-box .player-info .name {float:left;padding-top:12px;color:#000;font-size:18px;font-weight:700;}
+.schedule-preview .player-info-box .player .record {float:right;width:496px;}
+.schedule-preview .player-info-box .player .record li {float:left;}
+.schedule-preview .player-info-box .player .record li:nth-child(1),
+.schedule-preview .player-info-box .player .record li:nth-child(2) {margin-bottom:13px;}
+.schedule-preview .player-info-box .player .record li:nth-child(2n) {margin-left:56px;}
+
+/* 범례 */
+.record-info {background:url('../images/common/bg_record_info.png') no-repeat 0 0/137px;}
+.record-info li {float:left;padding-top:33px;color:#2e2e2e;font-size:12px;font-weight:700;}
+.record-info li:nth-child(1) {color:#206cbb;}
+.record-info li:nth-child(2) {margin:0 37px;}
+.record-info li:nth-child(3) {color:#e00020;}
+
+/* 가로막대 그래프 */
+.player .record li {width:220px;}
+.player .record li dl dt {margin-bottom:12px;color:#2e2e2e;font-size:14px;font-weight:700;text-align:left;}
+.player .record li dl .graph-wrap {position:relative;height:42px;padding:5px 9px;border:1px solid #2f2f2f;box-sizing:border-box;}
+.player .record li dl .graph-wrap::before {content:"";position:absolute;top:5px;left:50%;height:30px;border-left:2px dotted #4c4c4c;transform:translateX(-50%);transition:all 0.5s;}
+.player .record li dl .graph-wrap.rate::before {content:"";position:absolute;top:5px;left:50%;height:30px;border-left:2px dotted #fff;transform:translateX(-50%);transition:all 0.5s;}
+.player .record li dl .graph-wrap canvas {height:30px;border-radius:8px;background:#206cbb;}
+.player .record li dl .graph-wrap.rate canvas {background:#e00020;}
+.player .record li dl .graph-wrap .tip-box {position:absolute;z-index:50;width:103px;padding:12px 0 11px;border-radius:3px;background:rgba(42,42,42,0.9);color:#fff;text-align:center;}
+.btn-area {text-align:right;padding-top:36px;}
+
+/* canvas */
+canvas {width:100%;height:100%;}
+
+/* 광고 */
+.ad-area {}
+.ad-area a {display:block;}
+
+/* footer */
+footer {min-width:1340px;padding:61px 0 89px;background:#2a2a2a;color:#fff;font-size:14px;letter-spacing:-0.5px;}
+footer .footer-box {width:1340px;margin:0 auto;}
+footer .footer-box .company {float:left;padding-left:176px;}
+footer .footer-box .company h1 {width:123px;}
+footer .footer-box .company p {padding-top:20px;}
+footer .footer-box .txt-company {float:right;padding-right:176px;}
+footer .footer-box .txt-company p span {display:block;padding-top:8px;}
+footer .footer-box .txt-company address {padding:40px 0 5px;font-style:normal;}

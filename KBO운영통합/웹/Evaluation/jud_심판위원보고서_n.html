@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">		
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>심판 행동강령 평가표</a></span></li>
+					<li><a href="#none"><span>심판 종합평가표</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box long">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap mt30">
+				<h3 class="sub-title">KBO 심판위원 보고서</h3>
+			</div>
+			<div class="report-wrap">
+				<h4 class="mb15">KBO 심판위원 보고서</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="18%">
+						<col width="20%">
+					</colgroup>
+					<tr>
+						<th class="no-border">■ 일자</th>
+						<td colspan="3" class="txt-l">2022년 01월 01월 (월요일)</td>
+					</tr>
+					<tr>
+						<th class="no-border">■ 장소</th>
+						<td class="no-border txt-l">잠실</td>
+						<th class="no-border txt-l">■ 대진</th>
+						<td class="txt-l">기아 VS 두산</td>
+					</tr>
+					<tr>
+						<th class="no-border">■ 심판</th>
+						<td colspan="3" class="txt-l">
+							<span class="mr20">주심 : 홍길동</span>
+							<span class="mr20">1루심 : 홍길동</span>
+							<span class="mr20">2루심 : 홍길동</span>
+							<span>3루심 : 홍길동</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							□ 퇴장사건 및 특이 사건 발생으로 경기에 영향을 미친다고 판단될 경우, 사태 또는 위반자의 이름, 발생 이닝 및 상황, 취한 조치 등을 상세히 기술해 주십시오.
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<textarea></textarea>
+						</td>
+					</tr>
+					<tr> 
+						<th>심판위원 의견</th>
+						<td colspan="3">
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>수신</th>
+							<td>KBO 총재</td>
+						</tr>
+						<tr>
+							<th>참조</th>
+							<td>KBO 심판위원장</td>
+						</tr>
+						<tr>
+							<th>발신</th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="btn-area-bboard">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

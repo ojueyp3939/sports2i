@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/my.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".toggle input").click(function(){
+				$(this).parents(".setting").toggleClass("on");
+			})
+		});
+    function loaded() {
+      var myScroll1 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+    }
+	</script>
+</head>
+ <body onload="loaded()">
+	 <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li><a href="../highlight/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li class="on"><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<h1 class="tit ">MY</h1>
+				<!-- MY팀 선택한 경우 -->
+				<div class="set-list">
+					<div class="myteam">
+						<a href="#none">
+							<h2>MY팀</h2>
+							<div class="cont">MY팀을 선택하세요<span class="arrow"><img src="../resources/images/common/btn_arrow_right.png" alt="" /></span></div>
+						</a>
+					</div>
+					<div class="push">
+						<div class="setting">
+							<h2  class="tit">MY팀 PUSH 설정</h2>
+							<div class="toggle">
+								<label class="switch">
+									<input type="checkbox" />
+									<span class="slider"></span>
+								</label>
+							</div>
+						</div>
+						<ul class="push-list">
+							<li class="setting">
+								<h3 class="tit">경기시작</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">득점 상황</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">실점 상황</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">득점권 상황</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">홈런 상황</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">승부처 상황</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">투수 교체</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">경기종료</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+							<li class="setting">
+								<h3 class="tit">경기 취소</h3>
+								<div class="toggle">
+									<label class="switch">
+										<input type="checkbox"/>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="nickname">
+						<a href="#none">
+							<h2>닉네임</h2>
+							<div class="cont">뽀야랜드만세<span class="arrow"><img src="../resources/images/common/btn_arrow_right.png" alt="" /></span></div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

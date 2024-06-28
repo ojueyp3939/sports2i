@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../intro.html"><span>이용안내</span></a></li>
+					<li><a href="../prediction/prediction_경기전_참여전.html"><span>승리예측</span></a></li>
+					<li><a href="../mission/mission.html"><span>오늘의 미션</span></a></li>
+					<li class="on"><a href="../invite/invite.html"><span>초대</span></a></li>
+					<li><a href="../point/point.html"><span>포인트 내역</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="banner-wrap">
+					<img src="resources/images/contents/test-banner.png">
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="point-wrap">
+					<div class="point-box">
+						<p class="tit-point">내 포인트</p>
+						<p class="my-point">400<span>P</span></p>
+						<p class="used-point">(사용 포인트 : <span>5<span>P</span></span>)</p>
+						<!-- <p class="txt-point">초대한 친구가 앱에 로그인하면 친구도 나도 1포인트씩!</p>
+						<p class="txt-point">쌓은 포인트로 원하는 경품에 응모해보세요</p> -->
+					</div>
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="message-wrap">
+					<h1>
+						친구 초대 메시지
+						<p><span>79</span> / 80</p>
+					</h1>
+					<textarea placeholder="U+프로야구에서 야구 팬들을 위해 준비한&#13;&#10;대박 경품 이벤트!&#13;&#10;지금 친구 초대 메시지 수락하고&#13;&#10;100% 당첨 이벤트에 참여하세요!"></textarea>
+				</section>
+				<section class="sns-wrap">
+					<h1>메시지를 보낼 SNS</h1>
+					<ul class="sns-box">
+						<li class="kakao" data-part="kakao">
+							카카오톡으로 친구 초대하기
+						</li>
+						<li class="sms" data-part="sms">
+							문자로 친구 초대하기
+						</li>
+						<li class="clipboard" data-part="clipboard">
+							링크 복사하여 친구 초대하기
+						</li>
+					</ul>
+				</section>
+				<div class="ment-box">
+					<p class="tit">* 꼭 확인해주세요!</p>
+					ㅁ 초대 받은 친구가 메시지의 주소를 통해 U+프로야구 앱을 실행해야 포인트를 쌓을 수 있습니다.<br />
+					<p class="txt">· 단 초대받은 친구가 LG U+고객이 아닌 경우에는 U+ID로 로그인 해야합니다.</p>
+					<p class="txt">· 친구가 초대받아 접속하면 1,000point 적립!</p>
+					ㅁ 초대 이벤트는 매월 진행됩니다.<br />
+					<p class="txt">· 이달에 초대 이벤트로 앱을 접속한 적이 없다면, 초대를 받아 포인트 적립이 가능합니다.</p>
+					<p class="txt">· 포인트는 매월 말에 사라집니다.</p>
+					ㅁ 경품 발송을 위해 초대 이벤트 참여 시 ㈜엘지유플러스는 당첨자의 정보를 다음과 같이 제공합니다.<br />
+					<p class="txt">· 개인 정보를 제공 받는 자 : ㈜엘지유플러스, ㈜미디어로그, ㈜텔코인</p>
+					<p class="txt">· 이용 목적 : 이벤트 당첨자의 경품 발송 및 본인 확인</p>
+					<p class="txt">· 이용 기간 : 경품 발송 후 2개월 내 모두 파기</p>
+					ㅁ 5만원 초과 경품에 대해서는 제세공과금(당첨금액의 22%)는 당첨자 본인 부담이며, 당사 사정에 따라 동일한 금액대의 경품으로 변경될 수 있습니다.<br />
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

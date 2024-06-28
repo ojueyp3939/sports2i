@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll2 = new IScroll('#TeamSelect',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll3 = new IScroll('#PlayerRecord',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll4 = new IScroll('.record-area',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+		}
+	</script>
+</head>
+ <body onload="loaded()">
+  <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header class="fixed">
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>홈</span></a></li>
+            <li><a href="../video/video.html"><span>영상</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Rank/rank.html"><span>순위</span></a></li>
+  					<li class="on"><a href="../Record/record.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+        <section class="record ranking-record">
+          <!-- 연도 -->
+          <ul class="date-area clear">
+            <li class="prev"><a href="#none"><img src="../resources/images/common/btn_date_prev.png" alt="이전버튼"></a></li>
+            <li class="today roboto">2020</li>
+            <li class="next"><a href="#none"><img src="../resources/images/common/btn_date_next.png" alt="다음버튼"></a></li>
+          </ul>
+          <!-- // 연도 -->
+
+          <!-- 팀 선택 -->
+          <div class="select-area clear">
+            <h2 class="tit-record">팀 선택</h2>
+            <ul class="season-list">
+              <li class="on"><a href="#none">정규</a></li> <!-- 선택 됐을 경우 on 클래스 추가 -->
+              <li><a href="#none">시범</a></li>
+            </ul>
+          </div>
+          <div class="team-wrap">
+            <div id="TeamSelect" class="scroll-wrap">
+              <div class="scroller">
+                <ul class="team-list">
+                  <li class="league-all on"><span>리그 전체</span></li> <!-- 선택 됐을 경우 on 클래스 추가 -->
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_KT.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_SK.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_SS.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_HT.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_WO.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_OB.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_LT.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_NC.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_LG.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_HH.png" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- // 팀 선택 -->
+
+          <!-- 탑 플레이어 -->
+          <div class="top-player">
+            <ul class="tab">
+              <li class="on"><a href="#none">타자</a></li>
+              <li><a href="#none">투수</a></li>
+              <li><a href="#none">수비</a></li>
+              <li><a href="#none">주루</a></li>
+            </ul>
+            <h2 class="tit-record roboto">TOP PLAYER</h2>
+            <div id="PlayerRecord" class="scroll-wrap">
+              <div class="scroller">
+                <ul class="player-list">
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">NC</span> 다이노스</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="player-wrapper">
+                      <div class="player-box">
+                        <div class="record-kind">타율</div>
+                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                        <dl>
+                          <dt>황재균</dt>
+                          <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                          <dd class="record roboto">0.283</dd>
+                        </dl>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- // 탑 플레이어 -->
+
+          <!-- 선수 순위 -->
+          <div class="league-ranking">
+            <h2 class="tit-record">선수 순위</h2>
+            <div id="LeagueRanking" class="scroll-wrap">
+              <div class="tit-area">
+                <div class="tit">순위</div>
+                <ul class="list">
+                  <li class="on"> <!-- My팀일 경우 on 클래스 추가 -->
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_OB.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                  </li>
+                  <li>
+                    <span class="rank">2</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_WO.png" alt="" /></span>
+                    <span class="name">페르난</span>
+                  </li>
+                  <li>
+                    <span class="rank">3</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_SK.png" alt="" /></span>
+                    <span class="name">페르</span>
+                  </li>
+                  <li>
+                    <span class="rank">4</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_LG.png" alt="" /></span>
+                    <span class="name">페르난데</span>
+                  </li>
+                  <li>
+                    <span class="rank">5</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_NC.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                  </li>
+                  <li>
+                    <span class="rank">6</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                  </li>
+                  <li>
+                    <span class="rank">7</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_HT.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                  </li>
+                  <li>
+                    <span class="rank">8</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_SS.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                  </li>
+                  <li>
+                    <span class="rank">9</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                    <span class="name">페르난</span>
+                  </li>
+                  <li>
+                    <span class="rank">10</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_LT.png" alt="" /></span>
+                    <span class="name">페르</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="record-area">
+                <div class="scroller">
+                  <div class="tbl-area">
+                    <table class="tbl" summary="선수 순위">
+                      <caption>선수 순위</caption>
+                      <thead>
+                        <tr>
+                          <th class="on"><a href="#none">평균 자책점</a></th>
+                          <th><a href="#none">경기수</a></th>
+                          <th><a href="#none">이닝</a></th>
+                          <th><a href="#none">승</a></th>
+                          <th><a href="#none">패</a></th>
+                          <th><a href="#none">세이브</a></th>
+                          <th><a href="#none">홀드</a></th>
+                          <th><a href="#none">탈삼진</a></th>
+                          <th><a href="#none">승률</a></th>
+                          <th><a href="#none">피안타</a></th>
+                          <th><a href="#none">피홈런</a></th>
+                          <th><a href="#none">실점</a></th>
+                          <th><a href="#none">자책</a></th>
+                          <th><a href="#none">볼넷</a></th>
+                          <th><a href="#none">사구</a></th>
+                          <th><a href="#none">QS</a></th>
+                          <th><a href="#none">QS+</a></th>
+                          <th><a href="#none">WHIP</a></th>
+                          <th><a href="#none">WPA</a></th>
+                          <th><a href="#none">WAR</a></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                        <tr>
+                          <td class="on">2.28</td>
+                          <td>54</td>
+                          <td>154 2/3</td>
+                          <td>27</td>
+                          <td>14</td>
+                          <td>7</td>
+                          <td>1</td>
+                          <td>72</td>
+                          <td>0.615</td>
+                          <td>176</td>
+                          <td>7</td>
+                          <td>88</td>
+                          <td>78</td>
+                          <td>33</td>
+                          <td>2</td>
+                          <td>16</td>
+                          <td>16</td>
+                          <td>1.03</td>
+                          <td>1.09</td>
+                          <td>5.64</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- // 선수 순위 -->
+        </section>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+ </body>
+
+</html>

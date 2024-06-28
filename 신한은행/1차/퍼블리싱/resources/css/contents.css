@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+/* 탭메뉴 */
+.tab-depth1 {position:relative;padding-bottom:6px;background:#fff;border-bottom:1px solid #c5c4c7;}
+.tab-depth1 .tab {overflow:hidden;}
+.tab-depth1 .tab li {position:relative;float:left;width:50%;border-top:2px solid #45499c;border-bottom:2px solid #45499c;text-align:center;z-index:1;}
+.tab-depth1 .tab li a {display:block;width:100%;height:33px;line-height:33px;font-size:1.6rem;font-weight:100;color:#45499c;}
+.tab-depth1 .tab li:first-child a {border-right:2px solid #45499c;}
+.tab-depth1 .tab li.on a, .tab-depth1 .tab li:hover a {background:#023f8c;font-weight:400;color:#fff;}
+
+/* 메인 */
+.product {margin-bottom:7px;}
+.product:last-child {margin-bottom:0;}
+
+/* media query */
+@media(max-width:320px){
+
+}

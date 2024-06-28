@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="solpick">
+				<div class="my-pick-info">
+					<div class="date-select">
+						<span class="today">2019.12.28 (금)</span>
+						<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+					</div>
+					<!-- [D] 참여 이력 - 무 -->
+					<!-- <div class="my-point first">
+						<img src="resources/images/main/img_pick.png">
+					</div> -->
+					<!-- [D] 참여 이력 - 유 -->
+					<div class="my-point">
+						<div class="my">
+							<div class="my-label">마이스코어</div>
+							<p><span>2,000</span><span class="pick">pick</span></dd>
+						</div>
+						<div class="info clear">
+							<dl>
+								<dt>랭킹</dt>
+								<dd><span class="num">3,000</span></dd>
+							</dl>
+							<dl>
+								<dt>최근 결과</dt>
+								<dd><span class="num">+30</span><span class="pick">pick</span><span class="date">(7월 17일)</span></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="game-wrap index">
+					<div class="game-cont">
+						<div class="quiz-num q2">Q2</div>
+						<div class="tab-area solpick">
+							<ul class="tab">
+								<li class="q1"><a href="#none">Q1. 승리팀 맞추기</a></li>
+								<li class="q2 on"><a href="#none">Q2. 1:10 퀴즈</a></li>
+							</ul>
+							<div class="quiz">
+								<div class="quiz-box">
+									<p class="question">선발투수가 가장 많은 투구수를<br>기록할 팀은?</p>
+								</div>
+								<div class="countdown q2">
+									<img src="resources/images/sub/icon_time.png" alt="" />
+									마감까지 <span>00:00</span>
+								</div>
+								<div class="user-choice">- 유저 선택 TOP5 -</div>
+								<div class="graph">
+									<ul class="top5 clear">
+										<li class="high">
+											<img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											<dl>
+												<dd>
+													<p class="rank">1위</p>
+													<p class="rate">100%</p>
+												</dd>
+											</dl>
+										</li>
+										<li class="high">
+											<img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											<dl>
+												<dd>
+													<p class="rank">2위</p>
+													<p class="rate">100%</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											<dl>
+												<dd>
+													<p class="rank">3위</p>
+													<p class="rate">100%</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											<dl>
+												<dd>
+													<p class="rank">4위</p>
+													<p class="rate">100%</p>
+												</dd>
+											</dl>
+										</li>
+										<li>
+											<img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											<dl>
+												<dd>
+													<p class="rank">5위</p>
+													<p class="rate">100%</p>
+												</dd>
+											</dl>
+										</li>
+									</ul>
+								</div>
+								<ul class="etc clear">
+									<li>&#183; 참여자 수 5,000명</li>
+									<li>&#183; 오후 5시 10분 기준</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">tabMenu(0, 'tab-quiz', 'tab-tit', 'quiz');</script>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-result">결과보기</a>
+						<a href="#none" class="btn btn-realtime">실시간 결과 보기</a>
+						<a href="#none" class="btn btn-modify">수정하기</a>
+						<a href="#none" class="btn btn-start">START</a>
+					</div>
+					<div class="btn-area btn-nogame">
+						<a href="#none" class="btn btn-guide">쏠픽이 궁금하다면?</a>
+						<a href="#none" class="btn btn-event-go">이벤트 바로가기</a>
+					</div>
+					<div class="notice-area">
+						<p class="after">6월 13일 경기가 모두 종료되었습니다.</p>
+						<p class="ing"><b class="num">5</b>경기 진행 중입니다.</p>
+						<p>쏠픽은 경기 있는 날 진행됩니다!</p>
+					</div>
+					<div class="ad-wrap">
+						<div class="kakao">
+							<div class="info">
+								<div class="txt">
+									<span class="bul"><img src="resources/images/common/bg_kakao.png" alt="" /></span>
+									<div class="txt-wrap">
+										<p class="script">쏠픽 공유하면 선물이 팡팡!!</p>
+										<p class="guide">공유 횟수 많으면 당첨확률 UP! (1일 최대 5회)</p>
+									</div>
+								</div>
+								<div class="num">
+									<div class="count"><span class="current">1</span>/5</div>
+									<div class="script">공유횟수</div>
+								</div>
+							</div>
+							<div class="btn-area">
+								<a href="#none"><img src="resources/images/common/btn_kakao.png" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

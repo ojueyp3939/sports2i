@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2021 K리그 덕력시험</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			// services bxSlider
+			$("#rank-pc").bxSlider({
+				controls: true,
+				mode: 'horizontal',
+				pager: false,
+				moveSlides: 1,
+				maxSlides: 8,
+				ariaHidden: true,
+				touchEnabled: false,
+				infiniteLoop: false,
+				hideControlOnEnd: true
+			});
+		});
+		function loaded() {
+			var myScroll1 = new IScroll('#rank-mb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+        $(document).on("click", ".event-link", function () {
+            $(".event-list").toggle();
+        });
+	</script>
+</head>
+
+<body class="main" onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/main/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="visual-wrap">
+					<img src="resources/images/main/bg_main.png" alt="2020 제 2회 케이리그 덕력시험" />
+				</section>
+				<section class="content-wrap">
+					<div class="event">
+						<div class="inner">
+							<div class="description">
+								<p class="tit">이번에는 생방송이다!</p>
+								<p class="line">2021년 제 3회 “케이리그 덕력시험”이 돌아왔습니다.</p>
+								<p class="point">높아진 난이도와 선착순의 압박!</p>
+								<p>만점자 선착순 10명에 도전하세요!</p>
+							</div>
+							<div class="term">
+								<div class="date">2021년 10월 22일(금) 오후 7시30분</div>
+							</div>
+
+							<div class="gift">
+								만점자 중 <span>선착순 &nbsp;&nbsp;10명</span> : 문화상품권 5만원 권<br/>
+								참여자 중 <span>무작위 100명</span> : 스타벅스 아메리카노 1잔
+							</div>
+
+							<div class="video">
+								<img src="resources/images/main/img_video.png" alt="임시 영상" />
+							</div>
+
+							<img class="range" src="resources/images/main/img_range.png" alt="시험과목 및 범위안내 - k리그 일반 : k리그 일반 상식 / 규정 및 판정 : 판정 규정 및 2021 k리그 주요 판정" />
+
+							<img class="noti-img" src="resources/images/main/img_quiz_before2.png" alt="라이브 방송이 종료되었습니다!" />
+							<iframe class="noti-img video" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<a class="start-btn" href="#">
+								<img src="resources/images/main/btn_quiz_before.png" alt="지금은 응시 기간이 아닙니다">
+								<img src="resources/images/main/btn_quiz.png" alt="응시하기">
+								<img src="resources/images/main/btn_quiz_after.png" alt="정답 확인하기">
+								<img src="resources/images/main/btn_quiz_wait.png" alt="결과 발표 전 입니다.">
+							</a>
+
+							<div class="previous-quiz">
+								<img src="resources/images/main/img_history.png" alt="기출 문제 : 2019년 - 제 1회 케이리그 덕력시험 / 2020년 - 제 2회 케이리그 덕력시험">
+								<dl class="before-quiz">
+									<dt class="first">2019년</dt>
+									<dd class="first">
+										<a href="">제 1회 케이리그 덕력시험</a>
+									</dd>
+									<dt class="second">2020년</dt>
+									<dd class="second">
+										<a href="">제 2회 케이리그 덕력시험</a>
+									</dd>
+								</dl>
+							</div>
+
+							<div class="social">
+								<p>K리그 공식 SNS를 팔로우하고 K리그의 최신소식을 받아보세요!</p>
+								<ul>
+									<li>
+										<a href="https://www.facebook.com/withKLEAGUE" target="_blank">
+											<i class="icon-fb"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/kleague/" target="_blank">
+											<i class="icon-insta"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/user/withkleague/" target="_blank">
+											<i class="icon-youtube"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/kleague" target="_blank">
+											<i class="icon-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="http://fifaonline4.nexon.com/" target="_blank">
+											<i class="icon-tv"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2021 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

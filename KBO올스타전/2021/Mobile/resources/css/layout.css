@@ -1,0 +1,77 @@
+﻿@charset "utf-8";
+
+/* common */
+body {width:100%;background:#ebebeb;}
+#wrap {background:#fff;}
+header {position:relative;}
+header h1 {width:26.852%;max-width:96px;margin:0 auto;padding:4px 0;}
+header.vote-page {position:absolute;top:0;left:0;width:100%;}
+header.vote-page h1 {width:68.2407%;max-width:244px;padding:0;}
+header .btn-login {position:absolute;top:17px;right:2.870%;width:50px;padding:2px 0 1px;color:#122365;border:1px solid #122365;font-size:1.1rem;font-weight:700;text-align:center;letter-spacing:-1px;box-sizing:border-box;}
+/* 로그인추가 */
+header .login {position:absolute;top:8px;right:3px;width:15px;padding:5px;}
+header #gnb .menu {overflow:hidden;position:relative;}
+header #gnb .menu:after {content:"";display:block;position:absolute;bottom:0;width:100%;height:1px;border-bottom:1px solid #afafaf;}
+header #gnb .menu li {float:left;width:33.333%;box-sizing:border-box;}
+header #gnb .menu li a {display:block;width:100%;text-align:center;}
+header #gnb .menu li a span {position:relative;display:inline-block;padding-bottom:9px;font-size:1.4rem;color:#333;z-index:10;}
+header #gnb .menu li.on a {font-weight:bold;}
+header #gnb .menu li.on a span {padding-bottom:6px;color:#058fd3;border-bottom:3px solid #058fd3;}
+
+header #lnb {background:#f2f2f2;}
+header #lnb .menu {overflow:hidden;width:100%;padding:7px 0;margin:0 auto;text-align:center;}
+header #lnb .menu li {display:inline-block;position:relative;padding:0 4px;}
+header #lnb .menu li:after {content:"|";display:block;position:absolute;bottom:0;right:0;width:1px;color:#999;font-size:5px;}
+header #lnb .menu li:last-child:after {display:none;}
+header #lnb .menu li a {width:100%;color:#999;text-align:center;}
+header #lnb .menu li.on a {font-weight:bold;color:#5f97b3;}
+/*header #lnb .menu-kboleague {width:270px;}*/
+/*header #lnb .menu-futures {width:205px;}*/
+header #lnb .menu-futures li:after {color:#d2d2d2;}
+/*header #lnb .menu-news {width:210px;}
+header #lnb .menu-kbo {width:300px;}*/
+header #lnb .menu-kbo li {padding:0 10px;}
+
+/* 2019 탭스크롤 */
+#NewLnb #lnb {overflow:hidden;text-align:center;}
+#NewLnb #lnb .scroller {display:inline-block;}
+#NewLnb #lnb .scroller .menu {white-space:nowrap;}
+
+#container {}
+#container #contents {}
+
+section {}
+
+footer {}
+footer .allstar-list {border-top:1px solid #e2e3e7;}
+footer .allstar-list::after {content:"";display:table;clear:both;}
+footer .allstar-list li {float:left;position:relative;width:33.33%;}
+footer .allstar-list li:last-child {float:right;}
+footer .allstar-list li a {display:inline-block;width:100%;padding:35px 0 6px;color:#85868a;font-weight:700;text-align:center;letter-spacing:-1px;}
+footer .allstar-list li a.btn-event {background:url("../images/common/bg_event.png") no-repeat 50% 11px/21px;}
+footer .allstar-list li.on a.btn-event {position:relative;background:url("../images/common/bg_event_on.png") no-repeat 50% 11px/21px;color:#122365;z-index:10;}
+footer .allstar-list li.on a.btn-event:after {content:"";position:absolute;bottom:8px;left:50%;width:46px;height:12px;margin-left:-23px;background:#f9e790;z-index:-10;}
+footer .allstar-list li a.btn-shinhan {background:url("../images/common/btn_shinhan.png") no-repeat 50% 11px/20px;}
+footer .allstar-list li a.btn-vote {background:#fff url("../images/common/bg_vote.png") no-repeat 50% 8px/21px;}
+footer .allstar-list li.on a.btn-vote {position:absolute;top:-12px;left:0;padding:42px 0 10px;background:#fff url("../images/common/bg_vote_on.png") no-repeat 50% 12px/25px;color:#122365;border-radius:6px;font-size:1.3rem;box-shadow:0px -5px 7px 1px rgba(0,0,0,0.2);z-index:10;}
+footer .allstar-list li a.btn-news {background:url("../images/common/bg_news.png") no-repeat 50% 11px/21px;z-index:10;}
+footer .allstar-list li.on a.btn-news {position:relative;background:url("../images/common/bg_news_on.png") no-repeat 50% 11px/21px;color:#122365;z-index:10;}
+footer .allstar-list li.on a.btn-news:after {content:"";position:absolute;bottom:8px;left:50%;width:46px;height:12px;margin-left:-23px;background:#f9e790;z-index:-10;}
+
+
+/* media query */
+
+@media (min-width:340px){
+	header #gnb .menu li a span {font-size:1.2rem;}
+}
+@media (min-width:568px) and (max-width:1023px){
+	body {position:relative;}
+	.popup {position:fixed;top:50%;left:50%;margin:-154px 0 0 -200px;}
+	.popup.login {width:400px;height:310px;}
+	.login header .tit-logo {width:14.3396%;padding:15px 0;}
+	.login .content .user .retain {padding:9px 0 18px;}
+}
+@media (min-width:1024px){
+	.popup {position:fixed;top:50%;left:50%;margin:-294px 0 0 -200px;}
+	.popup.login {width:400px;height:598px;}
+}

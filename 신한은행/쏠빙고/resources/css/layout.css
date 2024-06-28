@@ -1,0 +1,9 @@
+﻿@charset "utf-8";
+
+html, body {min-height:100%;}
+#contents {position:relative;background:#fff;}
+
+header {height:45px;text-align:center;border-bottom:1px solid #585cd5;font-size:1.6rem;color:#fff;background:#2f35cb;}
+header span {display:inline-block;padding-top:12px;}
+header .btn-back {float:left;display:block;width:42px;height:15px;padding:22px 16px;background:url('../images/common/btn_back.png') center no-repeat;background-size:10px 15px;}
+header .btn-close {float:right;display:block;width:45px;height:15px;padding:22px 16px;background:url('../images/common/btn_close.png') center no-repeat;background-size:13px 15px;}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+			<nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li class="on"><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li class="on"><a href="../Player/player_team.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전  -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd class="on"><a href="../Player/player_team.html">지역별 찾기</a></dd>
+								<dd><a href="../Player/player_team2.html">팀/이름별 찾기</a></dd>
+							</dl>
+						</div>
+						<div class="logo">
+							<img src="">
+						</div>
+						<div class="team-wrap sub">
+							<div class="team-tit">팀 정보</div>
+							<table summary="팀정보">
+								<caption>팀정보</caption>
+								<colgroup>
+									<col width="90px">
+									<col width="*">
+								</colgroup>
+								<tbody><tr>
+									<th>팀 명</th>
+									<td>부산갈매기 씨름단</td>
+								</tr>
+								<tr>
+									<th>시도 및 시군구</th>
+									<td>부산광역시</td>
+								</tr>
+								<tr>
+									<th>주소</th>
+									<td>
+										<p>부산광역시 동래구 사직동 749-6</p>
+									</td>
+								</tr>
+								<tr>
+									<th>대표자명</th>
+									<td>오거돈</td>
+								</tr>
+								<tr>
+									<th>감독</th>
+									<td>김태우</td>
+								</tr>
+								<tr>
+									<th>코치</th>
+									<td>오흥민</td>
+								</tr>
+								<tr>
+									<th>창단일</th>
+									<td>2005년 12월 12일</td>
+								</tr>
+								<tr>
+									<th>전화</th>
+									<td>070-7618-9954</td>
+								</tr>
+							</tbody></table>
+							<div class="team-tit">선수단</div>
+							<ul class="team-player">
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+								<li>오흥민</li>
+							</ul>
+						</div>
+
+						<!-- <div class="info-head">팀 정보</div>
+						<div class="info-body">
+						<table class="tbl-team">
+						<colgroup>
+						<col width="100px">
+					</colgroup>
+					<tr>
+					<th>팀 명</th>
+					<td>부산갈매기씨름단</td>
+				</tr>
+				<tr>
+				<th>시도</th>
+				<td>부산광역시</td>
+			</tr>
+			<tr>
+			<th>주소</th>
+			<td>부산광역시 동래구 사직동 749-6</td>
+		</tr>
+		<tr>
+		<th>대표자</th>
+		<td>유재석</td>
+	</tr>
+	<tr>
+	<th>감독</th>
+	<td>신짱구</td>
+</tr>
+<tr>
+<th>코치</th>
+<td>홍길동</td>
+</tr>
+<tr>
+<th>창단일</th>
+<td>2000년 01월 01일</td>
+</tr>
+<tr>
+<th>전화</th>
+<td>020-000-000</td>
+</tr>
+</table>
+<i class="icon logo-gray"></i>
+</div>
+<div class="info-head">선수단 (<span>8</span>명)</div>
+<div class="info-body">
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+<div class="player">
+<a href="../Player/player.html">
+<p class="name">오흥민</p>
+</a>
+<p class="sosok">부산갈매기씨름단</p>
+</div>
+</div> -->
+</div>
+</article>
+</div>
+</div>
+<!-- // container -->
+</div>
+<!-- // wrap -->
+<!-- footer -->
+<footer>
+	<div class="inner">
+		<a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+		<address>
+			주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+			<p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+		</address>
+	</div>
+</footer>
+<!-- // footer -->
+</body>
+</html>

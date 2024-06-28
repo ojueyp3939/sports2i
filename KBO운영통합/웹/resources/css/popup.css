@@ -1,0 +1,210 @@
+﻿@charset "utf-8";
+
+/* 엔트리등록 팝업 */
+.pop-entry-reg {overflow:hidden;width:1000px;height:650px;margin-left:-500px;}
+.pop-entry-reg h1 {padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-entry-reg .total-box {overflow:hidden;padding:18px 0;font-weight:bold;border-bottom:1px solid #e4e4e4;}
+.pop-entry-reg .total-box .team {float:left;width:75px;margin:0 10px;}
+.pop-entry-reg .total-box .team img {width:100%;}
+.pop-entry-reg .total-box .kbo {float:left;margin:0 0 0 30px;}
+.pop-entry-reg .total-box .day {float:left;padding:14px 0;font-size:20px;color:#111;}
+.pop-entry-reg .total-box .total-num {float:left;margin-left:60px;padding:16px 0;font-size:17px;color:#999;}
+.pop-entry-reg .total-box .total-num .current {padding-left:25px;color:#154eaa;}
+.pop-entry-reg .total-box .btn-area {float:right;margin-right:32px;text-align:center;}
+.pop-entry-reg .total-box .btn-area .btn-confirm {display:inline-block;width:135px;height:48px;line-height:48px;margin-right:10px;background:#104aad;font-size:15px;color:#fff;border-radius:2px;}
+.pop-entry-reg .total-box .btn-area .btn-cancel {display:inline-block;width:85px;height:48px;line-height:48px;background:#242424;font-size:15px;color:#fff;border-radius:2px;}
+.pop-entry-reg .player-out {float:left;width:500px;box-sizing:border-box;border-right:1px solid #e4e4e4;}
+.pop-entry-reg .player-in {float:left;width:500px;box-sizing:border-box;}
+.pop-entry-reg .player-selected {}
+.pop-entry-reg .player-selected dt {font-size:16px;color:#aaa;padding:15px 0 10px 15px;}
+.pop-entry-reg .player-selected dd {overflow:hidden;padding-left:15px;}
+.pop-entry-reg .player-selected dd ul {overflow-y:scroll;position:relative;list-style:none;padding:0;margin:0;height:109px;font-size:14px;color:#242424;}
+.pop-entry-reg .player-selected dd ul li {position:relative;float:left;width:106px;height:37px;line-height:36px;margin:0 10px 10px 0;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.pop-entry-reg .player-selected dd ul li.active {border: 2px solid #104aad;}
+.pop-entry-reg .player-selected dd ul li a {display:block;width:100%;}
+.pop-entry-reg .player-selected dd ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.pop-entry-reg .player-selected dd ul li.active .fl {background:#104aad;color:#fff;}
+.pop-entry-reg .player-select-area {overflow-y:scroll;height:359px;background:#f3f3f3;}
+.pop-entry-reg .player-select-area dl {position:relative;}
+.pop-entry-reg .player-select-area dl dt {padding:20px 0 5px 15px;font-size:14px;color:#aaa;}
+.pop-entry-reg .player-select-area dl dd {overflow:hidden;padding-left:15px;}
+.pop-entry-reg .player-select-area dl ul {list-style:none; padding:0; margin:0; font-size: 14px; color: #242424;*zoom:1;min-height:0;}
+.pop-entry-reg .player-select-area dl ul:after {display:block;content:'';clear:both;}
+.pop-entry-reg .player-select-area dl ul.pos7 {margin-bottom:80px;}
+.pop-entry-reg .player-select-area dl ul li {position:relative;float:left;width:106px;height:37px;line-height:36px;margin:0 10px 10px 0;background:#fff;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.pop-entry-reg .player-select-area dl ul li.active {border:2px solid #104aad;}
+.pop-entry-reg .player-select-area dl ul li a {display:block;width:100%;}
+.pop-entry-reg .player-select-area dl ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.pop-entry-reg .player-select-area dl ul li .kbo {font-size:11px;}
+.pop-entry-reg .player-select-area dl ul li.active .fl {background:#104aad;color:#fff;}
+
+/* 사용자 등록 팝업 */
+.pop-user-reg {overflow:hidden;width:360px;margin-left:-180px;}
+.pop-user-reg h1 {padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-user-reg .contents {padding:40px 10px;}
+.pop-user-reg .contents .line {position:relative;overflow:hidden;margin-bottom:7px;}
+.pop-user-reg .contents .line .ipt, .pop-user-reg .contents .line select {width:168px;height:38px;line-height:38px;padding:0 10px;font-family:"nb";font-size:14px;border:1px solid #cbcdce;border-radius:2px;box-sizing:border-box;color:#696969;}
+.pop-user-reg .contents .line .btn-pw-modify {position:absolute;top:5px;right:10px;width:92px;height:27px;line-height:27px;font-size:13px;color:#104aad;border:1px solid #104aad;box-sizing:border-box;text-align:center;}
+.pop-user-reg .btn-area {overflow:hidden;}
+.pop-user-reg .btn-area .btn-confirm {float:left;width:50%;height:48px;line-height:48px;background:#104aad;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+.pop-user-reg .btn-area .btn-cancel {float:left;width:50%;height:48px;line-height:48px;background:#242424;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+
+
+
+/* 선수등록 팝업 */
+.radio-select {text-align:center;}
+.radio-select input[type="radio"] {width:13px;height:13px;margin:2px 3px 0 0;vertical-align:top;}
+.radio-select label {font-size:17px;font-weight:bold;}
+
+/* 엔트리 등말소이력 팝업 */
+.pop-entry-history {width:376px;margin-left:-188px;}
+.pop-entry-history h1 {position:relative;padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-entry-history .contents {padding:30px;}
+.pop-entry-history .contents .tbl td ,.pop-entry-history .contents .tbl th {padding:5px 0;border:none;font-size:15px;text-align:left;}
+.pop-entry-history .contents .tbl td span {display:inline-block;width:95px;margin:0 5px;}
+.pop-entry-history .btn-close {position:absolute;top:14px;right:11px;}
+
+
+/* 승인 공시업무 - 주소록 팝업 */
+.pop-select-address {width:1000px;margin-left:-500px;}
+.pop-select-address h1 {position:relative;padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-select-address .contents {padding:20px 20px 30px;font-size:14px;}
+.pop-select-address .contents select {width:100%;padding:8px;background:none;font-size:14px;line-height:25px;border-radius:6px;}
+.pop-select-address .contents select option {padding:0px 0 7px !important;} 
+.pop-select-address .contents .sel-add-1 {display:inline-block;width:280px;margin-right:20px;vertical-align:top;}
+.pop-select-address .contents .sel-add-1 select {height:400px;}
+.pop-select-address .contents .sel-add-2 {display:inline-block;width:280px;margin-right:20px;vertical-align:top;}
+.pop-select-address .contents .sel-add-2 > div {width:260px;height:382px;padding:8px 10px;line-height:25px;border:1px solid #ddd;;border-radius:6px;overflow-y:scroll;}
+.pop-select-address .contents .sel-add-3 {display:inline-block;width:350px;margin-right:0px;vertical-align:top;}
+.pop-select-address .contents .sel-add-3 > div {display:block;width:100%;margin-bottom:10px;}
+.pop-select-address .contents .sel-add-3 > div:last-child {margin-bottom:0px;}
+.pop-select-address .contents .sel-add-3 p {display:block;font-size:15px;font-weight:400;margin-bottom:8px;}
+.pop-select-address .contents .sel-add-3 .arrow-area {display:inline-block;width:50px;vertical-align:bottom;margin-bottom:27px;}
+.pop-select-address .contents .sel-add-3 .arrow-area span a {display:block;width:30px;height:30px;background-size:cover;}
+.pop-select-address .contents .sel-add-3 .arrow-area .arrow-right a {background:url("../images/sub/sel_add_arrow_right.png") center center no-repeat;}
+.pop-select-address .contents .sel-add-3 .arrow-area .arrow-left a {background:url("../images/sub/sel_add_arrow_left.png") center center no-repeat;}
+.pop-select-address .contents .sel-add-3 .sel-area {display:inline-block;width:294px;vertical-align:bottom;}
+.pop-select-address .contents .sel-add-3 select {height:94px;margin-bottom:10px;}
+.pop-select-address .btn-close {position:absolute;top:14px;right:11px;}
+
+/* 승인 공시업무 - 승인신청확인 팝업 */
+.pop-submit-confirm {width:1000px;margin-left:-500px;}
+.pop-submit-confirm h1 {position:relative;padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-submit-confirm .contents {overflow:auto;width:960px;max-height:585px;padding:10px 20px 30px;}
+.pop-submit-confirm .contents .tbl th, .pop-submit-confirm .contents .tbl td {padding:12px 0;text-align:center;vertical-align:middle;}
+.pop-submit-confirm .contents .tbl td .ipt {width:90%;height:28px;line-height:28px;margin-top:5px;padding:0 8px;color:#696969;background-color:#fff;border:1px solid #cccecd;border-radius:2px;box-sizing:border-box;}
+.pop-submit-confirm .contents .tbl td .direct {width:90%;height:25px;line-height:26px;margin-top:5px;padding:0 8px;border:1px solid #cccecd;border-radius:2px;box-sizing:border-box;color:#696969;}
+.pop-submit-confirm .btn-close {position:absolute;top:14px;right:11px;}
+
+/* 승인 공시업무 - 승인신청확인 변경사유 수정 팝업 */
+#popup.pop-submit-confirm-modify {top:50%;width:400px;height:200px;margin-left:-200px;margin-top:-100px;border:2px solid #104aad;z-index:30;}
+.pop-submit-confirm-modify h1 {position:relative;padding:14px 0;background:#104aad;color:#fff;font-size:17px;text-align:center;}
+.pop-submit-confirm-modify .contents {padding:30px;text-align:center;font-size:15px;}
+.pop-submit-confirm-modify .contents .ipt {width:100%;height:38px;line-height:38px;padding:0 10px;font-family:"nb";font-size:14px;border:1px solid #cbcdce;border-radius:2px;box-sizing:border-box;color:#696969;}
+
+/* 승인 공시업무 - 계약승인 등록 학교검색 팝업 */
+.pop-search-school {width:500px;margin-left:-250px;}
+.pop-search-school h1 {position:relative;padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-search-school .contents {overflow:auto;height:500px;padding:30px;}
+.pop-search-school .contents .tbl {border:1px solid #c5c5c5;}
+.pop-search-school .contents .tbl td ,.pop-search-school .contents .tbl th {padding:7px 5px;text-align:left;border-right:1px solid #c5c5c5;text-align:center;}
+.pop-search-school .contents .tbl th {background:#eee;border-right:1px solid #c5c5c5;font-size:14px;}
+.pop-search-school .contents .tbl td {font-size:13px;}
+.pop-search-school .contents .tbl td.cont-none {padding:10px 0;background:#eee;color:#333;}
+.pop-search-school .contents .tbl td:last-child ,.pop-search-school .contents .tbl th:last-child {border-right:none;}
+.pop-search-school .contents .tbl td .ipt {padding:5px;border:1px solid #c5c5c5;}
+.pop-search-school .contents .tbl td .btn-search {display:inline-block;width:49px;height:30px;line-height:28px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #104aad;box-sizing:border-box;background:#104aad;text-align:center;}
+.pop-search-school .contents .tbl td .btn-select {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #104aad;box-sizing:border-box;background:#104aad;text-align:center;}
+.pop-search-school h2 {padding:25px 0 10px;font-size:15px;font-weight:bold;text-align:center;}
+.pop-search-school .btn-close {position:absolute;top:14px;right:11px;}
+
+/* 시스템관리 - 주소록관리 그룹 등록 팝업 */
+.pop-address-group-reg {overflow:hidden;width:360px;margin-left:-180px;}
+.pop-address-group-reg h1 {padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-address-group-reg .contents {padding:20px 20px;}
+.pop-address-group-reg .contents .ipt {width:100%;height:38px;line-height:38px;padding:0 10px;font-family:"nb";font-size:14px;border:1px solid #cbcdce;border-radius:2px;box-sizing:border-box;color:#696969;}
+.pop-address-group-reg .btn-area {overflow:hidden;}
+.pop-address-group-reg .btn-area .btn-confirm {float:left;width:50%;height:48px;line-height:48px;background:#104aad;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+.pop-address-group-reg .btn-area .btn-cancel {float:left;width:50%;height:48px;line-height:48px;background:#242424;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+
+/* 개막전 등록명단 팝업 */
+.opening .player-selected {overflow-y:scroll;float:left;width:500px;height:512px;background:#fff;border-right:1px solid #e4e4e4;box-sizing:border-box;}
+.opening .player-selected dl {position:relative;}
+.opening .player-selected dl dt {padding:20px 0 5px 15px;font-size:14px;color:#aaa;}
+.opening .player-selected dl dd {overflow:hidden;padding-left:15px;}
+.opening .player-selected dl ul {overflow:auto;height:auto;list-style:none; padding:0; margin:0; font-size: 14px; color: #242424;*zoom:1;min-height:0;}
+.opening .player-selected dl ul:after {display:block;content:'';clear:both;}
+.opening .player-selected dl ul.pos7 {margin-bottom:80px;}
+.opening .player-selected dl ul li {position:relative;float:left;width:106px;height:37px;line-height:36px;margin:0 10px 10px 0;background:#fff;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.opening .player-selected dl ul li.active {border:2px solid #104aad;}
+.opening .player-selected dl ul li a {display:block;width:100%;}
+.opening .player-selected dl ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.opening .player-selected dl ul li .kbo {font-size:11px;}
+.opening .player-selected dl ul li.active .fl {background:#104aad;color:#fff;}
+
+.opening .player-select-area {overflow-y:scroll;float:left;width:500px;height:512px;background:#f3f3f3;border-right:1px solid #e4e4e4;box-sizing:border-box;}
+.opening .player-select-area dl {position:relative;}
+.opening .player-select-area dl dt {padding:20px 0 5px 15px;font-size:14px;color:#aaa;}
+.opening .player-select-area dl dd {overflow:hidden;padding-left:15px;}
+.opening .player-select-area dl ul {list-style:none; padding:0; margin:0; font-size: 14px; color: #242424;*zoom:1;min-height:0;}
+.opening .player-select-area dl ul:after {display:block;content:'';clear:both;}
+.opening .player-select-area dl ul.pos7 {margin-bottom:80px;}
+.opening .player-select-area dl ul li {position:relative;float:left;width:106px;height:37px;line-height:36px;margin:0 10px 10px 0;background:#fff;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.opening .player-select-area dl ul li.active {border:2px solid #104aad;}
+.opening .player-select-area dl ul li a {display:block;width:100%;}
+.opening .player-select-area dl ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.opening .player-select-area dl ul li .kbo {font-size:11px;}
+.opening .player-select-area dl ul li.active .fl {background:#104aad;color:#fff;}
+
+.pop-submit-confirm .player-selected, .pop-submit-confirm .player-select-area {height:445px;}
+.pop-submit-confirm .filebox-area {width:950px;margin:15px 20px;}
+.pop-submit-confirm .reg .tbl-entry .tbl td {vertical-align:top;}
+
+.fa .player-selected {overflow-y:auto;height:90px;padding:22px 0 10px 15px;background:#fff;border-right:1px solid #e4e4e4;box-sizing:border-box;}
+.fa .player-selected ul {font-size:14px;color:#242424;*zoom:1;}
+.fa .player-selected ul:after {display:block;content:'';clear:both;}
+.fa .player-selected ul.pos7 {margin-bottom:80px;}
+.fa .player-selected ul li {position:relative;float:left;width:106px;height:47px;line-height:1.2;margin:0 10px 10px 0;padding:6px 0;background:#fff;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.fa .player-selected ul li.active {border:2px solid #104aad;}
+.fa .player-selected ul li a {display:block;width:100%;}
+.fa .player-selected ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.fa .player-selected ul li .kbo {font-size:11px;}
+.fa .player-selected ul li.active .fl {background:#104aad;color:#fff;}
+
+.fa .player-select-area {overflow-y:scroll;height:423px;padding:20px 0 10px 15px;background:#f3f3f3;border-right:1px solid #e4e4e4;box-sizing:border-box;}
+.fa .player-select-area dl {position:relative;}
+.fa .player-select-area dl dt {padding:20px 0 5px;font-size:14px;color:#aaa;}
+.fa .player-select-area dl dd {overflow:hidden;padding-left:0;}
+.fa .player-select-area dl ul {list-style:none; padding:0; margin:0; font-size: 14px; color: #242424;*zoom:1;min-height:0;}
+.fa .player-select-area dl ul:after {display:block;content:'';clear:both;}
+.fa .player-select-area dl ul.pos7 {margin-bottom:80px;}
+.fa .player-select-area dl ul li {position:relative;float:left;width:106px;height:47px;line-height:1.2;margin:0 10px 10px 0;padding:6px 0;background:#fff;border:1px solid #e4e4e4;text-align:center;box-sizing:border-box;}
+.fa .player-select-area dl ul li.active {border:2px solid #104aad;}
+.fa .player-select-area dl ul li a {display:block;width:100%;}
+.fa .player-select-area dl ul li .fl {position:absolute;left:0;top:0;width:12px;height:32px;padding-top:3px;line-height:10px;background:#959595;font-size:10px;color:#fff;}
+.fa .player-select-area dl ul li .kbo {font-size:11px;}
+.fa .player-select-area dl ul li.active .fl {background:#104aad;color:#fff;}
+.fa .player-select-area .team-select select {width:15%;height:38px;line-height:38px;font-size:14px;color:#696969;vertical-align:middle;margin-left:0px;margin-right:0px;padding-right:30px;}
+
+/* 자료실 - 항목관리 - 항목추가 팝업 */
+.pop-reference-add {overflow:hidden;width:360px;margin-left:-180px;}
+.pop-reference-add h1 {padding:14px 0;background:#104aad;font-size:17px;color:#fff;text-align:center;}
+.pop-reference-add .contents {padding:40px 70px;}
+.pop-reference-add .contents .line label {margin-right:20PX;font-size:14px;font-weight:bold;}
+.pop-reference-add .contents .line .ipt {width:168px;height:38px;line-height:38px;padding:0 10px;font-family:"nb";font-size:14px;border:1px solid #cbcdce;border-radius:2px;box-sizing:border-box;color:#696969;}
+.pop-reference-add .btn-area {overflow:hidden;}
+.pop-reference-add .btn-area .btn-confirm {float:left;width:50%;height:48px;line-height:48px;background:#104aad;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+.pop-reference-add .btn-area .btn-cancel {float:left;width:50%;height:48px;line-height:48px;background:#242424;font-size:15px;color:#fff;box-sizing:border-box;text-align:center;}
+
+/* 경기 모니터링 - 수비 시점 확인 */
+#popup.pop-wrap {top:50%;left:50%;transform:translate(-50%, -50%);}
+.pop-wrap {width:1100px;padding:15px;box-sizing:border-box;}
+.pop-wrap .tbl {margin-bottom:15px;}
+.pop-wrap .tbl tr th {padding:7px 5px;font-size:12px;}
+.pop-wrap .tbl tr td {padding:7px 5px;font-size:12px;}
+.pop-wrap .tbl tr.in-input td {padding:5px;}
+.pop-wrap .tbl tr.in-input td select {min-width:30px;padding:0 5px}
+.pop-wrap .tbl tr.in-input td input {height:25px;border:1px solid #cbcdce}
+.pop-wrap .btn-area {text-align:center;}
+.pop-wrap .btn-area .btn-confirm {display:inline-block;width:100px;height:30px;line-height:30px;margin:0 5px;background:#104aad;font-size:13px;color:#fff;box-sizing:border-box;text-align:center;}
+.pop-wrap .btn-area .btn-cancel {display:inline-block;width:100px;height:30px;line-height:30px;margin:0 5px;background:#242424;font-size:13px;color:#fff;box-sizing:border-box;text-align:center;}

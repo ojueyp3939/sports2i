@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/ranking.css" />
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#TeamRecord',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+      var myScroll2 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+		}
+	</script>
+</head>
+<body onload="loaded()">
+  <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li><a href="../highlight/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li class="on"><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+			<a href="javascript:;" class="btn-home"><img src="../resources/images/common/btn_home.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<ul class="select-area">
+					<li class="year">
+						<select name="year" class="year-info">
+							<option value="2018">2018</option>
+							<option value="2017">2017</option>
+						</select>
+					</li>
+					<li class="season">
+						<select name="season" class="year-info">
+							<option value="정규시즌">정규시즌</option>
+							<option value="시범경기">시범경기</option>
+						</select>
+					</li>
+				</ul>
+
+				<h2 class="tit">팀순위</h2>
+				<table class="tbl tbl-rank">
+					<caption>팀순위</caption>
+					<colgroup>
+						<col width="6%"/>
+						<col width="10%"/>
+						<col width="11%"/>
+						<col width="13%"/>
+						<col width="11%"/>
+						<col width="11%"/>
+						<col width="11%"/>
+						<col width="12%"/>
+						<col width="15%"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th colspan="3">순위</th>
+							<th>경기</th>
+							<th>승</th>
+							<th>패</th>
+							<th>무</th>
+							<th>게임차</th>
+							<th>승률</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="no1">1</td>
+							<td><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></td>
+							<td class="no1">두산</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>SK</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>한화</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>4</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>넥센</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>5</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>KIA</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>6</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>삼성</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>7</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>롯데</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>8</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>LG</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>9</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>KT</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+						<tr>
+							<td>10</td>
+							<td><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></td>
+							<td>NC</td>
+							<td>144</td>
+							<td>98</td>
+							<td>51</td>
+							<td>0</td>
+							<td>14.5</td>
+							<td>0.646</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<h2 class="tit">팀간전적</h2>
+				<div class="record-wrap">
+					<div id="TeamRecord" class="scroll-wrap">
+						<div class="scroller">
+							<ul class="team-list">
+								<li class="myteam"><a href="javascript:;"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /> <span>KT</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>두산</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>SK</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>넥센</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>KIA</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>삼성</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>롯데</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>LG</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>한화</span></a></li>
+								<li><a href="javascript:;"><img src="../resources/images/emb/embO_100x78_HH.png" alt="" /> <span>NC</span></a></li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="vs-wrap">
+						<div class="record-box superior">
+							<p class="txt">우세</p>
+							<div class="team-list">
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd><span class="eng">99</span><span style="font-famliy:'noto'">승</span> <span class="eng">99</span>패 <span class="eng">99</span>무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</li>
+							</div>
+							<p class="team-sum">2팀</p>
+						</div>
+
+						<div class="record-box inferiority">
+							<p class="txt">열세</p>
+							<div class="team-list">
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+								<dl class="team">
+									<dt><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></dt>
+									<dd>99승 99패 99무</dd>
+								</dl>
+							</div>
+							<p class="team-sum">7팀</p>
+						</div>
+					</div>
+				</div>
+				<div class="exhibition">
+					<span><img src="../resources/images/common/team_help.png" alt="" /></span>
+					<p class="txt">팀간전적은 정규시즌만 제공합니다.</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+ </body>
+</html>

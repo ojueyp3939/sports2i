@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/allstar.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".page-list").bxSlider({
+				controls:false
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="../main_appvote.html" class="logo"><img src="../resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="#none" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote news etc">
+				<p class="txt-publicity"></p>
+				<!-- 뉴스리스트 -->
+				<div class="detail-wrap">
+					<div class="video">
+						<iframe src="https://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=0F565CFE30700D18A49043D9547B4B37CAE8&amp;outKey=V1247182dd14199d80c701fe8dbc9e311c5d1776a1576c0d9818a1fe8dbc9e311c5d1&amp;controlBarMovable=true&amp;jsCallable=true&amp;isAutoPlay=true&amp;skinName=tvcast_white" frameborder="no" scrolling="no" marginwidth="0" marginheight="0" width="100%" allow="autoplay" allowfullscreen=""></iframe>
+					</div>
+					<h2 class="tit-video">'한동민 연장' 13회 결승포 SK, 8년 만에 SK 우승, 아쉬운 두산 SK 4승</h2>
+					<p class="data">2019-09-20</p>
+					<div class="btn-area btn-list">
+						<a href="#none" class="btn-detail">목록보기</a>
+					</div>
+				</div>
+				<!-- // 뉴스리스트 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="event.html" class="btn-event">EVENT</a></li>
+				<li><a href="../main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li class="on"><a href="news.html" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

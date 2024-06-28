@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 예상 달성기록</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+		$(function() {
+			$('.gnb li').hover(function(){
+				$('.sub-menu',this).show();
+			}, function(){
+				$('.sub-menu',this).hide();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>KBO홍보팀</span>님 환영합니다.</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav>
+				<ul class="gnb clear">
+					<li>
+						<a href="../AchievementRecord/daily.html">예상 달성기록</a>
+						<ul class="sub-menu">
+							<li><a href="../AchievementRecord/daily.html">일간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/weekly.html">주간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/season.html">시즌 예상 달성기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../SystemAdmin/standard_manage.html">시스템 관리</a>
+						<ul class="sub-menu max">
+							<li><a href="../SystemAdmin/standard_manage.html">예상 달성기록 기준</a></li>
+							<li><a href="../SystemAdmin/commendation_manage.html">표창관리</a></li>
+							<li><a href="../SystemAdmin/achievement_manage.html">시즌 예상 달성기록 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../UserManage/user_manage.html">사용자 관리</a>
+					</li>
+					<li class="on">
+						<a href="../FileManage/daily.html">파일 생성</a>
+						<ul class="sub-menu max">
+							<li><a href="../FileManage/daily.html">일일 예상달성기록</a></li>
+							<li><a href="../FileManage/postseason.html">포스트시즌 예상달성기록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 본문 -->
+			<article>
+				<h3>포스트시즌 예상달성기록</h3>
+				<div class="btn-wrap">
+					<a href="">
+						<i class="btn-left"></i>
+					</a>
+					<a href="">
+						<i class="btn-right"></i>
+					</a>
+				</div>
+				<div class="content">
+					<div class="title txt-c">
+						<div class="tit-detail">
+							<span class="txt">2021년 11월 18일 목요일 준PO 1차전 예상달성기록</span>
+						</div>
+						<div class="detail">
+							<img src="../resources/images/sub/logo_kbo2.png" alt="신한은행 SOL 2021">
+							<p>자료: KBO 커뮤니케이션팀(www.koreabaseball.com)</p>
+						</div>
+						<img class="postseason-logo" src="../resources/images/sub/img_post.png" alt="POSTSEASON 2021 신한은행 SOL">
+					</div>
+					<p class="tbl-tit">11월 18일(목) 고척 두산 vs LG</p>
+					<div class="tbl-wrap">
+						<table class="tbl-print post" summary="포스트시즌 예상달성기록">
+							<caption>포스트시즌 예상달성기록</caption>
+							<colgroup>
+								<col style="width:180px">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th rowspan="2">구단</th>
+									<th rowspan="2">2021 정규시즌<br/>상대전적</th>
+									<th colspan="2">연승·연패<br/>특이사항</th>
+								</tr>
+								<tr class="sub-th">
+									<th>포스트시즌</th>
+									<th>준PO(시리즈)</th>
+								</tr>
+								<tr>
+									<td class="bg emb">
+										<img src="../resources/images/sub/emb/HH.png" alt="HH">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>7W 9L</td>
+									<td>
+										최근 4연승(19.10/22 잠실 키움 <span class="red">KS</span>1 ~)<br/>
+										잠실/홈 2연승(19.10/22 잠실 키움 <span class="red">KS</span>1 ~)<br/>
+										LG 2연승(13.10/19 잠실 LG <span class="red">PO</span>1 ~)
+									</td>
+									<td>
+										잠실/홈 4연승(13.10/11 잠실 넥센 3 ~)<br/>
+										LG 3연패(93.10/5 잠실 3 ~)
+									</td>
+								</tr>
+								<tr>
+									<td class="bg emb">
+										<img src="../resources/images/sub/emb/LG.png" alt="LG">
+										<p>5승 5패 1무</p>
+									</td>
+									<td>7W 9L</td>
+									<td>
+										<textarea></textarea>
+									</td>
+									<td>
+										잠실/홈 4연승(13.10/11 잠실 넥센 3 ~)<br/>
+										LG 3연패(93.10/5 잠실 3 ~)
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<p class="tbl-tit">선발투수</p>
+					<div class="tbl-wrap">
+						<table class="tbl-print post" summary="포스트시즌 예상달성기록">
+							<caption>포스트시즌 예상달성기록</caption>
+							<colgroup>
+								<col style="width:180px">
+								<col style="width:306px">
+								<col style="width:306px">
+								<col style="width:auto">
+							</colgroup>
+							<tbody>
+								<tr class="main-th">
+									<th>선발투수</th>
+									<th>2021 정규시즌 성적</th>
+									<th>2021 정규시즌 상대전적</th>
+									<th>PS / 준PO (시리즈)</th>
+								</tr>
+								<tr>
+									<td class="bg">
+										플렉센(두)
+									</td>
+									<td>21G 8W 4L (3.01)</td>
+									<td>
+										<textarea></textarea>
+									</td>
+									<td>PS 1G (0.00) / KS 첫 출장</td>
+								</tr>
+								<tr>
+									<td class="bg">
+										플렉센(두)
+									</td>
+									<td>21G 8W 4L (3.01)</td>
+									<td>21G 8W 4L (3.01)</td>
+									<td>PS 1G (0.00) / KS 첫 출장</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<p class="tbl-tit">연속기록</p>
+					<div class="tbl-wrap">
+						<table class="tbl-print post" summary="포스트시즌 예상달성기록">
+							<caption>포스트시즌 예상달성기록</caption>
+							<colgroup>
+								<col style="width:180px">
+								<col style="width:370px">
+								<col style="width:180px">
+								<col style="width:370px">
+							</colgroup>
+							<tbody>
+								<tr class="main-th">
+									<th>선수(구단)</th>
+									<th>포스트시즌</th>
+									<th>선수(구단)</th>
+									<th>준PO (시리즈)</th>
+								</tr>
+								<tr>
+									<td class="bg">
+										플렉센(두)
+									</td>
+									<td>잠실/홈 2연승(19.10/22 잠실 키움 <span class="red">KS</span>1 ~)</td>
+									<td class="bg">
+										플렉센(두)
+									</td>
+									<td>잠실/홈 2연승(19.10/22 잠실 키움 <span class="red">KS</span>1 ~)</td>
+								</tr>
+								<tr>
+									<td class="bg">
+										플렉센(두)
+									</td>
+									<td>잠실/홈 2연승(19.10/22 잠실 키움 <span class="red">KS</span>1 ~)</td>
+									<td></td>
+									<td>-</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+
+
+					<div class="final-btn">
+						<a class="btn-blue" href="#none">저장</a>
+						<a class="btn-white" href="#none">취소</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

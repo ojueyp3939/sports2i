@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+html, body {position:relative;height:100%;}
+body {background:#fff;}
+header .top {overflow:hidden;position:relative;max-width:1200px;height:87px;margin:0 auto;}
+header .top h1 {float:left;padding-top:18px;}
+header .top h1 img {width:43px;}
+header .top .link-k {float:right;padding-top:28px;font-size:25px;color:#232d61;font-weight:700;}
+header .top .logout {position:absolute;top:8px;right:0;}
+footer {position:relative;width:100%;height:210px;padding-top:90px;text-align:center;}
+footer img {position:absolute;bottom:0;right:50%;z-index:-10;}
+footer address {font-size:16px;color:#272f58;font-style:normal;}
+
+
+/* 팝업 */
+.pop-on {overflow:hidden;}
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.3;z-index:15;}
+/* #popup {position:fixed;top:280px;left:50%;background:#fff;z-index:20;} */

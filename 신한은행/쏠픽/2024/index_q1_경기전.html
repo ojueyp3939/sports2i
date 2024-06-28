@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="index_q1.html">쏠픽하기</a></li>
+					<li><a href="SolGuide/쏠쏠한가이드.html">쏠쏠한 가이드</a></li>
+					<li><a href="MySol/My쏠픽.html">MY 쏠픽</a></li>
+					<li><a href="Rank/월간랭킹.html">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="solpick">
+				<div class="date-select play">
+					<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018.06.13</span>
+					<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+					<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+				</div>
+				<div class="game-wrap">
+					<div class="game-cont">
+						<div class="quiz-num">Q1</div>
+						<ul class="tab">
+							<li class="q1 on"><a href="#none">Q1. 승리팀 맞추기</a></li>
+							<li class="q2"><a href="#none">Q2. 1:10 퀴즈</a></li>
+						</ul>
+						<div class="quiz q1-app before">
+							<div class="quiz-box">
+								<p class="tit">오늘의 승리팀을 맞춰주세요!</p>
+								<div class="toggle">
+									<span class="tit">승리예측</span>
+									<label class="switch">
+										<input type="checkbox" checked>
+										<span class="slider"></span>
+									</label>
+								</div>
+							</div>
+							<ul class="team-select">
+								<li>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_LG.png" alt="" />
+											</div>
+											<div class="name">LG</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">VS</div>
+										<div class="place">사직</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_LT.png" alt="" />
+											</div>
+											<div class="name">LG</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_OB.png" alt="" />
+											</div>
+											<div class="name">LG</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">VS</div>
+										<div class="place">사직</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_SK.png" alt="" />
+											</div>
+											<div class="name">LG</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="team-box away select">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_KT.png" alt="" />
+											</div>
+											<div class="name">KT</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">VS</div>
+										<div class="place">사직</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_NC.png" alt="" />
+											</div>
+											<div class="name">NC</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_WO.png" alt="" />
+											</div>
+											<div class="name">넥센</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">VS</div>
+										<div class="place">사직</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_HT.png" alt="" />
+											</div>
+											<div class="name">KIA</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											</div>
+											<div class="name">삼성</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">VS</div>
+										<div class="place">사직</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/emb_135x113_HH.png" alt="" />
+											</div>
+											<div class="name">한화</div>
+										</div>
+									</div>
+								</li>
+								<li class="cancel">
+									<div class="team-box away">
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/embR_135x113_SS.png"
+													alt="" /></div>
+											<div class="name">삼성</div>
+										</div>
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+									</div>
+									<div class="vs">
+										<div class="txt">경기<br />취소</div>
+									</div>
+									<div class="team-box home">
+										<div class="record">
+											<div class="rank">1위</div>
+											<div class="win-rate">승률 0.999</div>
+										</div>
+										<div class="team">
+											<div class="emb"><img src="resources/images/emb/embR_135x113_HH.png"
+													alt="" /></div>
+											<div class="name">한화</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-app">다음</a>
+					</div>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>
+<!-- 
+<div class="modal"></div>
+<div id="Popup" class="dp-none">
+	<div class="cont">
+		<p class="tit">승리팀 맞추기 참여 완료!</p>
+		<p class="txt">* 6월 15일은 오후 6시 20분까지 <br />수정 가능합니다.</p>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn btn-confirm">확인</a>
+	</div>
+</div>
+<div id="Popup">
+	<div class="cont">
+		<p class="txt pink">모든 경기의 승리팀을<br/>선택해야 합니다.</p>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn btn-confirm">확인</a>
+	</div>
+</div>
+ -->

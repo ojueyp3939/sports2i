@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li><a href="#none"><span>심판 행동강령 평가표</a></span></li>
+					<li class="on"><a href="#none"><span>심판 종합평가표</a></span></li>
+				</ul>
+			</div>
+			<div class="sub-choice">
+				<p>1. 연도 선택</p>
+				<div>
+					<select>
+						<option>연도</option>
+					</select>
+					<button>검색</button>
+				</div>
+			</div>
+			<div class="download-box" style="top:330px;">
+				<a href="#none" class="btn-send">전송</a>
+			</div>
+			<div class="report-wrap">
+				<h4 class="mb15">심판 평가표</h4>
+				<table class="tbl mb10">
+					<colgroup>
+						<col width="10%">
+						<col width="15%">
+						<col width="15%">
+						<col width="30%">
+						<col width="30%">
+					</colgroup>
+					<tr>
+						<th>구분</th>
+						<th>심판</th>
+						<th>생년월일</th>
+						<th>경기운영</th>
+						<th>규정∙규칙시험</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>홍길동</td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>
+			</div>
+				
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

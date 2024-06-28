@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/allstar.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".part-list .btn-wrap").click(function() {
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="../main_appvote.html" class="logo"><img src="../resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="../main_login.html" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote live">
+			<!-- 올스타 팀 선택 -->
+			<div class="allstar-team">
+				<ul class="allstar">
+					<li class="dream on"><a href="#none" class="menu-dream">드림 올스타</a></li>
+					<li class="nanum"><a href="#none" class="menu-nanum">나눔 올스타</a></li>
+				</ul>
+				<div class="emb-area nanum"><!-- 나눔일 경우 nanum 클래스 추가 -->
+					<span class="emb"><img src="../resources/images/emblem/emb_139x92_NC.png" alt="NC 다이노스"></span>
+					<span class="emb"><img src="../resources/images/emblem/emb_139x92_LG.png" alt="LG 트윈스"></span>
+					<span class="emb"><img src="../resources/images/emblem/emb_139x92_WO.png" alt="키움 히어로즈"></span>
+					<span class="emb"><img src="../resources/images/emblem/emb_139x92_HT.png" alt="기아 타이거즈"></span>
+					<span class="emb"><img src="../resources/images/emblem/emb_139x92_HH.png" alt="한화 이글스"></span>
+				</div>
+			</div>
+			<!-- // 올스타 팀 선택 -->
+			<!-- 탭 메뉴 -->
+			<ul class="menu-list">
+				<li class="on"><a href="vote_pick.html">My pick</a></li>
+				<li><a href="vote_live.html">실시간 집계</a></li>
+				<li><a href="vote_total.html">중간 집계</a></li>
+			</ul>
+			<!-- // 탭 메뉴 -->
+			<!-- 실시간 집계 -->
+			<div class="live-pick">
+				<div class="ground-img">
+					<img src="../resources/images/common/bg_ground.png" alt="실시간 집계 그라운드">
+				</div>
+				<ul class="player-list"><!-- 나눔일 경우 nanum 클래스 추가 -->
+					<li class="C">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<div class="name">김광현</div>
+								<div class="vote">[ 포수 ]</div>
+							</div>
+						</div>
+					</li>
+					<li class="DH">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 지명타자 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="B1 line">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 1루수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="B2 line">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 2루수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="B3 line">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 3루수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="CP">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현현현</span>
+								<span class="vote">[ 마무리투수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="MP">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광</span>
+								<span class="vote">[ 중간투수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="SP">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현현</span>
+								<span class="vote">[ 선발투수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="SS">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 유격수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF1">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 외야수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF2">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 외야수 ]</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF3">
+						<div class="player-wrap">
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote">[ 외야수 ]</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- // 실시간 집계 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="../event/event.html" class="btn-shinhan">신한 SOL 앱 투표하기</a></li>
+				<li class="on"><a href="../main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="#none" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

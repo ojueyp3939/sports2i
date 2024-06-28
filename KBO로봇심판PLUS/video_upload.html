@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/icon_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="confirm_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+				</h1>
+				<ul class="menu">
+					<li>
+						<a href="confirm_list.html">투구 및 영상 확인</a>
+					</li>
+					<li class="on">
+						<a href="video_upload.html">영상 등록</a>
+					</li>
+				</ul>
+				<ul class="user_menu">
+					<li>
+						<a href="#">비밀번호변경</a>
+						<!-- 비밀번호 변경 레이어 팝업 -->
+						<div class="layer-pw" style="display:none;">
+							<h2>비밀번호 변경</h2>
+							<div>
+								<ul>
+									<li>
+										<label for="pw_now">현재 비밀번호</label>
+										<input type="password" id="pw_now">
+									</li>
+									<li>
+										<label for="pw_new">새 비밀번호</label>
+										<input type="password" id="pw_new">
+									</li>
+									<li>
+										<label for="pw_new_check">새 비밀번호 확인</label>
+										<input type="password" id="pw_new_check">
+									</li>
+								</ul>
+								<ul class="pw_notice">
+									<li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+									<li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+								</ul>
+								<p class="btn_save">
+									<a href="#">저장</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<div class="title-wrap">
+					<h2>경기 일정</h2>
+					<input type="text" id="btnCalendar">
+				</div>
+				<table class="tbl">
+					<colgroup>
+						<col style="width:15%;" />
+						<col style="width:15%;" />
+						<col style="width:15%;" />
+						<col style="width:auto" />
+						<col style="width:15%;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>경기진행여부</th>
+							<th>경기</th>
+							<th>구장</th>
+							<th>영상링크</th>
+							<th>등록 확인</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="state">정상진행</td>
+							<td>삼성 VS LG</td>
+							<td>이천(LG)</td>
+							<td>
+								<input type="text">
+							</td>
+							<td>
+								<a class="btn">등록</a>
+								<a class="btn">수정</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div>
+				<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+				<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+﻿@charset "utf-8";
+
+.login-box {position:relative;width:402px;margin:110px auto 0;padding-bottom:27px;border:1px solid #c7bde2;box-sizing:border-box;}
+.login-box .member {position:absolute;top:-68px;left:50%;z-index:10;width:192px;transform:translateX(-50%);}
+.login-box .member::before {content:"";position:absolute;top:0;left:50%;z-index:-10;width:196px;height:158px;background:#fff;transform:translateX(-50%);}
+.login-box .sub-script {padding:122px 0 13px;font-size:16px;font-weight:700;text-align:center;color:#0d378e;}
+.login-box .ipt {width:305px;height:40px;padding:0 20px 0 45px;border:1px solid #ccc;background:#f5f5f5 url("../images/sub/ico_login_id.gif") no-repeat 20px 12px;color:#888;font-size:14px;line-height:40px;box-sizing:border-box;}
+.login-box #txtPassword {background:#f5f5f5 url("../images/sub/ico_login_pw.gif") no-repeat 22px 12px;}
+.login-box .id-box {margin-bottom:7px;text-align:center;}
+.login-box .pw-box {margin-bottom:10px;text-align:center;}
+.login-box .id-save {padding-left:48px;font-size:14px;color:#888;}
+.login-box .id-save input {display:none;}
+.login-box .id-save input[type="checkbox"] + label {font-size:13px;cursor:pointer;}
+.login-box .id-save input[type="checkbox"]:checked + label {background-position: 0 -21px;color:#0d378e;font-weight:700;}
+.login-box .id-save label {display:inline-block;padding:2px 0 3px 29px;background:url('../images/common/bg_checkbox.png') no-repeat 0 0;background-size:20px;}
+.login-box .btn-area {margin-top:20px;text-align:center;}
+.login-box .btn-area .btn {display:inline-block;width:305px;height:51px;background:#00113b;color:#fff;font-size:18px;font-weight:700;line-height:45px;text-align:center;box-sizing:border-box;}
+.login-box .alert {margin:14px 0 0 46px;color:#ed1c24;font-size:13px;line-height:1.3;}
+
+.member-btn {width:402px;margin:30px auto 150px;color:#666;font-size:14px;text-align:center;}
+.member-btn::after {content:"";display:table;clear:both;}
+.member-btn .btn-member {float:left;position:relative;width:33.333%;}
+.member-btn .btn-member:after {content:"";display:block;position:absolute;top:5px;right:0;width:1px;height:10px;margin-top:-2px;background:#b2b2b2;}
+.member-btn .btn-member:last-child:after {display:none;}
+
+/* 회원가입 */
+#contents.member-join {width:834px;margin-bottom:150px;}
+.member-join .tit {padding:64px 0 20px;color:#222;font-size:22px;font-weight:700;}
+.accessterms {}
+.accessterms .description {margin-bottom:11px;color:#444;font-size:16px;}
+.accessterms .agree-box {padding:30px 23px;border:1px solid #cfcfcf;}
+.accessterms .agree-box h3 {margin-bottom:10px;font-size:15px;font-weight:700;color:#222;}
+.accessterms .txt-box {overflow-y:scroll;height:137px;margin-bottom:10px;padding:0 21px;border:1px solid #cfcfcf;background:#f6f6f9;color:#666;font-size:13px;line-height:1.8;text-align:left;}
+.accessterms .txt-box p{margin:0;color:#666;}
+.accessterms .txt-box strong {display:block;padding-bottom:23px;color:#666;font-weight:700;line-height:1.2;}
+.accessterms .txt-box strong:first-child {padding-top:14px;}
+.accessterms .use-agree {overflow:hidden;margin-bottom:40px;}
+.accessterms .pinfo-agree {overflow:hidden;margin-bottom:40px;}
+.accessterms .event-agree {overflow:hidden;margin-bottom:10px;}
+.accessterms .event-agree .txt-box {background:#fff;}
+.accessterms .agree-check {float:right;}
+.accessterms .agree-check dt {float:left;margin-right:65px;color:#222;font-size:14px;}
+.accessterms .agree-check dd {float:left;}
+.accessterms .agree-check dd .ipt-radio {margin-top:3px;vertical-align:top;}
+.accessterms .agree-check dd input {display:none;}
+.accessterms .agree-check dd input[type="radio"] + label {font-size:13px;cursor:pointer;}
+.accessterms .agree-check dd input[type="radio"]:checked + label {background-position: 0 -21px;color:#0d378e;font-weight:700;}
+.accessterms .agree-check dd label {display:inline-block;padding:2px 0 3px 29px;background:url('../images/common/bg_checkbox.png') no-repeat 0 0;background-size:20px;color:#888;vertical-align:top;}
+.accessterms .all-check {margin:20px 0 70px;text-align:right;}
+.accessterms .all-check label {margin-left:5px;font-size:14px;font-weight:700;vertical-align:top;color:#222;}
+.accessterms .all-check input {display:none;}
+.accessterms .all-check input[type="checkbox"] + label {font-size:13px;cursor:pointer;}
+.accessterms .all-check input[type="checkbox"]:checked + label {background-position: 0 -21px;color:#0d378e;font-weight:700;}
+.accessterms .all-check label {display:inline-block;margin-left:5px;padding:2px 0 3px 29px;background:url('../images/common/bg_checkbox.png') no-repeat 0 0;background-size:20px;color:#222;vertical-align:top;}
+.accessterms .description-certify {margin-bottom:11px;font-size:16px;color:#0d378e;}
+.accessterms .certify-box {padding:31px 0;border:1px solid #cfcfcf;text-align:center;}
+.accessterms .certify-box .sub-script {margin-bottom:19px;padding-bottom:109px;background:url("../images/sub/bg_certify_mobile.png") no-repeat 50% bottom;color:#444;font-size:14px;line-height:1.3;}
+.accessterms .certify-box a.btn-app {display:inline-block;padding:14px 64px 16px 47px;border:2px solid #363689;background:url("../images/sub/bg_arrow_certify.gif") no-repeat;background-position:right 47px top 19px;color:#363689;font-size:16px;font-weight:700;}
+.register {margin-bottom:150px;}
+.register .tbl-type-reg {padding-bottom:40px;border-bottom:1px solid #e6e6e8;}
+.register .tbl-type-reg .tbl {width:100%;text-align:left;}
+.register .tbl-type-reg .tbl th, .register .tbl-type-reg .tbl td {padding:6px 25px;font-size:15px;text-align:left;border:none;}
+.register .tbl-type-reg .tbl th {font-weight:700;}
+.register .tbl-type-reg .tbl td .ipt {padding:10px;background:#f5f5f5;border:1px solid #ccc;box-sizing:border-box;}
+.register .tbl-type-reg .tbl td .select-box {width:212px;margin-left:4px;}
+.register .tbl-type-reg .tbl td > .select-num {width:80px;}
+.register .tbl-type-reg .tbl td .btn-confirm {display:inline-block;min-width:58px;margin-left:5px;padding:10px;line-height:18px;background:#e3e3e3;font-size:13px;border:1px solid #ccc;color:#656565;vertical-align:middle;text-align:center;}
+.register .tbl-type-reg .tbl td .sub-script {margin-top:5px;color:#656565;font-size:13px;}
+.register .tbl-type-reg .tbl td .alert {margin-top:7px;color:#ed1c24;font-size:13px;}
+.register .tbl-type-reg .tbl-disable {margin-bottom:15px;border-top:1px solid #e6e6e8;border-bottom:1px solid #e6e6e8;}
+.register .tbl-type-reg .tbl-disable th, .register .tbl-type-reg .tbl-disable td {background:#f8f8f9;height:33px;vertical-align:middle;color:#222;}
+.register .tbl-type-reg .pw-chk td, .register .tbl-type-reg .pw-chk th {padding-bottom:20px;}
+.register .tbl-type-reg .email {}
+.register .tbl-type-reg .email td, .register .tbl-type-reg .email th {padding-top:20px;border-top:1px solid #e6e6e8;}
+.register .btn-area {margin-top:20px;text-align:center;}
+
+/* 아이디/비번 찾기 */
+.member-etc {width:558px;margin:0 auto;padding-top:90px;}
+.member-etc .tab {overflow:hidden;padding-left:1px;}
+.member-etc .tab li {float:left;width:279px;margin-left:-1px;}
+.member-etc .tab li:last-child {width:280px;}
+.member-etc .tab li a {display:block;width:100%;height:49px;padding:15px 0;background:#f8f8f8;font-size:15px;color:#666;text-align:center;border:1px solid #d8d8d8;box-sizing:border-box;}
+.member-etc .tab li.on a, .member-etc .tab li:hover a{padding-top:14px;background:#fff;font-weight:700;color:#222;border:none;border-top:2px solid #0d378e;border-right:1px solid #ebebeb;border-left:1px solid #ebebeb;}
+.member-etc .btn-area {margin-top:40px;text-align:center;}
+
+.member-etc .find {width:100%;margin-top:-1px;margin-bottom:150px;padding:50px 33px;background:#fff;border:1px solid #ebebeb;box-sizing:border-box;text-align:center;}
+.member-etc .find .sub-script {margin-bottom:20px;padding-bottom:115px;background:url("../images/sub/bg_certify_mobile.png") no-repeat 50% bottom;font-size:14px;color:#444;}
+.member-etc .find .sub-script dt {padding-bottom:5px;font-size:18px;font-weight:700;color:#222;}
+.member-etc .find .sub-script dd {font-size:14px;color:#222;}
+.member-etc .find a.btn-app {display:inline-block;padding:14px 64px 16px 47px;border:2px solid #363689;background:url("../images/sub/bg_arrow_certify.gif") no-repeat;background-position:right 47px top 19px;color:#363689;font-size:16px;font-weight:700;}
+
+.member-etc .find-pw {width:100%;margin-top:-1px;padding:50px 33px;background:#fff;border:1px solid #ebebeb;box-sizing:border-box;}
+.member-etc .find-pw dl {overflow:hidden;margin-bottom:13px;}
+.member-etc .find-pw dt {float:left;width:120px;margin-top:12px;font-size:14px;font-weight:700;text-align:left;}
+.member-etc .find-pw dd {float:left;}
+.member-etc .find-pw dd .ipt {padding:11px 10px;background:#f5f5f5;border:1px solid #ccc;font-size:14px;}
+.member-etc .find-pw .notice {font-size:13px;padding:5px 0;color:#656565;letter-spacing:-1px;text-align:left;}
+.member-etc .find-pw .error {margin:-8px 0 10px 120px;font-size:13px;color:#ed1c24;text-align:left;}
+.member-etc .find-pw .btn-area {margin-top:20px;}
+
+/* 아이디/비번 찾기 팝업 */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:1;}
+.pop-find-id {position:absolute;top:50%;left:50%;width:464px;height:235px;text-align:center;background:#fff;transform:translate(-50%, -50%);z-index:2}
+.pop-find-id dl {display:inline-block;padding:65px 0 50px;font-size:18px;font-weight:700;}
+.pop-find-id dl dt {float:left;margin-right:15px;}
+.pop-find-id dl dd {float:left;color:#0d378e;}
+.pop-find-id p {display:inline-block;padding:65px 0 50px;font-size:18px;font-weight:700;color:#4a4949;}
+.pop-find-id p strong {color:#0d378e;}
+.pop-find-id .btn-close {position:absolute;top:0;right:0;}
+.pop-find-id .btn-find-pw {display:inline-block;width:194px;height:47px;line-height:44px;font-size:16px;font-weight:700;color:#0d378e;border:2px solid #0d378e;border-radius:25px;box-sizing:border-box;}
+
+.pop-find-pw {position:absolute;top:50%;left:50%;width:464px;height:235px;text-align:center;background:#fff;transform:translate(-50%, -50%);z-index:2}
+.pop-find-pw p {display:inline-block;padding:53px 0 0;font-size:18px;font-weight:700;}
+.pop-find-pw .no-info {line-height:30px;}
+.pop-find-pw .btn-close {position:absolute;top:0;right:0;}
+.pop-find-pw .btn-join {display:inline-block;width:194px;height:47px;line-height:44px;font-size:16px;font-weight:700;color:#0d378e;border:2px solid #0d378e;border-radius:25px;box-sizing:border-box;}
+
+.pop-member-leave {position:absolute;top:50%;left:50%;width:464px;height:235px;text-align:center;background:#fff;transform:translate(-50%, -50%);z-index:2}
+.pop-member-leave .complete {display:inline-block;padding:157px 0 0;font-size:16px;font-weight:700;line-height:1.4;background:url("../images/popup/bg_find_noinfo.gif") no-repeat 50% 54px;}
+.pop-member-leave .btn-close {position:absolute;top:0;right:0;}

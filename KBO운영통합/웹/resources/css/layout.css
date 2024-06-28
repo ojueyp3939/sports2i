@@ -1,0 +1,60 @@
+﻿@charset "utf-8";
+
+html, body {position:relative;height:100%;}
+body {background:#f3f3f3;}
+#wrap {position:relative;min-height:100%;}
+.inner {overflow:hidden;position:relative;width:1000px;margin:0 auto;}
+
+header {overflow:hidden;position:relative;padding:11px 0 15px;background:#104aad;}
+header h1 {float:left;padding-left:5px;}
+header h1 .logo {float:left;}
+header h1 .tit {float:left;padding:2px 0 0 10px;font-size:16px;color:#fff;}
+header .login-info {float:right;}
+header .login-info .notice {display:inline-block;position:relative;vertical-align:middle;margin-right:55px;}
+header .login-info .notice .num {display:block;position:absolute;top:0;left:21px;width:34px;height:18px;line-height:20px;background:#fdca00;font-size:14px;font-weight:bold;color:#104aad;border-radius:6px;text-align:center;}
+header .login-info .user {font-size:14px;color:#fff;vertical-align:middle;}
+header .login-info .btn-logout {display:inline-block;width:72px;height:22px;line-height:24px;margin-left:30px;background:#fff;font-weight:bold;color:#104aad;vertical-align:middle;border-radius:15px;text-align:center;}
+
+#gnb {position:relative;background:#333;z-index:10;}
+#gnb .menu {width:1000px;margin:0 auto;}
+#gnb .menu:after {content:"";clear:both;display:block;}
+#gnb .menu > li {float:left;height:50px;line-height:50px;padding:0 30px;}
+#gnb .menu > li > a {color:#fff;font-size:14px;font-weight:bold;}
+#gnb .menu > li:hover > a,#gnb .menu > li.on > a {padding-bottom:1px;border-bottom:2px solid #fff;}
+#gnb .menu .depth2 {display:none;position:absolute;top:50px;left:0;width:100%;height:34px;line-height:1.2;background:#fff;border-bottom:1px solid #cbcbcb;}
+#gnb .menu .depth2 > ul {overflow:hidden;position:relative;width:960px;margin:0 auto;padding:9px 20px;}
+#gnb .menu .depth2 > ul li {position:relative;float:left;padding:0 15px;}
+#gnb .menu .depth2 > ul li:after {content:"";position:absolute;top:3px;right:0;width:1px;height:9px;background:#cbcbcb;}
+#gnb .menu .depth2 > ul li:last-child:after {display:none;}
+#gnb .menu .depth2 > ul li > a {color:#8e8e8e;font-size:14px;}
+#gnb .menu .depth2 > ul li > a:hover,#gnb .menu .depth2 > ul li.on > a {font-weight:bold;color:#444;}
+
+#container {position:relative;padding:35px 0 105px;}
+
+footer {width:100%;margin-top:-65px;padding:24px 0 25px;border-top:1px solid #cdcdcd;text-align:center;}
+footer address {font-size:13px;color:#838383;}
+
+/* 팝업 */
+.pop-on {overflow:hidden;}
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.5;z-index:15;}
+#popup {position:fixed;top:132px;left:50%;background:#fff;z-index:20;}
+
+/* 2019.01.29 팝업수정 */
+#popup .content .line .list {padding:0 30px 0 50px;}
+
+/* 2022 */
+#popup .pop-close {position:absolute;top:0;right:0;padding:10px;}
+#popup .pop-close img {width:9px;}
+#popup .tit-top {padding:14px 0;font-size:24px;color:#fff;font-weight:700;background:#104aad;text-align:center;}
+
+#popup.search {width:475px;padding:0;transform:translate(-50%, 0);}
+#popup.search .tit-area {max-height:400px;padding:30px 68px;border-radius:0 0 10px 10px;}
+#popup.search .tit-area .search-box {position:relative;width:100%;height:46px;padding:0 50px 0 10px;border:2px solid #104aad;border-radius:3px;box-sizing:border-box;}
+#popup.search .tit-area .search-box input {width:100%;height:100%;font-size:16px;outline:none}
+#popup.search .tit-area .search-box a {position:absolute;top:0;right:0;padding:11px 19px 0px 10px}
+#popup.search .tit-area .search-box a img {width:20px;}
+#popup.search .tit-area .table-box {max-height:354px;overflow-y:auto;border:1px solid #bec8d8;border-top:0;}
+#popup.search .tit-area .table-box table {width:calc(100% - 16px);margin:0 8px;}
+#popup.search .tit-area .table-box table tr td {padding:7px 0 7px 5px;font-size:15px;color:#5b5b5b;text-align:left;vertical-align:middle;}
+#popup.search .tit-area .table-box table tr td .btn-select {float:right;width:50px;height:25px;border:1px solid #104aad;font-size:13px;color:#104aad;text-align:center;}
+#popup.search .tit-area .table-box table tr td .btn-select:hover {background-color:#104aad;color:#fff}

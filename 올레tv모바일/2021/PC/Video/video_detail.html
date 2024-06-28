@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Play your 'Seezn'</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../resources/images/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../resources/images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/favicon/favicon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/video.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/full.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 타구장 Slider
+            var swiper = new Swiper('#GameList', {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 14,
+                initialSlide: 1,
+                navigation: {
+                    prevEl: '.GameListPrev',
+                    nextEl: '.GameListNext',
+                },
+                breakpoints: {
+                    1136: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3
+                    },
+                    1500: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4
+                    },
+                    1920: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5
+                    }
+                }
+            });
+
+            // 풀영상 > 관련영상 Slider
+            var swiper = new Swiper('#RelationVideo', {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 24,
+                initialSlide: 1,
+                navigation: {
+                    prevEl: '.RelationVideoPrev',
+                    nextEl: '.RelationVideoNext',
+                },
+                breakpoints: {
+                    1136: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3
+                    },
+                    1500: {
+                        slidesPerView: 4,
+                        slidesPerGroup: 4
+                    },
+                    1920: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5
+                    }
+                }
+            });
+
+            $('.btn-screenmode').click(function () {
+                $('#wrap').addClass('full-mode');
+            });
+
+            // 영상볼륨 slider
+            $('#btnVolue').slider({
+                range: 'min'
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap" class=""> <!-- 영상full일 경우 full-mode 클래스 추가 -->
+        <!-- haeder -->
+        <header>
+            <div class="header-baseball">
+                <h2>프로야구 Live</h2>
+                <nav class="gnb-wrap">
+                    <ul class="gnb">
+                        <li><a href="../Playball/playball.html"><span>홈</span></a></li>
+                        <li class="on"><a href="../Video/video.html"><span>VOD</span></a></li>
+                        <li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+                        <li><a href="../Rank/rank.html"><span>순위</span></a></li>
+                        <li><a href="../Record/record.html"><span>기록</span></a></li>
+                        <li><a href="../My/my.html"><span>MY</span></a></li>
+                    </ul>
+                    <h3 class="">경기 하이라이트</h3>
+                </nav>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="contents" class="video video-detail">
+            <div id="MainCont">
+                <div class="info-wrap">
+                    <div class="live-box">
+                        <div class="broadcast">
+                            <!--<iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
+                        </div>
+                        <div class="control-box control-dim play"> <!-- 영상 정지 시 stop 클래스 추가, 마우스 hover 시 control-dim 클래스 추가 -->
+                            <h2 class="tit-game">키움 히어로즈 <span class="roboto">VS</span> 삼성 라이온즈</h2>
+                            <div class="site-realtime on">
+                                <!-- 관련영상 목록이 나올 경우 on 클래스 추가 -->
+                                <a href="#none" class="btn-realtime roboto">LIVE</a>
+                            </div>
+                            <div class="site-detail clear">
+                                <a href="#none" class="btn-volume">음량</a> <!-- 음소거 시 mute 클래스 추가  -->
+                                <div id="btnVolue" class="ipt-range"></div>
+                            </div>
+                            <div class="site-player">
+                                <a href="#none" class="btn-play">PLAY</a> <!-- 정지 시 stop 클래스 추가 -->
+                            </div>
+                            <div class="site-relation">
+                                <a href="#none" class="btn-relation">관련영상</a>
+                            </div>
+                            <div class="site-screen">
+                                <a href="#none" class="btn-screenmode">화면크기</a> <!-- 하프모드로 돌릴시 half 클래스 추가 -->
+                            </div>
+                            <div class="play-end">
+                                <p>재생이 종료되었습니다.</p>
+                                <a href="#none" class="btn-replay">다시보기</a>
+                            </div>
+                            <div class="relation-video">
+                                <h3 class="tit-relation"><strong>강백호</strong> 관련 영상</h3>
+                                <div class="swiper-container">
+                                    <div id="RelationVideo" class="swiper-content">
+                                        <ul class="swiper-wrapper">
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                            <li class="swiper-slide">
+                                                <a href="#none">
+                                                    <span class="screenshot">
+                                                        <img src="https://image-ktotm.sports2i.com/Thumbnail/Medium/2021/03/30/1617103459270.jpg" alt="Alternate Text" />
+                                                        <span class="time roboto">03:00</span>
+                                                    </span>
+                                                    <span class="video-name">잔루,만루 위기 상황에 승리를 지켜</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="swiper-button-prev RelationVideoPrev"></div>
+                                    <div class="swiper-button-next RelationVideoNext"></div>
+                                </div>
+                                <!-- <p class="no-video">관련 영상이 없습니다.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tit-box clear">
+                    <dl class="tit-video">
+                        <dt>[전체HL] '박경수 결승포'</dt>
+                        <dd>하이라이트<span class="roboto">2020.03.28</span></dd>
+                    </dl>
+                    <div class="btn-area">
+                        <a href="#none" class="btn-collection">찜하기</a> <!-- 찜했을 경우 add 클래스 추가 -->
+                        <a href="#none" class="btn-result">경기기록</a>
+                    </div>
+                </div>
+            </div>
+            <div id="SubCont">
+                <h2 class="dp-none">영상</h2>
+                <div class="vs-team">
+                    <div class="roster clear">
+                        <h4 class="tit-roster"><span class="hash-tag">#강백호</span> 검색결과<span class="roboto">2</span></h4>
+                        <a href="#none" class="btn-pst">최신순</a>
+                        <ul class="more-list">
+                            <li><a href="#none">초고화질</a></li>
+                            <li class="on"><a href="#none">고화질</a></li>
+                        </ul>
+                    </div>
+                    <div class="vs-box no-record"> <!-- 영상없을 경우 no-record 클래스 추가 -->
+                        <ul style="display:none;">
+                            <li class="clear on">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">하이라이트</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear on">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear on">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear on">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear on">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                            <li class="clear">
+                                <div class="screenshot"><img src="../resources/images/common/screenshot.png" alt=""></div>
+                                <dl>
+                                    <dt>'승리를 부르는 포-즈' 두산 베어스 2020 프로필 촬영 현장 공개</dt>
+                                    <dd><span class="kind">명장면</span><span class="roboto">2020.03.28</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <p>경기 영상이 없습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

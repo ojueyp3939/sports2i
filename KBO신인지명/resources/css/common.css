@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+/* popup */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.3);z-index:1;}
+
+/* custom */
+.w57 {width:57px !important;}
+.w74 {width:74px !important;}
+.w80 {width:80px !important;}
+.w90 {width:90px !important;}
+.w106 {width:106px !important;}
+.w142 {width:142px !important;}
+.w150 {width:150px !important;}
+.w160 {width:160px !important;}
+.w209 {width:209px !important;}
+.w416 {width:416px !important;}
+
+.pl40 {padding-left:40px !important;}
+.pl85 {padding-left:85px !important;}
+.mb10 {margin-bottom:10px;}
+.mb40 {margin-bottom:40px !important;}
+.mr5 {margin-right:5px;}
+
+.alert {margin-top:8px;color:#ed1c24;}
+.alert.green {color:green}
+/* popup */
+.pop-wrap {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:464px;padding:55px 20px 30px;background:#fff;z-index:1;}
+.pop-wrap .btn-close {position:absolute;top:-30px;right:15px;}
+.pop-wrap .pop-cont {margin-bottom:50px;line-height:1.5;font-size:18px;font-weight:700;text-align:center;word-break:keep-all;letter-spacing:-1.0px;}
+.pop-wrap .pop-cont table {width:60%;margin:0 auto}
+.pop-wrap .pop-cont table tr th {padding:5px 0;font-size:18px;font-weight:700;text-align:left;}
+.pop-wrap .pop-cont table tr td {padding:5px 0;color:#058fd3;font-size:18px;font-weight:700;text-align:left;}
+.pop-wrap .pop-cont .icon {margin-bottom:25px;}
+.pop-wrap .pop-cont p {font-size:18px;font-weight:700;}
+.pop-wrap .pop-cont.no-btn {margin-bottom:20px;}
+.pop-wrap .btn-wrap .btn {display:inline-block;width:194px;height:47px;padding:0;line-height:44px;font-size:16px;font-weight:bold;color:#4a4949;border:2px solid #7b7a7a;border-radius:25px;box-sizing:border-box;}
+.pop-wrap .btn-wrap.double .btn {width:164px;}
+.pop-wrap .btn-wrap.double .btn.cancel {border-color:#a9a9a9;color:#aaa}
+
+input[type='number']::-webkit-outer-spin-button,input[type='number']::-webkit-inner-spin-button {-webkit-appearance: none;margin: 0;}

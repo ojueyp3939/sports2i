@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한은행 MY CAR KBO리그</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.rwdImageMaps.min.js"></script>	
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>	
+			<h1 class="logo"><img src="resources/images/common/h1_logo.png" alt="신한은행 MY CAR KBO리그" /></h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="javascript:;">KBO 상품</a></li>
+					<li class="on"><a href="javascript:;">월간 MVP</a></li>
+					<li><a href="javascript:;">이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<div class="tab-depth1">
+				<ul class="tab">
+					<li><a href="#none">투표하기</a></li>
+					<li class="on"><a href="#none">월간 MVP 결과</a></li>
+				</ul>
+			</div>
+			<!-- contents -->		
+			<div id="contents">	
+				<div class="select-area">
+					<select name="" id="">
+						<option value="">4월 결과</option>
+					</select>
+				</div>
+				<ul class="player-list">
+					<li class="mvp"><img src="resources/images/sub/img_mvp_list01.gif" alt="" /></li>
+					<li><img src="resources/images/sub/img_mvp_list02.gif" alt="" /></li>
+					<li><img src="resources/images/sub/img_mvp_list03.gif" alt="" /></li>
+					<li><img src="resources/images/sub/img_mvp_list04.gif" alt="" /></li>
+				</ul>
+			</div>
+			<!-- // contents -->		
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

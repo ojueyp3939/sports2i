@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+html, body {position:relative;min-height:100%;}
+body {background:#fff;}
+header .top {position:relative;max-width:1200px;height:90px;margin:0 auto;}
+header .top h1 {float:left;padding-top:28px;}
+header .top h1 img {width:100%;}
+header .top .link-k {float:right;padding-top:30px;font-size:25px;color:#232d61;font-weight:700;}
+header .top .logout {position:absolute;top:8px;right:0;}
+header .top .logout span {font-size:14px;}
+footer {width:100%;height:84px;text-align:center;box-shadow:inset 0px 10px 16px 0px #ebebeb;}
+footer address {padding-top:32px;font-size:17px;color:#080808;font-style:normal;font-family:'kpd';font-weight:700}
+
+
+/* 팝업 */
+.pop-on {overflow:hidden;}
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.3;z-index:15;}
+/* #popup {position:fixed;top:280px;left:50%;background:#fff;z-index:20;} */
+
+@media (max-width:640px) {
+  header .top {width:100%;height:50px;padding:0 10px;}
+  header .top h1 {padding-top:15px;}
+  header .top h1 img{width:60%;}
+  header .top .link-k {padding-top:18px;font-size:14px;}
+  header .top .logout {top:3px;right:10px;}
+  header .top .logout span {font-size:12px;}
+  footer {height:33px;}
+  footer address {padding-top:12px;font-size:9px;}
+}

@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/allstar.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".part-list .btn-wrap").click(function() {
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="../main_appvote.html" class="logo"><img src="../resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="../main_login.html" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote total">
+			<!-- 올스타 팀 선택 -->
+			<div class="allstar-team">
+				<ul class="allstar">
+					<li class="dream on"><a href="#none" class="menu-dream">드림 올스타</a></li>
+					<li class="nanum"><a href="#none" class="menu-nanum">나눔 올스타</a></li>
+				</ul>
+				<p class="txt-total"><!-- 나눔일 경우 nanum 클래스 추가 -->
+					올스타 투표 1차 중간 집계 현황<span>- 2020년 5월 15일 00:00 기준 -</span>
+				</p>
+			</div>
+			<!-- // 올스타 팀 선택 -->
+			<!-- 탭 메뉴 -->
+			<ul class="menu-list">
+				<li><a href="vote_pick.html">My pick</a></li>
+				<li><a href="vote_live.html">실시간 집계</a></li>
+				<li class="on"><a href="vote_total.html">중간 집계</a></li>
+			</ul>
+			<!-- // 탭 메뉴 -->
+			<!-- 중간집계 텍스트 -->
+			<p class="txt-tip">중간집계는 [KBO 홈페이지(PC / 모바일), KBO 공식 APP, KBO STATS APP, 신한 SOL APP] 팬 투표를 합산하여 매주 월요일 KBO가 공식 발표한 결과입니다.</p>
+			<!-- // 중간집계 텍스트 -->
+			<!-- 선수선택 -->
+			<ul class="part-list">
+				<li>
+					<div class="btn-wrap"><a class="btn-part">선발투수 (0/1)</a></div>
+					<div class="player-info-wrap dp-none">
+						<ul class="player-list">
+							<li class="on">
+								<div class="player-info-box">
+									<div class="rank">최다득표</div>
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환환환</div>
+									<div class="player-vote"><span>123,456</span> 표</div>
+								</div>
+								<div class="info-vote rank">1위</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+						</ul>
+						<ul class="player-list">
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+				<li class="nanum"><!-- 나눔일 경우 nanum 클래스 추가 -->
+					<div class="btn-wrap"><a class="btn-part">선발투수 (0/1)</a></div>
+					<div class="player-info-wrap dp-none">
+						<ul class="player-list">
+							<li class="on nanum">
+								<div class="player-info-box">
+									<div class="rank">최다득표</div>
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환환환</div>
+									<div class="player-vote"><span>123,456</span> 표</div>
+								</div>
+								<div class="info-vote rank">1위</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+						</ul>
+						<ul class="player-list">
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+							<li>
+								<div class="player-info-box">
+									<div class="img-box">
+										<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+										<img src="../resources/images/emblem/emblem_HH.png" alt="">
+									</div>
+									<div class="name">김재환</div>
+									<div class="player-vote">123,456 표</div>
+								</div>
+								<div class="info-vote">-13,456 표차</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<!-- // 선수선택 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="../event/event.html" class="btn-shinhan">신한 SOL 앱 투표하기</a></li>
+				<li class="on"><a href="../main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="#none" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+	<!-- 모달창 -->
+	<div id="Modal"></div>
+	<div class="popup complete">
+		<a href="#none" class="btn-close"><span>닫기</span></a>
+		<div class="content">
+			<p class="txt-complete">
+				투표가 완료되었습니다.<br/>감사합니다.
+			</p>
+            <p class="tip">
+				KBO 홈페이지(PC/모바일)와<br/>
+				신한은행 SOL 앱에서도 투표가 가능합니다.
+			</p>
+			<div class="btn-area">
+				<a href="#none" class="btn btn-kbo">KBO 모바일 앱<br/>바로가기</a>
+				<a href="#none" class="btn btn-shinhan">신한 SOL 앱<br/>바로가기</a>
+			</div>
+		</div>
+	</div>
+	<!-- // 모달창 -->
+</body>
+</html>

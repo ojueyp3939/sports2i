@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+/* 구단 */
+.GW {color:#dd5828 !important}
+.GN {color:#e83827 !important}
+.GJ {color:#ffd24f !important}
+.DG {color:#99cee3 !important}
+.DH {color:#008675 !important}
+.BS {color:#E62410 !important}
+.BC {color:#ac2424 !important}
+.GC {color:#002649 !important}
+.SF {color:#B5191A !important}
+.SE {color:#00042e !important}
+.SN {color:#000000 !important}
+.SB {color:#014099 !important}
+.SW {color:#00396f !important}
+.AS {color:#00a17f !important}
+.AY {color:#4f1b87 !important}
+.US {color:#014099 !important}
+.IC {color:#036eb8 !important}
+.JN {color:#FFDC00 !important}
+.JB {color:#276A52 !important}
+.JJ {color:#f58025 !important}
+.CA {color:#1F4A98 !important}
+.PH {color:#d6000f !important}
+.GP {color:#2F533F !important}
+
+
+DH(대전하나시티즌) #008675
+BS(부산아이파크) #E62410
+SJ(김천상무) #002649
+SF(FC서울) #B5191A
+JN(전남) #FFDC00
+JB(전북) #276A52
+CA(충남아산) #1F4A98
+
+*별도 상주상무(SJ)→김천상무(GC)로 팀명 변경되었기에 마스코트 개별페이지도 "GC"로 표기 가능할까요?
+*신규구단 : GP(김포FC) #2F533F
+
+input[type="text"], input[type="password"] {-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0px;-webkit-border-radius:0;}
+input[type="password"] {font-family:'malgun gothic';} 
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+/* popup */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.3;z-index:15;}

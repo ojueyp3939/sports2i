@@ -1,0 +1,222 @@
+﻿@charset "utf-8";
+
+#contents {padding:27px 0 78px;}
+
+/* 날짜별 게임정보 game-list */
+.game-list-wrap {position:relative;width:100%;background:#fff;}
+.game-list-wrap.fixed-on {position:fixed;top:0;margin:0;z-index:20;} 
+
+.today {padding:3px 0 7px 12px;font-size:1.4rem;font-weight:100;}
+.today .num {font-size:1.9rem;font-weight:700;}
+.today .txt {margin-left:5px;padding:0 5px;font-size:0.9rem;font-weight:700;color:#4d91ff;border-radius:10px;border:1px solid #4d91ff;}
+
+.btn-guide {position:absolute;top:5px;right:17px;width:61px;height:20px;padding:3px 6px 0 0;background:#f2f2f2 url("../images/sub/bg_guide_arrow.gif") no-repeat right 6px top 6px;background-size:5px;font-size:1.0rem;color:#a8adb3;border:1px solid #caccd0;border-radius:10px;text-align:center;}
+
+.slide-scroll {padding:10px 12px;background:#e3e5e9;}
+.slide-scroll:after{content:"";position:absolute;top:0;right:0;bottom:0;z-index:10;width:16px;opacity:0.8;
+	background:-webkit-gradient(linear,left top,right top,from(rgba(255,255,255,0)),color-stop(100%,#e3e5e9));
+	background:-webkit-linear-gradient(left,rgba(255,255,255,0),#e3e5e9 100%);
+	background:linear-gradient(to right,rgba(255,255,255,0),#e3e5e9 100%);
+}
+.slide-scroll .game-list .swiper-slide {width:auto;min-width:100%;}
+.game-list {}
+.game-list ul {overflow:hidden;padding-bottom:3px;}
+.game-list li {position:relative;float:left;width:88px;margin-right:7px;padding:5px 10px;background:#f7f9fd;
+	-webkit-box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);
+	-moz-box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);
+	box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);
+	border-radius:5px;
+}
+.game-list li:last-child {margin:0;}
+.game-list li.on, .game-list li:hover {background:#4d91ff;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(41,97,189,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(41,97,189,1);
+	box-shadow: 0px 3px 0px 0px rgba(41,97,189,1);}
+.game-list li .team {overflow:hidden;}
+.game-list li .away {margin-bottom:3px;}
+.game-list li .team .emb {float:left;width:26px;margin-right:10px;}
+.game-list li .team .name {float:left;width:25px;margin-top:4px;font-size:1.1rem;color:#888;text-align:center;}
+.game-list li.on .team .name, .game-list li:hover .team .name {color:#fff;}
+.game-list li.cancel {padding:5px 10px;background:#caccd0;
+	-webkit-box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);
+	-moz-box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);
+	box-shadow: 0px 3px 0px 0px rgb(202, 204, 208);}
+.game-list li.cancel p {position:absolute;top:50%;right:5px;margin-top:-8px;font-size:1.1rem;color:#888;}
+
+
+/* game-cont */
+.game-cont {}
+.game-cont.fixed-on {padding-top:102px;}
+.game-cont .team-record {overflow:hidden;padding:27px 23px 15px;}
+.game-cont .team-record .away {float:left;width:40%;}
+.game-cont .team-record .home {float:right;width:40%;}
+.game-cont .team-record .team {float:left;width:40%;text-align:center;}
+.game-cont .team-record .team .emb {width:45px;margin:0 auto;}
+.game-cont .team-record .record {float:left;width:60%;margin-top:4px;text-align:center;}
+.game-cont .team-record .record .info {font-size:1.0rem;font-weight:100;}
+.game-cont .team-record .vs {float:left;width:20%;margin-top:4px;font-size:1.0rem;text-align:center;}
+.game-cont .team-record .vs .ico {width:28px;height:28px;margin:0 auto;padding-top:8px;background:#d6d9df;font-weight:700;color:#fff;border-radius:20px;text-align:center;}
+.game-cont .team-record .vs .place {margin-top:10px;color:#a7a9ad;}
+
+.game-cont .prediction {padding:0 23px 30px;}
+.game-cont .prediction h3 {font-size:1.0rem;font-weight:100;color:#85898e;}
+.game-cont .prediction .graph {position:relative;margin:4px auto 6px;height:23px;background:#002857;}
+.game-cont .prediction .graph .away-g {position:absolute;top:0;left:0;height:23px;background:#be0537;z-index:5;transition:all 0.4s ease-in-out 0.35s;}
+.game-cont .prediction .graph .rate-txt {position:absolute;top:1px;left:8px;font-size:1.6rem;color:#fff;z-index:10;}
+.game-cont .prediction .graph .rate-txt span {font-size:1.0rem;}
+.game-cont .prediction .graph .rate-home {left:inherit;right:8px;}
+.game-cont .prediction .graph .result {display:block;position:relative;top:6px;font-size:1.0rem;font-weight:700;color:#fff;text-align:center;z-index:10;}
+.game-cont .prediction .LG {background:#ab014f;}
+.game-cont .prediction .SK {background:#dc0022;}
+.game-cont .prediction .KT {background:#232323;}
+.game-cont .prediction .HH {background:#d93900;}
+.game-cont .prediction .SS {background:#0046ac;}
+.game-cont .prediction .OB {background:#150f36;}
+.game-cont .prediction .NC {background:#043268;}
+.game-cont .prediction .WO {background:#420611;}
+.game-cont .prediction .LT {background:#941a09;}
+.game-cont .prediction .HT {background:#8d0820;}
+.game-cont .prediction .graph .LG {background:#ab014f;}
+.game-cont .prediction .graph .SK {background:#dc0022;}
+.game-cont .prediction .graph .KT {background:#232323;}
+.game-cont .prediction .graph .HH {background:#d93900;}
+.game-cont .prediction .graph .SS {background:#0046ac;}
+.game-cont .prediction .graph .OB {background:#150f36;}
+.game-cont .prediction .graph .NC {background:#043268;}
+.game-cont .prediction .graph .WO {background:#420611;}
+.game-cont .prediction .graph .LT {background:#941a09;}
+.game-cont .prediction .graph .HT {background:#8d0820;}
+.game-cont .prediction .sub-script {font-size:0.9rem;font-weight:100;color:#949699;}
+
+.game-cont .vs-record {padding:0 23px 30px;border-bottom:10px solid #e3e5e9;}
+.game-cont .vs-record .tab {overflow:hidden;}
+.game-cont .vs-record .tab li {float:right;margin-left:5px;padding-bottom:3px;}
+.game-cont .vs-record .tab li a {display:block;padding:4px 7px 5px;color:#a8adb3;border:1px solid #caccd0;border-radius:20px;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+	box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+}
+.game-cont .vs-record .tab li.on a, .game-cont .vs-record .tab li:hover a {padding:5px 8px 6px;background:#4d91ff;color:#fff;border:none;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);
+	box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);	
+}
+.game-cont .vs-record dl {overflow:hidden;position:relative;text-align:center;}
+.game-cont .vs-record dl .item {position:absolute;top:0;left:0;width:100%;font-weight:100;color:#85898e;text-align:center;}
+.game-cont .vs-record dl .away-record {float:left;}
+.game-cont .vs-record dl .home-record {float:right;}
+.game-cont .vs-record .total {margin:13px 0 16px;}
+.game-cont .vs-record .record-list {}
+.game-cont .vs-record .record-list li {margin-bottom:20px;}
+.game-cont .vs-record .record-list li .rate-bar {width:100%;height:3px;margin-top:3px;background:#e3e5e9;text-indent:-99999px;}
+.game-cont .vs-record .record-list li .rate-bar .bar {position:absolute;top:0;right:0;width:50%;height:3px;background:#be0537;transition:all 0.4s ease-in-out 0.35s;}
+.game-cont .vs-record .record-list li .rate-bar .away {position:relative;float:left;width:50%;}
+.game-cont .vs-record .record-list li .rate-bar .home .bar {left:0;}
+.game-cont .vs-record .record-list li .home {position:relative;float:right;width:50%;}
+.game-cont .vs-record .record-list li .LG .bar {background:#ab014f;}
+.game-cont .vs-record .record-list li .SK .bar {background:#dc0022;}
+.game-cont .vs-record .record-list li .KT .bar {background:#232323;}
+.game-cont .vs-record .record-list li .HH .bar {background:#d93900;}
+.game-cont .vs-record .record-list li .SS .bar {background:#0046ac;}
+.game-cont .vs-record .record-list li .OB .bar {background:#150f36;}
+.game-cont .vs-record .record-list li .NC .bar {background:#043268;}
+.game-cont .vs-record .record-list li .WO .bar {background:#420611;}
+.game-cont .vs-record .record-list li .LT .bar {background:#941a09;}
+.game-cont .vs-record .record-list li .HT .bar {background:#8d0820;}
+.game-cont .vs-record .recent {}
+.game-cont .vs-record .recent .result-list {overflow:hidden;}
+.game-cont .vs-record .recent .result-list li {float:left;width:16px;height:16px;margin-right:4px;padding:2px;background:#caccd0;font-size:1.0rem;color:#fff;text-align:center;}
+.game-cont .vs-record .recent .result-list li.win {background:#4d91ff;}
+
+.game-cont .pitcher {padding:18px 23px 30px;border-bottom:10px solid #e3e5e9;}
+.game-cont .pitcher .pitcher-info {overflow:hidden;padding-bottom:10px;border-bottom:1px solid #e3e5e9;}
+.game-cont .pitcher .pitcher-info .team {text-align:center;}
+.game-cont .pitcher .pitcher-info .team .player-img {width:70px;margin:0 auto;}
+.game-cont .pitcher .pitcher-info .team .name {padding:10px 0 9px;font-weight:900;}
+.game-cont .pitcher .pitcher-info .team .record {font-size:1.0rem;font-weight:100;color:#85898e;}
+.game-cont .pitcher .pitcher-info .team .record .season {display:block;padding-bottom:2px;}
+.game-cont .pitcher .pitcher-info .away {float:left;width:41%;}
+.game-cont .pitcher .pitcher-info .home {float:right;width:41%;}
+.game-cont .pitcher .pitcher-info .vs {float:left;width:18%;margin-top:40px;font-size:1.0rem;text-align:center;}
+.game-cont .pitcher .pitcher-info .vs .ico {width:28px;height:28px;margin:0 auto;padding-top:8px;background:#d6d9df;font-weight:700;color:#fff;border-radius:20px;text-align:center;}
+.game-cont .pitcher .pitcher-info .vs .txt {padding-top:6px;color:#a7a9ad;}
+.game-cont .pitcher .pitcher-record dl {overflow:hidden;padding:12px 0;text-align:center;}
+.game-cont .pitcher .pitcher-record dl .item {display:inline-block;font-weight:100;color:#85898e;}
+.game-cont .pitcher .pitcher-record dl .away-record {float:left;width:34%;text-align:right;}
+.game-cont .pitcher .pitcher-record dl .home-record {float:right;width:34%;text-align:left;}
+.game-cont .pitcher .explanation {padding:7px 5px 7px 10px;background:#eeeff2;}
+.game-cont .pitcher .explanation li {overflow:hidden;margin-bottom:3px;font-size:0.9rem;font-weight:100;color:#444;}
+.game-cont .pitcher .explanation li span {float:left;width:88%;}
+.game-cont .pitcher .explanation li .tit {position:relative;width:11%;margin-right:1%;padding-right:0.5%;}
+.game-cont .pitcher .explanation li .tit:after {content:":";position:absolute;top:0;right:0;}
+.game-cont .pitcher .explanation li em.line2 {font-style:normal;}
+
+.game-cont .key-player {padding:20px 23px 30px;}
+.game-cont .key-player .header {overflow:hidden;margin-bottom:15px;}
+.game-cont .key-player .header h3 {float:left;margin-top:5px;}
+.game-cont .key-player .header .tab {float:right;}
+.game-cont .key-player .header .tab li {float:right;min-width:63px;margin-left:5px;padding-bottom:3px;text-align:center;}
+.game-cont .key-player .header .tab li a {display:block;padding:4px 7px 5px;color:#a8adb3;border:1px solid #caccd0;border-radius:20px;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+	box-shadow: 0px 3px 0px 0px rgba(202,204,208,1);
+}
+.game-cont .key-player .header .tab li.on a, .game-cont .key-player .header .tab li:hover a {padding:5px 8px 6px;background:#4d91ff;color:#fff;border:none;
+	-webkit-box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);
+	-moz-box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);
+	box-shadow: 0px 3px 0px 0px rgba(41,98,189,1);	
+}
+.game-cont .key-player .record-area {overflow:hidden;}
+/*.game-cont .key-player .record-area .sub-script {margin-left:17%;padding:24px 0 9px;font-size:0.9rem;font-weight:100;color:#949699;text-align:center;}*/
+.game-cont .key-player .record-area .record-list li {overflow:hidden;margin-bottom:20px;}
+.game-cont .key-player .record-area .record-list li:last-child {margin-bottom:15px;}
+.game-cont .key-player .record-area .record-list .record-tit {float:left;width:17%;margin-top:28px;font-size:1.4rem;}
+.game-cont .key-player .record-area .record-list .player {float:left;width:26%;margin-right:2.5%;text-align:center;}
+.game-cont .key-player .record-area .record-list .player:last-child {margin:0;}
+.game-cont .key-player .record-area .record-list .tit {margin:0;}
+.game-cont .key-player .record-area .record-list .tit .record-tit {visibility:hidden;margin:0;text-indent:-9999px;}
+.game-cont .key-player .record-area .record-list .tit .player {font-size:1.0rem;color:#a8adb3;}
+.game-cont .key-player .record-area .record-list .tit .player .rank {text-align:center;}
+.game-cont .key-player .record-area .record-list .player .player-img {position:relative;width:77px;margin:0 auto;}
+.game-cont .key-player .record-area .record-list .player .player-img .photo {}
+.game-cont .key-player .record-area .record-list .player .player-img .emb {position:absolute;right:-2px;bottom:0;width:34px;}
+.game-cont .key-player .record-area .record-list .player .name {padding:8px 0 4px;font-weight:100;color:#444;}
+.game-cont .key-player .record-area .record-list .player .record {font-weight:700;color:#a8adb3;}
+.game-cont .key-player .record-area .record-list .no1 .rank, .game-cont .key-player .record-area .record-list .no1 .record {font-weight:700;color:#095feb;}
+.game-cont .key-player .explanation {padding:7px 5px 7px 10px;background:#eeeff2;}
+.game-cont .key-player .explanation li {overflow:hidden;margin-bottom:3px;font-size:0.9rem;font-weight:100;color:#444;}
+.game-cont .key-player .explanation li span {float:left;width:88%;}
+.game-cont .key-player .explanation li .tit {position:relative;width:11%;margin-right:1%;padding-right:0.5%;}
+.game-cont .key-player .explanation li .tit:after {content:":";position:absolute;top:0;right:0;}
+.game-cont .key-player .explanation li em.line2 {font-style:normal;}
+
+/* 버튼영역 */
+.btn-area {display:none;width:100%;padding:14px 0 25px;background:#e3e5e9;text-align:center;}
+.btn-area.fixed-on {position:fixed;bottom:0;}
+.btn-area .btn {display:inline-block;width:144px;}
+
+.is-solpick .cont {max-width:375px;margin:0 auto;}
+
+/* media query */
+@media(max-width:359px){	
+	.btn-guide {top:3px;}
+	.game-list li.cancel p {right:8px;}
+	.game-cont .team-record .record .info {letter-spacing:-1px;}	
+	.game-cont .pitcher .explanation li span {letter-spacing:-1px;}
+	.game-cont .pitcher .explanation li .tit:after {content:":";position:absolute;top:0;right:1px;}
+	.game-cont .key-player .header .tab li {min-width:55px;}
+	.game-cont .key-player .record-area .record-list .player .player-img {width:70px;}
+    .game-cont .key-player .explanation li span {letter-spacing:-1px;}
+    .game-cont .key-player .explanation li em.line2 {display:block;font-style:normal;}
+}
+
+@media(max-width:360px){
+	.game-cont .key-player .header h3 {float:none;margin-top:0;}	
+	.game-cont .key-player .header .tab {overflow:hidden;float:none;margin-top:10px;}
+    .game-cont .prediction .sub-script .line2 {display:block;}
+    .game-cont .pitcher .explanation li em.line2, .game-cont .key-player .explanation li em.line2 {display:block;font-style:normal;}    
+}
+
+@media(orientation:landscape){
+	.game-cont .pitcher .pitcher-info .team .record .season {display:inline;margin-right:5px;}	
+}

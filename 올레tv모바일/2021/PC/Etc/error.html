@@ -1,0 +1,939 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Play your 'Seezn'</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../resources/images/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../resources/images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/favicon/favicon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/etc.css" />
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- haeder -->
+        <header class="dp-none">
+            <div class="header ui sticky">
+                <div class="left">
+                    <h1><a href="#" class="btn-logo"><i class="ui icon logo"><span class="blind">seezn</span></i></a></h1>
+                </div>
+                <div class="all-menu">
+                    <!-- 활성화된 메뉴는 .active 추가 (카테고리도 포함) -->
+                    <a href="#" class="btn-expand">카테고리</a>
+                    <a href="#" class="link active">TV 다시보기</a>
+                    <a href="#" class="link">영화/시리즈</a>
+                    <a href="#" class="link">오리지널</a>
+                    <a href="#" class="link">실시간TV</a>
+                    <a href="#" class="link">무료</a>
+                </div>
+                <div class="expand-menu">
+                    <div class="gnb-list">
+                        <ul>
+                            <li>
+                                <a href="#" class="current">
+                                    <!-- 현재 선택된 메뉴 .current-->
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-movie-select.svg" alt="" /></div>
+                                    <div class="name">영화/시리즈</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-orignal-select.svg" alt="" /></div>
+                                    <div class="name">오리지널</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-orignal-select.svg" alt="" /></div>
+                                    <div class="name">오리지널</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-orignal-select.svg" alt="" /></div>
+                                    <div class="name">오리지널</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-19-select.svg" alt="" /></div>
+                                    <div class="name">성인</div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-orignal-select.svg" alt="" /></div>
+                                    <div class="name">오리지널</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-orignal-select.svg" alt="" /></div>
+                                    <div class="name">오리지널</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-movie-select.svg" alt="" /></div>
+                                    <div class="name">영화/시리즈</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-movie-select.svg" alt="" /></div>
+                                    <div class="name">영화/시리즈</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-movie-select.svg" alt="" /></div>
+                                    <div class="name">영화/시리즈</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-replay-select.svg" alt="" /></div>
+                                    <div class="name">TV 다시보기</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-music-select.svg" alt="" /></div>
+                                    <div class="name">뮤직</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-tv-live-select.svg" alt="" /></div>
+                                    <div class="name">실시간 TV</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-clip-select.svg" alt="" /></div>
+                                    <div class="name">클립</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-movie-select.svg" alt="" /></div>
+                                    <div class="name">영화/시리즈</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-kidsland-select.svg" alt="" /></div>
+                                    <div class="name">키즈랜드</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="logo"><img src="../resources/images/svg/icon-menu-free-select.svg" alt="" /></div>
+                                    <div class="name">무료</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cate-ui">
+                        <button type="button" class="btn prev disabled" aria-label="이전 슬라이드" data-direction="-1">이전 슬라이드</button>
+                        <button type="button" class="btn next" aria-label="다음 슬라이드" data-direction="1">이전 슬라이드</button>
+                    </div>
+                </div>
+                <div class="right">
+                    <a href="javascript:void(0);" class="btn-search"><i class="ui icon search"><span class="blind">검색</span></i></a>
+                    <!-- header search -->
+                    <div class="header-search-wrap">
+                        <div class="search-input-wrap">
+                            <label for="szGnbSearch">시즌 검색</label>
+                            <input type="text" id="szGnbSearch" name="gnbName" value="" placeholder="검색어를 입력하세요.">
+                            <button type="button" class="btn clear"><span class="blind">삭제</span></button>
+                            <button type="button" class="btn search" disabled><span class="blind">검색</span></button>
+                            <button type="button" class="btn close"><span class="blind">닫기</span></button>
+                        </div>
+                        <div class="search-popular">
+                            <div class="search-list-wrap">
+                                <div class="header">실시간 인기 검색어</div>
+                                <ul class="list">
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            슬기로운 의사 생활
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            대탈출
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            이태원 클라쓰
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            아는형님
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            토킹 로맨스!토킹
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            하이바이,마마!
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            나혼자산다
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            로맨스,토킹
+                                        </a>
+                                    </li>
+                                    <li class="rank">
+                                        <a href="javascript:void(0)">
+                                            유 퀴즈 온 더 블럭 asdf sad fsad fsad fsadf
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-history">
+                            <div class="search-list-wrap">
+                                <div class="header">
+                                    최근 검색어
+                                    <a href="javascript:void(0)" class="btn remove-all">전체삭제</a>
+                                </div>
+                                <!-- <div class="empty">최근 검색어 내역이 없습니다.</div> -->
+                                <ul class="list">
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            이태원
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            부부의 세계
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            아티스트
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                    <li class="history">
+                                        <a href="javascript:void(0)">
+                                            간다라ㅏㅇ랑랄알ㅏㅏㅏㅏㅏㅏㅏㅣㅣㅏㅏㅏㅏㅏㅣㅣ
+                                        </a>
+                                        <button type="button" class="btn remove"><span class="blind">remove</span></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="search-autocomplate">
+                            <div class="scroll-wrap">
+                                <div class="flex-wrap">
+                                    <div class="search-list-wrap">
+                                        <div class="header">
+                                            자동 완성어
+                                        </div>
+                                        <ul class="list">
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 꼬마들
+                                                    <span class="category">아주 아주 긴 항목 테스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    리틀 <span class="keyword">이태</span>리
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>웅
+                                                    <span class="category">인물</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>리 오징어 순대집
+                                                    <span class="category">TV 다시보기</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰 아주 아주 정말 정말 긴 제목 테스트 입니다.
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 꼬마들
+                                                    <span class="category">아주 아주 긴 항목 테스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    리틀 <span class="keyword">이태</span>리
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>웅
+                                                    <span class="category">인물</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 꼬마들
+                                                    <span class="category">아주 아주 긴 항목 테스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    리틀 <span class="keyword">이태</span>리
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>웅
+                                                    <span class="category">인물</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>리 오징어 순대집
+                                                    <span class="category">TV 다시보기</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰 아주 아주 정말 정말 긴 제목 테스트 입니다.
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 클라쓰
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>원 꼬마들
+                                                    <span class="category">아주 아주 긴 항목 테스트</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    리틀 <span class="keyword">이태</span>리
+                                                    <span class="category">영화/시리즈</span>
+                                                </a>
+                                            </li>
+                                            <li class="auto">
+                                                <a href="javascript:void(0)">
+                                                    <span class="keyword">이태</span>웅
+                                                    <span class="category">인물</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // header search -->
+                    <a href="#" class="link" title="새창열림">이용권</a>
+                    <a href="#" class="link">이벤트</a>
+                    <a href="#" class="emoji">로그인</a> <!-- 로그인했을 경우 emoji 클래스 추가 -->
+                    <!-- 프로필 레이어 팝업 -->
+                    <div class="profile-layer">
+                        <div class="title">
+                            <span class="name">My Seezn</span>
+                            <button type="button" class="btn-logout">로그아웃</button>
+                        </div>
+                        <ul class="list">
+                            <li>
+                                <a href="#">
+                                    <span class="icon type1"></span>
+                                    <span class="name">찜한 콘텐츠</span>
+                                    <span class="num">300</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type2"></span>
+                                    <span class="name">좋아요</span>
+                                    <span class="num">12</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type3"></span>
+                                    <span class="name">구매 목록</span>
+                                    <span class="num">15</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type5"></span>
+                                    <span class="name">시청 목록</span>
+                                    <span class="num">133</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type6"></span>
+                                    <span class="name">19+시청/구매 목록</span>
+                                    <span class="num"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type7"></span>
+                                    <span class="name">올레tv시청/구매 목록</span>
+                                    <span class="num"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon type8"></span>
+                                    <span class="name">환경설정</span>
+                                    <span class="num"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // 프로필 레이어 팝업 -->
+                </div>
+            </div>
+            <div class="header-baseball">
+                <h2>프로야구 LIVE</h2>
+                <nav class="gnb-wrap">
+                    <ul class="gnb">
+                        <li class="on"><a href="../Playball/playball.html"><span>홈</span></a></li>
+                        <li><a href="../Video/video.html"><span>VOD</span></a></li>
+                        <li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+                        <li><a href="../Rank/rank.html"><span>순위</span></a></li>
+                        <li><a href="../Record/record.html"><span>기록</span></a></li>
+                        <li><a href="../My/my.html"><span>MY</span></a></li>
+                    </ul>
+                    <h3>찜 영상</h3>
+                </nav>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents">
+                <dl class="error">
+                    <dt>요청하신 페이지를 찾을 수 없습니다.</dt>
+                    <dd>페이지 주소가 정확하지 않거나 <br/>페이지에 오류가 있어 요청하신 내용을 찾을 수 없습니다.</dd>
+                    <dd class="btn"><a href="../Playball/Playball.html" class="btn-error">메인 페이지로 가기</a></dd>
+                </dl>
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

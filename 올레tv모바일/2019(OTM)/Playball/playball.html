@@ -1,0 +1,658 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/schedule.css" />	<!-- 순서중요 -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/playball.css" />
+  <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Oswald&display=swap" >
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Preview").bxSlider({
+				controls:false
+			});
+		});
+
+    function loaded() {
+      var myScroll1 = new IScroll('#TodayList', {
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+
+      var myScroll2 = new IScroll('#FivegBox', {
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll3 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+    }
+
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap" class="">
+		<!-- header -->
+		<header>
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li><a href="../highlight/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+			<a href="javascript:;" class="btn-home"><img src="../resources/images/common/btn_home.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+    <!-- container -->
+    <div id="container">
+      <!-- contents -->
+      <div id="contents" class="playball">
+        <!-- <div id="MainCont">
+          <section class="broadcast"> 가로형태일 경우 highlight-view 클래스 추가
+            <iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="control-box highlight-control">하이라이트일 경우 highlight-control 클래스 추가
+              <div class="btn-highlight-back">
+                <a href="javascript:;" class="btn-back">뒤로가기</a>
+              </div>
+              <div class="btn-player">
+                <a href="#none" class="btn-play">PLAY</a> 정지시 stop 클래스 추가
+              </div>
+              <div class="btn-control">
+  							<div class="btn-quality-wrap">
+  								<a href="javascript:;" class="btn-quality">고화질</a>
+  								<ul class="quality-list">
+  									<li><a href="javascript:;">초고화질</a></li>
+  									<li><a href="javascript:;">고화질</a></li>
+  									<li><a href="javascript:;">일반화질</a></li>
+  								</ul>
+  							</div>
+  							<a href="javascript:;" class="btn-volume">음소거</a>
+                <a href="javascript:;" class="btn-mode">
+                  <img src="../resources/images/playball/btn_mode.png" alt="전체화면으로보기" />
+                  <img src="../resources/images/playball/btn_mode02.png" alt="축소화면으로보기" />
+                </a>
+  						</div>
+            </div>
+          </section>
+          <section class="live">
+            <h2 class="tit-highlight">[4/4] KT:두산 H/L</h2>
+            <div class="btn-area">
+              <a href="#none" class="btn-preview">프리뷰</a> 중계보기는 .btn-liveview 클래스
+            </div>
+          </section>
+        </div> -->
+      </div>
+			<div class="playball main-playball">
+				<div id="MyTeam" class="LG"><!-- HH WO NC OB SS SK HT LG LT 팀코드 추가, 선호팀없음 선택시 no-myteam class추가 -->
+					<!-- 마이팀 선택 - 경기전 -->
+					<div id="Preview" class="myteam-area">
+						<section class="analysis">
+							<h1 class="tit">10.12(금) <span class="season-day">시즌 16차전</span></h1>
+							<div class="info-box">
+								<span class="tag">DH 1</span>
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="name">KT 위즈</div>
+									<div class="team-info">
+										<span class="rank">1위</span>
+										<span class="recent"><em class="lose">패</em><em class="win">승</em><em class="lose">패</em></span>
+									</div>
+								</div>
+								<div class="game-info">
+									<time>18:30</time>
+									<div class="place">대전</div>
+									<a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+								</div>
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="name">한화 이글스</div>
+									<div class="team-info">
+										<span class="rank">3위</span>
+										<span class="recent"><em class="win">승</em><em class="draw">무</em><em class="lose">패</em></span>
+									</div>
+								</div>
+							</div>
+						</section>
+						<section class="pitcher">
+							<h1 class="tit">선발투수</h1>
+							<div class="info-box">
+								<div class="player">
+									<div class="team away">
+										<div class="name">엄상백백백</div>
+										<div class="player-img">
+											<img src="" alt="" />
+										</div>
+									</div>
+									<div class="vs">vs</div>
+									<div class="team home">
+										<div class="player-img">
+											<img src="" alt="" />
+										</div>
+										<div class="name">다이아몬드</div>
+									</div>
+								</div>
+								<div class="record">
+									<dl class="season">
+										<dt>시즌</dt>
+										<dd class="away">15경기 88승 99패 99무<br />ERA 2.68</dd>
+										<dd class="home">15경기 88승 99패 99무<br />ERA 2.68</dd>
+									</dl>
+									<dl class="vs">
+										<dt>맞대결</dt>
+										<dd class="away">3경기 0승 0패</dd>
+										<dd class="home">3경기 0승 0패</dd>
+									</dl>
+								</div>
+							</div>
+						</section>
+						<section class="lineup lineup-my">
+							<h1 class="tit">KT 라인업</h1>
+							<div class="info-box">
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+								<div class="ground">
+									<div class="ground-img"><img src="../resources/images/playball/img_ground_690.png" alt="" /></div>
+									<ul class="player-list KT">
+										<li class="C"><span class="position">C</span>다이아몬드</li>
+										<li class="DH"><span class="position">DH</span>다이아몬드</li>
+										<li class="B1"><span class="position">1B</span>다이아몬드</li>
+										<li class="B2"><span class="position">2B</span>다이아몬드</li>
+										<li class="B3"><span class="position">3B</span>다이아몬드</li>
+										<li class="P"><span class="position">P</span>다이아몬드</li>
+										<li class="SS"><span class="position">SS</span>다이아몬드</li>
+										<li class="LF"><span class="position">LF</span>다이아몬드</li>
+										<li class="CF"><span class="position">CF</span>다이아몬드</li>
+										<li class="RF"><span class="position">RF</span>다이아몬드</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class="lineup lineup-op">
+							<h1 class="tit">KT 라인업</h1>
+							<div class="info-box">
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+								<div class="ground">
+									<div class="ground-img"><img src="../resources/images/playball/img_ground_690.png" alt="" /></div>
+									<ul class="player-list HH">
+										<li class="C"><span class="position">C</span>다이아몬드</li>
+										<li class="DH"><span class="position">DH</span>다이아몬드</li>
+										<li class="B1"><span class="position">1B</span>다이아몬드</li>
+										<li class="B2"><span class="position">2B</span>다이아몬드</li>
+										<li class="B3"><span class="position">3B</span>다이아몬드</li>
+										<li class="P"><span class="position">P</span>다이아몬드</li>
+										<li class="SS"><span class="position">SS</span>다이아몬드</li>
+										<li class="LF"><span class="position">LF</span>다이아몬드</li>
+										<li class="CF"><span class="position">CF</span>다이아몬드</li>
+										<li class="RF"><span class="position">RF</span>다이아몬드</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+						<section class="no-game">
+							<h1 class="tit">10.12(금)</h1>
+							<div class="info-box">
+								<dl class="no-play">
+									<dt>오늘은 MY팀의 경기가 없습니다.</dt>
+									<dd>옆으로 밀어 다음 경기일정을 보세요!</dd>
+								</dl>
+							</div>
+						</section>
+					</div>
+
+					<!-- <div id="Live" class="myteam-area">
+						<section class="cast">
+							<h1 class="tit">10.12(금) <span class="season-day">시즌 16차전</span></h1>
+							<div class="info-box">
+								<span class="tag">DH 1</span>
+								<div class="team away">
+									<div class="player-info">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+										<div class="player">
+											<span class="position">투</span>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+									<div class="score win">99</div>
+								</div>
+								<div class="game-info">
+									<div class="giga-live"><img src="../resources/images/common/logo_gigalive.png" alt="" /></div>
+									<div class="current-info"><strong>LIVE</strong> 9회말</div>
+									<ul class="base">
+										<li class="b1">1루</li>
+										<li class="b2 on">2루</li>
+										<li class="b3">3루</li>
+									</ul>
+									<div class="ballcount">
+										<span class="b">1B</span>
+										<span class="s">2B</span>
+										<span class="o">2B</span>
+									</div>
+									<a href="#none" class="btn red">스마트 중계</a>
+								</div>
+								<div class="team home">
+									<div class="score">99</div>
+									<div class="player-info">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="player">
+											<em class="position">타</em>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+								</div>
+								<%-- 서스펜디드 일때 --%>
+								<p class="spd">구장 사정으로 <br />서스펜디드 게임(일시정지 경기)이 선언되었습니다.</p>
+							</div>
+						</section>
+					</div> -->
+
+					<!-- 마이팀 선택 - 경기후 -->
+					<!-- <div id="Review" class="myteam-area">
+						<section>
+							<h1 class="tit">10.12(금) <span class="season-day">시즌 16차전</span></h1>
+							<div class="info-box">
+								<span class="tag">DH 1</span>
+								<div class="team away">
+									<div class="player-info">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+										<div class="player">
+											<span class="result win">승</span>
+											<span class="name">엄상백백백</span>
+										</div>
+										<div class="player">
+											<span class="result save">세</span>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+									<div class="score win">99</div>
+								</div>
+								<div class="game-info">
+									<div class="end">경기종료</div>
+									<a href="#none" class="btn black">리뷰</a>
+								</div>
+								<div class="team home">
+									<div class="score">99</div>
+									<div class="player-info">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="player">
+											<span class="result lose">패</span>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div> -->
+
+					<!-- <div id="Etc">
+						<section class="no-game">
+							<h1 class="tit">10.12(금)</h1>
+							<dl class="info-box">
+								<dt>오늘은 경기가 없습니다.</dt>
+								<dd><a href="#none" class="btn arrow red">다음 경기일정 보기</a></dd>
+							</dl>
+						</section>
+					  <section class="myteam-setting">
+							<dl class="info-box">
+								<dt>MY팀을 설정하세요.</dt>
+								<dd class="txt">실시간 PUSH, 경기 일정 안내 등 <br />MY팀의 경기를 보다 빠르게 확인할 수 있습니다.</dd>
+								<dd><a href="#none" class="btn arrow red">MY팀 설정하러 가기</a></dd>
+							</dl>
+						</section> -->
+						<!-- <section class="cancel">
+							<h1 class="tit">10.12(금) <span class="season-day">시즌 16차전</span></h1>
+							<div class="info-box">
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+									<div class="name">KT 위즈</div>
+								</div>
+								<div class="game-info">
+									<time>경기취소</time>
+									<div class="place">대전</div>
+								</div>
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+									<div class="name">한화 이글스</div>
+								</div>
+							</div>
+						</section> -->
+					</div>
+				</div>
+
+        <section class="playball-list-wrap main-playball">
+          <h1>5G 스타디움</h1>
+          <div id="FivegBox" class="scroll-wrap">
+            <div class="scroller">
+              <ul class="fiveg-tab">
+                <li class="on"><a href="playball_스마트경기장_메인.html"><i class="fiveg-icon icon1"></i>매트릭스뷰</a></li>
+                <li class="on"><a href="#none"><i class="fiveg-icon icon2"></i>인기 View</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon3"></i>구장</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon4"></i>덕아웃</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon5"></i>응원석</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon6"></i>3루측 외야</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon7"></i>배터리</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon8"></i>내야</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon9"></i>1루측 외야</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon10"></i>3루</a></li>
+                <li><a href="#none"><i class="fiveg-icon icon11"></i>1루</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+				<!--<section class="game-list">
+					<h1>Today</h1>
+					<ul>
+						<li class="info-box review">
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="result win">승</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score win">99</div>
+							</div>
+							<div class="game-info">
+								<div class="end">경기종료</div>
+								<a href="../Playball/playball_리뷰_경기기록.html" class="btn black">리뷰</a>
+							</div>
+							<div class="team home">
+								<div class="score">99</div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<span class="result lose">패</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="info-box cancel">
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score"></div>
+							</div>
+							<div class="game-info">
+								<time>경기취소</time>
+								<div class="place">대전</div>
+							</div>
+							<div class="team home">
+								<div class="score"></div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="info-box live">
+							<span class="tag">DH 1</span>
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="position">투</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score win">99</div>
+							</div>
+							<div class="game-info">
+								<div class="giga-live"><img src="../resources/images/common/logo_gigalive.png" alt="" /></div>
+								<div class="current-info spd">
+									<strong>LIVE</strong> 9회말 -->
+									<!-- 서스펜디드 일때 spd 클래스추가 -->
+									<!-- <span class="txt-spd">서스펜디드</span>
+								</div>
+								<a href="../Playball/playball_스마트중계_관전포인트.html" class="btn red">스마트 중계</a>
+							</div>
+							<div class="team home">
+								<div class="score">99</div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<em class="position">타</em>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="info-box preview">
+							<span class="tag">DH 1</span>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+								<div class="player-info">
+									<div class="player-img">
+										<img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+									</div>
+									<div class="name">신정락락락</div>
+								</div>
+							</div>
+							<div class="game-info">
+								<div class="info"><time>18:30</time><span class="place">대전</span></div>
+								<a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+							</div>
+							<div class="team home">
+								<div class="player-info">
+									<div class="player-img">
+										<img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+									</div>
+									<div class="name">신정락락락</div>
+								</div>
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+							</div>
+						</li>
+						<li class="info-box lineup-before">
+							<div class="team away">
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="name">
+										<span class="">KT</span>
+									</div>
+								</div>
+								<div class="score"></div>
+							</div>
+							<div class="game-info">
+								<div class="info"><time>18:30</time><span class="place">대전</span></div>
+								<a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+							</div>
+							<div class="team home">
+								<div class="score"></div>
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="name">
+										<span class="">한화</span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>-->
+        <section class="playball-list-wrap main-playball">
+          <h1>Today</h1>
+          <div id="TodayList" class="scroll-wrap">
+            <div class="scroller">
+              <ul class="today-list">
+                <li class="preview on">
+                  <div class="team away">
+                    <span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+                    <span class="score"></span>
+                  </div>
+                  <span class="state">18:30</span>
+                  <div class="team home">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                    <div class="score"></div>
+                  </div>
+                </li>
+                <li class="live">
+                  <div class="team away">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                    <div class="score">99</div>
+                  </div>
+                  <span class="state">3회초</span>
+                  <div class="team home">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                    <div class="score">99</div>
+                  </div>
+                </li>
+                <li class="review">
+                  <div class="team away">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                    <div class="score">99</div>
+                  </div>
+                  <span class="state">종료</span>
+                  <div class="team home">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                    <div class="score">99</div>
+                  </div>
+                </li>
+                <li class="cancel">
+                  <div class="team away">
+                    <div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+                    <div class="score"></div>
+                  </div>
+                  <span class="state">18:30</span>
+                  <div class="team home">
+                    <div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+                    <div class="score"></div>
+                  </div>
+                </li>
+                <li class="preview">
+                  <div class="team away">
+                    <span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+                    <span class="score"></span>
+                  </div>
+                  <span class="state">18:30</span>
+                  <div class="team home">
+                    <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                    <div class="score"></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="no-play dp-none">오늘은 경기가 없습니다.</p>
+        </section>
+        <section class="playball-list-wrap main-playball">
+          <h1>
+            하이라이트
+            <a href="#none" class="more-btn">더보기<i></i></a>
+          </h1>
+          <ul class="highlight-list">
+            <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+            <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+          </ul>
+        </section>
+				<section class="img-no-game">
+					<img src="../resources/images/playball/img_no_game1.png" alt="" />
+					<img src="../resources/images/playball/img_no_game2.png" alt="" />
+					<img src="../resources/images/playball/img_no_game3.png" alt="" />
+					<img src="../resources/images/playball/img_no_game4.png" alt="" />
+					<img src="../resources/images/playball/img_no_game5.png" alt="" />
+				</section>
+				<section class="img-no-game another">
+					<img src="../resources/images/playball/img_no_game_pad1.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad2.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad3.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad4.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad5.png" alt="" />
+				</section>
+				<div class="data-free data-no-game"><!-- 경기가 없는날일 경우 data-no-game 클래스 추가-->
+					<p class="txt-tip">
+            KT 모바일 단말기로 이용 시, 6월 30일까지
+            <span>데이터 통화료가 무료입니다.</span>
+            <span>('프로야구 Live'외 다른 서비스/콘텐츠 잉 및 타 통신사</span>
+            <span>단말기 이용 시, 데이터 통화료가 발생할 수 있습니다.)</span>
+          </p>
+				</div>
+        <div class="data-free data-no-game another-pad">
+					<p class="txt-tip">
+            KT 모바일 단말기로 이용 시, 6월 30일까지 데이터 통화료가 무료입니다.
+            <span>('프로야구 Live'외 다른 서비스/콘텐츠 잉 및 타 통신사 단말기 이용 시, 데이터 통화료가 발생할 수 있습니다.)</span>
+          </p>
+				</div>
+				<ul class="quick-button">
+					<li class="live"><a href="javascript:;"><img src="../resources/images/smart/btn_smart_stadium.png" alt="" /></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+	<!-- <div id="Modal"></div>
+	<div id="Popup" class="pop-login">
+		<header>
+			<h1 class="tit">로그인</h1>
+			<a href="#none" class="btn-close"><span>닫기</span></a>
+		</header>
+		<div class="content">
+			<p>MY팀 설정은 로그인이 필요한 서비스입니다. <br />로그인하시겠습니까?</p>
+		</div>
+		<div class="btn-area">
+			<a href="#none" class="btn btn-cancel mr10">취소</a>
+			<a href="#none" class="btn btn-confirm">로그인</a>
+		</div>
+	</div> -->
+</body>
+</html>

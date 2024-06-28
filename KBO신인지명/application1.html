@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+			<div class="user">
+				<p>
+					<img src="resources/images/main/icon_user.png" />
+					<span class="name">홍길동</span>님
+				</p>
+				<a class="link" href=""><b>회원정보 수정</b></a>
+				<a class="link" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="application">
+				<h1>신청서 작성</h1>
+				<h2>1. 기본 신상 명세
+					<span class="blue">허위 사실로 작성 시, 신청이 취소될 수 있습니다.</span>
+				</h2>
+				<section class="application-wrap">
+					<div class="application-box">
+						<div class="pic">
+							<div class="pic-img"></div>
+							<p>사진등록<br/><span>(100 X 140)</span></p>
+						</div>
+						<div class="data">
+							<table class="tbl">
+								<colgroup>
+									<col width="100px">
+									<col width="240px">
+									<col width="90px">
+									<col width="">
+								</colgroup>
+								<tr class="first">
+									<th>이름 (한글)</th>
+									<td>
+										<input class="w209" type="text">
+									</td>
+									<th>생년월일</th>
+									<td>
+										<select class="w74">
+											<option></option>
+										</select>
+										<span>년</span>
+										<select class="w57">
+											<option></option>
+										</select>
+										<span>월</span>
+										<select class="w57">
+											<option></option>
+										</select>
+										<span>일</span>
+									</td>
+								</tr>
+								<tr>
+									<th>이름 (영문)</th>
+									<td>
+										<input class="w209" type="text" placeholder="(여권영문명)">
+									</td>
+									<th>휴대폰</th>
+									<td>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>보호자 성명</th>
+									<td>
+										<input class="w209" type="text">
+									</td>
+									<th>보호자 관계</th>
+									<td class="realtion">
+										<input class="w209" type="text">
+										<p>(본인의)</p>
+									</td>
+								</tr>
+								<tr>
+									<th>보호자 휴대폰</th>
+									<td colspan="3">
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>이메일</th>
+									<td colspan="3">
+										<input class="w106" type="text">
+										<span>@</span>
+										<input class="w106 mr5" type="text">
+										<select class="w142">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="fixd-tit">
+										<p>주소</p>
+									</th>
+									<td colspan="3">
+										<div>
+											<input class="w209 mb10 mr5" type="text" disabled="disabled" />
+											<a href="" class="btn-post">
+												우편번호 검색	
+											</a>
+											<input type="text">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="line"></div>
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="63px">
+								<col width="194px">
+								<col width="63px">
+								<col width="194px">
+								<col width="63px">
+								<col width="194px">
+								<col width="60px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>포지션</th>
+								<td>
+									<select class="w160">
+										<option></option>
+									</select>
+								</td>
+								<th>신장</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(cm)</p>
+									</div>
+								</td>
+								<th>체중</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(kg)</p>
+									</div>
+								</td>
+								<th>100m</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(초)</p>
+									</div>
+								</td>
+							</tr>
+						</table>
+						
+						<table class="tbl">
+							<colgroup>
+								<col width="40px">
+								<col width="136px">
+								<col width="130px">
+							</colgroup>
+							<tr>
+								<th>
+									병역
+								</th>
+								<th class="txt-c">
+									<p>(병역면제 또는<br/>제2국민역은 사유 작성)</p>
+								</th>
+								<td>
+									<select class="army">
+										<option>미필</option>
+										<option>병역면제</option>
+									</select>
+								</td>
+								<td>
+									<div class="text">
+										<p>사유 :</p>
+										<textarea></textarea>
+									</div>
+									<p>[사유는 500자 이내로 작성바랍니다.]</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+				<div class="btn-wrap">
+					<a href="">이전</a>
+					<a href="" class="blue">다음</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

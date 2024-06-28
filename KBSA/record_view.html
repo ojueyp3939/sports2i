@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$('#tab1').click(function () {
+				$('#tab1').addClass('on');
+				$('#tab2').removeClass('on');
+				$('#box1').addClass('on');
+				$('#box2').removeClass('on');
+			});
+			$('#tab2').click(function () {
+				$('#tab2').addClass('on');
+				$('#tab1').removeClass('on');
+				$('#box2').addClass('on');
+				$('#box1').removeClass('on');
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="record_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+				</h1>
+				<ul class="menu">
+					<li class="on">
+						<a href="record_list.html">기록 보기</a>
+					</li>
+					<li>
+						<a href="record_insert.html">기록 입력</a>
+					</li>
+					<li>
+						<a href="video_upload.html">영상 입력</a>
+					</li>
+					<li>
+						<a href="admin.html">관리자 전용</a>
+					</li>
+				</ul>
+				<ul class="user_menu">
+					<li>
+						<a href="#">
+							<img src="resources/images/common/icon_pw.png" alt="비밀번호 변경" />
+							비밀번호변경
+						</a>
+						<!-- 비밀번호 변경 레이어 팝업 -->
+						<div class="layer-pw" style="display:none;">
+							<h2>비밀번호 변경</h2>
+							<div>
+								<ul>
+									<li>
+										<label for="pw_now">현재 비밀번호</label>
+										<input type="password" id="pw_now">
+									</li>
+									<li>
+										<label for="pw_new">새 비밀번호</label>
+										<input type="password" id="pw_new">
+									</li>
+									<li>
+										<label for="pw_new_check">새 비밀번호 확인</label>
+										<input type="password" id="pw_new_check">
+									</li>
+								</ul>
+								<ul class="pw_notice">
+									<li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+									<li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+								</ul>
+								<p class="btn_save">
+									<a href="#">저장</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#">
+							<img src="resources/images/common/icon_pw.png" alt="로그아웃" />
+							로그아웃
+						</a>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<div class="board-wrap">
+					<div class="left">
+						<div class="left-board left">
+							<img src="resources/images/common/img_ball.png" alt="B, C, S, F, D">
+							<div class="ball-board">
+								<i class="ball b" style="top:20px;left:50px">
+									2
+									<div class="layer-video">
+										<img src="resources/images/common/icon_video.png" alt="배터리뷰">
+										배터리뷰
+									</div>
+								</i>
+								<div class="square" style="top:0;left:50px;width:100px;height:100px;"></div>
+							</div>
+						</div>
+						<div class="center-board">
+							<table class="tbl">
+								<thead>
+									<tr>
+										<th>이닝</th>
+										<th>초/말</th>
+										<th>투수</th>
+										<th>타자</th>
+										<th>코멘트</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="on">
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="bottom-board">
+							<table class="tbl small">
+								<thead>
+									<tr>
+										<th>이닝</th>
+										<th>초/말</th>
+										<th>투수</th>
+										<th>타자</th>
+										<th>코멘트</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="on">
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td><img class="dot" src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="right">
+						<div class="right-board">
+							영상 자리
+						</div>
+					</div>
+				</div>
+				<ul class="bat-wrap">
+					<li>
+						<p>홈플레이트 앞면 로케이션</p>
+						<div class="bat-left">
+							<i class="ball c" style="top:20px;left:50px"></i>
+							<div class="square head" style="top:0;left:10px;width:50px;height:50px;"></div>
+						</div>
+						<div class="bat-right">
+							<i class="ball c" style="top:50px;left:100px"></i>
+							<div class="square-fixed"></div>
+						</div>
+					</li>
+					<li>
+						<p>홈플레이트 뒷면 로케이션</p>
+						<div class="bat-left">
+							<i class="ball c" style="top:20px;left:50px"></i>
+							<div class="square back" style="top:0;left:10px;width:50px;height:50px;"></div>
+						</div>
+						<div class="bat-right">
+							<i class="ball c" style="top:50px;left:100px"></i>
+							<div class="square-fixed"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- footer -->
+	<footer>
+		<div>
+			<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+			<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+		</div>
+	</footer>
+	<!-- //footer -->
+	</div>
+
+</body>
+
+</html>

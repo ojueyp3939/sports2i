@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub2.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/print.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css" />
+	<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/common.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">승인신청</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li class="on"><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명관리</a></li>
+							<li><a href="#none">텍스트관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">	
+			<div class="tit-area">
+				<div class="inner">
+					<h2>공시확인</h2>
+				</div> 
+			</div>
+
+			<div id="PrintArea" class="official-confirm print">		
+				<div id="Page01" class="page-break">
+					<!-- 인쇄 헤더 -->
+					<div class="print-header">
+						<div class="logo"><img src="../../resources/images/sub/print_logo_kbo.jpg" alt="" /></div>
+						<div class="logo-2"><img src="../../resources/images/sub/print_logo_abwy.jpg" alt="" /></div>
+					</div>
+					<!-- 인쇄 수발신인 정보 -->
+					<div class="print-info">
+						<dl class="info01">
+							<dt>수신자<br />(경유)</dt>
+							<dd>구단 대표이사</dd>
+						</dl>
+						<dl class="info02">
+							<dt>참조</dt>
+							<dd>운영팀장</dd>
+						</dl>
+						<dl class="info03">
+							<dt>제목</dt>
+							<dd>자유계약선수 공시</dd>
+						</dl>
+					</div>
+					<!-- 인쇄 본문 -->
+					<div class="document">
+						<div class="comment">
+							KBO 규약 제 30 조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. KBO 규약 제 30조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. KBO 규약 제 30조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. 
+						</div>
+						<div class="tbl-type">
+							<table class="tbl">
+								<colgroup>
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="40%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th rowspan="2">경기일자</th>
+										<th rowspan="2">구장</th>
+										<th colspan="2">대진팀</th>
+										<th colspan="2">경기개시 시간</th>
+										<th rowspan="2">변경사유</th>
+									</tr>
+									<tr>
+										<th>원정</th>
+										<th>홈</th>
+										<th>변경전</th>
+										<th>변경후</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2">6.6.(수)</td>
+										<td>잠실</td>
+										<td>한화</td>
+										<td>LG</td>
+										<td rowspan="2">17:00</td>
+										<td rowspan="2">18:00</td>
+										<td>지상파 TV 중계(SBS)</td>
+									</tr>
+									<tr>
+										<td>사직</td>
+										<td>SK</td>
+										<td>롯데</td>
+										<td>지상파 TV 중계(MBC)</td>
+									</tr>
+									<tr>
+										<td>6.8.(수)</td>
+										<td>	대구</td>
+										<td>	넥센</td>
+										<td>	삼성</td>
+										<td>	17:00</td>
+										<td>	18:30</td>
+										<td>지상파 TV 중계(KBS 1TV)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="end">끝</div>
+					</div>
+					<!-- 인쇄 푸터 -->
+					<div class="print-footer">
+						<div class="ceo">
+							<span>사단법인</span>
+							<span>한&nbsp;국&nbsp;야&nbsp;구&nbsp;위&nbsp;원&nbsp;회&nbsp;&nbsp;&nbsp;총&nbsp;재</span>
+						</div>
+						<div class="print-signature">
+							<div class="row-group">
+								사원 : 문소현&nbsp;&nbsp;&nbsp;대리 : 김소영&nbsp;&nbsp;&nbsp;대리 : 손재웅&nbsp;&nbsp;&nbsp;과장 : 유병석&nbsp;&nbsp;&nbsp;과장 : 이건일&nbsp;&nbsp;&nbsp;팀장 : 박근찬
+							</div>
+							<div class="row-group">
+								시행 : 한야위 제 18 - XXX호 (2018.7.2) / 보존연한 :
+							</div>
+							<div class="row-group">우 06258 서울시 강남구 강남대로 278 / http://www.koreabaseball.com</div>
+							<div class="row-group">전화 02) 3460 - 4645 / 전송 02) 3460 - 4648 / savio.moon@koreabaseball.or.kr / 공개</div>
+						</div>
+					</div>
+					<div class="print-page">
+						<span class="current">1</span> / <span class="total">1</span>
+					</div>
+				</div>  
+				<div id="Page02" class="page-break">
+					<!-- 인쇄 헤더 -->
+					<div class="print-header">
+						<div class="logo"><img src="../../resources/images/sub/print_logo_kbo.jpg" alt="" /></div>
+						<div class="logo-2"><img src="../../resources/images/sub/print_logo_abwy.jpg" alt="" /></div>
+					</div>
+					<!-- 인쇄 수발신인 정보 -->
+					<!-- 인쇄 본문 -->
+					<div class="document">
+						<h3>[2018 KBO 정규시즌 개막전 소속선수 명단]</h3>						
+						<div class="tbl-type tbl-opening">
+							<p class="date"><label id="lblDate">2018.08.02 (목)</label></p>
+							<table class="tbl">
+								<colgroup>
+									<col width="5%">
+									<col width="5%">
+									<col width="20%">
+									<col width="20%">
+									<col width="10%">
+									<col width="20%">
+									<col width="20%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>구단</th>
+										<th>감독</th>
+										<th>코치</th>
+										<th>투수</th>
+										<th>포수</th>
+										<th>내야수</th>
+										<th>외야수</th>
+									</tr>
+									<tr>
+										<td class="admin">KT<br>(27)</td>
+										<td class="admin">(72)<br>김<br>진<br>욱</td>
+										<td>
+											<ul class="list-style2">
+												<li>(71) 이숭용</li>
+												<li>(76) 가득염</li>
+												<li>(77) 강성우</li>
+												<li>(84) 이지풍</li>
+												<li>(85) 최태원</li>
+												<li>(90) 고영민</li>
+												<li>(91) 신명철</li>
+												<li>(99) 류택현</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(1) 고영표</li>
+												<li>(11) 홍성용</li>
+												<li>(20) 엄상백</li>
+												<li>(26) 정성곤</li>
+												<li>(32) 피어밴드</li>
+												<li>(34) 심재민</li>
+												<li>(39) 고창성</li>
+												<li>(43) 김민</li>
+												<li>(58) 금민철</li>
+												<li>(60) 주권</li>
+												<li>(62) 김재윤</li>
+												<li>(66) 이종혁</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(22) 장성우</li>
+												<li>(52) 이해창</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(2) 심우준</li>
+												<li>(6) 박경수</li>
+												<li>(10) 황재균</li>
+												<li>(13) 윤석민</li>
+												<li>(16) 박기혁</li>
+												<li>(37) 오태곤</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(3) 김지열</li>
+												<li>(9) 오준혁</li>
+												<li><span class="rookie">(24) 로하스</span></li>
+												<li>(31) 하준호</li>
+												<li>(35) 이진영</li>
+												<li>(50) 강백호</li>
+												<li>(61) 유한준</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">한화<br>(27)</td>
+										<td class="admin">(40)<br>한<br>용<br>덕</td>
+										<td>
+											<ul class="list-style2">
+												<li>(21) 송진우</li>
+												<li>(35) 장종훈</li>
+												<li>(71) 전형도</li>
+												<li>(72) 김해님</li>
+												<li><span class="rookie">(73) 채종국</span></li>
+												<li><span class="rookie">(80) 고동진</span></li>
+												<li><span class="rookie">(82) 강인권</span></li>
+												<li>(88) 이양기</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(19) 김재영</li>
+												<li>(22) 이태양</li>
+												<li>(27) 김범수</li>
+												<li><span class="rookie">(29) 김경태</span></li>
+												<li><span class="rookie">(38) 안영명</span></li>
+												<li><span class="rookie">(44) 헤일</span></li>
+												<li><span class="rookie">(46) 송은범</span></li>
+												<li>(48) 샘슨</li>
+												<li>(53) 김민우</li>
+												<li>(55) 윤규진</li>
+												<li>(57) 정우람</li>
+												<li>(58) 박상원</li>
+												<li><span class="rookie">(61) 김성훈</span></li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(13) 최재훈</li>
+												<li>(26) 지성준</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(4) 김태연</li>
+												<li>(8) 정근우</li>
+												<li>(14) 강경학</li>
+												<li>(16) 하주석</li>
+												<li>(43) 정은원</li>
+												<li>(96) 이도윤</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(2) 이동훈</li>
+												<li>(15) 이용규</li>
+												<li>(30) 호잉</li>
+												<li>(50) 이성열</li>
+												<li>(56) 백창수</li>
+												<li>(63) 김민하</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">LG<br>(27)</td>
+										<td class="admin">(75)<br>류<br>중<br>일</td>
+										<td>
+											<ul class="list-style2">
+												<li>(73) 김정민</li>
+												<li>(74) 경헌호</li>
+												<li>(76) 유지현</li>
+												<li>(77) 강상수</li>
+												<li>(81) 박종호</li>
+												<li>(85) 한혁수</li>
+												<li>(86) 신경식</li>
+												<li>(91) 이병규</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(1) 임찬규</li>
+												<li>(19) 고우석</li>
+												<li>(21) 진해수</li>
+												<li>(26) 정찬헌</li>
+												<li>(29) 윤지웅</li>
+												<li>(31) 신정락</li>
+												<li>(38) 배재준</li>
+												<li>(45) 김대현</li>
+												<li>(50) 소사</li>
+												<li>(54) 여건욱</li>
+												<li>(60) 문광은</li>
+												<li>(66) 전인환</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(27) 유강남</li>
+												<li>(42) 정상호</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(2) 오지환</li>
+												<li>(13) 윤진호</li>
+												<li>(14) 김재율</li>
+												<li>(52) 서상우</li>
+												<li>(53) 양석환</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(7) 정주현</li>
+												<li>(10) 김용의</li>
+												<li>(15) 안익훈</li>
+												<li>(22) 김현수</li>
+												<li>(32) 이천웅</li>
+												<li>(33) 박용택</li>
+												<li>(36) 이형종</li>
+												<li>(55) 채은성</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">두산<br>(27)</td>
+										<td class="admin">(88)<br>김<br>태<br>형</td>
+										<td>
+											<ul class="list-style2">
+												<li>(70) 공필성</li>
+												<li>(71) 이강철</li>
+												<li>(75) 조인성</li>
+												<li>(77) 조성환</li>
+												<li>(79) 김태균</li>
+												<li>(82) 권명철</li>
+												<li>(87) 박철우</li>
+												<li>(89) 고토</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(1) 함덕주</li>
+												<li>(3) 이현승</li>
+												<li>(16) 김승회</li>
+												<li>(27) 김강률</li>
+												<li>(29) 유희관</li>
+												<li>(33) 윤수호</li>
+												<li>(34) 린드블럼</li>
+												<li><span class="rookie">(40) 후랭코프프</span></li>
+												<li><span class="rookie">(40) 다이아몬드</span></li>
+												<li><span class="rookie">(40) 후랭코프프</span></li>
+												<li>(64) 박성모</li>
+												<li>(66) 박치국</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(10) 박세혁</li>
+												<li>(25) 양의지</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(6) 황경태</li>
+												<li>(8) 류지혁</li>
+												<li>(9) 양종민</li>
+												<li>(13) 허경민</li>
+												<li>(24) 오재원</li>
+												<li>(36) 오재일</li>
+												<li>(52) 김재호</li>
+												<li>(53) 최주환</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(23) 정진호</li>
+												<li>(32) 김재환</li>
+												<li>(37) 박건우</li>
+												<li>(39) 김인태</li>
+												<li>(51) 조수행</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">롯데<br>(27)</td>
+										<td class="admin">(74)<br>조<br>원<br>우</td>
+										<td>
+											<ul class="list-style2">
+												<li>(72) 장재중</li>
+												<li>(75) 김원형</li>
+												<li>(76) 주형광</li>
+												<li>(78) 김민재</li>
+												<li>(80) 정보명</li>
+												<li>(82) 최만호</li>
+												<li>(86) 박정환</li>
+												<li>(95) 김승관</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(1) 손승락</li>
+												<li>(15) 오현택</li>
+												<li>(21) 송승준</li>
+												<li>(22) 구승민</li>
+												<li>(23) 고효준</li>
+												<li>(26) 듀브론트</li>
+												<li>(34) 김원중</li>
+												<li>(35) 이명우</li>
+												<li>(38) 노경은</li>
+												<li>(46) 레일리</li>
+												<li>(48) 진명호</li>
+												<li>(62) 박시영</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(2) 안중열</li>
+												<li>(64) 나원탁</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(6) 문규현</li>
+												<li>(7) 신본기</li>
+												<li>(10) 이대호</li>
+												<li>(17) 채태인</li>
+												<li>(25) 한동희</li>
+												<li>(67) 김동한</li>
+												<li>(98) 번즈</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(0) 나경민</li>
+												<li>(3) 민병헌</li>
+												<li>(8) 전준우</li>
+												<li>(16) 이병규</li>
+												<li>(31) 손아섭</li>
+												<li>(33) 허일</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">KIA<br>(27)</td>
+										<td class="admin">(77)<br>김<br>기<br>태</td>
+										<td>
+											<ul class="list-style2">
+												<li>(70) 홍세완</li>
+												<li>(72) 김민호</li>
+												<li>(74) 김종국</li>
+												<li>(75) 김민우</li>
+												<li>(78) 이대진</li>
+												<li>(81) 정회열</li>
+												<li>(87) 코우조</li>
+												<li>(92) 김상훈</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(12) 임창용</li>
+												<li>(24) 윤석민</li>
+												<li>(26) 임기준</li>
+												<li>(28) 김윤동</li>
+												<li>(38) 임기영</li>
+												<li>(39) 하준영</li>
+												<li>(40) 유승철</li>
+												<li>(41) 한승혁</li>
+												<li>(45) 팻딘</li>
+												<li>(49) 김세현</li>
+												<li>(54) 양현종</li>
+												<li>(63) 황인준</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(32) 김민식</li>
+												<li>(42) 한승택</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(3) 김선빈</li>
+												<li>(5) 홍재호</li>
+												<li>(6) 최원준</li>
+												<li>(8) 안치홍</li>
+												<li>(16) 김주찬</li>
+												<li>(25) 이범호</li>
+												<li>(56) 정성훈</li>
+												<li>(64) 류승현</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(27) 이명기</li>
+												<li>(29) 나지완</li>
+												<li>(34) 최형우</li>
+												<li>(50) 버나디나</li>
+												<li>(53) 박준태</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">NC<br>(27)</td>
+										<td class="admin">(97)<br>유<br>영<br>준</td>
+										<td>
+											<ul class="list-style2">
+												<li>(75) 진종길</li>
+												<li>(76) 지연규</li>
+												<li>(80) 이대환</li>
+												<li>(81) 이도형</li>
+												<li>(83) 정진식</li>
+												<li>(85) 이현곤</li>
+												<li>(90) 송재익</li>
+												<li>(94) 한규식</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(16) 김건태</li>
+												<li>(21) 이형범</li>
+												<li>(24) 유원상</li>
+												<li>(26) 최성영</li>
+												<li>(29) 이민호</li>
+												<li>(46) 원종현</li>
+												<li>(51) 이재학</li>
+												<li>(53) 베렛</li>
+												<li>(55) 김진성</li>
+												<li>(56) 강윤구</li>
+												<li>(59) 구창모</li>
+												<li>(61) 배재환</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(12) 김형준</li>
+												<li>(50) 정범모</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(5) 김찬형</li>
+												<li>(7) 이상호</li>
+												<li>(10) 지석훈</li>
+												<li>(18) 박석민</li>
+												<li>(35) 스크럭스</li>
+												<li>(52) 노진혁</li>
+												<li>(60) 최준석</li>
+												<li>(65) 도태훈</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(31) 김성욱</li>
+												<li>(32) 이원재</li>
+												<li>(33) 이우성</li>
+												<li>(36) 권희동</li>
+												<li>(47) 나성범</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">삼성<br>(27)</td>
+										<td class="admin">(86)<br>김<br>한<br>수</td>
+										<td>
+											<ul class="list-style2">
+												<li>(76) 이영수</li>
+												<li>(78) 강봉규</li>
+												<li>(79) 박진만</li>
+												<li>(82) 김태한</li>
+												<li>(88) 오치아이</li>
+												<li>(91) 정현욱</li>
+												<li>(96) 진갑용</li>
+												<li>(97) 강명구</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(1) 윤성환</li>
+												<li>(2) 우규민</li>
+												<li>(11) 정인욱</li>
+												<li>(15) 양창섭</li>
+												<li>(18) 심창민</li>
+												<li>(20) 이승현</li>
+												<li>(23) 보니야</li>
+												<li>(26) 장필준</li>
+												<li>(28) 박근홍</li>
+												<li>(29) 백정현</li>
+												<li>(35) 아델만</li>
+												<li>(45) 권오준</li>
+												<li>(51) 최충연</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(47) 강민호</li>
+												<li>(56) 이지영</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(4) 김성훈</li>
+												<li>(6) 손주인</li>
+												<li>(7) 김상수</li>
+												<li>(9) 강한울</li>
+												<li>(16) 이원석</li>
+												<li>(32) 최영진</li>
+												<li>(50) 러프</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(25) 배영섭</li>
+												<li>(33) 박한이</li>
+												<li>(34) 김헌곤</li>
+												<li>(58) 박해민</li>
+												<li>(65) 구자욱</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">넥센<br>(27)</td>
+										<td class="admin">(40)<br>장<br>정<br>석</td>
+										<td>
+											<ul class="list-style2">
+												<li>(71) 나이트</li>
+												<li>(72) 허문회</li>
+												<li>(74) 조재영</li>
+												<li>(75) 송지만</li>
+												<li>(77) 강병식</li>
+												<li>(78) 홍원기</li>
+												<li>(80) 마정길</li>
+												<li>(89) 박도현</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(00) 해커</li>
+												<li>(1) 한현희</li>
+												<li>(8) 브리검</li>
+												<li>(15) 오주원</li>
+												<li>(20) 최원태</li>
+												<li>(21) 김성민</li>
+												<li>(24) 김상수</li>
+												<li>(33) 이승호</li>
+												<li>(37) 신재영</li>
+												<li>(38) 윤영삼</li>
+												<li>(41) 안우진</li>
+												<li>(47) 이보근</li>
+												<li>(55) 하영민</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(22) 주효상</li>
+												<li>(32) 김재현</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(3) 김민성</li>
+												<li>(4) 김혜성</li>
+												<li>(7) 김하성</li>
+												<li>(23) 장영석</li>
+												<li>(52) 박병호</li>
+												<li>(57) 송성문</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(0) 임병욱</li>
+												<li>(29) 이택근</li>
+												<li>(36) 김규민</li>
+												<li>(51) 이정후</li>
+												<li>(53) 고종욱</li>
+												<li>(94) 초이스</li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="admin">SK<br>(27)</td>
+										<td class="admin">(88)<br>힐<br>만</td>
+										<td>
+											<ul class="list-style2">
+												<li>(75) 손지환</li>
+												<li>(76) 박재상</li>
+												<li>(80) 박경완</li>
+												<li>(81) 김성갑</li>
+												<li>(83) 손혁</li>
+												<li>(84) 예이츠</li>
+												<li>(86) 정수성</li>
+												<li>(99) 정경배</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(11) 신재웅</li>
+												<li>(15) 산체스</li>
+												<li>(18) 정영일</li>
+												<li>(23) 켈리</li>
+												<li>(25) 강지광</li>
+												<li>(29) 김광현</li>
+												<li>(42) 문승원</li>
+												<li>(45) 채병용</li>
+												<li>(47) 박희수</li>
+												<li>(50) 박종훈</li>
+												<li>(51) 김태훈</li>
+												<li>(55) 이승진</li>
+												<li>(66) 윤희상</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style1">
+												<li>(20) 이재원</li>
+												<li>(35) 이성우</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(3) 나주환</li>
+												<li>(4) 최항</li>
+												<li>(6) 김성현</li>
+												<li>(7) 박승욱</li>
+												<li>(27) 로맥</li>
+												<li>(28) 강승호</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-style2">
+												<li>(0) 김강민</li>
+												<li>(17) 노수광</li>
+												<li>(19) 정진기</li>
+												<li>(33) 윤정우</li>
+												<li>(38) 김동엽</li>
+												<li>(62) 한동민</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="notice">※ <span class="rookie">신인 선수</span> : 6명</p>
+						</div>	
+					</div>					
+				</div>  
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">확인</a>
+				<a class="btn btn-cancel" href="#none">인쇄</a>
+			</div>
+			
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+</body>
+</html>

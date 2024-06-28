@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li class="on">
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li class="on"><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">승인·공시 접수</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">선수단</a></li>
+							<li><a href="#none">경기</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반 업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">메리트 운영 계획서</a></li>
+							<li><a href="#none">신분조회</a></li>
+							<li><a href="#none">등록확인서</a></li>
+							<li><a href="#none">경찰야구단 지원 선수</a></li>
+							<li><a href="#none">상무야구단 지원 선수</a></li>
+							<li><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></li>
+							<li><a href="#none">스페셜 유니폼 착용</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">사용자관리</a></li>
+							<li><a href="#none">차단 리스트</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>선수 관리</h2>					
+				</div> 
+			</div>
+			<div class="select-area">				
+				<select name="" id="" class="mr5">
+					<option value="">리그</option>
+					<option value=""></option>
+				</select>
+				<select name="" id="" class="mr5">
+					<option value="">구단</option>
+					<option value=""></option>
+				</select>
+				<select name="" id="" class="mr5">
+					<option value="">포지션</option>
+					<option value=""></option>
+				</select>
+				<select name="" id="" class="mr5">
+					<option value="">상대</option>
+					<option value=""></option>
+				</select>
+				<span class="search">
+					<input type="text" name="" id="" class="ipt" />
+					<a href="javascript:;" class="btn-search">검색</a>
+				</span>
+				<a href="#none" class="btn-app-img ml5">+</a>
+			</div>
+
+			<div class="tbl-board">
+				<table class="tbl">
+					<colgroup>
+						<col width="15%" />
+						<col width="15%" />
+						<col width="15%" />
+						<col width="10%" />
+						<col width="15%" />
+						<col width="15%" />
+						<col width="15%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>선수명</th>
+							<th>구단</th>
+							<th>포지션</th>
+							<th>등번호</th>
+							<th>생년월일</th>
+							<th>상태</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>비아누에바</td>
+							<td>KIA</td>
+							<td>외야수</td>
+							<td>999</td>
+							<td>19741025</td>
+							<td>현역</td>							
+							<td><a href="#none" class="btn-modify">수정</a></td>
+						</tr>
+						<tr>
+							<td>비아누에바</td>
+							<td>KIA</td>
+							<td>외야수</td>
+							<td>999</td>
+							<td>19741025</td>
+							<td>현역</td>							
+							<td><a href="#none" class="btn-modify">수정</a></td>
+						</tr>	
+						<tr>
+							<td>비아누에바</td>
+							<td>KIA</td>
+							<td>외야수</td>
+							<td>999</td>
+							<td>19741025</td>
+							<td>현역</td>							
+							<td><a href="#none" class="btn-modify">수정</a></td>
+						</tr>	
+					</tbody>						
+				</table>
+			</div>
+			<div class="paging">    
+				<a class="btn btn-first" href="#none">처음으로</a>
+				<a class="btn btn-prev" href="#none">다음</a>
+				<a class="on" href="#none">1</a>
+				<a href="#none">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none">6</a>
+				<a href="#none">7</a>
+				<a href="#none">8</a>
+				<a href="#none">9</a>
+				<a href="#none">10</a>
+				<a class="btn btn-next" href="#none">다음</a>
+				<a class="btn btn-last" href="#none">맨끝으로</a>
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+<div id="popup" class="pop-user-reg">
+	<h1>선수 관리</h1>
+	<div class="contents">
+		<div class="line radio-select">
+			<input type="radio" name="" id="" />
+			<label for="" class="mr30">KBO 리그</label>
+			<input type="radio" name="" id="" />
+			<label for="">퓨처스 리그</label>			
+		</div>		
+		<div class="line">
+			<select name="" id="">
+				<option value="">구단</option>
+				<option value="">소속구단</option>
+				<option value="">소속구단</option>
+				<option value="">소속구단</option>
+			</select>
+			<input type="text" name="" id="" class="ipt" placeholder="선수명" />
+		</div>
+		<div class="line">
+			<input type="text" name="" id="" class="ipt" placeholder="등번호" disabled="disabled" />
+			<input type="text" name="" id="" class="ipt" placeholder="퓨처스리그 등번호" />
+		</div>
+		<div class="line">
+			<select name="" id="">
+				<option value="">포지션</option>
+				<option value=""></option>
+				<option value=""></option>
+				<option value=""></option>
+			</select>
+			<input type="text" name="" id="" class="ipt" placeholder="생년월일" />
+		</div>		
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn-confirm">확인</a>
+		<a href="#none" class="btn-cancel">취소</a>
+	</div>
+</div>
+<div class="modal"></div>
+</body>
+</html>

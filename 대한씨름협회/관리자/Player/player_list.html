@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>대한씨름협회 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>승희포에버</span>님께서 사용 중입니다.(YYYY-MM-DD A/PM HH:MM:SS)</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 메뉴 -->
+				<nav>
+					<ul class="clear">
+						<li class="on"><a href="../Player/player_list.html">선수/지도자 관리</a></li>
+						<li><a href="../Schedule/game_manage.html">경기일정 관리</a></li>
+						<li><a href="../TeamEnroll/team.html">팀 등록 관리</a></li>
+						<li><a href="../Notice/specialty.html">게시판 관리</a></li>
+						<li><a href="../Member/member.html">회원 관리</a></li>
+						<li><a href="../SeasonWizard/season_wizard.html">시즌 마법사</a></li>
+						<li><a href="../Archive/archive_manage.html">아카이브</a></li>
+					</ul>
+				</nav>
+				<!-- 메뉴 -->
+			</div>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 중메뉴 -->
+			<aside>
+				<h2>선수관리</h2>
+				<nav>
+					<ul>
+						<li class="on"><a href="../Player/player_list.html"><span>선수 등록 및 정보 변경</span></a></li>
+						<li><a href="../Player/player_trade.html"><span>선수 상태변경/트레이드</span></a></li>
+						<li><a href="../Player/trade_state.html"><span>트레이드 승인 및 현황</span></a></li>
+						<li><a href="../Player/judgment_etc.html"><span>심판 및 기타 인원 관리</span></a></li>
+					</ul>
+				</nav>
+			</aside>
+			<!-- // 중메뉴 -->
+			<!-- 본문 -->
+			<article>
+				<h3>선수 등록 및 정보 변경</h3>
+				<div class="content">
+					<div class="select-wrap">
+						<ul>
+							<li>
+								시즌
+								<select>
+									<option>2019</option>
+								</select>
+							</li>
+							<li>
+								팀선택
+								<select>
+									<option>무궁화</option>
+								</select>
+							</li>
+							<li>
+								포지션
+								<select>
+									<option>감독</option>
+								</select>
+							</li>
+							<li>
+								체급
+								<select>
+									<option>백두</option>
+								</select>
+							</li>
+							<li>
+								상태
+								<select>
+									<option>계약만료</option>
+								</select>
+							</li>
+							<li>
+								요청
+								<select>
+									<option>전체</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+					<div class="between-wrap">
+						<span>※ 선수를 더블 클릭하면 신상 기록 카드를 볼 수 있습니다.</span>
+						<a href="../Player/player_card_edit.html" class="btn-enroll">신규 선수 등록</a>
+						<a href="../Player/season_enroll.html" class="btn-enroll">시즌 등록</a>
+					</div>
+					<table class="tbl-type1">
+						<thead>
+							<tr>
+								<th>소속팀</th>
+								<th>포지션</th>
+								<th>체급</th>
+								<th>한글이름</th>
+								<th>영문이름</th>
+								<th>등록번호</th>
+								<th>입단년도</th>
+								<th>시즌등록일자</th>
+								<th>상태</th>
+								<th>수정</th>
+								<th>삭제</th>
+								<th>승인</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>영암군민속씨름단</td>
+								<td>감독</td>
+								<td>백두</td>
+								<td>김짱구</td>
+								<td>Kim Jjang Gu</td>
+								<td>10000</td>
+								<td>2019</td>
+								<td>2019.03.01</td>
+								<td>1군</td>
+								<td>
+									<a class="btn-tbl edit" href=""><span>수정</span></a>
+								</td>
+								<td>
+									<a class="btn-tbl remove" href=""><span>삭제</span></a>
+								</td>
+								<td>
+									<a class="btn-tbl agree" href=""><span>승인</span></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- popup  -->
+				<div class="layer-wrap">
+					<div class="title">승인</div>
+					<div class="content">
+						10000 신짱구 선수의<br /> 승인을 허락 하시겠습니까?
+					</div>
+					<div class="final-btn">
+						<a class="btn-white" href="">거절</a>
+						<a class="btn-blue" href="">승인</a>
+					</div>
+				</div>
+				<div class="layer-wrap">
+					<div class="title">삭제</div>
+					<div class="content">
+						10000 신짱구 선수의<br /> 삭제를 허락 하시겠습니까?
+					</div>
+					<div class="final-btn">
+						<a class="btn-white" href="">거절</a>
+						<a class="btn-blue" href="">승인</a>
+					</div>
+				</div>
+				<div class="layer-wrap">
+					<div class="title">수정</div>
+					<div class="content">
+						10000 신짱구 선수의<br /> 수정을 허락 하시겠습니까?
+					</div>
+					<div class="final-btn">
+						<a class="btn-white" href="">거절</a>
+						<a class="btn-blue" href="">승인</a>
+					</div>
+				</div>
+				<div class="layer-wrap">
+					<div class="title">수정</div>
+					<div class="content">
+						10000 신짱구 선수의<br /> 수정을 거절 하시겠습니까?
+					</div>
+					<div class="final-btn">
+						<a class="btn-white" href="">아니오</a>
+						<a class="btn-blue" href="">예</a>
+					</div>
+				</div>
+				<div class="layer-wrap">
+					<div class="title">사유</div>
+					<div class="content">
+						<textarea></textarea>
+					</div>
+					<div class="final-btn">
+						<a class="btn-white" href="">취소</a>
+						<a class="btn-blue" href="">확인</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

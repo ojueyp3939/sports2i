@@ -1,0 +1,2159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="NC 다이노스 D-Base"/>
+    <meta name="author" content="NC 다이노스 D-Base"/>
+	<meta name="keywords" content="NC 다이노스 D-Base" />
+	<title>NC 다이노스 D-Base</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/edit.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<ul class="nav-tab">
+						<li>
+							<a href="http://dfoto.i234.me:8080/photo" target="_blank">사진서버</a>
+						</li>
+						<li>
+							<a href="https://www.ncdinos.com/" target="_blank">홈페이지</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@ncdinos" target="_blank">엔튜브</a>
+						</li>
+						<li>
+							<a href="http://2istats.sports2i.com/" target="_blank">2iSTATS</a>
+						</li>
+						<li>
+							<a href="https://www.koreabaseball.com/" target="_blank">KBO</a>
+						</li>
+					</ul>
+					<div class="user-info">
+						<i class="icon-login"></i>
+						<b>NC다이노스 홍보팀</b> 님께서 사용중이십니다.
+						<span>2023-08-04 오전 09:00:00</span>
+						<a href="#" class="btn-logout">
+							LOGOUT
+						</a>
+					</div>
+				</div>
+			</div>
+            <div class="gnb">
+				<div class="wrap">
+					<a class="logo" href="broadcast.html">
+						<img src="resources/images/contents/logo.png" alt="NC다이노스 D-Base" />
+					</a>
+					<ul class="menu">
+						<li>
+							<a href="broadcast.html">MAIN</a>
+						</li>
+						<li>
+							<a href="report.html">벤치리포트</a>
+						</li>
+						<li class="on">
+							<a href="gamenote.html">게임노트</a>
+						</li>
+						<li>
+							<a href="release_list.html">RELEASE</a>
+						</li>
+						<li>
+							<a href="notice_list.html">NOTICE</a>
+						</li>
+						<li>
+							<a href="calculation.html">계산</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<h3>게임노트</h3>
+				<section>
+					<div class="day-wrap">
+						<ul class="toggle">
+							<li class="on"><a href="">DH1</a></li>
+							<li><a href="">DH2</a></li>
+						</ul>
+						<ul class="day-box">
+							<li class="prev">
+								<a href="#"></a>
+							</li>
+							<li class="day-tit">
+								<span class="date">2023.08.04 (금)</span> <input id="btnCalendar">
+							</li>
+							<li class="next">
+								<a href="#"></a>
+							</li>
+						</ul>
+						<div class="down-box">
+							<a class="btn down" href="">
+								주요행사 & 큐시트
+							</a>
+							<a class="btn down" href="">
+								KBO 기록/순위/엔트리
+							</a>
+						</div>
+					</div>
+					<div class="board">
+						<div id="edit">
+							<div class="titArea" style="border:1px solid #333;"><img alt="Game Information" src="/images/D-note_2021.jpg" style="width:100%" /></div>
+
+							<div class="infoArea lite" style="border:1px solid #333;">
+								<p>GAME #81(홈 #36) ◆ 2023년 07월 25일 ◆ 창원NC파크◆ 시즌(vs KIA) 7차전 ◆ 신민혁(3-4, 3.86) vs 파노니(0-0, 4.50)</p>
+							</div>
+
+							<div id="div1">
+								<table class="tbl" style="margin-bottom:12px;">
+									<thead>
+										<tr class="subT">
+											<th colspan="11" scope="col"><span style="color:#fff;">양 팀 맞대결 정보</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="sp" rowspan="4" scope="row" style="width: 10%;"><img src="/images/emblem_NC.png?version=20210401" style="" /></th>
+											<th class="bd_none" scope="col" style="width: 7%;">승</th>
+											<th class="bd_none" scope="col" style="width: 7%;">패</th>
+											<th class="bd_none" scope="col" style="width: 7%;">무</th>
+											<th class="bd_none" scope="col" style="width: 7%;">승률</th>
+											<th class="sp" scope="col" style="width: 10%;">VS</th>
+											<th class="bd_none" scope="col" style="width: 7%;">승</th>
+											<th class="bd_none" scope="col" style="width: 7%;">패</th>
+											<th class="bd_none" scope="col" style="width: 7%;">무</th>
+											<th class="bd_none" scope="col" style="width: 7%;">승률</th>
+											<th class="sp" rowspan="4" scope="row" style="width: 10%;"><img src="/images/emblem_KI.png?version=20210401" /></th>
+										</tr>
+										<tr>
+											<td>41</td>
+											<td>38</td>
+											<td>1</td>
+											<td>0.519</td>
+											<td>시즌전체</td>
+											<td>36</td>
+											<td>40</td>
+											<td>1</td>
+											<td>0.474</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>3</td>
+											<td>1</td>
+											<td>0.400</td>
+											<td>시즌상대</td>
+											<td>3</td>
+											<td>2</td>
+											<td>1</td>
+											<td>0.600</td>
+										</tr>
+										<tr>
+											<th class="bd_none" colspan="2">순위 : 4위</th>
+											<th class="bd_none" colspan="2">LWWWW</th>
+											<th>최근 5 경기</th>
+											<th class="bd_none" colspan="2">WWWLL</th>
+											<th class="bd_none" colspan="2">순위 : 7위</th>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+							<div id="div2">
+								<table class="tbl fixed" style="margin-bottom:12px;">
+									<colgroup>
+										<col width="26%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="8%" />
+										<col width="12%" />
+										<col width="23%" />
+										<col width="12%" />
+									</colgroup>
+									<thead>
+										<tr class="subT">
+											<th colspan="4" scope="col"><span style="color:#fff;">시리즈 정보</span></th>
+											<th scope="col"><span style="color:#fff;">NC 다이노스</span></th>
+											<th scope="col"><span style="color:#fff;">vs</span></th>
+											<th scope="col"><span style="color:#fff;">KIA 타이거즈</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="bd_none_type5" scope="col">구분</th>
+											<th class="bd_none" scope="col">승</th>
+											<th class="bd_none" scope="col">패</th>
+											<th class="bd_none" scope="col">무</th>
+											<td class="bd_none" rowspan="2">0.295/0.000/0.295</td>
+											<td class="bd_none" rowspan="2">2023 팀 타율 (시즌/홈/원정)</td>
+											<td class="bd_none" rowspan="2">0.216/0.216/0.000</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">2023 홈경기 성적</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">2023 원정경기 성적</td>
+											<td>2</td>
+											<td>3</td>
+											<td>1</td>
+											<td class="bd_none" rowspan="2" style="width: 16%">6.00/-/6.00</td>
+											<td class="bd_none" rowspan="2" style="width: 18%">2023 팀 평균자책점(시즌/홈/원정)</td>
+											<td class="bd_none" rowspan="2" style="width: 16%">4.58/4.58/-</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">2022 맞대결 성적</td>
+											<td>7</td>
+											<td>9</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">통산 홈경기 성적</td>
+											<td>46</td>
+											<td>33</td>
+											<td>1</td>
+											<td class="bd_none" rowspan="3" style="width: 16%">0.285/4.77</td>
+											<td class="bd_none" rowspan="3" style="width: 18%">통산 팀 타율/팀 평균자책점</td>
+											<td class="bd_none" rowspan="3" style="width: 16%">0.268/5.18</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">통산 원정경기 성적</td>
+											<td>45</td>
+											<td>40</td>
+											<td>1</td>
+										</tr>
+										<tr>
+											<td class="bd_none_type2">통산 맞대결 성적</td>
+											<td>91</td>
+											<td>73</td>
+											<td>2</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!-- html body -->
+
+						<div class="over-hid" id="edit">
+							<table class="tbl fixed" style="margin-bottom:12px;">
+								<colgroup>
+									<col width="11%" />
+									<col width="10%" />
+									<col width="8%" />
+									<col width="5%" />
+									<col width="9%" />
+									<col width="10%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="6%" />
+									<col width="6%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+								</colgroup>
+								<tbody>
+									<tr class="subT">
+										<th colspan="15" scope="col"><span style="color:#fff;">NC 다이노스 선발투수</span></th>
+									</tr>
+									<tr>
+										<th colspan="15" scope="col">우완/오버스로, 1999년 02월 04일생, 184cm - 95kg - AB형, 염강초(강서구리틀)-매향중-야탑고</th>
+									</tr>
+									<tr>
+										<th class="in-pic" rowspan="5"><img alt="" src="https://secnlassrepp3167611.cdn.ntruss.com/person/120x140/2023/68902.jpg" /></th>
+										<th class="bd_none" scope="col" style="width: 9%;">구분</th>
+										<th class="bd_none" scope="col" style="width: 7%;">날짜</th>
+										<th class="bd_none" scope="col" style="width: 5%;">팀</th>
+										<th class="bd_none" scope="col" style="width: 6%;">승-패</th>
+										<th class="bd_none" scope="col" style="width: 9%;">평균자책점</th>
+										<th class="bd_none" scope="col" style="width: 7%;">경기</th>
+										<th class="bd_none" scope="col" style="width: 7%;">선발</th>
+										<th class="bd_none" scope="col" style="width: 7%;">이닝</th>
+										<th class="bd_none" scope="col" style="width: 7%;">피안타</th>
+										<th class="bd_none" scope="col" style="width: 7%;">피홈런</th>
+										<th class="bd_none" scope="col" style="width: 7%;">사사구</th>
+										<th class="bd_none" scope="col" style="width: 7%;">탈삼진</th>
+										<th class="bd_none" scope="col" style="width: 7%;">실점</th>
+										<th class="bd_none" scope="col" style="width: 7%;">자책점</th>
+									</tr>
+									<tr>
+										<td>최근경기</td>
+										<td>23/07/13</td>
+										<td>NC</td>
+										<td>0 - 0</td>
+										<td>0.00</td>
+										<td>1</td>
+										<td>0</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>1</td>
+										<td>0</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>시즌기록</td>
+										<td>2023</td>
+										<td>NC</td>
+										<td>3 - 4</td>
+										<td>3.86</td>
+										<td>14</td>
+										<td>13</td>
+										<td>60.2</td>
+										<td>64</td>
+										<td>9</td>
+										<td>21</td>
+										<td>52</td>
+										<td>33</td>
+										<td>26</td>
+									</tr>
+									<tr>
+										<td>개인 통산기록</td>
+										<td>-</td>
+										<td>-</td>
+										<td>18 - 22</td>
+										<td>4.52</td>
+										<td>87</td>
+										<td>68</td>
+										<td>366</td>
+										<td>404</td>
+										<td>51</td>
+										<td>127</td>
+										<td>290</td>
+										<td>199</td>
+										<td>184</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //html body --><!-- html body -->
+
+						<div class="over-hid" id="edit">
+							<table class="tbl fixed" style="margin-bottom:12px;">
+								<colgroup>
+									<col width="10%" />
+									<col width="8%" />
+									<col width="5%" />
+									<col width="9%" />
+									<col width="10%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="6%" />
+									<col width="6%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="5%" />
+									<col width="11%" />
+								</colgroup>
+								<tbody>
+									<tr class="subT">
+										<th colspan="15" scope="col"><span style="color: #fff;">KIA 타이거즈 선발투수</span></th>
+									</tr>
+									<tr>
+										<th colspan="15" scope="col">좌완/오버스로, 1994년 04월 28일생, 185cm - 92kg - 형, 미국 Southern Nevada(대)</th>
+									</tr>
+									<tr>
+										<th class="bd_none" scope="col" style="width: 9%;">구분</th>
+										<th class="bd_none" scope="col" style="width: 7%;">날짜</th>
+										<th class="bd_none" scope="col" style="width: 5%;">팀</th>
+										<th class="bd_none" scope="col" style="width: 6%;">승-패</th>
+										<th class="bd_none" scope="col" style="width: 9%;">평균자책점</th>
+										<th class="bd_none" scope="col" style="width: 7%;">경기</th>
+										<th class="bd_none" scope="col" style="width: 7%;">선발</th>
+										<th class="bd_none" scope="col" style="width: 7%;">이닝</th>
+										<th class="bd_none" scope="col" style="width: 7%;">피안타</th>
+										<th class="bd_none" scope="col" style="width: 7%;">피홈런</th>
+										<th class="bd_none" scope="col" style="width: 7%;">사사구</th>
+										<th class="bd_none" scope="col" style="width: 7%;">탈삼진</th>
+										<th class="bd_none" scope="col" style="width: 7%;">실점</th>
+										<th class="bd_none" scope="col" style="width: 7%;">자책점</th>
+										<th class="in-pic" rowspan="5"><img alt="" src="https://secnlassrepp3167611.cdn.ntruss.com/person/120x140/2023/52606.jpg" /></th>
+									</tr>
+									<tr>
+										<td>최근경기</td>
+										<td>23/07/12</td>
+										<td>KIA</td>
+										<td>0 - 0</td>
+										<td>4.50</td>
+										<td>1</td>
+										<td>1</td>
+										<td>4</td>
+										<td>4</td>
+										<td>0</td>
+										<td>1</td>
+										<td>2</td>
+										<td>2</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>시즌기록</td>
+										<td>2023</td>
+										<td>KIA</td>
+										<td>0 - 0</td>
+										<td>4.50</td>
+										<td>1</td>
+										<td>1</td>
+										<td>4</td>
+										<td>4</td>
+										<td>0</td>
+										<td>1</td>
+										<td>2</td>
+										<td>2</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td>개인 통산기록</td>
+										<td>-</td>
+										<td>-</td>
+										<td>3 - 4</td>
+										<td>2.80</td>
+										<td>15</td>
+										<td>15</td>
+										<td>86.2</td>
+										<td>82</td>
+										<td>5</td>
+										<td>27</td>
+										<td>75</td>
+										<td>35</td>
+										<td>27</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //html body -->
+
+						<div id="edit">
+							<div id="Div3">
+								<div class="row2" style="margin-bottom:12px;">
+									<table class="tbl" style="width:49%">
+										<colgroup>
+											<col style="width: 30%;" />
+											<col style="width: 70%;" />
+										</colgroup>
+										<thead>
+											<tr class="subT">
+												<th colspan="2" scope="col">엔트리 변경</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="bd_be" style="width: 30%;">등록</td>
+												<td style="width: 70%;">&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="bd_be" style="width: 35%;">말소</td>
+												<td style="width: 70%;">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="tbl" style="width:49%;">
+										<thead>
+											<tr class="subT">
+												<th scope="col" style="width: 50%;">날씨정보</th>
+												<th scope="col" style="width: 50%;">중계방송</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="bd_be">&nbsp;</td>
+												<td class="bd_be">&nbsp;</td>
+											</tr>
+											<tr>
+												<td class="bd_be">&nbsp;</td>
+												<td class="bd_be">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div id="Div4">
+								<div class="row2" style="margin-bottom:12px;">
+									<table class="tbl" style="width:49%;">
+										<thead>
+											<tr class="subT">
+												<th><span style="color:#fff;">NC 다이노스 예상 달성 기록</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr class="line-4">
+												<td rowspan="2">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="tbl" style="width:49%;">
+										<thead>
+											<tr class="subT">
+												<th colspan="2"><span style="color:#fff;">타구장 경기</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>수원</td>
+												<td>LG(플럿코)-KT(벤자민)</td>
+											</tr>
+											<tr>
+												<td>잠실</td>
+												<td>롯데(나균안)-두산(브랜든)</td>
+											</tr>
+											<tr>
+												<td>대구</td>
+												<td>SSG(오원석)-삼성(수아레즈)</td>
+											</tr>
+											<tr>
+												<td>고척</td>
+												<td>한화(한승혁)-키움(장재영)</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div id="Div5">
+								<table class="tbl" style="margin-bottom:12px;">
+									<colgroup>
+										<col style="width:50%;" />
+										<col style="width:50%;" />
+									</colgroup>
+									<thead>
+										<tr class="subT">
+											<th colspan="2"><span style="color: #fff;">오늘의 이벤트</span></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr class="sp" style="height:97px">
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+						<div id="edit">
+							<table class="tbl" style="margin-bottom:12px;">
+								<!--
+			<colgroup>
+				<col style="width: 10%;" />
+				<col style="width: 10%;" />
+				<col style="width: 35%;" />
+				<col style="width: 35%;" />
+				<col style="width: 10%;" />
+			</colgroup>
+			-->
+								<thead>
+									<tr class="subT">
+										<th colspan="4" scope="col">엔트리 등,말소일지</th>
+									</tr>
+									<tr>
+										<th scope="col" style="width: 10%;">일자</th>
+										<th scope="col" style="width: 40%;">등록선수</th>
+										<th scope="col" style="width: 40%;">말소선수</th>
+										<th scope="col" style="width: 5%;">비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>04/05</td>
+										<td>신민혁</td>
+										<td>박대온</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/06</td>
+										<td>오장한, 이준호, 천재환</td>
+										<td>마틴, 심창민, 윤형준</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/07</td>
+										<td>조민석</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/08</td>
+										<td>김한별</td>
+										<td>김성욱</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/15</td>
+										<td>박대온</td>
+										<td>박세혁</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/16</td>
+										<td>김수윤</td>
+										<td>서호철</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/17</td>
+										<td>&nbsp;</td>
+										<td>오장한, 조민석</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/18</td>
+										<td>김성욱, 김태현</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/20</td>
+										<td>윤형준</td>
+										<td>박석민</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/21</td>
+										<td>이준호</td>
+										<td>김태현</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/24</td>
+										<td>&nbsp;</td>
+										<td>김수윤</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/25</td>
+										<td>박세혁</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/26</td>
+										<td>서호철</td>
+										<td>박대온</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>04/30</td>
+										<td>조민석</td>
+										<td>류진욱</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/01</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/02</td>
+										<td>김태현</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/03</td>
+										<td>심창민</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/04</td>
+										<td>권희동</td>
+										<td>오태양</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/05</td>
+										<td>마틴</td>
+										<td>한석현</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/10</td>
+										<td>이용찬</td>
+										<td>심창민</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/13</td>
+										<td>송명기</td>
+										<td>김태현</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/14</td>
+										<td>최성영</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/20</td>
+										<td>류진욱, 오태양</td>
+										<td>구창모, 오영수</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/21</td>
+										<td>이재학</td>
+										<td>김영규</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/22</td>
+										<td>&nbsp;</td>
+										<td>김성욱, 김진호</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/23</td>
+										<td>박영빈, 임지민</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/24</td>
+										<td>전사민</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/25</td>
+										<td>최보성</td>
+										<td>김한별</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/28</td>
+										<td>김영규, 와이드너</td>
+										<td>임지민, 전사민</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/29</td>
+										<td>&nbsp;</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>05/30</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/02</td>
+										<td>구창모</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/03</td>
+										<td>정구범</td>
+										<td>구창모</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/04</td>
+										<td>김한별, 박석민</td>
+										<td>박민우, 오태양</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/10</td>
+										<td>김성욱</td>
+										<td>권희동</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/11</td>
+										<td>박민우</td>
+										<td>최보성</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/12</td>
+										<td>&nbsp;</td>
+										<td>박영빈</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/13</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/14</td>
+										<td>&nbsp;</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/15</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/16</td>
+										<td>전사민</td>
+										<td>정구범</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/21</td>
+										<td>배민서</td>
+										<td>최성영</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/23</td>
+										<td>권희동</td>
+										<td>이재학</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/25</td>
+										<td>페디</td>
+										<td>이용준</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>06/28</td>
+										<td>최정원</td>
+										<td>도태훈</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/01</td>
+										<td>김수윤</td>
+										<td>박석민</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/03</td>
+										<td>&nbsp;</td>
+										<td>박건우</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/04</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/05</td>
+										<td>배재환</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/07</td>
+										<td>이용준</td>
+										<td>임정호</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/08</td>
+										<td>김태현</td>
+										<td>배재환</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/10</td>
+										<td>&nbsp;</td>
+										<td>박민우, 송명기, 이용준</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/11</td>
+										<td>도태훈, 박대온, 박석민</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/18</td>
+										<td>&nbsp;</td>
+										<td>김성욱, 김수윤</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/19</td>
+										<td>&nbsp;</td>
+										<td>박대온</td>
+										<td>&nbsp;</td>
+									</tr>
+									<tr>
+										<td>07/21</td>
+										<td>박건우, 박민우, 채지선</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div id="edit">
+							<table class="tbl" style="margin-bottom:12px;">
+								<thead>
+									<tr class="subT">
+										<th colspan="20" scope="col">경기 일지</th>
+									</tr>
+									<tr>
+										<th scope="col" style="width: 3%;">NO</th>
+										<th scope="col" style="width: 3%;">일자</th>
+										<th scope="col" style="width: 5%;">상대팀</th>
+										<th scope="col" style="width: 3%;">구장</th>
+										<th scope="col" style="width: 5%;">스코어</th>
+										<th scope="col" style="width: 5%;">팀성적</th>
+										<th scope="col" style="width: 3%;">승률</th>
+										<th scope="col" style="width: 5%;">W</th>
+										<th scope="col" style="width: 5%;">L</th>
+										<th scope="col" style="width: 5%;">S</th>
+										<th scope="col" style="width: 3%;">경기시간</th>
+										<th scope="col" style="width: 9%;">관중</th>
+										<th scope="col" style="width: 9%;">홈 누적 관중</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>04/01</td>
+										<td>삼성</td>
+										<td>대구</td>
+										<td>8-0 승</td>
+										<td>1-0-0</td>
+										<td>1.000</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:16</td>
+										<td>24,000</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>04/02</td>
+										<td>삼성</td>
+										<td>대구</td>
+										<td>6-8 패</td>
+										<td>1-1-0</td>
+										<td>0.500</td>
+										<td>&nbsp;</td>
+										<td>김진호</td>
+										<td>&nbsp;</td>
+										<td>3:31</td>
+										<td>18,483</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>04/04</td>
+										<td>두산</td>
+										<td>잠실</td>
+										<td>0-1 패</td>
+										<td>1-2-0</td>
+										<td>0.333</td>
+										<td>&nbsp;</td>
+										<td>심창민</td>
+										<td>&nbsp;</td>
+										<td>2:43</td>
+										<td>3,922</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>04/05</td>
+										<td>두산</td>
+										<td>잠실</td>
+										<td>9-3 승</td>
+										<td>2-2-0</td>
+										<td>0.500</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:27</td>
+										<td>2,170</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>04/06</td>
+										<td>두산</td>
+										<td>잠실</td>
+										<td>2-6 패</td>
+										<td>2-3-0</td>
+										<td>0.400</td>
+										<td>&nbsp;</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+										<td>3:35</td>
+										<td>3,724</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">6</td>
+										<td style="background:#d0cecf;">04/07</td>
+										<td style="background:#d0cecf;">키움</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">2-0 승</td>
+										<td style="background:#d0cecf;">3-3-0</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용찬</td>
+										<td style="background:#d0cecf;">2:19</td>
+										<td style="background:#d0cecf;">6,868</td>
+										<td style="background:#d0cecf;">6,868</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">7</td>
+										<td style="background:#d0cecf;">04/08</td>
+										<td style="background:#d0cecf;">키움</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">11-5 승</td>
+										<td style="background:#d0cecf;">4-3-0</td>
+										<td style="background:#d0cecf;">0.571</td>
+										<td style="background:#d0cecf;">김진호</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:41</td>
+										<td style="background:#d0cecf;">9,764</td>
+										<td style="background:#d0cecf;">16,632</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">8</td>
+										<td style="background:#d0cecf;">04/09</td>
+										<td style="background:#d0cecf;">키움</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">6-1 승</td>
+										<td style="background:#d0cecf;">5-3-0</td>
+										<td style="background:#d0cecf;">0.625</td>
+										<td style="background:#d0cecf;">송명기</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:54</td>
+										<td style="background:#d0cecf;">7,687</td>
+										<td style="background:#d0cecf;">24,319</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">9</td>
+										<td style="background:#d0cecf;">04/11</td>
+										<td style="background:#d0cecf;">KT</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">1-0 승</td>
+										<td style="background:#d0cecf;">6-3-0</td>
+										<td style="background:#d0cecf;">0.667</td>
+										<td style="background:#d0cecf;">신민혁</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용찬</td>
+										<td style="background:#d0cecf;">2:27</td>
+										<td style="background:#d0cecf;">2,070</td>
+										<td style="background:#d0cecf;">26,389</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">10</td>
+										<td style="background:#d0cecf;">04/12</td>
+										<td style="background:#d0cecf;">KT</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">5-1 승</td>
+										<td style="background:#d0cecf;">7-3-0</td>
+										<td style="background:#d0cecf;">0.700</td>
+										<td style="background:#d0cecf;">이용준</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:42</td>
+										<td style="background:#d0cecf;">2,449</td>
+										<td style="background:#d0cecf;">28,838</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">11</td>
+										<td style="background:#d0cecf;">04/13</td>
+										<td style="background:#d0cecf;">KT</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">3-10 패</td>
+										<td style="background:#d0cecf;">7-4-0</td>
+										<td style="background:#d0cecf;">0.636</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:30</td>
+										<td style="background:#d0cecf;">3,175</td>
+										<td style="background:#d0cecf;">32,013</td>
+									</tr>
+									<tr>
+										<td>12</td>
+										<td>04/14</td>
+										<td>SSG</td>
+										<td>문학</td>
+										<td>1-2 패</td>
+										<td>7-5-0</td>
+										<td>0.583</td>
+										<td>&nbsp;</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+										<td>3:02</td>
+										<td>8,218</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>04/15</td>
+										<td>SSG</td>
+										<td>문학</td>
+										<td>1-0 승</td>
+										<td>8-5-0</td>
+										<td>0.615</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:11</td>
+										<td>13,956</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td>14</td>
+										<td>04/16</td>
+										<td>SSG</td>
+										<td>문학</td>
+										<td>10-5 승</td>
+										<td>9-5-0</td>
+										<td>0.643</td>
+										<td>하준영</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>4:10</td>
+										<td>13,460</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td>15</td>
+										<td>04/18</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>6-4 승</td>
+										<td>10-5-0</td>
+										<td>0.667</td>
+										<td>김시훈</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:47</td>
+										<td>6,574</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td>16</td>
+										<td>04/19</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>5-7 패</td>
+										<td>10-6-0</td>
+										<td>0.625</td>
+										<td>&nbsp;</td>
+										<td>김영규</td>
+										<td>&nbsp;</td>
+										<td>3:07</td>
+										<td>7,090</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td>17</td>
+										<td>04/20</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>4-9 패</td>
+										<td>10-7-0</td>
+										<td>0.588</td>
+										<td>&nbsp;</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+										<td>3:47</td>
+										<td>9,090</td>
+										<td>32,013</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">18</td>
+										<td style="background:#d0cecf;">04/21</td>
+										<td style="background:#d0cecf;">롯데</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">2-3 패</td>
+										<td style="background:#d0cecf;">10-8-0</td>
+										<td style="background:#d0cecf;">0.556</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">김영규</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:44</td>
+										<td style="background:#d0cecf;">12,613</td>
+										<td style="background:#d0cecf;">44,626</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">19</td>
+										<td style="background:#d0cecf;">04/22</td>
+										<td style="background:#d0cecf;">롯데</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">6-10 패</td>
+										<td style="background:#d0cecf;">10-9-0</td>
+										<td style="background:#d0cecf;">0.526</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">신민혁</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:44</td>
+										<td style="background:#d0cecf;">15,130</td>
+										<td style="background:#d0cecf;">59,756</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">20</td>
+										<td style="background:#d0cecf;">04/23</td>
+										<td style="background:#d0cecf;">롯데</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">3-5 패</td>
+										<td style="background:#d0cecf;">10-10-0</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용찬</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:18</td>
+										<td style="background:#d0cecf;">13,286</td>
+										<td style="background:#d0cecf;">73,042</td>
+									</tr>
+									<tr>
+										<td>21</td>
+										<td>04/25</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>6-0 승</td>
+										<td>11-10-0</td>
+										<td>0.524</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:19</td>
+										<td>2,216</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td>22</td>
+										<td>04/26</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>0-6 패</td>
+										<td>11-11-0</td>
+										<td>0.500</td>
+										<td>&nbsp;</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+										<td>2:32</td>
+										<td>4,798</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td>23</td>
+										<td>04/27</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>0-5 패</td>
+										<td>11-12-0</td>
+										<td>0.478</td>
+										<td>&nbsp;</td>
+										<td>구창모</td>
+										<td>&nbsp;</td>
+										<td>2:38</td>
+										<td>6,017</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td>24</td>
+										<td>04/28</td>
+										<td>한화</td>
+										<td>대전</td>
+										<td>6-4 승</td>
+										<td>12-12-0</td>
+										<td>0.500</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:31</td>
+										<td>7,242</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td>25</td>
+										<td>04/29</td>
+										<td>한화</td>
+										<td>대전</td>
+										<td>3-2 승</td>
+										<td>13-12-0</td>
+										<td>0.520</td>
+										<td>이용준</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:37</td>
+										<td>7,813</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td>26</td>
+										<td>04/30</td>
+										<td>한화</td>
+										<td>대전</td>
+										<td>4-1 승</td>
+										<td>14-12-0</td>
+										<td>0.538</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>김시훈</td>
+										<td>2:45</td>
+										<td>10,442</td>
+										<td>73,042</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">27</td>
+										<td style="background:#d0cecf;">05/02</td>
+										<td style="background:#d0cecf;">LG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">3-5 패</td>
+										<td style="background:#d0cecf;">14-13-0</td>
+										<td style="background:#d0cecf;">0.519</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">김영규</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:23</td>
+										<td style="background:#d0cecf;">3,938</td>
+										<td style="background:#d0cecf;">76,980</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">28</td>
+										<td style="background:#d0cecf;">05/03</td>
+										<td style="background:#d0cecf;">LG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">1-2 패</td>
+										<td style="background:#d0cecf;">14-14-0</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">구창모</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:33</td>
+										<td style="background:#d0cecf;">4,874</td>
+										<td style="background:#d0cecf;">81,854</td>
+									</tr>
+									<tr>
+										<td>29</td>
+										<td>05/09</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>16-4 승</td>
+										<td>15-14-0</td>
+										<td>0.517</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:31</td>
+										<td>2,562</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td>30</td>
+										<td>05/10</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>8-7 승</td>
+										<td>16-14-0</td>
+										<td>0.533</td>
+										<td>김진호</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:20</td>
+										<td>3,734</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td>31</td>
+										<td>05/11</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>4-1 승</td>
+										<td>17-14-0</td>
+										<td>0.548</td>
+										<td>구창모</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:12</td>
+										<td>3,934</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td>32</td>
+										<td>05/12</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>4-7 패</td>
+										<td>17-15-0</td>
+										<td>0.531</td>
+										<td>&nbsp;</td>
+										<td>김시훈</td>
+										<td>&nbsp;</td>
+										<td>3:30</td>
+										<td>3,866</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td>33</td>
+										<td>05/13</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>2-9 패</td>
+										<td>17-16-0</td>
+										<td>0.515</td>
+										<td>&nbsp;</td>
+										<td>송명기</td>
+										<td>&nbsp;</td>
+										<td>3:06</td>
+										<td>6,573</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td>34</td>
+										<td>05/14</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>6-4 승</td>
+										<td>18-16-0</td>
+										<td>0.529</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>2:55</td>
+										<td>5,634</td>
+										<td>81,854</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">35</td>
+										<td style="background:#d0cecf;">05/16</td>
+										<td style="background:#d0cecf;">SSG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">5-3 승</td>
+										<td style="background:#d0cecf;">19-16-0</td>
+										<td style="background:#d0cecf;">0.543</td>
+										<td style="background:#d0cecf;">최성영</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용찬</td>
+										<td style="background:#d0cecf;">3:20</td>
+										<td style="background:#d0cecf;">4,113</td>
+										<td style="background:#d0cecf;">85,967</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">36</td>
+										<td style="background:#d0cecf;">05/17</td>
+										<td style="background:#d0cecf;">SSG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">0-4 패</td>
+										<td style="background:#d0cecf;">19-17-0</td>
+										<td style="background:#d0cecf;">0.528</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">구창모</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:28</td>
+										<td style="background:#d0cecf;">4,344</td>
+										<td style="background:#d0cecf;">90,311</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">37</td>
+										<td style="background:#d0cecf;">05/19</td>
+										<td style="background:#d0cecf;">삼성</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">4-5 패</td>
+										<td style="background:#d0cecf;">19-18-0</td>
+										<td style="background:#d0cecf;">0.514</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용준</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:31</td>
+										<td style="background:#d0cecf;">8,493</td>
+										<td style="background:#d0cecf;">98,804</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">38</td>
+										<td style="background:#d0cecf;">05/20</td>
+										<td style="background:#d0cecf;">삼성</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">14-3 승</td>
+										<td style="background:#d0cecf;">20-18-0</td>
+										<td style="background:#d0cecf;">0.526</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:16</td>
+										<td style="background:#d0cecf;">14,870</td>
+										<td style="background:#d0cecf;">113,674</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">39</td>
+										<td style="background:#d0cecf;">05/21</td>
+										<td style="background:#d0cecf;">삼성</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">1-2 패</td>
+										<td style="background:#d0cecf;">20-19-0</td>
+										<td style="background:#d0cecf;">0.513</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">류진욱</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:57</td>
+										<td style="background:#d0cecf;">10,910</td>
+										<td style="background:#d0cecf;">124,584</td>
+									</tr>
+									<tr>
+										<td>40</td>
+										<td>05/23</td>
+										<td>롯데</td>
+										<td>사직</td>
+										<td>0-2 패</td>
+										<td>20-20-0</td>
+										<td>0.500</td>
+										<td>&nbsp;</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+										<td>2:46</td>
+										<td>15,047</td>
+										<td>124,584</td>
+									</tr>
+									<tr>
+										<td>41</td>
+										<td>05/24</td>
+										<td>롯데</td>
+										<td>사직</td>
+										<td>3-1 승</td>
+										<td>21-20-0</td>
+										<td>0.512</td>
+										<td>최성영</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:25</td>
+										<td>14,244</td>
+										<td>124,584</td>
+									</tr>
+									<tr>
+										<td>42</td>
+										<td>05/25</td>
+										<td>롯데</td>
+										<td>사직</td>
+										<td>1-11 패</td>
+										<td>21-21-0</td>
+										<td>0.500</td>
+										<td>&nbsp;</td>
+										<td>이용준</td>
+										<td>&nbsp;</td>
+										<td>3:07</td>
+										<td>15,221</td>
+										<td>124,584</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">43</td>
+										<td style="background:#d0cecf;">05/26</td>
+										<td style="background:#d0cecf;">한화</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">11-0 승</td>
+										<td style="background:#d0cecf;">22-21-0</td>
+										<td style="background:#d0cecf;">0.512</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">전사민</td>
+										<td style="background:#d0cecf;">2:56</td>
+										<td style="background:#d0cecf;">5,952</td>
+										<td style="background:#d0cecf;">130,536</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">44</td>
+										<td style="background:#d0cecf;">05/27</td>
+										<td style="background:#d0cecf;">한화</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">0-5 패</td>
+										<td style="background:#d0cecf;">22-22-0</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이재학</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:31</td>
+										<td style="background:#d0cecf;">9,558</td>
+										<td style="background:#d0cecf;">140,094</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">45</td>
+										<td style="background:#d0cecf;">05/30</td>
+										<td style="background:#d0cecf;">두산</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">5-0 승</td>
+										<td style="background:#d0cecf;">23-22-0</td>
+										<td style="background:#d0cecf;">0.511</td>
+										<td style="background:#d0cecf;">와이드너</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:57</td>
+										<td style="background:#d0cecf;">3,180</td>
+										<td style="background:#d0cecf;">143,274</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">46</td>
+										<td style="background:#d0cecf;">05/31</td>
+										<td style="background:#d0cecf;">두산</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">2-3 패</td>
+										<td style="background:#d0cecf;">23-23-0</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">송명기</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:45</td>
+										<td style="background:#d0cecf;">4,180</td>
+										<td style="background:#d0cecf;">147,454</td>
+									</tr>
+									<tr>
+										<td>47</td>
+										<td>06/02</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>9-2 승</td>
+										<td>24-23-0</td>
+										<td>0.511</td>
+										<td>최성영</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:16</td>
+										<td>10,238</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td>48</td>
+										<td>06/03</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>7-3 승</td>
+										<td>25-23-0</td>
+										<td>0.521</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:35</td>
+										<td>18,890</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td>49</td>
+										<td>06/04</td>
+										<td>LG</td>
+										<td>잠실</td>
+										<td>3-1 승</td>
+										<td>26-23-0</td>
+										<td>0.531</td>
+										<td>이재학</td>
+										<td>&nbsp;</td>
+										<td>김시훈</td>
+										<td>3:25</td>
+										<td>15,096</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td>50</td>
+										<td>06/06</td>
+										<td>삼성</td>
+										<td>대구</td>
+										<td>6-9 패</td>
+										<td>26-24-0</td>
+										<td>0.520</td>
+										<td>&nbsp;</td>
+										<td>와이드너</td>
+										<td>&nbsp;</td>
+										<td>3:03</td>
+										<td>14,639</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td>51</td>
+										<td>06/07</td>
+										<td>삼성</td>
+										<td>대구</td>
+										<td>4-0 승</td>
+										<td>27-24-0</td>
+										<td>0.529</td>
+										<td>이용준</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:41</td>
+										<td>7,119</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td>52</td>
+										<td>06/08</td>
+										<td>삼성</td>
+										<td>대구</td>
+										<td>7-1 승</td>
+										<td>28-24-0</td>
+										<td>0.538</td>
+										<td>최성영</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:18</td>
+										<td>5,989</td>
+										<td>147,454</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">53</td>
+										<td style="background:#d0cecf;">06/09</td>
+										<td style="background:#d0cecf;">SSG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">5-2 승</td>
+										<td style="background:#d0cecf;">29-24-0</td>
+										<td style="background:#d0cecf;">0.547</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">김시훈</td>
+										<td style="background:#d0cecf;">2:53</td>
+										<td style="background:#d0cecf;">5,110</td>
+										<td style="background:#d0cecf;">152,564</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">54</td>
+										<td style="background:#d0cecf;">06/10</td>
+										<td style="background:#d0cecf;">SSG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">7-0 승</td>
+										<td style="background:#d0cecf;">30-24-0</td>
+										<td style="background:#d0cecf;">0.556</td>
+										<td style="background:#d0cecf;">이재학</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:40</td>
+										<td style="background:#d0cecf;">11,026</td>
+										<td style="background:#d0cecf;">163,590</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">55</td>
+										<td style="background:#d0cecf;">06/11</td>
+										<td style="background:#d0cecf;">SSG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">8-4 승</td>
+										<td style="background:#d0cecf;">31-24-0</td>
+										<td style="background:#d0cecf;">0.564</td>
+										<td style="background:#d0cecf;">김시훈</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:11</td>
+										<td style="background:#d0cecf;">7,210</td>
+										<td style="background:#d0cecf;">170,800</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">56</td>
+										<td style="background:#d0cecf;">06/13</td>
+										<td style="background:#d0cecf;">두산</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">4-11 패</td>
+										<td style="background:#d0cecf;">31-25-0</td>
+										<td style="background:#d0cecf;">0.554</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용준</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:15</td>
+										<td style="background:#d0cecf;">3,699</td>
+										<td style="background:#d0cecf;">174,499</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">57</td>
+										<td style="background:#d0cecf;">06/14</td>
+										<td style="background:#d0cecf;">두산</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">5-4 승</td>
+										<td style="background:#d0cecf;">32-25-0</td>
+										<td style="background:#d0cecf;">0.561</td>
+										<td style="background:#d0cecf;">이용찬</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:39</td>
+										<td style="background:#d0cecf;">3,154</td>
+										<td style="background:#d0cecf;">177,653</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">58</td>
+										<td style="background:#d0cecf;">06/15</td>
+										<td style="background:#d0cecf;">두산</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">10-3 승</td>
+										<td style="background:#d0cecf;">33-25-0</td>
+										<td style="background:#d0cecf;">0.569</td>
+										<td style="background:#d0cecf;">조민석</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:33</td>
+										<td style="background:#d0cecf;">3,633</td>
+										<td style="background:#d0cecf;">181,286</td>
+									</tr>
+									<tr>
+										<td>59</td>
+										<td>06/16</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>11-13 패</td>
+										<td>33-26-0</td>
+										<td>0.559</td>
+										<td>&nbsp;</td>
+										<td>임정호</td>
+										<td>&nbsp;</td>
+										<td>4:12</td>
+										<td>10,170</td>
+										<td>181,286</td>
+									</tr>
+									<tr>
+										<td>60</td>
+										<td>06/17</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>10-7 승</td>
+										<td>34-26-0</td>
+										<td>0.567</td>
+										<td>와이드너</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:45</td>
+										<td>15,992</td>
+										<td>181,286</td>
+									</tr>
+									<tr>
+										<td>61</td>
+										<td>06/18</td>
+										<td>KIA</td>
+										<td>광주</td>
+										<td>7-7 무</td>
+										<td>34-26-1</td>
+										<td>0.567</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>4:46</td>
+										<td>13,967</td>
+										<td>181,286</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">62</td>
+										<td style="background:#d0cecf;">06/20</td>
+										<td style="background:#d0cecf;">LG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">8-4 승</td>
+										<td style="background:#d0cecf;">35-26-1</td>
+										<td style="background:#d0cecf;">0.574</td>
+										<td style="background:#d0cecf;">송명기</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:32</td>
+										<td style="background:#d0cecf;">3,433</td>
+										<td style="background:#d0cecf;">184,719</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">63</td>
+										<td style="background:#d0cecf;">06/21</td>
+										<td style="background:#d0cecf;">LG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">3-9 패</td>
+										<td style="background:#d0cecf;">35-27-1</td>
+										<td style="background:#d0cecf;">0.565</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">전사민</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">4:13</td>
+										<td style="background:#d0cecf;">3,571</td>
+										<td style="background:#d0cecf;">188,290</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">64</td>
+										<td style="background:#d0cecf;">06/22</td>
+										<td style="background:#d0cecf;">LG</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">3-4 패</td>
+										<td style="background:#d0cecf;">35-28-1</td>
+										<td style="background:#d0cecf;">0.556</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">전사민</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">4:36</td>
+										<td style="background:#d0cecf;">4,997</td>
+										<td style="background:#d0cecf;">193,287</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">65</td>
+										<td style="background:#d0cecf;">06/23</td>
+										<td style="background:#d0cecf;">한화</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">2-6 패</td>
+										<td style="background:#d0cecf;">35-29-1</td>
+										<td style="background:#d0cecf;">0.547</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">와이드너</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:57</td>
+										<td style="background:#d0cecf;">6,376</td>
+										<td style="background:#d0cecf;">199,663</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">66</td>
+										<td style="background:#d0cecf;">06/24</td>
+										<td style="background:#d0cecf;">한화</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">1-7 패</td>
+										<td style="background:#d0cecf;">35-30-1</td>
+										<td style="background:#d0cecf;">0.538</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">이용준</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:43</td>
+										<td style="background:#d0cecf;">13,791</td>
+										<td style="background:#d0cecf;">213,454</td>
+									</tr>
+									<tr>
+										<td>67</td>
+										<td>06/27</td>
+										<td>두산</td>
+										<td>잠실</td>
+										<td>2-3 패</td>
+										<td>35-31-1</td>
+										<td>0.530</td>
+										<td>&nbsp;</td>
+										<td>류진욱</td>
+										<td>&nbsp;</td>
+										<td>2:42</td>
+										<td>5,302</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>68</td>
+										<td>06/28</td>
+										<td>두산</td>
+										<td>잠실</td>
+										<td>4-1 승</td>
+										<td>36-31-1</td>
+										<td>0.537</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:13</td>
+										<td>5,400</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>69</td>
+										<td>06/30</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>2-3 패</td>
+										<td>36-32-1</td>
+										<td>0.529</td>
+										<td>&nbsp;</td>
+										<td>류진욱</td>
+										<td>&nbsp;</td>
+										<td>2:55</td>
+										<td>4,596</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>70</td>
+										<td>07/01</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>6-7 패</td>
+										<td>36-33-1</td>
+										<td>0.522</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+										<td>3:36</td>
+										<td>9,551</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>71</td>
+										<td>07/02</td>
+										<td>KT</td>
+										<td>수원</td>
+										<td>0-5 패</td>
+										<td>36-34-1</td>
+										<td>0.514</td>
+										<td>&nbsp;</td>
+										<td>신민혁</td>
+										<td>&nbsp;</td>
+										<td>3:02</td>
+										<td>5,406</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>72</td>
+										<td>07/04</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>4-8 패</td>
+										<td>36-35-1</td>
+										<td>0.507</td>
+										<td>&nbsp;</td>
+										<td>이준호</td>
+										<td>&nbsp;</td>
+										<td>3:44</td>
+										<td>4,474</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>73</td>
+										<td>07/05</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>0-2 패</td>
+										<td>36-36-1</td>
+										<td>0.500</td>
+										<td>&nbsp;</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>2:53</td>
+										<td>4,027</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td>74</td>
+										<td>07/06</td>
+										<td>키움</td>
+										<td>고척</td>
+										<td>5-4 승</td>
+										<td>37-36-1</td>
+										<td>0.507</td>
+										<td>김시훈</td>
+										<td>&nbsp;</td>
+										<td>이용찬</td>
+										<td>3:37</td>
+										<td>4,013</td>
+										<td>213,454</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">75</td>
+										<td style="background:#d0cecf;">07/08</td>
+										<td style="background:#d0cecf;">삼성</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">0-8 패</td>
+										<td style="background:#d0cecf;">37-37-1</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">신민혁</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:56</td>
+										<td style="background:#d0cecf;">12,462</td>
+										<td style="background:#d0cecf;">225,916</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">76</td>
+										<td style="background:#d0cecf;">07/09</td>
+										<td style="background:#d0cecf;">삼성</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">0-7 패</td>
+										<td style="background:#d0cecf;">37-38-1</td>
+										<td style="background:#d0cecf;">0.493</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">송명기</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:05</td>
+										<td style="background:#d0cecf;">8,522</td>
+										<td style="background:#d0cecf;">234,438</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">77</td>
+										<td style="background:#d0cecf;">07/12</td>
+										<td style="background:#d0cecf;">롯데</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">11-2 승</td>
+										<td style="background:#d0cecf;">38-38-1</td>
+										<td style="background:#d0cecf;">0.500</td>
+										<td style="background:#d0cecf;">페디</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">3:45</td>
+										<td style="background:#d0cecf;">13,074</td>
+										<td style="background:#d0cecf;">247,512</td>
+									</tr>
+									<tr>
+										<td style="background:#d0cecf;">78</td>
+										<td style="background:#d0cecf;">07/13</td>
+										<td style="background:#d0cecf;">롯데</td>
+										<td style="background:#d0cecf;">창원</td>
+										<td style="background:#d0cecf;">13-3 승</td>
+										<td style="background:#d0cecf;">39-38-1</td>
+										<td style="background:#d0cecf;">0.506</td>
+										<td style="background:#d0cecf;">와이드너</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">&nbsp;</td>
+										<td style="background:#d0cecf;">2:50</td>
+										<td style="background:#d0cecf;">10,316</td>
+										<td style="background:#d0cecf;">257,828</td>
+									</tr>
+									<tr>
+										<td>79</td>
+										<td>07/21</td>
+										<td>한화</td>
+										<td>대전</td>
+										<td>9-3 승</td>
+										<td>40-38-1</td>
+										<td>0.513</td>
+										<td>페디</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:12</td>
+										<td>8,475</td>
+										<td>257,828</td>
+									</tr>
+									<tr>
+										<td>80</td>
+										<td>07/22</td>
+										<td>한화</td>
+										<td>대전</td>
+										<td>7-5 승</td>
+										<td>41-38-1</td>
+										<td>0.519</td>
+										<td>이용찬</td>
+										<td>&nbsp;</td>
+										<td>&nbsp;</td>
+										<td>3:48</td>
+										<td>10,021</td>
+										<td>257,828</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="footer-box"><img src="../images/footer_img.jpg?ver2" /></div>
+
+					</div>
+
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<script type="text/javascript">
+		function loaded() {
+      var myScroll1 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll2 = new IScroll('.record-area',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+      var myScroll3 = new IScroll('#TeamSelect',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+		}
+	</script>
+</head>
+<body onload="loaded()">
+  <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="fixed">
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>홈</span></a></li>
+            <li><a href="../Video/video.html"><span>영상</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li class="on"><a href="../Rank/rank.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+        <section class="ranking ranking-record">
+          <h1 class="dp-none">순위</h1>
+          <!-- 연도 -->
+  				<ul class="date-area clear">
+            <li class="prev"><a href="#none"><img src="../resources/images/common/btn_date_prev.png" alt="이전버튼"></a></li>
+            <li class="today roboto">2020</li>
+            <li class="next"><a href="#none"><img src="../resources/images/common/btn_date_next.png" alt="다음버튼"></a></li>
+  				</ul>
+          <!-- // 연도 -->
+
+          <!-- 팀 순위 -->
+          <div class="league-ranking">
+            <div class="select-area clear">
+              <h2 class="tit-record">팀 순위</h2>
+              <ul class="season-list">
+                <li class="on"><a href="#none">정규</a></li> <!-- 선택 됐을 경우 on 클래스 추가 -->
+                <li><a href="#none">시범</a></li>
+              </ul>
+            </div>
+            <div id="LeagueRanking" class="scroll-wrap">
+              <div class="tit-area">
+                <div class="tit">순위</div>
+                <ul class="list">
+                  <li class="on"> <!-- My팀일 경우 on 클래스 추가 -->
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_OB.png" alt=""></span>
+                    <span class="name">두산</span>
+                  </li>
+                  <li>
+                    <span class="rank">2</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_WO.png" alt=""></span>
+                    <span class="name">키움</span>
+                  </li>
+                  <li>
+                    <span class="rank">3</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_SK.png" alt=""></span>
+                    <span class="name">SK</span>
+                  </li>
+                  <li>
+                    <span class="rank">4</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_LG.png" alt=""></span>
+                    <span class="name">LG</span>
+                  </li>
+                  <li>
+                    <span class="rank">5</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_NC.png" alt=""></span>
+                    <span class="name">NC</span>
+                  </li>
+                  <li>
+                    <span class="rank">6</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt=""></span>
+                    <span class="name">KT</span>
+                  </li>
+                  <li>
+                    <span class="rank">7</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_HT.png" alt=""></span>
+                    <span class="name">KIA</span>
+                  </li>
+                  <li>
+                    <span class="rank">8</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_SS.png" alt=""></span>
+                    <span class="name">삼성</span>
+                  </li>
+                  <li>
+                    <span class="rank">9</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>
+                    <span class="name">한화</span>
+                  </li>
+                  <li>
+                    <span class="rank">10</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_144x123_LT.png" alt=""></span>
+                    <span class="name">롯데</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="record-area">
+                <div class="scroller">
+                  <div class="tbl-area">
+                    <table class="tbl" summary="팀 순위">
+                      <caption>팀 순위</caption>
+                      <colgroup>
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                        <col width="14.2857%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>경기</th>
+                          <th>승</th>
+                          <th>패</th>
+                          <th>무</th>
+                          <th>승률</th>
+                          <th>게임차</th>
+                          <th>연속</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="on">144</td>
+                          <td class="on">88</td>
+                          <td class="on">55</td>
+                          <td class="on">1</td>
+                          <td class="on">0.615</td>
+                          <td class="on">14.155</td>
+                          <td class="on">99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                        <tr>
+                          <td>144</td>
+                          <td>88</td>
+                          <td>55</td>
+                          <td>1</td>
+                          <td>0.615</td>
+                          <td>14.155</td>
+                          <td>99연승</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="tip"><span class="roboto">1, 2</span>위 최종 순위는 한국시리즈 결과를 반영합니다.</p>
+          </div>
+          <!-- // 팀 순위 -->
+
+          <!-- 팀 간 전적 -->
+          <div class="team-wrap">
+            <h2 class="tit-record">팀 간 전적</h2>
+            <div id="TeamSelect" class="scroll-wrap">
+              <div class="scroller">
+                <ul class="team-list">
+                  <li><a href="#none"><img src="../resources/images/emb/emb_144x123_OB.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_WO.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_SK.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_LG.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_NC.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_KT.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_HT.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_SS.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_HH.png" alt=""></a></li>
+                  <li><a href="#none"><img src="../resources/images/emb/embR_144x123_LT.png" alt=""></a></li>
+                </ul>
+              </div>
+            </div>
+             <ul class="versus-team">
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_WO.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:60%;"></div>
+                     <div class="draw" style="width:10%;"></div>
+                     <div class="lose" style="width:30%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_SK.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">2</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:90%;"></div>
+                     <div class="lose" style="width:10%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li><li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_LG.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:60%;"></div>
+                     <div class="draw" style="width:10%;"></div>
+                     <div class="lose" style="width:30%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_NC.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:40%;"></div>
+                     <div class="draw" style="width:20%;"></div>
+                     <div class="lose" style="width:40%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:60%;"></div>
+                     <div class="draw" style="width:10%;"></div>
+                     <div class="lose" style="width:30%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_HT.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:50%;"></div>
+                     <div class="lose" style="width:50%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_SS.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:20%;"></div>
+                     <div class="lose" style="width:80%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:60%;"></div>
+                     <div class="lose" style="width:40%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">12</span>패</div>
+                 </div>
+               </li>
+               <li class="clear">
+                 <div class="team roboto">VS <span class="emb"><img src="../resources/images/emb/emb_144x123_LT.png" alt=""></span></div>
+                 <div class="score">
+                   <div class="count-win"><span class="roboto">12</span>승</div>
+                   <div class="graph-box">
+                     <div class="win" style="width:50%;"></div>
+                     <div class="draw" style="width:10%;"></div>
+                     <div class="lose" style="width:40%;"></div>
+                   </div>
+                   <div class="count-lose"><span class="roboto">1</span>패</div>
+                 </div>
+               </li>
+             </ul>
+             <p class="no-record">팀 간 전적은 정규시즌에만 제공합니다.</p>
+          </div>
+          <!-- // 팀 간 전적 -->
+        </section>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+ </body>
+</html>

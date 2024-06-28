@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+            <div class="top">
+                <h1 class="logo">
+                    <a href="record_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+                </h1>
+                <ul class="menu">
+                    <li class="on">
+                        <a href="record_list.html">기록 보기</a>
+                    </li>
+                    <li>
+                        <a href="record_insert.html">기록 입력</a>
+                    </li>
+                    <li>
+                        <a href="video_upload.html">영상 입력</a>
+                    </li>
+                    <li>
+                        <a href="admin.html">관리자 전용</a>
+                    </li>
+                </ul>
+                <ul class="user_menu">
+                    <li>
+                        <a href="#">
+                            <img src="resources/images/common/icon_pw.png" alt="비밀번호 변경" />
+                            비밀번호변경
+                        </a>
+                        <!-- 비밀번호 변경 레이어 팝업 -->
+                        <div class="layer-pw" style="display:none;">
+                            <h2>비밀번호 변경</h2>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label for="pw_now">현재 비밀번호</label>
+                                        <input type="password" id="pw_now">
+                                    </li>
+                                    <li>
+                                        <label for="pw_new">새 비밀번호</label>
+                                        <input type="password" id="pw_new">
+                                    </li>
+                                    <li>
+                                        <label for="pw_new_check">새 비밀번호 확인</label>
+                                        <input type="password" id="pw_new_check">
+                                    </li>
+                                </ul>
+                                <ul class="pw_notice">
+                                    <li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+                                    <li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+                                </ul>
+                                <p class="btn_save">
+                                    <a href="#">저장</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="resources/images/common/icon_pw.png" alt="로그아웃" />
+                            로그아웃
+                        </a>
+                    </li>
+                </ul>
+            </div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<div class="title-wrap in-sel">
+					<h2>경기일정 / 결과</h2>
+					<div>
+						<select class="sel">
+							<option value="">2023</option>
+						</select>
+						<select class="sel">
+							<option value="">5월</option>
+						</select>
+					</div>
+				</div>
+				<table class="tbl">
+					<colgroup>
+						<col style="width:16%;" />
+						<col style="width:18%;" />
+						<col style="width:14%;" />
+						<col style="width:10%;" />
+						<col style="width:10%;" />
+						<col style="width:10%;" />
+						<col style="width:22%;" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>날짜</th>
+							<th>대회</th>
+							<th>라운드</th>
+							<th>원정팀</th>
+							<th>홈팀</th>
+							<th>구장</th>
+							<th>상세내용</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>5월 26일</td>
+							<td>신세계 이마트배</td>
+							<td>32강</td>
+							<td>휘문고</td>
+							<td>경기고</td>
+							<td>목동</td>
+							<td>
+								<a class="btn" href="record_view.html">경기기록</a>
+								<a class="btn remove" href="">삭제</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div>
+				<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+				<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+
+</html>

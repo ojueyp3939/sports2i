@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBL"/>
+    <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="스포츠투아이, KBL" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/ico.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/s2i.css" />
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<main id="contents">
+				<div class="layout grid-2" id="s2iZone">
+					<div class="contents">
+						<div class="title desktop">
+							<h2>관중현황</h2>
+						</div>
+						<ul class="filter-select">
+							<li>
+								<select>
+									<option>팀 관중현황</option>
+								</select>
+							</li>
+							<li class="custom-select">
+								<a class="select ellipsis on">
+									대구 한국가스공사 외 10팀
+								</a>
+								<ul>
+									<li>
+										<input type="checkbox" id="all">
+										<label for="all">
+											<p>KBL 팀</p>
+										</label>
+									</li>
+									<li>
+										<input type="checkbox" id="all">
+										<label for="all">
+											<p>KBL 팀</p>
+										</label>
+									</li>
+									<li>
+										<input type="checkbox" id="all">
+										<label for="all">
+											<p>KBL 팀</p>
+										</label>
+									</li>
+									<li class="btn">
+											<button class="line gray">취소</button>
+											<button disabled="">완료</button>
+									</li>
+								</ul>
+								
+								
+							</li>
+							<li>
+								<select>
+									<option>2022-2023</option>
+								</select>
+							</li>
+							<li>
+								<select>
+									<option>정규경기</option>
+								</select>
+							</li>
+							<li>
+								<select>
+									<option>라운드 전체</option>
+								</select>
+							</li>
+						</ul>
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>모든 시즌 그래프</h3>
+							</div>
+							<div class="award-graph" style="height: 20rem;"></div>
+						</div>
+
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>팀 관중현황 그래프</h3>
+							</div>
+							<div class="award-graph" style="height: 20rem;"></div>
+						</div>
+
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>팀 관중현황</h3>
+								<div>
+									<button title="엑셀 다운받기"><i class="ic-excel"></i></button>
+									<button title="가로 보기 팝업 열기" class="mobile"><i class="ic-horiz"></i></button>
+								</div>
+							</div>
+							<div class="table-100">
+								<table class="crowd-table2">
+									<caption>팀 관중현황</caption>
+									<thead>
+										<tr>
+											<th>시즌</th>
+											<th>팀</th>
+											<th>경기</th>
+											<th>라운드</th>
+											<th>경기장</th>
+											<th>날짜</th>
+											<th>관중수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2022-2023</td>
+											<td class="text-left">대구 한국가스공사</td>
+											<td>정규경기</td>
+											<td>1라운드</td>
+											<td class="text-left">잠실실내체육관</td>
+											<td>11.04</td>
+											<td>1,114명</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--1. 가로모드 (m ver) -->
+				<div id="s2iZone" class="pop landscape">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>팀 관중현황</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="table-100">
+								<table class="crowd-table2">
+									<caption>팀 관중현황</caption>
+									<thead>
+										<tr>
+											<th>시즌</th>
+											<th>팀</th>
+											<th>경기</th>
+											<th>라운드</th>
+											<th>경기장</th>
+											<th>날짜</th>
+											<th>관중수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2022-2023</td>
+											<td class="text-left">대구 한국가스공사</td>
+											<td>정규경기</td>
+											<td>1라운드</td>
+											<td class="text-left">잠실실내체육관</td>
+											<td>11.04</td>
+											<td>1,114명</td>
+										</tr>
+										<tr>
+											<td>2022-2023</td>
+											<td class="text-left">대구 한국가스공사</td>
+											<td>정규경기</td>
+											<td>1라운드</td>
+											<td class="text-left">잠실실내체육관</td>
+											<td>11.04</td>
+											<td>1,114명</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

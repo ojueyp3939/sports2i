@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {visibility:hidden;overflow:hidden;width:0;height:0;line-height:0;font-size:0;text-indent:-9999px;}
+
+/* layout */
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+.fl {float:left;}
+.fr {float:right;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+.mb10 {margin-bottom:10px;}
+.mb15 {margin-bottom:15px;}
+.mb20 {margin-bottom:20px;}
+.mb40 {margin-bottom:40px;}
+
+/* popup */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;z-index:15;background:#000;opacity:0.3;}
+
+/* datapicker */
+.ui-datepicker {width:25em}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {width:30%;margin:0 5px;}
+.ui-widget-header .ui-icon {background-image:url('../images/common/ui-icons_444444_256x240.png');}
+
+/* 팝업 */
+.popup {position:absolute;top:50%;left:50%;z-index:30;width:340px;padding:20px;border-radius:3px;background:#fff;transform:translate(-50%, -50%);}
+.popup .content .tbl tr td {height:auto;padding:5px}
+.popup .btn-wrap {padding-top:10px;}
+.popup .btn-wrap button {width:80px;height:30px;}
+
+/* error */
+.error-wrap {margin-top:140px;text-align:center;}
+.error-wrap p {font-size:16px;color:#666;}
+.error-wrap p.txt{margin:25px 0 15px;font-size:28px;color:#111;}
+.error-wrap .btn-wrap .black {display:inline-block;width:168px;height:54px;padding-top:17px;border-radius:5px;font-size:16px;}

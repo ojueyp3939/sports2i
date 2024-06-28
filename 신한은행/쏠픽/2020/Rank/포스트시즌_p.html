@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/rank.css" />
+</head>
+<script>
+	$(document).ready(function () {
+
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li class="on"><a href="javascript:;">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container" class="post rank">
+			<!-- contents -->
+			<div id="contents">
+				<div class="tab-area tab-rank">
+					<ul class="tab">
+						<li><a href="#none">월간랭킹</a></li>
+						<li class="on"><a href="#none">포스트시즌 랭킹</a></li>
+						<li><a href="#none">이벤트</a></li>
+					</ul>
+				</div>
+				<div class="ranking-area">
+					<h1 class="tit-rank">MY 포스트시즌 랭킹</h1>
+					<div class="info">
+						<dl>
+							<dt>
+								<img src="../resources/images/sub/icon_medal.png" alt="">랭킹
+							</dt>
+							<dd>200,000 등</dd>
+						</dl>
+						<dl>
+							<dt>
+								<img src="../resources/images/sub/icon_point.png" alt="">pick
+							</dt>
+							<dd>8,000 p</dd>
+						</dl>
+					</div>
+					<div class="my-rank no-data">
+						쏠픽 참여 후<br> 나의 랭킹을 확인할 수 있습니다.
+					</div>
+					<div class="my-rank">
+						<div class="my-tit">나의포인트</div>
+						<div class="temper">
+							<span class="temp-rate" style="width:70%;">
+								<img src="../resources/images/sub/icon_dot_post.png" alt=""></span>
+							<span class="temp-crown"></span>
+							<span class="temp-ballon">+999 pick</span>
+						</div>
+						<p class="my-txt">1등 달성까지 <span class="point">+99,999 pick</span> 남았습니다!</p>
+					</div>
+					<div class="top-rank">
+						<table class="tbl">
+							<colgroup>
+								<col width="36%" />
+								<col width="28%" />
+								<col width="36%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th>랭킹</th>
+									<th>pick</th>
+									<th>예상보상</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="up">
+									<td>1등</td>
+									<td>1,234,567</td>
+									<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_500.png" /></span></td>
+								</tr>
+								<tr class="down">
+									<td>2등~100등 <span>(10명)</span></td>
+									<td>521,215</td>
+									<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_5.png" /></span></td>
+								</tr>
+								<tr class="up">
+									<td>11등~100등 <span>(100명)</span></td>
+									<td>12</td>
+									<td><span class="gift"><img src="../resources/images/sub/event_rank_gift_1.png" /></span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="description-area">
+					<dl class="description">
+						<dt>※ 랭킹 현황은 총 3개 그룹 (1등/2~10등/11~100등)으로 표출됩니다.</dt>
+					</dl>
+					<dl class="description">
+						<dt>※ 동점자(공동 등수) 발생 시 상품 지급 대상 등수까지만 표출됩니다.</dt>
+						<dd>(예) 1등 2명, 9등 3명, 90등 11명 (다음 등수는 101등)</dd>
+						<dd>- 1등 그룹 표출 : 1등</dd>
+						<dd>- 2~10등 그룹 표출 : 3등~9등</dd>
+						<dd>- 11~100등 그룹 표출 : 12등~90등</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

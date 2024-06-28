@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Play your 'Seezn'</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../resources/images/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../resources/images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/favicon/favicon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 탑 플레이어 Slider
+            var swiper = new Swiper('#PlayerRecord', {
+                slidesPerView: 7,
+                slidesPerGroup: 7,
+                spaceBetween: 20,
+                initialSlide: 1,
+                navigation: {
+                    prevEl: '.PlayerRecordNext',
+                    nextEl: '.PlayerRecordPrev',
+                },
+                breakpoints: {
+                    1136: {
+                        slidesPerView: 5,
+                        slidesPerGroup: 5
+                    },
+                    1500: {
+                        slidesPerView: 6,
+                        slidesPerGroup: 6
+                    },
+                    1920: {
+                        slidesPerView: 7,
+                        slidesPerGroup: 7
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- haeder -->
+        <header>
+            <div class="header-baseball">
+                <h2>프로야구 Live</h2>
+                <nav class="gnb-wrap">
+                    <ul class="gnb">
+                        <li><a href="../Playball/playball.html"><span>홈</span></a></li>
+                        <li><a href="../Video/video.html"><span>VOD</span></a></li>
+                        <li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+                        <li><a href="../Rank/rank.html"><span>순위</span></a></li>
+                        <li class="on"><a href="../Record/record.html"><span>기록</span></a></li>
+                        <li><a href="../My/my.html"><span>MY</span></a></li>
+                    </ul>
+                    <h3 class="hidden-obj">선수 기록</h3>
+                </nav>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents" class="record-page">
+                <section class="record-wrapper">
+                    <!-- 연도 -->
+                    <ul class="date-area clear">
+                        <li class="prev"><a href="#none"><img src="../resources/images/common/btn_date_prev.png" alt="이전버튼"></a></li>
+                        <li class="today roboto">2020</li>
+                        <li class="next"><a href="#none"><img src="../resources/images/common/btn_date_next.png" alt="다음버튼"></a></li>
+                    </ul>
+                    <!-- // 연도 -->
+                    <!-- 팀 선택 -->
+                    <div class="choice-wrap">
+                        <div class="select-area clear">
+                            <h2 class="tit-record">팀 선택</h2>
+                            <ul class="season-list">
+                                <li class="on"><a href="#none">정규</a></li> <!-- 선택 됐을 경우 on 클래스 추가 -->
+                                <li><a href="#none">시범</a></li>
+                            </ul>
+                        </div>
+                        <ul id="TeamSelect" class="team-list">
+                            <li class="league-all on"><span>리그 전체</span></li> <!-- 선택 됐을 경우 on 클래스 추가 -->
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_KT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_SK.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_SS.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_HT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_WO.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_OB.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_LT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_NC.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_LG.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/embR_80x68_HH.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <!-- // 팀 선택 -->
+                    <!-- 탑 플레이어 -->
+                    <div class="top-player">
+                        <ul class="tab">
+                            <li class="on"><a href="#none">타자</a></li>
+                            <li><a href="#none">투수</a></li>
+                            <li><a href="#none">수비</a></li>
+                            <li><a href="#none">주루</a></li>
+                        </ul>
+                        <h3 class="tit-record roboto">TOP PLAYER</h3>
+                        <ul id="PlayerRecord" class="player-list clear">
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="player-wrapper">
+                                    <div class="player-box">
+                                        <div class="record-kind">타율</div>
+                                        <div class="photo"><img src="../resources/images/common/photo.png" alt=""></div>
+                                        <dl>
+                                            <dt>황재균</dt>
+                                            <dd class="team"><span class="roboto">KT</span> 위즈</dd>
+                                            <dd class="record roboto">0.283</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- // 탑 플레이어 -->
+                    <!-- 선수 순위 // 기록항목 최대 10까지 -->
+                    <div class="league-ranking">
+                        <h3 class="tit-record">선수 순위</h3>
+                        <div class="btn-area clear">
+                            <a href="#none" class="btn-prev disable">이전</a> <!-- 비활성화 시 disable 클래스 추가 -->
+                            <a href="#none" class="btn-next">다음</a>
+                        </div>
+                        <div id="LeagueRanking" class="tbl-area">
+                            <!--<table class="tbl" summary="선수 타자 순위">
+        <caption>선수 순위</caption>
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th class="on"><a href="#none">타율</a></th>
+                <th><a href="#none">경기수</a></th>
+                <th><a href="#none">타수</a></th>
+                <th><a href="#none">안타</a></th>
+                <th><a href="#none">2루타</a></th>
+                <th><a href="#none">3루타</a></th>
+                <th><a href="#none">홈런</a></th>
+                <th><a href="#none">타점</a></th>
+                <th><a href="#none">득점</a></th>
+                <th><a href="#none">볼넷</a></th>
+                <th><a href="#none">삼진</a></th>
+                <th><a href="#none">출루율</a></th>
+                <th><a href="#none">장타율</a></th>
+                <th><a href="#none">OPS</a></th>
+                <th><a href="#none">WRC+</a></th>
+                <th><a href="#none">WPA</a></th>
+                <th><a href="#none">QSWAR</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                </td>
+                <td class="on">2.28</td>
+                <td>54</td>
+                <td>154 2/3</td>
+                <td>27</td>
+                <td>14</td>
+                <td>7</td>
+                <td>1</td>
+                <td>72</td>
+                <td>0.615</td>
+                <td>176</td>
+                <td>7</td>
+                <td>88</td>
+                <td>78</td>
+                <td>33</td>
+                <td>2</td>
+                <td>16</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                </td>
+                <td class="on">2.28</td>
+                <td>54</td>
+                <td>154 2/3</td>
+                <td>27</td>
+                <td>14</td>
+                <td>7</td>
+                <td>1</td>
+                <td>72</td>
+                <td>0.615</td>
+                <td>176</td>
+                <td>7</td>
+                <td>88</td>
+                <td>78</td>
+                <td>33</td>
+                <td>2</td>
+                <td>16</td>
+                <td>16</td>
+            </tr>
+        </tbody>
+    </table>-->
+                            <!--<table class="tbl" summary="선수 투수 순위">
+        <caption>선수 순위</caption>
+        <colgroup>
+            <col style="width:17.6427%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+            <col style="width:4.1178%;" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th>순위</th>
+                <th class="on"><a href="#none">평균 자책점</a></th>
+                <th><a href="#none">경기수</a></th>
+                <th><a href="#none">이닝</a></th>
+                <th><a href="#none">승</a></th>
+                <th><a href="#none">패</a></th>
+                <th><a href="#none">세이브</a></th>
+                <th><a href="#none">홀드</a></th>
+                <th><a href="#none">탈삼진</a></th>
+                <th><a href="#none">승률</a></th>
+                <th><a href="#none">피안타</a></th>
+                <th><a href="#none">피홈런</a></th>
+                <th><a href="#none">실점</a></th>
+                <th><a href="#none">자책</a></th>
+                <th><a href="#none">볼넷</a></th>
+                <th><a href="#none">사구</a></th>
+                <th><a href="#none">QS</a></th>
+                <th><a href="#none">QS+</a></th>
+                <th><a href="#none">WHIP</a></th>
+                <th><a href="#none">WPA</a></th>
+                <th><a href="#none">WAR</a></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                </td>
+                <td class="on">2.28</td>
+                <td>54</td>
+                <td>154 2/3</td>
+                <td>27</td>
+                <td>14</td>
+                <td>7</td>
+                <td>1</td>
+                <td>72</td>
+                <td>0.615</td>
+                <td>176</td>
+                <td>7</td>
+                <td>88</td>
+                <td>78</td>
+                <td>33</td>
+                <td>2</td>
+                <td>16</td>
+                <td>16</td>
+                <td>1.03</td>
+                <td>1.09</td>
+                <td>5.64</td>
+            </tr>
+            <tr>
+                <td>
+                    <span class="rank">1</span>
+                    <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                    <span class="name">페르난데스</span>
+                </td>
+                <td class="on">2.28</td>
+                <td>54</td>
+                <td>154 2/3</td>
+                <td>27</td>
+                <td>14</td>
+                <td>7</td>
+                <td>1</td>
+                <td>72</td>
+                <td>0.615</td>
+                <td>176</td>
+                <td>7</td>
+                <td>88</td>
+                <td>78</td>
+                <td>33</td>
+                <td>2</td>
+                <td>16</td>
+                <td>16</td>
+                <td>1.03</td>
+                <td>1.09</td>
+                <td>5.64</td>
+            </tr>
+        </tbody>
+    </table>-->
+                            <table class="tbl" summary="선수 주루 순위">
+                                <caption>선수 순위</caption>
+                                <thead>
+                                    <tr>
+                                        <th>순위</th>
+                                        <th class="on"><a href="#none">도루</a></th>
+                                        <th><a href="#none">도루시도</a></th>
+                                        <th><a href="#none">도루실패</a></th>
+                                        <th><a href="#none">도루성공률</a></th>
+                                        <th><a href="#none">주루사</a></th>
+                                        <th><a href="#none">견제사</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span class="rank">1</span>
+                                            <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                                            <span class="name">페르난데스</span>
+                                        </td>
+                                        <td class="on">2.28</td>
+                                        <td>54</td>
+                                        <td>154 2/3</td>
+                                        <td>27</td>
+                                        <td>14</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="rank">1</span>
+                                            <span class="emb"><img src="../resources/images/emb/emb_40x45_OB.png" alt="" /></span>
+                                            <span class="name">페르난데스</span>
+                                        </td>
+                                        <td class="on">2.28</td>
+                                        <td>54</td>
+                                        <td>154 2/3</td>
+                                        <td>27</td>
+                                        <td>14</td>
+                                        <td>7</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- // 선수 순위 -->
+                </section>
+            </div>
+            <!-- // contents -->
+        </div>
+        <!-- // container -->
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

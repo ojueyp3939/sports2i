@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li><a href="slot_pre.html"><span>도전999</span></a></li>
+					<li><a href="mission.html"><span>데일리 미션</span></a></li>
+					<li class="on"><a href="rank.html"><span>월간 랭킹</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="rank-wrap">
+					<div class="my-box">
+						<div class="info clear">
+							<span class="tit">이달의 나의 Rank</span>
+							<span class="nick">닉네임명닉네임명닉네</span>
+							<a class="btn-edit" href="rank_popup.html"><i class="icon-edit"></i></a>
+							<a class="btn-myrank" href="rank_myrank.html"><i class="icon-link"></i></a>
+						</div>
+						<div class="data">
+							<ul>
+								<li>
+									순위
+									<p><span>999,999</span>위</p>
+								</li>
+								<li>
+									점수
+									<p><span>999,999</span>점</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="monthly-wrap">
+					<div class="monthly-box">
+						<p class="tit">월간 랭킹</p>
+						<ul class="day-box">
+							<li class="prev">
+								<a href="#"></a>
+							</li>
+							<li class="day-tit">
+								<span class="date">2019</span>년 <span class="date">5</span>월
+							</li>
+							<li class="next">
+								<a href="#"></a>
+							</li>
+						</ul>
+
+						<table class="monthly-tbl">
+							<colgroup>
+								<col width="20%">
+								<col width="50%">
+								<col width="30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>랭킹</th>
+									<th>닉네임</th>
+									<th>누적점수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr class="my">
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+<div class="modal">
+	<div class="pop-wrap">
+		<p class="pop-tit">닉네임 변경</p>
+		<div class="pop-cont">
+			<p class="tit">닉네임</p>
+			<input type="text" maxlength="10" placeholder="10자 이내의 한글/영문/숫자 입력">
+			<p class="alert-txt">* 이미 사용 중인 닉네임 입니다.</p>
+		</div>
+		<div class="final-box">
+			<button>취소</button>
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+<div class="modal">
+	<div class="pop-wrap">
+		<p class="pop-tit">닉네임 변경</p>
+		<div class="pop-cont">
+			<p class="tit">가나다라마바사아자차</p>
+			위 닉네임을 사용하시겠습니까?
+		</div>
+		<div class="final-box">
+			<button>취소</button>
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			참여기록이 없습니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			3개의 팀을 선택해 주세요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			이미 3개의 팀을 선택하셨습니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			응모가 완료되었습니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			응모 기간이 아닙니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal">
+	<div class="pop-wrap alert">
+		<div class="pop-cont">
+			금일 모든 경기가 취소되었습니다.<br />내일 다시 찾아주세요!
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div>

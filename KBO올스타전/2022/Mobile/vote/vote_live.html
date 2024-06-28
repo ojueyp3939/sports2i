@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/allstar.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".part-list .btn-wrap").click(function() {
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="../main_appvote.html" class="logo"><img src="../resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="../main_login.html" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote live">
+			<!-- 올스타 팀 선택 -->
+			<div class="allstar-team">
+				<ul class="allstar">
+					<li class="dream on"><a href="#none" class="menu-dream">드림 올스타</a></li>
+					<li class="nanum"><a href="#none" class="menu-nanum">나눔 올스타</a></li>
+				</ul>
+				<p class="live-vote">
+					<!-- 나눔일 경우 nanum 클래스 추가 -->
+					<span class="dp-b tit">실시간 집계 상황</span>
+					[KBO 홈페이지(PC/모바일)+KBO 공식 APP + KBO STATS APP] 입니다<span class="dp-b">- 2019년 5월 15일 00:00 기준 -</span>
+				</p>
+			</div>
+			<!-- // 올스타 팀 선택 -->
+			<!-- 탭 메뉴 -->
+			<ul class="menu-list">
+				<li><a href="vote_pick.html">My pick</a></li>
+				<li class="on"><a href="vote_live.html">실시간 집계</a></li>
+				<li><a href="vote_total.html">중간 집계</a></li>
+			</ul>
+			<!-- // 탭 메뉴 -->
+			<!-- 실시간 집계 -->
+			<div class="live-pick">
+				<div class="ground-img">
+					<img src="../resources/images/common/bg_ground.png" alt="실시간 집계 그라운드">
+				</div>
+				<ul class="player-list nanum">
+					<!-- 나눔일 경우 nanum 클래스 추가 -->
+					<li class="C">
+						<div class="player-wrap">
+							<div class="position-player">C</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<div class="name">김광현</div>
+								<div class="vote"><span>2,234,567</span> 표</div>
+							</div>
+						</div>
+					</li>
+					<li class="DH">
+						<div class="player-wrap">
+							<div class="position-player">DH</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="B1 line">
+						<div class="player-wrap">
+							<div class="position-player">B1</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="B2 line">
+						<div class="player-wrap">
+							<div class="position-player">B2</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="B3 line">
+						<div class="player-wrap">
+							<div class="position-player">3B</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="CP">
+						<div class="player-wrap">
+							<div class="position-player">CP</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현현현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="MP">
+						<div class="player-wrap">
+							<div class="position-player">MP</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="SP line top">
+						<!-- 1위일 경우 top 클래스 추가 -->
+						<div class="player-wrap">
+							<div class="rank">1위</div><!-- 1위일 경우 태그 및 클래스 추가 -->
+							<div class="position-player">SP</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="SS line">
+						<div class="player-wrap">
+							<div class="position-player">SS</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF1">
+						<div class="player-wrap">
+							<div class="position-player">OF</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF2">
+						<div class="player-wrap">
+							<div class="position-player">OF</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+					<li class="OF3">
+						<div class="player-wrap">
+							<div class="position-player">OF</div>
+							<div class="img-box">
+								<img src="https://image-ktotm.sports2i.com/Player/Circle/2019/69413.png?version=20190324" alt="">
+								<img src="../resources/images/emblem/emb_139x92_SK.png" alt="">
+							</div>
+							<div class="player-info">
+								<span class="name">김광현</span>
+								<span class="vote"><span>2,234,567</span> 표</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<p class="txt-update">* 5분 단위로 업데이트됩니다.</p>
+			</div>
+			<!-- // 실시간 집계 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="../event/event.html" class="btn-shinhan">신한 SOL 앱 투표하기</a></li>
+				<li class="on"><a href="../main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="#none" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+	<!-- 선수 팝업 -->
+	<div id="Modal" style="display:none;">
+		<div class="popup popup-player">
+			<header class="dream">
+				<!-- 나눔일 경우 nanum 클래스 추가 -->
+				<h2 class="team"><img src="../resources/images/common/img_dream_popup.png" alt="드림"></h2>
+				<ul class="info-list">
+					<li class="prev"><a href="#none">이전</a></li>
+					<li class="situation">2루수</li>
+					<li class="next"><a href="#none">다음</a></li>
+				</ul>
+				<a href="#none" class="btn-cancel"><span>닫기</span></a>
+			</header>
+			<section>
+				<ul class="player-list">
+					<li class="top">
+						<!-- 1위일 경우 top 클래스 추가 / 나눔일 경우 nanum 클래스 추가 -->
+						<div class="img-box"><img src="https://image-ktotm.sports2i.com/Player/circle/2019/69413.png?version=20190324" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+						<div class="player-info">
+							<div class="info">
+								<div class="rank">1위</div>
+								<div class="vote-total">득표수 1,000,000</div>
+							</div>
+							<div class="info">
+								<div class="emb"><img src="../resources/images/emblem/emb_139x92_SK.png" alt=""></div>
+								<div class="name">페르난데스</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+		</div>
+	</div>
+	<!-- // 선수 팝업 -->
+</body>
+
+</html>

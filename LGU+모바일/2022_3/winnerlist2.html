@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>스포키 미션 릴레이</title>
+    <link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="header-wrap">
+			<a class="btn-left" href="">
+				<img src="resources/images/contents/icon_share.png" alt="share">
+			</a>
+			<span>이벤트 제목 표시</span>
+			<a class="btn-right" href="">
+				<img src="resources/images/contents/icon_total_close.png" alt="close">
+			</a>
+		</div>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<div class="animated-title">
+					<div class="track">
+						<img src="resources/images/contents/img_marquee.png" alt="2022 Sporki mission">
+					</div>
+				</div>
+				<img class="w100" src="resources/images/contents/event_main.png" alt="스포키 미션 릴레이 2022.11.07 ~ 2022.12.18">
+				<header>
+					<nav class="gnb winner">
+						<ul class="menu">
+							<li><a href="winnerlist.html"><span>당첨자 전체 공지</span></a></li>
+							<li class="on"><a href="winnerlist2.html"><span>내가 참여한 결과 확인</span></a></li>
+						</ul>
+					</nav>
+				</header>
+				<section class="event-wrap">
+					<p class="txt">참여한 이벤트를 선택해주세요!</p>
+					<div class="select-box">
+						<select class="on">
+							<option>선택해주세요.</option>
+							<option>찾아라! 배지 콜렉트 (응모하는 경품)</option>
+						</select>
+					</div>
+
+					<button class="submit-btn">전체 당첨자 조회</button>
+				</section>
+				<section class="winnerlist-wrap">
+					<p class="tit">
+						찾아라! 배지 콜렉터 (응모 경품)<br/>
+						<span>이벤트 당첨 결과</span>
+					</p>
+					<div class="result">
+						<p class="txt">앗! 당첨된 내역이 없어요!</p>
+						당첨되지 못했지만 참여해 주신 모든 분들께<br/>
+						감사의 의미를 담아 <span>비타500 음료 교환권</span>을 등록하신 휴대폰 번호로<br/>
+						전달 드릴 예정입니다.
+					</div>
+
+					<p class="tit">
+						<span>이벤트 당첨을 축하드려요!</span>
+					</p>
+					<div class="gift-list">
+						<ul>
+							<li>
+								<img src="resources/images/contents/gift4_1.png">
+								<div>
+									<p class="gift-tit">경품명 경품명 경품명 경품명</p>
+									<p class="gift-txt">상세 스펙 및 관련 내용</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="result">
+						당첨을 축하드려요. 경품 전달을 위해 곧 연락드릴 예정이에요!
+					</div>
+					
+					<div class="result">
+						입력하신 휴대폰 번호로 <span>스타벅스 아메리카노 T 쿠폰</span>을<br/>발송 드릴 예정입니다.
+					</div>
+					
+					<div class="result">
+						<ul class="score-tbl">
+							<li>
+								<span>20회차</span>
+								아르헨티나 vs 사우디아라비아
+								<p>2:1</p>
+							</li>
+							<li class="gift">
+								<img src="resources/images/contents/gift4_1.png">
+								<p class="gift-tit">애플워치 8세대 45mm GPS<br/>알류미늄 케이스 스포츠 루프</p>
+							</li>
+							<li>
+								<span>20회차</span>
+								아르헨티나 vs 사우디아라비아
+								<p>2:1</p>
+							</li>
+							<li class="gift">
+								<img src="resources/images/contents/gift4_1.png">
+								<p class="gift-tit">애플워치 8세대 45mm GPS<br/>알류미늄 케이스 스포츠 루프</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<img class="w100" src="resources/images/contents/winnerlist_noti.png" alt="당첨자 발표 이벤트 공지">
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+<!-- <div class="modal">
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			당첨 결과 조회 안내
+		</div>
+		<div class="pop-cont">
+			당첨 결과 내역이 없습니다.<br/>이벤트에 참여해 주셔서 감사합니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div> -->

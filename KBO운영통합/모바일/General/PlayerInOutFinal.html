@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/sub/btn_calendar.png",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="general">	
+			<h1><span class="txt">현역 선수 등록∙말소</span></h1>
+			<a href="#none" class="btn-logout">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<a href="#" class="btn-date btn-prev"></a>
+					<span class="date">2018.01.16(화)<input type="hidden" name=""  id="datepicker" value="" /></span>					
+					<a href="#" class="btn-date btn-next"></a>					
+					<a href="#" class="btn-calendar"><img src="" alt="" /></a>
+					<a href="#" class="btn-today">오늘</a>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="total-info final-entry">
+					<div class="team">
+						<div class="team-tit">
+							<span class="emb"><img src="../resources/images/emb/emb_OB.png" alt="" /></span><span class="name">OB - 감독 김기태</span>
+						</div>
+						<div class="tbl-entry">
+							<table class="tbl">
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>코치 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li class="txt4"><span class="back-num">72</span><span class="name">서용빈빈</span></li>
+												<li class="txt5"><span class="back-num">72</span><span class="name">서용빈빈빈</span></li>
+												<li class="txt6"><span class="back-num">72</span><span class="name">서용빈빈빈빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>투수 (<span class="num">11</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>포수 (<span class="num">2</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>내야수 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="last">
+										<th>외야수 (<span class="num">6</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="team">
+						<div class="team-tit">
+							<span class="emb"><img src="../resources/images/emb/emb_HT.png" alt="" /></span><span class="name">KIA - 감독 김기태</span>
+						</div>
+						<div class="tbl-entry">
+							<table class="tbl">
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>코치 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li class="txt4"><span class="back-num">72</span><span class="name">서용빈빈</span></li>
+												<li class="txt5"><span class="back-num">72</span><span class="name">서용빈빈빈</span></li>
+												<li class="txt6"><span class="back-num">72</span><span class="name">서용빈빈빈빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>투수 (<span class="num">11</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>포수 (<span class="num">2</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>내야수 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="last">
+										<th>외야수 (<span class="num">6</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="team">
+						<div class="team-tit">
+							<span class="emb"><img src="../resources/images/emb/emb_SK.png" alt="" /></span>SK - 감독 김기태
+						</div>
+						<div class="tbl-entry">
+							<table class="tbl">
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>코치 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li class="txt4"><span class="back-num">72</span><span class="name">서용빈빈</span></li>
+												<li class="txt5"><span class="back-num">72</span><span class="name">서용빈빈빈</span></li>
+												<li class="txt6"><span class="back-num">72</span><span class="name">서용빈빈빈빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>투수 (<span class="num">11</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>포수 (<span class="num">2</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>내야수 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="last">
+										<th>외야수 (<span class="num">6</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="team">
+						<div class="team-tit">
+							<span class="emb"><img src="../resources/images/emb/emb_HH.png" alt="" /></span><span class="name">한화 - 감독 김기태</span>
+						</div>
+						<div class="tbl-entry">
+							<table class="tbl">
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>코치 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li class="txt4"><span class="back-num">72</span><span class="name">서용빈빈</span></li>
+												<li class="txt5"><span class="back-num">72</span><span class="name">서용빈빈빈</span></li>
+												<li class="txt6"><span class="back-num">72</span><span class="name">서용빈빈빈빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>투수 (<span class="num">11</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>포수 (<span class="num">2</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>내야수 (<span class="num">8</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="last">
+										<th>외야수 (<span class="num">6</span>)</th>
+										<td>
+											<ul>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+												<li><span class="back-num">72</span><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="total">
+						<div class="tbl-entry">
+							<table class="tbl">
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>등록</th>
+										<td>
+											<ul>
+												<li class="txt4"><span class="name">서용빈(L)</span></li>
+												<li class="txt5"><span class="name">서용빈빈빈(L)</span></li>
+												<li class="txt6"><span class="name">서용빈빈빈빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>말소</th>
+										<td>
+											<ul>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+												<li><span class="name">서용빈(L)</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr>
+										<th>코치등록</th>
+										<td>
+											<ul>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+									<tr class="last">
+										<th>코치말소</th>
+										<td>
+											<ul>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+												<li><span class="name">서용빈</span></li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="total-info final-entry">
+					<p class="not-entry">
+						1월 17일 KBO 리그<br />엔트리 등록 전 입니다.
+					</p>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+<div id="popup" style="display:none">
+	<div class="tit-area">
+		<span class="date">2018년 1월 16일(화)</span>
+		엔트리 등록을 완료하시겠습니까?
+	</div>
+	<div class="cont-area">
+		<p>경기 시작 2시간 이전까지만 수정 가능합니다.</p>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn-confirm">확 인</a>
+		<a href="#none" class="btn-cancel">취 소</a>
+	</div>
+</div>
+</body>
+</html>

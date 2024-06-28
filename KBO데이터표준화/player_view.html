@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 데이터표준화"/>
+    <meta name="author" content="KBO 데이터표준화"/>
+	<meta name="keywords" content="KBO 데이터표준화" />
+	<title>KBO 데이터표준화</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<i class="icon-user"></i>
+					<b>관리자 </b>님 환영합니다.
+					<a href="#" class="btn-logout">
+						LOGOUT
+					</a>
+				</div>
+			</div>
+            <div class="gnb">
+				<div class="wrap">
+					<a class="logo" href="schedule_list.html">
+						<img src="resources/images/contents/txt_title.png" alt="KBO 데이터 표준화 시스템" />
+					</a>
+					
+					<ul class="menu">
+						<li>
+							<a href="schedule_list.html">경기 일정 관리</a>
+						</li>
+						<li class="on">
+							<a href="player_list.html">선수 관리</a>
+						</li>
+						<li>
+							<a href="data_live.html">데이터 조회</a>
+						</li>
+						<li>
+							<a href="user_list.html">사용자 관리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lnb depth-2">
+				<div class="wrap">
+					<ul class="menu">
+						<li class="on">
+							<a href="player_list.html">선수조회</a>
+						</li>
+						<li>
+							<a href="player_adm.html">선수등록/관리</a>
+						</li>
+						<li>
+							<a href="player_entry.html">엔트리 등록 현황</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<h3>선수 조회</h3>
+				<section class="panel left">
+					<h4>기본정보</h4>
+					<table class="tb type-row">
+						<colgroup>
+							<col width="150px">
+							<col width="">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>선수코드 </th>
+								<td>123456789</td>
+							</tr>
+							<tr>
+								<th>이름(등록명)</th>
+								<td>김건희</td>
+							</tr>
+							<tr>
+								<th>생년월일</th>
+								<td>20010101</td>
+							</tr>
+							<tr>
+								<th>풀네임</th>
+								<td>김건희</td>
+							</tr>
+							<tr>
+								<th>한자명</th>
+								<td>(金乾凞)</td>
+							</tr>
+							<tr>
+								<th>영어명</th>
+								<td>Gun-Hee Kim</td>
+							</tr>
+							<tr>
+								<th>혈액형</th>
+								<td>A</td>
+							</tr>
+							<tr>
+								<th>국적</th>
+								<td>한국</td>
+							</tr>
+							<tr>
+								<th>시즌</th>
+								<td>2023</td>
+							</tr>
+							<tr>
+								<th>포지션</th>
+								<td>투수</td>
+							</tr>
+							<tr>
+								<th>투구타입</th>
+								<td>우투</td>
+							</tr>
+							<tr>
+								<th>타격타입</th>
+								<td>우타</td>
+							</tr>
+							<tr>
+								<th>키</th>
+								<td>200</td>
+							</tr>
+							<tr>
+								<th>몸무게</th>
+								<td>100</td>
+							</tr>
+							<tr>
+								<th>계약금</th>
+								<td>55000만원</td>
+							</tr>
+							<tr>
+								<th>연봉</th>
+								<td>3000만원</td>
+							</tr>
+							<tr>
+								<th>등록정보</th>
+								<td>현역</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="panel right">
+					<div>
+						<h4>등록정보</h4>
+						<table class="tb type-row">
+							<colgroup>
+								<col width="150px">
+								<col width="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>리그</th>
+									<td>KBO 리그</td>
+								</tr>
+								<tr>
+									<th>시리즈</th>
+									<td>정규</td>
+								</tr>
+								<tr>
+									<th>팀명</th>
+									<td>한화</td>
+								</tr>
+								<tr>
+									<th>등번호</th>
+									<td>99</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<h4>기타정보</h4>
+						<table class="tb type-row">
+							<colgroup>
+								<col width="150px">
+								<col width="">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>지명 연도</th>
+									<td>2023</td>
+								</tr>
+								<tr>
+									<th>지명 구단</th>
+									<td>키움</td>
+								</tr>
+								<tr>
+									<th>지명 구분</th>
+									<td>1차</td>
+								</tr>
+								<tr>
+									<th>지명 정보</th>
+									<td>1라운드 6순위</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="full">
+						<h4>경력</h4>
+						<table class="tb">
+							<colgroup>
+								<col width="70px">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>순번</th>
+									<th>시작일</th>
+									<th>종료일</th>
+									<th>이전</th>
+									<th>팀명</th>
+									<th>항목</th>
+									<th>비고</th>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>20230101</td>
+									<td>99991231</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

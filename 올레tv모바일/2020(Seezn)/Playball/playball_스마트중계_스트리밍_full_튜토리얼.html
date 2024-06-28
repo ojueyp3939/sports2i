@@ -1,0 +1,496 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+  	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+  	<link rel="stylesheet" type="text/css" href="../resources/css/etc.css" />
+  	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/gameinfo.css" />
+  	<link rel="stylesheet" type="text/css" href="../resources/css/full.css" />
+  	<script type="text/javascript">
+  		$(document).ready(function(){
+  			$(".tutorial-list").bxSlider({
+  				controls:false,
+  				infiniteLoop:false
+  			});
+  		});
+  	</script>
+  </head>
+  <body>
+  	<!-- wrap -->
+  	<div id="wrap" class="full-mode streaming"> <!-- full-mode 클래스추가, 스트리밍에서만 streaming 클래스 추가 -->
+  		<!-- header -->
+  		<header class="playball-sub">
+  			<h1 class="tit">스마트중계</h1>
+  			<nav id="gnb">
+          <ul class="menu">
+            <li class="on"><a href="../Playball/playball.html"><span>홈</span></a></li>
+            <li><a href="../Video/video.html"><span>영상</span></a></li>
+            <li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+            <li><a href="../Rank/rank.html"><span>순위</span></a></li>
+            <li><a href="../Record/record.html"><span>기록</span></a></li>
+            <li><a href="../My/my.html"><span>MY</span></a></li>
+          </ul>
+  			</nav>
+  			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+  		</header>
+  		<!-- // header -->
+  		<!-- container -->
+  		<div id="container">
+  			<!-- contents -->
+  			<div id="contents" class="playball-sub live-cont">
+          <!-- MainCont -->
+          <div id="MainCont" class=""> <!-- 영상 및 그래픽중계가 상단 고정일 경우 maincont-fixed 클래스 추가 -->
+            <div id="GameList" class="scroll-wrap">
+              <div class="scroller">
+                <ul class="kind-list">
+                  <li class="live on">
+                    <div class="state roboto">18:30</div>
+                    <div class="team-info clear">
+                      <span class="emb away"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></span>
+                      <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                      <span class="emb home"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                    </div>
+                  </li>
+                  <li class="live">
+                    <div class="state"><span class="roboto">3</span>회초</div>
+                    <div class="team-info clear">
+                      <span class="emb away"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></span>
+                      <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                      <span class="emb home"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                    </div>
+                  </li>
+                  <li class="review">
+                    <div class="state">경기 종료</div>
+                    <div class="team-info clear">
+                      <span class="emb away"><img src="../resources/images/emb/emb_144x123_SS.png" alt="" /></span>
+                      <span class="info"><span class="score away roboto">99</span> : <span class="score home roboto">99</span></span>
+                      <span class="emb home"><img src="../resources/images/emb/emb_144x123_HT.png" alt="" /></span>
+                    </div>
+                  </li>
+                  <li class="cancel">
+                    <div class="state">취소</div>
+                    <div class="team-info clear">
+                      <span class="emb away"><img src="../resources/images/emb/emb_144x123_SS.png" alt="" /></span>
+                      <span class="info"><span class="place">사직</span></span>
+                      <span class="emb home"><img src="../resources/images/emb/emb_144x123_HT.png" alt="" /></span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-wrapper right ">  <!-- 실시간영상 및 그래픽중계가 상단에 고정일 경우 fixed 클래스 추가, #SubCont에서 컨텐츠가 최상단에서 유저가 스크롤 방향이 위로 했을 경우 fixed 클래스 삭제 -->
+              <div class="progress live clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt=""></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="position">투수</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">99</div>
+                </div>
+                <div class="game-info">
+                  <div class="current-info">
+                    <div class="situation-box">
+                      <span class="dh">DH1</span>
+                    </div>
+                    <strong><span class="roboto">3</span>회 말</strong>
+                  </div>
+                  <ul class="base">
+                    <li class="b1"><span class="roboto">1</span>루</li>
+                    <li class="b2 on"><span class="roboto">2</span>루</li>
+                    <li class="b3"><span class="roboto">3</span>루</li>
+                  </ul>
+                  <div class="ballcount roboto">
+                    <span class="b"><span class="num">1</span>B</span>
+                    <span class="s"><span class="num">2</span>B</span>
+                    <span class="o">2B</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <spam class="position">타자
+                      </spam>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scoreboard clear">
+                <div class="team">
+                  <table class="tbl-sb">
+                    <thead>
+                      <tr>
+                        <th><span class="hidden">팀명</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <span class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt=""></span>
+                          <span class="tit-team roboto">KT</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>
+                          <span class="tit-team">한화</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div id="TblInning" class="inning scroll-wrap"> <!-- 12회이상일때만 TblInning 아이디 추가 -->
+                  <div class="scroller">
+                    <table class="tbl-sb roboto tbl-scroll"> <!-- 12회 이상일때 tbl-scroll 클래스 추가 -->
+                      <thead>
+                        <tr>
+                          <th>1</th>
+                          <th>2</th>
+                          <th>3</th>
+                          <th>4</th>
+                          <th>5</th>
+                          <th>6</th>
+                          <th>7</th>
+                          <th>8</th>
+                          <th>9</th>
+                          <th>10</th>
+                          <th>11</th>
+                          <th>12</th>
+                          <th>13</th>
+                          <th>14</th>
+                          <th>15</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td class="on">0</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>4</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                        </tr>
+                        <tr>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>1</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="result">
+                  <table class="tbl-sb roboto">
+                    <thead>
+                      <tr>
+                        <th>R</th>
+                        <th>H</th>
+                        <th>E</th>
+                        <th>B</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>99</td>
+                        <td>99</td>
+                        <td>99</td>
+                        <td>99</td>
+                      </tr>
+                      <tr>
+                        <td>99</td>
+                        <td>99</td>
+                        <td>99</td>
+                        <td>99</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="info-wrapper "> <!-- 실시간영상 및 그래픽중계가 상단에 고정일 경우 fixed 클래스 추가, #SubCont에서 컨텐츠가 최상단에서 유저가 스크롤 방향이 위로 했을 경우 fixed 클래스 삭제 -->
+              <div class="live-wrapper">
+                <div class="broadcast">
+                  <!-- <iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                </div>
+                <div class="control-box">
+                  <h2 class="tit-game">키움 히어로즈 <span class="roboto">VS</span> 삼성 라이온즈</h2>
+                  <div class="back-box">
+                    <a href="javascript:;" class="btn-back">뒤로가기</a>
+                  </div>
+                  <div class="live-box">
+                    <a href="#none" class="btn-change graphic">그래픽 중계</a>
+                  </div>
+                  <div class="detail-box clear">
+                    <a href="#none" class="btn-volume">음량</a> <!-- 음소거 시 mute 클래스 추가  -->
+                    <a href="#none" class="btn-function">더보기</a>
+                  </div>
+                  <div class="lock-box">
+                    <a href="#none" class="btn-lock on">화면잠금</a>
+                  </div>
+                  <div class="player-box">
+                    <a href="../Etc/popup&action_sheet.html" class="btn-play">PLAY</a> <!-- 정지 시 stop 클래스 추가 -->
+                  </div>
+                  <div class="screen-box clear">
+                    <a href="#none" class="btn-popupmode"><img src="../resources/images/common/img_mode01.png" alt="팝업플레이어" /></a>
+                    <a href="#none" class="btn-screenmode">화면크기</a> <!-- 하프모드로 돌릴시 half 클래스 추가 -->
+                  </div>
+                </div>
+              </div>
+              <div class="graphic-box daytime dp-none">
+                <div class="graphic-relay">
+                  <div class="match-box">
+                    <div class="scoreboard">
+                        <div class="team">
+                          <table class="tbl-sb">
+                            <thead>
+                              <tr>
+                                <th><span class="hidden">팀명</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <span class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></span>
+                                  <span class="team-name roboto">KT</span>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></span>
+                                  <span class="team-name">한화</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="FullTblInning" class="inning scroll-wrap"> <!-- 12회이상일때만 FullTblInning id 추가 -->
+                          <div class="scroller">
+                            <table class="tbl-sb tbl-scroll roboto"> <!-- 12회 이상일때 tbl-scroll 클래스 추가 -->
+                              <thead>
+                                <tr>
+                                  <th><span>1</span></th>
+                                  <th><span>2</span></th>
+                                  <th><span>3</span></th>
+                                  <th><span>4</span></th>
+                                  <th><span>5</span></th>
+                                  <th><span>6</span></th>
+                                  <th><span>7</span></th>
+                                  <th><span>8</span></th>
+                                  <th><span>9</span></th>
+                                  <th><span>10</span></th>
+                                  <th><span>11</span></th>
+                                  <th><span>12</span></th>
+                                  <th><span>13</span></th>
+                                  <th><span>14</span></th>
+                                  <th><span>15</span></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td class="on">0</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>4</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                </tr>
+                                <tr>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>0</td>
+                                  <td>2</td>
+                                  <td>1</td>
+                                  <td>0</td>
+                                  <td>1</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="record">
+                          <table class="tbl-sb roboto">
+                            <thead>
+                              <tr>
+                                <th>R</th>
+                                <th>H</th>
+                                <th>E</th>
+                                <th>B</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>99</td>
+                                <td>99</td>
+                                <td>99</td>
+                                <td>99</td>
+                              </tr>
+                              <tr>
+                                <td>99</td>
+                                <td>99</td>
+                                <td>99</td>
+                                <td>99</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="state">
+                          <ul class="ballcount roboto">
+                            <li class="b">
+                              <dl>
+                                <dt>B</dt>
+                                <dd class="on">1</dd>
+                                <dd class="on">2</dd>
+                                <dd>3</dd>
+                              </dl>
+                            </li>
+                            <li class="s">
+                              <dl>
+                                <dt>S</dt>
+                                <dd class="on">1</dd>
+                                <dd>2</dd>
+                                <dd>3</dd>
+                              </dl>
+                            </li>
+                            <li class="o">
+                              <dl>
+                                <dt>O</dt>
+                                <dd class="on">1</dd>
+                                <dd>2</dd>
+                              </dl>
+                            </li>
+                          </ul>
+                          <div class="current">
+                            <ul class="base roboto">
+                              <li class="b1 on">1루</li>
+                              <li class="b2">2루</li>
+                              <li class="b3">3루</li>
+                            </ul>
+                            <div class="ballcount roboto">1B 2S 0O</div> <!-- 하프모드 볼카운트 -->
+                            <div class="inning"><span class="roboto">5</span>회말</div>
+                          </div>
+                        </div>
+                        <ul class="player-info">
+                          <li>H : 김태균</li>
+                          <li>P : 엄상백</li>
+                        </ul>
+                    </div>
+                  </div>
+                  <div class="hitter-graphic left"> <!-- 좌타자일 경우 left class 추가  -->
+                    <img src="../resources/images/playball/img_hitter_left_away.png" alt="" /> <!-- 좌,우타자, 팀 에 따라 이미지명 변경  -->
+                  </div>
+                  <div class="hitter-graphic"> <!-- 좌타자일 경우 left class 추가  -->
+                    <img src="../resources/images/playball/img_hitter_right_home.png" alt="" /> <!-- 좌,우타자, 팀 에 따라 이미지명 변경  -->
+                  </div>
+                  <div class="pts-area">
+                    pst영역
+                  </div>
+                  <div class="strike-zone">
+                    스트라이크존
+                  </div>
+                  <!-- <div class="no-data">
+                    <p class="txt">네트워크 불안정으로 <br />일시적인 멈춤 현상이 발생하였습니다. <br />양해 부탁 드립니다.</p>
+                  </div> -->
+                  <div class="control-box">
+                    <div class="realtime-box">
+                      <a href="#none" class="btn-realtime roboto">LIVE</a>
+                    </div>
+                    <div class="screen-box">
+                      <a href="#none" class="btn-screenmode half">화면크기</a> <!-- 하프모드로 돌릴시 half 클래스 추가 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="tab tab-depth1  clear"> <!-- 실시간영상 및 그래픽중계가 상단에 고정일 경우 fixed 클래스 추가, #SubCont에서 컨텐츠가 최상단에서 유저가 스크롤 방향이 위로 했을 경우 fixed 클래스 삭제 -->
+              <li class="on"><a href="#none">전력</a></li>
+              <li><a href="#none">관전포인트</a></li>
+              <li><a href="#none">문자중계</a></li>
+              <li><a href="#none">영상</a></li>
+              <li><a href="#none">기록</a></li>
+            </ul>
+          </div>
+          <!-- // MainCont -->
+
+  				<div id="SubCont">
+  				</div>
+
+          <div id="StreamingFull" class="full-layer">
+  					<nav id="Snb">
+              <ul class="menu">
+  							<li class="other"><a href="../Playball/playball_스마트중계_스트리밍_full_타구장.html">타구장</a></li>
+                <li class="chat"><a href="../Playball/playball_스마트중계_스트리밍_full_응원하기(채팅).html">응원하기</a></li>
+  							<li class="graphic"><a href="../Playball/playball_스마트중계_그래픽중계_full.html">그래픽중계</a></li>
+  						</ul>
+  					</nav>
+            <div class="chat-box">
+              <a href="#none" class="btn-chat">응원하기</a>
+            </div>
+  				</div>
+  			</div>
+  		</div>
+  	</div>
+
+    <div id="PopTutorial" class="popup">
+    	<ul class="tutorial-list">
+    		<li class="tut01">선택한 경기로 채널 이동</li>
+    		<li class="tut02">실시간 관전포인트 제공</li>
+    		<li class="tut03">그래픽 중계 동시 시청</li>
+    	</ul>
+    	<div class="chk-box">
+    		<input type="checkbox" name="" id="noshow" /><label for="noshow">다시 보지 않기</label>
+    	</div>
+    	<a class="btn-confirm" href="playball_스마트중계_스트리밍_full.html">확인</a>
+    </div>
+
+  </body>
+</html>

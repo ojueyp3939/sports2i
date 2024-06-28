@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../intro.html"><span>이용안내</span></a></li>
+					<li><a href="../prediction/prediction_경기전_참여전.html"><span>승리예측</span></a></li>
+					<li><a href="../mission/mission.html"><span>오늘의 미션</span></a></li>
+					<li><a href="../invite/invite.html"><span>초대</span></a></li>
+					<li class="on"><a href="../point/point.html"><span>포인트 내역</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="banner-wrap point">
+					<img src="../resources/images/contents/test-banner.png">
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="rank-wrap">
+					<div class="my-box">
+						<div class="info clear">
+							<span class="tit">내 포인트</span>
+							<a class="btn-edit" href="rank_popup.html"><i class="icon-edit"></i></a>
+							<a class="btn-myrank" href="rank_myrank.html"><i class="icon-link"></i></a>
+						</div>
+						<div class="data">
+							<ul>
+								<li>
+									누적점수
+									<p><span>99,999</span>점</p>
+								</li>
+								<li>
+									순위
+									<p><span>999,999</span>위</p>
+								</li>
+							</ul>
+						</div>
+						<!-- [D] 참여 이력이 없는 경우 -->
+						<!-- <div class="data">
+							<ul>
+								<li>
+									누적점수
+									<p>-</p>
+								</li>
+								<li>
+									순위
+									<p>-</p>
+								</li>
+							</ul>
+						</div> -->
+					</div>
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="history-wrap">
+					<h2>상세 포인트 내역</h2>
+					<ul class="day-box">
+						<li class="prev">
+							<a href="#"></a>
+						</li>
+						<li class="day-tit">
+							<span class="date">2019</span>년 <span class="date">5</span>월
+						</li>
+						<li class="next">
+							<a href="#"></a>
+						</li>
+					</ul>
+
+					<table class="monthly-tbl">
+						<colgroup>
+							<col width="15%">
+							<col width="25%">
+							<col width="20%">
+							<col width="20%">
+							<col width="20%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>일자</th>
+								<th>데일리 미션</th>
+								<th>승리예측</th>
+								<th>친구초대</th>
+								<th>합계</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>30</td>
+								<td>
+									<a href="">200</a>
+								</td>
+								<td>
+									<a href="">1,000</a>
+								</td>
+								<td>
+									<a href="">1,000</a>
+								</td>
+								<td class="bold">5,000</td>
+							</tr>
+							<tr>
+								<td>29</td>
+								<td>
+									<a href="">200</a>
+								</td>
+								<td>
+									<a href="">1,000</a>
+								</td>
+								<td>
+									<a href="">1,000</a>
+								</td>
+								<td class="bold">5,000</td>
+							</tr>
+							<tr>
+								<td>28</td>
+								<td>
+									<a href="">1,000</a>
+								</td>
+								<td>-</td>
+								<td>0</td>
+								<td class="bold">5,000</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="btn-more">
+						더보기
+					</button>
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="history-wrap">
+					<h2>전체 순위</h2>
+					<ul class="day-box">
+						<li class="prev">
+							<a href="#"></a>
+						</li>
+						<li class="day-tit">
+							<span class="date">2019</span>년 <span class="date">5</span>월
+						</li>
+						<li class="next">
+							<a href="#"></a>
+						</li>
+					</ul>
+
+					<table class="monthly-tbl">
+						<colgroup>
+							<col width="20%">
+							<col width="50%">
+							<col width="30%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>순위</th>
+								<th>닉네임</th>
+								<th>누적점수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+							<tr class="my">
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>가나다라마바사아자차</td>
+								<td>99,999</td>
+							</tr>
+						</tbody>
+					</table>
+					<button class="btn-more">
+						더보기
+					</button>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+<div class="modal">
+	<div class="pop-wrap new point">
+		<div class="pop-cont">
+			<table class="point-tbl">
+				<colgroup>
+					<col width="19%">
+					<col width="">
+					<col width="19%">
+					<col width="35%">
+				</colgroup>
+				<tr>
+					<td class="win">
+						<p>LG</p>
+					</td>
+					<td class="score">11 : 0</td>
+					<td>SSG</td>
+					<td>+100</td>
+				</tr>
+				<tr>
+					<td>LG</td>
+					<td class="score">11 : 0</td>
+					<td class="win">
+						<p>SSG</p>
+					</td>
+					<td>+100</td>
+				</tr>
+				<tr>
+					<td>LG</td>
+					<td class="score">11 : 0</td>
+					<td>SSG</td>
+					<td>+100</td>
+				</tr>
+			</table>
+			<div class="bar"></div>
+			<table class="point-tbl">
+				<colgroup>
+					<col width="19%">
+					<col width="">
+					<col width="19%">
+					<col width="35%">
+				</colgroup>
+				<tr>
+					<td>보너스</td>
+					<td colspan="2"></td>
+					<td>+1,000</td>
+				</tr>
+			</table>
+		</div>
+		<div class="final-box center">
+			<button>확인</button>
+		</div>
+	</div>
+</div>
+
+<!-- <div class="modal">
+	<div class="pop-wrap new point">
+		<div class="pop-cont">
+			<ul class="point-des">
+				<li>
+					<p class="txt">하이라이트 시청</p>
+					<p class="num">+ 100</p>
+				</li>
+				<li>
+					<p class="txt">방금 던진 공/<br/>스트라이크 존 이용</p>
+					<p class="num">+ 100</p>
+				</li>
+			</ul>
+		</div>
+		<div class="final-box center">
+			<button>확인</button>
+		</div>
+	</div>
+</div> -->
+
+<!-- <div class="modal">
+	<div class="pop-wrap new point">
+		<div class="pop-cont">
+			<ul class="point-des single">
+				<li>
+					<p class="txt">하이라이트 시청</p>
+					<p class="num">+ 100</p>
+				</li>
+			</ul>
+		</div>
+		<div class="final-box center">
+			<button>확인</button>
+		</div>
+	</div>
+</div> -->
+
+<div class="modal">
+	<div class="pop-wrap new">
+		<div class="pop-cont">
+			<p class="point-noti">* 초대에 응답한 친구의 닉네임과 접속한 시간 기준 입니다.</p>
+			<div class="monthly-tbl-box">
+				<table class="monthly-tbl">
+					<colgroup>
+						<col width="40%">
+						<col width="30%">
+						<col width="20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>닉네임</th>
+							<th>누적점수</th>
+							<th>포인트</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>가나다라마바사아자차</td>
+							<td>5/25 23:23</td>
+							<td class="bold">+10,000</td>
+						</tr>
+						<tr>
+							<td>가나다라마바사아자차</td>
+							<td>5/25 23:23</td>
+							<td class="bold">+10,000</td>
+						</tr>
+						<tr>
+							<td>가나다라마바사아자차</td>
+							<td>5/25 23:23</td>
+							<td class="bold">+10,000</td>
+						</tr>
+						<tr>
+							<td>가나다라마바사아자차</td>
+							<td>5/25 23:23</td>
+							<td class="bold">+10,000</td>
+						</tr>
+						<tr>
+							<td>가나다라마바사아자차</td>
+							<td>5/25 23:23</td>
+							<td class="bold">+10,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="final-box center">
+			<button>확인</button>
+		</div>
+	</div>
+</div> 

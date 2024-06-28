@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="SMS"/>
+    <meta name="author" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/content.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="lnb">
+					<img class="logo" src="resources/images/common/logo_lnb.png" alt="sports2i management system" />
+					<div class="menu">
+						<div class="depth-1">
+							<a href="">대메뉴</a>
+						</div>
+						<div class="depth-1">
+							<a href="">대메뉴</a>
+						</div>
+						<div class="depth-1 active">
+							<a href="" class="on">대메뉴</a>
+							<ul class="depth-2 active">
+								<li class="on">
+									<a href="">중메뉴</a>
+									<ul class="depth-3 active">
+										<li class="on">
+											<a href="">소메뉴</a>
+										</li>
+										<li>
+											<a href="">소메뉴</a>
+										</li>
+										<li>
+											<a href="">소메뉴</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="depth-2">
+								<li>
+									<a href="">중메뉴</a>
+								</li>
+							</ul>
+							<ul class="depth-2">
+								<li>
+									<a href="">중메뉴</a>
+								</li>
+							</ul>
+							<ul class="depth-2">
+								<li>
+									<a href="">중메뉴</a>
+								</li>
+							</ul>
+						</div>
+						<div class="depth-1">
+							<a href="">대메뉴</a>
+						</div>
+						<div class="depth-1">
+							<a href="">대메뉴</a>
+						</div>
+					</div>
+				</section>
+				<section class="content">
+					<div class="header">
+						<div class="top">
+							<div class="user-info">
+								<div class="symbol"></div>
+								<span class="name">USER</span>
+								<a class="icon option" href=""></a>
+							</div>
+							<h1>
+								큰제목
+								<span>부제목</span>
+							</h1>
+						</div>
+						<div class="top-set-zone">
+							<ul class="tab">
+								<li>
+									<a class="on" href="">탭 ON</a>
+								</li>
+								<li>
+									<a href="">탭 OFF</a>
+								</li>
+								<li>
+									<a href="">탭 OFF</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="board">
+						<div class="view">	
+							<div class="set-zone">
+								<div>
+									<h5>BUTTON, SELECT</h5>
+									<a class="btn" href="">test</a>
+									<a class="btn disable" href="">test</a>
+									<select class="sel">
+										<option>test</option>
+									</select>
+									<select class="sel disable">
+										<option>test</option>
+									</select>
+								</div>
+								
+								<div class="search-area">
+									<h5>SEARCH CASE</h5>
+
+									<div class="search-ipt">
+										<input type="text" placeholder="검색만 있는 버전">
+										<a href=""></a>
+									</div>
+
+									<div class="search-ipt in-sel">
+										<select>
+											<option value="">제목</option>
+										</select>
+										<input type="text" placeholder="옵션 + 검색 버전">
+										<a href=""></a>
+									</div>
+
+									<div class="search-ipt in-sel">
+										<select>
+											<option value="">제목</option>
+										</select>
+										<input type="text" placeholder="옵션 + 검색 버전">
+										<a href=""></a>
+									</div>
+								</div>
+							</div>
+
+							<h5>CALENDAR</h5>
+							<ul class="day-box">
+								<li class="prev">
+									<a href="#"></a>
+								</li>
+								<li class="day-tit">
+									<span class="date">2023.02.02(목)</span>
+								</li>
+								<li class="next">
+									<a href="#"></a>
+								</li>
+							</ul>
+
+
+							<h5>TABLE - 가로형</h5>
+							<table class="tbl">
+								<thead>
+									<tr>
+										<th class="txt-c">
+											<input type="checkbox">
+										</th>
+										<th>
+											제목 
+										</th>
+										<th>
+											제목 
+										</th>
+										<th>
+											제목 
+										</th>
+										<th>
+											제목 
+										</th>
+										<th>
+											제목 
+										</th>
+										<th>
+											제목 
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+									</tr>
+									<tr>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+										<td class="in-input">
+											<input type="text">
+										</td>
+									</tr>
+									<tr>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td class="in-sel">
+											<select>
+												<option>test</option>
+											</select>
+										</td>
+										<td class="in-sel">
+											<select>
+												<option>test</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td>
+											test
+										</td>
+										<td class="in-btn">
+											<a class="btn bg-blue" href="">수정</a>
+											<a class="btn bg-red" href="">삭제</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h5>TABLE - 세로형</h5>
+							<table class="tbl verti">
+								<colgroup>
+									<col width="20%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td>
+											test
+										</td>
+									</tr>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td>
+											test
+										</td>
+									</tr>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td>
+											test
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<table class="tbl verti">
+								<colgroup>
+									<col width="20%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td class="in-input">
+											<input type="text" class="w200">
+											<a class="btn bg-blue in-icon" href=""><i class="icon plus-w"></i>추가</a>
+											<a class="btn bg-red in-icon" href=""><i class="icon remove-w"></i>삭제</a>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td class="in-sel">
+											<select class="w200">
+												<option>test</option>
+											</select>
+											<a class="btn bg-blue" href="">적용</a>
+										</td>
+									</tr>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td class="in-sel">
+											<select class="w200">
+												<option>test</option>
+											</select>
+											<input type="text" class="w200">
+										</td>
+									</tr>
+									<tr>
+										<th>
+											제목
+										</th>
+										<td>
+											<textarea></textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<h5>PAGENATION</h5>
+							<div class="pagenation">
+								<a class="prev" href="">
+									<span>prev</span>
+								</a>
+								<span class="num">
+									<a href="">1</a>
+									<a href="">2</a>
+									<a class="on" href="">3</a>
+									<a href="">4</a>
+									<a href="">5</a>
+								</span>
+								<a class="next" href="">
+									<span>next</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address></address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

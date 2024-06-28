@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+		$(document).ready(function () {
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/btn_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../2022/prediction/prediction_경기전.html"><span>승리예측게임</span></a></li>
+					<li class="on"><a href="intro.html"><span>이용안내</span></a></li>
+					<li><a href="../2022/point/point.html"><span>포인트 내역</span></a></li>
+					<li><a href="announcement.html"><span>당첨자 발표</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="banner-wrap guide">
+					<img src="resources/images/contents/test-banner.png">
+					
+					<div class="final-box">
+						<button class="btn-global">로그인하고 참여하기</button>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+<!-- 
+<div class="modal">
+	<div class="pop-wrap new">
+		<div class="pop-cont">
+			닉네임 설정 후 사용 가능한 메뉴입니다.<br/>지금 닉네임을 설정 하시겠습니까?
+		</div>
+		<div class="final-box two">
+			<button>예</button>
+			<button>아니오</button>
+		</div>
+	</div>
+</div> -->

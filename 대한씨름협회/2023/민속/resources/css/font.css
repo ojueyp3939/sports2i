@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'spoqa';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/Spoqa Han Sans Light.eot');
+  src: url('../font/Spoqa Han Sans Light.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Light.woff') format('woff');
+ }
+ @font-face {
+   font-family:'spoqa';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../font/Spoqa Han Sans Regular.eot');
+   src: url('../font/Spoqa Han Sans Regular.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Regular.woff') format('woff');
+  }
+@font-face {
+  font-family:'spoqa';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/Spoqa Han Sans Bold.eot');
+  src: url('../font/Spoqa Han Sans Bold.eot?#iefix') format('embedded-opentype'), url('../font/Spoqa Han Sans Bold.woff') format('woff');
+ }

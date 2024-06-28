@@ -1,0 +1,32 @@
+@charset "utf-8";
+html, body {height:100%;}
+.wrap {width:100%;min-width:1200px;min-height:100%;margin:0 auto;}
+.wrap.login {background:url("../images/common/bg_login.png") no-repeat center top;}
+
+header {width:100%;height:80px;background: linear-gradient(to right, #43c4dc, #3080d7);}
+header .top {width:1200px;height:100%;margin:0 auto;padding-top:17px;}
+header .top h1 {float:left;margin-right:100px;}
+header .top .menu {float:left;padding-top:13px}
+header .top .menu li {display:inline-block;position:relative;margin-right:70px;}
+header .top .menu li a {font-size:18px;color:#fff;}
+header .top .menu li.on::after {content:'';position:absolute;top:-5px;right:-14px;width:6px;height:6px;border-radius:50%;background-color:#fff;}
+header .top .menu li.on a {font-weight:900;}
+header .top .user_menu {float:right;padding-top:13px;}
+header .top .user_menu > li {float:left;margin-left:24px;position:relative;}
+header .top .user_menu > li a {color:#baeaf5;}
+header .top .user_menu > li a img {vertical-align:text-bottom;}
+header .top .user_menu .layer-pw {position:absolute;left:-150px;top:25px;z-index:2;width:318px;padding:20px;border:1px solid #bbc2cc;background-color:#fff;}
+header .top .user_menu .layer-pw h2 {font-weight:600}
+header .top .user_menu .layer-pw div {margin-top:10px;padding-top:10px;border-top:2px solid #6d8aac;}
+header .top .user_menu .layer-pw div ul li {margin-top:5px;}
+header .top .user_menu .layer-pw div ul label {display:inline-block;width:99px;height:20px;background-color:#b6c3d4;color:#363636;font-size:11px;line-height:20px;text-indent:10px;}
+header .top .user_menu .layer-pw div ul input {width:173px;height:20px;padding:0 5px;border:1px solid #bbc2ca;color:#333;font-size:11px;line-height:16px;vertical-align:top;outline:none;}
+header .top .user_menu .layer-pw div .pw_notice {margin-top:8px;}
+header .top .user_menu .layer-pw div .pw_notice li {margin-top:5px;color:#505050;font-size:11px;}
+header .top .user_menu .layer-pw div .btn_save {margin-top:20px;text-align:center;}
+header .top .user_menu .layer-pw div .btn_save a {display:inline-block;width:77px;height:20px;background:#093e63;color:#fff;line-height:20px;}
+
+footer {width:100%;height:140px;padding:45px 0;background-color:#eee;text-align:center;}
+footer div {position:relative;width:940px;margin:0 auto;color:#666;}
+footer div img {margin-bottom:16px;}
+footer div .menual {position:absolute;top:15px;right:0;}

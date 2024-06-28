@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="MBC Sports+" />
+	<meta name="author" content="MBC Sports+" />
+	<meta name="keywords" content="MBC Sports+" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/img.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="board">
+					<div class="data">
+						<!--[D] 초:inning / 말:inning bottom -->
+						<div class="inning">10</div>
+						<!--[D] SSG의 경우 long 클래스 추가 -->
+						<div class="score">
+							<span class="team txt-l long">SSG</span>
+							<span class="num txt-r">29</span>
+							<span class="num txt-l">4</span>
+							<span class="team txt-r">삼성</span>
+						</div>
+						<!--[D] 없음(position): base0  / 있음(position, 위치): base1, base12, base13..  -->
+						<div class="position base23"></div>
+						<div class="ball b">
+							<img src="resources/images/img/b.png" alt="b">
+							<img src="resources/images/img/b.png" alt="b">
+							<img src="resources/images/img/b.png" alt="b">
+						</div>
+						<div class="ball s">
+							<img src="resources/images/img/s.png" alt="s">
+							<img src="resources/images/img/s.png" alt="s">
+						</div>
+						<div class="ball o">
+							<img src="resources/images/img/o.png" alt="o">
+							<img src="resources/images/img/o.png" alt="o">
+						</div>
+						<!--[D] 투구수:N - 태그 삭제 / 투구수:Y 입력란 공백인 경우 빈 태그로 두기 -->
+						<div class="count">
+							45
+							<img src="resources/images/img/icon_ball.png" alt="ball">
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address></address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

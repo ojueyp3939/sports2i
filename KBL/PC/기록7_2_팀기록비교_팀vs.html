@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBL"/>
+    <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="스포츠투아이, KBL" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/ico.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/s2i.css" />
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<main id="contents">
+				<div class="layout" id="s2iZone">
+					<div class="contents">
+						<div class="title desktop">
+							<h2>팀기록비교</h2>
+						</div>
+						<ul class="filter-select">
+							<li>
+								<select>
+									<option>2022-2023</option>
+								</select>
+							</li>
+							<li>
+								<select>
+									<option>정규경기</option>
+								</select>
+							</li>
+							<li>
+								<select>
+									<option>팀VS</option>
+								</select>
+							</li>
+							<li>
+								<select>
+									<option>팀 선택</option>
+								</select>
+							</li>
+						</ul>
+						<div class="cont-box">
+							<div class="mid-title">
+								<h3>
+									대구 한국가스공사 VS
+									<button title="용어 설명 팝업 열기" class="desktop"><i class="ic-help"></i></button>
+								</h3>
+								<div>
+									<button title="용어 설명 팝업 열기" class="mobile"><i class="ic-help"></i></button>
+									<button title="가로 보기 팝업 열기" class="mobile"><i class="ic-horiz"></i></button>
+									<div class="view-tab">
+										<input type="radio" name="view" id="type1" title="선택됨" checked=""><label for="type1">누적</label>
+										<input type="radio" name="view" id="type2"><label for="type2">평균</label>
+									</div>
+								</div>
+							</div>
+							<div class="table-100">
+								<table class="compare-table3">
+									<caption>팀 VS 기록 비교</caption>
+									<colgroup>
+										<col style="width: 12rem;">
+										<col style="width: 4.8rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th rowspan="2" class="fixed">팀</th>
+											<th rowspan="2" class="fixed">G</th>
+											<th colspan="7" title="총 득점" class="fixed">PTS</th>
+											<th rowspan="2" title="2점슛 성공" class="sorting">2PM</th>
+											<th rowspan="2" title="2점슛 시도">2PA</th>
+											<th rowspan="2" title="2점슛 성공률">2P%</th>
+											<th rowspan="2" title="3점슛 성공">3PM</th>
+											<th rowspan="2" title="3점슛 시도">3PA</th>
+											<th rowspan="2" title="3점슛 성공률">3P%</th>
+											<th rowspan="2" title="야투 성공">FGM</th>
+											<th rowspan="2" title="야투 시도">FGA</th>
+											<th rowspan="2" title="야투 성공률">FG%</th>
+											<th rowspan="2" title="자유투 성공">FTM</th>
+											<th rowspan="2" title="자유투 시도">FTA</th>
+											<th rowspan="2" title="자유투 성공률">FT%</th>
+											<th rowspan="2" title="공격 리바운드">OREB</th>
+											<th rowspan="2" title="수비 리바운드">DREB</th>
+											<th rowspan="2" title="리바운드">REB</th>
+											<th rowspan="2" title="어시스트">AST</th>
+											<th rowspan="2" title="스틸">STL</th>
+											<th rowspan="2" title="블록">BLK</th>
+											<th rowspan="2" title="굿디펜스">GD</th>
+											<th rowspan="2" title="덩크 성공">DK</th>
+											<th rowspan="2" title="덩크 시도">DKA</th>
+											<th rowspan="2" title="턴오버">TO</th>
+											<th colspan="3" title="개인파울">PF</th>
+											<th rowspan="2" title="테크니컬파울">TF</th>
+											<th rowspan="2" title="턴오버">TO</th>
+											<th rowspan="2" title="팀 턴오버">TTO</th>
+											<th rowspan="2" title="팀 속공">FTB</th>
+											<th rowspan="2" title="교체횟수">교체</th>
+										</tr>
+										<tr>
+											<th class="b-left">1Q</th>
+											<th>2Q</th>
+											<th>3Q</th>
+											<th>4Q</th>
+											<th>EQ</th>
+											<th>합계</th>
+											<th>평균</th>
+											<th title="자유투 포함">w/FT</th>
+											<th title="자유투 제외">w/oFT</th>
+											<th>합계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">원주 DB</td>
+											<td>6</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+										</tr>
+										<tr class="bor-b">
+											<td class="text-left">대구 한국가스공사</td>
+											<td>6</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+										</tr>
+										<tr class="bor-b">
+											<td>합계</td>
+											<td>6</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+										</tr>
+										<tr class="point">
+											<td>평균</td>
+											<td>6</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 1. 용어설명 클릭시 1차 스탯 (pc ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap lg2">
+						<div class="pop-tit">
+							<h2>용어 설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<table>
+								<caption>용어 설명</caption>
+								<colgroup>
+									<col style="width: 10.5%;">
+									<col style="width: 22.83%;">
+									<col style="width: 10.5%;">
+									<col style="width: 22.84%;">
+									<col style="width: 10.5%;">
+									<col style="width: 22.83%;">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+										<th>명칭</th>
+										<th>설명</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>PTS</th>
+										<td>총 득점</td>
+										<th>2PM</th>
+										<td>2점슛 성공</td>
+										<th>2PA</th>
+										<td>2점슛 시도</td>
+									</tr>
+									<tr>
+										<th>2P%</th>
+										<td>2점슛 성공률</td>
+										<th>3PM</th>
+										<td>3점슛 성공</td>
+										<th>3PA</th>
+										<td>3점슛 시도</td>
+									</tr>
+									<tr>
+										<th>3P%</th>
+										<td>3점슛 성공률</td>
+										<th>FGM</th>
+										<td>야투 성공</td>
+										<th>FGA</th>
+										<td>야투 시도</td>
+									</tr>
+									<tr>
+										<th>FG%</th>
+										<td>야투 성공률</td>
+										<th>FTM</th>
+										<td>자유투 성공</td>
+										<th>FTA</th>
+										<td>자유투 시도</td>
+									</tr>
+									<tr>
+										<th>FT%</th>
+										<td>자유투 성공률</td>
+										<th>OREB</th>
+										<td>공격 리바운드</td>
+										<th>DREB</th>
+										<td>수비 리바운드</td>
+									</tr>
+									<tr>
+										<th>REB</th>
+										<td>리바운드</td>
+										<th>AST</th>
+										<td>어시스트</td>
+										<th>STL</th>
+										<td>스틸</td>
+									</tr>
+									<tr>
+										<th>BLK</th>
+										<td>블록</td>
+										<th>GD</th>
+										<td>굿디펜스</td>
+										<th>DK</th>
+										<td>덩크 성공</td>
+									</tr>
+									<tr>
+										<th>DKA</th>
+										<td>덩크 시도</td>
+										<th>TO</th>
+										<td>턴오버</td>
+										<th>w/FT</th>
+										<td>자유투 포함</td>
+									</tr>
+									<tr>
+										<th>w/oFT</th>
+										<td>자유투 제외</td>
+										<th>PF</th>
+										<td>개인파울</td>
+										<th>TF</th>
+										<td>테크니컬파울</td>
+									</tr>
+									<tr>
+										<th>TO</th>
+										<td>턴오버</td>
+										<th>TTO</th>
+										<td>팀 턴오버</td>
+										<th>FTB</th>
+										<td>팀 속공</td>
+									</tr>
+									<tr>
+										<th>교체</th>
+										<td>교체횟수</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 1-1. 용어설명 클릭시 1차 스탯 (m ver) -->
+				<div id="s2iZone" class="pop">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>용어설명</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="mobile-table1">
+								<table>
+									<caption>용어 설명</caption>
+									<colgroup>
+										<col style="width: 8rem;">
+										<col style="width: auto;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>명칭</th>
+											<th>설명</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th>PTS</th>
+											<td>총 득점</td>
+										</tr>
+										<tr>
+											<th>2PM</th>
+											<td>2점슛 성공</td>
+										</tr>
+										<tr>
+											<th>2PA</th>
+											<td>2점슛 시도</td>
+										</tr>
+										<tr>
+											<th>2P%</th>
+											<td>2점슛 성공률</td>
+										</tr>
+										<tr>
+											<th>3PM</th>
+											<td>3점슛 성공</td>
+										</tr>
+										<tr>
+											<th>3PA</th>
+											<td>3점슛 시도</td>
+										</tr>
+										<tr>
+											<th>3P%</th>
+											<td>3점슛 성공률</td>
+										</tr>
+										<tr>
+											<th>FGM</th>
+											<td>야투 성공</td>
+										</tr>
+										<tr>
+											<th>FGA</th>
+											<td>야투 시도</td>
+										</tr>
+										<tr>
+											<th>FG%</th>
+											<td>야투 성공률</td>
+										</tr>
+										<tr>
+											<th>FTM</th>
+											<td>자유투 성공</td>
+										</tr>
+										<tr>
+											<th>FTA</th>
+											<td>자유투 시도</td>
+										</tr>
+										<tr>
+											<th>FT%</th>
+											<td>자유투 성공률</td>
+										</tr>
+										<tr>
+											<th>OREB</th>
+											<td>공격 리바운드</td>
+										</tr>
+										<tr>
+											<th>DREB</th>
+											<td>수비 리바운드</td>
+										</tr>
+										<tr>
+											<th>REB</th>
+											<td>리바운드</td>
+										</tr>
+										<tr>
+											<th>AST</th>
+											<td>어시스트</td>
+										</tr>
+										<tr>
+											<th>STL</th>
+											<td>스틸</td>
+										</tr>
+										<tr>
+											<th>BLK</th>
+											<td>블록</td>
+										</tr>
+										<tr>
+											<th>GD</th>
+											<td>굿디펜스</td>
+										</tr>
+										<tr>
+											<th>DK</th>
+											<td>덩크 성공</td>
+										</tr>
+										<tr>
+											<th>DKA</th>
+											<td>덩크 시도</td>
+										</tr>
+										<tr>
+											<th>TO</th>
+											<td>턴오버</td>
+										</tr>
+										<tr>
+											<th>w/FT</th>
+											<td>자유투 포함</td>
+										</tr>
+										<tr>
+											<th>w/oFT</th>
+											<td>자유투 제외</td>
+										</tr>
+										<tr>
+											<th>PF</th>
+											<td>개인파울</td>
+										</tr>
+										<tr>
+											<th>TF</th>
+											<td>테크니컬파울</td>
+										</tr>
+										<tr>
+											<th>TO</th>
+											<td>턴오버</td>
+										</tr>
+										<tr>
+											<th>TTO</th>
+											<td>팀 턴오버</td>
+										</tr>
+										<tr>
+											<th>FTB</th>
+											<td>팀 속공</td>
+										</tr>
+										<tr>
+											<th>교체</th>
+											<td>교체횟수</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="pop-btn single">
+							<button>확인</button>
+						</div>
+					</div>
+				</div>
+				<!-- 2-1. 가로모드 (m ver) -->
+				<div id="s2iZone" class="pop landscape">
+					<div class="pop-wrap">
+						<div class="pop-tit">
+							<h2>대구 한국가스공사 VS</h2>
+							<button class="close" title="팝업 닫기"><i class="ic-close"></i></button>
+						</div>
+						<div class="pop-cont">
+							<div class="table-100">
+								<table class="compare-table3">
+									<caption>팀 VS 기록 비교</caption>
+									<colgroup>
+										<col style="width: 12rem;">
+										<col style="width: 4.8rem;">
+									</colgroup>
+									<thead>
+										<tr>
+											<th rowspan="2" class="fixed">팀</th>
+											<th rowspan="2" class="fixed">G</th>
+											<th colspan="7" title="총 득점" class="fixed">PTS</th>
+											<th rowspan="2" title="2점슛 성공" class="sorting">2PM</th>
+											<th rowspan="2" title="2점슛 시도">2PA</th>
+											<th rowspan="2" title="2점슛 성공률">2P%</th>
+											<th rowspan="2" title="3점슛 성공">3PM</th>
+											<th rowspan="2" title="3점슛 시도">3PA</th>
+											<th rowspan="2" title="3점슛 성공률">3P%</th>
+											<th rowspan="2" title="야투 성공">FGM</th>
+											<th rowspan="2" title="야투 시도">FGA</th>
+											<th rowspan="2" title="야투 성공률">FG%</th>
+											<th rowspan="2" title="자유투 성공">FTM</th>
+											<th rowspan="2" title="자유투 시도">FTA</th>
+											<th rowspan="2" title="자유투 성공률">FT%</th>
+											<th rowspan="2" title="공격 리바운드">OREB</th>
+											<th rowspan="2" title="수비 리바운드">DREB</th>
+											<th rowspan="2" title="리바운드">REB</th>
+											<th rowspan="2" title="어시스트">AST</th>
+											<th rowspan="2" title="스틸">STL</th>
+											<th rowspan="2" title="블록">BLK</th>
+											<th rowspan="2" title="굿디펜스">GD</th>
+											<th rowspan="2" title="덩크 성공">DK</th>
+											<th rowspan="2" title="덩크 시도">DKA</th>
+											<th rowspan="2" title="턴오버">TO</th>
+											<th colspan="3" title="개인파울">PF</th>
+											<th rowspan="2" title="테크니컬파울">TF</th>
+											<th rowspan="2" title="턴오버">TO</th>
+											<th rowspan="2" title="팀 턴오버">TTO</th>
+											<th rowspan="2" title="팀 속공">FTB</th>
+											<th rowspan="2" title="교체횟수">교체</th>
+										</tr>
+										<tr>
+											<th class="b-left fixed">1Q</th>
+											<th class="fixed">2Q</th>
+											<th class="fixed">3Q</th>
+											<th class="fixed">4Q</th>
+											<th class="fixed">EQ</th>
+											<th class="fixed">합계</th>
+											<th class="fixed">평균</th>
+											<th title="자유투 포함">w/FT</th>
+											<th title="자유투 제외">w/oFT</th>
+											<th>합계</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="text-left">원주 DB</td>
+											<td>6</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+										</tr>
+										<tr class="bor-b">
+											<td class="text-left">대구 한국가스공사</td>
+											<td>6</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+										</tr>
+										<tr class="bor-b">
+											<td>합계</td>
+											<td>6</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+										</tr>
+										<tr class="point">
+											<td>평균</td>
+											<td>6</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-91.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+											<td>-99.99</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

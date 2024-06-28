@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+#contents.my {padding:102px 0 90px;}
+
+.my-wrap .txt-cancel {width:26px;padding:5px;}
+/* My팀 유저 */
+.set-user {position:relative;margin-top:33px;padding:0 16px;}
+.set-user .tit-user {color:#323232;font-size:2.0rem;font-weight:100;text-align:center;}
+.set-user .set-alert {position:absolute;top:-1px;right:18px;width:27px;padding:5px;}
+/* My팀 설정 */
+.my-wrap .tit {margin:45px 0 16px;}
+.my-wrap .tit-my {display:inline-block;margin-bottom:16px;padding:0 28px 0 16px;background:url('../images/sub/ico_my.png') no-repeat 100% 50%/19px;}
+.my-wrap .my-team {padding:0 16px;}
+.my-wrap .my-team .team-info {padding:18px 0 18px 30px;border-radius:10px;background:#eaf8fe;}
+.my-wrap .my-team .team-info .emb {float:left;position:relative;width:80px;height:80px;border-radius:50%;background:#fff;}
+.my-wrap .my-team .team-info .emb img {position:absolute;top:50%;left:50%;width:69px;transform:translate(-50%, -50%);}
+.my-wrap .my-team .team-info .info-record {float:left;padding-left:18px;}
+.my-wrap .my-team .team-info .info-record dt {padding:15px 0 7px;color:#06c;font-size:2.0rem;font-weight:700;}
+.my-wrap .my-team .team-info .info-record dd {font-size:1.6rem;}
+.my-wrap .my-team .team-info .info-record dd strong {font-weight:700;}
+/* 서브타이틀 공통 */
+.tit-sub {display:inline-block;padding:34px 0 15px;color:#333;font-size:1.4rem;}
+/* My팀 설정 > 주간 경기 일정 */
+.my-wrap .my-team .week-game .tit-sub span {margin-left:5px;color:#06c;}
+.my-wrap .my-team .week-game .game-list ul li {position:relative;border-bottom:0;}
+.my-wrap .my-team .week-game .game-list ul li::after {content:"";position:absolute;bottom:0;right:0;width:89.0244%;height:1px;background:#f2f2f2;}
+.my-wrap .my-team .week-game .game-list ul li .date {float:left;width:10.9756%;padding-top:32px;font-size:1.4rem;text-align:center;}
+.my-wrap .my-team .week-game .game-list ul li .date .num {padding-top:3px;font-weight:700;}
+.my-wrap .my-team .week-game .game-list ul li .team {width:33.689%;}
+.my-wrap .my-team .week-game .game-list ul li .team .player-info {width:81.48%;}
+.my-wrap .my-team .week-game .game-list ul li .team .score {width:18.52%;margin-top:17px;font-size:2.0rem;}
+.my-wrap .my-team .week-game .game-list ul li .game-info {width:21.6463%;}
+
+/* My팀 설정 > 시즌 순위 */
+.my-wrap .season-rank .season-date {display:inline-block;position:relative;padding-left:12px;}
+.my-wrap .season-rank .season-date::before {content:"";position:absolute;top:3px;left:5px;width:1px;height:8px;background:#e5e5e5;}
+.my-wrap .season-rank .season-graph {height:269px;}
+.my-wrap .season-rank .season-graph canvas {width:100%;height:100%;}
+
+/* My팀 미설정 > 관심선수 */
+.my-wrap .attention-player .tit-arrow {padding-left:16px;}
+.my-wrap .attention-player ul {width:100%;padding:0 16px;white-space:nowrap;}
+.my-wrap .attention-player ul li {height:136px;}
+.my-wrap .attention-player ul li .photo {margin:12px auto 0;}
+
+/* My팀 미설정 > 찜영상 */
+.my-wrap .vs-team .tit {padding-left:16px;}
+.my-wrap .vs-team .vs-box {width:86.1111vw !important;}
+.my-wrap .vs-team .vs-box ul {margin-top:0;}
+.my-wrap .vs-team .vs-box ul li {margin-bottom:0;}
+
+/* My팀 미설정 '~하기'버튼 공통 */
+.my-wrap.no-team .btn-due {display:inline-block;padding-right:11px;background:url('../images/common/bg_due.png') no-repeat 100% 64%/6px;font-size:1.0rem;}
+
+/* My팀 미설정 */
+.my-wrap.no-team .my-team .team-info {padding:18px 0 21px;}
+.my-wrap.no-team .my-team .team-info dl {text-align:center;}
+.my-wrap.no-team .my-team .team-info dl dt {padding-top:75px;background:url('../images/playball/bg_noteam.png') no-repeat 50% 4px/56px;;font-size:1.4rem;font-weight:700;}
+.my-wrap.no-team .my-team .team-info dl .txt {padding:9px 0 16px;font-size:1.4rem;line-height:1.4;}
+
+/* My팀 미설정 > 관심선수 */
+.my-wrap.no-team .attention-player .tit.tit-normal {padding-left:16px;}
+
+/* My팀 미설정 > 찜영상 */
+.my-wrap .vs-team .no-video {padding-top:46px;background:url('../images/common/bg_no.png') no-repeat 50% 0/36px;color:#828282;font-size:1.4rem;text-align:center;}
+
+/* 설정 */
+#contents.my-push {padding-top:48px;background:#fafafa;}
+/* 설정 타이틀 공통 */
+.my-wrap .tit-set {padding:20px 0 18px;color:#333;font-size:1.6rem;}
+
+/* My팀 알림 설정 */
+.my-wrap .push-box {margin-bottom:10px;padding:0 16px 30px;background:#fff;}
+.my-wrap .push-box .push-list {padding:21px 16px 13px;border:1px solid #f0f0f0;border-radius:10px;}
+.my-wrap .push-box .push-list li {display:table;width:100%;height:45px;padding:10px 0;}
+.my-wrap .push-box .push-list li.push-set {padding:0 0 16px;border-bottom:1px solid #f0f0f0;}
+.my-wrap .push-box .push-list li .push {display:table-cell;width:50%;font-size:1.4rem;vertical-align:middle;}
+.my-wrap .push-box .push-list li h3.push {color:#6e6e6e;font-weight:100;}
+.my-wrap .push-box .push-list li .switch-box {display:table-cell;width:50%;text-align:right;vertical-align:middle;}
+.my-wrap .push-box .push-list li .switch-box .switch {display:inline-block;position:relative;width:42px;height:25px;}
+.my-wrap .push-box .push-list li .switch-box .switch input {display:none;}
+.my-wrap .push-box .push-list li .switch-box .switch .slider {position:absolute;top:0;left:0;right:0;bottom:0;background:#ececec;border-radius:15px;-webkit-transition:.4s;transition:.4s;cursor:pointer;}
+.my-wrap .push-box .push-list li .switch-box .switch .slider::before {content:"";position:absolute;top:2px;left:2px;width:19px;height:19px;background:#fff;border:1px solid #eee;border-radius:50px;-webkit-transition:.4s;transition:.4s;}
+.my-wrap .push-box .push-list li .switch-box .switch .slider.off::before {content:"";box-shadow:1px 2px 9px rgba(0,0,0,0.3);}
+.my-wrap .push-box .push-list li .switch-box .switch input:checked + .slider {background:#06c;}
+.my-wrap .push-box .push-list li .switch-box .switch input:checked + .slider::before {-webkit-transition:.4s;transition:.4s;-webkit-transform:translateX(17px);-ms-transform:translateX(17px);transform:translateX(17px);}
+
+/* 닉네임 설정 */
+.my-wrap .nickname-box {margin-bottom:10px;padding:0 16px 22px;background:#fff;}
+.my-wrap .nickname-box .nickname-change {position:relative;height:148px;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area {float:left;position:relative;width:calc(100% - 80px);}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input {width:100%;height:35px;border-bottom:1px solid #c8c8c8;border-radius:0;color:#000;line-height:35px;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input::placeholder {color:#c8c8c8;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input:focus,
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input.on {border-bottom:1px solid #323232;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input.possible {border-bottom:1px solid #06c;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area input.impossible {border-bottom:1px solid #ff0d57;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .ipt-area .txt-cancel {position:absolute;top:3px;right:1px;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .btn-confirm {float:right;width:68px;height:35px;border:1px solid #e9e9e9;border-radius:15px;color:#c8c8c8;font-size:1.4rem;line-height:35px;text-align:center;}
+.my-wrap .nickname-box .nickname-change .ipt-wrap .btn-confirm.on {color:#323232;}
+.my-wrap .nickname-box .nickname-change .tip {padding-top:7px;color:#000;}
+.my-wrap .nickname-box .nickname-change .alert {padding-top:7px;}
+.my-wrap .nickname-box .nickname-change .alert.possible {color:#06c;}
+.my-wrap .nickname-box .nickname-change .alert.impossible {color:#ff0d57;}
+.my-wrap .nickname-box .nickname-change .btn-area {position:absolute;bottom:0;left:50%;text-align:center;transform:translateX(-50%);}
+.my-wrap .nickname-box .nickname-change .btn-area .btn-complete {display:inline-block;width:90px;height:32px;border-radius:3px;background:#f2f2f2;color:#c8c8c8;font-size:1.4rem;line-height:32px;}
+.my-wrap .nickname-box .nickname-change .btn-area .btn-complete.on {background:#06c;color:#fff;}
+
+/* 개인정보 제공동의 철회 */
+.my-wrap .agree-box {padding:0 16px;background:#fff;}
+.my-wrap .agree-box h2 a {display:block;padding:15px 0;background:url('../images/common/bg_arrow_next.png') no-repeat 100% 50%/9px;color:#6e6e6e;font-size:1.4rem;font-weight:100;}
+
+/* 관심선수 공통 */
+#contents.my-player {padding:48px 0 72px;}
+
+/* 관심선수 */
+.my-wrap .player-box {padding:0 16px;}
+.my-wrap .player-box .selected-list {overflow:hidden;}
+.my-wrap .player-box .selected-list li {display:table;width:100%;height:61px;border-bottom:1px solid #f0f0f0;}
+.my-wrap .player-box .selected-list li div {display:table-cell;vertical-align:middle;}
+.my-wrap .player-box .selected-list li .player-img {width:14.6341%;}
+.my-wrap .player-box .selected-list li .player-img .init {display:block;position:relative;}
+.my-wrap .player-box .selected-list li .player-img .init img:first-child {width:48px;max-width:48px;}
+.my-wrap .player-box .selected-list li .player-img .init img:last-child {position:absolute;right:-4px;bottom:-3px;width:20px;}
+.my-wrap .player-box .selected-list li .name {width:35.061%;padding-left:20px;font-size:1.4rem;font-weight:700;}
+.my-wrap .player-box .selected-list li .record {width:49.6951%;text-align:right;}
+.my-wrap .player-box .selected-list li .record p {display:inline-block;color:#333;font-size:1.4rem;}
+.my-wrap .player-box .selected-list li .record p span {padding-left:7px;color:#0064c9;font-weight:700;}
+.my-wrap .player-box .selected-list li .record p:nth-child(2) {padding-left:7px;}
+.my-wrap .player-box .player-add {clear:both;padding-top:27px;text-align:center;}
+.my-wrap .player-box .player-add a {display:inline-block;padding-right:16px;background:url('../images/sub/bg_add.png') no-repeat 100% 50%/10px;color:#828282;}
+
+/* 관심선수 > 관심선수 추가 */
+.my-player {padding-top:48px;}
+.my-player.search-on {overflow-y:hidden;height:100vh;}
+.my-player .my-wrap .search-box {position:relative;height:40px;margin:9px 0 20px;padding:0 16px;}
+.my-player .my-wrap .search-box input {width:100%;height:40px;padding-left:34px;border-bottom:1px solid #323232;color:#000;line-height:40px;}
+.my-player .my-wrap .search-box input:focus {outline:none;}
+.my-player .my-wrap .search-box .btn-search {position:absolute;top:9px;left:18px;width:26px;padding:5px;}
+.my-player .my-wrap .search-box .txt-cancel {position:absolute;top:8px;right:17px;}
+.my-player.search-on .my-wrap .search-box .autocomplete {position:absolute;top:40px;left:0;z-index:10;width:100%;height:calc(100vh - 88px);padding:14px 16px 0;background:#fff;}
+.my-player.search-on .my-wrap .search-box .autocomplete li {padding:12px 0;}
+.my-player.search-on .my-wrap .search-box .autocomplete li a {display:block;font-size:1.4rem;}
+.my-player.search-on .my-wrap .search-box .autocomplete li a .accord {color:#0064c9;}
+
+/* 관심선수 추가 > 팀선택 */
+.my-wrap .roster-wrap .player-area .roster-list li .pst {display:table-cell;width:32.482%;padding-left:10px;vertical-align:middle;}
+.my-wrap .roster-wrap .player-area .roster-list li .edit {display:table-cell;vertical-align:middle;}
+.my-wrap .roster-wrap .player-area .roster-list li .btn-edit {display:block;overflow:hidden;height:20px;background:url('../images/sub/bg_interest.png') no-repeat 50% 2px/19px;text-indent:-9999px;}
+.my-wrap .roster-wrap .player-area .roster-list li .btn-edit.delete {background-position:50% -18px;}
+
+/* 관심선수 추가 > 검색결과 없음 */
+.my-wrap .no-result {padding:109px 0 50px;;background:url('../images/common/bg_no.png') no-repeat 50% 63px/36px;color:#828282;font-size:1.4rem;text-align:center;}
+
+/* My팀 설정 */
+#contents.my-setting {padding:48px 0 0;}
+.my-wrap .team-choice {position:relative;height:calc(100vh - 65px);padding:0 16px;}
+.my-wrap .team-choice .txt-set {padding:17px 0 26px;color:#828282;font-size:1.4rem;line-height:1.3;}
+.my-wrap .team-choice .txt-set span {display:block;}
+.my-wrap .team-choice .team-list li {display:table;float:left;width:28.8889vw;height:19.4444vw;margin:0 2.2222vw 2.2222vw 0;border-radius:11px;background:#fafafa;text-align:center;}
+.my-wrap .team-choice .team-list li:nth-child(3n+3),
+.my-wrap .team-choice .team-list li:last-child {margin:0;}
+.my-wrap .team-choice .team-list li.on {background:#06c;}
+.my-wrap .team-choice .team-list li a {display:table-cell;width:100%;vertical-align:middle;}
+.my-wrap .team-choice .team-list li.no-team a {display:block;padding-top:12.75vw;background:url('../images/sub/bg_leagueall.png') no-repeat 50% 2.63111vw/7.7778vw;}
+.my-wrap .team-choice .team-list li.no-team.on a {background-position:50% -25.2778vw;color:#fff;}
+.my-wrap .team-choice .team-list li a img {display:block;width:14.4444vw;max-width:52px;margin:0 auto;}
+.my-wrap .team-choice .btn-area {position:absolute;bottom:0;left:0;width:100%;padding:0 16px;text-align:center;}
+.my-wrap .team-choice .btn-area a {display:block;padding:16px 0;border-radius:3px;background:#f2f2f2;color:#c8c8c8;font-size:1.4rem;}
+.my-wrap .team-choice .btn-area a.on {background:#06c;color:#fff;}
+
+/* 찜 영상 */
+.my-video {padding:46px 0 0;}
+.my-video .my-wrap .player-box {padding:0;}
+.my-video .my-wrap .player-box .roster {margin:0 16px;}
+.my-video .my-wrap .player-box .vs-team .vs-box {width:100% !important;}
+.my-video .my-wrap .player-box .vs-team .vs-box ul li dl {width:calc(100% - 108px);}
+.my-video .my-wrap .player-box .vs-team .vs-box .no-video {padding-top:46px;background:url('../images/common/bg_no.png') no-repeat 50% 0/36px;color:#828282;font-size:1.4rem;text-align:center;}
+.my-video .my-wrap .player-box .player-add {padding:33px 0 103px;}
+.my-video .my-wrap .player-box .player-add a {background:url('../images/common/bg_arrow_more.png') no-repeat 100% 50%/11px;}
+
+@media (max-width:320px){
+	.my-wrap .team-choice .team-list li {margin:0 1.8vw 1.8vw 0;}
+}
+
+@media (min-width:1024px){
+	/* my */
+	#wrap {background:#f6f9fb;}
+	#contents.my {padding:123px 0 16px;background:#f6f9fb;}
+	#contents.my section {width:768px;margin:0 auto;border-radius:0 0 7px 7px;background:#fff;}
+
+	/* My팀 유저 */
+	.set-user {width:768px;margin:0 auto;padding-top:30px;border-radius:7px 7px 0 0;background:#fff;}
+	.set-user .set-alert {top:29px;}
+	/* My팀 찜영상 */
+	.my .my-wrap .vs-team {padding-bottom:96px;}
+
+	/* My팀 설정 > 주간 경기 일정5 */
+	.my-wrap .game-list .recent-game > li::before {content:"";left:auto;right:-510px;width:700px;}
+	.my-wrap .game-list .recent-game > li:last-child::before {content:none;}
+	.my-wrap .my-team .week-game .game-list ul li .date {position:relative;top:0;left:-169px;}
+
+	/* My팀 미설정 > 찜영상 */
+	.my-wrap .vs-team .vs-box {width:310px !important;}
+
+	/* 설정 */
+	#contents.my-push {padding:64px 0 16px;}
+	.my-push .my-wrap {width:768px;margin:0 auto;}
+	.my-wrap .push-box {border-radius:7px;}
+
+	/* 닉네임 설정 */
+	.my-wrap .nickname-box {border-radius:7px;}
+
+	/* 개인정보 제공동의 철회 */
+	.my-wrap .agree-box {border-radius:7px;}
+
+	/* 관심선수 - 공통 */
+	/* 관심선수 */
+	#contents.my-player {height:100%;padding:64px 0 17px;background:#f6f9fb;}
+	.my-player .my-wrap {width:768px;min-height:667px;margin:0 auto;border-radius:7px;background:#fff;}
+	.my-player .my-wrap .player-box {padding-bottom:157px;}
+	.my-player .my-wrap .player-box .selected-list li {float:left;width:344px;}
+	.my-player .my-wrap .player-box .selected-list li:nth-child(2n+2) {float:right;}
+	/* My팀 설정 */
+	#contents.my-setting {padding:64px 0 16px;background:#f4f7fa;}
+	#contents.my-setting .my-wrap {width:768px;margin:0 auto;padding-bottom:16px;border-radius:7px;background:#fff;}
+	.my-wrap .team-choice {height:calc(100vh - 64px - 32px);}
+	.my-wrap .team-choice .txt-set {text-align:center;}
+	.my-wrap .team-choice .txt-set span {display:inline;}
+	.my-wrap .team-choice .team-list {width:328px;margin:0 auto;}
+	.my-wrap .team-choice .team-list li {width:104px;height:70px;margin:0 8px 8px 0;}
+	.my-wrap .team-choice .team-list li a img {width:52px;max-width:52px;}
+	.my-wrap .team-choice .team-list li.no-team a {padding-top:45px;background:url('../images/sub/bg_cheerup.png') no-repeat 50% 10px/28px;}
+	.my-wrap .team-choice .team-list li.no-team.on a {background-position:50% -40px;}
+
+	/* 찜 영상 */
+	.my-video {padding:64px 0 32px;}
+	.my-video .my-wrap {width:768px;min-height:667px;margin:0 auto;border-radius:7px;background:#fff;}
+	.my-video .my-wrap .player-box .vs-team {min-height:432px;}
+	.my-video .my-wrap .player-box .vs-team .vs-box ul {overflow:hidden;margin-top:0;}
+	.my-video .my-wrap .player-box .vs-team .vs-box ul li {float:left;width:376px;margin-bottom:0;}
+	.my-video .my-wrap .player-box .vs-team .vs-box ul li:nth-child(2n-2) {float:right;}
+
+	.my-player.search-on {height:592px;}
+}

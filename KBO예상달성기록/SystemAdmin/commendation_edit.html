@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 예상 달성기록</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.gnb li').hover(function(){
+			$('.sub-menu',this).show();
+		}, function(){
+			$('.sub-menu',this).hide();
+		});
+	});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>KBO홍보팀</span>님 환영합니다.</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+			</div>
+			<nav>
+				<ul class="gnb clear">
+					<li>
+						<a href="../AchievementRecord/daily.html">예상 달성기록</a>
+						<ul class="sub-menu">
+							<li><a href="../AchievementRecord/daily.html">일간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/weekly.html">주간 예상 달성기록</a></li>
+							<li><a href="../AchievementRecord/season.html">시즌 예상 달성기록</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<a href="../SystemAdmin/standard_manage.html">시스템 관리</a>
+						<ul class="sub-menu max">
+							<li><a href="../SystemAdmin/standard_manage.html">예상 달성기록 기준</a></li>
+							<li><a href="../SystemAdmin/commendation_manage.html">표창관리</a></li>
+							<li><a href="../SystemAdmin/achievement_manage.html">시즌 예상 달성기록 관리</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="../UserManage/user_manage.html">사용자 관리</a>
+					</li>
+					<li>
+						<a href="../FileManage/daily.html">파일 생성</a>
+						<ul class="sub-menu max">
+							<li><a href="../FileManage/daily.html">일일 예상달성기록</a></li>
+							<li><a href="../FileManage/weekly.html">주간 예상달성기록</a></li>
+							<li><a href="../FileManage/season.html">시즌 예상달성기록</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 본문 -->
+			<article>
+				<h3>표창관리</h3>
+				<div class="content">
+					<table class="tbl-type2" summary="표창관리">
+						<caption>표창관리</caption>
+						<colgroup>
+							<col style="width:180px">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>구분</th>
+								<td>
+									<select class="sel">
+										<option></option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>달성기록</th>
+								<td>
+									<select class="sel">
+										<option></option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>기준(이상)</th>
+								<td>
+									<input class="ipt" type="text" />
+								</td>
+							</tr>
+							<tr>
+								<th>간격</th>
+								<td>
+									<input class="ipt" type="text" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="final-btn">
+						<a class="btn-blue" href="">확인</a>
+						<a class="btn-white" href="">취소</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

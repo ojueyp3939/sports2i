@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Play your 'Seezn'</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../resources/images/favicon/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../resources/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/favicon/favicon-16x16.png">
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/my.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 경기전 Slider
+            var swiper = new Swiper('#CardNews', {
+                slidesPerView: 1,
+                initialSlide: 1,
+                autoHeight: true,
+                navigation: {
+                    prevEl: '.CardNewsPrev',
+                    nextEl: '.CardNewsNext',
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- haeder -->
+        <header>
+            <div class="header-baseball">
+                <h2>프로야구 Live</h2>
+                <nav class="gnb-wrap">
+                    <ul class="gnb">
+                        <li class="on"><a href="../Playball/playball.html"><span>홈</span></a></li>
+                        <li><a href="../Video/video.html"><span>VOD</span></a></li>
+                        <li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+                        <li><a href="../Rank/rank.html"><span>순위</span></a></li>
+                        <li><a href="../Record/record.html"><span>기록</span></a></li>
+                        <li><a href="../My/my.html"><span>MY</span></a></li>
+                    </ul>
+                    <h3>카드뉴스</h3>
+                </nav>
+            </div>
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents" class="news card">
+                <section class="news-wrap">
+                    <div class="card-news">
+                        <h4 class="tit-news">[생생인터뷰] 강백호의 세 번째 캠프 목표, "찬스에 강해 지도록 하겠다."</h4>
+                        <div class="swiper-container">
+                            <div id="CardNews" class="swiper-content">
+                                <ul class="swiper-wrapper photo-card clear">
+                                    <li class="swiper-slide"><img src="../resources/images/common/test_cardnews.png" alt=""></li>
+                                    <li class="swiper-slide"><img src="../resources/images/common/img_no_image.png" alt=""></li>
+                                    <li class="swiper-slide"><img src="../resources/images/common/test_cardnews.png" alt=""></li>
+                                    <li class="swiper-slide"><img src="../resources/images/common/test_cardnews.png" alt=""></li>
+                                    <li class="swiper-slide"><img src="../resources/images/common/img_no_image.png" alt=""></li>
+                                    <li class="swiper-slide"><img src="../resources/images/common/test_cardnews.png" alt=""></li>
+                                </ul>
+                            </div>
+                            <div class="swiper-button-prev CardNewsPrev"></div>
+                            <div class="swiper-button-next CardNewsNext"></div>
+                        </div>
+                    </div>
+                    <!-- 카드뉴스 -->
+                    <div class="major-news">
+                        <div class="roster clear">
+                            <h4 class="tit-roster">카드뉴스</h4>
+                            <a href="#none" class="btn-pst">최신순</a>
+                            <ul class="more-list">
+                                <li><a href="#none">초고화질</a></li>
+                                <li class="on"><a href="#none">고화질</a></li>
+                            </ul>
+                        </div>
+                        <div class="card-wrap">
+                            <div class="list-box">
+                                <ul class="news-content"> <!-- 각페이지에 <ul> 태그 생성 -->
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차 젊은 피향한 이강철의 주문</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clear">
+                                        <div class="screenshot">
+                                            <div class="img-box">
+                                                <img src="../resources/images/common/img_no_image.png" alt="">
+                                            </div>
+                                        </div>
+                                        <dl>
+                                            <dt>"아직 커리어하이 아냐" 2년차</dt>
+                                            <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="page-area">
+                                <li class="prev">
+                                    <a href="#">
+                                        <img src="../resources/images/common/btn_prev_g.png" alt="이전" />
+                                    </a>
+                                </li>
+                                <li class="num on">
+                                    <a href="#">1</a>
+                                </li>
+                                <li class="num">
+                                    <a href="#">2</a>
+                                </li>
+                                <li class="num">
+                                    <a href="#">3</a>
+                                </li>
+                                <li class="num">
+                                    <a href="#">4</a>
+                                </li>
+                                <li class="num">
+                                    <a href="#">5</a>
+                                </li>
+                                <li class="next">
+                                    <a href="#">
+                                        <img src="../resources/images/common/btn_next_g.png" alt="다음" />
+                                    </a>
+                                </li>
+                            </ul>
+                            <p class="no-news dp-none">다음 카드뉴스가 없습니다.</p>
+                        </div>
+                    </div>
+                    <!-- // 카드뉴스 -->
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- // wrap -->
+</body>
+</html>

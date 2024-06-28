@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 SOL 빙고</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/bingo.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<a class="btn-back" href=""></a>
+			<span>신한 SOL 빙고</span>
+			<a class="btn-close" href=""></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="bingo">
+				<div class="my-bingo">
+					<a href="" class="btn-guide">쏠빙고란? ></a>
+					<img class="bingo-img" src="resources/images/main/img_bingo.png" alt="쏠빙고">
+					<div class="tit-box">
+						<p class="tit">마이빙고</p>
+						<a href="" class="btn-plus">더보기 ></a>
+					</div>
+					<!-- [D] 참여 이력 O -->
+					<div class="my-point clear">
+						<dl>
+							<dt>스코어</dt>
+							<dd><span class="num">00,000</span> Line</dd>
+						</dl>
+						<dl>
+							<dt>랭킹</dt>
+							<dd><span class="num">33</span> 등</dd>
+						</dl>
+					</div>
+					<!-- [D] 참여 이력 X -->
+					<div class="my-point clear">
+						<dl>
+							<dt>스코어</dt>
+							<dd><span class="num">-</span> Line</dd>
+						</dl>
+						<dl>
+							<dt>랭킹</dt>
+							<dd><span class="num">-</span> 등</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="game-wrap">
+					<div class="tit-box">
+						<p class="tit">이달의 퀴즈</p>
+					</div>
+					<div class="game-cont">
+						<div class="quiz">
+							<dl class="quiz-box">
+								<dt>타자</dt>
+								<dd>오늘의 UP&DOWN<br/>오늘의 UP&DOWN을 예측 해보세요!</dd>
+							</dl>
+							<div class="bingo-box">
+								<div class="date-select play">
+									<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+									<span class="today">
+										2099.06.13 (금)
+										<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+									</span>
+									<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+								</div>
+								<div class="bingo-ground">
+									<ul>
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">예측하기</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud">
+												<span>UP</span>
+											</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud down">
+												<span>down</span>
+											</a>
+										</li>
+										<li class="bonus">
+											<div>
+												<span>BONUS!</span><br/>
+												쏠픽 참여하기
+											</div>
+											<a href="">바로가기</a>
+										</li>
+										<li>
+											<div>
+												안타 94개<br/>안타 94개
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+										
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">예측하기</a>
+										</li>
+										<li class="done">
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="" class="btn-ud">
+												<span>UP</span>
+											</a>
+										</li>
+										<li>
+											<div>
+												안타 94개<br/>
+												UP ? DOWN ?
+											</div>
+											<a href="">선수선택</a>
+										</li>
+									</ul>
+								</div>
+								<a href="" class="btn-random clear">
+									랜덤선택
+								</a>
+							</div>
+							<button class="btn-submit">
+								<span>참여하기</span>
+							</button>
+							<div class="notice-area">
+								마감까지 <time>00 : 00</time> 남았습니다.
+							</div>
+						</div>
+						<img src="resources/images/main/img_info.png" alt="유의사항">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

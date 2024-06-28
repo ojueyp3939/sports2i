@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/* 탭메뉴 */
+.tab-area {width:100%;}
+
+.tab-depth1 .tab {overflow:hidden;position:relative;}
+.tab-depth1 .tab:after {content:"";display:block;position:absolute;bottom:0;width:100%;height:1px;border-bottom:2px solid #e5e7eb;}
+.tab-depth1 .tab li {float:left;}
+.tab-depth1 .tab li a {display:block;height:2em;line-height:2em;font-size:1.4rem;font-weight:400;text-align:center;}
+.tab-depth1 .tab li.on a, .tab-depth1 .tab li:hover a {position:relative;padding-bottom:5px;color:#008bd0;border-bottom:2px solid #008bd0;z-index:10;}
+
+.tab-depth2 .tab {overflow:hidden;position:relative;margin:0 auto;}
+.tab-depth2 .tab li {position:relative;float:left;}
+.tab-depth2 .tab li:after {content:"";display:block;position:absolute;top:7px;right:0;width:1px;height:13px;background:#ccc;}
+.tab-depth2 .tab li:last-child:after {display:none;}
+.tab-depth2 .tab li a {display:block;height:2em;line-height:2em;padding:0 1.1em;font-size:1.3rem;font-weight:400;color:#a1a1a1;text-align:center;}
+.tab-depth2 .tab li.on a, .tab-depth2 .tab li:hover a {color:#000;}
+
+
+/* 달력 */
+.ui-datepicker {width:86%;margin-left:-43%;z-index:15 !important;}
+.ui-datepicker .ui-datepicker-header {width:100%;padding:15px 10px;background:none;border:none;}
+.ui-widget-header .ui-state-highlight {border:1px solid #00172d;background:#0054a6;color:#fff;text-align:right;}
+.ui-icon-circle-triangle-w {background:url("../images/common/btn_date_prev.png") no-repeat left top !important;background-size:7px !important;}
+.ui-icon-circle-triangle-e {background:url("../images/common/btn_date_next.png") no-repeat left top !important;background-size:7px !important;}
+.ui-datepicker .ui-datepicker-prev {top:19px;left:12px;}
+.ui-datepicker .ui-datepicker-next {top:19px;right:12px;}
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span {margin-left:-4px;margin-top:-4px;}
+.ui-datepicker table {font-size:1.2rem;}
+.ui-datepicker table th {font-weight:100;font-size:1.1rem;border-bottom:1px solid #e5e7eb;}
+.ui-datepicker table td.satday a, .ui-datepicker table th.satday {color:#4d91ff;}
+.ui-datepicker table td.sunday a, .ui-datepicker table th.sunday {color:#b40d18;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {margin:5px 0;padding:25% 0;border:none;background:none;font-weight:700;color:#444;font-size:1.6rem;text-align: center;}
+.ui-widget.ui-widget-content {padding:0;background:#ececec;border:none;font-family:"sol";border-radius:5px;-webkit-box-shadow: 0px 8px 0px 0px rgba(214,217,223,1);
+	-moz-box-shadow: 0px 8px 0px 0px rgba(214,217,223,1);
+	box-shadow: 0px 8px 0px 0px rgba(214,217,223,1);
+}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {background:#0061ff;color:#fff;border-radius:50%;}
+.ui-datepicker .ui-datepicker-title {width:210px;margin:0 auto 10px;font-size:1.0rem;line-height:1.2;color:#222;vertical-align:bottom;}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {margin:0;padding:0;border:none;font-family:"sol";font-size:2.4rem;vertical-align:bottom;line-height:1.1;}
+.ui-datepicker select.ui-datepicker-month {width:17%;margin-left:20px;}
+.ui-datepicker select.ui-datepicker-year {width:30%;}
+.ui-datepicker .ui-datepicker-buttonpane button,.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {margin:0;}
+.ui-datepicker .tit-area {padding:13px 0;background:#062d6e;font-weight:700;color:#fff;text-align: center;border-radius:5px 5px 0 0;}
+.ui-datepicker .ui-datepicker-buttonpane {overflow:hidden;padding:10px 15px;}
+
+#contents .tbl-type#tblScheduleList tr th {font-size:15px;}
+#contents .tbl-type#tblScheduleList tr td {font-size:13px;}
+
+/* 테이블 타입 */
+.tbl-type {}
+.tbl-type .tbl {width:100%;border-top:2px solid #000;}
+.tbl-type .tbl th {padding:5px 0;font-size:13px;text-align:center;border-bottom:1px solid #000;}
+.tbl-type .tbl td {padding:3px 0;font-size:11px;text-align:center;border-bottom:1px solid #ccc;}
+.tbl-type .tbl td.bd-r {border-right:1px solid #ccc;}
+
+/* 페이징 */
+.paging {overflow:hidden;margin:20px auto;text-align:center;}
+.paging > a {display:inline-block;padding:5px;margin:0 2px;cursor:pointer;}
+.paging .number {float:left;width:247px;margin:0 auto;}
+.paging .number li {float:left;margin:0 5px;}
+.paging .number li a {font-size:14px;padding:0 3px;}
+.paging .number li a:hover, .paging .number li.on a {font-weight:bold;color:#ea1b1b;}
+.paging .first {}
+.paging .prev {}
+.paging .next {}
+.paging .last {}
+
+
+/* 버튼 */
+.btn {display:inline-block;padding:6px 10px;border:1px solid #666;border-radius:3px;font-size:12px;}
+.btn-black {padding:7px 10px;background:#231f20;color:#fff;border:none;border-radius:0;}
+.btn-red {min-width:100px;padding:7px 10px;background:#ea1b1b;color:#fff;border:none;border-radius:0;text-align:center;}
+
+/* input */
+.ipt {padding:6px 10px;}
+
+/* popup */
+.pop-addtaboo {width:340px;margin:-137px 0 0 -170px;}
+.pop-addtaboo .txt {padding:25px 0 10px;text-align:center;}
+.pop-addtaboo .content .ipt {width:100%;}
+
+/* 라이브 운영 */
+#contents .tbl-type .tbl#tblScheduleList thead th {padding:7px 10px;}
+#contents .tbl-type .tbl#tblScheduleList tbody td {padding:5px 0;}
+
+/* 통계 */
+.stats {overflow:hidden;}
+#contents.stats .menu-list {float:left;width:20%;padding:60px 22px 0 0;}
+#contents.stats .menu-list li {padding:11px 36px 11px 11px;border-bottom:1px solid #000;font-size:16px;}
+#contents.stats .menu-list li a {display:inline-block;width:100%;}
+#contents.stats .menu-list li.on a, #contents.stats .menu-list li:hover a {color:#ff4b53;font-weight:bold;}
+#contents.stats .stats-wrap {float:right;width:80%;}
+#contents.stats .stats-wrap .date-select {width:290px;}
+#contents.stats .stats-wrap .date-select > span {float:none;display:inline-block;width:20px;text-align:center;vertical-align:middle;}
+#contents.stats .stats-wrap .date-select .date {width:120px;}
+#contents.stats .stats-wrap .date-select .btn-calendar {display:inline-block;vertical-align:middle;}
+#contents.stats .stats-wrap .etc-area {text-align:right;}
+#contents.stats .stats-wrap .etc-area a {float:none;display:inline-block;margin:0 1px;}
+#contents.stats .stats-wrap .etc-area a.on {padding:7px 10px;background:#231f20;color:#fff;border:none;}
+#contents.stats .stats-wrap .tbl-type .section-left .tbl {}
+#contents.stats .stats-wrap .tbl-type .tbl thead tr th {background:#ebebeb;border-right:1px solid #000;vertical-align:middle;}
+#contents.stats .stats-wrap .tbl-type .tbl thead tr th:first-child {padding:0;vertical-align:middle;}
+#contents.stats .stats-wrap .tbl-type .tbl thead tr th:last-child {border-right:0;}
+#contents.stats .stats-wrap .tbl-type .tbl tbody th {vertical-align:middle;border-bottom:1px solid #ccc;}
+#contents.stats .stats-wrap .tbl-type .tbl tbody tr td {padding:11px 0;border-right:1px solid #ccc;vertical-align:middle;}
+#contents.stats .stats-wrap .tbl-type .tbl tbody tr td:last-child {border-right:0;}
+#contents.stats .stats-wrap .tbl-type .tbl tfoot tr td {font-weight:bold;border-right:1px solid #ccc;}
+#contents.stats .stats-wrap .tbl-type .tbl tfoot td:last-child {border-right:0;}
+
+/* live */
+#contents.stats .stats-wrap .tbl-type .tbl tfoot tr td {background:#ebebeb;vertical-align:middle;}
+#contents.stats .stats-wrap .tbl-type .tbl tfoot tr:first-child td {}
+#contents.stats .stats-wrap .tbl-type .tbl tfoot tr:last-child td {}
+
+/* 포지션뷰 */
+#contents.stats .stats-wrap {overflow:hidden;}
+#contents.stats .stats-wrap .tbl-type .tbl.tbl-position thead tr th {padding:12px 7px;}
+#contents.stats .stats-wrap .data-box {float:left;text-align:center;}
+#contents.stats .stats-wrap .data-box.position-list {overflow:hidden;width:100%;}
+#contents.stats .stats-wrap .data-box.position-list li {float:left;display:table;width:20%;height:57px;border-top:2px solid #000;border-right:1px solid #000;}
+#contents.stats .stats-wrap .data-box.position-list li:first-child {background:#ebebeb;}
+#contents.stats .stats-wrap .data-box.position-list li:last-child {border-right:0;}
+#contents.stats .stats-wrap .data-box.position-list li span {display:table-cell;vertical-align:middle;}
+#contents.stats .stats-wrap .data-box.table-box {margin-bottom:20px;}
+#contents.stats .stats-wrap .data-box.table-box .tbl.tbl-position tbody tr td {padding:10px 0;}
+#contents.stats .stats-wrap .data-box.average-box {width:100%;}
+#contents.stats .stats-wrap .data-box.average-box li {overflow:hidden;border-top:2px solid #000;border-bottom:1px solid #000;border-right:1px solid #000;}
+#contents.stats .stats-wrap .data-box.average-box li:first-child {background:#ebebeb;}
+#contents.stats .stats-wrap .data-box.average-box li:last-child {border-right:0;}
+#contents.stats .stats-wrap .data-box.average-box li span {float:left;display:block;width:50%;padding:13px 0;background:#ebebeb;border-bottom:1px solid #ccc;border-left:1px solid #ccc;}
+
+/* 5G 실감형 VOD */
+#contents.stats.vod .stats-wrap .data-box.position-list {width:100%;}
+#contents.stats.vod .stats-wrap .data-box.position-list li {}
+#contents.stats.vod .stats-wrap .data-box.table-box {width:100%;}
+#contents.stats.vod .stats-wrap .tbl thead tr th {padding:12px 9px;}
+#contents.stats.vod .stats-wrap .data-box.average-box {overflow:hidden;width:100%;margin-bottom:20px;}
+#contents.stats.vod .stats-wrap .data-box.average-box li {float:left;width:20%;}
+#contents.stats.vod .stats-wrap .data-box.average-box li span {width:100%;}
+
+/* 서비스 약관 동의 */
+#contents.stats .stats-wrap .tbl-type .tbl.tbl-agree thead tr th {padding:12px 0;}
+
+/* 동영상 관리 */
+#contents.video {}
+#contents.video .tit-video {border-bottom:1px solid #000;}
+#contents.video .tbl-type .tbl td {height:40px;vertical-align:middle;}
+#contents.video .tbl-info {width:95%;margin:0 auto;}
+#contents.video .tbl-info tbody tr th, #contents.video .tbl-info tbody tr td {height:30px;padding:8px 0;background:#ececec;color:#a8a8a8;border-top:1px solid #ccc;border-bottom:1px solid #ccc;vertical-align:middle;}
+#contents.video .tbl-info tbody tr th.on, #contents.video .tbl-info tbody tr td.on {background:none;color:#000;}
+#contents.video .tbl-info tbody tr td {}
+/*#contents.video .tbl-info tbody tr .upload {height:60px;background:none;color:#000;border-top:1px solid #000;text-align:center;}*/
+#contents.video .tbl-info tbody tr .upload {height:60px;background:none;color:#000;border-top:1px solid #000;}
+#contents.video .tbl-info tbody tr td.upload {vertical-align:baseline;}
+#contents.video .tbl-info tbody tr td.upload input {border:0;}
+#contents.video .tbl-info tbody tr td input {padding:4px 0;}
+#contents.video .tbl-info tbody tr td input.date-area {width:150px;}
+#contents.video .tbl-info tbody tr td .btn-calendar img {width:22px;margin-left:10px;}
+#contents.video .tbl-info tbody tr td input.tit-area {width:670px;}
+#contents.video .tbl-info tbody tr td select {width:150px;padding:4px 36px 4px 15px;}
+#contents.video .tbl-info tbody tr td .btn-select {background:#fff url("../images/sub/bg_arrow_select.png") no-repeat 90% 50%/11px;color:#ccc;border:1px solid #ccc;}
+#contents.video .tbl-info tbody tr td.on .btn-select {color:#000;border:1px solid #000;}
+#contents.video .tbl-info tbody tr .img-area {height:120px;border-bottom:1px solid #000;vertical-align:baseline;}
+/*#contents.video .tbl-info tbody tr .img-area {border-bottom:1px solid #000;vertical-align:baseline;}*/
+#contents.video .tbl-info tbody tr td.img-area {vertical-align:bottom;}
+#contents.video .tbl-info tbody tr td.img-area .img-box {display:block;margin-bottom:15px;}
+#contents.video .tbl-info tbody tr td.img-area .img-box img {width:140px;}
+#contents.video .tbl-info tbody tr td.img-area input {background:#ececec;color:#a8a8a8;}
+#contents.video .tbl-info tbody tr td.img-area.on input {background:none;color:#000;}
+#contents.video .btn-area {width:100%;margin:20px 0;text-align:center;}
+#contents.video .btn-area .btn {display:inline-block;padding:7px 54px;background:#ececec;color:#000;border:1px solid #000;border-radius:5px;font-size:14px;}
+#contents.video .btn-area .btn-config {padding:7px 20px;}
+#contents.video .btn-area .btn-register {background:#ff4b53;color:#fff;border:1px solid #ff4b53;}
+
+/* loading */
+#Modal {position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.2);z-index:5;}
+.loading {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:10;}

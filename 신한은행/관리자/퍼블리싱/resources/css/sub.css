@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/* 레이아웃 */
+.tit-area {min-height:132px;background:#fff;border-bottom:1px solid #e0e2e3;}
+.tit-area .inner {overflow:inherit;}
+.tit-area h2 {padding:55px 0 5px;font-size:24px;font-weight:bold;color:#242424;text-align:center;}
+.tit-area .date-select {position:relative;padding:12px 0;background:#fff;text-align:center;}
+.tit-area .date-select .date {margin:0 8px;font-size:16px;color:#333;vertical-align:middle;}
+.tit-area .date-select .btn-date {position:relative;}
+.tit-area .date-select .btn-date img {vertical-align:middle;}
+.tit-area .date-select .btn-today {display:inline-block;position:absolute;left:50%;width:34px;height:17px;line-height:18px;margin-left:132px;font-size:12px;color:#2a67ce;border:1px solid #c5c5c5;border-radius:2px;text-align:center;vertical-align:middle;}
+.ui-datepicker-trigger {display:inline-block;position:absolute;top:13px;left:50%;margin-left:105px;cursor:pointer;}
+.ui-datepicker-calendar  td {font-size:12px !important;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {margin-left:-5px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {margin-top:-5px;}
+.ui-datepicker .ui-datepicker-next span {margin-left:-3px;margin-top:-5px;}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, 
+.ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {border:1px solid #000;background:#676767;font-weight:normal;color:#fff;}
+.ui-state-hover a, .ui-state-hover a:hover,.ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-focus a,
+.ui-state-focus a:hover, .ui-state-focus a:link, .ui-state-focus a:visited, a.ui-button:hover, a.ui-button:focus {color:#2b2b2b;text-decoration:none;}
+.ui-datepicker .ui-datepicker-title {color:#fff;}
+
+.download-box {position:absolute;top:225px;left:50%;width:1000px;margin-left:-500px;text-align:right;}
+.download-box .btn-print {margin-left:12px;}
+
+.data-box {width:1000px;margin:0 auto;background:#fff;border-top:1px solid #5d5f61;border-bottom:1px solid #5d5f61;}
+
+.select-area {position:relative;width:1000px;margin:60px auto 10px;text-align:right;}
+.select-area select {height:38px;line-height:38px;font-size:14px;color:#696969;vertical-align:middle;}
+.select-area .total-user {position:absolute;top:11px;left:0;font-size:14px;color:#696969;}
+.select-area .total-user .num {color:#104aad;}
+.select-area .search .ipt {width:170px;height:38px;line-height:38px;padding:0 10px;border:1px solid #cbcdce;border-radius:4px 0 0 4px;box-sizing:border-box;}
+.select-area .search a.btn-search {display:inline-block;width:79px;height:38px;margin-left:-5px;line-height:38px;background:#104aad;font-size:15px;font-weight:bold;color:#fff;border-radius:4px;text-align:center;vertical-align:middle;}
+a.btn-app {display:inline-block;width:79px;height:38px;line-height:38px;background:#104aad;font-size:15px;font-weight:bold;color:#fff;border-radius:4px;text-align:center;vertical-align:middle;}
+a.btn-app-img {display:inline-block;width:40px;height:38px;line-height:42px;background:#000;font-size:24px;color:#fff;border-radius:4px;text-align:center;vertical-align:middle;}
+
+.select-area .radio-area {position:absolute;bottom:0;left:0;font-size:14px;}
+
+/* 엔트리등록전 - 구단용 */
+.before-reg {padding:60px 0 110px;text-align:center;}
+.before-reg .txt {padding:22px 0 70px;font-size:22px;color:#111;}
+.before-reg .btn-reg {display:inline-block;width:137px;height:48px;line-height:48px;background:#104aad;border-radius:2px;font-size:15px;color:#fff;}
+
+/* 엔트리등록전 - 일반용 */
+.reg-user {padding:125px 0 200px;}
+.reg-user .emb {width:100px;margin:0 auto;}
+.reg-user .emb img {width:100%;}
+.reg-user .txt {padding:40px 0 0;font-size:20px;color:#111;}
+
+/* 엔트리등록 */
+.reg {}
+.reg .reg-info {overflow:hidden;padding:15px 37px 15px 30px;}
+.reg .reg-info .game-info {float:left;margin-top:10px;font-size:17px;color:#111;font-weight:bold;}
+.reg .reg-info .game-info .vs {color:#696969;}
+.reg .reg-info .game-info .game-time {padding-left:8px;color:#104aad;}
+.reg .reg-info .time-info {float:left;margin-top:12px;font-size:15px;color:#696969;}
+.reg .reg-info .time-info dt {float:left;margin-right:3px;}
+.reg .reg-info .time-info dd {float:left;}
+.reg .reg-info .reg-time {position:relative;margin-right:10px;padding-right:10px;}
+.reg .reg-info .reg-time:after {content:"";position:absolute;top:3px;right:0;width:1px;height:9px;background:#c3c3c3;}
+.reg .reg-info .confirm-time {margin-right:10px;}
+.reg .reg-info .btn-confirm {float:left;width:117px;height:38px;line-height:38px;margin-left:10px;background:#104aad;font-size:15px;font-weight:bold;color:#fff;border-radius:2px;text-align:center;}
+.reg .reg-info .btn-modify {float:left;width:117px;height:38px;line-height:38px;margin-left:10px;background:#adadad;font-size:15px;font-weight:bold;color:#fff;border-radius:2px;text-align:center;}
+.reg .tbl-entry {border-top:1px solid #cbcdce;}
+.reg .tbl-entry .tbl {width:100%;}
+.reg .tbl-entry .tbl th {padding:10px 0;font-size:15px;font-weight:bold;color:#111;border-bottom:1px solid #d1d3d4;text-align:center;}
+.reg .tbl-entry .tbl td {padding:10px 0;line-height:1.5;font-size:14px;color:#696969;border-bottom:1px solid #bcbcbc;text-align:center;}
+.reg .tbl-entry .tbl td.team {font-size:17px;font-weight:bold;color:#000;vertical-align:middle;}
+.reg .tbl-entry .tbl td.no-data {height:200px;font-size:22px;font-weight:bold;color:#adadad;vertical-align:middle;}
+.reg .tbl-entry .tbl td .emb {display:inline-block;width:55px;}
+.reg .tbl-entry .tbl td .emb img {width:100%;}
+.reg .tbl-entry .tbl td .total-num {display:block;margin-top:5px;}
+.reg .tbl-entry .tbl td .backnum {color:#104aad;}
+.reg .tbl-entry .tbl td .player {padding:0 10px;min-width:60px;}
+.reg .tbl-entry .tbl .pitcher {text-align:left;}
+.reg .tbl-entry .tbl .pitcher .player:nth-child(3n+1){padding-left:60px;}
+.reg .tbl-entry .tbl tfoot th {border:none;}
+.reg .tbl-entry .tbl tfoot tr:first-child th, .reg .tbl-entry .tbl tfoot tr:first-child td {padding-top:20px;}
+.reg .tbl-entry .tbl tfoot tr:last-child th, .reg .tbl-entry .tbl tfoot tr:last-child td {padding-bottom:20px;}
+.reg .tbl-entry .tbl tfoot th, .reg .tbl-entry .tbl tfoot td {padding:3px 0;}
+.reg .tbl-entry .tbl tfoot td {padding-left:25px;text-align:left;border:none;}
+.reg .tbl-summay {border:1px solid #222;border-left:none;border-right:none;}
+.reg .tbl-summay .tbl {}
+.reg .tbl-summay .tbl th, .reg .tbl-summay .tbl td {padding:3px 0;border:none;}
+.reg .tbl-summay .tbl td {padding-left:20px;text-align:left;}
+.reg .tbl-summay .tbl tr:first-child th, .reg .tbl-summay .tbl tr:first-child td {padding-top:20px;}
+.reg .tbl-summay .tbl tr:last-child th, .reg .tbl-summay .tbl tr:last-child td {padding-bottom:20px;}

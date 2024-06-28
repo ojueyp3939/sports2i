@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" class="fff">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../intro.html"><span>이용안내</span></a></li>
+					<li><a href="../prediction/prediction_경기전_참여전.html"><span>승리예측</span></a></li>
+					<li><a href="../mission/mission.html"><span>오늘의 미션</span></a></li>
+					<li class="on"><a href="../invite/invite.html"><span>초대</span></a></li>
+					<li><a href="../point/point.html"><span>포인트 내역</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="pick-wrap noplay">
+					<img src="../resources/images/contents/img_blank.png" alt="오늘은 경기가 없어요. 지난 하이라이트를 볼까요?">
+				</section>
+
+				<!-- <section class="pick-wrap noplay set-admin">
+					<img src="resources/images/contents/img_blank.png">
+				</section> -->
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

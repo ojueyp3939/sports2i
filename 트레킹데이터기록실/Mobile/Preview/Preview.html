@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, 트레킹데이터기록실" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+		<title>KBO 트레킹데이터기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" /><!-- css 순서 중요 -->
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/tracking.css" />
+		<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../resources/js/common.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				var myScroll1 = new IScroll('.scroll-wrap',{
+					eventPassthrough:true,
+					scrollX:true,
+					scrollY:false,
+					preventDefault:false
+				});
+				var myScroll2 = new IScroll('#TblRecord01',{
+					eventPassthrough:true,
+					scrollX:true,
+					scrollY:false,
+					preventDefault:false
+				});
+				var myScroll3 = new IScroll('#TblRecord02',{
+					eventPassthrough:true,
+					scrollX:true,
+					scrollY:false,
+					preventDefault:false
+				});
+				var myScroll2 = new IScroll('#TblRecord03',{
+					eventPassthrough:true,
+					scrollX:true,
+					scrollY:false,
+					preventDefault:false
+				});
+				var myScroll3 = new IScroll('#TblRecord04',{
+					eventPassthrough:true,
+					scrollX:true,
+					scrollY:false,
+					preventDefault:false
+				});
+				$('#btnCalendar').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImage: "../resources/images/common/img_calendar.png",
+						buttonImageOnly: true,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+				$(".schedule-preview .game-list li").on('click',function(){
+					if ($(this).hasClass('on')) {
+						$(".schedule-preview .player-info-box").css({display:'none'});
+						$('.game-list').find('li').removeClass('on');
+					} else {
+						$(".schedule-preview .player-info-box").css({display:'block'});
+						$(this).parent().children().removeClass('on');
+						$(this).addClass('on');
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<h1><a href="../Main.html"><img src="../resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a></h1>
+        <ul class="btn-hamburger">
+          <li class="bar-top"></li>
+          <li class="bar-mid"></li>
+          <li class="bar-bot"></li>
+        </ul>
+				<div class="search-area">
+					<input type="text" class="ipt-search">
+					<a href="../Player/Player.html" class="btn-search"><img src="../resources/images/common/btn_search.png" alt="검색"></a>
+					<ul class="search-list dp-none">
+						<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+					</ul>
+				</div>
+				<div class="menu-box">
+					<h1><a href="Main.html"><img src="../resources/images/common/logo_menu.png" alt="스포츠투아이 로고"></a></h1>
+					<div class="search-area">
+						<input type="text" class="ipt-search">
+						<a href="../Player/Player.html" class="btn-search"><img src="../resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list dp-none">
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						</ul>
+					</div>
+					<ul class="menu-list">
+						<li><a href="../Preview/Preview.html"><i></i>선발투수 프리뷰</a></li>
+						<li><a href="../PlayerRank/PlayerRank.html"><i></i>선수 순위</a></li>
+						<li><a href="../TeamRank/TeamRank.html"><i></i>팀 순위</a></li>
+					</ul>
+					<!-- 광고영역 -->
+					<div class="ad-area">
+						<a href="#none"><img src="../resources/images/common/test11.png" alt=""></a>
+					</div>
+					<!-- // 광고영역 -->
+				</div>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="preview">
+						<!-- 일정 -->
+						<div class="schedule-preview">
+							<div>
+								<p class="schedule-data">2019년 10월<input type="text" class="ipt ipt-calendar" id="btnCalendar"/></p>
+								<ul class="date clear">
+								<li class="prev"><a href="#none">prev</a></li>
+								<li class="week clear">
+									<div class="past">
+										<a href="#none">
+											<span class="day">토</span>
+											<span class="num">3</span>
+										</a>
+									</div>
+									<div class="past">
+										<a href="#none">
+											<span class="day">일</span>
+											<span class="num">4</span>
+										</a>
+									</div>
+									<div class="past">
+										<a href="#none">
+											<span class="day">월</span>
+											<span class="num">5</span>
+										</a>
+									</div>
+									<div class="present">
+										<a href="#none">
+											<span class="day">화</span>
+											<span class="num">6</span>
+										</a>
+									</div>
+									<div class="future">
+										<a href="#none">
+											<span class="day">수</span>
+											<span class="num">7</span>
+										</a>
+									</div>
+									<div class="future">
+										<a href="#none">
+											<span class="day">목</span>
+											<span class="num">8</span>
+										</a>
+									</div>
+									<div class="future">
+										<a href="#none">
+											<span class="day">금</span>
+											<span class="num">9</span>
+										</a>
+									</div>
+								</li>
+								<li class="next on"><a href="#none">next</a></li>
+							</ul>
+							</div>
+							<div class="scroll-wrap">
+								<div class="scroller">
+									<ul class="game-list clear">
+										<li class="on">
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="info">
+												<div class="place">잠실</div>
+												<div class="time">18:30</div>
+											</div>
+											<div class="match">
+												<div class="team away clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="기아"></div>
+													<div class="name">안치홍</div>
+												</div>
+												<div class="team home clear">
+													<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+													<div class="name">페르난데스</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="box-wrap">
+								<div class="player-info-box">
+									<h2 class="tit">2019시즌 랭킹</h2>
+									<ul class="record-info clear">
+										<li>하위</li>
+										<li>평균</li>
+										<li>상위</li>
+									</ul>
+									<div class="player away">
+										<div class="info-box">
+											<div class="photo">
+												<img src="../resources/images/common/test.png" alt=""/>
+											</div>
+											<div class="player-info clear">
+												<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="한화"></div>
+												<div class="name">윌슨 (우투, #35)</div>
+											</div>
+										</div>
+										<ul class="record">
+											<li>
+												<dl>
+													<dt>직구 평균 구속</dt>
+													<dd class="graph-wrap rate"><!-- 그래프가 51% 이상일 경우 rate 클래스 추가 -->
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>인플레이 타구 평균 속도</dt>
+													<dd class="graph-wrap">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>직구 평균 상하 무브먼트</dt>
+													<dd class="graph-wrap rate">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>강한 타구 비율</dt>
+													<dd class="graph-wrap">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+										</ul>
+									</div>
+									<div class="player home">
+										<div class="info-box">
+											<div class="photo">
+												<img src="../resources/images/common/test.png" alt=""/>
+											</div>
+											<div class="player-info clear">
+												<div class="emb"><img src="../resources/images/emb/emb_80x58_HT.png" alt="한화"></div>
+												<div class="name">페르난데스 (우투, #35)</div>
+											</div>
+										</div>
+										<ul class="record">
+											<li>
+												<dl>
+													<dt>직구 평균 구속</dt>
+													<dd class="graph-wrap">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>인플레이 타구 평균 속도</dt>
+													<dd class="graph-wrap rate">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>직구 평균 상하 무브먼트</dt>
+													<dd class="graph-wrap rate">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt>강한 타구 비율</dt>
+													<dd class="graph-wrap">
+														<canvas></canvas>
+													</dd>
+												</dl>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // 일정 -->
+						<!-- 광고영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="../resources/images/common/test11.png" alt=""></a>
+						</div>
+						<!-- // 광고영역 -->
+						<!-- 유형별 성적 -->
+						<div class="top-player-record mb10">
+							<h2 class="tit">2019시즌 타자 유형별 성적</h2>
+							<ul class="record-list tab3 clear">
+								<li class="on"><a href="#none">전체</a></li>
+								<li><a href="#none">vs 우타자</a></li>
+								<li><a href="#none">vs 좌타자</a></li>
+							</ul>
+							<div class="record-wrap">
+								<div class="player clear">
+									<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+									<div class="name">LG 선발투수 윌슨</div>
+								</div>
+								<div class="tbl-box clear">
+									<table class="tbl tbl-fixed" summary="순위, 선수, 팀 기록">
+										<caption>선수기록</caption>
+										<colgroup>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구종</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>투심</th>
+											</tr>
+											<tr>
+												<th>커브</th>
+											</tr>
+											<tr>
+												<th>직구</th>
+											</tr>
+											<tr>
+												<th>체인지업</th>
+											</tr>
+										</tbody>
+									</table>
+									<div id="TblRecord01" class="tbl-record-wrap scroll-wrap">
+										<div class="scroller">
+											<table class="tbl tbl-record" summary="2019시즌 타자 유형별 성적">
+												<caption>2019시즌 타자 유형별 성적기록</caption>
+												<thead>
+													<tr>
+														<th>구사%</th>
+														<th>구속</th>
+														<th>좌우 무브먼트</th>
+														<th>상하 무브먼트</th>
+														<th>피안타율</th>
+														<th>피장타율</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="record-wrap">
+								<div class="player clear">
+									<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+									<div class="name">LG 선발투수 윌슨</div>
+								</div>
+								<div class="tbl-box clear">
+									<table class="tbl tbl-fixed" summary="순위, 선수, 팀 기록">
+										<caption>선수기록</caption>
+										<colgroup>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구종</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>투심</th>
+											</tr>
+											<tr>
+												<th>커브</th>
+											</tr>
+											<tr>
+												<th>직구</th>
+											</tr>
+											<tr>
+												<th>체인지업</th>
+											</tr>
+										</tbody>
+									</table>
+									<div id="TblRecord02" class="tbl-record-wrap scroll-wrap">
+										<div class="scroller">
+											<table class="tbl tbl-record" summary="2019시즌 타자 유형별 성적">
+												<caption>2019시즌 타자 유형별 성적기록</caption>
+												<thead>
+													<tr>
+														<th>구사%</th>
+														<th>구속</th>
+														<th>좌우 무브먼트</th>
+														<th>상하 무브먼트</th>
+														<th>피안타율</th>
+														<th>피장타율</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="top-player-record">
+							<h2 class="tit">2019시즌 타자 유형별 성적 (맞대결)</h2>
+							<ul class="record-list tab3 clear">
+								<li class="on"><a href="#none">전체</a></li>
+								<li><a href="#none">vs 우타자</a></li>
+								<li><a href="#none">vs 좌타자</a></li>
+							</ul>
+							<div class="record-wrap">
+								<div class="player clear">
+									<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+									<div class="name">LG 선발투수 윌슨 <span>vs</span> 두산전 (2경기)</div>
+								</div>
+								<div class="tbl-box clear">
+									<table class="tbl tbl-fixed" summary="순위, 선수, 팀 기록">
+										<caption>선수기록</caption>
+										<colgroup>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구종</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>투심</th>
+											</tr>
+											<tr>
+												<th>커브</th>
+											</tr>
+											<tr>
+												<th>직구</th>
+											</tr>
+											<tr>
+												<th>체인지업</th>
+											</tr>
+										</tbody>
+									</table>
+									<div id="TblRecord03" class="tbl-record-wrap scroll-wrap">
+										<div class="scroller">
+											<table class="tbl tbl-record" summary="2019시즌 타자 유형별 성적">
+												<caption>2019시즌 타자 유형별 성적기록</caption>
+												<thead>
+													<tr>
+														<th>구사%</th>
+														<th>구속</th>
+														<th>좌우 무브먼트</th>
+														<th>상하 무브먼트</th>
+														<th>피안타율</th>
+														<th>피장타율</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="record-wrap">
+								<div class="player clear">
+									<div class="emb"><img src="../resources/images/emb/emb_80x58_OB.png" alt="두산"></div>
+									<div class="name">LG 선발투수 윌슨</div>
+								</div>
+								<div class="tbl-box clear">
+									<table class="tbl tbl-fixed" summary="순위, 선수, 팀 기록">
+										<caption>선수기록</caption>
+										<colgroup>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+											<col style="width:33.333%"/>
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구종</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th>투심</th>
+											</tr>
+											<tr>
+												<th>커브</th>
+											</tr>
+											<tr>
+												<th>직구</th>
+											</tr>
+											<tr>
+												<th>체인지업</th>
+											</tr>
+										</tbody>
+									</table>
+									<div id="TblRecord04" class="tbl-record-wrap scroll-wrap">
+										<div class="scroller">
+											<table class="tbl tbl-record" summary="2019시즌 타자 유형별 성적">
+												<caption>2019시즌 타자 유형별 성적기록</caption>
+												<thead>
+													<tr>
+														<th>구사%</th>
+														<th>구속</th>
+														<th>좌우 무브먼트</th>
+														<th>상하 무브먼트</th>
+														<th>피안타율</th>
+														<th>피장타율</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+													<tr>
+														<td>33.5%</td>
+														<td>142.2</td>
+														<td>-11.3</td>
+														<td>12.3</td>
+														<td>0.218</td>
+														<td>0.238</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // 유형별 성적 -->
+						<!-- 광고영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="../resources/images/common/test11.png" alt=""></a>
+						</div>
+						<!-- // 광고영역 -->
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box">
+					<h1><img src="../resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+					<p class="inquire">※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우<br/> 반드시 스포츠투아이㈜에 문의하시기 바랍니다.</p>
+					<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+					<p class="call">전화: 02-3445-7116   팩스: 031-707-7165</p>
+					<p class="copyright">Copyright © sports2i Corp.</p>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

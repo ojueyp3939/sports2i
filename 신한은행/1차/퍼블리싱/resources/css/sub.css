@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* 월간 MVP 결과 */
+.player-list {padding:16px 17px;}
+.player-list li {margin-bottom:14px;}
+.player-list li.mvp {margin-bottom:27px;}
+
+.kbo-product {padding:14px 17px;}
+
+.btn-area {padding:13px 0 14px 17px;background:#1c2362;}
+.btn-area .btn {display:block;width:80px;}
+
+.event {margin-bottom:10px;}
+.event01 {margin-bottom:2px;}
+
+.select-area {padding:16px 17px 0 0;text-align:right;}
+.select-area select {padding:10px 15px;font-size:1.3rem;color:#555;}
+
+/* media query */
+@media(max-width:320px){	
+
+}

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/allstar.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="vote-page">
+			<h1><a href="main_appvote.html" class="logo"><img src="resources/images/common/logo_allstar_appvote.png" alt="KBO 올스타 로고" /></a></h1>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-appvote">
+			<div class="info-box">
+				<div class="txt">
+					<img src="resources/images/main/txt_allstar.png" alt="2021 신한은행 SOL KBO 리그 ALL STAR GAME에 출전 할 24명의 올스타를 선정 해주세요!">
+				</div>
+				<div class="schedule">
+					<span class="term">투표기간</span>
+					<span>2021.06.14(월) 10:00 ~ 2021.07.09(금) 18:00</span>
+				</div>
+				<a href="#none" class="btn-vote"><img src="resources/images/main/img_allstar_vote_app.png" alt="KBO 공식 APP 투표하기"></a>
+                <p class="tip">참여하신 분들께는 추첨을 통해 다양한 경품을 증정하오니<br/> 많은 참여 부탁드립니다.</p>
+			</div>
+			<!-- 투표 -->
+			<div class="vote-wrap">
+				<div class="btn-vote-area">
+					<a href="#none" class="btn-vote"><span>KBO 모바일 홈페이지</span> 투표하기</a>
+					<a href="#none" class="btn-vote"><span>신한 SOL APP</span> 투표하기</a>
+				</div>
+			</div>
+			<!-- // 투표 -->
+			<!-- 투표텍스트 -->
+			<ul class="txt-vote">
+				<li class="noti">총 3개 채널에서 1일 3회 투표가능</li>
+				<li>① KBO 홈페이지(PC 또는 모바일)</li>
+				<li>② KBO 공식 APP</li>
+				<li>③ 신한 SOLAPP 1일 1회</li>
+			</ul>
+			<!-- // 투표텍스트 -->
+			<!-- 공식 APP 들어가기 -->
+			<div class="btn-area">
+				<a href="#none" class="btn-app">KBO 공식 APP 들어가기</a>
+			</div>
+			<!-- // 공식 APP 들어가기 -->
+			<!-- 오늘 하루 보지 않기 -->
+			<div class="today-view">
+				<input type="checkbox" id="TodayNone">
+				<label for="TodayNone" class="today-none">오늘 하루 보지 않기</label>
+			</div>
+			<!-- // 오늘 하루 보지 않기 -->
+		</section>
+	</div>
+	<!-- // wrap -->
+	<!-- 모달창 -->
+	<div id="Modal" style="display:none;">
+		<div class="popup">
+			<div class="content">
+				<a href="#none" class="btn-close"><span>닫기</span></a>
+				<p class="txt-no"><span>투표기간이 아닙니다.</span></p>
+			</div>
+		</div>
+	</div>
+	<!-- // 모달창 -->
+</body>
+</html>

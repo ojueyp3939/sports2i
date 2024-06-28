@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>대한씨름협회 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>승희포에버</span>님께서 사용 중입니다.(YYYY-MM-DD A/PM HH:MM:SS)</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 메뉴 -->
+				<nav>
+					<ul class="clear">
+						<li><a href="../Player/player_list.html">선수/지도자 관리</a></li>
+						<li><a href="../Schedule/game_manage.html">경기일정 관리</a></li>
+						<li><a href="../TeamEnroll/team.html">팀 등록 관리</a></li>
+						<li class="on"><a href="../Notice/specialty.html">게시판 관리</a></li>
+						<li><a href="../Member/member.html">회원 관리</a></li>
+						<li><a href="../SeasonWizard/season_wizard.html">시즌 마법사</a></li>
+						<li><a href="../Archive/archive_manage.html">아카이브</a></li>
+					</ul>
+				</nav>
+				<!-- 메뉴 -->
+			</div>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 중메뉴 -->
+			<aside>
+				<h2>게시판 관리</h2>
+				<nav>
+					<ul>
+						<li class="on"><a href="specialty.html"><span>특기사항 불러오기</span></a></li>
+						<li><a href="contest_winner.html"><span>역대 달성 1위 기록 관리</span></a></li>
+						<li><a href="generation.html"><span>대회 수상자 관리 (과거)</span></a></li>
+						<li><a href="news.html"><span>보도자료 관리</span></a></li>
+						<li><a href="video.html"><span>공식영상 관리</span></a></li>
+						<li><a href="main_contest.html"><span>메인 대회 이미지 관리</span></a></li>
+					</ul>
+				</nav>
+			</aside>
+			<!-- // 중메뉴 -->
+			<!-- 본문 -->
+			<article>
+				<h3>특기사항 불러오기</h3>
+				<div class="content">
+					<div class="select-wrap">
+						<ul>
+							<li>
+								대회
+								<select>
+									<option>2019 창녕장사씨름대회</option>
+								</select>
+							</li>
+							<li>
+								체급
+								<select>
+									<option>백두</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+					<div class="between-wrap">
+						<a href="#none" class="btn-enroll">워드로 저장</a>
+						<a href="#none" class="btn-enroll">불러오기</a>
+					</div>
+					<div class="specialty-area">
+						<div class="info-wrap">
+							<p>Game Check Point</p>
+							<address>
+								<span>대한씨름협회</span> 05500 서울특별시 송파구 올림픽로25 잠실주경기장 B103호<br /><span>TEL</span>
+								02-420-4256~7 <span>FAX</span> 02-421-1346
+							</address>
+						</div>
+						<h4>2019 창녕장사씨름대회 백두 8강 경기 특기사항</h4>
+						<div class="between-wrap">
+							<span>Today's HEADLINE (19.12.04)</span>
+						</div>
+						<div class="specialty-cont">
+							<table class="tbl-type1 no-line" summary="Today's HEADLINE">
+								<caption>Today's HEADLINE</caption>
+								<colgroup>
+									<col style="width:40%" />
+									<col style="width:20%" />
+									<col style="width:40%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<td>청 이영호(부산갈매기 씨름단)</td>
+										<td>VS</td>
+										<td>홍 장성복(양평군청 씨름단)</td>
+									</tr>
+									<tr>
+										<td>청 이영호(부산갈매기 씨름단)</td>
+										<td>VS</td>
+										<td>홍 장성복(양평군청 씨름단)</td>
+									</tr>
+									<tr>
+										<td>청 이영호(부산갈매기 씨름단)</td>
+										<td>VS</td>
+										<td>홍 장성복(양평군청 씨름단)</td>
+									</tr>
+									<tr>
+										<td>청 이영호(부산갈매기 씨름단)</td>
+										<td>VS</td>
+										<td>홍 장성복(양평군청 씨름단)</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="specialty-cont">
+							<div class="between-wrap">
+								<span>개인별 특이 사항</span>
+							</div>
+							<table class="tbl-type1" summary="개인별 특이 사항">
+								<caption>개인별 특이 사항</caption>
+								<colgroup>
+									<col style="width:30%" />
+									<col style="width:50%" />
+									<col style="width:20%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>선수명</th>
+										<th>이전 대회 성적</th>
+										<th>비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tbl-type1" summary="개인별 특이 사항">
+								<caption>개인별 특이 사항</caption>
+								<colgroup>
+									<col style="width:30%" />
+									<col style="width:50%" />
+									<col style="width:20%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>선수명</th>
+										<th>이전 대회 성적</th>
+										<th>비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="tbl-type1" summary="개인별 특이 사항">
+								<caption>개인별 특이 사항</caption>
+								<colgroup>
+									<col style="width:30%" />
+									<col style="width:50%" />
+									<col style="width:20%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>선수명</th>
+										<th>이전 대회 성적</th>
+										<th>비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>이영호(부산갈매기 씨름단)</td>
+										<td>용인장사씨름대회 2위</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="specialty-cont">
+							<div class="between-wrap">
+								<span>상대 선수 비교</span>
+							</div>
+							<table class="tbl-type1" summary="상대 선수 비교">
+								<caption>상대 선수 비교</caption>
+								<colgroup>
+									<col style="width:40%" />
+									<col style="width:20%" />
+									<col style="width:40%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>이영호(부산갈매기 씨름단)</th>
+										<th></th>
+										<th>장성복(양평군청 씨름단)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>20세</td>
+										<td>나이</td>
+										<td>30세</td>
+									</tr>
+									<tr>
+										<td>190cm</td>
+										<td>키</td>
+										<td>188cm</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>몸무게</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>포인트 순위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>승률 순위</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>통산 전적(게임)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>통산 전적(라운드)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>시즌 전적(게임)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>시즌 전적(라운드)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>맞대결 전적(게임)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>맞대결 전적(라운드)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>최근 5경기 성적</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>연승/연패</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>주특기</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="specialty-cont">
+							<div class="between-wrap">
+								<span>세부 기록 비교</span>
+							</div>
+							<table class="tbl-type1" summary="세부 기록 비교">
+								<caption>세부 기록 비교</caption>
+								<colgroup>
+									<col style="width:40%" />
+									<col style="width:20%" />
+									<col style="width:40%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>이영호(부산갈매기 씨름단)</th>
+										<th></th>
+										<th>장성복(양평군청 씨름단)</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>2(4)</td>
+										<td>손기술 성공(시도)</td>
+										<td>2(4)</td>
+									</tr>
+									<tr>
+										<td>3(4)</td>
+										<td>다리기술 성공(시도)</td>
+										<td>13(4)</td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>허리기술 성공(시도)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>혼합기술 성공(시도)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>기타기술 성공(시도)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>되치기 성공(시도)</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>기술방어 성공</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>평균 경기시간</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td></td>
+										<td>평균 경고 횟수</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="specialty-cont">
+							<div class="between-wrap">
+								<span>예상기록</span>
+							</div>
+							<table class="tbl-type1" summary="예상기록">
+								<caption>예상기록</caption>
+								<colgroup>
+									<col style="width:25%" />
+									<col style="width:15%" />
+									<col style="width:35%" />
+									<col style="width:15%" />
+									<col style="width:10%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>팀명</th>
+										<th>선수명</th>
+										<th>구분</th>
+										<th>예상기록</th>
+										<th>남은갯수</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>부산갈매기 씨름단</td>
+										<td>이영호</td>
+										<td>게임 승리</td>
+										<td>100</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>부산갈매기 씨름단</td>
+										<td>이영호</td>
+										<td>게임 승리</td>
+										<td>100</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>부산갈매기 씨름단</td>
+										<td>이영호</td>
+										<td>게임 승리</td>
+										<td>100</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>부산갈매기 씨름단</td>
+										<td>이영호</td>
+										<td>게임 승리</td>
+										<td>100</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>부산갈매기 씨름단</td>
+										<td>이영호</td>
+										<td>게임 승리</td>
+										<td>100</td>
+										<td>5</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="default">
+						<i class="default-icon"></i>
+						<p>표출할 경기가 없습니다.</p>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

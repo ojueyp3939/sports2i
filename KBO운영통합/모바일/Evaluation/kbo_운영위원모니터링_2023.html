@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub long-tit">	
+			<h1><span class="txt">2022년 경기운영위원<br/>(경기모니터링) 보고서</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							경기 전 경기장 점검
+						</div>
+						<div class="content">
+							<div>
+								<div class="sub-tit">그라운드</div>
+								<p class="q-tit">&#183; 잔디 및 그라운드의 전반적인 상태 (평평도, 워닝트랙 등)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 배수구, 스프링클러 설치 부근 바닥과의 높낮이</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+
+								<div class="sub-tit">안전그물</div>
+								<p class="q-tit">&#183; 설치 위치와 높이의 적절성, 훼손 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 그물망 고정 기둥, 와이어 등에 충격 흡수 패드 설치 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">펜 스</div>
+								<p class="q-tit">&#183; 펜스의 전반적인 부상위험도</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 펜스에 부착된 문·잠금 장치의 개폐 위험성</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 펜스 하단과 그라운드 사이의 공간 등 공이 펜스에 끼일 위험</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+							</div>
+							
+
+							<div>
+								<div class="sub-tit">의료진</div>
+								<p class="q-tit">&#183; 의료진, 응급차량 도착 여부와 그라운드 출입통로의 개문 및 장애물 유무</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">관람구역</div>
+								<p class="q-tit">&#183; 관람석, 통로, 계단 등 관람 구역의 각종 사고 위험(낙상 등)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">양호</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">개선필요</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">비고 (조치사항)</div>
+								<textarea></textarea>
+							</div>
+						</div>
+					</div>
+					
+					<div class="group">
+						<div class="header">
+							경기 모니터링 사항
+						</div>
+						<div class="content">
+							<div>
+								<p class="q-tit">&#183; 선수단 & 임직원 접촉 / 심판실 출입</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+
+								<div class="sub-tit">경기 전</div>
+								<p class="q-tit">&#183; 승부조작 모의 및 불법스포츠 베팅 관련 이상 징후 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 불법스포츠 베팅 관련 의심 관객 여부(불법 중계 또는 의심장비 보유 등)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">경기 중</div>
+								<p class="q-tit">&#183; 승부조작 및 경기조작 의심 플레이 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+							<div>
+								<div class="sub-tit">특이사항</div>
+								<textarea placeholder="경기운영위원 의견 / 이상징후 발견시 해당장면 서술및대응/불법중계자 신원, 인계경찰서(담당자)등 명기"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="group mb0">
+						<div class="header">
+							심판평가
+						</div>
+						<div class="content">
+							<p class="q-tit">1. 판정·운영·태도 평가</p>
+							<p class="txt">※ 평가항목</p>
+							<div class="memo">
+								- 판정: 스트라이크존(주심), 파울/페어, 보크, 아웃/세이프 등 판정 능력에 대한 평가<br/>
+								- 운영: 경고/퇴장, 각종 규칙 적용의 적절성, 판정 위치 선정, 항의 대처 능력 등 경기운영 전반에 대한 평가<br/>
+								- 태도: 경기에 임하는 태도, 집중력, 정중한 언행, 친목 자제, 프로의식 등 태도 평가
+							</div>
+							<table class="tbl-basic">
+								<colgroup>
+									<col width="18%">
+									<col width="20%">
+									<col width="44%">
+									<col width="18%">
+								</colgroup>
+								<tr>
+									<th>심판명</th>
+									<th>구분</th>
+									<th>내용</th>
+									<th>점수</th>
+								</tr>
+								<tr>
+									<td rowspan="3" class="border">
+										<p>주심</p>
+										홍길동
+									</td>
+									<td class="txt-c">판정</td>
+									<td>스트라이크존, 파울/페어, 보크, 아웃/세이프 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="pl5">운영</td>
+									<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="pl5">태도</td>
+									<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td rowspan="3" class="border">
+										<p>1루심</p>
+										홍길동
+									</td>
+									<td class="txt-c">판정</td>
+									<td>스트라이크존, 파울/페어, 보크, 아웃/세이프 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="pl5">운영</td>
+									<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="pl5">태도</td>
+									<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td rowspan="3" class="border">
+										<p>2루심</p>
+										홍길동
+									</td>
+									<td class="txt-c">판정</td>
+									<td>스트라이크존, 파울/페어, 보크, 아웃/세이프 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="pl5">운영</td>
+									<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="pl5">태도</td>
+									<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+
+								<tr>
+									<td rowspan="3" class="border">
+										<p>3루심</p>
+										홍길동
+									</td>
+									<td class="txt-c">판정</td>
+									<td>스트라이크존, 파울/페어, 보크, 아웃/세이프 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="pl5">운영</td>
+									<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="pl5">태도</td>
+									<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+						<div class="content">
+							<p class="q-tit">2. 스피드업 평가</p>
+							<table class="tbl-basic">
+								<colgroup>
+									<col width="18%">
+									<col width="64%">
+									<col width="18%">
+								</colgroup>
+								<tr>
+									<th>심판명</th>
+									<th>내용</th>
+									<th>점수</th>
+								</tr>
+								<tr>
+									<td rowspan="3" class="border">
+										<p>주심</p>
+										홍길동
+									</td>
+									<td class="pl20">엄격하고 정확한 스피드업 규정 적용</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt-l">선수단을 대상으로 적극적인 스피드업 독려</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="txt-l">매끄러운 진행으로 신속한 경기에 기여</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+
+								
+								<tr>
+									<td rowspan="3" class="border">
+										<p>1루심</p>
+										홍길동
+									</td>
+									<td class="pl20">엄격하고 정확한 스피드업 규정 적용</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt-l">선수단을 대상으로 적극적인 스피드업 독려</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="txt-l">매끄러운 진행으로 신속한 경기에 기여</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								
+								<tr>
+									<td rowspan="3" class="border">
+										<p>2루심</p>
+										홍길동
+									</td>
+									<td class="pl20">엄격하고 정확한 스피드업 규정 적용</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt-l">선수단을 대상으로 적극적인 스피드업 독려</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="txt-l">매끄러운 진행으로 신속한 경기에 기여</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								
+								<tr>
+									<td rowspan="3" class="border">
+										<p>3루심</p>
+										홍길동
+									</td>
+									<td class="pl20">엄격하고 정확한 스피드업 규정 적용</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="txt-l">선수단을 대상으로 적극적인 스피드업 독려</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="border">
+									<td class="txt-l">매끄러운 진행으로 신속한 경기에 기여</td>
+									<td>
+										<select>
+											<option>1</option>
+										</select>
+									</td>
+								</tr>
+								
+								<tr class="border">
+									<td colspan="3" class="txt-l">심판 관련 특이사항 및 의견</td>
+								</tr>
+								<tr class="border">
+									<td colspan="3">
+										<textarea></textarea>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, 트레킹데이터기록실" />
+		<title>KBO 트레킹데이터기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../resources/css/tracking.css" />
+		<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+		<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				var dataPitcher = $(".data-list li:nth-child(1)");
+				var dataHitter = $(".data-list li:nth-child(2)");
+				$(".data-list li:nth-child(1)").on('click',function(){
+					if (dataPitcher) {
+						$(this).addClass('on');
+						$(".data-list li:nth-child(2)").removeClass('on');
+						$(".tbl-box.pitcher").css({display:'block'});
+						$(".tbl-box.hitter").css({display:'none'});
+					}
+				});
+				$(".data-list li:nth-child(2)").on('click',function(){
+					if (dataHitter) {
+						$(this).addClass('on');
+						$(".data-list li:nth-child(1)").removeClass('on');
+						$(".tbl-box.pitcher").css({display:'none'});
+						$(".tbl-box.hitter").css({display:'block'});
+					}
+				});
+
+				$('#btnCalendar').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImageOnly: false,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+				$('#btnCalendarEnd').datepicker({
+						dateFormat: 'yy-mm-dd',
+						showOn: "button",
+						buttonImageOnly: false,
+						changeMonth: true,
+						changeYear: true,
+						autoSize: true,
+						showButtonPanel: true
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="header-wrap">
+					<h1><a href="../Main.html"><img src="../resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a></h1>
+					<div class="search-area">
+						<input type="text" class="ipt ipt-search" />
+						<a href="../Player/Player.html" class="btn-search"><img src="../resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list">
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+							<li><a href="#none">김현수 (LG, 외야수 / #22)</a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu-list clear">
+						<li><a href="../Preview/Preview.html">선발투수 프리뷰</a></li>
+						<li class="on"><a href="PlayerRank.html">선수 순위</a></li>
+						<li><a href="../TeamRank/TeamRank.html">팀 순위</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="player-record rank">
+						<!-- 선수순위 -->
+						<div class="player-info-box">
+							<h2>선수 순위</h2>
+							<ul class="data-list tab2 clear">
+								<li class="on"><a href="#none">투수</a></li>
+								<li><a href="#none">타자</a></li>
+							</ul>
+							<div class="data-box clear">
+								<div class="select-area">
+									<select>
+										<option>연도</option>
+									</select>
+									<label>시작일</label>
+									<input type="text" class="ipt ipt-calendar" id="btnCalendar"/>
+									<label>종료일</label>
+									<input type="text" class="ipt ipt-calendar" id="btnCalendarEnd"/>
+									<select>
+										<option>팀</option>
+										<option>두산베어스</option>
+									</select>
+									<select>
+										<option>구종</option>
+									</select>
+									<select>
+										<option>투구/타구</option>
+									</select>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn btn-search">검색</a>
+									<a href="#none" class="btn btn-reset">초기화</a>
+								</div>
+							</div>
+							<p class="txt-state">▶ 선택 항목 - 연도 : 2019년 | 시작일 : 2019년 1월 1일 | 종료일 : 2019년 12월 31일 | 팀 : 전체 | 구종 : 전체 | 투구 : 0이닝</p>
+							<div class="btn-tbl-area">
+								<a href="#none" class="btn-none btn-prev">prev</a>
+								<a href="PlayerRank02.html" class="btn-next on">next</a>
+							</div>
+							<!-- 투수 -->
+							<div class="tbl-box pitcher">
+								<table class="tbl tbl-data" summary="항목별 선수 기록">
+									<caption>투수</caption>
+									<colgroup>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:12%;"/>
+										<col style="width:12%;"/>
+										<col style="width:12%;"/>
+										<col style="width:14%;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>선수</th>
+											<th class="th-fix">팀</th>
+											<th><a href="#none" class="btn-align">구종</a></th><!-- 열정렬 후 내림차순일 경우 btn-align 클래스 추가 -->
+											<th><a href="#none" class="btn-align">구사%</a></th>
+											<th><a href="#none" class="btn-align">구속</a></th>
+											<th><a href="#none" class="btn-align">상하 무브먼트</a></th>
+											<th><a href="#none" class="btn-align">좌우 무브먼트</a></th>
+											<th><a href="#none" class="btn-align">분당 회전수</a></th>
+											<th><a href="#none" class="btn-align">좌우 릴리스포인트</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-fix">1</td>
+											<td class="col-fix">장뽀야랜드</td>
+											<td class="col-fix">두산베어스</td>
+											<td class="accentuate">-11.3</td>
+											<td class="on">12.3</td>
+											<td>0.218</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.218</td>
+											<td>0.238</td>
+										</tr>
+										<tr>
+											<td class="col-fix">2</td>
+											<td class="col-fix">장뽀야</td>
+											<td class="col-fix">두산베어스</td>
+											<td class="accentuate">-11.3</td>
+											<td class="on">12.3</td>
+											<td>0.218</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.218</td>
+											<td>0.238</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- // 투수 -->
+							<!-- 타자 -->
+							<div class="tbl-box hitter">
+								<table class="tbl tbl-data" summary="항목별 선수 기록">
+									<caption>타자</caption>
+									<colgroup>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:9%;"/>
+										<col style="width:9%;"/>
+										<col style="width:8%;"/>
+										<col style="width:9%;"/>
+										<col style="width:10%;"/>
+										<col style="width:13%;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>선수</th>
+											<th class="th-fix">팀</th>
+											<th><a href="#none" class="btn-align">구종</a></th>
+											<th><a href="#none" class="btn-align">상대%</a></th>
+											<th><a href="#none" class="btn-align">타구 속도</a></th>
+											<th><a href="#none" class="btn-align">상하 각도</a></th>
+											<th><a href="#none" class="btn-align">타율</a></th>
+											<th><a href="#none" class="btn-align">장타율</a></th>
+											<th><a href="#none" class="btn-align">땅볼%</a></th>
+											<th><a href="#none" class="btn-align">라인드라이브%</a></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="col-fix">1</td>
+											<td class="col-fix">장뽀야랜드</td>
+											<td class="col-fix">두산베어스</td>
+											<td class="accentuate">-11.3</td>
+											<td class="on">12.3</td>
+											<td>0.218</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.238</td>
+										</tr>
+										<tr>
+											<td class="col-fix">2</td>
+											<td class="col-fix">장뽀야</td>
+											<td class="col-fix">두산베어스</td>
+											<td class="accentuate">-11.3</td>
+											<td class="on">12.3</td>
+											<td>0.218</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.218</td>
+											<td>0.238</td>
+											<td>0.238</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- // 타자 -->
+						</div>
+						<!-- // 선수순위 -->
+						<!-- 광고 영역 -->
+						<div class="ad-area">
+							<a href="#none"><img src="../resources/images/common/test11.jpg" alt=""></a>
+						</div>
+						<!-- // 광고 영역 -->
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box clear">
+					<div class="company">
+						<h1><img src="../resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+						<p>Copyright © sports2i Corp.</p>
+					</div>
+					<div class="txt-company">
+						<p>
+							※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우 반드시 스포츠투아이㈜에 문의하시기 바랍니다.<br/>
+							<span>※ 본 사이트는 PTS 및 HTS를 통해 추적된 투구, 타구를 바탕으로 구현됐으며, 제 2 구장(포항, 울산, 청주 등)에서 열린 경기는 포함하지 않습니다.</span>
+						</p>
+						<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+						<p>전화: 02-3445-7116   팩스: 031-707-7165</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

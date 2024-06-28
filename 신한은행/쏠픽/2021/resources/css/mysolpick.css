@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+
+#contents.my-solpick {min-height:calc(100vh - 35px);}
+.my-solpick-info {background:url("../images/sub/bg_solpick_info_9000.png") no-repeat 0 0/100%;}
+.my-solpick-info .txt {padding:65.81vw 27% 10.9259vw;color:#1962d8;text-align:center;font-size:2.0rem;}
+.my-solpick-info .txt span {font-size:1.4rem;color:#444;}
+.my-solpick-info .info {padding:14px 48px 0;}
+.my-solpick-info .info dl {overflow:hidden;width:100%;height:22px;line-height:22px;margin:0 auto 4px;background:#0a3256;font-size:1.3rem;color:#fff;font-size:1.3rem;}
+.my-solpick-info .info dl dt {position:relative;float:left;width:100px;height:100%;padding-left:26px;background-color:#4fa0fa;}
+.my-solpick-info .info dl dt::after {content:'';position:absolute;right:-13px;padding-left:3px;border-top:22px solid #4fa0fa;border-right:10px solid transparent}
+.my-solpick-info .info dl dt img {display:inline-block;width:15px;margin:3px 8px 0 0;}
+.my-solpick-info .info dl dd {float:right;width:calc(100% - 100px);padding-right:34px;text-align:right;}
+
+.rate-graph {height:237px;padding:25px 25px 20px;background:url("../images/sub/bg_mysolpick.png") no-repeat;background-size:cover;overflow:hidden;}
+.rate-graph .rate-box {text-align:center;}
+.rate-graph .rate-box .graph {position:relative;display:inline-block;width:134px;height:172px;margin-right:10.8333vw;text-align:center;background:url("../images/sub/bg_rate_graph01.png") no-repeat 0 0;background-size:100%;}
+.rate-graph .rate-box .graph:last-child {margin-right:0;}
+.rate-graph .rate-box .graph dt {position:relative;display:inline-block;font-size:1.2rem;color:#e0e2fa;}
+.rate-graph .rate-box .graph dd {position:absolute;bottom:-20px;width:30px;font-size:1.3rem;}
+.rate-graph .rate-box .graph dd .rate-txt {position:absolute;left:-10px;bottom:0;width:100%;color:#a0a2b8;}
+.rate-graph .rate-box .graph dd .rate {display:block;position:absolute;left:50%;bottom:20px;width:20px;height:10px;margin-left:-20px;background:#a0a2b8;border-radius:10px 10px 0 0;}
+.rate-graph .rate-box .graph dd .rate .num {position:absolute;top:-26px;left:calc(50% - 23px);width:46px;padding:2px 5px 3px;border-radius:5px;font-size:1.3rem;color:#fff;background:#a0a2b8;}
+.rate-graph .rate-box .graph dd .rate .num:after {content:"";position:absolute;bottom:-5px;left:calc(50% - 3px);border-top:5px solid #a0a2b8;border-left:3px solid transparent;border-right:3px solid transparent;border-bottom:0 solid transparent;}
+.rate-graph .rate-box .graph dd .rate .num .unit {font-size:1.3rem;font-weight:400;}
+.rate-graph .rate-box .graph dd.my {left:45px;}
+.rate-graph .rate-box .graph dd.my .rate-txt {color:#7d73fd;}
+.rate-graph .rate-box .graph dd.my .rate {background:#4f28de;}
+.rate-graph .rate-box .graph dd.my .rate .num {color:#f7cd24;background-color:#4f28de;}
+.rate-graph .rate-box .graph dd.my .rate .num:after {border-top-color:#4f28de}
+.rate-graph .rate-box .graph dd.all {left:95px;}
+.rate-graph .no-pick {padding-top:75px;line-height:1.5;font-size:1.4rem;color:#cdcecf;text-align:center;}
+
+.swiper-menu .swiper-slide {width:auto;min-width:100%;white-space:nowrap;}
+.swiper-menu .swiper-slide .month-list {overflow:hidden;border-top:1px solid #dadada;border-bottom:1px solid #dadada;font-size:1.4rem;background-color:#fff;}
+.swiper-menu .swiper-slide .month-list li {float:left;padding:0 20px;}
+.swiper-menu .swiper-slide .month-list li a {display:block;padding:15px 0 0;color:#333;font-weight:100;}
+.swiper-menu .swiper-slide .month-list li.off a {color:#ced0d6;}
+.swiper-menu .swiper-slide .month-list li.on a, .swiper-menu .swiper-slide .month-list li:hover a {position:relative;padding-bottom:11px;color:#6156e8;border-bottom:2px solid #6156e8;font-weight:400;}
+
+.info-box {overflow:hidden;padding:17px 15px;background-color:#fff;}
+.info-box .info {float:left;width:33.3%;text-align:center;}
+.info-box .info div {width:77px;height:77px;padding-top:18px;margin:0 auto;border:2px solid #d2d6f6;border-radius:50%;background-color:#f4f1ff;}
+.info-box .info div .tit {color:#6156e8;font-size:1.1em;}
+.info-box .info div .num {padding-top:6px;color:#231c3a;font-size:1.5rem;}
+.info-box .info div .num span {font-size:1.1rem;font-weight:100;}
+
+.gift-box {position:relative;width:100%;padding:20px 25px 27px;margin-bottom:10px;color:#4403c8;background:#e0e2fa;}
+.gift-box .txt1 {padding-bottom:4px;font-size:1.5rem;}
+.gift-box .txt2 {font-size:1.1rem;font-weight:100;}
+.gift-box .btn-gift {position:absolute;bottom:15px;right:25px;display:inline-block;padding:5px 9px;border-radius:10px;color:#fff;font-size:1.1rem;background-color:#6156e8;}
+
+.no-participation {padding:285px 0 199px 0;background:url("../images/sub/bg_no_participation.png") #f4f4f4 no-repeat center 104px/140px;}
+.no-participation .txt {text-align:center;font-weight:100;}
+.no-participation .txt dt {padding-bottom:23px;color:#333;font-size:1.4rem;}
+.no-participation .txt dd {line-height:1.4;color:#666;font-size:1.1rem;}
+
+.history {padding:17px 12px;background-color:#fff;}
+.history h3 {font-size:1.5rem;font-weight:400;}
+.history h3 span {font-size:1.6rem;}
+.history .tit-list {overflow:hidden;margin:8px 0 5px;padding:7px 0;background:#231c3a;}
+.history .tit-list li {float:left;width:30%;font-size:1.2rem;color:#fff;text-align:center;}
+.history .tit-list li:nth-child(1),.history .tit-list li:nth-child(2) {width:20%;}
+.history .tit-list li:first-child {padding-left:10px;}
+.history .tit-list li:last-child {padding-right:10px;}
+.history .tbl-type {background:#f4f4f4;border-radius:4px;}
+.history .tbl {width:100%;}
+.history .tbl td {padding:8px 0;color:#888;border-bottom:2px solid #fff;text-align:center;font-size:1.3rem;vertical-align:middle;}
+.history .tbl tr:last-child td {border:none;}
+.history .tbl tr td:first-child {padding-left:10px;}
+.history .tbl tr td:last-child {padding-right:10px;}
+.history .tbl tr.all td {color:#6884ec;}
+.history .no-histroy {padding:90px 0;border-radius:7px;font-size:1.4rem;color:#888;text-align:center;background-color:#f0f2f5;}
+.history .btn-area {margin-top:17px;text-align:center;}
+.history .btn-area .btn-more {display:inline-block;margin:0 auto;padding:7px 13px 6px 23px;background:url("../images/sub/btn_more.png") no-repeat 14% 50%/9px;border:1px solid #bbb;}
+
+/* post */
+.post .rate-graph .rate-box .graph dd .rate {background-color:#ced0d6}
+.post .rate-graph .rate-box .graph dd .rate .num {background-color:#b7b9bf}
+.post .rate-graph .rate-box .graph dd .rate-txt {color:#ced0d6}
+.post .rate-graph .rate-box .graph dd.my .rate {background-color:#21c0bd;}
+.post .rate-graph .rate-box .graph dd.my .rate .num {color:#11348b;background-color:#8ce6c8}
+.post .rate-graph .rate-box .graph dd.my .rate .num:after {border-top-color:#8ce6c8}
+.post .rate-graph .rate-box .graph dd.my .rate-txt {color:#21c0bd}
+.post .swiper-menu .swiper-slide .month-list li.on a, .post .swiper-menu .swiper-slide .month-list li:hover a {color:#0093a4;border-bottom:2px solid #0093a4;}
+.post .info-box .info div {border:2px solid #9adedd;background-color:#f4f9fa;}
+.post .info-box .info div .tit {color:#21c0bd}
+.post .info-box .info div .num {color:#075655}
+.post .gift-box {color:#075655;background:#d3f2f2;}
+.post .gift-box .btn-gift {background-color:#0b7977;}
+.post .history .tit-list {background:#063534;}
+.post .history .tbl-type {background-color:#f2f3f4}
+.post .history .tbl-type .tbl tr.all td {color:#075655;}
+.post .history .no-histroy {background-color:#f2f3f4}
+.post .no-participation {background:url("../images/sub/bg_no_participation_p.png") #f4f4f4 no-repeat center 104px/140px;}
+.post .history .tit-list li {float:left;width:15%;font-size:1.2rem;color:#fff;text-align:center;}
+.post .history .tit-list li:first-child {padding-left:5px;}
+.post .history .tit-list li:nth-child(2) {width:16%;}
+.post .history .tit-list li:nth-child(4) {width:18%;}
+.post .history .tit-list li:nth-child(5) {width:16%;}
+.post .history .tit-list li:last-child {width:20%;padding-right:5px;}
+.post .history .tbl tr td:first-child {padding-left:5px;}
+.post .history .tbl tr td:last-child {padding-right:5px;}
+
+/* media query */
+@media(max-width:321px){
+    .rate-graph {padding:25px 0 30px}
+	.rate-graph .rate-box .graph {margin-right:0;}
+}

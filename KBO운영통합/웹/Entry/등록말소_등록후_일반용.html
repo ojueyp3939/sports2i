@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2"  style="display:block;">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">승인·공시 접수</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">선수단</a></li>
+							<li><a href="#none">경기</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반 업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">메리트 운영 계획서</a></li>
+							<li><a href="#none">신분조회</a></li>
+							<li><a href="#none">등록확인서</a></li>
+							<li><a href="#none">경찰야구단 지원 선수</a></li>
+							<li><a href="#none">상무야구단 지원 선수</a></li>
+							<li><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></li>
+							<li><a href="#none">스페셜 유니폼 착용</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>등록·말소</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="data-box reg mt60">				
+				<div class="tbl-entry">
+					<table class="tbl">
+						<colgroup>
+							<col width="15%" />
+							<col width="12%" />
+							<col width="12%" />
+							<col width="25%" />
+							<col width="12%" />
+							<col width="12%" />
+							<col width="12%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구단</th>
+								<th>감독</th>
+								<th>코치</th>
+								<th>투수</th>
+								<th>포수</th>
+								<th>내야수</th>
+								<th>외야수</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="team">KIA</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="team">KIA</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="team">KIA</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="team">KIA</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="team">KIA</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+						</tbody>						
+					</table>
+				</div>
+			</div>
+			<div class="data-box reg mt20">
+				<div class="tbl-entry tbl-summay">
+					<table class="tbl">
+						<colgroup>
+							<col width="15%" />
+							<col width="*" />
+						</colgroup>
+						<body>
+							<tr>
+								<th>등록</th>
+								<td>임찬규(L), 최동환(한), 이동현(한)</td>
+							</tr>
+							<tr>
+								<th>말소</th>
+								<td>임찬규(L), 최동환(한), 이동현(한)</td>
+							</tr>
+							<tr>
+								<th>코치등록</th>
+								<td>임찬규(L), 최동환(한), 이동현(한)</td>
+							</tr>
+							<tr>
+								<th>코치말소</th>
+								<td>임찬규(L), 최동환(한), 이동현(한)</td>
+							</tr>
+						</body>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li class="on"><a href="#none">승인신청</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명 관리</a></li>
+							<li><a href="#none">텍스트 관리</a></li>
+							<li><a href="#none">주소록 관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">
+			<div class="tit-area">
+				<div class="inner">
+					<h2>승인신청</h2>
+				</div> 
+			</div>
+			<div class="tab-official">
+				<div class="inner">
+					<dl>
+						<dt>1. 구분 선택</dt>
+						<dd>
+							<ul class="tab">
+								<li class="on"><a href="#none"><span>경기정보</span></a></li>
+								<li><a href="#none"><span>소속선수</span></a></li>
+								<li><a href="#none"><span>육성선수</span></a></li>
+								<li><a href="#none"><span>감독∙코치</span></a></li>
+								<li><a href="#none"><span>신규승인신청</span></a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt>2. 변경항목 선택</dt>
+						<dd>
+							<ul class="tab">
+								<li><a href="#none"><span>경기개시 시간</span></a></li>
+								<li><a href="#none"><span>경기장소</span></a></li>
+								<li class="on"><a href="#none"><span>개막전 등록명단</span></a></li>
+							</ul>
+						</dd>
+					</dl>
+					<dl>
+						<dt>3. 세부항목 선택</dt>
+						<dd>
+							<div class="select-area">								
+								<select name="" id="">
+									<option value="">구단</option>
+									<option value="">한화</option>
+								</select>
+								<a href="#none" class="btn-app">등록</a>
+							</div>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="official-cont reg"> <!-- reg 클래스추가 -->
+				<h3>경기정보 - 개막전 등록명단</h3>
+				<div class="tbl-entry">
+					<table class="tbl">
+						<colgroup>
+							<col width="15%" />
+							<col width="12%" />
+							<col width="12%" />
+							<col width="25%" />
+							<col width="12%" />
+							<col width="12%" />
+							<col width="12%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구단</th>
+								<th>감독(1)</th>
+								<th>코치(8)</th>
+								<th>투수(14)</th>
+								<th>포수(3)</th>
+								<th>내야수(9)</th>
+								<th>외야수(6)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="team">
+									<span class="emb"><img src="../resources/images/emb/emb_HT.png" alt="" /></span>
+									<span class="total-num">27명</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+								<td>
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span><br />
+									<span class="player"><span class="backnum">88</span>김태형</span>
+								</td>
+							</tr>
+						</tbody>						
+					</table>
+				</div>
+				<div class="filebox-area">
+					<div class="filebox preview-image">
+						<input class="ipt upload-name" value="파일선택" disabled="disabled">
+						<label for="ex_filename">파일 선택</label> 
+						<input type="file" id="ex_filename" class="upload-hidden">
+					</div>
+				</div>				
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">제출</a>
+				<a class="btn btn-cancel" href="#none">취소</a>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+<div id="popup" class="pop-entry-reg opening">
+	<h1>개막전 소속선수 명단등록</h1>
+	<div class="total-box">
+		<div class="team"><img src="../resources/images/emb/emb_SK.png" alt="" /></div>
+		<div class="day">개막전 엔트리</div>
+		<div class="total-num">총<span class="current">30</span>/27명</div>
+		<div class="btn-area">
+			<a href="" class="btn-confirm">확인</a>
+			<a href="" class="btn-cancel">취소</a>
+		</div>
+	</div>
+	<div class="inner">
+		<div class="player-selected">
+			<dl>
+				<dt>감독</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>코치</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>투수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>포수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>내야수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li class="active"><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>외야수</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="player-select-area">
+			<dl>
+				<dt>감독</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>코치</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>투수</dt>
+				<dd>
+					<ul>
+						<li class="active"><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>포수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>내야수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dt>외야수</dt>
+				<dd>
+					<ul>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+						<li><a href="#none">71 나이트</a></li>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+	</div>
+</div>
+<div class="modal"></div>
+</body>
+</html>

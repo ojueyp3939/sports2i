@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/smart.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".today-games h1").click(function(){
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+
+			$(".btn-ground label").click(function(){
+				$(".ground ").toggleClass("on");
+				$(".lineup-list").toggleClass("on");
+				$(".description").toggleClass("on");
+			});
+
+			$(".hitter-list").bxSlider({
+				pager:false
+			});
+
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#GameList',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+
+			var myScroll2 = new IScroll('#TabDepth1',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false ,
+			});
+
+			var myScroll3 = new IScroll('#TblInning',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1 class="tit">스마트경기장</h1>
+			<a href="#none" class="btn-back"><span>뒤로가기</span></a>
+			<a href="#none" class="btn-home"><span>홈으로</span></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="main">
+				<!-- live 중계시 on class 추가 -->
+				<div class="matrix-view">
+					<a href="javascript:;">
+						<span class="bg"><img src="../resources/images/smart/bg_matrix.png" alt="" /></span>
+						<span class="btn"><img src="../resources/images/smart/btn_matrix.png" alt="보러가기" /></span>
+					</a>
+				</div>
+				<p class="notice">매트릭스 뷰 서비스는 5G / wife 네트워크 환경이 아닌 경우 원활한 시청이 어려 울수 있습니다.</p>
+				<h2>5G 스타디움 <strong>Live</strong></h2>
+				<div class="streaming-angle">
+					<ul class="anglie-list">
+						<li><a href="javascript:;" class="btn-smart btn-3bo on">3루측 외야뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-outfield">필드뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-1bo on">1루측 외야뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-3b">3루측 뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-infield">내야뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-1b on">1루측 뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-bt">배터리뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-cheer on">응원석뷰</a></li>
+						<li><a href="javascript:;" class="btn-smart btn-do">덕아웃뷰</a></li>
+					</ul>
+				</div>
+				<div class="stredaming-hot"><a href="javascript:;" class="btn-smart btn-hot on"><span class="txt">인기 View 자동시청</span></a></div>
+				<div class="vod"><a href="javascript:;" class="btn-smart btn-vod"><span class="txt">5G 스타디움 실감형 실감형 VOD</span></a></div>
+        <section class="img-no-game">
+					<img src="../resources/images/playball/img_no_game1.png" alt="" />
+					<img src="../resources/images/playball/img_no_game2.png" alt="" />
+					<img src="../resources/images/playball/img_no_game3.png" alt="" />
+					<img src="../resources/images/playball/img_no_game4.png" alt="" />
+					<img src="../resources/images/playball/img_no_game5.png" alt="" />
+				</section>
+				<section class="img-no-game another">
+					<img src="../resources/images/playball/img_no_game_pad1.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad2.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad3.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad4.png" alt="" />
+					<img src="../resources/images/playball/img_no_game_pad5.png" alt="" />
+				</section>
+        <div class="data-free data-no-game"><!-- 경기가 없는날일 경우 data-no-game 클래스 추가-->
+					<p class="txt-tip">
+            KT 모바일 단말기로 이용 시, 6월 30일까지
+            <span>데이터 통화료가 무료입니다.</span>
+            <span>('프로야구 Live'외 다른 서비스/콘텐츠 잉 및 타 통신사</span>
+            <span>단말기 이용 시, 데이터 통화료가 발생할 수 있습니다.)</span>
+          </p>
+				</div>
+        <div class="data-free data-no-game another-pad"><!-- 경기가 없는날일 경우 data-no-game 클래스 추가-->
+					<p class="txt-tip">
+            KT 모바일 단말기로 이용 시, 6월 30일까지 데이터 통화료가 무료입니다.
+            <span>('프로야구 Live'외 다른 서비스/콘텐츠 잉 및 타 통신사 단말기 이용 시, 데이터 통화료가 발생할 수 있습니다.)</span>
+          </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

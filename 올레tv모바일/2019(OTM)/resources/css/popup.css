@@ -1,0 +1,171 @@
+﻿@charset "utf-8";
+
+/* 팝업공통 */
+.popup {position:absolute;top:50%;left:50%;width:80vw;height:80vh;margin:-40vh 0 0 -40vw;padding:0 4.2vw;background:#fff;z-index:25;}
+.popup header {border:none;}
+.popup header h1 {padding:6.25vh 0 3.125vh;font-size:1.4rem;font-weight:700;text-align:center;border:none;}
+.popup header .btn-close {position:absolute;top:10px;right:10px;}
+.popup .content {overflow:auto;height:58vh;}
+.popup .btn-area {margin-top:15px;text-align:center;}
+
+#PopLoginMove {height:28vh;margin:-14vh 0 0 -40vw;}
+#PopLoginMove .content {overflow:inherit;height:auto;font-size:1.4rem;font-weight:100;text-align:center;}
+#PopLoginMove header h1 {padding:4.7vh 0 3.125vh;}
+
+/* 비로그인 유저 */
+#PopLoginMove .login-question {padding-top:10.16vh;}
+#PopLoginMove a.no-login-btn, #PopLoginMove a.no-login-cancel-btn {display:inline-block;width:103px;height:30px;line-height:26px;letter-spacing:-1px;border-radius:3px;}
+
+/* 개인정보 동의 철회 */
+#PopAgreeConfirm {height:28vh;margin:-14vh 0 0 -40vw;}
+#PopAgreeConfirm .content {overflow:inherit;height:auto;font-size:1.4rem;font-weight:100;text-align:center;}
+#PopAgreeConfirm header h1 {padding:4.7vh 0 3.125vh;}
+
+#PopAgreeConfirm .login-question {padding-top:10.16vh;}
+#PopAgreeConfirm a.no-login-btn, #PopAgreeConfirm a.no-login-cancel-btn {display:inline-block;width:103px;height:30px;line-height:26px;letter-spacing:-1px;border-radius:3px;}
+
+/* MY팀 설정 팝업 */
+#PopMyteam .myteam-select {border-top:1px solid #ececec;}
+#PopMyteam .myteam-select li {overflow:hidden;margin-top:-1px;padding:2px 0;border:1px solid #ececec;}
+#PopMyteam .myteam-select li .emb {float:left;width:48%;text-align:center;}
+#PopMyteam .myteam-select li .emb img {width:32px;}
+#PopMyteam .myteam-select li .no-team img {display:inline-block;width:20px;padding-top:3px;}
+#PopMyteam .myteam-select li .name {float:left;width:52%;padding:6px 0;}
+#PopMyteam .myteam-select .on, #PopMyteam .myteam-select li:hover {position:relative;padding:2px 0;background:#ffedee;border:1px solid #ff4b53;z-index:1;}
+
+/* 닉네임 */
+#PopNickname {height:44vh;min-height:285px;margin:-22vh 0 0 -40vw;}
+#PopNickname h1 {padding:4.25vh 0 3.125vh;}
+#PopNickname .nickname-select {height:38vw;}
+#PopNickname .nickname-select label {display:block;padding:9px 0 7px 11px;border-bottom:1px solid #ececec;text-align:left;}
+#PopNickname .nickname-select input {width:152px;height:32px;margin:9px 6px 9px 0;padding:0 10px;border:1px solid #ececec;font-size:1.1rem;}
+#PopNickname .nickname-select .overlap {display:inline-block;width:68px;height:32px;line-height:32px;background:#ff4b53;color:#fff;border-radius:6px;vertical-align:middle;text-align:center;}
+#PopNickname .nickname-select .caution {padding:0;color:#666;text-align:left;font-size:1.0rem;font-weight:100;}
+#PopNickname .nickname-select .use {padding-top:25px;color:#ff4b53;text-align:center;}
+#PopNickname .btn-area {}
+
+/* 제3자 제공 동의 */
+#PopAgree .tit {text-align:left;}
+#PopAgree .tit .require {padding:0 3px;text-align:center;background:#ff4b53;color:#fff;}
+#PopAgree .agree-service {padding-bottom:8px;}
+#PopAgree ol {padding:5px 0;color:#666;border-top:1px solid #ececec;border-bottom:1px solid #ececec;font-size:1.0rem;}
+#PopAgree ol li {padding-bottom:15px;}
+#PopAgree ol li:last-child {padding:0;}
+#PopAgree .notice {padding:14px 0;}
+#PopAgree .txt-confirm {position:relative;padding-left:8px;}
+#PopAgree .txt-confirm:after {content:"";display:block;position:absolute;top:50%;left:0;width:3px;height:3px;margin-top:-1.5px;background:#ff4b53;}
+
+/* 제3자 제공 동의 철회 */
+#PopAgree.pop-cancel .txt-confirm:after {top:7px;margin:0;}
+
+
+/* 알람설정 */
+#PopPush {}
+#PopPush .setting {overflow:hidden;margin-top:-1px;padding:5px 34px 4px;border:1px solid #ececec;}
+#PopPush .setting:first-child {margin-top:0;}
+#PopPush .setting .toggle {float:right;}
+#PopPush .setting .tit {float:left;line-height:20px;padding:0;font-size:1.2rem;}
+#PopPush .setting.on + .alram-list {display:block;}
+#PopPush .alram-list {display:none;margin-top:-1px;}
+#PopPush .alram-list .setting .tit {font-weight:400;}
+/** 알람 버튼 **/
+#PopPush .toggle .switch, .alram-list .toggle .switch {display:inline-block;float:right;position:relative;width:41px;height:21px;}
+#PopPush .toggle .switch input, .alram-list .toggle .switch input {display:none;}
+#PopPush .toggle .switch .slider, .alram-list .toggle .switch .slider {position:absolute;top:0;left:0;right:0;bottom:0;background:#ececec;border-radius:15px;-webkit-transition:.4s;transition:.4s;cursor:pointer;}
+#PopPush .toggle .switch .slider:before, .alram-list .toggle .switch .slider:before {content:"";position:absolute;width:19px;height:19px;background:#fff;border:1px solid #e0e0e0;border-radius:50px;-webkit-transition:.4s;transition:.4s;}
+#PopPush .toggle .switch input:checked + .slider, .alram-list .toggle .switch input:checked {background:#ffedee;}
+#PopPush .toggle .switch input:checked + .slider:before, .alram-list .toggle .switch input:checked + .slider:before {background:#ff4b53;border:1px solid #ff4b53;-webkit-transition:.4s;transition:.4s;-webkit-transform:translateX(20px);-ms-transform:translateX(20px);transform:translateX(20px);}
+
+/* os체크 */
+#PopOs .tit {width:165px;margin:0 auto;padding:14vh 0 7vh;}
+#PopOs .content {height:15vh;}
+#PopOs .content .txt, #PopOs .content .txt-os {font-size:1.3rem;color:#959595;text-align:center;}
+
+/* login */
+#PopLogin .tit {width:165px;margin:0 auto;padding:14vh 0 7vh;}
+#PopLogin .content {height:15vh;}
+#PopLogin .content .notice {margin-bottom:10px;font-size:1.6rem;font-weight:700;text-align:center;}
+#PopLogin .content .notice span {color:#ff4b53;}
+#PopLogin .content .desc {font-size:1.3rem;color:#959595;text-align:center;}
+
+/* 튜토리얼 */
+#PopTutorial {top:0;left:0;width:100vw;height:100vh;margin:0 auto;padding:0;}
+#PopTutorial:after {content:"";display:block;position:absolute;top:0;left:0;width:100vw;height:100vh;background:#141718;z-index:-1;}
+#PopTutorial .tutorial-list {}
+#PopTutorial .tutorial-list li {}
+#PopTutorial .bx-wrapper {width:640px;margin:0 auto;}
+#PopTutorial .bx-wrapper .bx-controls-auto, #PopTutorial .bx-wrapper .bx-pager {bottom:1vw;}
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a {width:8px;height:8px;background:#ebebeb;}
+#PopTutorial .bx-wrapper .bx-pager.bx-default-pager a.active, #PopTutorial .bx-wrapper .bx-pager.bx-default-pager a:focus, #PopTutorial .bx-wrapper .bx-pager.bx-default-pager a:hover {background:#fd325d;}
+#PopTutorial .chk-box {position:absolute;bottom:2.9688vw;left:4.1407vw;}
+#PopTutorial .chk-box label {color:#fff;font-size:1.4rem;font-weight:100;vertical-align:top;}
+#PopTutorial .chk-box input[type="checkbox"] + label {padding-left:25px;}
+#PopTutorial .chk-box input[type="checkbox"] + label:after {top:3px;left:0;width:15px;height:15px;background-size:30px 15px;}
+#PopTutorial .chk-box input[type="checkbox"]:checked + label:after {background-position:-15px 0;}
+#PopTutorial .btn-confirm {position:absolute;bottom:1.4063vw;right:2.8125vw;padding:10px;background:none;color:#fff;font-size:1.4rem;font-weight:100;border:none;}
+
+/* 미디어쿼리 */
+@media (min-width:1024px){
+	.popup {width:36.231vw;height:84.375vh;margin:-42.1875vh 0 0 -18.1155vw;padding:0 2.6367vw;}
+	.popup header h1 {padding:7.1614vh 0 3.3854vh;font-size:1.8rem;font-weight:700;}
+	
+	/* 비로그인유저 */
+	#PopLoginMove {width:36.133vw;height:31.511vh;margin:-15.7555vh 0 0 -18.0665vw;}
+	#PopLoginMove .login-question {padding-top:11.849vh;font-size:1.8rem;letter-spacing:-0.5px;}
+	#PopLoginMove.popup .btn-area {margin-top:5.4687vh;}
+	#PopLoginMove a.no-login-btn, #PopLoginMove a.no-login-cancel-btn {width:148px;height:39px;margin-right:6px;line-height:35px;font-size:1.6rem;}
+
+	/* 팀선택 */
+	#PopMyteam .myteam-select li {padding:4px 0;}
+	#PopMyteam .myteam-select .on, #PopMyteam .myteam-select li:hover {padding:4px 0;}
+	#PopMyteam .myteam-select li .emb img {width:41px;}
+	#PopMyteam .myteam-select li .name {font-size:1.6rem;}	
+	#PopMyteam .myteam-select li .no-team img {width:25px;}
+	#PopMyteam .btn-area a.btn {width:100%;}
+
+	/* 닉네임 */
+	#PopNickname {margin:-22vh 0 0 -18.1155vw;}
+	#PopNickname .nickname-select {height:17vw;}
+	#PopNickname .nickname-select label {font-size:1.6rem;font-weight:700;}
+	#PopNickname .nickname-select input {width:222px;height:42px;margin:14px 3px 14px 0;padding:0 12px;font-size:1.4rem;}
+	#PopNickname .nickname-select .overlap {width:88px;height:42px;line-height:42px;font-size:1.6rem;}
+	#PopNickname .nickname-select .caution {font-size:1.3rem;}
+	#PopNickname .nickname-select .use {font-size:1.6rem;}
+	#PopNickname  a.btn {width:88px;height:39px;line-height:38px;font-size:1.6rem;}
+
+	/* 제3자 제공 동의 */
+	#PopAgree .tit {letter-spacing:-1px;}
+	#PopAgree .tit .require {font-size:1.6rem;}
+    #PopAgree .content {height:58.46354vh;}
+	#PopAgree .agree-service {padding-bottom:12px;font-size:1.6rem;}
+	#PopAgree ol {padding:9px 0;}
+	#PopAgree ol li {padding-bottom:25px;font-size:1.4rem;font-weight:100;letter-spacing:-0.5px;}
+	#PopAgree .notice {padding:19px 0;font-size:1.6rem;font-weight:100;}
+	#PopAgree .txt-confirm {padding-left:10px;font-size:1.6rem;}
+	#PopAgree .txt-confirm:after {width:6px;height:6px;margin-top:-3px;}
+	
+	/* 푸쉬 */
+	#PopPush .setting {padding:7px 46px 6px;}
+	#PopPush .setting .tit {line-height:24px;font-size:1.6rem;}
+	#PopPush .toggle .switch, .alram-list .toggle .switch {width:54px;height:27px;}
+	#PopPush .toggle .switch .slider:before, .alram-list .toggle .switch .slider:before {width:25px;height:25px;}
+	#PopPush .toggle .switch input:checked + .slider:before, .alram-list .toggle .switch input:checked + .slider:before {-webkit-transition:.4s;transition:.4s;-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}
+	
+	/* os체크 */
+	#PopOs .tit {width:214px;padding:15.2344vh 0 7.9427vh;}
+	#PopOs .content .txt, #PopOs .content .txt-os {font-size:1.7rem;}
+	#PopOs a.btn-next-os {width:234px;height:43px;line-height:39px;font-size:1.8rem;}
+	
+	/* login */
+	#PopLogin .tit {width:241px;padding:13.9323vh 0 6.1198vh;}
+	#PopLogin .content {height:10.938vh;}
+	#PopLogin .content .notice {margin-bottom:19px;font-size:2.1rem;}
+	#PopLogin .content .desc {font-size:1.7rem;letter-spacing:-1px;}
+	#PopLogin a.btn-next-os {width:252px;height:46px;line-height:44px;font-size:1.8rem;}
+
+	/* 튜토리얼 */
+	#PopTutorial .bx-wrapper {margin:25vh auto 0;}
+	#PopTutorial .chk-box {bottom:15vh;}
+	#PopTutorial .btn-confirm {bottom:15vh;}
+
+}

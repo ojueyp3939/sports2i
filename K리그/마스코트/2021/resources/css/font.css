@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'cookie';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/CookieRun-Regular.eot');
+  src: url('../font/CookieRun-Regular.eot?#iefix') format('embedded-opentype'), url('../font/CookieRun-Regular.woff') format('woff');
+}
+@font-face {
+  font-family:'cookie';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/CookieRun-Black.eot');
+  src: url('../font/CookieRun-Black.eot?#iefix') format('embedded-opentype'), url('../font/CookieRun-Black.woff') format('woff');
+}
+@font-face {
+  font-family:'cookie';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/CookieRun-Bold.eot');
+  src: url('../font/CookieRun-Bold.eot?#iefix') format('embedded-opentype'), url('../font/CookieRun-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'ms';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/MaplestoryOTFLight.eot');
+  src: url('../font/MaplestoryOTFLight.eot?#iefix') format('embedded-opentype'), url('../font/MaplestoryOTFLight.woff') format('woff');
+}
+@font-face {
+  font-family:'ms';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/MaplestoryOTFBold.eot');
+  src: url('../font/MaplestoryOTFBold.eot?#iefix') format('embedded-opentype'), url('../font/MaplestoryOTFBold.woff') format('woff');
+}

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/allstar.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".part-list .btn-wrap").click(function() {
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="../main_appvote.html" class="logo"><img src="../resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="../main_login.html" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote event etc">
+			<p class="txt-publicity"></p>
+			<!-- 프로그램 -->
+			<div class="program">
+				<h2 class="tit-program">PROGRAM</h2>
+				<ul class="program-list">
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- // 프로그램 -->
+			<!-- 장외 프로그램 -->
+			<div class="program">
+				<h2 class="tit-program">7/13(금)~14(토) 장외 프로그램</h2>
+				<div class="program-list">
+
+				</div>
+			</div>
+			<!-- // 장외 프로그램 -->
+			<!-- 티켓 예매 -->
+			<div class="link-area">
+				<h2 class="tit-link">티켓 예매</h2>
+				<a href="#none" class="btn-link">티켓 예매 바로가기</a>
+			</div>
+			<!-- // 티켓 예매 -->
+			<!-- KBO 마켓 -->
+			<div class="link-area pb30">
+				<h2 class="tit-link market">KBO 리그 ALL STAR GAME SHOP</h2>
+				<a href="#none" class="btn-link btn-market">KBO 마켓 바로가기</a>
+			</div>
+			<!-- // KBO 마켓 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li class="on"><a href="event.html" class="btn-event">EVENT</a></li>
+				<li><a href="../main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="../news/news.html" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

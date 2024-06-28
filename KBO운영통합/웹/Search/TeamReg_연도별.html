@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none" id="gnb03">통합 조회</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none" id="lnb0301">선수/코치 검색</a></li>
+                            <li><a href="#none" id="lnb0302">선수 상태 확인</a></li>
+                            <li class="on"><a href="#none" id="lnb0303">팀 FA 등록일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">승인·공시 접수</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">선수단</a></li>
+							<li><a href="#none">경기</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반 업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">메리트 운영 계획서</a></li>
+							<li><a href="#none">신분조회</a></li>
+							<li><a href="#none">등록확인서</a></li>
+							<li><a href="#none">경찰야구단 지원 선수</a></li>
+							<li><a href="#none">상무야구단 지원 선수</a></li>
+							<li><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></li>
+							<li><a href="#none">스페셜 유니폼 착용</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>팀 FA 등록일수</h2>					
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>시즌 등록 현황</a></span></li>
+					<li><a href="#none"><span>연도별</a></span></li>
+					<li><a href="#none"><span>월별</a></span></li>
+				</ul>
+			</div>
+			<div class="select-area select-fa-app mt40">
+				<div class="line split01">
+					<span class="mr10">
+						<input type="checkbox" name="" id="" />
+						<label for="">FA계약선수만 보기</label>
+					</span>
+					<select class="mr5">
+						<option value="">구단</option>
+						<option value="HT">KIA</option>
+						<option value="OB">두산</option>
+						<option value="LT">롯데</option>
+						<option value="NC">NC</option>
+						<option value="SK">SK</option>
+						<option value="LG">LG</option>
+						<option value="WO">넥센</option>
+						<option value="HH">한화</option>
+						<option value="SS">삼성</option>
+						<option value="KT">KT</option>
+						<option value="SM">상무</option>
+						<option value="PL">경찰</option>
+					</select>
+					<select class="mr5">
+						<option value="">선수명</option>
+						<option value="">선수명</option>
+						<option value="">선수명</option>
+					</select>
+					<select class="mr5">
+						<option value="">2018</option>
+						<option value="">2018</option>
+						<option value="">2018</option>
+					</select> ~ 
+					<select class="mr5">
+						<option value="">2018</option>
+						<option value="">2018</option>
+						<option value="">2018</option>
+					</select>					
+					<span class="search">
+						<a href="#none" class="btn-search" id="btnSearch">검색</a>
+					</span>
+				</div>
+				<div class="line">
+					<div class="split02">
+						<span class="mr10">
+							<input type="radio" name="" id="" />
+							<label for="">등록일수</label>
+						</span>
+						<span class="mr10">
+							<input type="radio" name="" id="" />
+							<label for="">등록일수+이닝</label>
+						</span>
+						<span class="mr10">
+							<input type="radio" name="" id="" />
+							<label for="">등록일수+경기수</label>
+						</span>
+					</div>
+					<div class="excel-down">
+						<span class="date">2018년 5월 31일 현재</span>
+						<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="tbl-board tbl-fa-app">
+				<table class="tbl" summary="">
+					<colgroup>
+						<col width="8%" />
+						<col width="9%" />
+						<col width="9%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+						<col width="7%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th rowspan="2">FA계약<br />연도</th>
+							<th rowspan="2">이름</th>
+							<th rowspan="2">최종학력</th>
+							<th rowspan="2">팀</th>
+							<th class="merge">2018</th>
+							<th class="merge">2017</th>
+							<th class="merge">2016</th>
+							<th class="merge">2015</th>
+							<th class="merge">2014</th>
+							<th class="merge">2013</th>
+							<th class="merge">2012</th>
+							<th class="merge">2011</th>
+							<th class="merge">2010</th>
+							<th class="merge">2009</th>
+						</tr>
+						<tr class="last">
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+							<th class="merge">999</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>FA</td>
+							<td>32 이병규</td>
+							<td>광주제일고</td>
+							<td>두산</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td><strong>● 999</strong></td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+						</tr>
+						<tr>
+							<td>FA</td>
+							<td>32 이병규</td>
+							<td>광주제일고</td>
+							<td>두산</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td><strong>● 999</strong></td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+						</tr>
+						<tr>
+							<td rowspan="2">FA</td>
+							<td rowspan="2">32 이병규</td>
+							<td rowspan="2">광주제일고</td>
+							<td class="merge">두산</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge"><strong>● 999</strong></td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+							<td class="merge">999</td>
+						</tr>
+						<tr class="last">
+							<td class="merge">대표팀</td>
+							<td class="merge record">병역</td>
+							<td class="merge record">WBC 23</td>
+							<td class="merge">&nbsp;</td>
+							<td class="merge">&nbsp;</td>
+							<td class="merge record">p 12</td>
+							<td class="merge record">ASG 34</td>
+							<td class="merge">&nbsp;</td>
+							<td class="merge">&nbsp;</td>
+							<td class="merge record">ASG 34</td>
+							<td class="merge">&nbsp;</td>
+						</tr>
+						<tr>
+							<td>FA</td>
+							<td>32 이병규</td>
+							<td>광주제일고</td>
+							<td>두산</td>
+							<td>999<span class="etc">199 2/3</span></td>
+							<td>999<span class="etc">199 2/3</span></td>
+							<td>999<span class="etc">55 2/3</span></td>
+							<td><strong>● 999</strong><strong class="etc">● 199 2/3</strong></td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+						</tr>
+						<tr>
+							<td>FA</td>
+							<td>32 이병규</td>
+							<td>광주제일고</td>
+							<td>두산</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td><strong class="etc">● 999</strong><strong class="etc">● 999</strong></td>
+							<td><strong class="etc">● 999</strong><span class="etc">● 999</span></td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+							<td>999</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="paging"><a class="btn btn-first">이전으로</a><a class="btn btn-prev">이전</a><a class="on">1</a><a>2</a><a class="btn btn-next">다음</a><a class="btn btn-last">맨끝으로</a></div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+#contents.highlight {overflow:hidden;height:calc(100vh - 98px);}
+#contents.highlight #MainCont {height:auto;}
+#contents.highlight #MainCont .broadcast {height:55.8333vw;}
+#contents.highlight #MainCont .live {display:table;width:100%;padding:9px 3.3333vw 10px;background:#fff;border-bottom:1px solid #ececec;z-index:20;}
+#contents.highlight #MainCont .live .tit-highlight {display:table-cell;width:77%;font-size:1.4rem;vertical-align:middle;word-break:keep-all;}
+#contents.highlight #MainCont .live .btn-area {display:table-cell;width:23%;vertical-align:middle;}
+#contents.highlight #MainCont .live .btn-area .btn-result {display:inline-block;width:21.6667vw;height:9.5833vw;padding-left:5.08333vw;background:#2f2f2f url("../images/common/ico_result.png") no-repeat 10% 50%/3.6111vw;color:#fff;border-radius:4px;line-height:9.5833vw;text-align:center;box-sizing:border-box;}
+#contents.highlight #MainCont .live .btn-area .btn-liveview {display:inline-block;width:21.6667vw;height:9.5833vw;padding-left:5.08333vw;background:#ff4b53 url("../images/common/ico_live_view.png") no-repeat 10% 50%/3.6111vw;color:#fff;border-radius:4px;line-height:9.5833vw;text-align:center;box-sizing:border-box;}
+
+/* 버튼 */
+#contents.highlight #MainCont .control-box {position:absolute;top:0;left:0;width:100%;height:calc(55.8333vw - 3em);z-index:5;color:#fff;}
+#contents.highlight #MainCont .control-box .btn-player {position:absolute;top:50%;left:50%;width:18.6112vw;height:18.6112vw;margin:-4.6528vw 0 0 -9.3056vw;}
+#contents.highlight #MainCont .control-box .btn-player .btn-play {display:block;width:100%;height:100%;background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/37.2224vw;text-indent:-99999vw;border:none;border-radius:inherit;}
+#contents.highlight #MainCont .control-box .btn-player .stop {background-position:-18.6112vw;}
+#contents.highlight #MainCont .control-box .btn-control {position:absolute;right:12px;bottom:11px;}
+#contents.highlight #MainCont .control-box .btn-control .btn-mode {float:left;width:6.6667vw;margin:3px 0 0 8px;}
+#contents.highlight #MainCont .control-box .btn-control .btn-mode img:first-child {display:block;}
+#contents.highlight #MainCont .control-box .btn-control .btn-mode img:last-child {display:none;}
+#contents.highlight #MainCont .control-box .btn-control .btn-volume {float:left;width:7.2223vw;height:7.2223vw;margin-left:8px;background:url("../images/playball/btn_streaming_volume.png") no-repeat 0 0/100%;text-indent:-9999vw;}
+#contents.highlight #MainCont .control-box .btn-control .btn-volume.on {background-position:0 100%;}
+/* 탭 */
+#contents.highlight #SubCont {height:calc(100vh - 98px - 70.69444vw);padding-top:5px;background:#ececec;}
+#contents.highlight #SubCont .tit-highlight {display:none;padding:14px 0 13px;background:#fff;color:#1a1a1a;font-size:1.9rem;text-align:center;}
+#contents.highlight #SubCont #HighLightTabDepth1 {width:100%;background:#fff;border-top:1px solid #ececec;border-bottom:1px solid #f2f2f2;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 {overflow:hidden;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li {float:left;width:23.333%;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li:last-child {width:30%;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li a {display:block;width:100%;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li a.btn-5gvod {padding-left:3.36111vw;background:url("../images/common/bg_5g_vod.png") no-repeat 0 50%/6.38889vw;}
+#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li.on a.btn-5gvod {background:url("../images/common/bg_5g_vod_on.png") no-repeat 0 50%/6.38889vw;}
+
+/* 경기별 */
+/* 날짜 */
+.date-select-area  {position:relative;padding:12px 0;background:#f9f9f9;text-align:center;}
+.date-select-area .date-select  {display:inline-block;width:189px;vertical-align:middle;}
+.date-select-area .date-select li a {display:inline-block;padding:5px;}
+.date-select-area .date-select .prev {float:left;width:19px;}
+.date-select-area .date-select .today .date {font-size:1.7rem;vertical-align:middle;}
+.date-select-area .date-select .today .day {margin-left:6px;color:#888;font-size:1.5rem;font-weight:100;vertical-align:middle;}
+.date-select-area .date-select .next {float:left;width:19px;}
+.date-select-area .date-select .today {float:left;margin:3px 21px 0;}
+.date-select-area .btn-calendar {position:absolute;top:17px;right:12px;}
+.date-select-area .btn-calendar .icon-calendar {width:18px;}
+.date-select-area .btn-calendar .ui-datepicker-trigger {width:18px;}
+
+/* 경기별 */
+/* layout.css로 이동 */
+
+/* 구단별 */
+.highlight .team-list {overflow:hidden;padding:9px 12px 10px;background:#f9f9f9;border-bottom:1px solid #ececec;}
+.highlight .team-list li {float:left;width:17.7778vw;margin-right:4px;}
+.highlight .team-list li:nth-child(5) {margin-right:0;}
+.highlight .team-list li:nth-child(6) {clear:both;}
+.highlight .team-list li:nth-child(1n+6) {margin-top:4px;}
+.highlight .team-list li:last-child {margin:4px 0 0;}
+.highlight .team-list li.on a {background:#ffedee;color:#ff4b53;border:1px solid #ff4b53;}
+.highlight .team-list li a {display:inline-block;width:100%;padding:9px 0 8px;background:#fff;color:#999;border:1px solid #ececec;border-radius:6px;box-sizing:border-box;}
+.highlight .team-list li a .emb {float:left;width:29px;margin-left:6px;}
+.highlight .team-list li a .name {float:left;width:calc(100% - 35px);padding:4px 0 0 2px;}
+
+/* VOD */
+.highlight .view-list {padding:7px 0 8px;background:#f9f9f9;border-bottom:1px solid #ececec;text-align:center;}
+.highlight .view-list li {display:inline-block;margin-right:11px;}
+.highlight .view-list li:last-child {margin-right:0;}
+.highlight .view-list li a {display:block;width:100%;padding:6px 6px 5px;color:#888;}
+.highlight .view-list li.on a {background:#ff4b53;color:#fff;border-radius:7px;}
+
+
+/* 아이폰5 */
+@media(max-width:320px){
+	#contents.highlight {overflow:hidden;height:calc(100vh - 93px);}
+
+	/* 구단별 */
+	.highlight .team-list li {margin-right:2.5px;}
+	.highlight .team-list li a .emb {margin-left:2px;}
+	.highlight .team-list li a .name {width:calc(100% - 31px);}
+
+	/* VOD */
+	.highlight .view-list li {margin-right:8px;}
+}
+/* 풀화면일 경우 하이라이트 */
+@media(orientation:landscape){
+	#wrap > header {display:none;}
+	#contents.highlight {height:100vh;}
+	#contents.highlight #MainCont {height:100vh;}
+	#contents.highlight #MainCont .broadcast {height:100vh;}
+	#contents.highlight #MainCont .live {display:none;}
+	#contents.highlight #MainCont .control-box.highlight-control {height:calc(100vh - 3em);}
+	#contents.highlight #MainCont .control-box .btn-player {width:10.5469vw;height:10.5469vw;margin:-5.27345vw 0 0 -5.27345vw;}
+	#contents.highlight #MainCont .control-box .btn-player .btn-play {background-size:200%;}
+	#contents.highlight #MainCont .control-box .btn-player .btn-play.stop {background-position:100%;background-size:200%;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-volume {width:5.8438vw;height:5.8438vw;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode {width:4.8438vw;height:4.8438vw;margin:6px 0 0 8px;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode img:first-child {display:none;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode img:last-child {display:block;}
+
+	/* 풀모드 */
+	.full-mode #contents.highlight #MainCont .control-box .btn-control .btn-mode img:first-child {display:none;}
+	.full-mode #contents.highlight #MainCont .control-box .btn-control .btn-mode img:last-child {display:block;}
+}
+@media(min-width:1024px){
+	#wrap > header {display:block;}
+	#gnb {text-align:center;}
+	#gnb .menu {width:100%;}
+	#gnb .menu li a {font-size:1.8rem;}
+	.date-select-area .date-select {width:233px;}
+	.date-select-area .date-select .today {margin:1px 29px 0;font-size:1.9rem;}
+	.date-select-area .date-select .today .date {font-size:2.2rem;}
+	.date-select-area .date-select .today .day {font-size:1.9rem;}
+	.date-select-area .btn-calendar {top:15px;right:253px;}
+	.date-select-area .btn-calendar .ui-datepicker-trigger {width:23px;}
+
+	#contents.highlight {height:auto;}
+	#contents.highlight #MainCont {width:100%;height:387px;}
+	#contents.highlight #MainCont .broadcast {float:left;width:688px;height:100%;}
+	#contents.highlight #MainCont .live {display:block;float:right;position:relative;width:336px;height:387px;padding:40px 4.1016vw 0;border-bottom:0;}
+	#contents.highlight #MainCont .live .tit-highlight {width:auto;font-size:1.8rem;}
+	#contents.highlight #MainCont .live .btn-area {float:none;position:absolute;bottom:41px;width:auto;}
+	#contents.highlight #MainCont .live .btn-area .btn-liveview {width:9.8633vw;height:4.3945vw;padding-left:1.865vw;background:#ff4b53 url("../images/common/ico_live_view.png") no-repeat 10% 50%/1.709vw;border-radius:6px;font-size:1.5rem;line-height:4.3945vw;}
+	#contents.highlight #MainCont .live .btn-area .btn-result {width:9.8633vw;height:4.3945vw;padding-left:1.865vw;background:#2f2f2f url("../images/common/ico_result.png") no-repeat 10% 50%/1.6111vw;border-radius:6px;font-size:1.5rem;line-height:4.3945vw;}
+
+	/* 버튼 */
+	#contents.highlight #MainCont .control-box {width:688px;height:calc(387px - 3em);}
+	#contents.highlight #MainCont .control-box.highlight-control {height:calc(387px - 3em);}
+	#contents.highlight #MainCont .control-box .btn-player {width:9.082vw;height:9.082vw;margin:-4.541vw 0 0 -4.541vw;}
+	#contents.highlight #MainCont .control-box .btn-player .btn-play {background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/18.5547vw;}
+	#contents.highlight #MainCont .control-box .btn-control {right:15px;bottom:12px;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode {width:4.223vw;margin:2px 0 0 12px;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode img:first-child {display:block;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-mode img:last-child {display:none;}
+	#contents.highlight #MainCont .control-box .btn-control .btn-volume {width:4.15039vw;height:4.15039vw;}
+
+	#contents.highlight #SubCont {height:auto;padding-top:0;background:#fff;}
+	#contents.highlight #SubCont .tit-highlight {display:block;border-bottom:1px solid #ccc;}
+	#contents.highlight #SubCont #HighLightTabDepth1 {border-top:0;border-bottom:1px solid #ccc;}
+	#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 {width:56.543vw;margin:0 auto;}
+	#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li {width:25%;}
+	#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li:last-child {width:25%;}
+	#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li a.btn-5gvod {padding-left:2.32031vw;background:url("../images/common/bg_5g_vod.png") no-repeat 0 55%/2.8809vw}
+	#contents.highlight #SubCont #HighLightTabDepth1 .tab-depth1 li.on a.btn-5gvod {padding-left:2.32031vw;background:url("../images/common/bg_5g_vod_on.png") no-repeat 0 55%/2.8809vw}
+
+	.highlight .playball-list-wrap {text-align:center;}
+	.highlight .playball-list-wrap #TodayList .today-list {padding:23px 0;}
+
+	.highlight .more-area {padding:10px 0 61px;}
+	.highlight .more-area .btn-more {width:12.0117vw;padding-left:4.7363vw;border-radius:18px;}
+	.highlight .more-area .btn-more::after {left:2.979vw;}
+
+	/* 구단별 */
+	.highlight .team-list {position:relative;padding:9px 223px;}
+	.highlight .team-list li {width:109px;margin-right:7px;}
+	.highlight .team-list li:nth-child(1n+6) {margin-top:7px;}
+	.highlight .team-list li a {padding:8px 0 7px;}
+	.highlight .team-list li a .emb {width:42px;margin-left:9px;}
+	.highlight .team-list li a .name {width:calc(100% - 51px);padding:5px 0 0 0.6836vw;font-size:1.7rem;}
+
+	.highlight .view-list {padding:9px 0;}
+	.highlight .view-list li {margin-right:27px;}
+	.highlight .view-list li a {font-size:1.3rem;}
+}
+@media(orientation:landscape) and (min-width:1024px){
+	/* 풀모드일 경우 영상 */
+	#wrap.full-mode {background:#000;}
+	#wrap.full-mode > header {display:none;}
+	.full-mode #contents {width:100%;}
+	.full-mode #contents #MainCont {width:100vw;height:56.25vw;}
+	.full-mode #contents #MainCont .broadcast {width:100%;height:100%;}
+	.full-mode #contents #MainCont .live {display:none;}
+	.full-mode #contents #MainCont .control-box {width:100%;height:100%;}
+	.full-mode #contents #MainCont .control-box.highlight-control {height:calc(100% - 3em);}
+	.full-mode #contents #SubCont {display:none;}
+}

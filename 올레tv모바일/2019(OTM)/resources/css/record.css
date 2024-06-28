@@ -1,0 +1,97 @@
+﻿@charset "utf-8";
+
+/* 타자 */
+.tab-area {padding:10px 0;border-bottom:1px solid #ededed;}
+.tab-area .tab-record {overflow:hidden;position:relative;width:88%;margin:0 auto;}
+.tab-area .tab-record:after {content:"";position:absolute;top:0;left:0;width:100%;height:100%;border:1px solid #ececec;box-sizing:border-box;border-radius:30px;}
+.tab-area .tab-record li {position:relative;float:left;width:25%;z-index:5;}
+.tab-area .tab-record li a {display:block;padding:6px 0 7px;font-size:1.3rem;color:#666;text-align:center;}
+.tab-area .tab-record .on a {background:#ffedee;border:1px solid #ff4b53;border-radius:30px;color:#ff4b53;}
+.tab-area .tab-record.tab3 li {width:33.3334%;}
+
+/* 팀리스트 스크롤 */
+#TeamRecord {margin:14px 0 25px;padding:0;border:none;}
+
+/* 타이틀 */
+.tit {padding:0 0 8px 12px;font-size:1.4rem;font-weight:400;}
+
+/* Top Player */
+#TopPlayer {margin-bottom:30px;padding:0;text-align:center;border:none;}
+.top-list{white-space:nowrap;padding:0 12px;}
+.top-list .player {display:inline-block;width:100px;margin-right:2px;border:1px solid #e2e2e2;border-top:1px solid #ff4b53;text-align:center;}
+.top-list .player:last-child {margin:0;}
+.top-list .player .player-img {width:69px;margin:0 auto;}
+.top-list .player .record-list {padding:8px 0 6px;font-size:1.1rem;font-weight:700;color:#ff4b53;}
+.top-list .player .team-player {padding:8px 0 3px;font-size:1.1rem;}
+.top-list .player .team-player span {color:#888;}
+.top-list .player .record {padding-bottom:6px;font-size:1.0rem;color:#ff4b53;}
+
+/* 선수순위 */
+.player-ranking {padding:0;border:none;}
+.player-ranking .tit-area {position:relative;width:110px;background:#fff;border-top:1px solid #ececec;border-right:1px solid #ececec;box-sizing:border-box;z-index:10;}
+.player-ranking .tit-area .tit {height:45px;line-height:45px;padding-left:12px;color:#000;border-bottom:1px solid #f4f4f4;}
+.player-ranking .tit-area .list {}
+.player-ranking .tit-area .list li {height:31px;padding:3px 0 3px 12px;color:#000;border-bottom:1px solid #f4f4f4;}
+.player-ranking .tit-area .list li span {display:inline-block;vertical-align:middle;}
+.player-ranking .tit-area .list li .rank {width:14px;}
+.player-ranking .tit-area .list li .emb {width:27px;}
+.player-ranking .tit-area .list li .name {font-size:1.0rem;}
+
+.player-ranking .record-area {position:absolute;top:0;left:0;right:0;bottom:0;}
+.player-ranking .record-area .scroll {height:100%;}
+.player-ranking .record-area .tbl-area {padding-left:110px;box-sizing:border-box;-webkit-box-sizing:border-box;}
+.player-ranking .record-area .tbl-area .tbl {white-space:nowrap;border-top:1px solid #ececec;border-collapse:separate;}
+.player-ranking .record-area .tbl-area .tbl thead th {height:45px;padding:10px 5px;cursor:pointer;background:url("../images/common/tbl_sort.png") no-repeat left 50% bottom 25%;background-size:6px;border-bottom:1px solid #f4f4f4;}
+.player-ranking .record-area .tbl-area .tbl thead th.sort {background:#ffedee url("../images/common/tbl_sort_on.png") no-repeat left 50% bottom 25%;background-size:6px;color:#ff4b53;border:none;}
+.player-ranking .record-area .tbl-area .tbl thead th.no-sort {background:none;vertical-align:middle;}
+.player-ranking .record-area .tbl-area .tbl tr:nth-child(2n+2) {background:#fff;}
+.player-ranking .record-area .tbl-area .tbl th {}
+.player-ranking .record-area .tbl-area .tbl td {height:30px;line-height:30px;color:#1a1a1a;border-bottom:1px solid #f4f4f4;}
+.player-ranking .record-area .tbl-area .tbl td.sort {background:#ffedee;border:none;}
+
+
+
+
+
+@media (min-width:1024px){
+	/* selectbox */
+	.select-area li select {height:50px;padding:0 42%;font-size:1.8rem;background:url("../images/common/btn_arrow_bottom.png") no-repeat 56% 50%;background-size:6px;}
+	.select-area li.season select {background:url("../images/common/btn_arrow_bottom.png") no-repeat 58% 50%;background-size:6px;}
+	/* tab */
+	.tab-area {padding:11px 0;}
+	.tab-area .tab-record {width:43.7988%;}
+	.tab-area .tab-record li a {padding:9px 0;font-size:1.8rem;}
+	.tab-area .tab-record .on a {border:2px solid #ff4b53;}
+	/* 리그전체 */
+	#TeamRecord {margin:15px 0 25px;}
+	#TeamRecord .scroller .team-list {padding:0 40px;}
+	#TeamRecord .scroller .team-list .total a {padding:23px 5px 22px;vertical-align:middle;}
+	#TeamRecord .scroller .team-list li {width:102px;margin-right:12px;}
+	#TeamRecord .scroller .team-list li a {padding:12px 9px;font-size:1.5rem;}
+	#TeamRecord .scroller .team-list li span {font-size:1.5rem;}
+	#TeamRecord .scroller .team-list li img {width:48px;}
+	/* 타이틀 */
+	.tit {padding:0 0 12px 40px;font-size:1.9rem;}
+	/* top player */
+	#TopPlayer {text-align:inherit;}
+	.top-list {padding:0 40px;}
+	.top-list .player {width:128px;margin-right:9px;}
+	.top-list .player .record-list {font-size:1.6rem;}
+	.top-list .player .player-img {width:85px;}
+	.top-list .player .team-player {padding:10px 0 0;font-size:1.5rem;}
+	.top-list .player .record {padding-bottom:12px;font-size:1.5rem;}
+	/* 선수순위 */
+	.player-ranking .tit-area {width:185px;}
+	.player-ranking .tit-area .tit {height:53px;line-height:53px;padding-left:40px;font-size:1.5rem;}
+	.player-ranking .tit-area .list li {height:40px;padding:9px 0 9px 40px;}
+	.player-ranking .tit-area .list li .rank {width:20px;font-size:1.5rem;font-weight:700;}
+	.player-ranking .tit-area .list li .name {font-size:1.5rem;}
+	.player-ranking .record-area .tbl-area .tbl thead th {height:53px;font-size:1.5rem;}
+	.player-ranking .record-area .tbl-area {padding-left:185px;}
+	.player-ranking .record-area .tbl-area .tbl td {height:40px;font-size:1.5rem;}
+
+	.running-ranking .scroller {display:block;}
+
+
+
+}

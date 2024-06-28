@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2021 EA 이달의 선수상</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body class="bg-gradient">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+                    <div class="evnet-wrap">
+                        <div class="event-link">
+                            다른 이벤트 보기<img src="resources/images/main/icon_down.png" />
+                        </div>
+                        <ul class="event-list">
+                            <li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+                            <li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+                        </ul>
+                    </div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png" />
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="profile-wrap">
+					<p class="title">EA 이달의 선수상 후보</p>
+					<div class="info-box">
+						<div class="emb">
+							<img src="resources/images/emb/AY.png" />
+						</div>
+						<p class="info">
+							<span>강원FC</span>
+							<span class="name">홍길동</span>
+						</p>
+					</div>
+					<div class="porfile-pic">
+						<img src="resources/images/mascot/AY/AY-00.png" />
+					</div>
+					<div class="video">
+						<iframe width="100%" height="100%" src="https://www.youtube.com/embed/ksPPL7WviXM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div class="profile-data">
+						<ul>
+							<li>3경기</li>
+							<li>3골</li>
+							<li>3도움</li>
+							<li>1MVP</li>
+							<li>7B11</li>
+							<li>3MOM</li>
+						</ul>
+					</div>
+					<p class="chat-tit">응원댓글</p>
+					<div class="chat-wrap">
+						<ul class="chat-box">
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅 </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅 </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅 </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅 </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+							<li>
+								<span class="name">강웅이</span>
+								<span class="text">강웅이 응원해주세요~~~ 여러분~~~ 강웅 </span>
+								<span class="time">20.01.11</span>
+								<i class="admin-btn"></i>
+							</li>
+						</ul>
+						<div class="input-box">
+							<input type="text" maxlength="100" placeholder="응원 댓글을 입력해주세요.">
+							<i class="remove-btn"></i></i>
+							<button class="input-btn">
+								전송
+							</button>
+						</div>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+					<div class="vote-box two">
+						<a href="#">
+							<span>투표하기</span>
+						</a>
+						<a class="gray" href="#">
+							<span>뒤로가기</span>
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2021 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

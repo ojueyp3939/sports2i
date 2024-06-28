@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="NC 다이노스 D-Base"/>
+    <meta name="author" content="NC 다이노스 D-Base"/>
+	<meta name="keywords" content="NC 다이노스 D-Base" />
+	<title>NC 다이노스 D-Base</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+            var myScroll1 = new IScroll('#inning', {
+                eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+            });
+            var myScroll2 = new IScroll('#data .move-zone', {
+                eventPassthrough: true, scrollX: true, scrollY: true, scrollbars: true, preventDefault: false
+            });
+        }
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/contents/icon_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<ul class="nav-tab">
+						<li>
+							<a href="http://dfoto.i234.me:8080/photo" target="_blank">사진서버</a>
+						</li>
+						<li>
+							<a href="https://www.ncdinos.com/" target="_blank">홈페이지</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@ncdinos" target="_blank">엔튜브</a>
+						</li>
+						<li>
+							<a href="http://2istats.sports2i.com/" target="_blank">2iSTATS</a>
+						</li>
+						<li>
+							<a href="https://www.koreabaseball.com/" target="_blank">KBO</a>
+						</li>
+					</ul>
+					<div class="user-info">
+						<i class="icon-login"></i>
+						<b>NC다이노스 홍보팀</b> 님께서 사용중이십니다.
+						<span>2023-08-04 오전 09:00:00</span>
+						<a href="#" class="btn-logout">
+							LOGOUT
+						</a>
+					</div>
+				</div>
+			</div>
+            <div class="gnb">
+				<div class="wrap">
+					<a class="logo" href="broadcast.html">
+						<img src="resources/images/contents/logo.png" alt="NC다이노스 D-Base" />
+					</a>
+					<ul class="menu">
+						<li class="on">
+							<a href="broadcast.html">MAIN</a>
+						</li>
+						<li>
+							<a href="report.html">벤치리포트</a>
+						</li>
+						<li>
+							<a href="gamenote.html">게임노트</a>
+						</li>
+						<li>
+							<a href="release_list.html">RELEASE</a>
+						</li>
+						<li>
+							<a href="notice_list.html">NOTICE</a>
+						</li>
+						<li>
+							<a href="calculation.html">계산</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="broadcast">
+				<div class="day-wrap">
+					<ul class="toggle">
+						<li class="on"><a href="">DH1</a></li>
+						<li><a href="">DH2</a></li>
+					</ul>
+					<ul class="day-box">
+						<li class="prev">
+							<a href="#"></a>
+						</li>
+						<li class="day-tit">
+							<span class="date">2023.08.04 (금)</span> <input id="btnCalendar">
+						</li>
+						<li class="next">
+							<a href="#"></a>
+						</li>
+					</ul>
+				</div>
+				<section class="left-zone">
+					<div class="board score">
+						<ul>
+							<li class="top">
+								<table>
+									<caption>점수판</caption>
+									<tr>
+										<th scope="col" class="team">팀명</th>
+										<th scope="col">1</th>
+										<th scope="col">2</th>
+										<th scope="col">3</th>
+										<th scope="col">4</th>
+										<th scope="col">5</th>
+										<th scope="col">6</th>
+										<th scope="col">7</th>
+										<th scope="col">8</th>
+										<th scope="col">9</th>
+										<th scope="col">10</th>
+										<th scope="col">11</th>
+										<th scope="col">12</th>
+										<th scope="col" class="point r">R</th>
+										<th scope="col" class="point">H</th>
+										<th scope="col" class="point">E</th>
+										<th scope="col" class="point">B</th>
+									</tr>
+								</table>
+							</li>
+							<li class="bottom">
+								<table>
+									<caption>점수판</caption>
+									<tr>
+										<td class="team">원정팀</td>
+										<td>22</td>
+										<td>0</td>
+										<td>0</td>
+										<td>2</td>
+										<td>0</td>
+										<td>33</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td class="point r">R</td>
+										<td class="point">H</td>
+										<td class="point">E</td>
+										<td class="point">B</td>
+									</tr>
+									<tr>
+										<td class="team">NC</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>2</td>
+										<td>0</td>
+										<td>0</td>
+										<td>-</td>
+										<td>-</td>
+										<td>-</td>
+										<td class="point r">R</td>
+										<td class="point">H</td>
+										<td class="point">E</td>
+										<td class="point">B</td>
+									</tr>
+								</table>
+							</li>
+						</ul>
+					</div>
+					<div class="info">
+						<div class="board game">
+							<div class="title">경기 상황</div>
+							<div class="ground">
+								<p class="status">&bull; 경기 예정</p>
+								<div class="position">
+									<span class="player_1">홍길동동동</span>
+									<span class="player_2">홍길동동동</span>
+									<span class="player_3">홍길동동동</span>
+									<span class="player_4">홍길동동동</span>
+									<span class="player_5">홍길동동동</span>
+									<span class="player_6">홍길동동동</span>
+									<span class="player_7">홍길동동동</span>
+									<span class="player_8">홍길동동동</span>
+									<span class="player_9">홍길동동동</span>
+									<span class="player_l">홍길동동동</span>
+									<span class="player_r">홍길동동동</span>
+								</div>
+								<ul class="bso">
+									<li class="b">
+										<p>B</p>
+										<span class="on"></span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</li>
+									<li class="s">
+										<p>S</p>
+										<span class="on"></span>
+										<span></span>
+										<span></span>
+									</li>
+									<li class="o">
+										<p>O</p>
+										<span class="on"></span>
+										<span></span>
+										<span></span>
+									</li>
+								</ul>
+								<div class="match">
+									<p class="tit">맞대결</p>
+									<ul>
+										<li>투수 VS 타자 :</li>
+										<li>타수</li>
+										<li>안타</li>
+										<li>홈런</li>
+										<li>삼진</li>
+										<li>타율</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="board table">
+							<div class="box">
+								<p class="tb-tit">
+									타자
+									<span>10 신짱구 우투우타</span>
+								</p>
+								<div class="tb-box">
+									<table class="tb-mini">
+										<colgroup>
+											<col width="59px">
+										</colgroup>
+										<tr>
+											<th>2023</th>
+											<th>타율</th>
+											<th>타점</th>
+											<th>안타</th>
+											<th>홈런</th>
+											<th>타점</th>
+											<th>도루</th>
+											<th>희타</th>
+											<th>볼넷</th>
+											<th>삼진</th>
+											<th>병살</th>
+										</tr>
+										<tr>
+											<td class="sub-tit">시즌</td>
+											<td>0.000</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="sub-tit">최근5경기</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="sub-tit">VS상대팀전</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+							<div class="box">
+								<p class="tb-tit">
+									투수
+									<span>10 신짱구 우투우타</span>
+								</p>
+								<div class="tb-box">
+									<table class="tb-mini">
+										<colgroup>
+											<col width="59px">
+										</colgroup>
+										<tr>
+											<th>2023</th>
+											<th>방어율</th>
+											<th>경기</th>
+											<th>승</th>
+											<th>패</th>
+											<th>세</th>
+											<th>홀드</th>
+											<th>이닝</th>
+											<th>안타</th>
+											<th>볼넷</th>
+											<th>삼진</th>
+										</tr>
+										<tr>
+											<td class="sub-tit">시즌</td>
+											<td>0.00</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+											<td>0</td>
+										</tr>
+										<tr>
+											<td class="sub-tit">최근5경기</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+										<tr>
+											<td class="sub-tit">VS상대팀전</td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+											<td></td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="board keypoint">
+						<div class="title">KEY POINT</div>
+						<div class="box">
+							<ul class="tab">     
+								<li class="on"><a href="">전체</a></li>
+								<li><a href="">득점</a></li>
+								<li><a href="">홈런</a></li>
+								<li><a href="">교체</a></li>
+							</ul>
+							<div class="tab-box">
+								<div class="scroll-wrap sub-tab" id="inning">
+									<div class="scroller">
+										<ul>
+											<li class="on">
+												<a href="">전체</a>
+											</li>
+											<li>
+												<a href="">1회</a>
+											</li>
+											<li>
+												<a href="">2회</a>
+											</li>
+											<li>
+												<a href="">3회</a>
+											</li>
+											<li>
+												<a href="">4회</a>
+											</li>
+											<li>
+												<a href="">5회</a>
+											</li>
+											<li>
+												<a href="">6회</a>
+											</li>
+											<li>
+												<a href="">7회</a>
+											</li>
+											<li>
+												<a href="">8회</a>
+											</li>
+											<li>
+												<a href="">9회</a>
+											</li>
+											<li>
+												<a href="">10회</a>
+											</li>
+											<li>
+												<a href="">11회</a>
+											</li>
+										</ul>
+									</div>
+									
+								</div>
+								<div class="tb-scroll">
+									<table class="tb-mini">
+										<colgroup>
+											<col width="">
+											<col width="66px">
+										</colgroup>
+										<tr>
+											<th>내용</th>
+											<th>스코어</th>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+									</table>
+								</div>
+							</div>								
+						</div>
+						<div class="box">
+							<a class="btn-stop" href=""><img src="resources/images/contents/icon_stop.png" alt="일시중지"/></a>
+							<ul class="tab">     
+								<li class="on"><a href="">전체 중계</a></li>
+								<li><a href="">요약 중계</a></li>
+							</ul>
+							<div class="tab-box">
+								<a class="btn-next" href=""><img src="resources/images/contents/icon_next.png" alt="옆으로"/></a>
+								<div class="scroll-wrap sub-tab" id="inning2">
+									<div class="scroller">
+										<ul>
+											<li class="on">
+												<a href="">전체</a>
+											</li>
+											<li>
+												<a href="">1회</a>
+											</li>
+											<li>
+												<a href="">2회</a>
+											</li>
+											<li>
+												<a href="">3회</a>
+											</li>
+											<li>
+												<a href="">4회</a>
+											</li>
+											<li>
+												<a href="">5회</a>
+											</li>
+											<li>
+												<a href="">6회</a>
+											</li>
+											<li>
+												<a href="">7회</a>
+											</li>
+											<li>
+												<a href="">8회</a>
+											</li>
+											<li>
+												<a href="">9회</a>
+											</li>
+											<li>
+												<a href="">10회</a>
+											</li>
+											<li>
+												<a href="">11회</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="tb-scroll">
+									<table class="tb-mini">
+										<colgroup>
+											<col width="">
+											<col width="66px">
+										</colgroup>
+										<tr>
+											<th>내용</th>
+											<th>스코어</th>
+										</tr>
+										<tr class="now">
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+										<tr>
+											<td>-1번타자 손아섭 : 3루수 땅볼 실책으로 출루 (3루수 송구 실책 → 1루수) 내용이 초과 시 두 줄로 표출</td>
+											<td>10-10</td>
+										</tr>
+									</table>
+								</div>
+							</div>								
+						</div>
+					</div>
+						
+				</section>
+				<section class="right-zone">
+					<div class="board detail analyze">
+						<div class="title">
+							<ul class="tab">
+								<li><a href="broadcast.html">기록</a></li>
+								<li class="on"><a href="broadcast_투구분석표.html">투구분석표</a></li>
+								<li><a href="broadcast_홈런분석표.html">홈런분석표</a></li>
+								<li><a href="broadcast_경기이슈.html">경기이슈</a></li>
+							</ul>
+						</div>
+						<div class="box">
+							<span class="date">2023. 08. 04</span>
+							<p class="tit-team">키움<span>vs</span>NC</p>
+							<ul class="toggle">
+								<li class="on"><a href="">2I</a></li>
+								<li><a href="">NC</a></li>
+							</ul>
+							<ul class="list">
+								<li>
+									<span>키움</span>
+									<select>
+										<option value="">Player</option>
+									</select>
+								</li>
+								<li>
+									<span>NC</span>
+									<select>
+										<option value="">Player</option>
+									</select>
+								</li>
+							</ul>
+							<a class="btn-print" href="">
+								<img src="resources/images/contents/icon_print.png" alt="print" />
+							</a>
+							<a class="btn-pdf" href="">
+								<img src="resources/images/contents/icon_pdf.png" alt="pdf" />
+							</a>
+						</div>
+						<div class="box">
+							<div class="tb-box scroll-wrap" id="data">
+								<div class="fixed-zone">
+									<ul class="tit-wrap">
+										<li class="name">투수명</li>
+										<li class="type">구질</li>
+										<li>합계</li>
+										<li>최고</li>
+										<li>최저</li>
+										<li>S</li>
+										<li>B</li>
+									</ul>
+									<table class="tb-mini">
+										<colgroup>
+											<col width="">
+											<col width="52px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+										</colgroup>
+										<tr>
+											<td rowspan="11" class="bg">키움</td>
+											<td>직구구구</td>
+											<td>100</td>
+											<td>100</td>
+											<td>100</td>
+											<td>100</td>
+											<td>100</td>
+										</tr>
+										<tr>
+											<td>커브</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>슬라</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>체인</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>포크</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>싱커</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>투심</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>커터</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>너클</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>합계</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+									</table>
+								</div>
+								<div class="move-zone">
+									<div class="scroller">
+										<div class="tb-area">
+											<ul class="tit-wrap">
+												<li>1</li>
+												<li>2</li>
+												<li>3</li>
+												<li>4</li>
+												<li>5</li>
+												<li>6</li>
+												<li>7</li>
+												<li>8</li>
+											</ul>
+											<table class="tb-mini">
+												<colgroup>
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+												</colgroup>
+												<tbody>
+													<tr>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+														<td>100</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="box">
+							<div class="tb-box scroll-wrap" id="data">
+								<div class="fixed-zone">
+									<ul class="tit-wrap">
+										<li class="name">투수명</li>
+										<li class="type">구질</li>
+										<li>합계</li>
+										<li>최고</li>
+										<li>최저</li>
+										<li>S</li>
+										<li>B</li>
+									</ul>
+									<table class="tb-mini">
+										<colgroup>
+											<col width="">
+											<col width="45px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+											<col width="30px">
+										</colgroup>
+										<tr>
+											<td rowspan="11" class="bg">NC</td>
+											<td>직구</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>커브</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>슬라</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>체인</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>포크</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>싱커</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>투심</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>커터</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>너클</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+										<tr>
+											<td>합계</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+											<td>00</td>
+										</tr>
+									</table>
+								</div>
+								<div class="move-zone">
+									<div class="scroller">
+										<div class="tb-area">
+											<ul class="tit-wrap">
+												<li>1</li>
+												<li>2</li>
+												<li>3</li>
+												<li>4</li>
+												<li>5</li>
+												<li>6</li>
+												<li>7</li>
+												<li>8</li>
+											</ul>
+											<table class="tb-mini">
+												<colgroup>
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+													<col width="30px">
+												</colgroup>
+												<tbody>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+													<tr>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+														<td>00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>					
+			</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

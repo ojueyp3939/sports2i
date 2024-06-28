@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/etc.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+          dateFormat: 'yy-mm-dd',
+          showOn: "button",
+          buttonImage: "../resources/images/common/btn_calendar_icon.png",
+          buttonImageOnly: true,
+          changeMonth: true,
+          changeYear: true,
+          autoSize: true,
+          showButtonPanel: true,
+          beforeShow: function (input) {
+              var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+              $("body").append("<div id='Modal' />");
+              setTimeout(function () {
+                  var dateOffset = $("#ui-datepicker-div").height() / 2;
+                  $('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+              }, 0);
+          },
+          onSelect: function (dateText, inst) {
+              $("#Modal").remove();
+              //component.setDate(dateText.toDate('yyyy-MM-dd'));
+          },
+          onClose: function () {
+              $("#Modal").remove();
+          }
+      });
+		});
+    function loaded() {
+      var myScroll1 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+    }
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header class="fixed">
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>홈</span></a></li>
+            <li><a href="../video/video.html"><span>영상</span></a></li>
+  					<li class="on"><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Rank/rank.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+        <section class="schedule">
+          <h1 class="dp-none">일정</h1>
+          <div class="date-select-area">
+            <ul class="date-select clear">
+              <li class="prev"><a href="#none"><img src="../resources/images/common/btn_date_prev.png" alt="이전버튼"></a></li>
+              <li class="today">
+                <span class="date roboto">2020. 03. 28</span>
+                <span class="day">[목]</span>
+                <span class="btn-calendar"><input type="hidden" id="btnCalendar" /></span>
+              </li>
+              <li class="next"><a href="#none"><img src="../resources/images/common/btn_date_next.png" alt="다음버튼"></a></li>
+            </ul>
+          </div>
+          <div class="game-list">
+            <ul class="recent-game">
+              <li class="info-box lineup-before clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="player-img">
+                      <img src="../resources/images/common/test.png" alt="" />
+                      <img src="../resources/images/emb/init_40x40_HT.png" alt="" />
+                    </div>
+                    <div class="name">신정락락락</div>
+                  </div>
+                  <div class="contend">
+                    <span class="lose">패</span>
+                    <span class="win">승</span>
+                    <span class="lose">패</span>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <div class="info">
+                    <time class="roboto">18:30</time>
+                    <span class="place">대전</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="contend">
+                    <span class="lose">패</span>
+                    <span class="win">승</span>
+                    <span class="lose">패</span>
+                  </div>
+                  <div class="player-info">
+                    <div class="player-img">
+                      <img src="../resources/images/common/test.png" alt="" />
+                      <img src="../resources/images/emb/init_40x40_HT.png" alt="" />
+                    </div>
+                    <div class="name">신정락락락</div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box lineup-before clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="player-img">
+                      <img src="../resources/images/common/test.png" alt="" />
+                      <img src="../resources/images/emb/init_40x40_HT.png" alt="" />
+                    </div>
+                    <div class="name">신정락락락</div>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <div class="info">
+                    <div class="situation-box">
+                      <span class="dh roboto">DH1</span>
+                    </div>
+                    <time class="roboto">18:30</time>
+                    <span class="place">대전</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="player-info">
+                    <div class="player-img">
+                      <img src="../resources/images/common/test.png" alt="" />
+                      <img src="../resources/images/emb/init_40x40_HT.png" alt="" />
+                    </div>
+                    <div class="name">신정락락락</div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box lineup-before lineup-team clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="game-info">
+                  <div class="info">
+                    <span class="place">대전</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box lineup-before lineup-team clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                  </div>
+                </div>
+                <div class="game-info situation-lineup">  <!--라인업 더블헤더일 경우 situation-lineup 클래스 추가-->
+                  <div class="situation-box">
+                    <span class="dh">DH1</span>
+                  </div>
+                  <div class="info">
+                    <span class="place">대전</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box cancel clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/embR_144x123_KT.png" alt="" /></div>
+                  </div>
+                  <div class="score"></div>
+                </div>
+                <div class="game-info">
+                  <time>경기취소</time>
+                  <div class="place">대전</div>
+                </div>
+                <div class="team home">
+                  <div class="score"></div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/embR_144x123_HH.png" alt="" /></div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box review clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="result win">승</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">99</div>
+                </div>
+                <div class="game-info">
+                  <div class="end">경기종료</div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald win">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="result lose">패</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box review clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="result win">승</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">0</div>
+                </div>
+                <div class="game-info dh-end"> <!-- 더블헤더로 경기종료시 dh-end 클래스 추가 -->
+                  <div class="situation-box">
+                    <span class="dh roboto">DH1</span>
+                  </div>
+                  <div class="end">경기종료</div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald win">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="result lose">패</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box live clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="position">투수</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">99</div>
+                </div>
+                <div class="game-info">
+                  <div class="current-info"><strong><span class="roboto">3</span>회말</strong></div>
+                  <ul class="base">
+                    <li class="b1"><span class="roboto">1</span>루</li>
+                    <li class="b2 on"><span class="roboto">2</span>루</li>
+                    <li class="b3"><span class="roboto">3</span>루</li>
+                  </ul>
+                  <div class="ballcount roboto">
+                    <span class="b"><span class="num">1</span>B</span>
+                    <span class="s"><span class="num">2</span>B</span>
+                    <span class="o">2B</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <spam class="position">타자</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box live clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="position">투수</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">99</div>
+                </div>
+                <div class="game-info">
+                  <div class="current-info">
+                    <div class="situation-box">
+                      <span class="dh roboto">DH1</span>
+                    </div>
+                    <strong><span class="roboto">3</span>회말</strong>
+                  </div>
+                  <ul class="base">
+                    <li class="b1"><span class="roboto">1</span>루</li>
+                    <li class="b2 on"><span class="roboto">2</span>루</li>
+                    <li class="b3"><span class="roboto">3</span>루</li>
+                  </ul>
+                  <div class="ballcount roboto">
+                    <span class="b"><span class="num">1</span>B</span>
+                    <span class="s"><span class="num">2</span>B</span>
+                    <span class="o">2B</span>
+                  </div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <spam class="position">타자</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="info-box live clear">
+  							<div class="team away">
+  								<div class="player-info">
+  									<div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt=""></div>
+  									<div class="player">
+  										<span class="name">엄상백백백</span>
+                      <span class="position">투수</span>
+  									</div>
+  								</div>
+  								<div class="score oswald win">99</div>
+  							</div>
+  							<div class="game-info situation"> <!-- live, 더블헤더일 경우 situation 클래스 추가 -->
+  								<div class="current-info">
+                    <div class="situation-box">
+                      <span class="dh">DH1</span>
+                    </div>
+                    <strong><span class="roboto">3</span>회말</strong>
+                  </div>
+  							</div>
+  							<div class="team home">
+  								<div class="score oswald">99</div>
+  								<div class="player-info">
+  									<div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></div>
+  									<div class="player">
+  										<span class="name">엄상백백백</span>
+                      <spam class="position">타자
+  									</spam></div>
+  								</div>
+  							</div>
+  						</li>
+              <li class="info-box live clear">
+                <div class="team away">
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_KT.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <span class="position">투수</span>
+                    </div>
+                  </div>
+                  <div class="score oswald win">99</div>
+                </div>
+                <div class="game-info situation-spd"> <!-- 서스펜디드일 경우 situation-spd 클래스 추가 -->
+                  <div class="spd">서스펜디드</div>
+                </div>
+                <div class="team home">
+                  <div class="score oswald">99</div>
+                  <div class="player-info">
+                    <div class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt="" /></div>
+                    <div class="player">
+                      <span class="name">엄상백백백</span>
+                      <spam class="position">타자</span>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <!-- 경기일정 없음 -->
+            <p class="no-game">경기가 없는 날입니다.</p>
+            <!-- // 경기일정 없음 -->
+          </div>
+        </section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+
+  <div id="Modal"></div>
+  <!-- 캘린더 팝업 -->
+  <div id="Calendar">
+    <header class="clear">
+      <h1 class="my-team"><span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span> <span class="roboto">MY</span>팀</h1>
+      <ul class="date-select clear">
+        <li class="prev"><a href="#none"><img src="../resources/images/common/btn_date_prev.png" alt="이전버튼"></a></li>
+        <li class="date roboto">2020. 03</li>
+        <li class="next"><a href="#none"><img src="../resources/images/common/btn_date_next.png" alt="다음버튼"></a></li>
+      </ul>
+      <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+    </header>
+    <div class="content">
+      <table class="tbl" summary="달력">
+        <caption>달력</caption>
+        <colgroup>
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+          <col style="width:14.2857%;" />
+        </colgroup>
+        <thead>
+          <tr>
+            <th>일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="day roboto">1</span>
+              <span class="number roboto"><i></i>5</span>
+              <span class="vs">
+                <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>고척
+              </span>
+            </td>
+            <td>
+              <span class="day roboto">2</span>
+              <span class="number roboto"><i></i>5</span>
+            </td>
+            <td>
+              <span class="day roboto">3</span>
+            </td>
+            <td>
+              <span class="day roboto">4</span>
+            </td>
+            <td>
+              <span class="day roboto">5</span>
+            </td>
+            <td>
+              <span class="day roboto">6</span>
+            </td>
+            <td>
+              <span class="day roboto">7</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="day roboto">8</span>
+              <span class="number roboto"><i></i>5</span>
+              <span class="vs">
+                <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>고척
+              </span>
+            </td>
+            <td>
+              <span class="day roboto">9</span>
+              <span class="number roboto"><i></i>5</span>
+            </td>
+            <td>
+              <span class="day roboto">10</span>
+            </td>
+            <td>
+              <span class="day roboto">11</span>
+            </td>
+            <td>
+              <span class="day roboto">12</span>
+            </td>
+            <td>
+              <span class="day roboto">13</span>
+            </td>
+            <td>
+              <span class="day roboto">14</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="day roboto">15</span>
+              <span class="number roboto"><i></i>5</span>
+              <span class="vs">
+                <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>고척
+              </span>
+            </td>
+            <td>
+              <span class="day roboto">16</span>
+              <span class="number roboto"><i></i>5</span>
+            </td>
+            <td>
+              <span class="day roboto">17</span>
+            </td>
+            <td>
+              <span class="day roboto">18</span>
+            </td>
+            <td>
+              <span class="day roboto">19</span>
+            </td>
+            <td>
+              <span class="day roboto">20</span>
+            </td>
+            <td>
+              <span class="day roboto">21</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="day roboto today">22</span>
+              <span class="number roboto"><i></i>5</span>
+              <span class="vs">
+                <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>고척
+              </span>
+            </td>
+            <td>
+              <span class="day roboto">23</span>
+              <span class="number roboto"><i></i>5</span>
+            </td>
+            <td>
+              <span class="day roboto">24</span>
+            </td>
+            <td>
+              <span class="day roboto">25</span>
+            </td>
+            <td>
+              <span class="day roboto">26</span>
+            </td>
+            <td>
+              <span class="day roboto">27</span>
+            </td>
+            <td>
+              <span class="day roboto">28</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="day roboto active">29</span> <!-- 선택한 날일 경우 active 클래스 추가 -->
+              <span class="number roboto"><i></i>5</span>
+              <span class="vs">
+                <span class="emb"><img src="../resources/images/emb/emb_144x123_HH.png" alt=""></span>고척
+              </span>
+            </td>
+            <td>
+              <span class="day roboto">30</span>
+              <span class="number roboto"><i></i>5</span>
+            </td>
+            <td>
+              <span class="day roboto">31</span>
+            </td>
+            <td>
+              <span class="day roboto not">1</span>
+            </td>
+            <td>
+              <span class="day roboto not">2</span>
+            </td>
+            <td>
+              <span class="day roboto not">3</span>
+            </td>
+            <td>
+              <span class="day roboto not">4</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- // 캘린더 팝업 -->
+</body>
+</html>

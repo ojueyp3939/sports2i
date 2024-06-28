@@ -1,0 +1,23 @@
+﻿@charset "utf-8";
+
+@font-face {
+  font-family:'ng';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../font/NanumGothic-Regular.eot');
+  src: url('../font/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-Regular.woff') format('woff'), url('../font/NanumGothic-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family:'ng';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumGothic-Bold.eot');
+  src: url('../font/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-Bold.woff') format('woff'), url('../font/NanumGothic-Bold.ttf') format('truetype');
+ }
+@font-face {
+  font-family:'ng';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NanumGothic-ExtraBold.eot');
+  src: url('../font/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumGothic-ExtraBold.woff') format('woff'), url('//www.koreabaseball.com../font/NanumGothic-ExtraBold.ttf') format('truetype');
+}

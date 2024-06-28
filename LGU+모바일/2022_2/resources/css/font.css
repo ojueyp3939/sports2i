@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'apple';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/AppleSDGothicNeoR.eot');
+  src: url('../font/AppleSDGothicNeoR.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoR.woff') format('woff');
+}
+@font-face {
+  font-family:'apple';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/AppleSDGothicNeoSB.eot');
+  src: url('../font/AppleSDGothicNeoSB.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoSB.woff') format('woff');
+}
+@font-face {
+  font-family:'apple';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/AppleSDGothicNeoB.eot');
+  src: url('../font/AppleSDGothicNeoB.eot?#iefix') format('embedded-opentype'), url('../font/AppleSDGothicNeoB.woff') format('woff');
+}
+@font-face {
+  font-family:'bm';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/BMDOHYEON.eot');
+  src: url('../font/BMDOHYEON.eot?#iefix') format('embedded-opentype'), url('../font/BMDOHYEON.woff') format('woff');
+}
+@font-face {
+  font-family:'ns';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumSquareB.eot');
+  src: url('../font/NanumSquareB.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareB.woff') format('woff');
+}
+@font-face {
+  font-family:'ns';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NanumSquareEB.eot');
+  src: url('../font/NanumSquareEB.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareEB.woff') format('woff');
+}

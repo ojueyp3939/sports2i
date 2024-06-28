@@ -1,0 +1,50 @@
+﻿@charset "utf-8";
+
+.season-contents .my-point {margin-top:14px;padding-bottom:5%;background:#06143b url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/bg_event_season.png?ver=1") no-repeat 0 0/100%;}
+.season-contents .my-point .point-box .tit-point {padding:8.7963% 0 5.463%;color:#fff;text-align:center;font-size:1.6rem;font-weight:700;}
+.season-contents .my-point .point-box .point {width:45.833%;height:68px;margin:0 auto;background:#fff;border-radius:5px;text-align:center;font-size:2.4rem;font-weight:700;line-height:68px;}
+.season-contents .my-point .point-box .point.no-point {padding:0;font-size:1.3rem;font-weight:100;}
+.season-contents .my-point .point-box .txt-data {width:45.833%;margin:0 auto;padding-top:2px;color:#fff;text-align:right;font-size:1.3rem;font-weight:100;}
+.season-contents .my-point .point-graph {position:relative;width:78.0555%;margin:0 auto;/* padding:13px 0 15px 0; */}
+.season-contents .my-point .point-graph .temper {height:82px;/* padding-bottom:20.2%; */}
+.season-contents .my-point .point-graph .temper > span {position:absolute;}
+.season-contents .my-point .point-graph .temper .temp-rate {top:50%;left:3px;width:0%;height:19px;margin-top:-8px;background:linear-gradient(to right, #fda129 0%,#0276bf 100%);border-radius:4px 0 0 4px;z-index:30;}
+.season-contents .my-point .point-graph .temper .temp-rate-def {top:50%;left:87px;margin-top:-7px;color:#fff;font-size:1.3rem;z-index:300;}
+.season-contents .my-point .point-graph .temper .temp-rate-def .point {font-size:1.3rem;}
+.season-contents .my-point .point-graph .temper .temp-sol {top:50%;right:-7px;width:44px;height:43px;margin-top:-27px;background:url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/event_season_bangul.png") no-repeat 0 0/100%;z-index:30;}
+.season-contents .my-point .point-graph .temper .temp-circle-1 {top:50%;left:4px;width:calc(100% - 8px);height:38px;margin-top:-19px;background:#fffae7;border-radius:17px;z-index:40;}
+.season-contents .my-point .point-graph .temper .temp-circle-1-shadow {top:50%;left:0;width:100%;height:23px;margin-top:-10px;background:#fff;border-radius:5px;z-index:20;}
+.season-contents .my-point .point-graph .temper .temp-circle-2 {top:50%;right:4px;width:54px;height:54px;margin-top:-27px;background:#fffae7;border-radius:27px;z-index:100;}
+.season-contents .my-point .point-graph .temper .temp-circle-2-shadow {top:50%;right:0;width:62px;height:62px;margin-top:-31px;background:#fff;border-radius:31px;z-index:10;}
+.season-contents .my-point .point-graph .temper .my-position {bottom:0;color:#fff;font-size:1.3rem;font-weight:400;letter-spacing:-1px;}
+.season-contents .my-point .point-graph .temper .my-position.num1 {left:20.52%;color:#ffdd40;}
+.season-contents .my-point .point-graph .temper .my-position.num2 {left:53.736%;color:#39a3e6;}
+.season-contents .my-point .point-graph .temper .my-position.num3 {right:0;color:#f4f5f5;font-size:1.4rem;font-weight:700;}
+.season-contents .my-point .point-graph .temper .my-position .position-icon {position:absolute;left:50%;bottom:18px;margin-left:-1px;border-left:3px solid transparent;border-right:3px solid transparent;}
+.season-contents .my-point .point-graph .temper .my-position.num1 .position-icon {border-bottom:4px solid #ffdd40;}
+.season-contents .my-point .point-graph .temper .my-position.num2 .position-icon {border-bottom:4px solid #39a3e6;}
+.season-contents .my-point .point-graph .temper .my-position.num3 .position-icon {border-bottom:4px solid #f4f5f5;}
+
+.season-contents .my-point .tit-gift {padding:26px 0 9px;color:#fff;text-align:center;font-size:1.8rem;font-weight:400;}
+.season-contents .my-point .gift-list {padding:0 16px;}
+.season-contents .my-point .gift-list li {margin:4px 0;padding:12px 4% 9px 5%;background:#f4f4f4;border-radius:5px;}
+.season-contents .my-point .gift-list li .info {overflow:hidden;}
+.season-contents .my-point .gift-list li .info p {float:left;width:43%;padding:16px 0 21px;color:#555;font-size:1.4rem;}
+.season-contents .my-point .gift-list li .info p span {color:#0276bf;}
+.season-contents .my-point .gift-list li.each .info p span {color:#fda128;}
+.season-contents .my-point .gift-list li .amount {float:left;width:31%;padding:0 3%;text-align:center;}
+.season-contents .my-point .gift-list li .amount dt {width:31px;margin:0 auto 7px;}
+.season-contents .my-point .gift-list li .amount dt.money {width:46px;}
+.season-contents .my-point .gift-list li .amount dd {color:#8a8a8a;font-size:1.2rem;font-weight:100;}
+.season-contents .my-point .gift-list li .btn-area {float:left;width:26%;text-align:center;}
+.season-contents .my-point .gift-list li .btn-area .btn-season {display:block;width:100%;margin-top:11px;padding:5px 9px 4px 0;background:#fda128 url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/btn_season.png") no-repeat 92% 55%/7px;;color:#fff;border-radius:5px;font-size:1.3rem;}
+.season-contents .my-point .gift-list li.over-point .btn-area .btn-season {background:#1e2f5d url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/btn_season.png") no-repeat 92% 55%/7px;}
+.season-contents .my-point .gift-list li.over-point .btn-area .btn-season.btn-complete {padding:5px 3px 4px 0;background:#1e2f5d;}
+.season-contents .my-point .gift-list li.end .btn-area .btn-season.btn-gift {background:#a2a2a2 url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/btn_season.png") no-repeat 92% 55%/7px;}
+.season-contents .my-point .gift-list li .complete {margin:17px 0 3px;padding:8px 3% 10px 2%;background:#fff;box-sizing:border-box;}
+.season-contents .my-point .gift-list li .complete .txt {display:inline-block;width:23%;padding-left:4.2%;background:url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/bg_season_complete.png") no-repeat 0 50%/9px;color:#fda128;font-size:1.1rem;vertical-align:top;}
+.season-contents .my-point .gift-list li .complete .txt.line2 {padding-top:7px;background:url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/bg_season_complete.png") no-repeat 0 75%/9px;}
+.season-contents .my-point .gift-list li .complete .txt.line3 {padding-top:17px;background:url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/bg_season_complete.png") no-repeat 0 85%/9px;}
+.season-contents .my-point .gift-list li .complete .each-point {display:inline-block;width:75%;vertical-align:bottom;}
+.season-contents .my-point .gift-list li .complete .each-point p {float:left;width:20%;color:#a9a9a9;text-align:center;font-size:0.9rem;}
+.season-contents .my-point .gift-list li .complete .each-point p:nth-child(1n+6) {padding-top:5px;}

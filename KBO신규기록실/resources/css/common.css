@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* display */
+.dp-none {display:none !important;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+.fl {float:left !important;}
+.fr {float:right !important;}
+
+/* margin */
+.mb10 {margin-bottom:10px !important;}
+.mb20 {margin-bottom:20px !important;}
+/* table */
+.tbl {width:1340px;}
+
+/* tit */
+.tit-preview {padding:40px 0 45px;background:url('../images/common/bg_top.png') no-repeat 50% 0/38px;color:#206cbb;font-size:26px;font-weight:700;text-align:center;}
+
+/* btn */
+.btn {display:inline-block;}
+.btn.btn-more {padding-right:12px;background:url('../images/common/bg_arrow_right.png') no-repeat 100% 50%/5px;color:#206cbb;}
+
+/* ipt */
+.ipt-search {width:285px;padding:11px;border-radius:14px;background:#fff;transition:all 0.5s;}
+.ipt-calendar {visibility:hidden;position:absolute;top:5px;left:150px;}
+
+/* search */
+.search-area {}
+.search-area .search-list {position:relative;top:-11px;padding:0 10px 16px;border-radius:0 0 14px 14px;background:#fff;font-size:13px;}
+.search-area .search-list li {padding:13px 0 13px 21px;border-bottom:1px solid #bcd3ea;}
+.search-area .search-list li:first-child {border-top:1px solid #206cbb;}
+.search-area .search-list li a {display:block;}
+
+/* tab */
+
+/* calendar costum */
+.ui-datepicker {width:298px;padding:0;background:none;box-shadow:14px 32px 60px rgba(0,0,0,0.3);}
+.ui-widget.ui-widget-content {border:0;}
+.ui-datepicker .ui-datepicker-header {padding:14px 0;border:0;border-radius:13px 13px 0 0;background:#206cbb;}
+.ui-datepicker .ui-datepicker-title {color:#fff;font-size:16px;}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {width:auto;margin:0;padding-bottom:2px;border:0;background:none;color:#fff;text-align-last:center;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+.ui-datepicker select.ui-datepicker-month {margin-left:10px;}
+.ui-datepicker select.ui-datepicker-month option,
+.ui-datepicker select.ui-datepicker-year option {color:#000;}
+.ui-datepicker-month {margin-left:10px;}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {top:5px;width:42px;height:44px;}
+.ui-datepicker .ui-datepicker-prev {left:10px;}
+.ui-datepicker .ui-datepicker-next {right:10px;}
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {top:0;left:0;width:42px;height:44px;margin:0;}
+.ui-datepicker .ui-datepicker-prev span {background:url('../images/common/btn_calendar.png') no-repeat -100px 0;}
+.ui-datepicker .ui-datepicker-next span {background:url('../images/common/btn_calendar.png') no-repeat -150px 0;}
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {border:0;background:none;}
+.ui-datepicker table {width:100%;margin:0;background:#fff;}
+.ui-datepicker td span, .ui-datepicker td a {text-align:center;}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {width:40px;padding:12px 0;border:0;color:#2a2a2a;font-size:13px;}
+.ui-state-default,
+.ui-widget-content .ui-state-default {background:#fff;}
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover,
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {border:0;border-radius:50%;background:#206cbb;color:#fff;}
+.ui-datepicker-buttonpane {}
+.ui-datepicker .ui-datepicker-buttonpane {overflow:hidden;margin:0;background:#fff;}
+/* bxslider */
+.bx-wrapper {max-width:1340px !important;padding:42px 0 49px;}
+.bx-controls-direction a {position:absolute;top:212px;display:inline-block;width:26px;height:41px;text-indent:-9999px;}
+.bx-controls-direction .bx-prev {left:-94px;background:url('../images/common/btn_slide.png') no-repeat -100px 0;}
+.bx-controls-direction .bx-next {right:-94px;background:url('../images/common/btn_slide.png') no-repeat -150px 0;}
+.bx-controls-direction .bx-prev.disabled {background:url('../images/common/btn_slide.png') no-repeat 0 0;cursor:auto;}
+.bx-controls-direction .bx-next.disabled {background:url('../images/common/btn_slide.png') no-repeat -50px 0;cursor:auto;}

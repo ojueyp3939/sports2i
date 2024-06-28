@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub">
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a class="on" href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lnb-wrap">
+				<ul>
+					<li>
+						<ul>
+							<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Game/monthly_schedule.html">월별 일정</a></li>
+							<li><a href="../Game/schedule.html">경기일정/결과</a></li>
+							<li><a href="../Game/prize_winner.html">대회 입상자</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<ul>
+							<li><a href="../Record/top.html">TOP 5</a></li>
+							<li><a class="on" href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Player/player_team.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전  -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd class="on"><a href="">개인전</a></dd>
+								<dd><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										시즌
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										대회
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										체급
+										<select>
+											<option>태백</option>
+										</select>
+									</li>
+									<li>
+										팀 선택
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										기술 항목1
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										기술 항목2
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										연장전
+										<select>
+											<option>포함</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<div class="btn-wrap">
+							<p class="btw-txt">(전체 시즌 - 전체 대회 - 전체 체급 - 기술항목 전체)</p>
+							<ul class="btn-tbl">
+								<li><a href=""><i class="arrow"></i></a></li>
+								<li class="on"><a href=""><i class="arrow"></i></a></li>
+							</ul>
+						</div>
+						<table class="tbl" summary="기록실">
+							<caption>기록실</caption>
+							<thead>
+								<tr>
+									<th rowspan="2">#</th>
+									<th rowspan="2">선수 이름</th>
+									<th rowspan="2">소속팀</th>
+									<th rowspan="2" class="line">체급</th>
+									<th colspan="3">게임</th>
+									<th colspan="3">라운드</th>
+									<th colspan="2">기술</th>
+									<th colspan="2">되치기</th>
+									<th colspan="2">기타</th>
+									<th rowspan="2" class="big sorting">기술시도</th>
+									<th rowspan="2" class="big sorting">기술방어</th>
+									<th rowspan="2" class="big sorting">경고</th>
+									<th rowspan="2" class="big sorting">경기시간</th>
+									<th colspan="2">비디오판독</th>
+								</tr>
+								<tr>
+									<th class="sorting">경기수</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">라운드수</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">유지</th>
+									<th class="sorting">번복</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>김현수</td>
+									<td>영암군민속씨름단</td>
+									<td class="line">태백</td>
+									<td>12</td>
+									<td>3</td>
+									<td>9</td>
+									<td>12</td>
+									<td>3</td>
+									<td>9</td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td>9</td>
+									<td>00:12</td>
+									<td>3</td>
+									<td>9</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<!-- 단체전 -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd><a href="">개인전</a></dd>
+								<dd class="on"><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										시즌
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										대회
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										기술 항목1
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										기술 항목2
+										<select>
+											<option>전체</option>
+										</select>
+									</li>
+									<li>
+										연장전
+										<select>
+											<option>포함</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<div class="btn-wrap">
+							<p class="btw-txt">(전체 시즌 – 전체 대회  – 기술항목 전체)</p>
+							<ul class="btn-tbl">
+								<li><a href=""><i class="arrow"></i></a></li>
+								<li class="on"><a href=""><i class="arrow"></i></a></li>
+							</ul>
+						</div>
+						<table class="tbl" summary="기록실">
+							<caption>기록실</caption>
+							<thead>
+								<tr>
+									<th rowspan="2">#</th>
+									<th rowspan="2" class="line">팀</th>
+									<th colspan="3">게임</th>
+									<th colspan="3">라운드</th>
+									<th colspan="2">기술</th>
+									<th colspan="2">되치기</th>
+									<th colspan="2">기타</th>
+									<th rowspan="2" class="big sorting">기술시도</th>
+									<th rowspan="2" class="big sorting">기술방어</th>
+									<th rowspan="2" class="big sorting">경고</th>
+									<th rowspan="2" class="big sorting">경기시간</th>
+									<th colspan="2">비디오판독</th>
+								</tr>
+								<tr>
+									<th class="sorting">경기수</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">라운드수</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">승</th>
+									<th class="sorting">패</th>
+									<th class="sorting">유지</th>
+									<th class="sorting">번복</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td class="line">영암군민속씨름단</td>
+									<td>태백</td>
+									<td>12</td>
+									<td>3</td>
+									<td>9</td>
+									<td>12</td>
+									<td>12</td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td class="popup"><a href="">12</a></td>
+									<td>00:12</td>
+									<td>3</td>
+									<td>9</td>
+									<td>9</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br/>Copyright ⓒ 대한씨름협회. All rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>
+
+
+<div class="popup-wrap">
+	<i class="icon btn-x-g"></i>
+	<div class="popup-cont">
+		<table class="tbl popup" summary="기록실">
+			<caption>기록실</caption>
+			<colgroup>
+				<col width="120px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>경기일</th>
+					<th>대회명</th>
+					<th>경기방식</th>
+					<th>소속선수</th>
+					<th>상대선수</th>
+					<th>라운드</th>
+					<th>기술항목1</th>
+					<th>기술항목2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>신짱구</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

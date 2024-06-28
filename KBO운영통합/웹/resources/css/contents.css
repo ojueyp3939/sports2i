@@ -1,0 +1,106 @@
+﻿@charset "utf-8";
+
+/* heading */
+h3 {font-size:16px;font-weight:bold;}
+
+/* 탭메뉴 */
+.tab-area {position:relative;width:100%;}
+.tab-area:after {content:"";display:block;position:absolute;bottom:0;width:100%;height:1px;background:#ced1d3;}
+.tab-area .tab {overflow:hidden;position:relative;width:1000px;margin:0 auto;z-index:1;}
+.tab-area .tab li {float:left;margin-right:30px;}
+.tab-area .tab li a {display:block;width:100%;padding:13px 0 10px;font-size:16px;color:#222;}
+.tab-area .tab li.on a, .tab-area .tab li a:hover {padding:13px 0 7px;font-weight:bold;color:#104aad;border-bottom:3px solid #104aad;}
+
+.tab-area2 {width:1000px;margin:13px auto 0;}
+.tab-area2 .tab {overflow:hidden;z-index:1;}
+.tab-area2 .tab li {position:relative;float:left;margin:0 20px;}
+.tab-area2 .tab li:after {content:"";display:block;position:absolute;top:8px;right:-20px;width:1px;height:12px;background:#afafaf;}
+.tab-area2 .tab li:last-child:after {display:none;}
+.tab-area2 .tab li a {display:block;width:100%;height:26px;line-height:29px;padding:0 10px;font-size:13px;color:#222;text-align:center;box-sizing:border-box;}
+.tab-area2 .tab li.on a, .tab-area2 .tab li a:hover {font-weight:bold;background:#104aad;color:#fff;}
+
+/* 테이블 */
+.tbl {width:100%;background:#fff;}
+.tbl th, .tbl td {padding:15px 5px;font-size:14px;color:#696969;border-bottom:1px solid #d1d3d4;text-align:center;vertical-align:middle;}
+.tbl tfoot td {font-weight:700;}
+.tbl.tbl-record tfoot td {background:#f5f5f5;}
+.tbl th {font-weight:bold;color:#111;}
+.tbl td.tit {text-align:left;}
+.tbl td.tit a {display:block;overflow:hidden;width:450px;text-overflow:ellipsis;white-space:nowrap;}
+.tbl td .btn-modify {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#104aad;border:1px solid #104aad;box-sizing:border-box;}
+.tbl td .btn-delete {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#c60000;border:1px solid #c60000;box-sizing:border-box;}
+.tbl td .btn-cancel {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#7a7a7a;border:1px solid #7a7a7a;box-sizing:border-box;}
+.tbl td .btn-entry {margin:0 10px;color:#104aad;border-bottom:1px solid #104aad;}
+.tbl.f12 tr td {font-size:12px !important;}
+
+.tbl-board {width:1000px;margin:0 auto;}
+.tbl-board .tbl {border-top:1px solid #5d5f61;}
+
+.tbl-write {position:relative;}
+.tbl-write .cal1 {margin-left:-331px !important;}
+.tbl-write .cal2 {margin-left:-134px !important;}
+.tbl-write .tbl th {background:#f1efef;}
+.tbl-write .tbl td {position:relative;text-align:left;padding:10px 20px;}
+.tbl-write .tbl td select {height:38px;line-height:38px;font-size:14px;color:#696969;vertical-align:middle;}
+.tbl-write .tbl td textarea {overflow-y:auto;resize:none;width:95%;height:100px;padding:10px 20px;}
+.tbl-write .tbl td .calendar {position:relative;display:inline-block;}
+.tbl-write .tbl td label {position:absolute;top:7px;right:15px;cursor:pointer;}
+.tbl-write .tbl td .ipt {min-width:100px;height:30px;min-height:30px;padding:0 15px;border:1px solid #cbcdce;border-radius:2px;}
+
+.tbl-write .ui-datepicker-calendar {}
+.tbl-write .ui-datepicker-calendar th {background:none;padding:.7em .3em;font-size:inherit;border:none;}
+.tbl-write .ui-datepicker-calendar td {padding:1px;}
+
+.tbl-notice {width:1000px;margin:0 auto;}
+.tbl-notice .tbl {border-top:1px solid #5d5f61;}
+.tbl-notice td {padding:15px 20px;text-align:left;}
+.tbl-notice td .time {color:#da000f;}
+.tbl-notice td .player {color:#104aad;}
+.tbl-notice td:last-child {color:#95979c;}
+.tbl-new td:first-child {padding-left:60px;background:url("../images/common/ico_new_board.gif") no-repeat 35px 16px;}
+.tbl-new td strong {color:#104aad;}
+.tbl-new td.no-data {background:none;}
+
+.tbl-management .tbl td {padding:15px 3px;font-size:12px;}
+.tbl-management .tbl td:first-child, .tbl-management .tbl td:last-child {padding:15px 10px;}
+
+/* 페이징 */
+.paging {margin-top:40px;text-align:center;}
+.paging a {display:inline-block;width:28px;height:28px;margin:0 2px;padding:7px 0 5px;font-size:13px;color:#111;vertical-align:middle;box-sizing:border-box;cursor:pointer;}
+.paging a.on, .paging a:hover {padding:6px 0 4px;background:#fff;color:#104aad;border:1px solid #104aad;font-weight:bold;}
+.paging img {vertical-align:middle;}
+.paging a.btn {min-width:auto;border:none;padding:0;background:url("../images/common/btn_paging.png") no-repeat 0 0;text-indent:-9999px;}
+.paging a.btn-first {background-position:0 0;}
+.paging a.btn-first:hover,.paging a.btn-first.on {background-position:0 -28px;}
+.paging a.btn-prev {background-position:-28px 0;}
+.paging a.btn-prev:hover,.paging a.btn-prev.on {background-position:-28px -28px;}
+.paging a.btn-next {background-position:0 -56px;}
+.paging a.btn-next:hover,.paging a.btn-next.on {background-position:0 -84px;}
+.paging a.btn-last {background-position:-28px -56px;}
+.paging a.btn-last:hover,.paging a.btn-last.on {background-position:-28px -84px;}
+
+/* 버튼 */
+.btn-area-board {margin-top:30px;text-align:center;}
+.btn-area-board a.btn {display:inline-block;width:139px;height:38px;line-height:38px;margin:0 5px;font-size:15px;font-weight:bold;color:#fff;border-radius:2px;text-align:center;vertical-align:middle;}
+.btn-area-board a.btn-reg {background:#104aad;}
+.btn-area-board a.btn-cancel {background:#242424;}
+.btn-area-board a.btn-list {background:#959595;}
+.btn-area a.btn-delete {display:inline-block;width:89px;height:38px;line-height:38px;padding-left:25px;background:#fff url("../images/common/ico_delete.png") no-repeat 10px 11px;font-size:14px;font-weight:bold;color:#444;border:1px solid #888;border-radius:2px;box-sizing:border-box;}
+
+/* 승인공시 버튼추가 */
+/*.official-cont .tbl td .btn-delete, .official-cont .tbl td .btn-modify {height:38px;line-height:38px;border-radius:2px;}*/
+a.btn-regist {display:inline-block;width:79px;height:38px;line-height:38px;background:#222;font-size:15px;font-weight:bold;color:#fff;border-radius:4px;text-align:center;vertical-align:middle;}
+a.btn-blue {display:inline-block;height:30px;padding:0 10px;line-height:30px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #104aad;box-sizing:border-box;background:#104aad;margin-left:5px;vertical-align:middle;}
+a.btn-red {display:inline-block;height:30px;padding:0 10px;line-height:30px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #c60000;box-sizing:border-box;background:#c60000;margin-left:5px;vertical-align:middle;}
+.tbl td .btn-view {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #104aad;box-sizing:border-box;background:#104aad;}
+.tbl td .btn-submit {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #aaa;box-sizing:border-box;background:#aaa;}
+.tbl td .btn-submit.on {border:1px solid #104aad;background:#104aad;}
+.tbl td .btn-apply {display:inline-block;width:49px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #aaa;box-sizing:border-box;background:#aaa;}
+.tbl td .btn-apply.on {border:1px solid #104aad;background:#104aad;}
+.tbl td .btn-return {display:inline-block;padding:0 10px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #aaa;box-sizing:border-box;background:#aaa;}
+.tbl td .btn-return.on {border:1px solid #104aad;background:#104aad;}
+.tbl td .btn-admission {display:inline-block;padding:0 10px;height:25px;line-height:25px;font-size:14px;font-weight:bold;color:#fff;border:1px solid #aaa;box-sizing:border-box;background:#aaa;}
+.tbl td .btn-admission.on {border:1px solid #104aad;background:#104aad;}
+
+/* 스크립트 */
+.description {font-size:15px;color:#95979c;text-align:right;}

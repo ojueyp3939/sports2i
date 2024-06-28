@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* 메인 */
+/* 메인 > 타자, 투수 1위 */
+.top-player {padding:30px 5% 29px;background:#fff;}
+.top-player .tit-preview {padding-top:24px;background:url('../images/common/bg_top.png') no-repeat 50% 0/26px;color:#206cbb;font-size:2.1rem;font-weight:700;text-align:center;}
+.top-player .player-list {padding:18px 0 11px;}
+.top-player .player-list li {margin-bottom:8px;padding:20px 18px;border:1px solid #eee;border-radius:5px;}
+.top-player .player-list li:last-child {margin-bottom:0;}
+.top-player .player-list li .photo {float:left;width:70px;}
+.top-player .player-list li .top-player-info {float:left;padding-left:15px;}
+.top-player .player-list li .top-player-info .kind {padding:5px 0 11px;color:#3c5d80;}
+.top-player .player-list li .top-player-info .player {color:#000;font-size:1.4rem;font-weight:700;line-height:1.3;}
+.top-player .player-list li .player-record {float:right;padding-top:22px;color:#000;font-size:1.8rem;font-weight:700;text-align:right;}
+.top-player .player-list li .player-record span {color:#5c5b5b;font-size:1.4rem;}
+.top-player .tip {padding-bottom:26px;color:#2e2e2e;font-size:1.1rem;}
+.top-player .btn-area {text-align:center;}
+
+/* 선발투수 프리뷰 */
+.preview {}
+.preview .top-player-record {padding:26px 0 30px;background:#fff;}
+.preview .top-player-record .tit {padding-bottom:28px;}
+.preview .top-player-record .record-list {position:relative;z-index:10;width:74.4444%;margin:0 auto;text-align:center;}
+.preview .top-player-record .record-list::before {content:"";position:absolute;top:0;left:-1px;z-index:-10;width:100%;height:30px;border:1px solid #2a2a2a;border-radius:15px;}
+.preview .top-player-record .record-list li {float:left;}
+.preview .top-player-record .record-list li a {display:block;padding:8px 0;border-radius:15px;color:#2a2a2a;font-size:1.4rem;font-weight:700;}
+.preview .top-player-record .record-list li.on a {color:#fff;background:#2a2a2a;}
+.preview .top-player-record .record-wrap {padding:23px 0 0 18px;}
+.preview .top-player-record .record-wrap .player {padding-bottom:8px;}
+.preview .top-player-record .record-wrap .player .emb {float:left;width:40px;margin-right:5px;}
+.preview .top-player-record .record-wrap .player .name {float:left;padding-top:6px;color:#000;font-size:1.6rem;font-weight:700;}
+.preview .top-player-record .record-wrap .player .name span {color:#999;}
+.preview .tbl-box .tbl-fixed tbody tr th {border-bottom:1px solid #eee;}
+
+/* 선수 */
+.player-record {}
+.player-record .player-name {padding:16px 0 15px;background:#eee;color:#000;font-size:1.6rem;text-align:center;}
+.player-record .player-name .emb {display:inline-block;width:40px;margin-right:6px;}
+.player-record .player-name .name {display:inline-block;padding-top:5px;}
+.player-record .box-wrap {padding:28px 46px 30px;background:#fff;}
+.player-record .graph-box-wrap {padding:28px 18px 30px;background:#fff;}
+.player-record .graph-box-wrap .tit {padding-bottom:26px;}
+.player-record .graph-box-wrap .graph-box {position:relative;border:1px solid #2f2f2f;border-radius:9px;}
+.player-record .graph-box-wrap .graph-box.no-record {display:table;width:100%;height:161px;background:url('../images/common/no_record.png') no-repeat 50% 35%/35px;}
+.player-record .graph-box-wrap .graph-box.no-record p {display:table-cell;padding-top:40px;color:#666;font-size:1.1rem;font-weight:700;text-align:center;vertical-align:middle;}
+.player-record .graph-box-wrap .graph-box .download-list {position:absolute;top:7px;right:5px;}
+.player-record .graph-box-wrap .graph-box .download-list li a {display:block;padding:8px 15px;background:url('../images/common/ico_download.png') no-repeat 50% 50%/11px;text-indent:-9999px;}
+.player-record .graph-box-wrap .graph-box span {position:absolute;right:10px;bottom:5px;font-size:1.0rem;}
+.player-record .graph-box-wrap .tip {padding-top:10px;color:#2e2e2e;font-size:1.1rem;text-align:right;}
+.player-record .record-wrap p {position:relative;padding:0 0 9px 11px;color:#000;font-size:1.4rem;font-weight:700;}
+.player-record .record-wrap p::before {content:"";position:absolute;top:5px;left:0;width:4px;height:4px;background:#000;}
+.player-record .player-info-box {padding:28px 0 70px;background:#fff;}
+.player-record .player-info-box .data-list {text-align:center;}
+.player-record .player-info-box .data-list li {display:inline-block;position:relative;}
+.player-record .player-info-box .data-list li::before {content:"";position:absolute;top:0;right:0;width:1px;height:15px;background:#e5e5e5;}
+.player-record .player-info-box .data-list li:last-child::before {content:none;}
+.player-record .player-info-box .data-list li a {display:block;padding:0 21px;color:#000;font-size:1.6rem;font-weight:700;}
+.player-record .player-info-box .data-list li.on a {color:#206cbb;}
+.player-record .player-info-box .data-box {padding:18px 5%;}
+.player-record .player-info-box .data-box .select-area {position:relative;overflow:hidden;text-align:center;}
+.player-record .player-info-box .data-box .select-area select,
+.player-record .player-info-box .data-box .select-area label {float:left;width:50%;height:30px;margin:0;padding:6px 0 6px 15px;border:1px solid #2a2a2a;border-radius:0;color:#2a2a2a;font-size:1.4rem;font-weight:700;text-align:left;}
+.player-record .player-info-box .data-box .select-area select:nth-of-type(1) {border-right:0;border-bottom:0;border-radius:5px 0 0 0;}
+.player-record .player-info-box .data-box .select-area select:nth-of-type(2) {border-bottom:0;border-radius:0 5px 0 0;}
+.player-record .player-info-box .data-box .select-area select:nth-of-type(3) {border-right:0;border-radius:0 0 0 5px;}
+.player-record .player-info-box .data-box .select-area select:nth-of-type(4) {border-radius:0 0 5px 0;}
+.player-record .player-info-box .data-box .select-area label:nth-of-type(1) {border-bottom:0;border-radius:0 5px 0 0;}
+.player-record .player-info-box .data-box .select-area.select-type2 label:nth-of-type(2) {border-right:0;border-radius:0 0 0 5px;}
+.player-record .player-info-box .data-box .select-area.select-type2 select:nth-of-type(2) {border-bottom:1px solid #2a2a2a;border-radius:0 0 5px 0;}
+.player-record .player-info-box .data-box .select-area.select-type2 input:nth-of-type(1) {right:0;}
+.player-record .player-info-box .data-box .select-area.select-type2 .ipt-calendar {position:absolute;width:50%;height:62px;}
+.player-record .player-info-box .data-box .select-area.select-type2 button {height:30px;}
+.player-record .player-info-box .data-box .select-area.select-type2 button:nth-of-type(1) {top:0;right:0;}
+.player-record .player-info-box .data-box .select-area.select-type2 button:nth-of-type(2) {bottom:0;left:0;}
+.player-record .player-info-box .data-box .btn-area {padding:10px 0 29px;text-align:center;}
+.player-record .player-info-box .data-box .btn-area a {display:inline-block;width:75px;padding:7px 0;border-radius:16px;font-size:1.4rem;font-weight:700;}
+.player-record .player-info-box .data-box .btn-area .btn-reset {margin-right:8px;border:1px solid #2a2a2a;color:#2a2a2a;}
+.player-record .player-info-box .data-box .btn-area .btn-search {background:#2a2a2a;color:#fff;}
+.player-record .player-info-box .data-box .txt-state {color:#444;font-size:1.1rem;font-weight:700;line-height:1.5;text-align:center;word-break:keep-all;}
+.player-record .player-info-box .record-box-wrap .record-wrap {padding:0 0 30px 5%;}
+.player-record .player-info-box .graph-box-wrap {padding:0 18px;}
+
+/* 선수 순위 */
+.player-record.rank .player-info-box .data-box .select-area {}
+.player-record.rank .player-info-box .data-box .select-area select:nth-of-type(1) {border-right:0;border-bottom:0;border-radius:5px 0 0 0;}
+.player-record.rank .player-info-box .data-box .select-area select:nth-of-type(2) {border-bottom:0;border-radius:0;}
+.player-record.rank .player-info-box .data-box .select-area select:nth-of-type(3) {border-right:0;border-bottom:1px solid #2a2a2a;border-radius:0 0 0 5px;}
+.player-record.rank .player-info-box .data-box .select-area select:nth-of-type(4) {border-bottom:1px solid #2a2a2a;border-radius:0 0 5px 0;}
+.player-record.rank .player-info-box .data-box .select-area label:nth-of-type(1) {border-bottom:0;border-radius:0 5px 0 0;}
+.player-record.rank .player-info-box .data-box .select-area label:nth-of-type(2) {border-right:0;border-bottom:0;border-radius:0;}
+.player-record.rank .player-info-box .data-box .select-area button {top:0;right:0;left:auto;height:30px;}
+.player-record.rank .player-info-box .data-box .select-area button:nth-of-type(2) {top:30px;left:0;}
+.player-record.rank .player-info-box .data-box .select-area .ipt-calendar {bottom:0;left:0;}
+.player-record.rank .record-box-wrap {display:block;}
+.player-record.rank .record-box-wrap .record-wrap .tbl-box .tbl-fixed {width:55.932%;}
+
+/* 팀 순위 */
+.player-record.rank.teamrank .player-info-box .data-box .select-area label:nth-of-type(1) {border:1px solid #2a2a2a;border-bottom:0;border-radius:0 5px 0 0;}
+.player-record.rank.teamrank .player-info-box .data-box .select-area label:nth-of-type(2) {border-right:0;border-bottom:1px solid #2a2a2a;border-radius:0 0 0 5px;}
+.player-record.rank.teamrank .player-info-box .data-box .select-area select:nth-of-type(2) {border:1px solid #2a2a2a;border-radius:0 0 5px 0;}
+.player-record.rank.teamrank .player-info-box .data-box .select-area button {top:0;right:0;left:auto;}
+.player-record.rank.teamrank .player-info-box .data-box .select-area button:nth-of-type(2) {top:auto;right:auto;bottom:0;left:0;}
+.player-record.rank.teamrank .record-box-wrap .record-wrap .tbl-box .tbl-fixed {width:38.521%;}
+
+
+/* media */
+@media (max-width:320px) {
+  /* 메인 */
+  /** 타자, 투수 1위 **/
+  .top-player .player-list li {padding:20px 7px;}
+  .top-player .player-list li .top-player-info {padding-left:8px;}
+}

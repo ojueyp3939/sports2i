@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	  <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/highlight.css" />
+	  <script type="text/javascript">
+  		$(document).ready(function(){
+  			$('#btnCalendar').datepicker({
+  			dateFormat: 'yy-mm-dd',
+  			showOn: "button",
+  			buttonImage: "../resources/images/common/btn_calendar_icon.png",
+  			buttonImageOnly: true,
+  			changeMonth: true,
+  			changeYear: true,
+  			autoSize: true,
+  			showButtonPanel: true,
+  			beforeShow: function (input) {
+  				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+  				$("body").append("<div id='Modal' />");
+  				setTimeout(function () {
+  					var dateOffset = $("#ui-datepicker-div").height() / 2;
+  					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+  				}, 0);
+  			},
+  			onSelect: function (dateText, inst) {
+  				$("#Modal").remove();
+  				//component.setDate(dateText.toDate('yyyy-MM-dd'));
+  			},
+  			onClose: function () {
+  				$("#Modal").remove();
+  			}
+  		});
+  		});
+
+  		function loaded() {
+  			var myScroll1 = new IScroll('#gnb',{
+  				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+  			});
+        var myScroll1 = new IScroll('#TodayList',{
+  				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+  			});
+  		}
+  	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header>
+			<h1 class="tit">프로야구</h1>
+			<nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li class="on"><a href="../Schedule/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+			<a href="javascript:;" class="btn-home"><img src="../resources/images/common/btn_home.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="contents" class="highlight">
+      <div id="MainCont">
+        <section class="broadcast">
+          <iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="control-box">
+            <div class="btn-highlight-back">
+              <a href="javascript:;" class="btn-back">뒤로가기</a>
+            </div>
+            <div class="btn-player">
+              <a href="#none" class="btn-play">PLAY</a><!-- 정지시 stop 클래스 추가 -->
+            </div>
+            <div class="btn-control">
+              <a href="javascript:;" class="btn-volume">음소거</a>
+              <a href="javascript:;" class="btn-mode">
+                <img src="../resources/images/playball/btn_mode.png" alt="전체화면으로보기" />
+                <img src="../resources/images/playball/btn_mode02.png" alt="축소화면으로보기" />
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="live">
+          <h2 class="tit-highlight">[4/4] KT:두산 H/L</h2>
+          <div class="btn-area">
+            <a href="#none" class="btn-liveview">중계 보기</a>
+          </div>
+        </section>
+      </div>
+      <div id="SubCont">
+        <div id="HighLightTabDepth1">
+          <h2 class="tit-highlight">하이라이트</h2>
+          <ul class="tab tab-depth1">
+            <li><a href="highlight.html">전체</a></li>
+            <li><a href="highlight_경기별.html">경기별</a></li>
+            <li><a href="highlight_구단별.html">구단별</a></li>
+            <li class="on"><a href="highlight_vod.html" class="btn-5gvod">VOD</a></li>
+          </ul>
+        </div>
+        <ul class="view-list clear">
+          <li class="on"><a href="#none">전체</a></li>
+          <li><a href="#none">포트션 뷰</a></li>
+          <li><a href="#none">매트릭스 뷰</a></li>
+          <li><a href="#none">피칭분석</a></li>
+          <li><a href="#none">모션 트래킹</a></li>
+        </ul>
+        <div  class="date-select-area" style="background:#fff;border-bottom:1px solid #ececec;">
+  				<ul class="date-select">
+  					<li class="prev"><a href="#"><img src="../resources/images/common/btn_arrow_left.png" alt="prev" /></a></li>
+  					<li class="today"><span class="date">2018.10.11</span><span class="day">목</span></li>
+  					<li class="next"><a href="#"><img src="../resources/images/common/btn_arrow_right.png" alt="prev" /></a></li>
+  				</ul>
+  				<span class="btn-calendar">
+  					<input type="hidden" id="btnCalendar" />
+  				</span>
+  			</div>
+        <ul class="highlight-list">
+          <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+          <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+          <li>
+              <div class="img-box">
+                <img src="../resources/images/common/img_highlight.png" alt="" />
+                <span class="time">11:11</span>
+              </div>
+              <dl class="highlight">
+                <dt><span class="dp-b">주요장면</span>가가가가가가가가가가가가가가가가가가가가가가가가가가가가가가</dt>
+                <dd>[KIA VS 두산] 07월12일</dd>
+              </dl>
+            </li>
+        </ul>
+        <div class="more-area">
+            <a href="#none" class="btn more">MORE</a>
+          </div>
+      </div>
+		</div>
+	</div>
+</body>
+</html>

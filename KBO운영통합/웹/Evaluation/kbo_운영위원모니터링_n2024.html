@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>경기운영위원 모니터링</a></span></li>
+					<li><a href="#none"><span>경기 영상 모니터링</a></span></li>
+					<li><a href="#none"><span>분쟁 및 사고</a></span></li>
+					<li><a href="#none"><span>스피드업·복장 규정 위반</a></span></li>
+					<li><a href="#none"><span>심판위원 보고서</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box long">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap mt30">
+				<h3 class="sub-title">2024년 경기운영위원 보고서</h3>
+			</div>
+			<div class="report-wrap">
+				<div class="report-header">
+					<img src="../resources/images/sub/img_logo.png" alt="kbo">
+					<p>2024년 경기운영위원 (경기모니터링) 보고서</p>
+					<span>2024년 10월 31일 구장 원정팀 99-99 홈팀 날씨</span>
+				</div>
+				<h4 class="mb15">경기시간</h4>
+				<table class="tbl mb40">
+					<tr>
+						<th>경기개시</th>
+						<th>경기종료</th>
+						<th>소요시간</th>
+						<th>중단시간</th>
+						<th>기타(연장,콜드게임)</th>
+					</tr>	
+					<tr>
+						<td>10 : 10</td>
+						<td>10 : 10</td>
+						<td>10 : 10</td>
+						<td>10 : 10 ~ 10 : 10</td>
+						<td></td>
+					</tr>
+				</table>
+				
+				<h4 class="mb15">경기 전 경기장 점검</h4>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="20%">
+						<col width="">
+						<col width="10%">
+						<col width="10%">
+					</colgroup>
+					<tr>
+						<th colspan="2">구분</th>
+						<th>양호</th>
+						<th>개선필요</th>
+					</tr>
+					<tr>
+						<td rowspan="2">그라운드</td>
+						<td>잔디 및 그라운드의 전반적인 상태 (평평도, 워닝트랙 등)</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>배수구, 스프링클러 설치 부근 바닥과의 높낮이</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">안전그물</td>
+						<td>설치 위치와 높이의 적절성, 훼손 여부</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>그물망 고정 기둥, 와이어 등에 충격 흡수 패드 설치 여부</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">펜 스</td>
+						<td>펜스의 전반적인 부상위험도</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>펜스에 부착된 문·잠금 장치의 개폐 위험성</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>펜스 하단과 그라운드 사이의 공간 등 공이 펜스에 끼일 위험</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					
+					<tr>
+						<td>의료진</td>
+						<td>의료진, 응급차량 도착 여부와 그라운드 출입통로의 개문 및 장애물 유무</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td>관람구역</td>
+						<td>관람석, 통로, 계단 등 관람 구역의 각종 사고 위험(낙상 등)</td>
+						<td>
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+
+					<tr>
+						<td>비고<br/>(조치사항)</td>
+						<td colspan="3">
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+
+				<h4 class="mb15">경기 전 준비 상황 점검</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="15%">
+						<col width="">
+						<col width="8%">
+						<col width="8%">
+					</colgroup>
+					<tr>
+						<th colspan="2">구분</th>
+						<th class="no-border">있음</th>
+						<th>없음</th>
+					</tr>	
+					<tr>
+						<td rowspan="2">ABS, 피치클락</td>
+						<td>ABS 운영요원 도착 및 시스템 이상 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>피치클락 계시원 도착 및 장비 이상 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>비고</td>
+						<td colspan="3">
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+
+				<h4 class="mb15">경기 모니터링 사항</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="15%">
+						<col width="">
+						<col width="8%">
+						<col width="8%">
+					</colgroup>
+					<tr>
+						<th colspan="2">구분</th>
+						<th class="no-border">있음</th>
+						<th>없음</th>
+					</tr>	
+					<tr>
+						<td colspan="2">선수단 & 임직원 접촉 / 심판실 출입</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2">경기 전</td>
+						<td>승부조작 모의 및 불법스포츠 베팅 관련 이상 징후 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>불법스포츠 베팅 관련 의심 관객 여부(불법 중계 또는 의심장비 보유 등)</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>경기 중</td>
+						<td>승부조작 및 경기조작 의심 플레이 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>특이사항</td>
+						<td colspan="3">
+							<p class="reference">경기운영위원 의견 / 이상징후 발견시 해당장면 서술및대응/불법중계자 신원, 인계경찰서(담당자)등 명기</p>
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+
+				<h4 class="mb15">심판평가</h4>
+				<h5 class="mb15">1. 판정·운영·태도 평가</h5>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="10%">
+						<col width="10%">
+						<col width="">
+						<col width="35%">
+						<col width="25%">
+					</colgroup>
+					<tr>
+						<th colspan="5" class="txt-l pl40">
+							※ 평가항목
+							<div class="pl10">
+								- 판정: 파울/페어, 보크, 아웃/세이프 등 판정 능력에 대한 평가<br/>
+								- 운영: 경고/퇴장, 각종 규칙 적용의 적절성, 판정 위치 선정, 항의 대처 능력 등 경기운영 전반에 대한 평가<br/>
+								- 태도: 경기에 임하는 태도, 집중력, 정중한 언행, 친목 자제, 프로의식 등 태도 평가
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th rowspan="2">위치</th>
+						<th rowspan="2">심판명</th>
+						<th rowspan="2">구분</th>
+						<th rowspan="2">내용</th>
+						<th>점수</th>
+					</tr>
+					<tr>
+						<th>
+							<ul class="in-txt">
+								<li>좋음<br/>(+1)</li>
+								<li>보통<br/>(0)</li>
+								<li>개선필요<br/>(-1)</li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td rowspan="3">주심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어, 보크, 아웃/세이프 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>운영</td>
+						<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>태도</td>
+						<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">1루심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어, 보크, 아웃/세이프 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>운영</td>
+						<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>태도</td>
+						<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">2루심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어, 보크, 아웃/세이프 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>운영</td>
+						<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>태도</td>
+						<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">3루심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어, 보크, 아웃/세이프 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>운영</td>
+						<td>경고/퇴장, 규칙적용, 위치선정, 항의대처 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>태도</td>
+						<td>태도, 집중력, 언행, 친목자제, 프로의식 등</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+
+				<h5 class="mb15">2. 신규정·규칙 관련 평가</h5>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="20%">
+						<col width="40%">
+						<col width="">
+					</colgroup>
+					<tr>
+						<th colspan="5" class="txt-l pl40">
+							<div class="pl10">
+								(ABS, 피치클락, 수비 시프트 제한 등 신규 규정 이해도, 소통 능력, 매끄러운 진행)
+							</div>
+						</th>
+					</tr>
+					<tr>
+						<th rowspan="2">위치</th>
+						<th rowspan="2">내용</th>
+						<th>점수</th>
+					</tr>
+					<tr>
+						<th>
+							<ul class="in-txt">
+								<li>좋음<br/>(+1)</li>
+								<li>보통<br/>(0)</li>
+								<li>개선필요<br/>(-1)</li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td rowspan="3">주심</td>
+						<td>신규 규정·규칙에 대한 이해도와 적용</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>선수단과의 정확하고 적극적인 소통</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>매끄러운 진행으로 신속한 경기 진행에 기여</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					
+					<tr>
+						<td rowspan="3">1루심</td>
+						<td>신규 규정·규칙에 대한 이해도와 적용</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>선수단과의 정확하고 적극적인 소통</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>매끄러운 진행으로 신속한 경기 진행에 기여</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">2루심</td><td>신규 규정·규칙에 대한 이해도와 적용</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>선수단과의 정확하고 적극적인 소통</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>매끄러운 진행으로 신속한 경기 진행에 기여</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					
+					<tr>
+						<td rowspan="3">3루심</td><td>신규 규정·규칙에 대한 이해도와 적용</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>선수단과의 정확하고 적극적인 소통</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>매끄러운 진행으로 신속한 경기 진행에 기여</td>
+						<td>
+							<ul class="in-txt">
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td>심판 관련 특이사항 및 의견</td>
+						<td colspan="3">
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+				<table class="tbl mb40">
+					<tr>
+						<td class="txt-l">
+							<b>[평가 시 참고 기준]</b><br/>
+							· 좋음: 심판이 해당 항목 관련 업무를 완벽하게 수행하였음<br/>
+							· 보통: 대부분의 상황에서 문제 없이 역할을 수행했지만, 일부 개선이 필요함. 또는 평가할만한 상황이 발생하지 않음<br/>
+							· 개선 필요: 심판의 수행 능력이 경기의 질에 부정적인 영향을 미치며, 개선이 필요함.
+						</td>
+					</tr>
+				</table>
+
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>KBO 경기운영위원 : </th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="report-fotter">
+					FAX : 02)3460-4649
+				</div>
+			</div>
+			
+				
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

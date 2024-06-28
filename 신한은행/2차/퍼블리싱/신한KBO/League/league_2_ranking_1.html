@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/mvp.css" />		
+	<link rel="stylesheet" type="text/css" href="../resources/css/league.css" />
+</head>
+<script>
+$(document).ready(function(){
+	// 킬러컨텐츠_슬라이드
+	var mc_Swiper = new Swiper('.main-contents-slider', {
+		pagination: {el: '.swiper-pagination',clickable: true},
+		loop:true
+	});
+	// 팀 슬라이드 메뉴
+	var sm_Swiper = new Swiper('.team-swiper-menu', {
+		slidesPerView: 'auto',
+		spaceBetween:10,
+		loop:false
+	});
+	// 서브 슬라이드 메뉴 스와이프
+	var sms_Swiper = new Swiper('.menu-slide-sub', {
+		slidesPerView: 'auto',
+		spaceBetween:10,
+		loop:false
+	});
+	// 탑플레이어 스와이프
+	var TPH_Swiper = new Swiper('.tp-hitter', {
+		slidesPerView: 'auto',
+		spaceBetween:0,
+		loop:false
+	});
+	var TPP_Swiper = new Swiper('.tp-pitcher', {
+		slidesPerView: 'auto',
+		spaceBetween:0,
+		loop:false
+	});
+});
+</script>
+
+<body>
+    <!-- aside -->
+    <aside>
+        <nav id="navAll">
+            <div class="navdep1 nav-league ">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_league.png" alt="" /></span>KBO 리그</a></h2>
+                <ul class="navdep2"> 
+					<li><a href="./league_1_schedule.html">경기일정/결과</a></li>
+					<li><a href="./league_2_ranking.html">팀순위</a></li>
+					<li><a href="./league_2_ranking_1.html">선수순위</a></li>
+					<li class="event">
+						<a href="#none">
+							<span>EVENT</span>퀴즈 풀면 쏠쏠하다!<br />쏠픽!
+						</a>
+					</li>
+					<li><a href="./league_5_invest.html">가성비</a></li>
+					<li><a href="./league_6_potcast.html">팟캐스트</a></li>
+					<li><a href="./league_4_highlight.html">하이라이트</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-product">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_product.png" alt="" /></span>KBO 상품</a></h2>
+                <ul class="navdep2">
+                    <li><a href="#none">예금</a></li>
+                    <li><a href="#none">적금</a></li>
+                    <li><a href="#none">대출</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-sol">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_sol.png" alt="" /></span>쏠픽</a></h2>
+            </div>
+            <div class="navdep1 nav-mvp">	
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_mvp.png" alt="" /></span>월간 MVP</a></h2>
+                <ul class="navdep2">
+                    <li><a href="#none">월간 랭킹</a></li>
+                    <li><a href="#none">MVP 투표하기</a></li>
+                    <li><a href="#none">MVP 결과</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-event">					
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_event.png" alt="" /></span>이벤트</a></h2>
+            </div>
+        </nav>
+        <div class="banner"><a href="javascript:;">배너영역</a></div>
+    </aside>
+    <!-- // aside -->
+	<!-- wrap -->
+	<div id="wrap">	
+        <!-- header -->
+        <header>	
+            <h1 class="tit"><a href="#none">신한 BASEBALL PARK</h1>
+            <a href="#none" class="btn-aside">
+                <span class="menu-icon ">
+                    <span class="menu-line menu-line1"></span>
+                    <span class="menu-line menu-line2"></span>
+                    <span class="menu-line menu-line3"></span>
+                </span>
+            </a>	
+            <nav id="gnb">
+                <ul class="menu">
+                    <li class="on"><a href="javascript:;">KBO 리그</a></li>
+                    <li><a href="javascript:;">KBO 상품</a></li>
+                    <li><a href="javascript:;">쏠픽</a></li>
+                    <li><a href="javascript:;">월간 MVP</a></li>
+                    <li><a href="javascript:;">이벤트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- // header -->
+		<hr /> 
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<!-- 상단 컨텐츠 영역 // -->
+				<div class="content-wrap">
+					<div class="main-contents">
+						<div class="main-contents-area">
+							<div class="swiper-container main-contents-slider">
+								<div class="swiper-wrapper">
+									<!-- 팟캐스트 // -->
+									<div class="swiper-slide">
+										<div class="vod-wrap">
+											<a href="#">
+												<div class="vod">
+													<span class="vod-title">백수야구</span>
+													<span class="vod-subject">형, 요즘 어디서 뭐해?</span>
+												</div>
+												<span class="mark-play"></span>
+												<img src="../resources/images/main/sapmple_main_banner_cast.png" title="">
+											</a>
+										</div>
+									</div>
+									<!-- // 팟캐스트 -->
+									<!-- 전력분석 // -->
+									<div class="swiper-slide">
+										<div class="top-analysis">
+											<div class="top-analysis-wrap">
+												<div class="stitle">6월 23일<br><font style="font-size:1.8rem">쏠픽</font></div>
+												<div class="btn-solpick">쏠픽하러가기 ></div>
+												<div class="left-area">
+													<span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+													<span><img class="team" src="../resources/images/emb/embS_OB.png" alt="양의지" /></span>
+													<span>두산</span>
+												</div>
+												<div class="score-area">
+													<div class="title-name">
+														<span class="title">승부예측</span>
+														<span class="left-name">이용찬</span>
+														<span class="right-name">김광현</span>
+													</div>
+													<div class="pre-rate">
+														<span class="rate-left">53.6%</span>
+														<span class="rate-bar" style="width:53.6%;"></span>
+														<span class="rate-right">46.4%</span>
+													</div>
+													<div class="solpick-poll">
+														<div class="title-box">
+															<span class="title">실시간 쏠픽 투표율</span>
+														</div>
+														<span class="left">80%</span>
+														<span class="icon-winner brace-left" id="rate-poll"></span>
+														<span class="right">20%</span>
+													</div>
+												</div>
+												<div class="right-area">
+													<span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+													<span><img class="team" src="../resources/images/emb/embS_KT.png" alt="양의지" /></span>
+													<span>KT</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 전력분석 -->
+									<!-- 연봉투자수익 // -->
+									<div class="swiper-slide">
+										<div class="top-invest">
+											<div class="top-invest-wrap">
+												<div class="stitle"><font class="blue">TEAM</font> 연봉 투자 수익 TOP 3</div>
+												<div class="sinfo2">[ 기준 : 연봉 2억 이상 ]</div>
+												<div class="top-invest-list">
+													<div class="invest-row">
+														<div class="invest" id="1위">
+															<span class="subject">1위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_OB.png" /></span>
+															<span class="name">두산</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+													<div class="invest-row">
+														<div class="invest" id="2위">
+															<span class="subject">2위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_SK.png" /></span>
+															<span class="name">SK</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+													<div class="invest-row">
+														<div class="invest" id="3위">
+															<span class="subject">3위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_HH.png" /></span>
+															<span class="name">한화</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 연봉투자수익 -->
+									<!-- 하이라이트 // -->
+									<div class="swiper-slide">
+										<div class="vod-wrap">
+											<a href="#">
+												<div class="vod">
+													<span class="vod-title">하이라이트</span>
+													<span class="vod-subject">신본기 결승 투런포,<br/>롯데 한화 꺾고 위닝시리즈</span>
+												</div>
+												<span class="mark-play"></span>
+												<img src="../resources/images/main/sapmple_main_banner_hl.png" title="">
+											</a>
+										</div>
+									</div>
+									<!-- // 하이라이트 -->
+									<!-- 이벤트 // -->
+									<div class="swiper-slide">
+										<a href="#"><img src="../resources/images/main/sapmple_main_banner_event.png" title=""></a>
+									</div>
+									<!-- // 이벤트 -->
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 상단 컨텐츠 영역 -->
+                <!-- 메뉴 버튼 // -->
+                <ul class="league-menu">
+					<li class="menu" onClick="javascript:location.href='./league_1_schedule.html';"><a href="">일정/결과</a></li>
+					<li class="menu on" onClick="javascript:location.href='./league_2_ranking.html';"><a href="">팀/개인 순위</a></li>
+					<li class="menu"><a href="#none">쏠픽하기 ></a></li>
+					<li class="menu" onClick="javascript:location.href='./league_4_highlight.html';"><a href="">하이라이트</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_5_invest.html';"><a href="">연봉 투자 수익</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_6_potcast.html';"><a href="">팟캐스트</a></li>
+				</ul>
+                <!-- //메뉴 버튼 -->
+
+				<!-- 순위 // -->
+				<div class="content-wrap" id="league-ranking">
+                    <!-- 팀 랭킹 // -->
+                    <div class="stitle">TEAM RANKING</div>
+                    <div class="team-ranking">
+                        <div class="swiper-container team-swiper-menu">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide kbo"><a href=""><span class="all"></span>전체</a></li>
+                                <li class="swiper-slide on"><span class="HT"></span>KIA</a></li>
+                                <li class="swiper-slide"><span class="OB"></span>두산</a></li>
+                                <li class="swiper-slide"><span class="LT"></span>롯데</a></li>
+                                <li class="swiper-slide"><span class="NC"></span>NC</a></li>
+                                <li class="swiper-slide"><span class="SK"></span>SK</a></li>
+                                <li class="swiper-slide"><span class="LG"></span>LG</a></li>
+                                <li class="swiper-slide"><span class="WO"></span>넥센</a></li>
+                                <li class="swiper-slide"><span class="HH"></span>한화</a></li>
+                                <li class="swiper-slide"><span class="SS"></span>삼성</a></li>
+                                <li class="swiper-slide"><span class="KT"></span>KT</a></li>
+                            </ul>
+                        </div>
+                        <div class="search-area txt-r">
+                            <label for="">연도</label>
+                            <select name="" id="">
+                                <option value="">2018</option>
+                            </select>
+                            <label for="">시즌</label>
+                            <select name="" id="">
+                                <option value="">정규시즌</option>
+                            </select>
+                        </div>
+                        <div class="team-record">
+                            <div class="txt-r mt10 mr10">2018년 6월 23일 기준</div>
+                            <div class="team-record-banner">
+                                <span>현재 순위 2위</span> (84승 3무 57패, 승률 0.596)
+                            </div>
+                            <div class="swiper-container-no menu-slide-sub">
+                                <ul class="swiper-wrapper-no">
+                                    <li class="swiper-slide on"><a href="">타율</a></li>
+                                    <li class="swiper-slide"><a href="">홈런</a></li>
+                                    <li class="swiper-slide"><a href="">평균자책점</a></li>
+                                    <li class="swiper-slide"><a href="">탈삼진</a></li>
+                                    <li class="swiper-slide"><a href="">WHIP</a></li>
+                                </ul>
+                            </div>
+                            <div class="dash-board">
+                                <div>
+                                    <span class="emblem">
+                                        <span><img src="../resources/images/emb/embL_OB.png" alt="기아타이거즈" /></span>
+                                        <span>두산</span>
+                                    </span>
+                                    <span class="rate-team">
+                                        <span>
+                                            <span class="row-rate">
+                                                <span class="rate" id="" style="height:80%;"></span>
+                                            </span>
+                                        </span>
+                                        <span>0.356</span>
+                                    </span>
+                                    <span class="rate-all">
+                                        <span>
+                                            <span class="row-rate">
+                                                <span class="rate" id="" style="height:60%;"></span>
+                                            </span>
+                                        </span>
+                                        <span>0.288</span>
+                                    </span>
+                                    <span class="emblem">
+                                        <span><img src="../resources/images/emb/embRL_KBO.png" alt="평균" /></span>
+                                        <span>평균</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- // 팀 랭킹-->
+
+                    <div class="content-wrap">
+                        <div class="banner"><a href=""><img src="../resources/images/main/banner_sample2.png" alt="쏠픽하러 가기" /></a></div>
+                    </div>
+
+					<!-- 플레이어 랭킹 // -->
+                    <div class="stitle">PLAYER RANKING</div>
+                    <div class="player-ranking">
+                        <div class="swiper-container team-swiper-menu">
+                            <ul class="swiper-wrapper">
+                                <li class="swiper-slide kbo"><a href=""><span class="all"></span>전체</a></li>
+                                <li class="swiper-slide on"><span class="HT"></span>KIA</a></li>
+                                <li class="swiper-slide"><span class="OB"></span>두산</a></li>
+                                <li class="swiper-slide"><span class="LT"></span>롯데</a></li>
+                                <li class="swiper-slide"><span class="NC"></span>NC</a></li>
+                                <li class="swiper-slide"><span class="SK"></span>SK</a></li>
+                                <li class="swiper-slide"><span class="LG"></span>LG</a></li>
+                                <li class="swiper-slide"><span class="WO"></span>넥센</a></li>
+                                <li class="swiper-slide"><span class="HH"></span>한화</a></li>
+                                <li class="swiper-slide"><span class="SS"></span>삼성</a></li>
+                                <li class="swiper-slide"><span class="KT"></span>KT</a></li>
+                            </ul>
+                        </div>
+                        <!-- 탑플레이어 // -->
+                        <div class="top-player">
+                            <div id="tp_tab_0" style="display:inline;">
+                                <div class="tab-area tab-depth1">
+                                    <ul class="tab tab-line tab2">
+                                        <li class="on"><a href="javascript:tpTab(0);">타자</a></li>
+                                        <li><a href="javascript:tpTab(1);">투수</a></li>
+                                    </ul>
+                                </div>
+                                <div class="top-player-wrap">
+                                    <div class="swiper-container top-player-list tp-hitter">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide player" id="타율">
+                                                <span class="subject">타율</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" alt="다이아몬드" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="다이아몬드" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="타점">
+                                                <span class="subject">타점</span>
+                                                <span class="photo">
+                                                    <img class="team"t src="../resources/images/emb/embS_HT.png" alt="다이아몬드" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="다이아몬드" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="홈런">
+                                                <span class="subject">홈런</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" alt="다이아몬드" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="다이아몬드" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="WAR">
+                                                <span class="subject">WAR</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" alt="다이아몬드" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="다이아몬드" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="장타율">
+                                                <span class="subject">장타율</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" alt="다이아몬드" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="다이아몬드" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt-r mt10 mr10">2018년 6월 23일 기준</div>
+                            </div>
+                            <div id="tp_tab_1" style="display:none;">
+                                <div class="tab-area tab-depth1">
+                                    <ul class="tab tab-line tab2">
+                                        <li><a href="javascript:tpTab(0);">타자</a></li>
+                                        <li class="on"><a href="javascript:tpTab(1);">투수</a></li>
+                                    </ul>
+                                </div>
+                                <div class="top-player-wrap">
+                                    <div class="swiper-container top-player-list tp-pitcher">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide player" id="평균자책점">
+                                                <span class="subject">평균자책점</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/67640.png" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="방어율">
+                                                <span class="subject">방어율</span>
+                                                <span class="photo">
+                                                    <img class="team"t src="../resources/images/emb/embS_HT.png" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/67640.png" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="탈삼진">
+                                                <span class="subject">탈삼진</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/67640.png" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="승률">
+                                                <span class="subject">승률</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/67640.png" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide player" id="세이브">
+                                                <span class="subject">세이브</span>
+                                                <span class="photo">
+                                                    <img class="team" src="../resources/images/emb/embS_HT.png" />
+                                                    <img src="http://www.koreabaseball.com/file/person/kbo/2018/67640.png" />
+                                                </span>
+                                                <span class="name">다이아몬드</span>
+                                                <span class="record">0.388</span>
+                                                <div class="ranker-more">
+                                                    <div class="tbl-type">
+                                                        <table class="tbl">
+                                                            <caption></caption>
+                                                            <colgroup>
+                                                                <col width="17%" />
+                                                                <col width="22%" />
+                                                                <col width="37%" />
+                                                                <col width="25%" />
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>2위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>3위</td>
+                                                                    <td><img class="team" src="../resources/images/emb/embS_HT.png" /></td>
+                                                                    <td>다이아몬드</td>
+                                                                    <td>0.391</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="txt-r mt10 mr10">2018년 6월 23일 기준</div>
+                            </div>
+                        </div>
+                        <!-- // 탑플레이어 -->
+                        <div class="search-area txt-r">
+                            <label for="">연도</label>
+                            <select name="" id="">
+                                <option value="">2018</option>
+                            </select>
+                            <label for="">시즌</label>
+                            <select name="" id="">
+                                <option value="">정규시즌</option>
+                            </select>
+                        </div>
+                        <div class="ranking-board">
+                            <div class="tbl-type">
+                                <div class="tbl-left-fix tlf-130">
+                                    <table class="tbl">
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>순위</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span>1</span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_HT.png" /></span>
+                                                    <span>다이아몬드</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>2</span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_HT.png" /></span>
+                                                    <span>다이아몬드</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>3</span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_HT.png" /></span>
+                                                    <span>다이아몬드</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span>4</span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_HT.png" /></span>
+                                                    <span>다이아몬드</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tbl-right-scroll trs-130">
+                                    <table class="tbl">
+                                        <caption></caption>
+                                        <thead>
+                                            <tr>
+                                                <th>타율<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>홈런<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>타점<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>득점<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>도루<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>안타<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>출루율<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>장타율<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>타수<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>2루타<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>3루타<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>볼넷<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>삼진<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>병살<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>경기<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>OPS<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>wOBA<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>wRC+<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>BABIP<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>ISO<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>WAR<a href=""><span class="arrow-sort"></span></a></th>
+                                                <th>WPA<a href=""><span class="arrow-sort"></span></a></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>1.000</td>
+                                                <td>4.000</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>5.000</td>
+                                                <td>1.000</td>
+                                                <td>999.9</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>99.99</td>
+                                                <td>99.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>1.000</td>
+                                                <td>4.000</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>5.000</td>
+                                                <td>1.000</td>
+                                                <td>999.9</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>99.99</td>
+                                                <td>99.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>1.000</td>
+                                                <td>4.000</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>5.000</td>
+                                                <td>1.000</td>
+                                                <td>999.9</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>99.99</td>
+                                                <td>99.99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1.000</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>1.000</td>
+                                                <td>4.000</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>999</td>
+                                                <td>99</td>
+                                                <td>999</td>
+                                                <td>5.000</td>
+                                                <td>1.000</td>
+                                                <td>999.9</td>
+                                                <td>1.000</td>
+                                                <td>1.000</td>
+                                                <td>99.99</td>
+                                                <td>99.99</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					<!-- // 플레이어 랭킹 -->
+				</div>
+				<!-- // 순위 -->
+
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+
+		<hr />
+		<!-- footer -->
+		<footer>
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

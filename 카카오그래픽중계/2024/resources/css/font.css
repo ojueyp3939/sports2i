@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'Noto Sans regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NotoSans-Regular.eot');
+  src: url('../font/NotoSans-Regular.eot?#iefix') format('embedded-opentype'), url('../font/NotoSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family:'Noto Sans regular';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NotoSans-Bold.eot');
+  src: url('../font/NotoSans-Bold.eot?#iefix') format('embedded-opentype'), url('../font/NotoSans-Bold.woff') format('woff');
+}

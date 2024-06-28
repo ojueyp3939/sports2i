@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/icon_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="record_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+				</h1>
+				<ul class="menu">
+					<li>
+						<a href="record_list.html">기록 보기</a>
+					</li>
+					<li>
+						<a href="record_insert.html">기록 입력</a>
+					</li>
+					<li class="on">
+						<a href="video_upload.html">영상 입력</a>
+					</li>
+					<li>
+						<a href="admin.html">관리자 전용</a>
+					</li>
+				</ul>
+				<ul class="user_menu">
+                    <li>
+                        <a href="#">
+                            <img src="resources/images/common/icon_pw.png" alt="비밀번호 변경" />
+                            비밀번호변경
+                        </a>
+                        <!-- 비밀번호 변경 레이어 팝업 -->
+                        <div class="layer-pw" style="display:none;">
+                            <h2>비밀번호 변경</h2>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <label for="pw_now">현재 비밀번호</label>
+                                        <input type="password" id="pw_now">
+                                    </li>
+                                    <li>
+                                        <label for="pw_new">새 비밀번호</label>
+                                        <input type="password" id="pw_new">
+                                    </li>
+                                    <li>
+                                        <label for="pw_new_check">새 비밀번호 확인</label>
+                                        <input type="password" id="pw_new_check">
+                                    </li>
+                                </ul>
+                                <ul class="pw_notice">
+                                    <li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+                                    <li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+                                </ul>
+                                <p class="btn_save">
+                                    <a href="#">저장</a>
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="resources/images/common/icon_pw.png" alt="로그아웃" />
+                            로그아웃
+                        </a>
+                    </li>
+                </ul>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<ul class="tab">
+					<li class="on">
+						<a href="video_upload.html">영상 입력</a>
+					</li>
+					<li>
+						<a href="video_edit.html">영상 편집</a>
+					</li>
+				</ul>
+				<div class="title-wrap">
+					<h2>영상 정보 입력</h2>
+				</div>
+				<table class="tbl">
+					<thead>
+						<tr>
+							<th>대회</th>
+							<th>라운드</th>
+							<th>날짜</th>
+							<th>원정팀</th>
+							<th>홈팀</th>
+							<th>종류</th>
+							<th>영상경로</th>
+							<th>리스트 업</th>
+							<th>데이터 전송</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<select>
+									<option>KBO 퓨처스리그</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option>정규 시리즈</option>
+								</select>
+							</td>
+							<td>
+								<input type="text" id="btnCalendar">
+							</td>
+							<td>
+								<select>
+									<option>선택</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option>선택</option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option>배터리뷰</option>
+								</select>
+							</td>
+							<td>
+								<input type="text">
+							</td>
+							<td>
+								<a class="btn">저장</a>
+							</td>
+							<td>
+								<a class="btn">타임생성</a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+				<div class="title-wrap">
+					<h2>동영상 리스트</h2>
+				</div>
+				<table class="tbl">
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>재생</th>
+							<th>날짜<i class="sort down"></i></th>
+							<th>홈팀<i class="sort down"></i></th>
+							<th>원정팀<i class="sort down"></i></th>
+							<th>영상종류<i class="sort up"></i></th>
+							<th>파일명<i class="sort down"></i></th>
+							<th>삭제</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>
+								<a href="">
+									<img src="resources/images/common/icon_play.png" alt="영상">
+								</a>
+							</td>
+							<td>2020-07-07</td>
+							<td>한화</td>
+							<td>KIA</td>
+							<td>배터리뷰</td>
+							<td>20202020220.mp4</td>
+							<td>
+								<a class="btn remove">삭제</a>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="8">
+								데이터가 없습니다.
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div>
+				<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+				<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/sub/btn_calendar.png",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">현역 선수 등록∙말소 (SK)</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section id="contents">
+				<div class="date-select">
+					<a href="#" class="btn-date btn-prev"></a>
+					<span class="date">2018.01.16(화)<input type="hidden" name=""  id="datepicker" value="" /></span>					
+					<a href="#" class="btn-date btn-next"></a>	
+					<a href="#" class="btn-today">오늘</a>
+				</div>
+				<ul class="tab-area">
+					<li class="on"><a href="#none"><span>KBO 리그</a></span></li>
+					<li><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="entry-situation">
+					<div class="btn-area"><a href="#none" class="btn-total-list">전체 명단 보기</a></div>
+					<div class="game-list">
+						<div class="game-wrap">
+							<div class="game-tit">
+								<span class="name">LG vs SK</span><span class="time">18:30</span>
+							</div>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_OB.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+							<div class="team home">
+								<div class="emb"><img src="../resources/images/emb/emb_SK.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">-</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+						</div>
+						<div class="game-wrap">
+							<div class="game-tit">
+								<span class="name">LG vs SK</span><span class="time">18:30</span>
+							</div>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_WO.png" alt="" /></div>								
+								<div class="not-entry">엔트리가 등록되지 않았습니다.</div>
+								<div class="btn-area">
+									<!-- <a href="#none" class="btn-app">최종 승인</a> -->
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="javascript:;" class="btn-list readonly">명단 보기></a>
+								</div>
+							</div>
+							<div class="team home">
+								<div class="emb"><img src="../resources/images/emb/emb_LG.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+						</div>
+						<div class="game-wrap">
+							<div class="game-tit">
+								<span class="name">LG vs SK</span><span class="time">18:30</span>
+							</div>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_KT.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+							<div class="team home">
+								<div class="emb"><img src="../resources/images/emb/emb_HT.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+						</div>
+						<div class="game-wrap">
+							<div class="game-tit">
+								<span class="name">LG vs SK</span><span class="time">18:30</span>
+							</div>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_HH.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+							<div class="team home">
+								<div class="emb"><img src="../resources/images/emb/emb_LT.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+						</div>
+						<div class="game-wrap">
+							<div class="game-tit">
+								<span class="name">LG vs SK</span><span class="time">18:30</span>
+							</div>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_SS.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+							<div class="team home">
+								<div class="emb"><img src="../resources/images/emb/emb_NC.png" alt="" /></div>
+								<div class="team-reg"><strong class="tit">구단등록</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="final-app"><strong class="tit">최종승인</strong><span class="date">17.07.12 14:42</span></div>
+								<div class="btn-area">
+									<a href="#none" class="btn-app">최종 승인</a>
+									<a href="#none" class="btn-entry">엔트리 수정</a>
+								</div>
+								<div class="btn-area">
+									<a href="#none" class="btn-list">명단 보기></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+<div id="popup">
+	<div class="tit-area">
+		<span class="tit">
+		SK 와이번스의<br />2018년 1월 16일 엔트리를<br />최종승인 하시겠습니까?
+		</span>
+	</div>
+	<div class="cont-area">
+		<p>최종승인 후 수정은 불가합니다</p>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn-confirm">확 인</a>
+		<a href="#none" class="btn-cancel">취 소</a>
+	</div>
+</div>
+<div id="popup" style="top:390px;">
+	<div class="tit-area">
+		<span class="tit">
+		2018년 1월 26일<br /> KBO 리그 전 구단 엔트리가<br />최종승인 되었습니다. 
+		</span>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn-confirm">확 인</a>
+	</div>
+</div>
+<div class="modal"></div>
+</body>
+</html>

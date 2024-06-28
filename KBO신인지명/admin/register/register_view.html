@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css" />
+	<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="../../resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+			<div class="user">
+				<p>
+					<img src="../../resources/images/main/icon_user.png" />
+					<span class="name">홍길동</span>님
+				</p>
+				<a class="link" href=""><b>회원정보 수정</b></a>
+				<a class="link" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="application">
+				<section class="tab-wrap">
+					<ul class="tab-adm blue">
+						<li>
+							<a href="">신청현황 확인</a>
+						</li>
+						<li class="on">
+							<a href="">선수 조회</a>
+						</li>
+						<li>
+							<a href="">등록 통계</a>
+						</li>
+					</ul>
+				</section>
+				<section class="application-wrap">
+					<div class="application-box">
+						<div class="pic">
+							<div class="pic-img"></div>
+							<p>사진등록<br/><span>(100 X 140)</span></p>
+						</div>
+						<div class="data">
+							<table class="tbl">
+								<colgroup>
+									<col width="100px">
+									<col width="240px">
+									<col width="90px">
+									<col width="">
+								</colgroup>
+								<tr class="first">
+									<th>이름 (한글)</th>
+									<td>
+										<input class="w209" type="text">
+									</td>
+									<th>생년월일</th>
+									<td>
+										<select class="w74">
+											<option></option>
+										</select>
+										<span>년</span>
+										<select class="w57">
+											<option></option>
+										</select>
+										<span>월</span>
+										<select class="w57">
+											<option></option>
+										</select>
+										<span>일</span>
+									</td>
+								</tr>
+								<tr>
+									<th>이름 (영문)</th>
+									<td>
+										<input class="w209" type="text" placeholder="(여권영문명)">
+									</td>
+									<th>휴대폰</th>
+									<td>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>보호자 성명</th>
+									<td>
+										<input class="w209" type="text">
+									</td>
+									<th>보호자 관계</th>
+									<td class="realtion">
+										<input class="w209" type="text">
+										<p>(본인의)</p>
+									</td>
+								</tr>
+								<tr>
+									<th>보호자 휴대폰</th>
+									<td colspan="3">
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+										<span>-</span>
+										<select class="w80">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>이메일</th>
+									<td colspan="3">
+										<input class="w106" type="text">
+										<span>@</span>
+										<input class="w106 mr5" type="text">
+										<select class="w142">
+											<option></option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th class="fixd-tit">
+										<p>주소</p>
+									</th>
+									<td colspan="3">
+										<div>
+											<input class="w209 mb10 mr5" type="text" disabled="disabled" />
+											<a href="" class="btn-post">
+												우편번호 검색	
+											</a>
+											<input type="text">
+										</div>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="line"></div>
+
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="63px">
+								<col width="194px">
+								<col width="63px">
+								<col width="194px">
+								<col width="63px">
+								<col width="194px">
+								<col width="60px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>포지션</th>
+								<td>
+									<select class="w160">
+										<option></option>
+									</select>
+								</td>
+								<th>신장</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(cm)</p>
+									</div>
+								</td>
+								<th>체중</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(kg)</p>
+									</div>
+								</td>
+								<th>100m</th>
+								<td>
+									<div class="unit w160">
+										<input type="text">
+										<p>(초)</p>
+									</div>
+								</td>
+							</tr>
+						</table>
+						
+						<table class="tbl">
+							<colgroup>
+								<col width="144px">
+								<col width="130px">
+								<col width="692px">
+							</colgroup>
+							<tr>
+								<th class="txt-c">
+									병역
+									<p>(병역면제 또는<br/>제2국민역은 사유 작성)</p>
+								</th>
+								<td>
+									<select class="army">
+										<option>미필</option>
+										<option>병역면제</option>
+									</select>
+								</td>
+								<td>
+									<div class="text">
+										<p>사유 :</p>
+										<textarea></textarea>
+									</div>	
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="line"></div>
+
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>
+									초등학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w150" type="text">
+													<span>초등학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w150" type="text">
+													<span>초등학교</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									중학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w150" type="text">
+													<span>중학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w150" type="text">
+													<span>중학교</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									고등학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w150" type="text">
+													<span>고등학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w150" type="text">
+													<span>고등학교</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>대학교</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w150" type="text">
+													<span>대학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>년제 : </span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="date2">
+													<span>(졸업예정 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>해외팀</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li>
+												<p class="group">
+													<input class="w150" type="text">
+													<span>팀</span>
+												</p>
+												<p class="date">
+													<span>(입단 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>실업</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li>
+												<p class="group">
+													<input class="w150" type="text">
+													<span>팀</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="line"></div>
+
+					
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th class="fixd-tit">
+									<p>수상 및<br/>입상경력</p>
+								</th>
+								<td class="add">
+									<table class="tbl2">
+										<colgroup>
+											<col width="150px">
+											<col width="">
+											<col width="214px">
+											<col width="214px">
+										</colgroup>
+										<tr>
+											<th>연월</th>
+											<th>대회명</th>
+											<th>수상명</th>
+											<th>기타</th>
+										</tr>
+										<tr>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th class="fixd-tit">
+									<p>국가대표<br/>경력</p>
+								</th>
+								<td class="add">
+									<table class="tbl2">
+										<colgroup>
+											<col width="200px">
+											<col width="">
+											<col width="200px">
+											<col width="">
+										</colgroup>
+										<tr>
+											<th>기간</th>
+											<th>소속 대표팀</th>
+											<th>기간</th>
+											<th>소속 대표팀</th>
+										</tr>
+										<tr>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+											<td>
+												<input type="text" />
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="line"></div>
+
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th class="fixd-tit">
+									<p>수술 및<br/>병력경력</p>
+								</th>
+								<td class="add">
+									<table class="tbl2">
+										<colgroup>
+											<col width="">
+											<col width="">
+											<col width="">
+											<col width="">
+										</colgroup>
+										<tr>
+											<th>연월</th>
+											<th>부상‧질병 부위</th>
+											<th>사유<p>(경기‧훈련중 부상/기타)</p></th>
+											<th>치료 내용‧기간<p>(수술 여부 등)</p></th>
+											<th>치료 상황<p>(완치/치료중)</p></th>
+											<th>치료 기관<p>(병원명)</p></th>
+										</tr>
+										<tr>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th class="fixd-tit">
+									<p>징계사항</p>
+								</th>
+								<td class="add">
+									<table class="tbl2">
+										<colgroup>
+											<col width="">
+											<col width="">
+											<col width="">
+											<col width="">
+										</colgroup>
+										<tr>
+											<th>연월</th>
+											<th>징계 사유</th>
+											<th>징계종류 및 기간</th>
+											<th>징계 처분 기관</th>
+										</tr>
+										<tr>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+											<td>
+												<input type="" />
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="line"></div>
+
+					<div class="application-box">
+						<div class="agree-final">
+							<div class="agree-box">
+								본인은 2022 KBO 신인 드래프트와 관련하여 KBO 규약 내 신인 드래프트 시행 세칙을 숙지하였으며,<br/>
+								해당 KBO 규약에 의거하여 KBO 리그 소속 구단에 입단하고자 신인 드래프트 참가신청서를 제출합니다.<br/>
+								본인은 참가신청서와 함께 문화체육관광부 학교운동부 폭력근절 지침에 따라 고등학교 생활기록부와 서약서를 제출합니다.<br/><br/>
+								2021년 13월 13일
+							</div>
+							<table class="tbl agree">
+								<colgroup>
+									<col width="470px;">
+								</colgroup>
+								<tr>
+									<th>성명 : </th>
+									<td>
+										<input type="" />
+									</td>
+									<td>
+										(서명)
+									</td>
+								</tr>
+								<tr>
+									<th>보호자 : </th>
+									<td>
+										<input type="" />
+									</td>
+									<td>
+										(서명)(만 20세 미만자에 한해)
+									</td>
+								</tr>
+							</table>
+							<p class="agree-txt">한국야구위원회 총재 귀하</p>
+							<div class="agree-check">
+								<input type="checkbox" id="check" checked>
+								<label for="check">동의합니다.</label>   
+							</div>
+						</div>
+					</div>
+					<div class="line"></div>
+					
+					<div class="application-box">
+						<table class="tbl mb40">
+							<colgroup>
+								<col width="110px">
+								<col width="">
+								<col width="200px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>이름</th>
+								<td>
+									<div class="disabled">홍길동</div>
+								</td>
+								<th class="pl85">생년월일</th>
+								<td>
+									<div class="disabled">2022.22.22</div>
+								</td>
+							</tr>
+							<tr>
+								<th>포지션</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+								<th class="pl85">현소속</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+							</tr>
+							<tr>
+								<th>병역</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+								<th class="pl85">등록구분</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+							</tr>
+							<tr>
+								<th>투구</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+								<th class="pl85">타격</th>
+								<td>
+									<div class="disabled"></div>
+								</td>
+							</tr>
+						</table>
+						<table class="tbl file">
+							<colgroup>
+								<col width="110px">
+								<col width="">
+							</colgroup>
+							<tr class="noti">
+								<th></th>
+								<td>
+									<p class="point">
+										공통사항<br/>
+										· 고등학교 생활기록부(전체내용을 PDF파일 1개로 제출) *파일 비밀번호 있을 시 반드시 기재란에 입력<br/>
+										&nbsp;&nbsp;&nbsp;대학선수 얼리드래프트(해당선수만 추가제출)<br/>
+										· 2학년이 표기된 재학증명서(또는 2학년임을 증빙할 수 있는 이에 준하는 학교 공식 문서)<br/>
+										· 학교장 추천서 스캔본 (양식 별첨)
+									</p>
+								</td>
+							</tr>
+							<tr class="noti">
+								<th>고등학교<br/>생활기록부</th>
+								<td>
+									<input class="w416" type="file"/>
+									<div class="file-box">
+										<button class="del">삭제</button>
+										<label class="name">texttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttexttext.hwp</label>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									파일 비밀번호
+								</th>
+								<td>
+									<input class="w416" type="text"/>
+									<span>파일에 비밀번호가 있을 시 작성해주세요.</span>
+								</td>
+							</tr>
+							<tr class="noti">
+								<th></th>
+								<td>
+									<p>
+										고등학교 학교 생활 세부사항 기록부(학교 생활 기록부 Ⅱ) 중<br/>
+										· 사진 및 ‘인적·학적사항’이 포함된 페이지<br/>
+										· ‘출결 상황’이 포함된 페이지<br/>
+										· ‘행동특성 및 종합의견’이 포함된 페이지<br/>
+										&nbsp;&nbsp;&nbsp;모두 스캔 후 종합하여 PDF파일로 제출하고, 이 외 학교 폭력 관련사항이 기재된 페이지가 있는 경우, <br/>
+										&nbsp;&nbsp;&nbsp;해당 페이지도 포함하여 스캔 후 종합하여 PDF 파일로 제출<br/>
+										&nbsp;&nbsp;&nbsp;(PDF파일만 업로드 가능)
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<th>첨부파일1</th>
+								<td>
+									<input class="w416" type="file"/>
+								</td>
+							</tr>
+							<tr>
+								<th>첨부파일2</th>
+								<td>
+									<input class="w416" type="file"/>
+								</td>
+							</tr>
+							<tr>
+								<th>첨부파일3</th>
+								<td>
+									<input class="w416" type="file"/>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+				<div class="btn-wrap">
+					<a href="">취소</a>
+					<a href="" class="blue">승인불가</a>
+					<a href="" class="blue">수정</a>
+					<a href="" class="submit">승인</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>
+
+<!-- <div class="modal">
+	<div id="popup" class="pop-wrap">
+		<a href="javascript:;" class="btn-close"><img src="../../resources/images/common/icon_close.png" alt="" /></a>
+		<div class="pop-cont">
+			신인지명 신청을 승인 하시겠습니까?
+		</div>
+		<div class="btn-wrap double">
+			<a href="#none" class="btn">확인</a>
+			<a href="#none" class="btn cancel">취소</a>
+		</div>
+	</div>
+</div> -->

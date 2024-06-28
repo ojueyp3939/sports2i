@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 데이터표준화"/>
+    <meta name="author" content="KBO 데이터표준화"/>
+	<meta name="keywords" content="KBO 데이터표준화" />
+	<title>KBO 데이터표준화</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<i class="icon-user"></i>
+					<b>관리자</b>님 환영합니다.
+					<a href="#" class="btn-logout">
+						LOGOUT
+					</a>
+				</div>
+			</div>
+            <div class="gnb">
+				<div class="wrap">
+					<a class="logo" href="schedule_list.html">
+						<img src="resources/images/contents/txt_title.png" alt="KBO 데이터 표준화 시스템" />
+					</a>
+					
+					<ul class="menu">
+						<li>
+							<a href="schedule_list.html">경기 일정 관리</a>
+						</li>
+						<li>
+							<a href="player_list.html">선수 관리</a>
+						</li>
+						<li class="on">
+							<a href="data_live.html">데이터 조회</a>
+						</li>
+						<li>
+							<a href="user_list.html">사용자 관리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lnb depth-3">
+				<div class="wrap">
+					<ul class="menu">
+						<li>
+							<a href="data_state.html">현황</a>
+						</li>
+						<li class="on">
+							<a href="data_master.html">MASTER</a>
+						</li>
+						<li>
+							<a href="data_live.html">LIVE</a>
+						</li>
+						<li>
+							<a href="data_record.html">RECORD</a>
+						</li>
+						<li>
+							<a href="">ETC</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="snb">
+					<ul class="list">
+						<li class="on">
+							<a href="">경기</a>
+						</li>
+						<li>
+							<a href="">선수</a>
+						</li>
+					</ul>
+				</section>
+				<section class="board">
+					<h3>
+						MASTER
+						<div class="btn-controll"> 
+							<select>
+								<option>2023년</option>
+							</select>
+							<select>
+								<option>팀명</option>
+							</select>
+							<input type="number" placeholder="YYYY.MM.DD">
+							<a href="" class="btn search">검색</a>
+						</div>
+					</h3>
+					<div class="scroll-tb">
+						<table class="tb">
+							<tbody>
+								<tr>
+									<th>NO</th>
+									<th>LE_ID</th>
+									<th>SR_ID</th>
+									<th>G_ID</th>
+									<th>SEASON_ID</th>
+									
+									<th>STRIKE_CN</th>
+									<th>BALL_CN</th>
+									<th>OUT_CN</th>
+									<th>B1_BAT_ORDER_NO</th>
+									<th>B2_BAT_ORDER_NO</th>
+
+									<th>B3_BAT_ORDER_NO</th>
+									<th>PIT_P_ID</th>
+									<th>BAT_P_ID</th>
+									<th>BAT_RESULT_IF</th>
+									<th>REG_DT</th>
+								</tr>
+								<tr>
+									
+									<td>1</td>
+									<td>1</td>
+									<td>0</td>
+									<td>20230313HTHH0</td>
+									<td>2023</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>78787</td>
+									<td>11111</td>
+									<td>플라이|플라이|안타|4구|</td>
+									<td>12:15:49 AM</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h4>Table Description</h4>
+					<div class="scroll-tb">
+						<table class="tb">
+							<tbody>
+								<tr>
+									<th>NO</th>
+									<th>Physical Name</th>
+									<th>Logical Name</th>
+									<th>Data Type</th>
+									<th>Len</th>									
+									<th>NULL</th>
+									<th>PK</th>
+									<th>Default</th>
+								</tr>
+								<tr class="pk">
+									<td>1</td>
+									<td>LE_ID</td>
+									<td>리그 ID</td>
+									<td>SMALLINT</td>
+									<td>2</td>
+									<td>NN</td>
+									<td>PK</td>
+									<td></td>
+								</tr>
+								<tr class="pk">
+									<td>2</td>
+									<td>LE_ID</td>
+									<td>리그 ID</td>
+									<td>SMALLINT</td>
+									<td>2</td>
+									<td>NN</td>
+									<td>PK</td>
+									<td></td>
+								</tr>
+								<tr class="pk">
+									<td>3</td>
+									<td>LE_ID</td>
+									<td>리그 ID</td>
+									<td>SMALLINT</td>
+									<td>2</td>
+									<td>NN</td>
+									<td>PK</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>LE_ID</td>
+									<td>리그 ID</td>
+									<td>SMALLINT</td>
+									<td>2</td>
+									<td>NN</td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="descript-box">
+						<p>Table Detail Description</p>
+						<div>
+							ttttest<br/>ttttest
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+
+	<!-- <div class="modal">
+		<div class="popup">
+			<div class="content">
+				<p class="txt">
+					일자 형식(YYYY.MM.DD)에 맞춰 입력해주세요.
+				</p> 
+			</div>
+			<div class="btn-wrap">
+				<a class="btn save">확인</a>
+			</div>
+		</div>
+	</div> -->
+</body>
+</html>

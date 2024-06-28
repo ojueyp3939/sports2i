@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container" class="post">
+			<!-- contents -->
+			<div id="contents" class="solpick index">
+				<!-- <div class="my-pick-info first"> -->
+				<div class="my-pick-info">
+					<div class="date-select">
+						<span class="today">2019.12.28 (금)</span>
+						<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+					</div>
+					<!-- [D] 참여 이력 - 무 -->
+					<!-- <div class="my-point">
+						<img src="resources/images/main/img_pick_p.png">
+					</div> -->
+					<!-- [D] 참여 이력 - 유 -->
+					<div class="my-point">
+						<img class="mascot" src="../2022/resources/images/main/img_new.png">
+						<div class="my">
+							<div class="my-label">마이스코어</div>
+							<p><span>2,000</span><span class="pick">pick</span></dd>
+						</div>
+						<div class="info clear">
+							<dl>
+								<dt>랭킹</dt>
+								<dd><span class="num">3,000</span></dd>
+							</dl> 
+							<dl>
+								<dt>최근 결과</dt>
+								<dd><span class="num">+30</span><span class="pick">pick</span><span class="date">(7월 17일)</span></dd>
+							</dl>
+						</div>
+					</div>
+				</div>
+				<div class="game-wrap index">
+					<div class="game-cont">
+						<div class="quiz-num">Q2</div>
+						<div class="tab-area solpick">
+							<ul class="tab">
+								<li class="q1"><a href="#none">Q1. 팀</a></li>
+								<li class="q2 on"><a href="#none">Q2. OX 퀴즈</a></li>
+								<li class="q3"><a href="#none">Q3. MVP</a></li>
+							</ul>
+
+							<div class="quiz q2-app">
+								<div class="quiz-box">
+									<p class="tit">오늘 경기에서<br/>포수의 도루저지가 존재 한다</p>
+								</div>
+								<ul class="ox-select">
+									<li>
+										<div class="ox-box left">
+											<i class="icon-o"></i>
+										</div>
+										<div class="ox-box right select">
+											<i class="icon-x"></i>
+										</div>
+										<div class="prediction-rate">
+											<div class="tit">쏠픽 투표율<img src="resources/images/main/icon_right.png" alt="아이콘"></div>
+											<div class="rate">
+												<div class="left win">100<span class="unit">%</span></div>
+												<div class="graph">
+													<span class="bar" style="width:40%">40%</span>
+												</div>
+												<div class="right">40<span class="unit">%</span></div>
+											</div>
+										</div>
+									</li>
+								</ul>
+
+								<ul class="etc clear">
+									<li>&#183; 정규시즌 경기당 평균 기록 : 3개
+									</li>
+								</ul>
+
+							</div>
+						
+							<div class="btn-area btn-solpick">
+								<a href="#none" class="btn btn-start">START</a>
+							</div>
+
+								
+							<div class="countdown">
+								<img src="resources/images/sub/icon_time.png" alt="" />
+								마감까지 <span>00:00</span>
+							</div>
+
+							<!-- [D] 경기 취소 -->
+							<div class="quiz noti cancel">
+								<p class="round-state">경기는 모두 <span>취소</span>되었습니다.</p>
+								<img src="resources/images/main/img_no.png">
+							</div>
+							<!-- [D] 경기 없는 날 -->
+							<div class="quiz noti no">
+								<p class="round-state">오늘은 경기가 <span>없습니다.</span></p>
+								<p>쏠픽은 경기 있는 날 진행됩니다!</p>
+								<img src="resources/images/main/img_no.png">
+							</div>
+							<!-- [D] 미참여 -->
+							<div class="quiz noti no-attend">
+								<p class="round-state">6월 13일 경기가 모두 <span>종료</span>되었습니다.</p>
+								<p>
+									<span>쏠픽에 참여하지 않았습니다.</span><br />
+									다음에는 꼭! <span>쏠픽 해주세요</span>
+								</p>
+								<img src="resources/images/main/img_no_attend.png">
+							</div>
+							<!-- [D] 획득 포인트 -->
+							<div class="quiz noti point">
+								<p class="round-state">6월 13일 경기가 모두 <span>종료</span>되었습니다.</p>
+								<dl class="total-point">
+									<dt>획득 포인트 <span class="date">(6월 13일)</span></dt>
+									<dd><span>100</span> pick</dd>
+								</dl>
+								<div class="point-list">
+									<dl>
+										<dt>승리팀 맞추기</dt>
+										<dd><span>100</span> pick</dd>
+									</dl>
+									<dl>
+										<dt>1:10 퀴즈</dt>
+										<dd><span>100</span> pick</dd>
+									</dl>
+									<dl>
+										<dt>보너스</dt>
+										<dd><span>100</span> pick</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+					<script type="text/javascript">tabMenu(0, 'tab-quiz', 'tab-tit', 'quiz');</script>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-result">결과보기</a>
+						<a href="#none" class="btn btn-realtime">실시간 결과 보기</a>
+						<a href="#none" class="btn btn-modify">수정하기</a>
+						<a href="#none" class="btn btn-start">START</a>
+					</div>
+					<div class="btn-area btn-nogame">
+						<a href="#none" class="btn btn-guide">쏠픽이 궁금하다면?</a>
+						<a href="#none" class="btn btn-event-go">이벤트 바로가기</a>
+					</div>
+					<div class="notice-area">
+						<p class="ing"><b class="num">5</b>경기 진행 중입니다.</p>
+						<p>쏠픽은 경기 있는 날 진행됩니다!</p>
+					</div>
+					<div class="ad-wrap">
+						<div class="kakao">
+							<div class="info">
+								<div class="txt">
+									<span class="bul"><img src="resources/images/common/bg_kakao.png" alt="" /></span>
+									<div class="txt-wrap">
+										<p class="script">쏠픽 공유하면 선물이 팡팡!!</p>
+										<p class="guide">공유 횟수 많으면 당첨확률 UP! (1일 최대 5회)</p>
+									</div>
+								</div>
+								<div class="num">
+									<div class="count"><span class="current">1</span>/5</div>
+									<div class="script">공유횟수</div>
+								</div>
+							</div>
+							<div class="btn-area">
+								<a href="#none"><img src="resources/images/common/btn_kakao.png" alt="" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

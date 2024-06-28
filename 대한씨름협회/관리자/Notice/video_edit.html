@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>대한씨름협회 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/content.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<div class="head-line clear">
+					<h1><a href="#none"><img src="../resources/images/common/img_logo.png" alt="대한씨름협회 로고" /></a></h1>
+					<ul class="user-wrap clear">
+						<li class="user"><span>승희포에버</span>님께서 사용 중입니다.(YYYY-MM-DD A/PM HH:MM:SS)</li>
+						<li><a href="#none">로그아웃</a></li>
+					</ul>
+				</div>
+				<!-- 메뉴 -->
+				<nav>
+					<ul class="clear">
+						<li><a href="../Player/player_list.html">선수/지도자 관리</a></li>
+						<li><a href="../Schedule/game_manage.html">경기일정 관리</a></li>
+						<li><a href="../TeamEnroll/team.html">팀 등록 관리</a></li>
+						<li class="on"><a href="../Notice/specialty.html">게시판 관리</a></li>
+						<li><a href="../Member/member.html">회원 관리</a></li>
+						<li><a href="../SeasonWizard/season_wizard.html">시즌 마법사</a></li>
+					</ul>
+				</nav>
+				<!-- 메뉴 -->
+			</div>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<section class="clear">
+			<!-- 중메뉴 -->
+			<aside>
+				<h2>공식영상 관리</h2>
+				<nav>
+					<ul>
+						<li><a href="specialty.html"><span>특기사항 불러오기</span></a></li>
+						<li><a href="contest_winner.html"><span>역대 달성 1위 기록 관리</span></a></li>
+						<li><a href="generation.html"><span>대회 수상자 관리 (과거)</span></a></li>
+						<li class="on"><a href="news.html"><span>보도자료 관리</span></a></li>
+						<li><a href="video.html"><span>공식영상 관리</span></a></li>
+						<li><a href="main_contest.html"><span>메인 대회 이미지 관리</span></a></li>
+					</ul>
+				</nav>
+			</aside>
+			<!-- // 중메뉴 -->
+			<!-- 본문 -->
+			<article>
+				<h3>보도자료 관리</h3>
+				<div class="content">
+					<table class="tbl tbl-type2 mt30" summary="대회수상자">
+						<caption>대회수상자</caption>
+						<colgroup>
+							<col style="width:30%"/>
+							<col style="width:70%"/>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>분류</th>
+								<td>대한씨름협회 보도자료</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td><input type="text" class="ipt w300"></td>
+							</tr>
+							<tr>
+								<th>메인등록 설정</th>
+								<td>
+									<input type="radio" id="Edit">
+									<label for="Edit">설정</label>
+									<input type="radio" id="Delete">
+									<label for="Delete">해지</label>
+								</td>
+							</tr>
+							<tr>
+								<th>썸네일첨부</th>
+								<td><input type="file"></td>
+							</tr>
+							<tr>
+								<th>등록일</th>
+								<td>2019.09.05</td>
+							</tr>
+							<tr>
+								<th>동영상 링크</th>
+								<td><input type="text" class="ipt w600"></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="final-btn">
+						<a href="#none" class="btn-white">뒤로가기</a>
+						<a href="#none" class="btn-blue">등록</a>
+					</div>
+				</div>
+			</article>
+			<!-- // 본문 -->
+		</section>
+		<!-- // container -->
+		<!-- footer -->
+		<footer>
+
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

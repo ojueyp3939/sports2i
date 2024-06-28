@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+			<nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li class="on"><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li class="on"><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<article>
+					<div class="content">
+						<div class="view-box">
+							<h2 class="tit">대한씨름협회 공식 기록원 모집 안내</h2>
+							<ul class="attatch">
+								<li><a class="btn-download" href="#none">2019 대한씨름협회 모집안내.doc</a></li>
+								<li><a class="btn-download" href="#none">2019 대한씨름협회 모집안내.doc</a></li>
+							</ul>
+							<div class="view-info clear">
+								<p class="date"><span>작성일</span>2017-09-05</p>
+								<p class="accrue"><span>조회수</span>608</p>
+							</div>
+							<div class="detail">
+								먀먀미미미밍미미는 밍미미다.<br/>
+								왜냐면 밍미는 먕먀먀므리먀먀므이ㅑㅁㅇ 이기때문이다.
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+				<p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+			</address>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

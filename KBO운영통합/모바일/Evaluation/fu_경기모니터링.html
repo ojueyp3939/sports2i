@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">경기 모니터링</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li><a href="#none"><span>KBO 리그</a></span></li>
+					<li class="on"><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							세부 모니터링 사항
+						</div>
+						<div class="content">
+							<div>
+								<table class="tbl-basic line">
+									<colgroup>
+										<col width="30%">
+										<col width="35%">
+										<col width="35%">
+									</colgroup>
+									<tr>
+										<th>이닝</th>
+										<th>의심사례 있음</th>
+										<th>의심사례 없음</th>
+									</tr>	
+									<tr>
+										<td>1회초</td>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+									</tr>	
+									<tr>
+										<td>1회말</td>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+										<td class="txt-c">
+											<input type="checkbox">
+										</td>
+									</tr>
+								</table>
+							</div>
+							<p class="txt">- 1회 경기 조작 또는 불공적 행위로 의심되는 사항의 존재 여부를 있음, 없음에 체크</p>
+							<p class="txt mb10">- 의심되는 상황에 대하여 자세하게 모니터링하여 그 결과를 아래에 상세히 기술</p>
+														
+							<table class="tbl-basic line">
+								<colgroup>
+									<col width="20%">
+									<col width="80%">
+								</colgroup>
+								<tr>
+									<th>이닝</th>
+									<th>내용</th>
+								</tr>	
+								<tr>
+									<td></td>
+									<td>
+										<textarea placeholder="예) A팀 투수 홍길동이 B팀 3번 타자 임꺽정 타석에서 볼넷을 허용하는 과정이 의심스러움.
+										홍길동은 1,2번 타자를 모두 3구 삼진으로 돌려 세우는 등 좋은 컨디션을 보였으나 3번 타자를 맞아 갑작스런 제구력 난조를 보이며 스트레이트 볼넷을 허용함."></textarea>
+									</td>
+								</tr>	
+								<tr>
+									<td></td>
+									<td>
+										<textarea placeholder="예) A팀 9번타자 한인국이 삼진 아웃을 당할 시 주심 손재웅의 판정이 의심스러움.
+										손재웅을 상대로 B팀 투수 유병석이 던진 2,5,7번째 투구는 스트라이크존을 확연히 벗어나 보였으나 주심은 이를 모두 스크라이크 선언함. 경기 내내 주심이 유지해온 스크라이크존과 비교해보아도 3번의 투구 모두 공 1개반 이상 낮았던 것으로 보임."></textarea>
+									</td>
+								</tr>	
+								<tr>
+									<td>기타</td>
+									<td>
+										<textarea placeholder="도핑(검사) 관련 사항"></textarea>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="group mb0">
+						<div class="header">
+							기본 확인 사항
+						</div>
+						<div class="content">
+							<div>
+								<div class="sub-tit">투수</div>
+								<p class="q-tit">① 1회 첫 타자 볼넷</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">② 1회 초구 볼(비정상적인 투구)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">③ 1회 실점(1회 1실점 이상)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">④ 1회 첫 타자 - 맞혀 주는 듯한 안타</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">⑤ 특정 이닝 설정 후 몇 실점 이상<br/>
+									(예: 4이닝 3실점 등 - 평소와 다른 투구 패턴)
+								</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">타자</div>
+								<p class="q-tit">① 1회 첫 타자가 고의성이 있어 보이는 삼진아웃을 당함</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">② 1회 초구, 타자가 고의성이 있어 보이는 헛스윙을 함</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">③ 1회 1번타자의 아웃(인위적인 견제사, 무리한 도루 등)</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">심판</div>
+								<p class="q-tit">① 승·패를 결정 지을 수 있는 심한 오심성 판정</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">② 비정상적인 1회 초구 볼, 스트라이크 판정</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">③ 비정상적인 1회 볼넷, 삼진 판정</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">감독</div>
+								<p class="q-tit">① 비정상적인 오더 및 선수교체</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">② 비정상적인 선수교체로 인한 실점 또는 역전자초 경기</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">기타</div>
+								<p class="q-tit">① 선수·심판 외 기타 경기조작으로 의심되는 사항 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">② 기타 불공정 행위로 보여지는 사항 여부</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+										<input type="text" placeholder="선수명(감독명,심판명)">
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>스포키 미션 릴레이</title>
+    <link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="header-wrap">
+			<span>이벤트 상세</span>
+			<a class="btn-right" href="">
+				<img src="resources/images/contents/icon_total_close.png" alt="close">
+			</a>
+		</div>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<div class="animated-title">
+					<div class="track">
+						<img src="resources/images/contents/img_marquee.png" alt="2022 Sporki mission">
+					</div>
+				</div>
+				<img class="w100" src="resources/images/contents/event_main.png" alt="스포키 미션 릴레이 2022.11.07 ~ 2022.12.18">
+				<header>
+					<nav class="gnb">
+						<ul class="menu">
+							<li class="on"><a href="badge.html"><span>찾아라!<br/>배지 콜렉터</span></a></li>
+							<li><a href="score_before.html"><span>확신의<br/>스코어 픽!</span></a></li>
+							<li><a href="insta.html"><span>축구 대표팀<br/>응꾸</span></a></li>
+						</ul>
+					</nav>
+				</header>
+				<section class="my-wrap">
+					<p class="user-box">
+						<span>'포키포키91'님</span>
+						<a href="badge_howtouse.html"><img src="resources/images/contents/info_event.png" alt="이벤트 참여 방법"></a>
+					</p>
+					<ul class="card-box">
+						<li class="ticket">
+							<div>
+								<img src="resources/images/contents/img_badge.png" alt="배지 뽑기 응모권">
+								<div class="badge">25</div>
+							</div>
+							<p>배지 뽑기 응모권</p>
+							<a href="" class="on">
+								배지 뽑기
+							</a>
+							<img class="icon" src="resources/images/contents/icon_right_color.png" alt=">">
+						</li>
+						<li class="state">
+							<div>
+								<span class="my">0</span>
+								<span class="total">/32 개</span>
+							</div>
+							<p>보유 배지 현황</p>
+							<a href="">
+								경품 신청하기
+							</a>
+						</li>
+					</ul>
+
+					<div class="clear">
+						<ul class="badge-box">
+							<li class="Qatar point">
+								<div>카타르</div>
+								<p>카타르</p>
+							</li>
+							<li class="Ecuador on">
+								<span class="badge">5</span>
+								<div>에콰도르</div>
+								<p>에콰도르</p>
+							</li>
+							<li class="Netherlands">
+								<div>네덜란드</div>
+								<p>네덜란드</p>
+							</li>
+							<li class="Senegal">
+								<div>세네갈</div>
+								<p>세네갈</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Iran">
+								<div>이란</div>
+								<p>이란</p>
+							</li>
+							<li class="England point">
+								<div>잉글랜드</div>
+								<p>잉글랜드</p>
+							</li>
+							<li class="American">
+								<div>미국</div>
+								<p>미국</p>
+							</li>
+							<li class="Wales">
+								<div>웨일스</div>
+								<p>웨일스</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Mexico">
+								<div>멕시코</div>
+								<p>멕시코</p>
+							</li>
+							<li class="SaudiArabia on">
+								<div>사우디<br/>아라비아</div>
+								<p>사우디아라비아</p>
+							</li>
+							<li class="Argentina point">
+								<div>아르헨티나</div>
+								<p>아르헨티나</p>
+							</li>
+							<li class="Poland">
+								<div>폴란드</div>
+								<p>폴란드</p>
+							</li>
+						</ul>
+
+						<ul class="badge-box">
+							<li class="Denmark">
+								<div>덴마크</div>
+								<p>덴마크</p>
+							</li>
+							<li class="France point">
+								<div>프랑스</div>
+								<p>프랑스</p>
+							</li>
+							<li class="Tunisia">
+								<div>튀니지</div>
+								<p>튀니지</p>
+							</li>
+							<li class="Australia">
+								<div>호주</div>
+								<p>호주</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Germany">
+								<div>독일</div>
+								<p>독일</p>
+							</li>
+							<li class="Japan">
+								<div>일본</div>
+								<p>일본</p>
+							</li>
+							<li class="Spain point">
+								<div>스페인</div>
+								<p>스페인</p>
+							</li>
+							<li class="CostaRica">
+								<div>코스타리카</div>
+								<p>코스타리카</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Belgium point">
+								<div>벨기에</div>
+								<p>벨기에</p>
+							</li>
+							<li class="Canada">
+								<div>캐나다</div>
+								<p>캐나다</p>
+							</li>
+							<li class="Morocco">
+								<div>모로코</div>
+								<p>모로코</p>
+							</li>
+							<li class="Croatia">
+								<div>크로아티아</div>
+								<p>크로아티아</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Cameroon">
+								<div>카메룬</div>
+								<p>카메룬</p>
+							</li>
+							<li class="Serbia">
+								<div>세르비아</div>
+								<p>세르비아</p>
+							</li>
+							<li class="Switzerland">
+								<div>스위스</div>
+								<p>스위스</p>
+							</li>
+							<li class="Brazil point on">
+								<span class="badge">24</span>
+								<div>브라질</div>
+								<p>브라질</p>
+							</li>
+						</ul>
+						
+						<ul class="badge-box">
+							<li class="Uruguay">
+								<div>우루과이</div>
+								<p>우루과이</p>
+							</li>
+							<li class="Korea point">
+								<div>대한민국</div>
+								<p>대한민국</p>
+							</li>
+							<li class="Ghana">
+								<div>가나</div>
+								<p>가나</p>
+							</li>
+							<li class="Portugal">
+								<div>포르투갈</div>
+								<p>포르투갈</p>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="mission-wrap">
+					<img class="w100" src="resources/images/contents/img_tit1.png" alt="오늘의 미션을 완료하고 배지를 모아보세요! 이벤트 기간 : 2022.11.07 - 2022.12.18">
+					<ul class="mission-cont">
+						<li class="mission-box one">
+							<p class="tit">매일 출석 체크하기</p>
+							<div class="txt">매일매일 출석 체크 시<br/>배지 응모권 1개 획득</div>
+							<a class="confirm-btn" href="">출석 체크 확인</a>
+							<img class="image" src="resources/images/contents/mission1.png">
+						</li>
+
+						<li class="mission-box two">
+							<p class="tit">스포키톡 남기기</p>
+							<div class="txt">스포키톡 작성 시 배지 응모권 1개 획득<br/>(일 누적 5개 톡 작성하면 1개 더)</div>
+							<p class="now">0/5회 스포키톡 작성</p>
+							<a class="confirm-btn" href="">스포키톡 남기러 가기</a>
+							<img class="image" src="resources/images/contents/mission2.png">
+						</li>
+
+						<li class="mission-box three">
+							<p class="tit">오늘의 경기 응원톡 남기기</p>
+							<div class="txt">오늘 경기 중 응원톡을 남기면<br/>배지 응모권 1개 획득 (최대 2개까지)</div>
+							<p class="now">0/2회 응원톡 작성</p>
+							<a class="confirm-btn" href="">응원톡 남기러 가기</a>
+							<img class="image" src="resources/images/contents/mission3.png">
+						</li>
+					</ul>
+				</section>
+
+				<section class="gift-wrap">
+					<img class="w100" src="resources/images/contents/img_tit2.png" alt="32개 배지를 모두 모으고 원하는 경품을 선택해보세요! 경품 교환 기간:2022.11.07 - 2022.12.25 / 당첨자 발표 기간:2022.12.30 - 2023.01.06">
+					<img class="w100" src="resources/images/contents/img_tit2_1.png" alt="응모 경품">
+					<ul class="gift-box">
+						<li class="">
+							<img src="resources/images/contents/gift1_1.png" alt="하나투어 해외 여행 상품권">
+							<div class="memo">
+								<p class="tit">하나투어 해외 여행 상품권</p>
+								<p class="txt">
+									1명 <span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+						<li class="">
+							<img src="resources/images/contents/gift1_2.png" alt="시그니엘 디럭스 스위트 룸 숙박권">
+							<div class="memo long">
+								<p class="tit">시그니엘 디럭스 스위트 룸<br/>숙박권</p>
+								<p class="txt">
+									1명 <span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift1_3.png" alt="아이폰 14프로">
+							<div class="memo">
+								<p class="tit">아이폰 14프로</p>
+								<p class="txt">
+									1명<span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift1_4.png" alt="갤럭시 Z 플립4">
+							<div class="memo">
+								<p class="tit">갤럭시 Z 플립4</p>
+								<p class="txt">
+									1명<span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift1_5.png" alt="닌텐도 스위치">
+							<div class="memo">
+								<p class="tit">닌텐도 스위치</p>
+								<p class="txt">
+									3명<span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift1_6.png" alt="애플워치 8세대">
+							<div class="memo">
+								<p class="tit">애플워치 8세대</p>
+								<p class="txt">
+									3명<span>현재 3,000명 신청</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+					
+					
+
+					<img class="w100" src="resources/images/contents/img_tit2_2.png" alt="선착순 경품">
+					<ul class="gift-box">
+						<li>
+							<img src="resources/images/contents/gift2_1.png" alt="BHC 골드킹 콤보 + 콜라">
+							<div class="memo">
+								<p class="tit">BHC 골드킹 콤보 + 콜라</p>
+								<p class="txt only">
+									<span>현재 남은 수량 900개</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift2_2.png" alt="도미노피자 슈퍼슈프림">
+							<div class="memo">
+								<p class="tit">도미노피자 슈퍼슈프림</p>
+								<p class="txt only">
+									<span>현재 남은 수량 900개</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<img src="resources/images/contents/gift2_3.png" alt="스타벅스 아메리카노">
+							<div class="memo">
+								<p class="tit">스타벅스 아메리카노</p>
+								<p class="txt only">
+									<span>현재 남은 수량 900개</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<img class="w100" src="resources/images/contents/event1_noti.png" alt="꼭 확인하세요!">
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+
+<div class="modal">
+	<!-- <div class="pop-wrap">
+		<div class="pop-tit">
+			경품 신청 완료
+		</div>
+		<div class="pop-cont">
+			경품 신청이 완료되었어요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			경품 신청 완료
+		</div>
+		<div class="pop-cont">
+			경품 신청이 이미 완료되었어요.
+			<p class="date">신청일 : 2022.11.07</p>
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			승부 예측 점수 입력 확인
+		</div>
+		<div class="pop-cont">
+			예상 스코어 입력 후에는 수정이 불가합니다.<br/>
+			입력하신 스코어 등록 하시겠어요?
+		</div>
+		<div class="final-box two">
+			<button>취소</button>
+			<button>등록 완료</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			당첨 결과 조회 결과 안내
+		</div>
+		<div class="pop-cont">
+			아쉽지만 이벤트에 당첨되지 않았습니다.<br/>
+			이벤트에 참여해 주셔서 감사드립니다.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			인증시간 초과
+		</div>
+		<div class="pop-cont">
+			인증시간이 초과되었어요.<br/>
+			다시 인증을 요청해주세요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			품절 안내
+		</div>
+		<div class="pop-cont">
+			선택하신 경품이 품절되었어요.<br/>
+			다른 경품을 선택해주세요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+
+	 <div class="pop-wrap">
+		<div class="pop-tit">
+			미션 수행 완료
+		</div>
+		<div class="pop-cont">
+			<p class="mb10">출석체크 완료!</p>
+			배지 교환 응모권 1개를 획득했어요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div> -->
+
+	<div class="pop-wrap gift">
+		<div class="pop-tit">
+			경품 교환 안내
+		</div>
+		<div class="pop-cont">
+			<img class="gift" src="resources/images/contents/img_gift.png" alt="경품"><br/>
+			배지 32개를 모두 모았어요.<br/>아래 ‘경품 교환하기’ 버튼을 누르고<br/>원하는 경품을 선택해보세요.
+			<p class="date">경품 교환 기간 : 2022.11.07 - 2022.12.25</p>
+		</div>
+		<div class="final-box two">
+			<button>다음에 하기</button>
+			<button>경품 교환하기</button>
+		</div>
+	</div>
+
+	<!-- 스포키톡 미션 수행 팝업 -->
+	<!-- <div class="pop-wrap">
+		<div class="pop-tit">
+			스포키톡을 남겨주세요!
+		</div>
+		<div class="pop-cont">
+			관심있는 스포키 뉴스/영상에<br/>스포키톡을 작성하고<br/>배지 응모권을 받아보세요.
+		</div>
+		<div class="final-box two">
+			<button>다음에 하기</button>
+			<button>응원톡 남기기</button>
+		</div>
+	</div> 
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			미션 수행 완료
+		</div>
+		<div class="pop-cont">
+			<p>스포키톡 작성 완료</p>
+			배지 교환 응모권 1개를 획득했어요.<br/>하루 스포키톡 5개 작성 시 응모권 한개 더 드려요.
+		</div>
+		<div class="final-box two">
+			<button>다음에 하기</button>
+			<button>응원톡 남기기</button>
+		</div>
+	</div>
+	
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			미션 수행 완료
+		</div>
+		<div class="pop-cont">
+			<p>스포키톡 5개 작성 완료</p>
+			배지 교환 응모권 1개를 획득했어요.<br/>오늘 스포키톡 5개 작성하셔서 <span>한개 더</span> 드려요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div> -->
+
+	<!-- 응원톡 미션 수행 팝업 -->
+	<!-- <div class="pop-wrap">
+		<div class="pop-tit">
+			응원톡을 남겨주세요!
+		</div>
+		<div class="pop-cont">
+			오늘의 경기를 확인하고<br/>응원톡에 응원 메시지를 남겨주시면<br/>배지 응모권을 획득할 수 있어요.
+		</div>
+		<div class="final-box two">
+			<button>다음에 하기</button>
+			<button>응원톡 남기기</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			미션 수행 완료
+		</div>
+		<div class="pop-cont">
+			<p>응원톡 작성 완료</p>
+			배지 교환 응모권 N개를 획득했어요.<br/>경기별 응원톡을 모두 남기고 응모권을 받아보세요.
+		</div>
+		<div class="final-box two">
+			<button>다음에 하기</button>
+			<button>응원톡 남기기</button>
+		</div>
+	</div>
+
+	<div class="pop-wrap">
+		<div class="pop-tit">
+			미션 수행 완료
+		</div>
+		<div class="pop-cont">
+			<p>응원톡 작성 완료</p>
+			배지 교환 응모권 N개를 획득했어요.
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div> -->
+</div>

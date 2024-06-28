@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+            var myScroll1 = new IScroll('#card', {
+                eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+            });
+        }
+		$(document).ready(function(){
+			$(".gnb li a").on('mouseover',function() {
+				$("header").addClass('on');
+				$(".lnb").addClass('dp-b');
+				if ($(".lnb").hasClass('dp-b')) {
+					$(this).parent().find('a').addClass('on');
+				}
+			}).on('mouseover',function() {
+				$(this).removeClass('on');
+			});
+
+			$(".lnb").on('mouseover',function() {
+				// $(this).parent().find('a').addClass('on');
+				$("header").addClass('on');
+				$(".lnb").addClass('dp-b');
+			}).on('mouseout',function() {
+				$(this).parent().find('a').removeClass('on');
+			});
+
+			$("header").on('mouseout',function(){
+				$("header").removeClass('on');
+				$(".lnb").removeClass('dp-b');
+			});
+
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/btn_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+			
+		});
+</script>
+</head>
+
+<body onload="loaded()" class="athletic">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="main">
+			<div class="bridge-wrap">
+				<ul>
+					<li class="on">
+						<a href="">
+							전문체육 씨름
+						</a>
+					</li>
+					<li>
+						<a href="">
+							민속씨름
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="main.html"><img src="resources/images/common/logo.png" alt="씨름 아카이브 센터"></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb clear">
+						<li>
+							<a href="Archive/index.html">씨름 아카이브 센터란?</a>
+						</li>
+						<li>
+							<a href="Livecenter/index.html">라이브센터</a>
+						</li>
+						<li>
+							<a href="">디지털 씨름 박물관</a>
+						</li>
+						<li>
+							<a href="Game/monthly_schedule.html">일정/결과</a>
+						</li>
+						<li>
+							<a href="Rank/season.html">순위</a>
+						</li>
+						<li>
+							<a href="Record/top.html">기록</a>
+						</li>
+						<li>
+							<a href="Player/player_team.html">선수/팀</a>
+						</li>
+						<li>
+							<a href="News/broadcast_news.html">NEWS</a>
+						</li>
+					</ul>
+					<ul class="lnb clear dp-none">
+						<li>
+							<dl>
+								<dt>씨름 아카이브 센터란?</dt>
+								<dd><a href="Archive/index.html">씨름 아카이브 센터 소개</a></dd>
+							</dl>
+							<dl>
+								<dt>기록</dt>
+								<dd><a href="Record/top.html">TOP 5</a></dd>
+								<dd><a href="Record/record.html">기록실</a></dd>
+								<dd><a href="Record/continuity.html">연속기록</a></dd>
+								<dd><a href="Record/alltime.html">역대기록</a></dd>
+								<dd><a href="Record/prediction.html">예측달성기록</a></dd>
+								<dd><a href="Record/match.html">맞대결기록</a></dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>라이브센터</dt>
+								<dd><a href="Livecenter/index.html">라이브센터</a></dd>
+							</dl>
+							<dl>
+								<dt>선수/팀</dt>
+								<dd><a href="Player/player_team.html">남자</a></dd>
+								<dd><a href="Player/player_team.html">여자</a></dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>디지털 씨름 박물관</dt>
+								<dd><a href="">데이터 필름 센터</a></dd>
+								<dd><a href="">씨름전시관</a></dd>
+							</dl>
+							<dl>
+								<dt>NEWS</dt>
+								<dd><a href="">보도자료</a></dd>
+							</dl>
+						</li>						
+						<li>
+							<dl>
+								<dt>일정/결과</dt>
+								<dd><a href="Game/monthly_schedule.html">대회 일정</a></dd>
+								<dd><a href="Game/schedule.html">경기결과</a></dd>
+								<dd><a href="Game/prize_winner.html">대회 입상자</a></dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dt>순위</dt>
+								<dd><a href="Rank/season.html">시즌 별 순위</a></dd>
+								<dd><a href="Rank/contest.html">대회 별 순위</a></dd>
+								<dd><a href="Rank/cons_victories.html">최다 연승 순위</a></dd>
+								<dd><a href="Rank/prize_money.html">상금 순위</a></dd>
+							</dl>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="cont card scroll-wrap" id="card">
+					<div class="scroller">
+						<ul class="card-wrap athletic">
+							<li class="info-box">
+								평화의 도시 거제 거제장사씨름대회
+								<p>9월 9일</p>
+							</li>
+							<li class="grade-box">
+								남자<br/>태백급
+							</li>
+							<li>
+								<p>
+									경기 종료
+									<span>태백 32강 1조</span>
+								</p>
+								<ul class="play-list">
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>1</span>
+										</div>
+									</li>
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>1</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									경기 중
+									<span>태백 32강 1조</span>
+								</p>
+								<ul class="play-list">
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>10-8</span>
+										</div>
+									</li>
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>99-99</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li class="grade-box">
+								남자<br/>태백급
+							</li>
+							<li>
+								<p>
+									경기 종료 (기권)
+									<span>태백 32강 1조</span>
+								</p>
+								<ul class="play-list">
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>승</span>
+										</div>
+									</li>
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>패</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<p>
+									경기 중
+									<span>태백 32강 1조</span>
+								</p>
+								<ul class="play-list">
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>10-8</span>
+										</div>
+									</li>
+									<li>
+										<img src="resources/images/main/test_emb.png" alt="emb">
+										<div>
+											홍길동
+											<p>정읍시청단풍미인씨름단씨름단</p>
+											<span>99-99</span>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="cont main">
+					<div class="inner">
+						<div class="video">
+						</div>
+						<!-- 경기중 -->
+						<!-- <div class="banner live">
+							<a href="" class="left">
+								<img src="resources/images/common/icon_left_round.png" alt="left">
+							</a>
+							<div class="banner-txt">
+								<p class="txt top">위더스 제약 2019</p>
+								<p class="tit">설날장사씨름대회</p>
+								<p class="txt md">2.1(금)~6(수), 전라북도 정읍시 (국민체육센터)</p>
+								<a href="" class="btn-main">
+									경기 일정·결과
+								</a>
+							</div>
+							<a href="" class="right">
+								<img src="resources/images/common/icon_right_round.png" alt="right">
+							</a>
+						</div> -->
+						<!-- 경기전, 경기종료 -->
+						<div class="banner">
+							<a href="" class="left">
+								<img src="resources/images/common/icon_left_round.png" alt="left">
+							</a>
+							<div class="banner-txt">
+								<p class="txt top">위더스 제약 2019</p>
+								<p class="tit">설날장사씨름대회</p>
+								<p class="txt md">2.1(금)~6(수), 전라북도 정읍시 (국민체육센터)</p>
+								<a href="" class="btn-main">
+									경기 일정·결과
+								</a>
+							</div>
+							<a href="" class="right">
+								<img src="resources/images/common/icon_right_round.png" alt="right">
+							</a>
+						</div>
+
+						<!-- 뉴스 & SNS & VOD -->
+						<h2 class="title">
+							<a href="#none"><img src="resources/images/main/icon_tit1.png" alt="뉴스">뉴스</a>
+							
+							<ul class="sns-list">
+								<li><a href="#none"><img src="resources/images/main/icon_the.png" alt="더 씨름 라이브 공식 채널"></a></li>
+								<li><a href="#none"><img src="resources/images/main/icon_series.png" alt="씨리즈 공식 채널"></a></li>
+								<li><a href="#none"><img src="resources/images/main/icon_tv.png" alt="샅바 TV 채널"></a></li>
+								<li><a href="#none"><img src="https://www.instagram.com/ssireum_official/" alt="인스타 공식 채널"></a></li>
+								<li><a href="#none"><img src="resources/images/main/icon_fb.png" alt="페이스북 공식 채널"></a></li>
+								<li><a href="https://www.youtube.com/channel/UCHPYXfUitZ5OWTxp3lwKPtw"><img src="resources/images/main/icon_youtube.png" alt="유튜브 공식 채널"></a></li>
+								<li><a href="http://ssireum.sports.or.kr/gnb/index.php"><img src="resources/images/main/icon_kpso.png" alt="대한씨름협회 공식 채널"></a></li>
+							</ul>
+						</h2>
+						<ul class="news-list">
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img1.png">
+									<p class="tit">울주군청 우승</p>
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img1.png">
+									<p class="tit">울주군청 우승</p>
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img1.png">
+									<p class="tit">울주군청 우승</p>
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img1.png">
+									<p class="tit">울주군청 우승</p>
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+								</a>
+							</li>
+						</ul>
+
+						<h2 class="title">
+							<a href="#none">
+								<img src="resources/images/main/icon_tit2.png" alt="VOD">VOD
+							</a>
+							<ul class="mini-tab"> 
+								<li><a href="">테마</a></li>
+								<li><a href="">최신</a></li>
+								<li class="on"><a href="">인기</a></li>
+							</ul>
+						</h2>
+						
+						<ul class="vod-list">
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="vod-list dp-none">
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="vod-list dp-none">
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<img src="resources/images/main/test_img2.png" alt="사진">
+									<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는 이끄는</p>
+									<p class="date">2021-01-01</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- 일정 & 순위 & 입상자 -->
+				<section class="cont winner">
+					<div class="inner">
+						<!-- 경기 일정 -->
+						<div class="sche-wrap">
+							<h2 class="title">
+								<a href="/Rank/season.html"><img src="resources/images/main/icon_tit4.png" alt="sche">안산김홍도장사씨름대회 경기 일정</a>
+							</h2>
+							<div class="day-wrap">
+								<ul class="day-box">
+									<li class="prev">
+										<a href="#"></a>
+									</li>
+									<li class="day-tit">
+										<span class="date">2019.08.15 (목)</span> <input id="btnCalendar">
+									</li>
+									<li class="next">
+										<a href="#"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="double">
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">남자</a></li>
+										<li class="on"><a href="">여자</a></li>
+									</ul>
+								</div>
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">태백</a></li>
+										<li class="on"><a href="">금강</a></li>
+										<li><a href="">백두</a></li>
+										<li><a href="">한라</a></li>
+										<li><a href="">단체</a></li>
+									</ul>
+								</div>
+							</div>
+							<ul class="sub-tab"> 
+								<li><a href="">초등부</a></li>
+								<li><a href="">중학부</a></li>
+								<li class="on"><a href="">고등부</a></li>
+								<li><a href="">대학부</a></li>
+								<li><a href="">일반부</a></li>
+							</ul>
+							<div class="sche-box preview">
+								<div class="sche-list default">
+									<i class="icon default-g"></i>
+									<p>경기 일정이 없습니다.</p>
+								</div>
+								<div class="sche-list end">
+									<div class="player win">
+										<div class="pic">
+											<img src="resources/images/main/default_pic.png">
+										</div>
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+									</div>
+									<div class="versus">
+										<p><span>16강</span>정읍 국민체육센터</p>
+										<i class="vs-ico"></i>
+										<div>
+											<div class="state">
+												경기종료
+											</div>
+											<div class="state play">
+												경기영상
+											</div>
+										</div>
+									</div>
+									<div class="player">
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+										<div class="pic">
+											<img src="resources/images/main/default_pic.png">
+										</div>
+									</div>
+								</div>
+								<div class="sche-list now">
+									<div class="player">
+										<div class="pic">
+											<img src="">
+										</div>
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+									</div>
+									<div class="versus">
+										<p><span>16강</span>정읍 국민체육센터</p>
+										<i class="vs-ico"></i>
+										<div class="state">
+											경기중
+										</div>
+									</div>
+									<div class="player">
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+										<div class="pic">
+											<img src="">
+										</div>
+									</div>
+								</div>
+								<div class="sche-list before">
+									<div class="player">
+										<div class="pic">
+											<img src="">
+										</div>
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+									</div>
+									<div class="versus">
+										<p><span>16강</span>정읍 국민체육센터</p>
+										<i class="vs-ico"></i>
+										<div class="state">
+											경기전
+										</div>
+									</div>
+									<div class="player">
+										<div class="info">
+											<p class="name">윤정수</p>
+											<p class="sosok">영암군민속씨름단</p>
+											<p class="result">WIN</p>
+										</div>
+										<div class="pic">
+											<img src="">
+										</div>
+									</div>
+								</div>
+								<a href="" class="btn-more">
+									경기 더보기
+								</a>
+							</div>
+						</div>
+						<div class="ranking-wrap">
+							<h2 class="title">
+								<a href="/Rank/season.html"><img src="resources/images/main/icon_tit4.png" alt="ranking">2022 민속 씨름 개인 및 단체 승점 순위</a>
+							</h2>
+							
+							<div class="double">
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">남자</a></li>
+										<li class="on"><a href="">여자</a></li>
+									</ul>
+								</div>
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">태백</a></li>
+										<li class="on"><a href="">금강</a></li>
+										<li><a href="">백두</a></li>
+										<li><a href="">한라</a></li>
+									</ul>
+								</div>
+							</div>
+							<ul class="sub-tab"> 
+								<li><a href="">초등부</a></li>
+								<li><a href="">중학부</a></li>
+								<li class="on"><a href="">고등부</a></li>
+								<li><a href="">대학부</a></li>
+								<li><a href="">일반부</a></li>
+							</ul>
+							<ul class="ranking-list">
+								<li>
+									<div class="pic"><img src="resources/images/main/default_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>1</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>2</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>3</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>4</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<!-- <li class="default">
+									<i class="icon default-g"></i>
+									<p>입상자 내역이 없습니다.</p>
+								</li> -->
+							</ul>
+						</div>
+						<div class="ranking-wrap">
+							<h2 class="title">
+								<a href="Game/prize_winner.html"><img src="resources/images/main/icon_tit5.png" alt="ranking">2019 설날장사씨름대회 입상자</a>
+							</h2>
+							
+							<div class="double">
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">남자</a></li>
+										<li class="on"><a href="">여자</a></li>
+									</ul>
+								</div>
+								<div class="team-box">
+									<ul class="team-tab">
+										<li><a href="">태백</a></li>
+										<li class="on"><a href="">금강</a></li>
+										<li><a href="">백두</a></li>
+										<li><a href="">한라</a></li>
+									</ul>
+								</div>
+							</div>
+							<ul class="sub-tab"> 
+								<li><a href="">초등부</a></li>
+								<li><a href="">중학부</a></li>
+								<li class="on"><a href="">고등부</a></li>
+								<li><a href="">대학부</a></li>
+								<li><a href="">일반부</a></li>
+							</ul>
+							<ul class="ranking-list">
+								<li>
+									<div class="pic"><img src="resources/images/main/default_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>1</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>2</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>3</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<li>
+									<div class="pic"><img src="resources/images/main/test_pic.png"></div>
+									<div class="info">
+										<p class="num"><span>4</span>위</p>
+										<p class="name">홍길동</p>
+										<p class="sosok">울랄랄라씨름단</p>
+										<p class="score"><span>20</span>승<span>5</span>패 / <span>1,235</span>점</p>
+									</div>
+								</li>
+								<!-- <li class="default">
+									<i class="icon default-g"></i>
+									<p>입상자 내역이 없습니다.</p>
+								</li> -->
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- 팀 소개 -->
+				<section class="cont team">
+					<div class="inner">
+						<h2 class="title">
+							<a href=""><img src="resources/images/main/icon_tit6.png" alt="team">팀(학교) 소개</a>
+						</h2>
+						<ul class="location">
+							<li class="on">
+								서울특별시
+							</li>
+							<li>
+								부산광역시
+							</li>
+							<li>
+								대구광역시
+							</li>
+							<li>
+								인천광역시
+							</li>
+							<li>
+								광주광역시
+							</li>
+							<li>
+								대전광역시
+							</li>
+							<li>
+								울산광역시
+							</li>
+							<li>
+								세종특별자치시
+							</li>
+							<li>
+								경기도
+							</li>				
+							<li>
+								강원도
+							</li>
+							<li>
+								충청북도
+							</li>
+							<li>
+								충청남도
+							</li>
+							<li>
+								전라북도
+							</li>
+							<li>
+								전라남도
+							</li>
+							<li>
+								경상북도
+							</li>
+							<li>
+								경상남도
+							</li>
+							<li>
+								제주특별자치도
+							</li>
+						</ul>
+						<div class="map-wrap">
+							<!-- bg_map1 ~ 17 -->
+							<img src="resources/images/main/bg_map1.png" alt="서울특별시">
+						</div>
+						<div class="location-wrap">
+							<div class="location-tit">서울특별시</div>
+							<ul class="location-list">
+								<li class="on">블라블라</li>
+								<li>블라블라</li>
+								<li>블라블라</li>
+								<li>블라블라</li>
+								<li>블라블라</li>
+							</ul>
+						</div>
+						<div class="team-wrap">
+							<div class="logo">
+								<img src="resources/images/main/default_team.png">
+							</div>
+							<div>
+								<div class="team-tit">팀 정보</div>
+								<table summary="팀정보">
+									<caption>팀정보</caption>
+									<colgroup>
+										<col width="115px">
+										<col width="*">
+									</colgroup>
+									<tr>
+										<th>팀 명</th>
+										<td>부산갈매기 씨름단</td>
+									</tr>
+									<tr>
+										<th>시도 및 시군구</th>
+										<td>부산광역시</td>
+									</tr>
+									<tr>
+										<th>주소</th>
+										<td>
+											<p>부산광역시 동래구 사직동 749-6</p>
+										</td>
+									</tr>
+									<tr>
+										<th>대표자명</th>
+										<td>오거돈</td>
+									</tr>
+									<tr>
+										<th>감독</th>
+										<td>김태우</td>
+									</tr>
+									<tr>
+										<th>코치</th>
+										<td>오흥민</td>
+									</tr>
+									<tr>
+										<th>창단일</th>
+										<td>2005년 12월 12일</td>
+									</tr>
+									<tr>
+										<th>전화</th>
+										<td>070-7618-9954</td>
+									</tr>
+								</table>
+								<div class="team-tit">선수단</div>
+								<ul class="team-player">
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+									<li>오흥민</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 위례성대로 12길 5 아이베빌딩 5층</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br/>Copyright ⓒ 대한씨름협회. All rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>
+
+
+<!-- <div class="modal">
+	<div class="popup-wrap vod">
+		<a class="close" href="">
+			<img src="resources/images/common/icon_close.png" alt="close">
+		</a>
+		<a class="btn-left" href="">
+			<img src="resources/images/common/icon_left.png" alt="left-btn">
+		</a>
+		<a class="btn-right" href="">
+			<img src="resources/images/common/icon_right.png" alt="right-btn">
+		</a>
+		<div class="popup-cont">
+			<div style="background-color:yellow;height:580px;">
+				영상자리
+			</div>
+			<p>설날장사씨름대회 허선행 vs 한다복</p>
+			<p class="date">2021.05.05(토) I 개인전 I 태백 I 1조 32강 I 원통체육관</p>
+		</div>
+	</div>
+</div> -->

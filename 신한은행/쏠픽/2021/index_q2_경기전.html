@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">쏠픽하기</a></li>
+					<li><a href="javascript:;">쏠쏠한 가이드</a></li>
+					<li><a href="javascript:;">MY 쏠픽</a></li>
+					<li><a href="javascript:;">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="solpick bg">
+				<div class="date-select play">
+					<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018.06.13</span>
+					<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+					<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+				</div>
+				<div class="game-wrap">
+					<div class="game-cont">
+						<div class="tab-area solpick">
+							<ul class="tab">
+								<li class="q1"><a href="#none">Q1 승리팀 맞추기</a></li>
+								<li class="q2 on"><a href="#none">Q2 1:10 퀴즈</a></li>
+							</ul>
+							<div class="quiz q2-app before">
+								<div class="quiz-box">
+									<p class="tit">선발투수가 가장 많은 투구수를<br />기록할 팀은?</p>
+									<div class="top-record">
+										<div class="top-img">
+											<div class="emb-box">
+												<img src="resources/images/emb/emb_135x87_WO.png" alt="" />
+											</div>
+											<dl class="rate">
+												<dt class="tit">현재 투표</dt>
+												<dd class="data">
+													<span>1</span>위
+													<span>78.9</span>%
+												</dd>
+												<dd class="txt">
+													SK 선발 김광현
+												</dd>
+											</dl>
+										</div>
+										<div class="top-info02">
+											<dl class="aver">
+												<dt>시즌 경기당 평균 득점</dt>
+												<dd>5.8</dd>
+											</dl>
+											<dl class="recent">
+												<dt>최근 3경기 득점</dt>
+												<dd>10-7-11</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+								<ul class="select-list">
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_LG.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/embR_119x78_LT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_KT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_NC.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/embR_119x78_WO.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_SK.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_HT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_OB.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="select">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_SS.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_119x78_HH.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+							<p class="pt10">* 각 팀에 예정된 선발투수의 시즌 평균 이닝수</p>
+						</div>
+					</div>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-app">다음</a>
+					</div>
+				</div>
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>
+<!-- <div class="modal"></div>
+<div id="Popup" class="in-img">
+	<div class="cont">
+		<img src="resources/images/sub/bg_no_participation2.png">
+		<p class="txt blue">모든 퀴즈를 풀어주세요!</p>
+	</div>
+	<div class="btn-area">
+		<a href="#none" class="btn btn-confirm">Q1 보기</a>
+	</div>
+</div> -->

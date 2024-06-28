@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 SOL 빙고</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/bingo.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		var swiper = new Swiper('.swiper-menu', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			mousewheel: true,
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<a class="btn-back" href=""></a>
+			<span>신한 SOL 빙고</span>
+			<a class="btn-close" href=""></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<div class="tab-area">
+					<ul class="tab">
+						<li><a href="../mybingo/ranking.html">월간랭킹</a></li>
+						<li class="on"><a href="../mybingo/event.html">이벤트</a></li>
+					</ul>
+				</div>
+				<img src="../resources/images/sub/img_event.png" alt="마이빙고 - 빙고를 완성하고 총 상금 500만원에 도전하세요!">
+			</div>
+		<!-- // contents -->
+		</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

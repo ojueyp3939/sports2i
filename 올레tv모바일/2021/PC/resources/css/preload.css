@@ -1,0 +1,32 @@
+﻿#contents #SubCont .today-games .game-list {
+    min-height: 86px;
+}
+
+#TeamRecord .scroller .team-list {
+    min-height: 49px;
+}
+
+.top-list {
+    min-height: 140px;
+}
+
+
+#MainCont .review .info-box .team.away .team-info .emb {
+    min-height: 14.478vw;
+}
+
+#MainCont .review .info-box .team.home .team-info .emb {
+    min-height: 14.478vw;
+}
+
+#MainCont .analysis .info-box .team.away .team-info .emb {
+    min-height: 14.478vw;
+}
+
+#MainCont .analysis .info-box .team.home .team-info .emb {
+    min-height: 14.478vw;
+}
+
+@media(min-width:1024px) {
+    #MainCont .review .info-box .team.away .team-info .emb {min-height:10.0586vw;}
+}

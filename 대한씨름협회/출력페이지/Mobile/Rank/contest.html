@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+	function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll3 = new IScroll('.scroll-box', {
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+	</script>
+</head>
+
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+			<nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li class="on"><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li class="on"><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전(승점) -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap three">
+							<dl class="tab">
+								<dd class="on"><a href="">개인전(승점)</a></dd>
+								<dd><a href="">개인전(승률)</a></dd>
+								<dd><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>설날</option>
+										</select>
+									</li>
+									<li>
+										<span>체급</span>
+										<select>
+											<option>태백</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<p class="btw-txt">※ 대회별 개인전 포인트 순위<span class="date">(2019.07.22 기준)</span></p>
+						<div class="tbl-wrap">
+							<table class="tbl" summary="대회별 순위">
+								<caption>대회별 순위</caption>
+								<thead>
+									<tr>
+										<th>순위</th>
+										<th>이름</th>
+										<th>소속팀</th>
+										<th>체급</th>
+										<th class="sorting">포인트</th>
+										<th>승</th>
+										<th>패</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>김현수</td>
+										<td>영암군민속씨름단</td>
+										<td>태백</td>
+										<td>10263</td>
+										<td>19</td>
+										<td>3</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<!-- 개인전(승률) -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap three">
+							<dl class="tab">
+								<dd><a href="">개인전(승점)</a></dd>
+								<dd class="on"><a href="">개인전(승률)</a></dd>
+								<dd><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>설날</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<p class="btw-txt">※ 대회별 개인전 선수 순위 <span class="date">(2019.07.22 기준)</span></p>
+						<div class="tbl-wrap">
+							<table class="tbl fixed" summary="대회별 순위">
+								<caption>대회별 순위</caption>
+								<colgroup>
+									<col width="20%">
+									<col width="30%">
+									<col width="*">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>순위</th>
+										<th>이름</th>
+										<th>소속팀</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+											<td>1</td>
+											<td>김현수</td>
+											<td>제주특별자치도청씨름단</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="scroll-box">
+								<div class="scroller">
+									<table class="tbl" summary="대회별 순위">
+										<caption>대회별 순위</caption>
+										<thead>
+											<tr>
+												<th>체급</th>
+												<th class="sorting">승</th>
+												<th class="sorting">패</th>
+												<th class="sorting">승률</th>
+												<th>최근 5경기</th>
+												<th>연속</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>태백</td>
+												<td>19</td>
+												<td>3</td>
+												<td>86.36</td>
+												<td>승승승승승</td>
+												<td>6연승</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+				<!-- 단체전 -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap three">
+							<dl class="tab">
+								<dd><a href="">개인전(승점)</a></dd>
+								<dd><a href="">개인전(승률)</a></dd>
+								<dd class="on"><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<div class="select-wrap">
+							<div class="select-box">
+								<ul>
+									<li>
+										<span>시즌</span>
+										<select>
+											<option>2019</option>
+										</select>
+									</li>
+									<li>
+										<span>대회</span>
+										<select>
+											<option>설날</option>
+										</select>
+									</li>
+								</ul>
+							</div>
+							<a class="btn-search" href=""><span>검색</span></a>
+						</div>
+						<p class="btw-txt">※ 대회별 단체전 순위 <span class="date">(2019.07.22 기준)</span></p>
+						<div class="tbl-wrap">
+							<table class="tbl fixed" summary="대회별 순위">
+								<caption>대회별 순위</caption>
+								<thead>
+									<tr>
+										<th>순위</th>
+										<th>팀</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>영암군민속씨름단</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="scroll-box">
+								<div class="scroller">
+									<table class="tbl" summary="대회별 순위">
+										<caption>대회별 순위</caption>
+										<thead>
+											<tr>
+												<th class="sorting">승</th>
+												<th class="sorting">패</th>
+												<th class="sorting">승률</th>
+												<th>최근 5경기</th>
+												<th>연속</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>19</td>
+												<td>3</td>
+												<td>86.36</td>
+												<td>승승승승승</td>
+												<td>6연승</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="pagenation">
+							<a class="prev" href="">
+								<span>prev</span>
+							</a>
+							<span class="num">
+								<a href="">1</a>
+								<a href="">2</a>
+								<a class="on" href="">3</a>
+								<a href="">4</a>
+								<a href="">5</a>
+							</span>
+							<a class="next" href="">
+								<span>next</span>
+							</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+				<p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+			</address>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

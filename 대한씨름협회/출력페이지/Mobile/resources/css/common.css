@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+input[type="text"] {-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0px;}
+select::-ms-expand {display:none}
+select {height:28px;padding:3px 25px 3px 10px;margin-right:10px;border:1px solid #ccc;border-radius:2px;font-size:1.2rem;background:#fff url("../images/common/ic_arrow_bottom.png") no-repeat 95% 50%/9px;appearance:none;-webkit-appearance:none;cursor:pointer;}
+select option {font-size:1.2rem;}
+
+.select-wrap {margin-bottom:60px;text-align:center;}
+.select-wrap::after {content:"";display:block;clear:both;}
+.select-wrap .select-box {padding:16px 3px 0;margin:0 12px 20px;background:#f4f4f4}
+.select-wrap .select-box::after {content:"";display:block;clear:both;}
+.select-wrap .select-box > ul li {position:relative;float:left;width:50%;padding:0 9px 0 9px;margin-bottom:12px;font-size:1.3rem;text-align:left;}
+.select-wrap .select-box > ul li span {display:block;height:14px;font-size:1.3rem}
+.select-wrap .select-box > ul li select {width:100%;margin:5px 0 0 0;}
+.select-wrap .select-box > ul li input {width:100%;height:28px;padding:0 10px;margin:5px 9px 0 0;border:1px solid #ccc;border-radius:2px;}
+.select-wrap .select-box > ul li input::placeholder {font-size:1.2rem;color:#666}
+.select-wrap .select-box > ul li .ui-datepicker-trigger {position:absolute;top:4px;right:15px;}
+.select-wrap .select-box > ul li.in-input {width:100%}
+.select-wrap .select-box > ul li.in-input input {float:left;width:calc(50% - 9px);}
+.select-wrap .select-box > ul li.in-input input:last-child {margin:5px 0 0 9px;}
+
+.tab-wrap {height:40px;padding:0 12px;margin-bottom:20px;}
+.tab-wrap .tab {height:100%;white-space:nowrap;}
+.tab-wrap .tab dd {float:left;width:50%;height:40px;border:1px solid #eee;font-size:1.4rem;text-align:center;background-color:#f4f4f4;cursor:pointer}
+.tab-wrap .tab dd.on {border-top:2px solid #102863;border-bottom:0;color:#102863;background-color:#fff;}
+.tab-wrap .tab dd a {display:block;width:100%;height:100%;padding-top:11px;font-size:inherit;color:inherit;}
+.tab-wrap .tab dd.on a {font-size:inherit;color:inherit;padding-top:10px;}
+.tab-wrap.three .tab dd {width:33.33333%;}
+.tab-wrap .date {float:right;margin-top:20px;color:#333}
+.tab-wrap.live {margin-bottom:40px;}
+.tab-wrap.live .tab dd {width:20%}
+
+.tab-sm {white-space:nowrap;text-align:left;}
+.tab-sm::after {content:"";display:block;clear:both;}
+.tab-sm li {position:relative;display:inline-block;}
+.tab-sm li a {margin:0 10px 0 8px;font-size:1.4rem;color:#666}
+.tab-sm li:first-child a {margin-left:0;}
+.tab-sm li.on a {color:#102863;border-bottom:1px solid #102863}
+.tab-sm li::after {content:'';display:inline-block;width:1px;height:14px;background:#666;vertical-align:text-top;}
+.tab-sm li:last-of-type::after {display:none}
+.tab-sm.round {margin:0 12px 15px 12px;}
+
+.pagenation {margin-top:30px;text-align:center;}
+.pagenation .prev {margin-right:5px;}
+.pagenation .prev span {display:inline-block;width:11px;height:15px;font-size:0;background-image:url('../images/common/btn_left_1.png');background-size:11px 15px;vertical-align:top;}
+.pagenation .num {display:inline-block;vertical-align:top;}
+.pagenation .num a {padding:0 8px;margin:0 5px;font-size:1.4rem;color:#666}
+.pagenation .num a.on {font-weight:700;color:#e20335}
+.pagenation .next {margin-left:5px;}
+.pagenation .next span {display:inline-block;width:11px;height:15px;font-size:0;background-image:url('../images/common/btn_right_1.png');background-size:11px 15px;vertical-align:top;}
+
+.tbl {width:100%;margin:0 auto;border-top:2px solid #111;border-bottom:1px solid #111}
+.tbl tr th {position:relative;padding:12px 5px 13px;color:#333;font-size:1.2rem;font-weight:400;border:1px solid #ebebeb;vertical-align:middle;}
+.tbl tr th:first-child {border-left:0;}
+.tbl tr th:last-child {border-right:0;}
+.tbl tr th[rowspan="2"] {height:100px;}
+.tbl tr th.red {color:#f02743}
+.tbl tr th.blue {color:#2368d7}
+.tbl tr th.line {border-right:1px solid #ccc}
+.tbl tr th.sorting::after {content:'';position:absolute;left:calc(50% - 3px);bottom:3px;width:5px;height:4px;background-image:url('../images/common/sprite2.png');background-size:500px 500px;background-position:-125px -75px;}
+.tbl tr th.sorting.up::after {background-position:-150px -75px;}
+.tbl tr th.sorting.on::after {background-position:-175px -75px;}
+.tbl tr th.sorting.up.on::after {background-position:-200px -75px;}
+.tbl tr th.big.sorting::after {bottom:30px;}
+.tbl tr.total th,
+.tbl tr.total td {color:#102863;background:#f4f4f4}
+.tbl tr td {height:50px;padding:10px 4px;border:1px solid #ebebeb;border-collapse:collapse;font-size:1.2rem;color:#666;text-align:center;vertical-align:middle;}
+.tbl tr td:first-child {border-left:0;}
+.tbl tr td:last-child {border-right:0;}
+.tbl tr td span {color:#666;font-weight:700;}
+.tbl tr td a {line-height:1.2;font-size:inherit}
+.tbl tr td p {margin-top:3px;font-size:1.2rem}
+.tbl tr td.line {border-right:1px solid #ccc}
+.tbl tr td.on {color:#111;}
+.tbl tr td.popup {background:#fff4e7}
+.tbl tr td.noti {line-height:1.3;word-break:keep-all;}
+
+.tbl-wrap::after {content:"";display:block;clear:both;}
+.tbl-wrap .tbl.fixed {float:left;width:55%;}
+.tbl-wrap .tbl.fixed tr th:last-child,
+.tbl-wrap .tbl.fixed tr td:last-child {border-right:1px solid #ebebeb}
+.tbl-wrap .scroll-box {float:left;overflow:hidden;width:45%;white-space:nowrap;}
+.tbl-wrap .scroll-box .scroller {display:inline-block;}
+
+/* popup */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:rgba(0,0,0,0.6);z-index:20;}
+.popup-wrap .icon {position:absolute;top:10px;right:12px;cursor:pointer;}
+.popup-wrap .popup-cont {max-height:400px;overflow:auto;}
+.popup-wrap .popup-cont .tbl.popup tr th {height:44px;background:#f4f4f4}
+.popup-wrap .popup-cont .tbl.popup tr td {height:44px;}
+
+.popup-wrap.vod {position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:93.3333vw;padding:11.6666vw 6.66666vw 2.77777vw;background:#fff;}
+.popup-wrap.vod .close {position:absolute;top:0;right:0;padding:3.3333vw;}
+.popup-wrap.vod .close img {width:3.61111vw;}
+.popup-wrap.vod .btn-left {position:absolute;top:50%;left:0;padding-left:1.9444vw;}
+.popup-wrap.vod .btn-left img {width:2.63888vw}
+.popup-wrap.vod .btn-right {position:absolute;top:50%;right:0;padding-right:1.9444vw;}
+.popup-wrap.vod .btn-right img {width:2.63888vw}
+.popup-wrap.vod .popup-cont {max-height:100%;overflow:unset;}
+.popup-wrap.vod .popup-cont .tit {padding:8px 0 4px;font-size:1.3rem}
+.popup-wrap.vod .popup-cont .date {font-size:1.0rem;color:#666}
+
+/* datepicker */
+.ui-datepicker {width:80vw;padding:0;border:none !important;border-radius:10px !important;box-shadow:5px 2px 10px 0px #ccc;z-index:25 !important;}
+.ui-datepicker .ui-datepicker-header {width:100%;padding:10px;border-radius:10px 10px 0 0;background:#397ae4;border:none;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev {top:17px;left:12px;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {top:17px;right:1px;}
+.ui-datepicker .ui-datepicker-header .ui-corner-all .ui-icon {width:8px;height:14px;background-image:url("../images/common/sprite2.png") !important;background-size:500px 500px !important;}
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-prev .ui-icon {background-position:-225px -75px  !important;}
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-next .ui-icon {background-position:-250px -75px  !important;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {line-height:28px;margin:0 auto;font-size:1.4rem;color:#fff;font-weight:400;vertical-align:top;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select {width:70px !important;margin-right:5px !important;border:0;font-size:1.4rem;vertical-align:top}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select.ui-datepicker-month {margin-left:15px !important;}
+.ui-datepicker .ui-datepicker-calendar {width:calc(100% - 30px);margin:15px;font-size:1.2rem;}
+.ui-datepicker .ui-datepicker-calendar tr th {border-bottom:0;}
+.ui-datepicker .ui-datepicker-calendar tr th span {font-size:1.4rem;font-weight:400;}
+.ui-datepicker .ui-datepicker-calendar tr td a {font-size:1.4rem}
+.ui-datepicker .ui-datepicker-calendar tr td.satday a, .ui-datepicker table th.satday span {color:#4b6a91;}
+.ui-datepicker .ui-datepicker-calendar tr td.sunday a, .ui-datepicker table th.sunday span {color:#ec1735;}
+.ui-datepicker .ui-datepicker-calendar tr td a.ui-state-default {width:6.94444vw;height:6.94444vw;line-height:6.94444vw;padding:0;margin:0 auto;border:none;background:none;color:#444;text-align:center;}
+.ui-datepicker .ui-datepicker-calendar tr td a.ui-state-highlight {background:#fff;color:#397ae4;border-radius:50%;}
+.ui-datepicker .ui-datepicker-calendar tr td a.ui-state-active {background:#397ae4;color:#fff;border-radius:50%;}
+.ui-datepicker .ui-datepicker-calendar tr td.ui-state-disabled span.ui-state-default{width:26px;height:26px;line-height:26px;padding:0;margin:0 auto;border:none;background:none;color:#444;text-align:center;}
+.ui-datepicker .ui-datepicker-buttonpane {display:none;}
+
+/* 내부스크롤 */
+.scroll-wrap {
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.scroll-wrap .scroller {
+	display:inline-block;
+	/* Prevent elements to be highlighted on tap */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/* Put the scroller into the HW Compositing layer right from the start */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+.default p {margin-top:12px !important;font-size:1.4rem !important;color:#666;}

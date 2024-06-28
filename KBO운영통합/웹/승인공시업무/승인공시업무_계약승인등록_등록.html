@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/print.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( ".datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar2.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">승인신청</a></li>
+							<li class="on"><a href="#none">계약승인 등록</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명관리</a></li>
+							<li><a href="#none">텍스트관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">	
+			<div class="tit-area">
+				<div class="inner">
+					<h2>계약승인 등록</h2>
+				</div> 
+			</div>
+			<div class="select-area">				
+				<span class="search">
+					<input type="text" id="txtSearch" class="ipt" placeholder="선수명">
+					<a href="#none" class="btn-search" id="">검색</a>
+					<ul class="search-detail">
+						<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">검색</a></li>
+						<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">검색</a></li>
+						<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">검색</a></li>
+						<li><span class="name">박병호</span><span class="position">투수</span><span class="team">해태</span><span class="birth">1966-07-10</span><a class="btn" href="javascript:;">검색</a></li>
+						<li class="txt-c">검색 결과가 없습니다.</li>
+					</ul>
+				</span>
+				<a href="#none" class="btn-regist ml5">신규</a>
+			</div>
+			<div class="contract-cont">
+				<div class="section-left w45p">
+					<h3 class="tit">기본정보</h3>
+					<div class="tbl-board tbl-write">	
+						<table class="tbl">
+							<colgroup>
+								<col width="30%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>연도</th>
+									<td>2019</td>							
+								</tr>
+								<tr>
+									<th>팀</th>
+									<td>KIA</td>							
+								</tr>
+								<tr>
+									<th>등록구분</th>
+									<td>
+										<select name="" id="">
+											<option value="">FA</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>위치</th>
+									<td>
+										<select name="" id="">
+											<option value="">감독</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>위치</th>
+									<td>
+										<select name="" id="">
+											<option value="">감독</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>코치보직</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>등번호</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>투</th>
+									<td>
+										<select name="" id="">
+											<option value="">좌투</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th>타</th>
+									<td>
+										<select name="" id="">
+											<option value="">우타</option>
+										</select>									
+									</td>
+								</tr>
+								<tr>
+									<th>한글성명</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>한자명</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>영문명(여권명)</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>생년월일</th>
+									<td>
+										<span class="calendar">
+											<input type="text" id="from" name="from" class="ipt" style="width:150px" />											
+											<input type="hidden" name="" class="datepicker"  id="" value="" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>신장(cm)</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>체중(kg)</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>
+								</tr>
+								<tr>
+									<th>혈액형</th>
+									<td>
+										<select name="" id="">
+											<option value="">AB</option>
+										</select>	
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>			
+				</div>		
+				<div class="section-right w50p">
+					<h3 class="tit">학력 및 입단정보</h3>
+					<div class="tbl-board tbl-write">
+						<table class="tbl">
+							<colgroup>
+								<col width="30%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>리틀야구단</th>
+									<td><input type="text" name="" id="" class="ipt" /></td>							
+								</tr>
+								<tr>
+									<th>출신초</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<a href="" class="btn btn-blue">검색</a>
+									</td>							
+								</tr>
+								<tr>
+									<th>출신중</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<a href="" class="btn btn-blue">검색</a>
+									</td>
+								</tr>
+								<tr>
+									<th>출신대</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<a href="" class="btn btn-blue">검색</a>
+									</td>
+								</tr>
+								<tr>
+									<th>대학원</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<a href="" class="btn btn-blue">검색</a>
+									</td>
+								</tr>
+								<tr>
+									<th>최종학력</th>
+									<td>
+										<select name="" id="">
+											<option value="">대학원졸</option>
+										</select>									
+									</td>
+								</tr>
+								<tr>
+									<th>입단연도</th>
+									<td>
+										<select name="" id="">
+											<option value="">1999</option>
+										</select>									
+									</td>
+								</tr>
+								<tr>
+									<th>입단구단</th>
+									<td>
+										<select name="" id="">
+											<option value="">쌍방울</option>
+										</select>									
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>	
+					<h3 class="tit mt30">병역정보</h3>
+					<div class="tbl-board tbl-write">
+						<table class="tbl">
+							<colgroup>
+								<col width="30%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>병역</th>
+									<td>
+										<select name="" id="">
+											<option value="">면제</option>
+										</select>	
+									</td>							
+								</tr>
+								<tr>
+									<th>입대일자</th>
+									<td>
+										<span class="calendar">
+											<input type="text" id="" name="" class="ipt" style="width:150px" />											
+											<input type="hidden" name=""  class="datepicker" id="" value="" />
+										</span>
+									</td>							
+								</tr>
+								<tr>
+									<th>전역일자</th>
+									<td>
+										<span class="calendar">
+											<input type="text" id="" name="" class="ipt" style="width:150px" />											
+											<input type="hidden" name="" class="datepicker"  id="" value="" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>비고</th>
+									<td>
+										<select name="" id="">
+											<option value="">현역</option>
+										</select>	
+									</td>
+								</tr>								
+							</tbody>
+						</table>
+					</div>
+					<h3 class="tit mt30">연봉정보</h3>
+					<div class="tbl-board tbl-write">
+						<table class="tbl">
+							<colgroup>
+								<col width="30%" />
+								<col width="*" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>계약금</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<select name="" id="">
+											<option value="">만원</option>
+										</select>	
+									</td>
+								</tr>
+								<tr>
+									<th>2019 연봉</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<select name="" id="">
+											<option value="">만원</option>
+										</select>	
+									</td>							
+								</tr>
+								<tr>
+									<th>2018 연봉</th>
+									<td>
+										<input type="text" name="" id="" class="ipt" />
+										<select name="" id="">
+											<option value="">만원</option>
+										</select>	
+									</td>
+								</tr>							
+							</tbody>
+						</table>
+					</div>
+				</div>			
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">확인</a>
+				<a class="btn btn-cancel" href="#none">취소</a>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+<!-- 승인신청 확인 팝업 -->
+<div id="popup" class="pop-search-school">
+	<h1>학교 검색</h1>
+	<div class="contents">		
+		<table class="tbl">
+			<colgroup>
+				<col width="30%" />
+				<col width="70%" />
+			</colgroup>
+			<tbody>				
+				<tr>
+					<th>학교명</th>
+					<td class="txt-l">
+						<span><input type="text" name="" id="" class="ipt" /></span>
+						<a href="#none" class="btn-search">검색</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>&lt;검색결과&gt;</h2>
+		<table class="tbl">
+			<colgroup>
+				<col width="30%" />
+				<col width="40%" />
+				<col width="30%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>지역</th>
+					<th>학교명</th>
+					<th>확인</th>
+				</tr>
+			</thead>
+			<tbody>				
+				<tr>
+					<td>서울</td>
+					<td>광주서림초</td>
+					<td><a href="#none" class="btn-select">선택</a></td>
+				</tr>
+				<tr>
+					<td>서울</td>
+					<td>광주서림초</td>
+					<td><a href="#none" class="btn-select">선택</a></td>
+				</tr>
+				<tr>
+					<td>서울</td>
+					<td>광주서림초</td>
+					<td><a href="#none" class="btn-select">선택</a></td>
+				</tr>
+				<tr>
+					<td>서울</td>
+					<td>광주서림초</td>
+					<td><a href="#none" class="btn-select">선택</a></td>
+				</tr>
+				<tr>
+					<td class="cont-none" colspan="3">검색 결과가 없습니다.</td>					
+				</tr>
+				<tr>
+					<td colspan="3">
+						<span><strong>서람초</strong>&nbsp;&nbsp;직접 입력</span>
+						<a href="#none" class="btn-select">선택</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<a href="#none" class="btn-close"><img src="../resources/images/common/btn_pop_close.gif" alt="" /></a>
+</div>
+<div class="modal"></div>
+</body>
+</html>

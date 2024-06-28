@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/allstar.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<section id="contents" class="main-result-stats">
+			<h1><img src="resources/images/main/banner_result.png" alt="ALL STAR GAME 창원" /></h1>
+			<img src="resources/images/main/allstar_label.png" alt="DREAM / NANUM" />
+			<div class="best-wrap">
+				<h2 class="tit-label">선발투수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum win">
+						<div class="win-icon">1위</div>
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt"><span>올스타 5번 / </span>최다득표 1위</p>
+					</div>
+				</div>
+				<h2 class="tit-label">중간투수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">마무리투수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">포수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">1루수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">2루수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">3루수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">유격수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">외야수</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+				<h2 class="tit-label">지명타자</h2>
+				<div class="best-box">
+					<div class="box dream">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+					<div class="box nanum">
+						<div class="pic">
+							<img src="resources/images/main/test.png">
+							<img class="emb" src="resources/images/emblem/emblem_HH.png" />
+						</div>
+						<div><p class="name">린드블럼</p></div>
+						<div class="total">총점 31.72</div>
+						<p class="num">(팬 1,000,000 + 선수단 500)</p>
+						<p class="txt">올스타 베스트 첫 선정</p>
+					</div>
+				</div>
+			</div>
+			<div class="best-banner">
+				<img src="resources/images/main/footer_banner.png" alt="2019 신한은행 MY CAR KBO 올스타전" /></a>
+			</div>
+		</section>
+	</div>
+</body>
+</html>

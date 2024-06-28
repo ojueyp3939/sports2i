@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+		<title>K리그 명예의 전당 투표 이벤트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/content.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+        $(document).on("click", ".event-link", function () {
+            $(".event-list").toggle();
+        });
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/content/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="content-wrap sub history">
+					<div class="inner">
+						<img src="resources/images/content/img_tit2.png" alt="내 투표내역 확인" />
+						<div class="candidate-wrap">
+							<div class="list">
+								<div class="head">
+									2023. 01 .01
+									<i></i>
+								</div>
+								<div class="player-group">
+									<div class="player-box">
+										<div class="box">
+											<div class="tit-years">1983~1992</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">1993~2002</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">2003~2012</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">2013~2022</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list">
+								<div class="head">
+									2023. 01 .02
+									<i></i>
+								</div>
+								<div class="player-group">
+									<div class="player-box">
+										<div class="box">
+											<div class="tit-years">1983~1992</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">1993~2002</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">2003~2012</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+										<div class="box">
+											<div class="tit-years">2013~2022</div>
+											<ul>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+												<li>
+													<a href="profile.html">
+														<img src="resources/images/player/test.png" alt="">
+														<p class="name">홍길동</p>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="list">
+								<div class="head">
+									2023. 01 .03
+									<i></i>
+								</div>
+								<div class="player-group">
+									<div class="player-box blank">
+										- 투표내역 없음 -
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<a class="btn" href="main.html">
+							<img src="resources/images/content/btn_main.png" alt="메인페이지로 돌아가기">
+						</a>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2023 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

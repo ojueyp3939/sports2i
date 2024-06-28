@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 증명서 발급시스템 관리자</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="header-info">
+				<h1 class="logo">신한 베이스볼 파크 관리자</h1>
+				<div class="login-info">
+					<span class="id-info">KBO 님</span>
+					<a href="#none" class="btn-logout">로그아웃</a>
+				</div>
+			</div>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="#none">배너 관리</a></li>
+					<li><a href="#none">동영상 관리</a></li>
+					<li><a href="#none">월간 MVP 관리</a></li>
+					<li><a href="#none">이벤트 관리</a></li>
+					<li><a href="#none">통계</a></li>
+					<li><a href="#none">쏠픽</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<div id="container">
+			<aside>
+				<h2 class="tit">배너 관리</h2>
+				<nav id="snb">
+					<ul class="menu">
+						<li class="on"><a href="#none">메뉴 광고 배너</a></li>
+						<li>
+							<a href="#none">킬러 배너</a>
+							<ul class="depth2">
+								<li class="on"><a href="#none">- KBO 리그</a></li>
+								<li><a href="#none">- KBO 상품</a></li>
+								<li><a href="#none">- 이벤트</a></li>
+							</ul>						
+						</li>
+						<li><a href="#none">서브 배너</a></li>
+					</ul>
+				</nav>			
+			</aside>
+
+			<div id="contents">
+				<div class="tit-area">
+					<h3 class="tit">메뉴 광고 배너</h3>
+					<a href="#none" class="btn-reg">등록</a>
+				</div>
+				<ul class="tab">
+					<li class="on"><a href="#none">경기전</a></li>
+					<li><a href="#none">경기중</a></li>
+					<li><a href="#none">경기후</a></li>
+				</ul>				
+				<div class="search-area">
+					<select name="" id="">
+						<option value="">2018</option>
+					</select>
+				</div>
+				<div class="search-area">
+					<span class="calender">
+						<label for="">기간 선택 |</label>
+						<input class="ipt" type="text" />
+						<a href="#none" class="btn"><img src="../resources/images/common/btn_date.png" alt="" /></a>
+					</span> ~ 
+					<span class="calender">
+						<input class="ipt" type="text" />
+						<a href="#none" class="btn"><img src="../resources/images/common/btn_date.png" alt="" /></a>
+					</span>
+					<a href="#none" class="btn-search">검색</a>
+				</div>
+				<div class="tab2">
+					<div class="all"><a href="#none">전체</a></div>
+					<div class="menu-list">
+						<ul class="code code1">
+							<li><a href="#none">M1</a></li>
+							<li><a href="#none">M2</a></li>
+							<li><a href="#none">M3</a></li>
+							<li><a href="#none">M4</a></li>
+							<li><a href="#none">M5</a></li>
+							<li><a href="#none">M6</a></li>
+							<li><a href="#none">M7</a></li>
+							<li><a href="#none">M8</a></li>
+							<li><a href="#none">M9</a></li>
+							<li><a href="#none">M10</a></li>
+						</ul>
+						<ul class="code code2">
+							<li><a href="#none">P1</a></li>
+							<li><a href="#none">P2</a></li>
+							<li><a href="#none">P3</a></li>
+							<li><a href="#none">P4</a></li>
+							<li><a href="#none">P5</a></li>
+							<li><a href="#none">P6</a></li>
+							<li><a href="#none">P7</a></li>
+							<li><a href="#none">P8</a></li>
+							<li><a href="#none">P9</a></li>
+							<li><a href="#none">P10</a></li>
+						</ul>	
+					</div>
+				</div>
+				<div class="tbl-col">
+					<table class="tbl">
+						<colgroup>
+							<col width="40%" />
+							<col width="50%" />
+							<col width="10%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>제목</th>
+								<th>표출 일자</th>
+								<th>삭제</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>워너원</td>
+								<td>2017-03-31 09:00 ~ 2017-04-01 09:00</td>
+								<td><a class="btn-delete-s" href="#none">삭제</a></td>
+							</tr>
+							<tr>
+								<td>워너원</td>
+								<td>2017-03-31 09:00 ~ 2017-04-01 09:00</td>
+								<td><a class="btn-delete-s" href="#none">삭제</a></td>
+							</tr>
+							<tr>
+								<td>워너원</td>
+								<td>2017-03-31 09:00 ~ 2017-04-01 09:00</td>
+								<td><a class="btn-delete-s" href="#none">삭제</a></td>
+							</tr>
+							<tr>
+								<td>워너원</td>
+								<td>2017-03-31 09:00 ~ 2017-04-01 09:00</td>
+								<td><a class="btn-modify-s" href="#none">수정</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="tbl-row">
+					<table class="tbl">
+						<colgroup>
+							<col width="30%" />
+							<col width="70%" />
+						</colgroup>							
+						<tbody>
+							<tr>
+								<th>제목</th>
+								<td>텍스트</td>
+							</tr>
+							<tr>
+								<th>등록일</th>
+								<td>텍스트</td>
+							</tr>
+							<tr>
+								<th>배너 링크</th>
+								<td>
+									<span class="select">
+										<input type="radio" name="" id="" />
+										<label for="">사용 안함</label>
+									</span>
+									<span class="select">
+										<input type="radio" name="" id="" />
+										<label for="">사용</label>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<th>링크 URL</th>
+								<td>txt</td>
+							</tr>
+							<tr>
+								<th>배너 이미지</th>
+								<td><input type="file" /></td>
+							</tr>
+							<tr>
+								<th rowspan="2">표출 일자</th>
+								<td>
+									<span class="calender">
+										<label for="">시작날짜:</label>
+										<input class="ipt" type="text" />
+										<a href="#none" class="btn"><img src="../resources/images/common/btn_date.png" alt="" /></a>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<span class="calender">
+										<label for="">종료날짜:</label>
+										<input class="ipt" type="text" />
+										<a href="#none" class="btn"><img src="../resources/images/common/btn_date.png" alt="" /></a>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="paging">    
+					<a class="btn btn-first" href="#none">처음으로</a>
+					<a class="btn btn-prev" href="#none">다음</a>
+					<a class="on" href="#none">1</a>
+					<a href="#none">2</a>
+					<a href="#none">3</a>
+					<a href="#none">4</a>
+					<a href="#none">5</a>
+					<a href="#none">6</a>
+					<a href="#none">7</a>
+					<a href="#none">8</a>
+					<a href="#none">9</a>
+					<a href="#none">10</a>
+					<a class="btn btn-next" href="#none">다음</a>
+					<a class="btn btn-last" href="#none">맨끝으로</a>
+				</div>
+				<div class="btn-area">
+					<a href="#none" class="btn-save">저장</a>					
+					<a href="#none" class="btn-cancel">취소</a>
+					<a href="#none" class="btn-list">목록</a>
+					<a href="#none" class="btn-modify">수정</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

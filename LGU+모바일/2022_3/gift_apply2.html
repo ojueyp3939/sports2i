@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>스포키 미션 릴레이</title>
+    <link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="header-wrap">
+			<a class="btn-left" href="">
+				<img src="resources/images/contents/icon_back.png" alt="back">
+			</a>
+			<span>선착순 경품 신청</span>
+			<a class="btn-right" href="">
+				<img src="resources/images/contents/icon_total_close.png" alt="close">
+			</a>
+		</div>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="choice-wrap step2">
+					<p class="tit">원하는 경품에 응모하세요!</p>
+					<p class="txt">응모하시면 추첨을 통해 당첨 결과를 발표할 예정이에요.<br/>당첨되지 못한 분들께는 <span>비타500 교환 쿠폰</span>을 드려요.</p>
+					<div class="gift-list">
+						<ul>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_1.png">
+								<div>
+									<p class="gift-tit">하나투어 상품권 300만 원권</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li class="soldout">
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_2.png">
+								<div style="padding-top:3px">
+									<p class="gift-tit">시그니엘 서울 프리미어 트윈<br/>숙박기간 : 22.12.31 ~ 23.01.01</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_3.png">
+								<div>
+									<p class="gift-tit">아이폰 14프로 256GB</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_4.png">
+								<div>
+									<p class="gift-tit">갤럭시 Z 플립 4 256GB</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_5.png">
+								<div>
+									<p class="gift-tit">닌텐도 스위치 OLED</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift3_6.png">
+								<div style="padding-top:3px">
+									<p class="gift-tit">애플워치 8세대 45mm GPS<br/>알루미늄케이스 스포츠밴드</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<button class="submit-btn done">선택 완료</button>
+				</section>
+
+				<section class="choice-wrap step2">
+					<p class="tit">선착순이니, 서두르세요!</p>
+					<p class="txt">원하는 경품을 선착순으로 선택할 수 있어요.<br/>품절된 경품은 신청할 수 없어요.</p>
+					<div class="gift-list">
+						<ul>
+							<li class="soldout">
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift4_1.png">
+								<div>
+									<p class="gift-tit">BHC 골드킹 + 콜라</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift4_2.png">
+								<div>
+									<p class="gift-tit">도미노피자 슈퍼슈프림 L</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+							<li>
+								<input type="radio"><span class="choice-icon"></span>
+								<img src="resources/images/contents/gift4_3.png">
+								<div>
+									<p class="gift-tit">스타벅스 아메리카노 T</p>
+									<p class="gift-txt">남은 수량 300개</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<button class="submit-btn">선택 완료</button>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

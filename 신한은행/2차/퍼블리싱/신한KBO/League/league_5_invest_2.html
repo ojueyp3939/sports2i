@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/league.css" />
+</head>
+<script>
+$(document).ready(function(){
+	// 킬러컨텐츠_슬라이드
+	var mc_Swiper = new Swiper('.main-contents-slider', {
+		pagination: {el: '.swiper-pagination',clickable: true},
+		loop:true
+	});
+	// 팀 메뉴 슬라이드
+	var sm_Swiper = new Swiper('.team-swiper-menu', {
+		slidesPerView: 'auto',
+        paginationClickable: true,
+		spaceBetween:10,
+		loop:false
+	});
+    /*
+    // 팀 투자 순위보기
+    $("#more-open-1").click(function(){
+        $("#invest-team-more").slideToggle("slow");
+        $("#more-open-1").css({"display":"none"});
+        $("#more-close-1").css({"display":"block"});
+    });
+    $("#more-close-1").click(function(){
+        $("#invest-team-more").slideToggle("slow");
+        $("#more-open-1").css({"display":"block"});
+        $("#more-close-1").css({"display":"none"});
+    });
+    // 선수전체보기
+    $("#more-open-2").click(function(){
+        $("#invest-player-more").slideToggle("slow");
+        $("#more-open-2").css({"display":"none"});
+        $("#more-close-2").css({"display":"block"});
+    });
+    $("#more-close-2").click(function(){
+        $("#invest-player-more").slideToggle("slow");
+        $("#more-open-2").css({"display":"block"});
+        $("#more-close-2").css({"display":"none"});
+    });
+    */
+});
+</script>
+
+<body>
+    <!-- aside -->
+    <aside>
+        <nav id="navAll">
+            <div class="navdep1 nav-league ">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_league.png" alt="" /></span>KBO 리그</a></h2>
+                <ul class="navdep2"> 
+					<li><a href="./league_1_schedule.html">경기일정/결과</a></li>
+					<li><a href="./league_2_ranking.html">팀순위</a></li>
+					<li><a href="./league_2_ranking_1.html">선수순위</a></li>
+					<li class="event">
+						<a href="#none">
+							<span>EVENT</span>퀴즈 풀면 쏠쏠하다!<br />쏠픽!
+						</a>
+					</li>
+					<li><a href="./league_5_invest.html">가성비</a></li>
+					<li><a href="./league_6_potcast.html">팟캐스트</a></li>
+					<li><a href="./league_4_highlight.html">하이라이트</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-product">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_product.png" alt="" /></span>KBO 상품</a></h2>
+                <ul class="navdep2">
+                    <li><a href="#none">예금</a></li>
+                    <li><a href="#none">적금</a></li>
+                    <li><a href="#none">대출</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-sol">
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_sol.png" alt="" /></span>쏠픽</a></h2>
+            </div>
+            <div class="navdep1 nav-mvp">	
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_mvp.png" alt="" /></span>월간 MVP</a></h2>
+                <ul class="navdep2">
+                    <li><a href="#none">월간 랭킹</a></li>
+                    <li><a href="#none">MVP 투표하기</a></li>
+                    <li><a href="#none">MVP 결과</a></li>
+                </ul>
+            </div>
+            <div class="navdep1 nav-event">					
+                <h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_event.png" alt="" /></span>이벤트</a></h2>
+            </div>
+        </nav>
+        <div class="banner"><a href="javascript:;">배너영역</a></div>
+    </aside>
+    <!-- // aside -->
+    <!-- wrap -->
+    <div id="wrap">	
+        <!-- header -->
+        <header>	
+            <h1 class="tit"><a href="#none">신한 BASEBALL PARK</h1>
+            <a href="#none" class="btn-aside">
+                <span class="menu-icon ">
+                    <span class="menu-line menu-line1"></span>
+                    <span class="menu-line menu-line2"></span>
+                    <span class="menu-line menu-line3"></span>
+                </span>
+            </a>	
+            <nav id="gnb">
+                <ul class="menu">
+                    <li class="on"><a href="javascript:;">KBO 리그</a></li>
+                    <li><a href="javascript:;">KBO 상품</a></li>
+                    <li><a href="javascript:;">쏠픽</a></li>
+                    <li><a href="javascript:;">월간 MVP</a></li>
+                    <li><a href="javascript:;">이벤트</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- // header -->
+        <hr /> 
+        <!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+                <!-- 상단 컨텐츠 영역 // -->
+                <div class="content-wrap">
+                    <div class="main-contents">
+                        <div class="main-contents-area">
+                            <div class="swiper-container main-contents-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="../resources/images/main/sapmple_main_banner_cast.png" title=""></a>
+                                    </div><!-- // 팟캐스트 -->
+                                    <div class="swiper-slide">
+                                        <!-- 전력분석 // -->
+                                        <div class="top-analysis">
+                                            <div class="top-analysis-wrap">
+                                                <div class="stitle">6월 23일<br>쏠픽</div>
+                                                <div class="btn-solpick">쏠픽하러가기 ></div>
+                                                <div class="left-area">
+                                                    <span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_OB.png" alt="양의지" /></span>
+                                                    <span>두산</span>
+                                                </div>
+                                                <div class="score-area">
+                                                    <div class="title-name">
+                                                        <span class="title">승부예측</span>
+                                                        <span class="left-name">이용찬</span>
+                                                        <span class="right-name">김광현</span>
+                                                    </div>
+                                                    <div class="pre-rate">
+                                                        <span class="rate-left">53.6%</span>
+                                                        <span class="rate-bar" style="width:53.6%;"></span>
+                                                        <span class="rate-right">46.4%</span>
+                                                    </div>
+                                                    <div class="solpick-poll">
+                                                        <div class="title-box">
+                                                            <span class="title">실시간 쏠픽 투표율</span>
+                                                        </div>
+                                                        <span class="left">80%</span>
+                                                        <span class="icon-winner brace-left" id="rate-poll"></span>
+                                                        <span class="right">20%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="right-area">
+                                                    <span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+                                                    <span><img class="team" src="../resources/images/emb/embS_KT.png" alt="양의지" /></span>
+                                                    <span>KT</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // 전력분석 -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <!-- 연봉투자수익 // -->
+                                        <div class="top-invest">
+                                            <div class="top-invest-wrap">
+                                                <div class="stitle"><font class="blue">TEAM</font> 연봉 투자 수익 TOP 3</div>
+                                                <div class="sinfo">[ 기준 : 연봉 2억 이상 ]</div>
+                                                <div class="top-invest-list">
+                                                    <div class="invest-row">
+                                                        <div class="invest" id="1위">
+                                                            <span class="subject">1위</span>
+                                                            <span class="photo"><img src="../resources/images/emb/embL_OB.png" /></span>
+                                                            <span class="name">두산</span>
+                                                            <span class="rate">1WAR 당 3억 5천</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="invest-row">
+                                                        <div class="invest" id="2위">
+                                                            <span class="subject">2위</span>
+                                                            <span class="photo"><img src="../resources/images/emb/embL_SK.png" /></span>
+                                                            <span class="name">SK</span>
+                                                            <span class="rate">1WAR 당 3억 5천</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="invest-row">
+                                                        <div class="invest" id="3위">
+                                                            <span class="subject">3위</span>
+                                                            <span class="photo"><img src="../resources/images/emb/embL_HH.png" /></span>
+                                                            <span class="name">한화</span>
+                                                            <span class="rate">1WAR 당 3억 5천</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- // 연봉투자수익 -->
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="../resources/images/main/sapmple_main_banner_hl.png" title=""></a>
+                                    </div><!-- // 하이라이트 -->
+                                    <div class="swiper-slide">
+                                        <a href="#"><img src="../resources/images/main/sapmple_main_banner_event.png" title=""></a>
+                                    </div><!-- // 이벤트 -->
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 상단 컨텐츠 영역 -->
+
+                <!-- 메뉴 버튼 // -->
+                 <ul class="league-menu">
+					<li class="menu" onClick="javascript:location.href='./league_1_schedule.html';"><a href="">일정/결과</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_2_ranking.html';"><a href="">팀/개인 순위</a></li>
+					<li class="menu"><a href="#none">쏠픽하기 ></a></li>
+					<li class="menu" onClick="javascript:location.href='./league_4_highlight.html';"><a href="">하이라이트</a></li>
+					<li class="menu on" onClick="javascript:location.href='./league_5_invest.html';"><a href="">연봉 투자 수익</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_6_potcast.html';"><a href="">팟캐스트</a></li>
+				</ul>
+                <!-- //메뉴 버튼 -->
+
+				<!-- 연봉투자수익 // -->
+				<div class="content-wrap" id="war-invest">
+                    <!-- 팀 지표 // -->
+                    <div class="stitle">효율적인 투자, 대박 난 팀은?</div>
+                    <div class="team-wrap">
+                        <!-- 베스트 투자 // -->
+                        <div class="best-team">
+                            <div class="emblem"><img class="team" src="../resources/images/emb/embL_SK.png" /></div>
+                            <div class="record">
+                                <div>
+                                    <span>1WAR 당 99억 9천 투자</span>
+                                    <span><span>투자금액</span>999억</span>
+                                    <span><span>WAR 합계</span>99.99</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 베스트 투자 -->
+
+                        <!-- 팀 투자 순위보기 // -->
+                        <div id="more-open-1" class="invest-more-btn-bl"><img src="../resources/images/main/btn_more_list_invest.png"> 팀 투자 순위</div>
+                        <div id="more-close-1" class="invest-more-close-btn-bl" style="display:none"><img src="../resources/images/main/btn_more_close_list_invest.png" /> 팀 투자 순위</div>
+                        <div id="invest-team-more" style="display:none;position:relative;">
+                            <div class="team-ranking">
+                                <div class="ranking-board">
+                                    <div class="tbl-type">
+                                        <div class="tbl-left-fix tlf-100">
+                                            <table class="tbl">
+                                                <caption></caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>순위</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <span>1</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                            <span>두산</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>2</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_HH.png" /></span>
+                                                            <span>한화</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>3</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_HT.png" /></span>
+                                                            <span>KIA</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>4</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_LG.png" /></span>
+                                                            <span>LG</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>5</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_SK.png" /></span>
+                                                            <span>SK</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>6</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_LT.png" /></span>
+                                                            <span>롯데</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>7</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_KT.png" /></span>
+                                                            <span>KT</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>8</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_WO.png" /></span>
+                                                            <span>넥센</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>9</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_NC.png" /></span>
+                                                            <span>NC</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <span>10</span>
+                                                            <span><img class="team" src="../resources/images/emb/embS_SS.png" /></span>
+                                                            <span>삼성</span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tbl-right-scroll trs-100">
+                                            <table class="tbl">
+                                                <caption></caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>투자 금액<a href=""><span class="arrow-sort"></span></a></th>
+                                                        <th>WAR 합계<a href=""><span class="arrow-sort"></span></a></th>
+                                                        <th>1WAR당 투자<a href=""><span class="arrow-sort"></span></a></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-down"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>99억 9천</td>
+                                                        <td>99.99</td>
+                                                        <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- // 팀 투자 순위보기 -->
+                    </div>
+                    <!-- // 팀 지표-->
+
+					<!-- 선수 지표 // -->
+                    <div class="stitle">연봉↓ 성적↑, 최고 효율 선수는?</div>
+                    <div class="player-wrap">
+                        <div class="data-area tbl-type tbl-rank">
+                            <table class="tbl">
+                                <colgroup>
+                                    <col width="13%" />
+                                    <col width="13" />
+                                    <col width="31%" />
+                                    <col width="43%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>KBO</td>
+                                        <td><span class="player-img"><img src="https://kbojson.sports2i.com/appFile/120x140/62404.jpg" alt="" /></span></td>
+                                        <td><span class="emb"><img src="../resources/images/emb/embS_SS.png" alt="" /></span><span class="name">다이아몬드</span></td>
+                                        <td class="record">
+                                            <span>1WAR 당 99억 9천 투자</span>
+                                            <span><span>연봉</span>99</span>
+                                            <span><span>WAR</span>99.99(리그 99위)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>FA</td>
+                                        <td><span class="player-img"><img src="https://kbojson.sports2i.com/appFile/120x140/62404.jpg" alt="" /></span></td>
+                                        <td><span class="emb"><img src="../resources/images/emb/embS_SS.png" alt="" /></span><span class="name">다이아몬드</span></td>
+                                        <td class="record">
+                                            <span>1WAR 당 99억 9천 투자</span>
+                                            <span><span>연봉</span>99</span>
+                                            <span><span>WAR</span>99.99(리그 99위)</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>외국인</td>
+                                        <td><span class="player-img"><img src="https://kbojson.sports2i.com/appFile/120x140/62404.jpg" alt="" /></span></td>
+                                        <td><span class="emb"><img src="../resources/images/emb/embS_SS.png" alt="" /></span><span class="name">다이아몬드</span></td>
+                                        <td class="record">
+                                            <span>1WAR 당 99억 9천 투자</span>
+                                            <span><span>연봉</span>99</span>
+                                            <span><span>WAR</span>99.99(리그 99위)</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- 선수전체보기 // -->
+                        <div id="more-open-2" class="invest-more-btn-bl" style="display:none;"><img src="../resources/images/main/btn_more_list_invest.png"> 선수전체 순위</div>
+                        <div id="more-close-2" class="invest-more-close-btn-bl" style="display:block"><img src="../resources/images/main/btn_more_close_list_invest.png" /> 선수전체 순위</div>
+                        <div id="invest-player-more" style="display:block;position:relative;">
+                            <div class="tab-area tab-depth1">
+                                <ul class="tab tab-line tab4">
+                                    <li class="on"><a href="#none">조건</a></li>
+                                    <li><a href="#none">전체</a></li>
+                                    <li><a href="#none">FA</a></li>
+                                    <li><a href="#none">외국인</a></li>
+                                </ul>
+                            </div>
+                            <!-- 팀 메뉴 슬라이드 // -->
+                            <div class="swiper-container team-swiper-menu">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide kbo on"><a href=""><span class="all"></span>전체</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="HT"></span>KIA</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="OB"></span>두산</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="LT"></span>롯데</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="NC"></span>NC</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="SK"></span>SK</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="LG"></span>LG</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="WO"></span>넥센</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="HH"></span>한화</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="SS"></span>삼성</a></li>
+                                    <li class="swiper-slide"><a href=""><span class="KT"></span>KT</a></li>
+                                </ul>
+                            </div>
+                            <!-- // 팀 메뉴 슬라이드 -->
+        
+                            <!-- 선수 전체 순위 // -->
+                            <div class="ranking-board">
+                                <div class="tbl-type">
+                                    <div class="tbl-left-fix" style="width:130px;">
+                                        <table class="tbl">
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>순위</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span>1</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>2</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>3</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>4</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>5</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>6</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>7</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>8</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>9</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>10</span>
+                                                        <span><img class="team" src="../resources/images/emb/embS_OB.png" /></span>
+                                                        <span>다이아몬드</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="tbl-right-scroll trs-130">
+                                        <table class="tbl">
+                                            <caption></caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>연봉<a href=""><span class="arrow-sort"></span></a></th>
+                                                    <th class="on">WAR<a href=""><span class="arrow-sort"></span></a></th>
+                                                    <th>1WAR당 투자<a href=""><span class="arrow-sort"></span></a></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-down"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>99억 9천</td>
+                                                    <td class="on">99.99</td>
+                                                    <td>9억 9천(<span id="" class="arrow-up"></span>)9</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="txt-r mt10 mr10">2018년 6월 23일 기준</div>
+                            <!-- // 선수 전체 순위 -->
+                        </div>
+                    </div>
+                    <!-- //선수 지표 -->
+                    <div class="invest-bottom-bnr">
+                        <div class="bnr-area">
+                            <span class="bnr-subject">연봉 투자 수익?</span>
+                            <span class="bnr-content">1WAR당 연봉으로. 연봉 효율을 나타내는 수치<br>1WAR당 금액이 적은 선수일수록<br>연봉대비 성적이 좋은 선수입니다.</span>
+                        </div>
+                    </div>
+				</div>
+				<!-- // 연봉 투자 수익 -->
+
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+
+		<hr />
+		<!-- footer -->
+		<footer>
+		</footer>
+		<!-- // footer -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

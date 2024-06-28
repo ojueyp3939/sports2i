@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+</head>
+<script>
+	function loaded() {
+		var myScroll1 = new IScroll('#card', {
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+</script>
+
+<body onload="loaded()" class="athletic">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub">
+			<div class="bridge-wrap">
+				<ul>
+					<li>
+						<a href="">
+							전문체육 씨름
+						</a>
+					</li>
+					<li class="on">
+						<a href="">
+							민속씨름
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="../main.html"><img src="../resources/images/common/logo.png" alt="씨름 아카이브 센터"></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb clear">
+						<li>
+							<a href="../Archive/index.html">씨름 아카이브 센터란?</a>
+						</li>
+						<li>
+							<a href="../Livecenter/index.html">라이브센터</a>
+						</li>
+						<li>
+							<a class="on" href="../Museum/data.html">디지털 씨름 박물관</a>
+						</li>
+						<li>
+							<a href="../Game/monthly_schedule.html">일정/결과</a>
+						</li>
+						<li>
+							<a href="../Rank/season.html">순위</a>
+						</li>
+						<li>
+							<a href="../Record/top.html">기록</a>
+						</li>
+						<li>
+							<a href="../Player/player_team.html">선수/팀</a>
+						</li>
+						<li>
+							<a href="../News/broadcast_news.html">NEWS</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lnb-wrap">
+				<ul>
+					<li>
+						<ul>
+							<li><a href="../Archive/index.html">씨름 아카이브 센터란?</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<ul>
+							<li><a class="on" href="../Museum/data.html">데이터 필름 센터</a></li>
+							<li><a href="../Museum/exhibition.html">씨름전시관</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Game/monthly_schedule.html">월별 일정</a></li>
+							<li><a href="../Game/schedule.html">경기일정/결과</a></li>
+							<li><a href="../Game/prize_winner.html">대회 입상자</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Record/top.html">TOP 5</a></li>
+							<li><a href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Player/player_team.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<article>
+					<div class="content data">
+						<div class="search-zone">
+							<div class="search-ipt">
+								<input type="text" placeholder="검색어를 입력해주세요.">
+								<a href=""></a>
+							</div>
+						</div>
+						<div class="search-panel-wrap">
+							<a class="btn-panel" href=""></a>
+							<div class="search-panel">
+								<div class="top">
+									<p class="noti">민속 영상은 민속 페이지에서 확인하실 수 있습니다.</p>	
+									<select href="">
+										<option value="">대회(경기) 영상</option>
+										<option value="">대회(경기) 외 영상</option>
+										<option value="">경기 외 영상</option>
+									</select>
+								</div>
+								<!-- 대회(경기) 영상 -->
+								<div class="mid">
+									<div class="reset-zone">
+										<p class="tit">필터</p>
+										<a href=""><img src="../resources/images/sub/icon_reset_round.png"></a>
+									</div>
+									<ul class="detail-zone">
+										<li>
+											<p class="tit">팀</p>
+											<div class="box">
+												<p class="tit-sub">팀1</p>
+												<div class="in-list">
+													<img class="icon-search" src="../resources/images/sub/icon_search.png">
+													<input type="text" placeholder="선수를 선택해주세요.">
+													<ul class="list-box">
+														<li>
+															<img src="">
+															<p>계룡초등학교</p>
+														</li>
+													</ul>
+													<a class="del" href=""><img src="../resources/images/sub/icon_remove.png"></a>
+												</div>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													팀 추가
+												</a>
+											</div>
+										</li>
+
+										<li>
+											<p class="tit">대회</p>
+											<div class="box">
+												<select>
+													<option>전체</option>
+												</select>
+											</div>
+										</li>
+
+										<li>
+											<p class="tit">날짜</p>
+											<div class="box">
+												<p class="tit-sub">시즌</p>
+												<ul class="choice">
+													<li><input id="2022" type="checkbox"><label for="2022">2022</label></li>
+													<li><input type="checkbox"><label>2021</label></li>
+													<li><input type="checkbox"><label>2020</label></li>
+													<li><input type="checkbox"><label>2019</label></li>
+												</ul>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													시즌 더보기
+												</a>
+											</div>
+											<div class="box">
+												<p class="tit-sub">경기 구분</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>개인전</label></li>
+													<li><input type="checkbox"><label>단체전</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">날짜</p>
+												<input type="text" placeholder="YYYY / MM / DD">
+											</div>
+										</li>
+										
+										<li>
+											<p class="tit">선수</p>
+											<div class="box">
+												<p class="tit-sub">선수1</p>
+												<div class="in-list">
+													<img class="icon-search" src="../resources/images/sub/icon_search.png">
+													<input type="text">
+													<ul class="list-box">
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+														<li>
+															<img src="">
+															<p>계룡초등학교<span class="small">팀이르르르르므으름ㅇ</span></p>
+														</li>
+													</ul>
+													<a class="del" href=""><img src="../resources/images/sub/icon_remove.png"></a>
+												</div>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													선수 추가
+												</a>
+											</div>
+											<div class="box">
+												<p class="tit-sub">성별</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>남자</label></li>
+													<li><input type="checkbox"><label>여자</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">체급</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>태백</label></li>
+													<li><input type="checkbox"><label>금강</label></li>
+													<li><input type="checkbox"><label>한라</label></li>
+													<li><input type="checkbox"><label>백두</label></li>
+												</ul>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													체급 더보기
+												</a>
+											</div>
+										</li>
+
+										<li>
+											<p class="tit">상황</p>
+											<div class="box double">
+												<p class="tit-sub">토너먼트</p>
+												<select>
+													<option>
+														토너먼트 선택
+													</option>
+												</select>
+											</div>
+											<div class="box double">
+												<p class="tit-sub">라운드</p>
+												<select>
+													<option>
+														라운드 선택
+													</option>
+												</select>
+											</div>
+											<div class="box">
+												<p class="tit-sub">위치</p>
+												<div class="ground">
+													<div class="pin out_1 on"><a href=""><p>1</p></a></div>
+													<div class="pin out_2 on"><a href=""><p>2</p></a></div>
+													<div class="pin out_3 on"><a href=""><p>3</p></a></div>
+													<div class="pin out_4 on"><a href=""><p>4</p></a></div>
+													<div class="pin out_5 on"><a href=""><p>5</p></a></div>
+													<div class="pin out_6 on"><a href=""><p>6</p></a></div>
+													<div class="pin out_7 on"><a href=""><p>7</p></a></div>
+													<div class="pin out_8 on"><a href=""><p>8</p></a></div>
+													<div class="pin out_9 on"><a href=""><p>9</p></a></div>
+													<div class="pin out_10 on"><a href=""><p>10</p></a></div>
+													<div class="pin out_11 on"><a href=""><p>11</p></a></div>
+													<div class="pin out_12 on"><a href=""><p>12</p></a></div>
+
+													<div class="pin in_1 on"><a href=""><p>1'</p></a></div>
+													<div class="pin in_2 on"><a href=""><p>2'</p></a></div>
+													<div class="pin in_3 on"><a href=""><p>3'</p></a></div>
+													<div class="pin in_4 on"><a href=""><p>4'</p></a></div>
+													<div class="pin in_5 on"><a href=""><p>5'</p></a></div>
+													<div class="pin in_6 on"><a href=""><p>6'</p></a></div>
+													<div class="pin in_7 on"><a href=""><p>7'</p></a></div>
+													<div class="pin in_8 on"><a href=""><p>8'</p></a></div>
+													<div class="pin in_9 on"><a href=""><p>9'</p></a></div>
+													<div class="pin in_10 on"><a href=""><p>10'</p></a></div>
+													<div class="pin in_11 on"><a href=""><p>11'</p></a></div>
+													<div class="pin in_12 on"><a href=""><p>12'</p></a></div>
+												</div>
+											</div>
+										</li>
+										
+										<li>
+											<p class="tit">결과</p>
+											<div class="box">
+												<p class="tit-sub">기술</p>
+												<select>
+													<option>
+														기술 선택
+													</option>
+												</select>
+											</div>
+											<div class="box">
+												<p class="tit-sub">상세 기술</p>
+												<select>
+													<option>
+														* 기술 선택 후 상세 기술이 표출됩니다.
+													</option>
+												</select>
+											</div>
+											<div class="box">
+												<p class="tit-sub">결과</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>승리기술</label></li>
+													<li><input type="checkbox"><label>공격시도</label></li>
+													<li><input type="checkbox"><label>경고</label></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- 대회(경기) 외 영상 -->
+								<div class="mid">
+									<div class="reset-zone">
+										<p class="tit">필터</p>
+										<a href=""><img src="../resources/images/sub/icon_reset_round.png"></a>
+									</div>
+									<ul class="detail-zone">
+										<li>
+											<p class="tit">구분</p>
+											<div class="box">
+												<p class="tit-sub">시즌</p>
+												<ul class="choice">
+													<li><input id="2022" type="checkbox"><label for="2022">2022</label></li>
+													<li><input type="checkbox"><label>2021</label></li>
+													<li><input type="checkbox"><label>2020</label></li>
+													<li><input type="checkbox"><label>2019</label></li>
+												</ul>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													시즌 더보기
+												</a>
+											</div>
+											<div class="box">
+												<p class="tit-sub">경기 외 사업</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>대회 외 사업</label></li>
+													<li><input type="checkbox"><label>행사 및 회의</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">대회 외 사업</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>홍보</label></li>
+													<li><input type="checkbox"><label>저변확대</label></li>
+													<li><input type="checkbox"><label>유청소년</label></li>
+													<li><input type="checkbox"><label>국제교류</label></li>
+													<li><input type="checkbox"><label>교육</label></li>
+													<li><input type="checkbox"><label>기타</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">홍보</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>캠페인</label></li>
+													<li><input type="checkbox"><label>예능</label></li>
+													<li><input type="checkbox"><label>대회관련</label></li>
+													<li><input type="checkbox"><label>선수 및 팀 소개</label></li>
+													<li><input type="checkbox"><label>기타</label></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<!-- 경기 외 영상 -->
+								<div class="mid">
+									<div class="reset-zone">
+										<p class="tit">필터</p>
+										<a href=""><img src="../resources/images/sub/icon_reset_round.png"></a>
+									</div>
+									<ul class="detail-zone">
+										<li>
+											<p class="tit">구분</p>
+											<div class="box">
+												<p class="tit-sub">시즌</p>
+												<ul class="choice">
+													<li><input id="2022" type="checkbox"><label for="2022">2022</label></li>
+													<li><input type="checkbox"><label>2021</label></li>
+													<li><input type="checkbox"><label>2020</label></li>
+													<li><input type="checkbox"><label>2019</label></li>
+												</ul>
+												<a class="add">
+													<img src="../resources/images/sub/icon_add.png">
+													시즌 더보기
+												</a>
+											</div>
+											<div class="box">
+												<p class="tit-sub">경기 외 영상</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>대회 외 사업</label></li>
+													<li><input type="checkbox"><label>행사 및 회의</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">대회 외 사업</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>홍보</label></li>
+													<li><input type="checkbox"><label>저변확대</label></li>
+													<li><input type="checkbox"><label>유청소년</label></li>
+													<li><input type="checkbox"><label>국제교류</label></li>
+													<li><input type="checkbox"><label>교육</label></li>
+													<li><input type="checkbox"><label>기타</label></li>
+												</ul>
+											</div>
+											<div class="box">
+												<p class="tit-sub">홍보</p>
+												<ul class="choice">
+													<li><input type="checkbox"><label>캠페인</label></li>
+													<li><input type="checkbox"><label>예능</label></li>
+													<li><input type="checkbox"><label>대회관련</label></li>
+													<li><input type="checkbox"><label>선수 및 팀 소개</label></li>
+													<li><input type="checkbox"><label>기타</label></li>
+												</ul>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner">
+							<h3>카테고리</h3>
+							<ul class="card-menu">
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/1.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/2.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/3.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/4.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/5.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/6.png">
+										<div>
+											<p>손기술</p>
+											<span>9999개 영상</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+
+							<h3>장사 결정전</h3>
+							<div class="card-menu-wrap scroll-wrap" id="card">
+								<div class="scroller">
+									<ul class="card-menu">
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class1.png" alt="천하장사">
+												<div>
+													<p>천하장사</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class2.png" alt="백두">
+												<div>
+													<p>백두</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class3.png" alt="한라">
+												<div>
+													<p>한라</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class4.png" alt="금강">
+												<div>
+													<p>금강</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class5.png" alt="태백">
+												<div>
+													<p>태백</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class6.png" alt="무궁화">
+												<div>
+													<p>무궁화</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<li>
+												<a href="">
+													<img src="../resources/images/sub/thumbnail/folklore/class7.png" alt="국화">
+													<div>
+														<p>국화</p>
+														<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+													</div>
+												</a>
+											</li>
+										</li>
+										<li>
+											<a href="">
+												<img src="../resources/images/sub/thumbnail/folklore/class8.png" alt="매화">
+												<div>
+													<p>매화</p>
+													<span>위더스제약 2022 안산김홍도장사씨름대회</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+
+						<!-- 검색 결과 뷰 -->
+						<div class="inner">
+							<h3 class="in-result">
+								333,333 Results
+								<select>
+									<option>최신순</option>
+								</select>
+							</h3>
+							<div class="result-filter">
+								<ul>
+									<li>
+										<p>팀</p>
+										<div>
+											영월군영월군민속씨름단영월군민속씨름단민속씨름단
+											<a href=""><img src="../resources/images/sub/icon_remove.png"></a>
+										</div>
+										<div>
+											영월군민속씨름단
+											<a href=""><img src="../resources/images/sub/icon_remove.png"></a>
+										</div>
+									</li>
+									<li>
+										<p>대회</p>
+										<div>
+											강릉단오장사씨름대회
+											<a href=""><img src="../resources/images/sub/icon_remove.png"></a>
+										</div>
+										<div>
+											강릉단오장사씨름대회
+											<a href=""><img src="../resources/images/sub/icon_remove.png"></a>
+										</div>
+									</li>
+									<li>
+										<p>경기 구분</p>
+										<div>
+											개인전
+											<a href=""><img src="../resources/images/sub/icon_remove.png"></a>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="vod-list">
+								<ul>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<img src="../resources/images/main/test_img2.png">
+											<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+											<p class="date">2022.01.21 (금)</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="pagenation">
+								<a class="prev" href="">
+									<span>prev</span>
+								</a>
+								<span class="num">
+									<a href="">1</a>
+									<a href="">2</a>
+									<a class="on" href="">3</a>
+									<a href="">4</a>
+									<a href="">5</a>
+								</span>
+								<a class="next" href="">
+									<span>next</span>
+								</a>
+							</div>
+						</div>
+
+						<!-- 영상 상세 뷰 -->
+						<div class="inner">
+							<div class="left-wrap">
+								<div class="video">
+									<iframe width="864" height="486" src="https://www.youtube.com/embed/n6EVdfnYy-M?list=TLGGDG5SMWW4VFYxMzEyMjAyMg" title="[리뷰] 2021년 민속대회를 빛낸 영광의 주인공은? │ 2021 민속대회 총결산 1부" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+								<p class="txt">2022 제 78회 대통령기전국장사씨름대회 초등부 경장급 16강 1조 1라운드</p>
+								<p class="memo">
+									2022.01.21 (금) ㆍ 경기 구분 ㆍ 성별 ㆍ 경기 종별 ㆍ 체급 ㆍ 조,토너먼트 ㆍ 경기장
+								</p>
+							</div>
+							<ul class="right-wrap">
+								<li>
+									<a href="">
+										<img src="../resources/images/main/test_img2.png">
+										<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+										<p class="date">2022.01.21 (금)</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/1.png">
+										<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+										<p class="date">2022.01.21 (금)</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/1.png">
+										<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+										<p class="date">2022.01.21 (금)</p>
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="../resources/images/sub/thumbnail/folklore/1.png">
+										<p class="txt">이대진 감독과 이진형 코치가 이끄는 이대진 감독과 이진형 코치가 이끄는</p>
+										<p class="date">2022.01.21 (금)</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장
+					B103호</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br />Copyright ⓒ 대한씨름협회. All
+				rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

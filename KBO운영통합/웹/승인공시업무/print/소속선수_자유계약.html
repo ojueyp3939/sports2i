@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/sub2.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/print.css" />
+	<link rel="stylesheet" type="text/css" href="../../resources/css/popup.css" />
+	<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/common.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">+
+						<img src="../../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">승인∙공시업무</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">승인신청</a></li>
+							<li><a href="#none">승인신청확인</a></li>
+							<li class="on"><a href="#none">공시확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">일반업무</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">제출 및 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자 관리</a></li>
+				<li>
+					<a href="#none">시스템 관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+							<li><a href="#none">서명관리</a></li>
+							<li><a href="#none">텍스트관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">	
+			<div class="tit-area">
+				<div class="inner">
+					<h2>공시확인</h2>
+				</div> 
+			</div>
+
+			<div id="PrintArea" class="official-confirm print">		
+				<div id="Page01" class="page-break">
+					<!-- 인쇄 헤더 -->
+					<div class="print-header">
+						<div class="logo"><img src="../../resources/images/sub/print_logo_kbo.jpg" alt="" /></div>
+						<div class="logo-2"><img src="../../resources/images/sub/print_logo_abwy.jpg" alt="" /></div>
+					</div>
+					<!-- 인쇄 수발신인 정보 -->
+					<div class="print-info">
+						<dl class="info01">
+							<dt>수신자<br />(경유)</dt>
+							<dd>구단 대표이사</dd>
+						</dl>
+						<dl class="info02">
+							<dt>참조</dt>
+							<dd>운영팀장</dd>
+						</dl>
+						<dl class="info03">
+							<dt>제목</dt>
+							<dd>자유계약선수 공시</dd>
+						</dl>
+					</div>
+					<!-- 인쇄 본문 -->
+					<div class="document">
+						<div class="comment">
+							KBO 규약 제 30 조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. KBO 규약 제 30조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. KBO 규약 제 30조 [자유계약선수]에 의거, 다음과 같이 자유계약 선수로 공시합니다. 
+						</div>
+						<div class="tbl-type">
+							<table class="tbl">
+								<colgroup>
+									<col width="15%" />
+									<col width="35%" />
+									<col width="10%" />
+									<col width="10%" />
+									<col width="30%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>구단</th>
+										<th>선수명</th>
+										<th>생년월일</th>
+										<th>위치</th>
+										<th>비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>삼성 라이온즈</td>
+										<td>리살베르토 보니야</td>
+										<td>1990.6.18.</td>
+										<td>내야수</td>
+										<td>보류권 포기</td>
+									</tr>
+									<tr>
+										<td rowspan="2">KIA 타이거즈</td>
+										<td>리살베르토 보니야</td>
+										<td>1990.6.18.</td>
+										<td>내야수</td>
+										<td>보류권 포기</td>
+									</tr>	
+									<tr>
+										<td>리살베르토 보니야 <span class="eng-name">(Lisalverto Bonilla)</span></td>
+										<td>1990.6.18.</td>
+										<td>내야수</td>
+										<td>보류권 포기</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="end">끝</div>
+					</div>
+					<!-- 인쇄 푸터 -->
+					<div class="print-footer">
+						<div class="ceo">
+							<span>사단법인</span>
+							<span>한&nbsp;국&nbsp;야&nbsp;구&nbsp;위&nbsp;원&nbsp;회&nbsp;&nbsp;&nbsp;총&nbsp;재</span>
+						</div>
+						<div class="print-signature">
+							<div class="row-group">
+								사원 : 문소현&nbsp;&nbsp;&nbsp;대리 : 김소영&nbsp;&nbsp;&nbsp;대리 : 손재웅&nbsp;&nbsp;&nbsp;과장 : 유병석&nbsp;&nbsp;&nbsp;과장 : 이건일&nbsp;&nbsp;&nbsp;팀장 : 박근찬
+							</div>
+							<div class="row-group">
+								시행 : 한야위 제 18 - XXX호 (2018.7.2) / 보존연한 :
+							</div>
+							<div class="row-group">우 06258 서울시 강남구 강남대로 278 / http://www.koreabaseball.com</div>
+							<div class="row-group">전화 02) 3460 - 4645 / 전송 02) 3460 - 4648 / savio.moon@koreabaseball.or.kr / 공개</div>
+						</div>
+					</div>
+					<div class="print-page">
+						<span class="current">1</span> / <span class="total">1</span>
+					</div>
+				</div>     		
+			</div>
+			<div class="btn-area-board">    
+				<a class="btn btn-reg" href="#none">확인</a>
+				<a class="btn btn-cancel" href="#none">인쇄</a>
+			</div>
+			
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+
+</body>
+</html>

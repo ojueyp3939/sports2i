@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+/* 날짜 */
+.date-select-area  {position:relative;padding:12px 0 11px;text-align:center;}
+.date-select-area .date-select  {overflow:hidden;width:49.7223vw;margin:0 auto;vertical-align:middle;}
+.date-select-area .date-select li a {display:block;padding:5px;}
+.date-select-area .date-select .prev {float:left;width:19px;}
+.date-select-area .date-select .today {float:left;width:calc(100% - 38px);margin:3px 0;}
+.date-select-area .date-select .today .date {font-size:1.7rem;vertical-align:middle;}
+.date-select-area .date-select .today .day {margin-left:6px;font-size:1.5rem;color:#888;vertical-align:middle;}
+.date-select-area .date-select .next {float:left;width:19px;}
+.date-select-area .btn-calendar {position:absolute;top:16px;right:12px;}
+.date-select-area .btn-calendar .icon-calendar {width:18px;}
+.date-select-area .btn-calendar .ui-datepicker-trigger {width:18px;}
+
+.game-list {}
+.game-list ul {}
+.game-list ul li {position:relative;overflow:hidden;width:100%;height:104px;margin-bottom:5px;background:#fff;border-top:1px solid #ececec;border-bottom:1px solid #ececec;}
+.game-list ul li .tag {position:absolute;top:0;left:0;padding:1px 3px;background:#2db9b6;font-size:0.9rem;font-weight:100;color:#fff;}
+.game-list ul li .team {float:left;width:40%;margin-top:22px;}
+.game-list ul li .team .player-info {float:left;width:65%;}
+.game-list ul li .team .player-info .emb {width:53%;max-width:55px;margin:0 auto;}
+.game-list ul li .team .player-info .player {width:100%;margin-top:5px;text-align:center;}
+.game-list ul li .team .player-info .player .win {padding:0 3px;margin-right:3px;font-size:0.9rem;font-style:normal;color:#fff;background:#ff4b53;border-radius:2px;vertical-align:middle;}
+.game-list ul li .team .player-info .player .lose {padding:0 3px;margin-right:3px;font-size:0.9rem;font-style:normal;color:#fff;background:#2f2f2f;border-radius:2px;vertical-align:middle;}
+.game-list ul li .team .player-info .player .save {padding:0 3px;margin-right:3px;font-size:0.9rem;font-style:normal;color:#fff;background:#919191;border-radius:2px;vertical-align:middle;}
+.game-list ul li .team .player-info .player .name {font-size:1.4rem;vertical-align:top;}
+.game-list ul li .team .player-info .player .position {padding:0 3px;margin-right:3px;font-size:0.9rem;font-style:normal;color:#fff;background:#2f2f2f;border-radius:2px;vertical-align:middle;}
+.game-list ul li .team .score {float:left;width:35%;margin-top:18px;font-size:2.4rem;font-weight:700;text-align:center;}
+.game-list ul li .team .score.win {color:#d64249;}
+.game-list ul li .home {float:right;}
+.game-list ul li .game-info {float:left;width:20%;margin-top:28px;text-align:center;}
+.game-list ul li .game-info .giga-live {width:58px;margin:0 auto;}
+.game-list ul li .game-info .current-info {padding-top:12px;font-weight:100;}
+.game-list ul li .game-info .current-info strong {font-weight:100;color:#ff4b53;}
+.game-list ul li .game-info .btn {margin-top:5px;}
+
+/* 프리뷰 */
+/* .game-list ul li.preview  .team {margin-top:23px;}
+.game-list ul li.preview .team .team-info {float:left;width:52%;text-align:center;}
+.game-list ul li.preview .team .team-info .emb {width:53%;max-width:55px;margin:0 auto;}
+.game-list ul li.preview .team .team-info .rank {padding:3px 0;}
+.game-list ul li.preview .team .team-info .recent em {margin:0 1px;padding:0 3px;font-size:0.9rem;font-style:normal;color:#fff;background:#919191;border-radius:2px;}
+.game-list ul li.preview .team .team-info .recent .win {background:#ff4b53;}
+.game-list ul li.preview .team .team-info .recent .lose {background:#2f2f2f;}
+.game-list ul li.preview .team .player {float:left;width:38%;margin:21px 10% 0 0;text-align:center;letter-spacing:-1px;}
+.game-list ul li.preview .home .player {margin:21px 0 0 10%;}
+.game-list ul li.preview .game-info {float:left;width:20%;text-align:center;font-weight:100;}
+.game-list ul li.preview .game-info .place {padding-left:4px;} */
+/* 프리뷰 변경 */
+.game-list ul li.preview .team {margin-top:18px;}
+.game-list ul li.preview .team .emb {float:left;width:35%;margin:17px 0 0 8%;max-width:55px;}
+.game-list ul li.preview .team .player-info {width:50%;margin:0 7% 0 0;text-align:center;}
+.game-list ul li.preview .team .player-info .player-img {width:64%;max-width:55px;margin:0 auto;border:1px solid #ececec;border-radius:50%;}
+.game-list ul li.preview .team .name {padding:5px 0 0;font-size:1.4rem;text-align:center;letter-spacing:-1px;}
+.game-list ul li.preview .home .emb {margin:17px 8% 0 0;}
+.game-list ul li.preview .home .player-info {margin:0 0 0 7%}
+.game-list ul li.preview .game-info {float:left;width:20%;margin-top:22px;text-align:center;font-weight:100;}
+.game-list ul li.preview .game-info .place {display:block;}
+
+/* 라이브 */
+.game-list ul li.live .game-info {margin-top:0;}
+.game-list ul li.live .current-info.spd {padding-top:20px;text-align:center;}
+.game-list ul li.live .current-info.spd .txt-spd {display:block;padding-top:2px;font-size:1.3rem;font-weight:400;color:#ff4b53;}
+
+/* 리뷰 */
+.game-list ul li.review .team {}
+
+.game-list ul li.lineup-before {}
+.game-list ul li.lineup-before .team .team-info {float:left;width:100%;}
+.game-list ul li.lineup-before .team .team-info .emb {width:34.4%;max-width:55px;margin:0 auto;}
+.game-list ul li.lineup-before .team .score {display:none;}
+.game-list ul li.lineup-before .team .team-info .name {width:100%;margin-top:5px;text-align:center;}
+.game-list ul li.lineup-before .team .team-info .name span {font-size:1.4rem;vertical-align:top;}
+.game-list ul li.lineup-before .game-info {margin-top:12px;font-weight:100;}
+.game-list ul li.lineup-before .game-info .place {display:block;}
+
+/* 경기취소 */
+.game-list ul li.cancel {width:100%;text-align:center;background:#e5e5e5;}
+.game-list ul li.cancel .team .name {color:#888;}
+.game-list ul li.cancel .game-info {margin-top:36px;}
+.game-list ul li.cancel .game-info time {color:#888;}
+.game-list ul li.cancel .game-info .place {padding-top:3px;color:#888;}
+
+/* 경기가 없는날 */
+.no-schedule  {margin:140px auto 55px;width:100%;text-align:center;}
+.no-schedule span  {display:block;padding-bottom:34px;}
+.no-schedule span img  {width:98px;}
+.no-schedule p  {font-size:1.5rem;font-weight:100;color:#888;}
+
+
+
+
+@media (min-width:1024px) {
+	/* 날짜 */
+	.date-select-area .date-select {width:265px;}
+	.date-select-area .date-select .today {width:110px;margin:3px 56px 0;font-size:1.7rem;}
+	.date-select-area .date-select .today .day {font-size:1.6rem;}
+	.date-select-area .btn-calendar {top:10px;right:80px;}
+	.date-select-area .btn-calendar .ui-datepicker-trigger {width:29px;}
+	/* review */
+	.game-list ul li {height:135px;margin-bottom:10px;padding:0 4%;}
+	.game-list ul li .team {width:44.5%;margin-top:14px;}
+	.game-list ul li .team .player-info{width:57%;}
+	.game-list ul li .team .player-info .emb {width:68.26%;max-width:92.5px;}
+	.game-list ul li .team .player-info .player .position {font-size:1.5rem;}
+	.game-list ul li .team .player-info .player .result {font-size:1.5rem;}
+	.game-list ul li .team .player-info .player .name {font-size:1.8rem;vertical-align:middle;}
+	.game-list ul li .team .score {width:43%;margin-top:21px;font-size:4.5rem;}
+	.game-list ul li .away {padding:0 3.238% 0 16.63%;}
+	.game-list ul li .game-info {width:10.5%;margin-top:36px;}
+	.game-list ul li .game-info .giga-live {width:90px;}
+	.game-list ul li .game-info .end {font-size:1.8rem;font-weight:100;}
+	.game-list ul li .game-info .info {font-size:1.8rem;}
+	.game-list ul li .game-info .info .place {color:#666;}
+	.game-list ul li .home {padding:0 16.63% 0 3.238%;}
+	/* cancel */
+	.game-list ul li.cancel .game-info {margin-top:46px;font-size:1.8rem;}
+	.game-list ul li.cancel .game-info .place {font-weight:100;}
+	/* live */
+	.game-list ul li .tag {padding:1px 3px;font-size:1.6rem;}
+	.game-list ul li.live .current-info.spd {padding-top:11px;font-size:1.8rem;}
+	.game-list ul li.live .current-info.spd .txt-spd {padding-top:9px;font-size:2.0rem;}
+	/* preview */
+	.game-list ul li.preview .team {width:44.5%;margin-top:13px;padding:0 0 0 18.54%;}
+	.game-list ul li.preview .team .team-info {width:59%}
+	.game-list ul li.preview .team .team-info .rank {padding:4px 0;font-size:1.5rem;}
+	.game-list ul li.preview .team .emb {width:36.63%;max-width:none;margin:13px 0 0 0;}
+	.game-list ul li.preview .team .player {width:41%;margin:40px 0 0 0;font-size:1.8rem;}
+	.game-list ul li.preview .team .player-info {width:63.37%;margin:0;}
+	.game-list ul li.preview .team .team-info .emb {width:86.0465%;max-width:92.5px;}
+	.game-list ul li.preview .team .team-info .recent em {padding:0px 4px;font-size:1.5rem;}
+	.game-list ul li.preview .away {padding:0 2.86% 0 16%;}
+	.game-list ul li.preview .game-info {width:10.5%;margin-top:33px;}
+	.game-list ul li.preview .home {padding:0 16% 0 2.86%;}
+	/* 경기가 없는 날 */
+	.no-schedule {width:170px;margin:187px auto 185px;}
+	.no-schedule span {padding-bottom:36px;}
+	.no-schedule span img {width:170px;}
+	.no-schedule p {font-size:1.6rem;font-weight:400;}
+}

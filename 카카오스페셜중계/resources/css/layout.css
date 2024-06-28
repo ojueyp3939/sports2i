@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* common */
+body {width:100%;background:#f6f6f6;}
+#wrap {min-width:1380px;height:100%;margin:0 auto;}
+
+/* header */
+header {width:100%;border-bottom:1px solid #d7dbe0;background:#fff;}
+header #Gnb {height:80px;padding:25px 0;text-align:center;background:#3262dc;}
+header #Gnb h1 {font-size:28px;color:#fff;font-weight:900}
+header .game-info {position:relative;width:1200px;height:70px;margin:0 auto;}
+header .game-info > ul {text-align:center;}
+header .game-info > ul li {display:inline-block;padding-top:25px;font-size:24px;color:#3262dc;font-weight:900;vertical-align:top;}
+header .game-info > ul li:nth-child(2) {padding:25px 54px 0;}
+header .game-info > ul li p {font-size:24px;color:#3262dc;font-weight:900}
+header .game-info > ul.ing li:nth-child(2) {padding-top:10px}
+header .game-info .game-list {position:absolute;top:12px;right:0;z-index:10;}
+header .game-info .game-list .game-choice {width:210px;height:45px;padding-top:14px;border:1px solid #e6e8eb;border-radius:5px;font-size:16px;color:#545c6b;text-align:center;cursor:pointer;}
+header .game-info .game-list .game-choice .up {display:inline-block;width:8px;height:5px;margin-left:8px;background-image:url(../images/common/up.png);vertical-align:middle;}
+header .game-info .game-list .game-choice .down {display:inline-block;width:8px;height:5px;margin-left:8px;background-image:url(../images/common/down.png);vertical-align:middle;}
+header .game-info .game-list .game-box {width:210px;padding:13px 0;border-radius:5px;background:#fff;box-shadow:-1px 1px 9px 1px #ececec;}
+header .game-info .game-list .game-box li {height:50px;padding-top:15px;text-align:center;cursor:pointer;}
+header .game-info .game-list .game-box li span {font-size:18px;color:#545c6b;font-weight:700}
+header .game-info .game-list .game-box li span:nth-child(2) {margin:0 15px;font-size:14px;}
+header .game-info .game-list .game-box li:hover {background:#f5f6f7;}
+
+/* section */
+section {width:1200px;margin:0 auto;padding:40px 0 60px;}
+section::after {content:"";display:block;clear:both;}
+section.wide {width:1380px}

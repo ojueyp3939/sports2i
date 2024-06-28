@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/schedule.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+          dateFormat: 'yy-mm-dd',
+          showOn: "button",
+          buttonImage: "../resources/images/common/btn_calendar_icon.png",
+          buttonImageOnly: true,
+          changeMonth: true,
+          changeYear: true,
+          autoSize: true,
+          showButtonPanel: true,
+          beforeShow: function (input) {
+              var i_offset = $(input).offset(); //클릭된 input의 위치값 체크
+              $("body").append("<div id='Modal' />");
+              setTimeout(function () {
+                  var dateOffset = $("#ui-datepicker-div").height() / 2;
+                  $('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+              }, 0);
+          },
+          onSelect: function (dateText, inst) {
+              $("#Modal").remove();
+              //component.setDate(dateText.toDate('yyyy-MM-dd'));
+          },
+          onClose: function () {
+              $("#Modal").remove();
+          }
+      });
+		});
+    function loaded() {
+      var myScroll1 = new IScroll('#gnb',{
+        eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+      });
+    }
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header>
+			<h1 class="tit">프로야구</h1>
+      <nav id="gnb" class="scroll-wrap">
+        <div class="scroller">
+  				<ul class="menu">
+  					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+            <li><a href="../highlight/highlight.html"><span>하이라이트</span></a></li>
+  					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+  					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+  					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+  					<li><a href="../My/my.html"><span>MY</span></a></li>
+  				</ul>
+        </div>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+			<a href="javascript:;" class="btn-back"><img src="../resources/images/common/btn_back.png" alt="" /></a>
+			<a href="javascript:;" class="btn-home"><img src="../resources/images/common/btn_home.png" alt="" /></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<div  class="date-select-area">
+					<ul class="date-select">
+						<li class="prev"><a href="#"><img src="../resources/images/common/btn_arrow_left.png" alt="prev" /></a></li>
+						<li class="today"><span class="date">2018.10.11</span><span class="day">목</span></li>
+						<li class="next"><a href="#"><img src="../resources/images/common/btn_arrow_right.png" alt="prev" /></a></li>
+					</ul>
+					<span class="btn-calendar">
+						<input type="hidden" id="btnCalendar" />
+					</span>
+				</div>
+        <!-- 일정 변경 후 -->
+        <section class="game-list">
+          <ul>
+            <li class="info-box review">
+              <div class="team away">
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                  <div class="player">
+                    <span class="result win">승</span>
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+                <div class="score win">99</div>
+              </div>
+              <div class="game-info">
+                <div class="end">경기종료</div>
+                <a href="../Playball/playball_리뷰_경기기록.html" class="btn black">리뷰</a>
+              </div>
+              <div class="team home">
+                <div class="score">99</div>
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                  <div class="player">
+                    <span class="result lose">패</span>
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="info-box cancel">
+              <div class="team away">
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+                  <div class="player">
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+                <div class="score"></div>
+              </div>
+              <div class="game-info">
+                <time>경기취소</time>
+                <div class="place">대전</div>
+              </div>
+              <div class="team home">
+                <div class="score"></div>
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+                  <div class="player">
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="info-box live">
+              <span class="tag">DH 1</span>
+              <div class="team away">
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                  <div class="player">
+                    <span class="position">투</span>
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+                <div class="score win">99</div>
+              </div>
+              <div class="game-info">
+                <div class="giga-live"><img src="../resources/images/common/logo_gigalive.png" alt="" /></div>
+                <div class="current-info spd">
+                  <strong>LIVE</strong> 9회말
+                  <!-- 서스펜디드 일때 spd 클래스추가 -->
+                  <span class="txt-spd">서스펜디드</span>
+                </div>
+                <a href="../Playball/playball_스마트중계_관전포인트.html" class="btn red">스마트 중계</a>
+              </div>
+              <div class="team home">
+                <div class="score">99</div>
+                <div class="player-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                  <div class="player">
+                    <em class="position">타</em>
+                    <span class="name">엄상백백백</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="info-box preview">
+              <span class="tag">DH 1</span>
+              <div class="team away">
+                <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                <div class="player-info">
+                  <div class="player-img">
+                    <img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+                  </div>
+                  <div class="name">신정락락락</div>
+                </div>
+              </div>
+              <div class="game-info">
+                <div class="info"><time>18:30</time><span class="place">대전</span></div>
+                <a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+              </div>
+              <div class="team home">
+                <div class="player-info">
+                  <div class="player-img">
+                    <img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+                  </div>
+                  <div class="name">신정락락락</div>
+                </div>
+                <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+              </div>
+            </li>
+            <li class="info-box lineup-before">
+              <div class="team away">
+                <div class="team-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+                  <div class="name">
+                    <span class="">KT</span>
+                  </div>
+                </div>
+                <div class="score"></div>
+              </div>
+              <div class="game-info">
+                <div class="info"><time>18:30</time><span class="place">대전</span></div>
+                <a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+              </div>
+              <div class="team home">
+                <div class="score"></div>
+                <div class="team-info">
+                  <div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+                  <div class="name">
+                    <span class="">한화</span>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- // 일정 변경 후 -->
+        <!-- 일정 변경 전 -->
+				<!-- <div class="game-list">
+					<ul>
+						<li class="info-box review">
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="result win">승</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score win">99</div>
+							</div>
+							<div class="game-info">
+								<div class="end">경기종료</div>
+								<a href="../playball/playball_리뷰_경기기록.html" class="btn black">리뷰</a>
+							</div>
+							<div class="team home">
+								<div class="score">99</div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<span class="result lose">패</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="info-box cancel">
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score"></div>
+							</div>
+							<div class="game-info">
+								<time>경기취소</time>
+								<div class="place">대전</div>
+							</div>
+							<div class="team home">
+								<div class="score"></div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="info-box live">
+							<span class="tag">DH 1</span>
+							<div class="team away">
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="player">
+										<span class="position">투</span>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+								<div class="score win">99</div>
+							</div>
+							<div class="game-info">
+								<div class="giga-live"><img src="../resources/images/common/logo_gigalive.png" alt="" /></div>
+								<div class="current-info spd">
+									<strong>LIVE</strong> 9회말 -->
+									<!-- 서스펜디드 일때 spd 클래스추가 -->
+									<!-- <span class="txt-spd">서스펜디드</span>
+								</div>
+								<a href="../playball/playball_스마트중계_관전포인트.html" class="btn red">스마트 중계</a>
+							</div>
+							<div class="team home">
+								<div class="score">99</div>
+								<div class="player-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="player">
+										<em class="position">타</em>
+										<span class="name">엄상백백백</span>
+									</div>
+								</div>
+							</div>
+						</li> -->
+						<!-- <li class="info-box preview">
+							<span class="tag">DH 1</span>
+							<div class="team away">
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="rank">1위</div>
+									<div class="recent"><em class="lose">패</em><em class="win">승</em><em class="lose">패</em></div>
+								</div>
+								<div class="player">신정락락락</div>
+							</div>
+							<div class="game-info">
+								<div class="info"><time>18:30</time><span class="place">대전</span></div>
+								<a href="#none" class="btn grey">전력분석</a>
+							</div>
+							<div class="team home">
+								<div class="player">신정락락락</div>
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="rank">1위</div>
+									<div class="recent"><em class="lose">패</em><em class="win">승</em><em class="lose">패</em></div>
+								</div>
+							</div>
+						</li> -->
+            <!-- <li class="info-box preview">
+							<span class="tag">DH 1</span>
+							<div class="team away">
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+								<div class="player-info">
+									<div class="player-img">
+										<img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+									</div>
+									<div class="name">신정락락락</div>
+								</div>
+							</div>
+							<div class="game-info">
+								<div class="info"><time>18:30</time><span class="place">대전</span></div>
+								<a href="../Playball/playball_전력분석_라인업.html" class="btn grey">전력분석</a>
+							</div>
+							<div class="team home">
+								<div class="player-info">
+									<div class="player-img">
+										<img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" />
+									</div>
+									<div class="name">신정락락락</div>
+								</div>
+								<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+							</div>
+						</li>
+					</ul>
+				</div> -->
+        <!-- // 일정 변경 전 -->
+				<div class="no-schedule">
+					<span><img src="../resources/images/common/bg_no.png" alt="경기없음" /></span>
+					<p>경기가 없는 날입니다.</p>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

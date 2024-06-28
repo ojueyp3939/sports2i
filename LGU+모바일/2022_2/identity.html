@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>스포키 미션 릴레이</title>
+    <link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/btn_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="header-wrap">
+			<a class="btn-left" href="">
+				<img src="resources/images/contents/icon_back.png" alt="back">
+			</a>
+			<span>이벤트 참여 본인 인증</span>
+		</div>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents">
+				<section class="identity-wrap">
+					<div class="all-check">
+						<input type="checkbox" id="all">
+						<span></span>
+						<label for="all">필수 약관 모두 동의</label>
+					</div>
+					<ul class="check-list">
+						<li>
+							<label for="check1"><a>이벤트 개인정보 수집 및 이용</a> 동의 [필수]</label>
+							<input type="checkbox" id="check1">
+							<span></span>
+						</li>
+						<li>
+							<label for="check2"><a>이벤트 개인정보 제 3자 정보 제공</a> 동의 [필수]</label>
+							<input type="checkbox" id="check2">
+							<span></span>
+						</li>
+						<li>
+							<label for=""><a>개인정보 수집/이용/취급 위탁</a> 동의 [필수]</label>
+							<input type="checkbox">
+							<span></span>
+						</li>
+						<li>
+							<label for=""><a>본인 확인 서비스 이용약관</a> 동의 [필수]</label>
+							<input type="checkbox">
+							<span></span>
+						</li>
+						<li>
+							<label for=""><a>고유 식별 정보처리</a> 동의 [필수]</label>
+							<input type="checkbox">
+							<span></span>
+						</li>
+						<li>
+							<label for=""><a>통신사 이용 약관</a> 동의 [필수]</label>
+							<input type="checkbox">
+							<span></span>
+						</li>
+						<li>
+							<label for=""><a>개인정보 제 3자</a> 동의 (KT 알뜰폰, LGU+ 알뜰폰 선택 시)</label>
+							<input type="checkbox">
+							<span></span>
+						</li>
+					</ul>
+					<p class="tit">이름</p>
+					<div class="text-field">
+						<input type="text" placeholder="이름">
+						<a class="" href="">
+							<img src="resources/images/contents/icon_delete.png">
+						</a>
+					</div>
+					<ul class="check-field">
+						<li>
+							<input type="radio" id="3">
+							<label for="3">외국인</label>
+						</li>
+						<li>
+							<input type="radio" id="4">
+							<label for="4">내국인</label>
+						</li>
+					</ul>
+
+					<p class="tit">생년월일</p>
+					<div class="text-field">
+						<input type="text" placeholder="8자리를 입력해 주세요 (예 : 19911004)">
+						<a href="">
+							<img src="resources/images/contents/icon_delete.png">
+						</a>
+					</div>
+					<ul class="check-field">
+						<li>
+							<input type="radio" id="1">
+							<label for="1">남자</label>
+						</li>
+						<li>
+							<input type="radio" id="2">
+							<label for="2">여자</label>
+						</li>
+					</ul>
+
+					<p class="tit">휴대폰 번호</p>
+					<ul class="phone-field">
+						<li>
+							<input type="radio" id="LG"><label for="LG">LG U+</label>
+						</li>
+						<li>
+							<input type="radio" id="KT"><label for="KT">KT</label>
+						</li>
+						<li class="mr0">
+							<input type="radio" id="SKT"><label for="SKT">SKT</label>
+						</li>
+						<li>
+							<select class="on">
+								<option>알뜰폰</option>
+								<option>LG U+ 알뜰폰</option>
+								<option>알뜰폰</option>
+							</select>
+						</li>
+					</ul>
+					<div class="text-field">
+						<input type="number" placeholder="기호(-) 없이 숫자만 입력">
+						<a class="txt on" href="">인증 재 요청</a>
+					</div>
+					<div class="text-field">
+						<input type="number" placeholder="인증번호 입력">
+						<a class="txt" href="">확인</a>
+					</div>
+					<p class="valid-time">남은 시간 02:30</p>
+					<!-- 남은 시간이 생기면 in-time 클래스 추가 -->
+					<button class="submit-btn in-time">완료</button>
+					<img class="w100 mb30" src="resources/images/contents/identity_noti.png" alt="개인정보 수집 동의">
+
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

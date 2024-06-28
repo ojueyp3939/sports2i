@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPub_Dotum_Pro_Light.eot');
+  src: url('../font/KoPub_Dotum_Pro_Light.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Light.woff') format('woff');
+}
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPub_Dotum_Pro_Medium.eot');
+  src: url('../font/KoPub_Dotum_Pro_Medium.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Medium.woff') format('woff');
+}
+@font-face {
+  font-family:'kopub';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPub_Dotum_Pro_Bold.eot');
+  src: url('../font/KoPub_Dotum_Pro_Bold.eot?#iefix') format('embedded-opentype'), url('../font/KoPub_Dotum_Pro_Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumBarunGothic.eot');
+  src: url('../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothic.woff') format('woff');
+}
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumBarunGothicBold.eot');
+  src: url('../font/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicBold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'nexon';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/NEXONLv1GothicLowOTFLight.eot');
+  src: url('../font/NEXONLv1GothicLowOTFLight.eot?#iefix') format('embedded-opentype'), url('../font/NEXONLv1GothicLowOTFLight.woff') format('woff');
+}
+@font-face {
+  font-family:'nexon';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NEXONLv1GothicLowOTFRegular.eot');
+  src: url('../font/NEXONLv1GothicLowOTFRegular.eot?#iefix') format('embedded-opentype'), url('../font/NEXONLv1GothicLowOTFRegular.woff') format('woff');
+}
+@font-face {
+  font-family:'nexon';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NEXONLv1GothicLowOTFBold.eot');
+  src: url('../font/NEXONLv1GothicLowOTFBold.eot?#iefix') format('embedded-opentype'), url('../font/NEXONLv1GothicLowOTFBold.woff') format('woff');
+}

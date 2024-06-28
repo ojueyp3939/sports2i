@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 SOL 빙고</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/bingo.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		var swiper = new Swiper('.swiper-menu', {
+			slidesPerView: 'auto',
+			freeMode: true,
+			mousewheel: true,
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<a class="btn-back" href=""></a>
+			<span>신한 SOL 빙고</span>
+			<a class="btn-close" href=""></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents">
+				<div class="tab-area">
+					<ul class="tab">
+						<li class="on"><a href="../mybingo/ranking.html">월간랭킹</a></li>
+						<li><a href="../mybingo/event.html">이벤트</a></li>
+					</ul>
+				</div>
+				<img src="../resources/images/sub/img_mybingo.png" alt="마이빙고 - 빙고를 완성하고 총 상금 500만원에 도전하세요!">
+
+				<div class="swiper-container swiper-menu">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-slide-active">
+							<ul class="month-list">
+								<li><a href="#none">1월</a></li>
+								<li><a href="#none">2월</a></li>
+								<li class="on"><a href="#none">3월</a></li>
+								<li class="off"><a href="#none">4월</a></li>
+								<li class="off"><a href="#none">5월</a></li>
+								<li class="off"><a href="#none">6월</a></li>
+								<li class="off"><a href="#none">7월</a></li>
+								<li class="off"><a href="#none">8월</a></li>
+								<li class="off"><a href="#none">9월</a></li>
+								<li class="off"><a href="#none">10월</a></li>
+								<li class="off"><a href="#none">11월</a></li>
+								<li class="off"><a href="#none">12월</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="info-box">
+					<li>
+						<div>
+							<p class="tit">랭킹</p>
+							<p class="num">-<span>등</span></p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p class="tit">Line</p>
+							<p class="num">-<span>BG</span></p>
+						</div>
+					</li>
+					<li>
+						<div>
+							<p class="tit">참여횟수</p>
+							<p class="num">-<span>회<span></p>
+						</div>
+					</li>
+				</ul>
+
+				<div class="history">
+					<h3>빙고 HISTORY</h3>
+					<!-- 참여기록 유 -->
+					<table class="tbl">
+						<colgroup>
+							<col width="17%" />
+							<col width="30%" />
+							<col width="30%" />
+							<col width="23%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>일자</th>
+								<th>퀴즈 정답</th>
+								<th>빙고</th>
+								<th>획득 BG</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>31일</td>
+								<td>4개 (40BG)</td>
+								<td>3개 (60BG)</td>
+								<td>30 BG</td>
+							</tr>
+							<tr>
+								<td>31일</td>
+								<td>4개 (40BG)</td>
+								<td>3개 (60BG)</td>
+								<td>30 BG</td>
+							</tr>
+							<tr>
+								<td>31일</td>
+								<td>4개 (40BG)</td>
+								<td>3개 (60BG)</td>
+								<td>30 BG</td>
+							</tr>
+							<tr>
+								<td>31일</td>
+								<td>4개 (40BG)</td>
+								<td>3개 (60BG)</td>
+								<td>30 BG</td>
+							</tr>
+							<tr>
+								<td>31일</td>
+								<td>4개 (40BG)</td>
+								<td>3개 (60BG)</td>
+								<td>30 BG</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- 참여기록 무 -->
+					<div class="no-histroy">
+						참여기록이 없습니다.
+					</div>
+					<div class="btn-plus">
+						<a href="#none"><span>더보기</span></a>
+					</div>
+				</div>
+				<div class="ranking">
+					<h3>월간 랭킹 <span>(5월 5일 기준)</span></h3>
+					<div class="my-rank">
+						<!-- [D] 0% ~ 7% 일 경우 -->
+						<div class="temper">
+							<span class="temp-rate" style="width:7%;">
+								<img src="../resources/images/sub/icon_dot.png" alt="MY">
+							</span>
+							<span class="temp-my-ballon">000 BG</span>
+							<span class="temp-crown"></span>
+							<span class="temp-crown-ballon">000 BG</span>
+						</div>
+
+						<!-- <div class="temper">
+							<span class="temp-rate" style="width:70%;">
+								<img src="../resources/images/sub/icon_dot.png" alt="MY">
+							</span>
+							<span class="temp-my-ballon">000 BG</span>
+							<span class="temp-crown"></span>
+							<span class="temp-crown-ballon">000 BG</span>
+						</div> -->
+						<p class="txt">1등 달성까지 <span class="point">- BG</span> 남았습니다!</p>
+					</div>
+					<table class="tbl">
+						<colgroup>
+							<col width="40%" />
+							<col width="30%" />
+							<col width="30%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>랭킹</th>
+								<th>BG</th>
+								<th>경품</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="up">
+								<td>1등</td>
+								<td>1,234,567</td>
+								<td>
+									<img src="../resources/images/sub/event_rank_gift_500.png" />
+								</td>
+							</tr>
+							<tr class="down">
+								<td>2등~100등 <span>(10명)</span></td>
+								<td>521,215</td>
+								<td>
+									<img src="../resources/images/sub/event_rank_gift_5.png" />
+								</td>
+							<tr class="up">
+								<td>11등~100등 <span>(100명)</span></td>
+								<td>12</td>
+								<td>
+									<img src="../resources/images/sub/event_rank_gift_1.png" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+			<img src="../resources/images/sub/img_info.png" alt="유의사항">
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

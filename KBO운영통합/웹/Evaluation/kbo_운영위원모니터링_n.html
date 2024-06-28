@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$( function() {
+			$( "#datepicker" ).datepicker({
+				dateFormat: 'yymmdd',
+				minDate: '20100306',
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar.gif",
+				buttonImageOnly: true,
+				buttonText: "Select date"
+			});
+		  } );
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">통합조회</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="on">
+					<a href="#none">경기 모니터링·평가 </a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">보고서 등록 현황</a></li>
+							<li><a href="#none">심판 평가 확인</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">자료실</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">사용자관리</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none"></a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">시스템관리</a></li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area long">
+				<div class="inner">
+					<h2>등록 보고서</h2>
+					<div class="date-select">
+						<a href="#" class="btn-date btn-prev"><img src="../resources/images/common/btn_calendar_prev.gif" alt="" /></a>
+						<span class="date">2018.01.16(화)</span>
+						<a href="#" class="btn-date btn-next"><img src="../resources/images/common/btn_calendar_next.gif" alt="" /></a>	
+						<input type="hidden" name=""  id="datepicker" value="" />
+						<a href="#" class="btn-today">오늘</a>
+					</div>
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li class="on"><a href="#none"><span>경기운영위원 모니터링</a></span></li>
+					<li><a href="#none"><span>경기 영상 모니터링</a></span></li>
+					<li><a href="#none"><span>분쟁 및 사고</a></span></li>
+					<li><a href="#none"><span>스피드업·복장 규정 위반</a></span></li>
+				</ul>
+			</div>
+			<div class="download-box long">
+				<a href="#none" class="btn-excel"><img src="../resources/images/common/btn_excel.gif" alt="" /></a>
+				<a href="#none" class="btn-print"><img src="../resources/images/common/btn_print.gif" alt="" /></a>
+			</div>
+			<div class="title-wrap mt30">
+				<h3 class="sub-title">2022년 경기운영위원(경기모니터링) 보고서</h3>
+			</div>
+			<div class="report-wrap">
+				<div class="report-header">
+					<img src="../resources/images/sub/img_logo.png" alt="kbo">
+					<p>2022년 경기운영위원 (경기모니터링) 보고서</p>
+					<span>2022년 10월 31일 구장 원정팀 99-99 홈팀 날씨</span>
+				</div>
+				<h4 class="mb15">경기시간</h4>
+				<table class="tbl mb40">
+					<tr>
+						<th>경기개시</th>
+						<th>경기종료</th>
+						<th>소요시간</th>
+						<th>중단시간</th>
+						<th>기타(연장,콜드게임)</th>
+					</tr>	
+					<tr>
+						<td>10 : 10</td>
+						<td>10 : 10</td>
+						<td>10 : 10</td>
+						<td>10 : 10 ~ 10 : 10</td>
+						<td></td>
+					</tr>
+				</table>
+				
+				<h4 class="mb15">심판평가</h4>
+				<table class="tbl mb40">
+					<colgroup>
+						<col width="10%">
+						<col width="10%">
+						<col width="">
+						<col width="35%">
+						<col width="25%">
+					</colgroup>
+					<tr>
+						<th rowspan="2">위치</th>
+						<th rowspan="2">심판명</th>
+						<th rowspan="2">구분</th>
+						<th rowspan="2">내용</th>
+						<th>점수</th>
+					</tr>
+					<tr>
+						<th>
+							<ul>
+								<li>+3</li>
+								<li>+2</li>
+								<li>+1</li>
+								<li>0</li>
+								<li>-1</li>
+								<li>-2</li>
+								<li>-3</li>
+							</ul>
+						</th>
+					</tr>
+					<tr>
+						<td rowspan="3">주심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>볼/스트라이크,파울,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>스피드업</td>
+						<td>타석이탈,이닝교대,BGM시간,투수교체 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">1루심</td>
+						<td rowspan="2">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어,바운드볼,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="3">2루심</td>
+						<td rowspan="3">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어,바운드볼,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>스피드업</td>
+						<td>12초룰 체크여부 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">3루심</td>
+						<td rowspan="2">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어,바운드볼,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">좌선심</td>
+						<td rowspan="2">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어,바운드볼,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+
+					<tr>
+						<td rowspan="2">우선심</td>
+						<td rowspan="2">홍길동</td>
+						<td>판정</td>
+						<td>파울/페어,바운드볼,보크,아웃/세이프 등</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>경기운영</td>
+						<td>경고/퇴장,규칙적용,위치선정,항의대처</td>
+						<td>
+							<ul>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+								<li><input type="checkbox"></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+
+				<h4 class="mb15">경기 모니터링 사항</h4>
+				<table class="tbl mb30">
+					<colgroup>
+						<col width="15%">
+						<col width="">
+						<col width="8%">
+						<col width="8%">
+					</colgroup>
+					<tr>
+						<th colspan="2">구분</th>
+						<th class="no-border">있음</th>
+						<th>없음</th>
+					</tr>	
+					<tr>
+						<td colspan="2">선수단 & 임직원 접촉 / 심판실 출입</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td rowspan="2">경기 전</td>
+						<td>승부조작 모의 및 불법스포츠 베팅 관련 이상 징후 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>불법스포츠 베팅 관련 의심 관객 여부(불법 중계 또는 의심장비 보유 등)</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>경기 중</td>
+						<td>승부조작 및 경기조작 의심 플레이 여부</td>
+						<td class="no-border">
+							<input type="checkbox">
+						</td>
+						<td>
+							<input type="checkbox">
+						</td>
+					</tr>
+					<tr>
+						<td>특이사항</td>
+						<td colspan="3">
+							<p class="reference">경기운영위원 의견 / 이상징후 발견시 해당장면 서술및대응/불법중계자 신원, 인계경찰서(담당자)등 명기</p>
+							<textarea></textarea>
+						</td>
+					</tr>
+				</table>
+				<div class="tbl-wrap">
+					<table class="tbl-mini">
+						<tr>
+							<th>KBO 경기운영위원 : </th>
+							<td>
+								<select>
+									<option>위원명</option>	
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="report-fotter">
+					FAX : 02)3460-4649
+				</div>
+			</div>
+			
+				
+			<div class="btn-area-board">
+				<a class="btn btn-cancel" href="">취소</a>	
+				<a class="btn btn-reg" href="">등록</a>	
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

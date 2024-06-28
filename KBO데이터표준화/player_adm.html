@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 데이터표준화"/>
+    <meta name="author" content="KBO 데이터표준화"/>
+	<meta name="keywords" content="KBO 데이터표준화" />
+	<title>KBO 데이터표준화</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<i class="icon-user"></i>
+					<b>관리자 </b>님 환영합니다.
+					<a href="#" class="btn-logout">
+						LOGOUT
+					</a>
+				</div>
+			</div>
+            <div class="gnb">
+				<div class="wrap">
+					<a class="logo" href="schedule_list.html">
+						<img src="resources/images/contents/txt_title.png" alt="KBO 관중임장수입" />
+					</a>
+					
+					<ul class="menu">
+						<li>
+							<a href="schedule_list.html">경기 일정 관리</a>
+						</li>
+						<li class="on">
+							<a href="player_list.html">선수 관리</a>
+						</li>
+						<li>
+							<a href="data_live.html">데이터 조회</a>
+						</li>
+						<li>
+							<a href="user_list.html">사용자 관리</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lnb depth-2">
+				<div class="wrap">
+					<ul class="menu">
+						<li>
+							<a href="player_list.html">선수조회</a>
+						</li>
+						<li class="on">
+							<a href="player_adm.html">선수등록/관리</a>
+						</li>
+						<li>
+							<a href="player_entry.html">엔트리 등록 현황</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<h3>
+				   선수 조회 
+				   <div class="btn-controll"> 
+					   <select>
+						   <option>시즌</option>
+					   </select>
+					   <select>
+						   <option>팀명</option>
+					   </select>
+					   <input type="text" placeholder="이름">
+					   <a href="" class="btn search">검색</a>
+					   <a href="player_enroll.html" class="btn basic">신규 등록</a>
+				   </div>
+			   </h3>
+				<section>
+					<table class="tb">
+						<colgroup>
+							<col width="">
+							<col width="">
+							<col width="">
+							<col width="">
+							<col width=""> 
+							<col width="">
+							<col width="">
+							<col width="">
+							<col width="">
+							<col width="140px">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>리그</th>
+								<th>시리즈</th>
+								<th>시즌</th>
+								<th>이름</th>
+								<th>등번호</th>
+								<th>팀명</th>
+								<th>포지션</th>
+								<th>생년월일</th>
+								<th>현역</th>
+								<th>수정&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;삭제</th>
+							</tr>
+							<tr>
+								<td>KBO 리그</td>
+								<td>시범</td>
+								<td>2023</td>
+								<td>홍길동</td>
+								<td>12</td>
+								<td>키움</td>
+								<td>내야수</td>
+								<td>20231225</td>
+								<td>현역</td>
+								<td>
+									<a href="player_edit.html" class="btn edit">수정</a> 
+									<a href="" class="btn delete">삭제</a>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="10">
+									검색 결과가 존재하지 않습니다.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+
+	<!-- <div class="modal">
+		<div class="popup">
+			<div class="content">
+				<p class="txt">
+					일자 형식(YYYY.MM.DD)에 맞춰 입력해주세요.
+				</p> 
+			</div>
+			<div class="btn-wrap">
+				<a class="btn save">확인</a>
+			</div>
+		</div>
+	</div> -->
+</body>
+</html>

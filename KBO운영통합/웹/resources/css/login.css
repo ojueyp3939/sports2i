@@ -1,0 +1,31 @@
+﻿@charset "utf-8";
+
+html,body {height:100%;}
+body {background:#ededed;}
+#wrap {position:relative;min-height:100%;}
+header {overflow:hidden;padding:42px 0 26px;background:#104aad;color:#fff;text-align:center;}
+header .logo {display:inline-block;position:relative;margin-right:40px;padding-right:40px;}
+header .logo img {vertical-align:middle;}
+header .logo:after {content:"";display:block;position:absolute;top:9px;right:0;width:1px;height:39px;background:#fff;}
+header .txt-page {display:inline-block;padding-top:5px;font-size:35px;font-weight:100;color:#fff;vertical-align:middle;}
+
+#container {min-height:100%;}
+h2.tit {padding:70px 0 10px;font-size:30px;font-weight:bold;color:#104aad;text-align:center;}
+.greeting {font-size:20px;font-weight:bold;color:#444;text-align:center;}
+.login-box {position:relative;width:400px;margin:35px auto 22px;padding:40px 0;background:#fff;font-size:13px;text-align:center;border:1px solid #d6d8de;-webkit-box-shadow: 1px 1px 13px 0px rgba(162,162,162,0.3);-moz-box-shadow: 1px 1px 13px 0px rgba(162,162,162,0.3);box-shadow: 1px 1px 13px 0px rgba(162,162,162,0.3);}
+.login-box .script {margin:20px 0 15px;font-weight:bold;color:#0f1240;line-height:21px;}
+.login-box .id-box {position:relative;margin-bottom:10px;}
+.login-box .pw-box {position:relative;}
+.login-box label.val {position:absolute;top:14px;left:125px;margin-right:10px;color:#4f4f4f;}
+.login-box .ipt {width:252px;height:40px;padding:0 10px 0 50px;line-height:28px;border:1px solid #aaacb5;border-radius:19px;box-sizing:border-box;vertical-align:middle;background:url("../images/common/ico_login_id.png") no-repeat 23px 12px;}
+.login-box .pw-box .ipt {background:url("../images/common/ico_login_pw.png") no-repeat 24px 12px;}
+.login-box .ipt:focus,.login-box .ipt:active {background-color:#ededed;}
+.login-box .id-save {margin-top:13px;}
+.login-box .id-save input {color:#4f4f4f;vertical-align:top;}
+.login-box .id-save label {margin-left:7px;vertical-align:top;}
+.login-box .btn-type {margin-top:20px;text-align:center;}
+.login-box .btn-type .btn {display:inline-block;width:252px;height:40px;line-height:41px;border-radius:19px;background:#104aae;color:#fff;font-size:13px;font-weight:bold;text-align:center;vertical-align:middle;}
+.login-box .notice {margin-top:20px;text-align:center;color:#e20404;}
+
+footer {position:absolute;bottom:0;width:100%;border-top:1px solid #ced0d4;background:#ededed;}
+footer address {width:250px;margin:15px auto;padding-left:82px;line-height:20px;font-size:12px;background:url("../images/common/h2_logo_login.png") no-repeat 0 0/66px;color:#9da1a9;font-style:normal;}

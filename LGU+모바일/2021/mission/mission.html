@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb', {
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb" class="scroll-wrap">
+				<ul class="menu scroller">
+					<li><a href="../intro.html"><span>이용안내</span></a></li>
+					<li><a href="../prediction/prediction_경기전_참여전.html"><span>승리예측</span></a></li>
+					<li class="on"><a href="../mission/mission.html"><span>오늘의 미션</span></a></li>
+					<li><a href="../invite/invite.html"><span>초대</span></a></li>
+					<li><a href="../point/point.html"><span>포인트 내역</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="banner-wrap mission">
+					<img src="../resources/images/contents/test-banner-mission.png">
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="mission-wrap finish">
+					<h2>
+						오늘의 미션
+						<p>경기가 없는 날에는 1개의 미션만 제공합니다.</p>
+					</h2>
+					<div class="mission-box">
+						<a class="btn-view">
+							<i class="icon-view"></i>
+						</a>
+						<p>미션 1</p>
+						허구연의 야구소식 보기
+					</div>
+					<div class="mission-box finish">
+						<p>미션 2</p>
+						<a class="btn-view">
+							<i class="icon-view"></i>
+						</a>
+						방금 던진 공/스트라이크 존 이용
+					</div>
+					<div class="mission-txt">
+						데일리 미션 2개 참여 완료! <br/>
+						<span>200포인트</span>를 지급해 드립니다!
+					</div>
+				</section>
+				<section class="blank-wrap"></section>
+				<section class="mission-calendar">
+					<h2>미션 달력</h2>
+					<ul class="day-box">
+						<li class="prev">
+							<a href="#"></a>
+						</li>
+						<li class="day-tit">
+							<span class="date">2019</span>년 <span class="date">5</span>월
+						</li>
+						<li class="next">
+							<a href="#"></a>
+						</li>
+					</ul>
+					<ul class="ico-memo">
+						<li>
+							<img src="../resources/images/contents/icon_two.png" alt="2개 완료">2개 완료
+						</li>
+						<li>
+							<img src="../resources/images/contents/icon_one.png" alt="1개 완료">1개 완료
+						</li>
+						<li>
+							<img src="../resources/images/contents/icon_zero.png" alt="미참여">미참여
+						</li>						
+					</ul>
+					<div class="calender-wrap">
+						<table class="calender-tbl">
+							<colgroup>
+								<col width="14.285%">
+								<col width="14.285%">
+								<col width="14.285%">
+								<col width="14.285%">
+								<col width="14.285%">
+								<col width="14.285%">
+								<col width="14.285%">
+							</colgroup>
+							<tr>
+								<th>월</th>
+								<th>화</th>
+								<th>수</th>
+								<th>목</th>
+								<th>금</th>
+								<th>토</th>
+								<th>일</th>
+							</tr>
+							<tr>
+								<td>
+									<p class="one">1</p>
+								</td>
+								<td>
+									<p class="two">2</p>
+								</td>
+								<td>
+									<p class="zero">3</p>
+								</td>
+								<td>
+									<p class="today">4</p>
+								</td>
+								<td>
+									<p>5</p>
+								</td>
+								<td>
+									<p>6</p>
+								</td>
+								<td>
+									<p>7</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>8</p>
+								</td>
+								<td>
+									<p>9</p>
+								</td>
+								<td>
+									<p>10</p>
+								</td>
+								<td>
+									<p>11</p>
+								</td>
+								<td>
+									<p>12</p>
+								</td>
+								<td>
+									<p>13</p>
+								</td>
+								<td>
+									<p>14</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>15</p>
+								</td>
+								<td>
+									<p>16</p>
+								</td>
+								<td>
+									<p>17</p>
+								</td>
+								<td>
+									<p>18</p>
+								</td>
+								<td>
+									<p>19</p>
+								</td>
+								<td>
+									<p>20</p>
+								</td>
+								<td>
+									<p>21</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>22</p>
+								</td>
+								<td>
+									<p>23</p>
+								</td>
+								<td>
+									<p>24</p>
+								</td>
+								<td>
+									<p>25</p>
+								</td>
+								<td>
+									<p>26</p>
+								</td>
+								<td>
+									<p>27</p>
+								</td>
+								<td>
+									<p>28</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>29</p>
+								</td>
+								<td>
+									<p>30</p>
+								</td>
+								<td>
+									<p>31</p>
+								</td>
+								<td class="next-monthly">
+									<p>1</p>
+								</td>
+								<td class="next-monthly">
+									<p>2</p>
+								</td>
+								<td class="next-monthly">
+									<p>3</p>
+								</td>
+								<td class="next-monthly">
+									<p>4</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

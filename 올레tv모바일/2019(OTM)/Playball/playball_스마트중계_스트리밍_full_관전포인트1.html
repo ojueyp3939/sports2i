@@ -1,0 +1,337 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/live.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/full.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".today-games h1").click(function(){
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+			
+			$(".btn-ground label").click(function(){
+				$(".ground ").toggleClass("on");
+				$(".lineup-list").toggleClass("on");
+				$(".description").toggleClass("on");
+			});
+			
+			$(".hitter-list").bxSlider({
+				pager:false
+			});
+
+			$(".last-info > a").click(function(){
+				$(this).parent().toggleClass("active");
+				$(this).toggleClass("on");
+				$(this).next().slideToggle();
+			});
+			
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#GameList',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false 				
+			});
+
+			var myScroll2 = new IScroll('#TabDepth1',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false 				
+			});
+
+			var myScroll3 = new IScroll('#TabInning',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false 				
+			});
+			var myScroll4 = new IScroll('#TblInning',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false 				
+			});			
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap" class="full-mode"><!-- full-mode 클래스추가 -->
+		<!-- header -->
+		<header class="playball-sub">
+			<h1 class="tit">스마트중계</h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+					<li><a href="../My/my.html"><span>MY</span></a></li>
+				</ul>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+		</header>
+		<!-- // header -->		
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="playball-sub">				
+				<div id="MainCont">
+					<section class="broadcast">
+						<iframe src="https://www.youtube.com/embed/jeywXv_bvrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</section>
+					<div class="control-box">
+						<h2 class="tit-game">키움 히어로즈 VS 삼성 라이온즈</h2>
+						<div class="btn-player">
+							<a href="javascript:;" class="btn-play">PLAY</a><!-- 정지시 stop 클래스 추가 -->
+						</div>
+						<div class="btn-control dp-none">
+							<div class="btn-quality-wrap">
+								<a href="javascript:;" class="btn-quality">고화질</a>
+								<ul class="quality-list">
+									<li><a href="javascript:;">초고화질</a></li>
+									<li><a href="javascript:;">고화질</a></li>
+									<li><a href="javascript:;">일반화질</a></li>
+								</ul>
+							</div>
+							<a href="javascript:;" class="btn-volume">음소거</a>
+							<a href="javascript:;" class="btn-mode"><img src="../resources/images/playball/btn_mode.png" alt="" /></a>
+						</div>
+						<!-- 3분미리보기 유저 재생중 -->
+						<dl class="no-login preview-play dp-none">
+							<dt><span>3분</span> 미리보기 재생중</dt>
+							<dd><a class="btn-view" href="#none">계속보기</a></dd>
+						</dl>						
+					</div>
+					<!-- 3분미리보기 종료 -->
+					<dl class="no-login preview-end">
+						<dt><span>3분</span> 미리보기가 종료되었습니다.<br>계속 시청 하시겠습니까?</dt>
+						<dd><a class="btn-view" href="#none">계속보기</a></dd>
+					</dl>
+				</div>
+				<div id="SubCont">
+				</div>		
+				<ul class="quick-button">
+					<li><a href="javascript:;"><img src="../resources/images/playball/btn_chat.png" alt="" /></a></li>
+					<li><a href="javascript:;"><img src="../resources/images/playball/btn_refresh.png" alt="" /></a></li>
+				</ul>
+
+				<div id="StreamingFull" class="full-layer">
+					<div class="btn-box">
+						<a href="javascript:;" class="btn-refresh">새로고침</a>
+						<a href="javascript:;" class="btn-back">뒤로가기</a>
+						<a href="javascript:;" class="btn-lock on">화면잠금</a>
+					</div>
+					<nav id="Snb">
+						<ul class="menu">
+							<li class="other"><a href="../Playball/playball_스마트중계_스트리밍_full_타구장.html">타구장</a></li>
+							<li class="viewpoint on"><a href="../Playball/playball_스마트중계_스트리밍_full_관전포인트1.html">관전포인트</a></li>
+							<li class="graphic"><a href="../Playball/playball_스마트중계_그래픽중계_full.html">그래픽중계</a></li>
+							<li class="winrate"><a href="../Playball/playball_스마트중계_스트리밍_full_승리확률.html">승리확률</a></li>
+							<li class="chat"><a href="../Playball/playball_스마트중계_스트리밍_full_응원하기(채팅).html">응원하기</a></li>
+						</ul>
+					</nav>
+					<aside class="other-game"> <!-- 타구장 클릭시 on 클래스 토글 -->
+						<ul class="game-list">
+							<li>
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="score win">99</div>
+								</div>
+								<div class="state">
+									<div class="inning">9회말</div>
+									<ul class="base">
+										<li class="b1">1루</li>
+										<li class="b2 on">2루</li>
+										<li class="b3">3루</li>
+									</ul>
+									<div class="ballcount">
+										<span class="b">1B</span>
+										<span class="s">2B</span>
+										<span class="o">2B</span>
+									</div>
+								</div>								
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="score">99</div>
+								</div>								
+							</li>
+							<li>
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="score win">99</div>
+								</div>
+								<div class="state">
+									<div class="inning">9회말</div>
+									<ul class="base">
+										<li class="b1">1루</li>
+										<li class="b2 on">2루</li>
+										<li class="b3">3루</li>
+									</ul>
+									<div class="ballcount">
+										<span class="b">1B</span>
+										<span class="s">2B</span>
+										<span class="o">2B</span>
+									</div>
+								</div>								
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="score">99</div>
+								</div>								
+							</li>
+							<li>
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="score win">99</div>
+								</div>
+								<div class="state">
+									<div class="inning">9회말</div>
+									<ul class="base">
+										<li class="b1">1루</li>
+										<li class="b2 on">2루</li>
+										<li class="b3">3루</li>
+									</ul>
+									<div class="ballcount">
+										<span class="b">1B</span>
+										<span class="s">2B</span>
+										<span class="o">2B</span>
+									</div>
+								</div>								
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="score">99</div>
+								</div>								
+							</li>
+							<li>
+								<div class="team away">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="score win">99</div>
+								</div>
+								<div class="state">
+									<div class="inning">9회말</div>
+									<ul class="base">
+										<li class="b1">1루</li>
+										<li class="b2 on">2루</li>
+										<li class="b3">3루</li>
+									</ul>
+									<div class="ballcount">
+										<span class="b">1B</span>
+										<span class="s">2B</span>
+										<span class="o">2B</span>
+									</div>
+								</div>								
+								<div class="team home">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="score">99</div>
+								</div>								
+							</li>
+						</ul>
+					</aside>	
+					
+					<section class="layer-cont viewpoint">
+						<header>
+							<h1>관전포인트</h1>
+							<a href="../Playball/playball_스마트중계_스트리밍_full.html" class="btn-close"><span>닫기</span></a>
+						</header>
+						<div class="content">
+							<div class="player-info pitcher">
+								<div class="player">
+									<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+									<dl class="info">
+										<dt>투수</dt>
+										<dd>엄상백백백 (KT) <span><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span></dd>
+									</dl>
+								</div>
+								<dl class="data-box">
+									<dt>오늘 성적</dt>
+									<dd>3 1/3이닝<br />999투구(20S/30B)</dd>
+								</dl>
+								<div class="record-box">
+									<h2>주자 득점권 상황<br/>[피안타율]</h2>
+									<div class="record-area direction-area">
+										<ul class="stickgraph">
+											<li>
+												<dl class="info-graph">
+													<dt>아웃카운트별</dt>
+													<dd class="graph min" style="height:10%;"><span class="txt">0.200</span></dd>
+												</dl>
+											</li>
+											<li>
+												<dl class="info-graph">
+													<dt>아웃카운트별</dt>
+													<dd class="graph on" style="height:80%;"><span class="txt">0.200</span></dd>
+												</dl>
+											</li>
+										</ul>							
+									</div>
+								</div>
+							</div>
+							<div class="player-info hitter">
+								<div class="player">
+									<div class="player-img"><img src="https://www.koreabaseball.com/file/person/kbo/2018/78224.png" alt="" /></div>
+									<dl class="info">
+										<dt>타자</dt>
+										<dd>김태균균균 (한화) <span><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></span></dd>
+									</dl>
+								</div>
+								<dl class="data-box">
+									<dt>오늘 성적</dt>
+									<dd>5타수 1안타<br/>1삼진 1볼넷</dd>
+								</dl>
+								<div class="record-box">
+									<h2>주자 득점권 상황<br/>[타격 결과]</h2>
+									<div class="record-area">									
+										<div class="hit-rate">
+											<dl class="rank1">
+												<dt>1위 <span>삼진</span></dt>
+												<dd class="graph-wrap"><span class="graph">그래프</span></dd>
+												<dd class="txt">99%</dd>
+											</dl>
+											<dl class="rank2">
+												<dt>2위 <span>2루타타</span></dt>
+												<dd class="graph-wrap"><span class="graph">그래프</span></dd>
+												<dd class="txt">99%</dd>
+											</dl>
+											<dl class="rank3">
+												<dt>3위 <span>볼넷넷넷넷넷</span></dt>
+												<dd class="graph-wrap"><span class="graph">그래프</span></dd>
+												<dd class="txt">99%</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+							<ul class="player-list">
+								<li><a href="../Playball/playball_스마트중계_스트리밍_full_관전포인트1.html" class="btn">1. 정근우우우</a></li>
+								<li><a href="../Playball/playball_스마트중계_스트리밍_full_관전포인트2.html" class="btn">2. 이용규</a></li>
+								<li><a href="javascript:;" class="btn">3. 호  잉</a></li>
+								<li><a href="javascript:;" class="btn on">4. 김태균균균</a></li>
+								<li><a href="javascript:;" class="btn">5. 양성우</a></li>
+								<li><a href="javascript:;" class="btn">6. 김태균</a></li>
+								<li><a href="javascript:;" class="btn">7. 김민하</a></li>
+								<li><a href="javascript:;" class="btn">8. 최진행</a></li>
+								<li><a href="javascript:;" class="btn">9. 하주석</a></li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>			
+		</div>
+	</div>
+</body>
+</html>

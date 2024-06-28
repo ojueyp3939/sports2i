@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 MVP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="index_q1.html">쏠픽하기</a></li>
+					<li><a href="SolGuide/쏠쏠한가이드.html">쏠쏠한 가이드</a></li>
+					<li><a href="MySol/My쏠픽.html">MY 쏠픽</a></li>
+					<li><a href="Rank/월간랭킹.html">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+<!-- 
+<div class="modal"></div>
+<div id="Popup" class="custom">
+	<div class="cont">
+		<p class="tit under">응모 완료!</p>
+		<p class="txt">마이신한포인트 6P에<br/>당첨되셨습니다!</p>
+		<img src="resources/images/common/img_ok.png" alt="응모완료">
+		<div class="btn-area mb5">
+			<a href="#none" class="btn btn-confirm">확인</a>
+		</div>
+		<p class="noti">※ 쏠픽 수정은 오후 6시 20분까지 가능합니다.</p>
+		<p class="noti">※ 적립된 마이신한포인트는 신한플러스에서 확인가능합니다.</p>
+		
+	</div>
+</div>
+
+<div id="Popup" class="custom">
+	<div class="cont">
+		<p class="tit under">수정완료!</p>
+		<img src="resources/images/common/img_ok.png" alt="응모완료">
+		<div class="btn-area mb5">
+			<a href="#none" class="btn btn-confirm">확인</a>
+		</div>
+		<p class="noti">※ 쏠픽 수정은 오후 6시 20분까지 가능합니다.</p>
+		<p class="noti">※ 적립된 마이신한포인트는 신한플러스에서 확인가능합니다.</p>
+	</div>
+</div>
+
+<div id="Popup" class="custom">
+	<div class="cont">
+		<p class="tit"><공지사항></p>
+		<p class="txt2 mb5">
+			9/15 쏠픽 1:1 퀴즈에서 롯데와 안타 개수가<br/>
+			DH2 경기까지 집계되는 오류가 발생하였습니다.<br/>
+			이에 쏠픽 1:10 퀴즈의정답은 NC로 수정되었으며,<br/>
+			9월 랭킹과 pick은 모두 정상화 되었습니다.<br/>
+			서비스이용에 불편을드려진심으로죄송합니다.
+		</p>
+		<img src="resources/images/common/img_sorry.png" alt="응모완료">
+		<div class="btn-area mb10">
+			<a href="#none" class="btn btn-confirm">확인</a>
+		</div>
+		<div class="check">
+			<input type="checkbox"/>
+			<label>다시보지않기</label>
+		</div>
+		
+	</div>
+</div> -->

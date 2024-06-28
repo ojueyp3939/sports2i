@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" /> 
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="//image.koreabaseball.com/resources/images/common/favicon.ico" /> -->
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>	
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- 메뉴 -->
+		<aside>
+			<section class="tit-area">
+				<h1>메뉴</h1>
+				<a href="#none" class="btn-close"><img src="../resources/images/common/btn_nav_close.png" alt="" /></a>
+				<a href="#none" class="btn-logout">로그아웃</a>
+			</section>
+			<nav class="gnb">
+				<dl class="active">
+					<dt>현역 선수 등록∙말소</dt>
+					<dd><a href="#none">전체 등록 현황</a></dd>
+				</dl>
+				<dl>
+					<dt>등록일수 확인</dt>
+					<dd><a href="#none">연도별 등록 일수</a></dd>
+				</dl>
+				<dl>
+					<dt>선수단 이동 현황 확인</dt>
+					<dd><a href="#none">구단별</a></dd>
+					<dd><a href="#none">월별</a></dd>
+					<dd><a href="#none">항목별</a></dd>
+				</dl>
+				<dl>
+					<dt>승인 ∙ 공시 접수</dt>
+					<dd><a href="#none">선수단</a></dd>
+					<dd><a href="#none">경기</a></dd>
+				</dl>
+				<dl>
+					<dt>일반 업무</dt>
+					<dd><a href="#none">메리트 운영 계획서</a></dd>
+					<dd><a href="#none">신분조회</a></dd>
+					<dd><a href="#none">등록확인서</a></dd>
+					<dd><a href="#none">경찰야구단 지원 선수</a></dd>
+					<dd><a href="#none">상무야구단 지원 선수</a></dd>
+					<dd><a href="#none">외국인 선수 및 코치 사증 발급 추천</a></dd>
+					<dd><a href="#none">스페셜 유니폼 착용</a></dd>
+				</dl>
+			</nav>
+			<div class="footer">
+				<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+			</div>
+		</aside>
+		<!-- header -->
+		<header class="sub">	
+			<h1><span class="txt">부정행위 방지 경기장 모니터링 보고서</span></h1>
+			<a href="#none" class="btn-back"><img src="../resources/images/common/btn_arr_nav_close.png" alt="" /></a>
+			<a class="menu-trigger" href="#"></a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<!-- container -->
+		<div id="container">
+			<section  id="contents">
+				<div class="date-select">
+					<span class="date">2018.01.16(화)</span>
+				</div>
+				<ul class="tab-area">
+					<li><a href="#none"><span>KBO 리그</a></span></li>
+					<li class="on"><a href="#none"><span>퓨처스리그</a></span></li>
+				</ul>
+				<div class="report-wrap">
+					<div class="group">
+						<div class="header">
+							체크리스트
+						</div>
+						<div class="content">
+							<div>
+								<div class="sub-tit">부정방지활동 점검</div>
+								<p class="q-tit">&#183; 홈 구단은 불법중계자 적발을 위해 별도로 순찰 인원(구단 직원, 안전요원)을 운영하고 있는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 경기 전/후 또는 클리닝 타임 시, 불법 중계 방지에 대한 안내를 전광판 및 장내방송을 통해 고지하였는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 경기 전, 불법 스포츠 토토 발매 이상 징후가 접수되었는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 경기장 外에 부정행위(승부조작 권유 불법 스포츠 토토의 매매 행위) 활동으로 의심되는 정황이 포착 되었는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+
+							<div>
+								<div class="sub-tit">불법 중계자 적발</div>
+								<p class="q-tit">&#183; 해당경기에서 불법중계자가 적발되었는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 불법중계자 적발 시, 대응방안에 대해 홈경기 운영 담당자는 정확히 내용을 숙지하고 있는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 불법중계자 적발 시, 증거 채집은 원활하게 이루어졌는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 불법중계자에 대한 인적사항은 파악되었는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+								<p class="q-tit">&#183; 불법중계자 적발 후, 관할 경찰서에 인계되었는가?</p>
+								<ul>
+									<li>
+										<input type="checkbox" id="y"><label for="y">Y</label>
+									</li>
+									<li>
+										<input type="checkbox" id="n"><label for="n">N</label>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="group">
+						<div class="header">
+							현장 모니터링 요원 업무 내용
+						</div>
+						<div class="content">
+							<div>
+								<p class="txt mb10">
+									(관찰 내용 특이사항 상세 기재, 필요 시 사진 등 증거 자료 첨부)
+									<a class="btn-file" href=""><img src="../resources/images/sub/btn_file.png" alt="file"></a>
+								</p>
+								<textarea class="mb10"></textarea>
+								<table class="tbl-file">
+									<colgroup>
+										<col width="60%;">
+										<col width="23%;">
+										<col width="17%;">
+									</colgroup>
+									<tr>
+										<th class="txt-l">파일명</th>
+										<th>업로드상태</th>
+										<th class="txt-r">용량</th>
+									</tr>
+									<tr>
+										<td class="file">
+											<a class="" href=""><img src="../resources/images/sub/btn_remove.png" alt="remove"></a>	
+											<span>증거물증거물증거물증거물증거물증거물증거물증거물.png</span>
+										</td>
+										<td>완료</td>
+										<td class="txt-r">999.KB</td>
+									</tr>
+									<tr>
+										<td class="file">
+											<a class="" href=""><img src="../resources/images/sub/btn_remove.png" alt="remove"></a>	
+											<span>증거물증물.png</span>
+										</td>
+										<td>완료</td>
+										<td class="txt-r">999.KB</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="group mb0">
+						<div class="header">
+							불법 행위 적발 시 조치 사항 
+						</div>
+						<div class="content">
+							<div>
+								<p class="txt mb10">(해당상황 및 행위자 인적사항, 인계 관할경찰서 담당부서/담당자 등 명기)</p>
+								<textarea></textarea>
+							</div>
+							<div>
+								<div class="sub-tit">적발 내용</div>
+								
+								<table class="tbl-info">
+									<colgroup>
+										<col width="35%">
+										<col width="65%">
+									</colgroup>
+									<tr>
+										<th>적발자 인적사항 :</th>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<th>적발 일시 :</th>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<th>적발 장소 :</th>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<th>적발 내용 :</th>
+										<td><input type="text"></td>
+									</tr>
+								</table>
+							</div>
+
+							<div>
+								<div class="sub-tit">조치사항</div>
+								<table class="tbl-info">
+									<tr>
+										<th colspan="2">인수인계 경찰서 및 담당부서/담당자(연락처 포함) :</th>
+									</tr>
+									<tr>
+										<td colspan="2"><input type="text"></td>
+									</tr>
+									<tr>
+										<th>기타 조치 사항  :</th>
+										<td><input type="text"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="final-btn">
+						<a class="done" href="">제출</a>
+						<a href="">임시저장</a>
+						<a href="">취소</a>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- // container -->	
+		<hr />
+		<!-- footer -->
+		<footer>
+			<address><strong>ⓒ KBO,</strong> All Rights Reserved.</address>
+		</footer>
+		<!-- // footer -->
+	</div>	
+	<!-- // wrap -->
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="MBC Sports+" />
+	<meta name="author" content="MBC Sports+" />
+	<meta name="keywords" content="MBC Sports+" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/contents/icon_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section>
+					<div class="day-wrap">
+						<ul class="day-box">
+							<li class="prev">
+								<a href="#"></a>
+							</li>
+							<li class="day-tit">
+								<span class="date">2023.03.03 (목)</span> <input id="btnCalendar">
+								<a href="" class="today">오늘</a>
+							</li>
+							<li class="next">
+								<a href="#"></a>
+							</li>
+						</ul>
+					</div>
+					<ul class="schedule-wrap">
+						<li class="schedule-cont">
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구</p>
+									</div>
+								</div>
+								<span class="vs">VS</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구파파</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기예정
+							</div>
+						</li>
+						<li class="schedule-cont">
+							<span class="dh">DH1</span>
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구</p>
+									</div>
+								</div>
+								<span class="vs">VS</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구파파</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기예정
+							</div>
+						</li>
+						<li class="schedule-cont ing">
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구</p>
+									</div>
+								</div>
+								<span class="vs">
+									<span>12</span>:<span>8</span>
+								</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+									<div class="today">
+										<p><span>선</span>신짱구</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기중
+							</div>
+						</li>
+						<li class="schedule-cont end">
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+									<div class="today">
+										<p><span class="lose">패</span>신짱아</p>
+									</div>
+								</div>
+								<span class="vs">
+									<span>12</span>:<span>8</span>
+								</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+									<div class="today">
+										<p><span class="win">승</span>신짱구</p>
+										<p><span class="save">세</span>신흰둥이잉</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기종료
+							</div>
+						</li>
+						<li class="schedule-cont cancel">
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+								</div>
+								<span class="vs">
+									VS
+								</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기취소
+							</div>
+						</li>
+						<li class="schedule-cont cancel">
+							<p class="top">
+								<span>잠실</span>
+								<span>18:30</span>
+							</p>
+							<div class="middle">
+								<div class="team away">
+									<div class="emb">
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p>KT</p>
+									</div>
+								</div>
+								<span class="vs">
+									VS
+								</span>
+								<div class="team home">
+									<div class="emb">
+										<img src="resources/images/emb/HH.png" alt="HH">
+										<p>한화</p>
+									</div>
+								</div>
+							</div>
+							<div class="bottom">
+								경기취소
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address></address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

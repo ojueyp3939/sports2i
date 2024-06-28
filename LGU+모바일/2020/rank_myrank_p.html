@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>U+ 게임</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<nav id="gnb">
+				<ul class="menu post">
+					<li><a href="slot_pre_p.html"><span>포스트시즌<br/>도전999</span></a></li>
+					<li><a href="mission.html"><span>데일리 미션</span></a></li>
+					<li class="on"><a href="rank.html"><span>월간 랭킹</span></a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="rank-wrap">
+					<div class="my-box">
+						<div class="info clear">
+							<span class="tit">이달의 나의 Rank</span>
+							<span class="nick">닉네임명닉네임명닉네</span>
+							<a class="btn-edit" href="rank_popup.html"><i class="icon-edit"></i></a>
+							<a class="btn-myrank" href="rank_myrank.html"><i class="icon-link"></i></a>
+						</div>
+						<div class="data">
+							<ul>
+								<li>
+									순위
+									<p><span>999,999</span>위</p>
+								</li>
+								<li>
+									점수
+									<p><span>999,999</span>점</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section class="monthly-wrap">
+					<div class="monthly-box">
+						<p class="tit">월간 랭킹</p>
+						<ul class="day-box">
+							<li class="prev">
+								<a href="#"></a>
+							</li>
+							<li class="day-tit">
+								<span class="date">2019</span>년 <span class="date">5</span>월
+							</li>
+							<li class="next">
+								<a href="#"></a>
+							</li>
+						</ul>
+
+						<table class="monthly-tbl">
+							<colgroup>
+								<col width="20%">
+								<col width="50%">
+								<col width="30%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>랭킹</th>
+									<th>닉네임</th>
+									<th>누적점수</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr class="my">
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>가나다라마바사아자차</td>
+									<td>99,999</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+<div class="modal">
+	<div class="myrank-wrap show">
+		<p class="myrank-tit"></p>
+		<ul class="day-box post">
+			<li class="day-tit">
+				<span class="date">나의 포스트시즌 랭킹</span>
+			</li>
+		</ul>
+		<div class="data">
+			<ul>
+				<li>
+					누적점수
+					<p><span>999,999</span>점</p>
+				</li>
+				<li>
+					순위
+					<p><span>999,999</span>위</p>
+				</li>
+			</ul>
+		</div>
+		<table class="monthly-tbl">
+			<colgroup>
+				<col width="20%">
+				<col width="40%">
+				<col width="20%">
+				<col width="20%">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>일자</th>
+					<th>닉네임</th>
+					<th>누적점수</th>
+					<th>합계</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>30</td>
+					<td>미참여</td>
+					<td>0</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>29</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						999
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>28</td>
+					<td>미참여</td>
+					<td>0</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>27</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						-
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>26</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						-
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>25</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						-
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>24</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						-
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+				<tr>
+					<td>23</td>
+					<td class="in-emb">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+						<img src="https://cbrwggsrwbjs3654723.cdn.ntruss.com/91x91/2020/30004.png">
+					</td>
+					<td>
+						-
+						<p class="plus">(+100)</p>
+					</td>
+					<td>1,099</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- <div class="modal">
+	<div class="pop-wrap">
+		<div class="pop-cont">
+			<ul class="mission-list">
+				<li>
+					<p class="name">혀구연의 야구소식 보기</p>
+					<p class="point">
+						<i class="icon-point"></i>50
+					</p>
+				</li>
+				<li>
+					<p class="name">포지션별 영상 시청</p>
+					<p class="point">
+						<i class="icon-point"></i>50
+					</p>
+				</li>
+			</ul>
+			<img src="resources/images/contents/img_mission.png">
+		</div>
+		<div class="final-box">
+			<button>확인</button>
+		</div>
+	</div>
+</div> -->

@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Play your 'Seezn'</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="icon" type="image/png" sizes="192x192" href="../resources/images/favicon/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../resources/images/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../resources/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../resources/images/favicon/favicon-16x16.png" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/my.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/etc.css" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 관심 선수 추가  bxSlider
+            var swiper = new Swiper('#TopPlayer', {
+                slidesPerView: 3,
+                slidesPerGroup: 7,
+                spaceBetween: 14,
+                initialSlide: 1,
+                navigation: {
+                    prevEl: '.TopPlayerPrev',
+                    nextEl: '.TopPlayerNext',
+                }
+            });
+        });
+    </script>
+</head>
+<body class="modal-hidden">
+    <!-- 모달 표출이 표출 될 경우 modal-hidden 클래스 추가 -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <header class="bg-none">
+        </header>
+        <!-- // header -->
+        <!-- container -->
+        <div id="container">
+            <!-- contents -->
+            <div id="contents">
+
+            </div>
+        </div>
+    </div>
+    <!-- // wrap -->
+    <div id="Modal" class=""></div>
+    <!-- 관심선수 -->
+    <div id="AttentionPlayerAdd" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">관심선수</h4>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <section class="content ">
+            <!-- 검색어 자동 완성 기능 제공시 search-on 클래스 추가 -->
+            <div class="my-player">
+                <div class="my-wrap player-info">
+                    <!-- 검색 -->
+                    <div class="search-box">
+                        <input type="text" placeholder="이름, 포지션 검색" />
+                        <a href="#none" class="btn-search"><img src="../resources/images/sub/img_search.png" alt="검색"></a>
+                        <a href="#none" class="txt-cancel"><img src="../resources/images/sub/my_cancel.png" alt=""></a>
+                        <ul class="autocomplete " style="display:none;">
+                            <li><a href="#none"><span class="accord">강</span>백호</a></li> <!-- 네이버처럼 유저가 작성한 글자에 따라서 span태그 사용 -->
+                            <li><a href="#none"><span class="accord">강</span>백호</a></li>
+                            <li><a href="#none"><span class="accord">강</span>백호</a></li>
+                            <li><a href="#none"><span class="accord">강</span>백호</a></li>
+                            <li><a href="#none"><span class="accord">강</span>백호</a></li>
+                        </ul>
+                    </div>
+                    <!-- // 검색 -->
+                    <!-- 팀선택 -->
+                    <div class="team-wrap">
+                        <h4 class="tit-team">팀선택</h4>
+                        <ul id="TeamSelect" class="team-list">
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_HH.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_SK.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_SS.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_HT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_KT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_WO.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_OB.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_LT.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_NC.png" alt=""></a></li>
+                            <li><a href="#none"><img src="../resources/images/emb/emb_80x68_LG.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <!-- // 팀선택 -->
+                    <!-- 선수명단 -->
+                    <div class="roster-wrap">
+                        <div class="roster clear">
+                            <h4 class="tit-roster">선수명단<span class="roboto">35</span></h4>
+                            <a href="#none" class="btn-pst">포지션</a>
+                            <ul class="more-list">
+                                <li><a href="#none">초고화질</a></li>
+                                <li class="on"><a href="#none">고화질</a></li>
+                            </ul>
+                        </div>
+                        <div class="player-area">
+                            <div class="tit-line clear">
+                                <div class="name">이름</div>
+                                <div class="pst">포지션</div>
+                            </div>
+                            <ul class="roster-list">
+                                <li>
+                                    <div class="img-box">
+                                        <span class="photo"><img src="../resources/images/common/test.png" alt="" /></span>
+                                    </div>
+                                    <div class="name-num">강이준<span class="roboto">No. 48</span></div>
+                                    <div class="pst">투수/우우타</div>
+                                    <div class="edit">
+                                        <a href="#none" class="btn-edit delete">추가, 삭제</a> <!-- 삭제시 delete 클래스 추가 -->
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-box">
+                                        <span class="photo"><img src="../resources/images/common/test.png" alt="" /></span>
+                                    </div>
+                                    <div class="name-num">강이준<span class="roboto">No. 48</span></div>
+                                    <div class="pst">투수/우우타</div>
+                                    <div class="edit">
+                                        <a href="#none" class="btn-edit">추가, 삭제</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-box">
+                                        <span class="photo"><img src="../resources/images/common/test.png" alt="" /></span>
+                                    </div>
+                                    <div class="name-num">강이준<span class="roboto">No. 48</span></div>
+                                    <div class="pst">투수/우우타</div>
+                                    <div class="edit">
+                                        <a href="#none" class="btn-edit">추가, 삭제</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-box">
+                                        <span class="photo"><img src="../resources/images/common/test.png" alt="" /></span>
+                                    </div>
+                                    <div class="name-num">강이준<span class="roboto">No. 48</span></div>
+                                    <div class="pst">투수/우우타</div>
+                                    <div class="edit">
+                                        <a href="#none" class="btn-edit">추가, 삭제</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // 선수명단 -->
+                    <!-- 검색결과 -->
+                    <div class="roster-wrap">
+                        <div class="roster clear">
+                            <h4 class="tit-roster">검색결과<span class="roboto">2</span></h4>
+                            <a href="#none" class="btn-pst">포지션</a>
+                            <ul class="more-list">
+                                <li><a href="#none">초고화질</a></li>
+                                <li class="on"><a href="#none">고화질</a></li>
+                            </ul>
+                        </div>
+                        <div class="player-area">
+                            <ul class="roster-list">
+                                <li>
+                                    <div class="img-box">
+                                        <span class="init">
+                                            <img src="../resources/images/common/test.png" alt="" />
+                                            <img src="../resources/images/emb/init_40x40_HT.png" alt="" />
+                                        </span>
+                                    </div>
+                                    <div class="name-num">강이준<span class="roboto">No. 48</span></div>
+                                    <div class="pst">투수/우우타</div>
+                                    <div class="edit">
+                                        <a href="#none" class="btn-edit delete">추가, 삭제</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- // 검색결과 -->
+                    <!-- 검색결과 없음 -->
+                    <p class="no-result">검색 결과가 없습니다.</p>
+                    <!-- // 검색결과 없음 -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- // 관심선수 -->
+    <!-- My팀 설정 -->
+    <div id="MyteamEdit" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">MY팀 설정</h4>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <section class="content">
+            <div class="team-choice">
+                <p class="txt-set">내가 응원하는 팀의 경기 중계, 일정, 경기결과 등을 보다 빠르게 확인할 수 있습니다.</p>
+                <ul class="team-list clear">
+                    <li class="on"><a href="#none"><img src="../resources/images/emb/emb_60x51_HH.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_SK.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_SS.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_HT.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_KT.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_WO.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_OB.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_LT.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_NC.png" alt=""></a></li>
+                    <li><a href="#none"><img src="../resources/images/emb/emb_60x51_LG.png" alt=""></a></li>
+                    <li class="no-team on"><a href="#none">응원 팀 없음</a></li>
+                </ul>
+            </div>
+            <div class="btn-area">
+                <a href="#none" class="btn-confirm">선택완료</a>
+            </div>
+        </section>
+    </div>
+    <!-- // My팀 설정 -->
+    <!-- 닉네임 변경 -->
+    <div id="nickChange" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">설정</h4>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <section class="content">
+            <!-- 닉네임 설정 -->
+            <div class="nickname-box">
+                <h5 class="tit-set">닉네임 변경</h5>
+                <div class="change-wrap">
+                    <div class="ipt-wrap clear">
+                        <div class="ipt-area">
+                            <input type="text" maxlength="6" class="on"> <!-- 닉네임 사용 여부에 따라서 possible, impossible 클래스 추가 -->
+                            <a href="#none" class="txt-cancel"><img src="../resources/images/sub/my_cancel.png" alt=""></a>
+                        </div>
+                        <a href="#none" class="btn-confirm on">중복확인</a>
+                    </div>
+                    <p class="alert possible">사용 가능한 닉네임입니다.</p>
+                    <p class="alert dp-none impossible">이미 사용중인 닉네임입니다.</p>
+                    <p class="tip">한글, 숫자 포함 6자 이내(영문/공백불가)</p>
+                    <div class="btn-area">
+                        <a href="#none" class="btn-complete on">변경완료</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 닉네임 설정 -->
+            <!-- 개인정보 제공동의 철회 -->
+            <div class="agree-box">
+                <h4><a href="#none">개인정보 제공동의 철회</a></h4>
+            </div>
+            <!-- // 개인정보 제공동의 철회 -->
+        </section>
+    </div>
+    <!-- // 닉네임 변경 -->
+    <!-- 관심 선수 추가 -->
+    <div id="PopPlayer" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">관심 선수 추가</h4>
+            <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+        </header>
+        <section class="content top-player">
+            <p>평소 관심있는 선수를 등록하고 출전 경기와 기록을 한눈에 확인하세요.</p>
+            <div class="swiper-container">
+                <div id="TopPlayer" class="swiper-content">
+                    <ul class="swiper-wrapper player-list clear">
+                        <li class="swiper-slide">
+                            <div class="player-wrapper">
+                                <div class="player-box">
+                                    <div class="photo"><img src="../resources/images/common/test.png" alt=""></div>
+                                    <dl>
+                                        <dt>황재균</dt>
+                                        <dd>KT 위즈</dd>
+                                        <dd>내야수</dd>
+                                        <dd class="player-select"><a href="#none" class="btn-select add">등록</a></dd> <!-- 등록시 add 클래스 추가 -->
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="player-wrapper">
+                                <div class="player-box">
+                                    <div class="photo"><img src="../resources/images/common/test.png" alt=""></div>
+                                    <dl>
+                                        <dt>황재균</dt>
+                                        <dd>KT 위즈</dd>
+                                        <dd>내야수</dd>
+                                        <dd class="player-select"><a href="#none" class="btn-select">등록</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="player-wrapper">
+                                <div class="player-box">
+                                    <div class="photo"><img src="../resources/images/common/test.png" alt=""></div>
+                                    <dl>
+                                        <dt>황재균</dt>
+                                        <dd>KT 위즈</dd>
+                                        <dd>내야수</dd>
+                                        <dd class="player-select"><a href="#none" class="btn-select">등록</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="swiper-slide">
+                            <div class="player-wrapper">
+                                <div class="player-box">
+                                    <div class="photo"><img src="../resources/images/common/test.png" alt=""></div>
+                                    <dl>
+                                        <dt>황재균</dt>
+                                        <dd>KT 위즈</dd>
+                                        <dd>내야수</dd>
+                                        <dd class="player-select"><a href="#none" class="btn-select">등록</a></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-button-prev TopPlayerPrev"></div>
+                <div class="swiper-button-next TopPlayerNext"></div>
+            </div>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-confirm">확인</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 관심 선수 추가 -->
+    <!-- 제3자 제공 동의 -->
+    <div id="PopAgree" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">개인 정보이용 동의</h4>
+        </header>
+        <section class="content">
+            <div class="agree-info-wrap">
+                <p class="agree-service">
+                    <strong>(필수)</strong> 개인 정보 제3자 제공에 대한 별도 동의
+
+                </p>
+                <div class="agree-info">
+                    <p class="txt"><span>프로야구 Live 서비스</span>와 관련하여 본인은 아래의 내용을 숙지하였으며, 이에 따라 귀사(KT)가 수집한 본인의 개인 정보를 아래와 같이 제3자에게 제공하는 것에 대해 동의합니다.</p>
+                    <ol>
+                        <li>1. 개인정보를 제공받는 자<br> <span>- 스포츠투아이</span></li>
+                        <li>2. 개인정보를 제공받는 자의 개인정보 이용 목적<br> <span>- 고객 관리 및 서비스 제공</span></li>
+                        <li>3. 제공하는 개인정보의 항목<br> <span>- 사용자 ID</span></li>
+                        <li>4. 개인정보를 제공받는 자의 개인정보 보유 및 이용 기간<br> <span>- 서비스 제공기간</span></li>
+                    </ol>
+                    <p class="notice">
+                        고객은 개인정보의 제3자 제공에 대한 동의를 거부할 수 있으며, 동의를 거부할 경우 프로야구 서비스가 제공되지 않습니다.
+                    </p>
+                </div>
+                <p class="question">※ 위 개인정보의 제3자 제공에 동의하십니까?</p>
+            </div>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-confirm">동의</a>
+                <a href="#none" class="btn-cancel">동의안함</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 제3자 제공 동의 -->
+    <!-- 제3자 제공 동의 중 프로야구 Live 나가기 -->
+    <div id="PopAgreeLeave" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">프로야구 <span class="roboto">Live</span> 나가기</h4>
+        </header>
+        <section class="content">
+            <p>
+                프로야구 <span class="roboto">Live</span> 이용을 위해 개인 정보 제공 동의가 필요합니다.<br />
+                서비스를 종료하시겠습니까?
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-cancel">취소</a>
+                <a href="#none" class="btn-confirm">종료</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 제3자 제공 동의 중 프로야구 Live 나가기 -->
+    <!-- My팀 설정 중 프로야구 Live 나가기 -->
+    <div id="PopSetLeave" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">프로야구 <span class="roboto">Live</span> 나가기</h4>
+        </header>
+        <section class="content">
+            <p>
+                프로야구 서비스를 종료하시겠습니까?<br />
+                현재까지의 설정 내용은 저장됩니다.
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-cancel">취소</a>
+                <a href="#none" class="btn-confirm">종료</a>
+            </div>
+        </section>
+    </div>
+    <!-- // My팀 설정 중 프로야구 Live 나가기 -->
+    <!-- 관심선수 등록 -->
+    <div id="PlayerAdd" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">관심선수 등록</h4>
+        </header>
+        <section class="content">
+            <p>
+                관심선수로 등록 되었습니다.<br />
+                관심선수의 출전 경기와 뉴스, 영상을 놓치지 않도록 잘 알려드릴게요.
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-confirm">확인</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 관심선수 등록 -->
+    <!-- 관심선수 해제 -->
+    <div id="PlayerCancel" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">관심선수 등록</h4>
+        </header>
+        <section class="content">
+            <p>
+                관심선수를 해제 하시겠습니까?<br />
+                관심선수를 해제하고 더이상 선수 관련정보가 홈에 노출되지 않습니다.
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-cancel">취소</a>
+                <a href="#none" class="btn-confirm">확인</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 관심선수 해제 -->
+    <!-- 로그인 -->
+    <div id="PopLogin" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">프로야구 <span class="roboto">Live</span></h4>
+        </header>
+        <section class="content">
+            <p>
+                프로야구 Live 이용을 위해<br />
+                로그인이 필요합니다.
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="btn-cancel">프로야구 Live 나가기</a>
+                <a href="#none" class="btn-confirm">로그인 하러 가기</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 로그인 -->
+    <!-- 프로야구 진입 불가 -->
+    <div id="PopEntry" class="popup" style="display:none;">
+        <header>
+            <h4 class="tit-pop">프로야구 Live</h4>
+        </header>
+        <section class="content">
+            <p>
+                시크릿 모드는 지원하지 않습니다.<br>
+                일반 모드를 이용해 주세요.
+            </p>
+            <div class="btn-area clear">
+                <a href="#none" class="w50p btn-confirm">종료</a>
+            </div>
+        </section>
+    </div>
+    <!-- // 프로야구 진입 불가 -->
+</body>
+</html>

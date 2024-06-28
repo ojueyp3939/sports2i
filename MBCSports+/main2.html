@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="MBC Sports+" />
+	<meta name="author" content="MBC Sports+" />
+	<meta name="keywords" content="MBC Sports+" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section>
+					<div class="score">
+						<div class="top">
+							<table>
+								<caption>점수판</caption>
+								<tr>
+									<th scope="col" class="team">팀명</th>
+									<th scope="col">1</th>
+									<th scope="col">2</th>
+									<th scope="col">3</th>
+									<th scope="col">4</th>
+									<th scope="col">5</th>
+									<th scope="col">6</th>
+									<th scope="col">7</th>
+									<th scope="col">8</th>
+									<th scope="col">9</th>
+									<th scope="col">10</th>
+									<th scope="col">11</th>
+									<th scope="col">12</th>
+									<th scope="col" class="point r">R</th>
+									<th scope="col" class="point">H</th>
+									<th scope="col" class="point">E</th>
+									<th scope="col" class="point">B</th>
+								</tr>
+							</table>
+						</div>
+						<div class="bottom">
+							<table>
+								<caption>점수판</caption>
+								<tr>
+									<td class="team">원정팀</td>
+									<td><a href="">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">-</a></td>
+									<td><a href="">-</a></td>
+									<td><a href="">-</a></td>
+									<td class="point r">R</td>
+									<td class="point">H</td>
+									<td class="point">E</td>
+									<td class="point">B</td>
+								</tr>
+								<tr>
+									<td class="team">홈팀</td>
+									<td><a href="">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="" class="on">2</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">0</a></td>
+									<td><a href="">-</a></td>
+									<td><a href="">-</a></td>
+									<td><a href="">-</a></td>
+									<td class="point r"><strong>R</strong></td>
+									<td class="point">H</td>
+									<td class="point">E</td>
+									<td class="point">B</td>
+								</tr>
+							</table>
+							<a class="btn view away" href="">투수 구종 현황</a>
+							<a class="btn down home" href="">투수 구종 현황</a>
+						</div>
+					</div>
+
+					<table class="tbl b-gray">
+						<caption>MBC SPORTS+</caption>
+						<colgroup>
+							<col width="8%" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="8%" />
+							<col width="9%" />
+							<col width="10%" />
+						</colgroup>
+
+						<tr>
+							<th>이닝</th>
+							<th>원정팀 점수</th>
+							<th>홈팀 점수</th>
+							<th>주자상황</th>
+							<th>B</th>
+							<th>S</th>
+							<th>O</th>
+							<th>투구수 표출</th>
+							<th>투구수</th>
+							<th>비고</th>
+						</tr>
+						<tr>
+							<td>
+								<select>
+									<option></option>
+								</select>
+							</td>
+							<td>
+								<input type="text" />
+							</td>
+							<td>
+								<input type="text" />
+							</td>
+							<td>
+								<select>
+									<option></option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option></option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option></option>
+								</select>
+							</td>
+							<td>
+								<select>
+									<option></option>
+								</select>
+							</td>
+							<td>
+								<label for="y">Y</label>
+								<input type="radio" id="y" />
+								<label for="n">N</label>
+								<input type="radio" id="n" />
+							</td>
+							<td>
+								<input type="text" />
+							</td>
+							<td>
+								<a href="" class="btn view">보기</a>
+								<a href="" class="btn down">다운로드</a>
+							</td>
+						</tr>
+					</table>
+
+					<div class="search-wrap">
+						<label>투수</label>
+						<input type="text"/>
+						
+						<label>타자</label>
+						<input type="text"/>
+						
+						<label>주자상황</label>
+						<select>
+							<option>전체</option>
+						</select>
+
+						<label>결과</label>
+						<input type="text"/>
+
+						<div class="btn-box">
+							<a href="" class="btn search">검색</a>
+							<a href="" class="btn reset">초기화</a>
+						</div>
+					</div>
+
+					<div class="between-wrap">
+						<a href="" class="reset">
+							<img src="resources/images/contents/icon_reset.png" alt="새로고침">
+							새로고침
+						</a>
+					</div>
+					
+					<table class="tbl">
+						<caption>MBC SPORTS+</caption>
+						<tr>
+							<th>이닝</th>
+							<th>투수</th>
+							<th>타자</th>
+							<th>B-S-O</th>
+							<th>주자상황</th>
+							<th>결과</th>
+							<th>비고</th>
+						</tr>
+						<tr>
+							<td>1초</td>
+							<td>홍길동</td>
+							<td>신짱구</td>
+							<td>0-0-0</td>
+							<td>없음</td>
+							<td>1구 루킹 스트라이크</td>
+							<td>
+								<a href="" class="btn view">보기</a>
+								<a href="" class="btn down">다운로드</a>
+							</td>
+						</tr>
+						<tr>
+							<td>1초</td>
+							<td>홍길동</td>
+							<td>신짱구</td>
+							<td>0-0-0</td>
+							<td>없음</td>
+							<td>1구 루킹 스트라이크</td>
+							<td>
+								<a href="" class="btn view">보기</a>
+								<a href="" class="btn down">다운로드</a>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address></address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

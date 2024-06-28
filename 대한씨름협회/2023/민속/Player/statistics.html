@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub">
+			<div class="bridge-wrap">
+				<ul>
+					<li>
+						<a href="">
+							전문체육 씨름
+						</a>
+					</li>
+					<li class="on">
+						<a href="">
+							민속씨름
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="../main.html"><img src="../resources/images/common/logo.png" alt="씨름 아카이브 센터"></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb clear">
+						<li>
+							<a href="../Archive/index.html">씨름 아카이브 센터란?</a>
+						</li>
+						<li>
+							<a href="../Livecenter/index.html">라이브센터</a>
+						</li>
+						<li>
+							<a href="../Museum/data.html">디지털 씨름 박물관</a>
+						</li>
+						<li>
+							<a href="../Game/monthly_schedule.html">일정/결과</a>
+						</li>
+						<li>
+							<a href="../Rank/season.html">순위</a>
+						</li>
+						<li>
+							<a href="../Record/top.html">기록</a>
+						</li>
+						<li>
+							<a class="on" href="../Player/player_team.html">선수/팀</a>
+						</li>
+						<li>
+							<a  href="../News/broadcast_news.html">NEWS</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lnb-wrap">
+				<ul>
+					<li>
+						<ul>
+							<li><a href="../Archive/index.html">씨름 아카이브 센터란?</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Museum/data.html">데이터 필름 센터</a></li>
+							<li><a href="../Museum/exhibition.html">씨름전시관</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Game/monthly_schedule.html">대회 일정</a></li>
+							<li><a href="../Game/schedule.html">경기결과</a></li>
+							<li><a href="../Game/prize_winner.html">대회 입상자</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Record/top.html">TOP 5</a></li>
+							<li><a href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<ul>
+							<li><a href="../Player/player_team.html">남자</a></li>
+							<li><a href="../Player/player_team2.html">여자</a></li>
+							<li><a class="on" href="../Player/statistics.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전  -->
+				<article>
+					<div class="content">
+						<div class="day-wrap">
+							<ul class="day-box">
+								<li class="prev">
+									<a href="#"></a>
+								</li>
+								<li class="day-tit">
+									<span class="date">2019.08.15 (목)</span> <input id="btnCalendar" class="hasDatepicker" size="10"><img class="ui-datepicker-trigger" src="../resources/images/common/btn_calendar.png" alt="..." title="...">
+								</li>
+								<li class="next">
+									<a href="#"></a>
+								</li>
+							</ul>
+						</div>
+
+						<table class="tbl" summary="등록 선수/팀 통계">
+							<caption>등록 선수/팀 통계</caption>
+							<colgroup>
+								<col width="">
+								<col width="">
+								
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+								
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+								<col width="">
+								
+								<col width="">
+							</colgroup>
+							<thead>
+								<tr>
+									<th colspan="2" rowspan="2">지역구분</th>
+									<th colspan="5" class="blue">남자</th>
+									<th colspan="5" class="red">여자</th>
+									<th rowspan="2">계</th>
+								</tr>
+								<tr>
+									<th>초등부</th>
+									<th>중등부</th>
+									<th>고등부</th>
+									<th>대학부</th>
+									<th>일반부</th>
+									<th>초등부</th>
+									<th>중등부</th>
+									<th>고등부</th>
+									<th>대학부</th>
+									<th>일반부</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="2">서울</td>
+									<td>선수</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+
+									
+									<td>100</td>
+								</tr>
+								<tr>
+									<td>팀</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td>100</td>
+								</tr>
+
+								
+								<tr>
+									<td rowspan="2">계</td>
+									<td>선수</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td class="total">100</td>
+								</tr>
+								<tr>
+									<td>팀</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									<td>100</td>
+									
+									<td class="total">100</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 위례성대로 12길 5 아이베빌딩 5층</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br/>Copyright ⓒ 대한씨름협회. All rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>
+
+<div class="popup-wrap">
+	<i class="icon btn-x-g"></i>
+	<div class="popup-cont">
+		<table class="tbl popup" summary="기록실">
+			<caption>기록실</caption>
+			<colgroup>
+				<col width="120px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th>경기일</th>
+					<th>대회명</th>
+					<th>경기방식</th>
+					<th>상대선수</th>
+					<th>라운드</th>
+					<th>기술항목1</th>
+					<th>기술항목2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>2019.01.02</td>
+					<td>설날장사</td>
+					<td>16강</td>
+					<td>홍길동</td>
+					<td>1</td>
+					<td>손기술</td>
+					<td>들배지기</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

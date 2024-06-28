@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPubWorldBatangPL.eot');
+  src: url('../font/KoPubWorldBatangPL.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldBatangPL.woff') format('woff');
+}
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPubWorldBatangPM.eot');
+  src: url('../font/KoPubWorldBatangPM.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldBatangPM.woff') format('woff');
+}
+@font-face {
+  font-family:'kpb';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPubWorldBatangPB.eot');
+  src: url('../font/KoPubWorldBatangPB.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldBatangPB.woff') format('woff');
+}
+
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/KoPubWorldDotumPL.eot');
+  src: url('../font/KoPubWorldDotumPL.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldDotumPL.woff') format('woff');
+}
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/KoPubWorldDotumPM.eot');
+  src: url('../font/KoPubWorldDotumPM.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldDotumPM.woff') format('woff');
+}
+@font-face {
+  font-family:'kpd';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/KoPubWorldDotumPB.eot');
+  src: url('../font/KoPubWorldDotumPB.eot?#iefix') format('embedded-opentype'), url('../font/KoPubWorldDotumPB.woff') format('woff');
+}
+
+@font-face {
+  font-family:'nanumsquare';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/NanumSquareOTF_acL.eot');
+  src: url('../font/NanumSquareOTF_acL.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareOTF_acL.woff') format('woff');
+}
+@font-face {
+  font-family:'nanumsquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumSquareOTF_acR.eot');
+  src: url('../font/NanumSquareOTF_acR.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareOTF_acR.woff') format('woff');
+}
+@font-face {
+  font-family:'nanumsquare';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumSquareOTF_acB.eot');
+  src: url('../font/NanumSquareOTF_acB.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareOTF_acB.woff') format('woff');
+}
+@font-face {
+  font-family:'nanumsquare';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NanumSquareOTF_acEB.eot');
+  src: url('../font/NanumSquareOTF_acEB.eot?#iefix') format('embedded-opentype'), url('../font/NanumSquareOTF_acEB.woff') format('woff');
+}
+
+@font-face {
+  font-family:'rabbid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/RabbidHighwaySignIIObl.eot');
+  src: url('../font/RabbidHighwaySignIIObl.eot?#iefix') format('embedded-opentype'), url('../font/RabbidHighwaySignIIObl.woff') format('woff');
+}
+@font-face {
+  font-family:'rabbid';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/RabbidHighwaySignII.eot');
+  src: url('../font/RabbidHighwaySignII.eot?#iefix') format('embedded-opentype'), url('../font/RabbidHighwaySignII.woff') format('woff');
+}

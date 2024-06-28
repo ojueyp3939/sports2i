@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="스포츠투아이" />
+	<meta name="description" content="스포츠투아이">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="스포츠투아이" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover" />
+	<title>스포키 미션 릴레이</title>
+    <link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div class="header-wrap">
+			<a class="btn-left" href="">
+				<img src="resources/images/contents/icon_back.png" alt="back">
+			</a>
+			<span>이벤트 참여 본인 인증</span>
+			<a class="btn-right" href="">
+				<img src="resources/images/contents/icon_total_close.png" alt="close">
+			</a>
+		</div>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="contents" style="background-color:#171717">
+				<img class="w100" src="resources/images/contents/bg_gift.png" alt="찾아라! 배지 콜렉터">
+				<section class="choice-wrap">
+					<p class="username"><span>'포키포키91'</span>님<br/>축하합니다!</p>
+					<p class="txt">원하는 경품 타입을 선택해서<br/>경품 신청 버튼을 눌러주세요.</p>
+					<div class="choice-box">
+						<div class="choice-card soldout">
+							<input type="radio"><span class="choice-icon"></span>
+							<p> 응모 경품</p>
+							<span class="now">현재 33,333명 응모</span>
+						</div>
+						<a href="" class="detail-btn">
+							응모 경품 상세보기 <img src="resources/images/contents/icon_arrow.png" alt=">">
+						</a>
+						<div class="choice-card">
+							<input type="radio"><span class="choice-icon"></span>
+							<p>선착순 경품</p>
+							<span class="now">남은 경품 수량 782개</span>
+						</div>
+						<a href="" class="detail-btn">
+							선착순 경품 상세보기 <img src="resources/images/contents/icon_arrow.png" alt=">">
+						</a>
+					</div>
+					<button class="submit-btn">경품 신청</button>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
+
+
+<div class="modal">
+	<div class="pop-wrap apply">
+		<a class="btn-close" href=""><img src="resources/images/contents/icon_close2.png" alt="close"></a>
+		<div class="pop-tit">
+			응모 경품 신청 유의사항
+		</div>
+		<div class="pop-cont">
+			<div class="check">
+				<input type="checkbox" id="check"><label for="check">아래 경품 안내 유의사항을 확인했습니다.</label></label>
+			</div><br/>
+			경품 응모 후 수정이 불가하며<br/>
+			실물 경품 당첨자에게는 당첨자 발표 이후<br/>
+			다음 달까지 개별 연락드릴 예정입니다.<br/>
+			자세한 사항은 이벤트 별 유의사항을 참고해 주세요.<br/>
+			경품에 응모하시겠습니까?
+		</div>
+		<div class="final-box two">
+			<button>취소</button>
+			<button class="off">동의 및 신청</button>
+		</div>
+	</div>
+
+	<!-- <div class="pop-wrap apply">
+		<a class="btn-close" href=""><img src="resources/images/contents/icon_close2.png" alt="close"></a>
+		<div class="pop-tit">
+			응모 경품
+		</div>
+		<div class="pop-cont">
+			<p>응모하는 경품을 선택하시는 분들 중<br/>추첨을 통해 선물을 드려요.</p>
+			<p class="date">당첨자 발표 기간 : 2022.12.30 - 2023.01.06</p>
+			<div class="gift-list in-pop">
+				<ul>
+					<li>
+						<img src="resources/images/contents/gift3_1.png">
+						<div>
+							<p class="gift-tit">하나투어 상품권 300만 원권</p>
+							<p class="gift-txt">1명</p>
+						</div>
+					</li>
+					<li class="soldout">
+						<img src="resources/images/contents/gift3_2.png">
+						<div>
+							<p class="gift-tit">시그니엘 서울 프리미어 트윈</p>
+							<p class="gift-txt">1명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift3_3.png">
+						<div>
+							<p class="gift-tit">아이폰 14프로 256GB</p>
+							<p class="gift-txt">2명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift3_4.png">
+						<div>
+							<p class="gift-tit">갤럭시 Z 플립 4 256GB</p>
+							<p class="gift-txt">2명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift3_5.png">
+						<div>
+							<p class="gift-tit">닌텐도 스위치 OLED</p>
+							<p class="gift-txt">3명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift3_6.png">
+						<div>
+							<p class="gift-tit">애플워치 8세대 45mm GPS</p>
+							<p class="gift-txt">3명</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="pop-wrap apply">
+		<a class="btn-close" href=""><img src="resources/images/contents/icon_close2.png" alt="close"></a>
+		<div class="pop-tit">
+			선착순 경품
+		</div>
+		<div class="pop-cont">
+			<p>선착순으로 원하는 경품으로 선택할 수 있어요.<br/>조기 마감 될 수 있으니, 서두르세요!</p>
+			<p class="date">당첨자 발표 기간 : 2022.12.30 - 2023.01.06</p>
+			<div class="gift-list in-pop">
+				<ul>
+					<li class="soldout">
+						<img src="resources/images/contents/gift4_1.png">
+						<div>
+							<p class="gift-tit">BHC 골드킹 + 콜라</p>
+							<p class="gift-txt">1,000명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift4_2.png">
+						<div>
+							<p class="gift-tit">도미노피자 슈퍼슈프림 L</p>
+							<p class="gift-txt">1,000명</p>
+						</div>
+					</li>
+					<li>
+						<img src="resources/images/contents/gift4_3.png">
+						<div>
+							<p class="gift-tit">스타벅스 아메리카노 T</p>
+							<p class="gift-txt">3,000명</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+

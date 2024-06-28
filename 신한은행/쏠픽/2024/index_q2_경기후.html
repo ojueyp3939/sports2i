@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.ui.datepicker-ko.js"></script>
+	<script type="text/javascript" src="resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.js	"></script>
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui-theme.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/solpick.css" />
+</head>
+<script>
+	$(document).ready(function () {
+		$('#btnCalendar').datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: '2018-01-01',
+			showOn: "button",
+			buttonImage: "resources/images/common/btn_calandar.png",
+			buttonImageOnly: true,
+			changeMonth: true,
+			changeYear: true,
+			autoSize: true,
+			showButtonPanel: true,
+			beforeShow: function (input) {
+				var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+				var dateOffset = $("#ui-datepicker-div").height() / 2;
+				$("body").append("<div class='modal' />");
+				setTimeout(function () {
+					$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+				})
+			}
+			, onSelect: function () {
+				setDate(new Date($(this).val()));
+				$(".modal").remove();
+			}, onClose: function () {
+				$(".modal").remove();
+			}
+		});
+	});
+</script>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="index_q1.html">쏠픽하기</a></li>
+					<li><a href="SolGuide/쏠쏠한가이드.html">쏠쏠한 가이드</a></li>
+					<li><a href="MySol/My쏠픽.html">MY 쏠픽</a></li>
+					<li><a href="Rank/월간랭킹.html">랭킹/이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="solpick">
+				<div class="date-select play">
+					<a href="#none" class="btn-prev"><img src="resources/images/common/btn_date_prev.png" alt="" /></a>
+					<span class="today">2018.06.13</span>
+					<a href="javascript" class="btn-calendar"><input type="hidden" id="btnCalendar" /></a>
+					<a href="#none" class="btn-next"><img src="resources/images/common/btn_date_next.png" alt="" /></a>
+				</div>
+				<div class="game-wrap">
+					<div class="game-cont">
+						<div class="quiz-num q2">Q2</div>
+						<div class="tab-area solpick">
+							<ul class="tab">
+								<li class="q1"><a href="#none">Q1 승리팀 맞추기</a></li>
+								<li class="q2 on"><a href="#none">Q2 1:10 퀴즈</a></li>
+							</ul>
+							<div class="quiz q2-app after">
+								<div class="quiz-box">
+									<p class="tit">선발투수가 가장 많은 투구수를<br />기록할 팀은?</p>
+									<div class="my-result pass">
+										<img src="resources/images/sub/icon_success2.png">
+										<p>
+											성공입니다!<br/>
+											<strong>30pick 획득!</strong>
+										</p>
+									</div>
+									<div class="my-result no-attend">
+										<img src="resources/images/sub/icon_normal.png">
+										<p>아이쿠! 쏠픽에 참여하지 않았습니다.<br /><strong>다음에는 꼭! 쏠픽 해주세요!</strong></p>
+									</div>
+									<div class="my-result fail">
+										<img src="resources/images/sub/icon_normal.png">
+										<p>
+											앗 아쉽네요.<br/>
+											<strong>실패입니다.</strong>
+										</p>
+									</div>
+									<div class="my-result all-fail">
+										<img src="resources/images/sub/icon_normal.png">
+										<p>앗 아쉽네요. 모두 틀렸습니다.<br><strong>다음 쏠픽에 도전하세요!</strong></p>
+									</div>
+									<div class="my-result all-pass">
+										<img src="resources/images/sub/icon_success3.png">
+										<p>
+											와우 만점입니다!<br/>
+											<strong>30pick + 보너스 20pick까지!</strong>
+										</p>
+									</div>
+									<p class="noti-txt">※ 서스펜디드 경기는 재개되어도 쏠픽 결과에 포함되지 않습니다.</p>
+									<div class="record-box clear">
+										<div class="box now">
+											<span class="tit">현재 1등</span>
+											<div class="top">
+												<div class="emb-bg">
+													<img src="resources/images/emb/emb_180x150_HH.png" alt="" />
+												</div>
+											</div>
+											<div class="bottom">
+												SK<span>한승혁 99구</span>
+											</div>
+										</div>
+										<div class="box my">
+											<span class="tit">MY 선택</span>
+											<div class="top">
+												<div class="emb-bg">
+													<img src="resources/images/main/img_no_attend_round.png" alt="" />
+												</div>
+											</div>
+											<div class="bottom">
+												SK<span>한승혁 99구</span>
+											</div>
+										</div>
+									</div>
+									<p class="txt-gray">* 중복1등(KIA, SK)</p>
+								</div>
+								<ul class="select-list">
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_LG.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/embR_135x113_LT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_KT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_NC.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/embR_135x113_WO.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_SK.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_HT.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="cancel">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_OB.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li class="select">
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_SS.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+									<li>
+										<dl>
+											<dt>LG</dt>
+											<dd class="emb"><img src="resources/images/emb/emb_135x113_HH.png" alt="" />
+											</dd>
+											<dd class="player">
+												<div class="choice"></div>
+												<div>
+													선발 <span class="name">한승혁</span> / <span class="record">999</span>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="btn-area btn-solpick">
+						<a href="#none" class="btn btn-app">다음</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // contents -->
+	</div>
+	<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+.visual-wrap {position:relative;height:783px;background-image:url(../images/main/bg_main.png);background-size:cover;background-color:#272f58;background-repeat:no-repeat;}
+.visual-wrap img {position:absolute;left:calc(50% - 577px);bottom:77px;}
+.content-wrap {padding:70px 0 0}
+
+.media .inner {width:1127px;margin:0 auto;text-align:center;}
+.media .inner .txt {margin-bottom:23px;}
+.media .inner .video {width:688px;height:438px;padding:19px;margin:0 auto;background:url('../images/main/bg_video.png')}
+.media .schedule {position:relative;padding:150px 0 130px;}
+.media .schedule .inner .list-schedule {width:1100px;height:1284px;margin:0 auto;background:url('../images/main/img_schedule.png')}
+.media .schedule::before {content:'';position:absolute;bottom:0;left:0;width:286px;height:1181px;background:url('../images/main/bg_left.png') no-repeat;z-index:-1;}
+.media .schedule::after {content:'';position:absolute;bottom:0;right:0;width:339px;height:1443px;background:url('../images/main/bg_right.png') no-repeat;z-index:-1;}
+
+.event {padding:43px 43px 0 43px;background-color:#fafafa;}
+.event .inner {width:990px;margin:0 auto;text-align:center;}
+.event .inner h2 {height:100%;text-align:left}
+.event .inner h2 .round-logo {display:inline-block;width:176px;height:53px;background-image:url('../images/main/logo_round.png');vertical-align:top;}
+.event .inner .time-box {width:850px;height:47px;margin:35px auto 25px;border:2px solid #1b1b1b}
+.event .inner .time-box div {float:left;width:33.3333%;line-height:43px;font-size:28px;font-family:'kpb'}
+.event .inner .time-box div:nth-child(2) {border:2px solid #1b1b1b;border-top:0;border-bottom:0;}
+.event .inner .noti-box {width:850px;padding:50px 80px;margin:0 auto 40px;border:2px solid #1b1b1b;text-align:left;}
+.event .inner .noti-box div {margin-bottom:45px;}
+.event .inner .noti-box div:last-child {margin-bottom:0}
+.event .inner .noti-box div p {position:relative;line-height:1.3;padding-left:25px;margin-bottom:15px;font-size:20px;color:#171717;font-weight:700;word-break:keep-all;}
+.event .inner .noti-box div p::before {content:'ㅇ';position:absolute;top:0;left:0;}
+.event .inner .noti-box div p:last-child {margin-bottom:0}
+.event .inner .noti-box div p.in {padding-left:45px;}
+.event .inner .noti-box div p.in::before {content:'-';position:absolute;top:0;left:25px;}
+.event .inner .noti-box div p.in.no::before {content:''}
+.event .inner .login-box .gray-box {width:850px;height:57px;padding-top:14px;margin:0 auto 45px;border:2px solid #1b1b1b;font-size:24px;color:#986e4f;font-weight:700;font-family:'kpd';background-color:#d6d5d5}
+.event .inner .login-box div {margin-bottom:45px;}
+.event .inner .login-box div .naver-login {display:inline-block;width:320px;height:70px;background-image:url('../images/main/btn_naver.png');vertical-align:top;}
+.quiz-tit {display:inline-block;width:510px;height:114px;background-image:url('../images/main/img_quiz_tit.png');}
+.social-box {padding-bottom:50px;}
+.social-box::after {content:"";display:block;clear:both;}
+.social-box p {margin-bottom:35px;font-size:22px;font-weight:700}
+.social-box ul li {display:inline-block;margin:0 50px;}
+.social-box ul li .icon-fb {display:block;width:48px;height:68px;background-image:url('../images/common/icon_fb.png');}
+.social-box ul li .icon-insta {display:block;width:81px;height:68px;background-image:url('../images/common/icon_insta.png');}
+.social-box ul li .icon-youtube {display:block;width:81px;height:68px;background-image:url('../images/common/icon_youtube.png');}
+
+@media (max-width:640px) {
+  .visual-wrap {width:100%;height:105vw;background-image:url(../images/main/bg_main_s.png);background-size:cover}
+  .visual-wrap img {display:none}
+  .content-wrap {padding:35px 0 0;}
+
+  .media .inner {width:100%;margin:0 auto;text-align:center;}
+  .media .inner .txt {width:85%;margin-bottom:15px}
+  .media .inner .video {width:95.625vw;height:56.25vw;background-image:url('../images/main/bg_video_s.png');background-size:306px 180px;background-repeat:no-repeat;background-position:center;}
+  .media .schedule {padding:50px 0}
+  .media .schedule .inner .list-schedule {width:100%;height:319.53125vw;margin:0 auto;background-image:url('../images/main/img_schedule_s.png');background-size:cover;}
+  .media .schedule::before {display:none}
+  .media .schedule::after {display:none}
+
+  .event {padding:17px;background-color:#fbfbfb;}
+  .event .inner {width:100%;margin:0 auto;text-align:center;}
+  .event .inner h2 {margin-bottom:10px;}
+  .event .inner h2 .round-logo {width:17.8125vw;height:5.3125vw;background-image:url('../images/main/logo_round_s.png');background-size:17.8125vw 5.3125vw;}
+  .event .inner .time-box {width:80%;height:100%;margin:15px auto 20px;border:1px solid #1b1b1b}
+  .event .inner .time-box div {float:none;width:100%;line-height:23px;font-size:1.6rem;}
+  .event .inner .time-box div:nth-child(2) {border:1px solid #1b1b1b;border-left:0;border-right:0;}
+  .event .inner .noti-box {width:100%;padding:20px 13px;margin-bottom:15px;border:1px solid #1b1b1b}
+  .event .inner .noti-box div {margin-bottom:20px;}
+  .event .inner .noti-box div p {line-height:1.5;padding-left:15px;margin-bottom:5px;font-size:12px;}
+  .event .inner .noti-box div p.in {padding-left:30px;}
+  .event .inner .noti-box div p.in::before {content:'-';position:absolute;top:0;left:15px;}
+  .event .inner .noti-box div p.in.no::before {content:''}
+  .event .inner .login-box .gray-box {width:100%;height:30px;padding-top:7px;margin-bottom:15px;font-size:1.2rem;border:1px solid #1b1b1b}
+  .event .inner .login-box div {margin-bottom:15px;}
+  .event .inner .login-box div .naver-login {width:104px;height:34px;background-image:url('../images/main/btn_naver_s.png');background-size:104px 34px;}
+
+  .social-box {padding-bottom:25px;}
+  .social-box p {padding:0 45px;margin-bottom:20px;font-size:1.3rem;word-break:keep-all;}
+  .social-box ul li {margin:0 15px;}
+  .social-box ul li .icon-fb {width:24px;height:34px;background-size:24px 34px;}
+  .social-box ul li .icon-insta {width:42px;height:34px;background-size:42px 34px;}
+  .social-box ul li .icon-youtube {width:42px;height:34px;background-size:42px 34px;}
+  .quiz-tit {width:230px;height:50px;background-image:url('../images/main/img_quiz_tit_s.png');background-size:230px 50px;}
+}

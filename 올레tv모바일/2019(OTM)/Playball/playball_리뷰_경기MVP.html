@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/review.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".today-games h1").click(function(){
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#GameList',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+
+			var myScroll2 = new IScroll('#TabDepth1',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+
+			var myScroll3 = new IScroll('#TblInning',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="playball-sub">
+			<h1 class="tit">리뷰</h1>
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="../Playball/playball.html"><span>플레이볼</span></a></li>
+					<li><a href="../Schedule/schedule.html"><span>일정</span></a></li>
+					<li><a href="../Ranking/ranking.html"><span>순위</span></a></li>
+					<li><a href="../Record/record_1.html"><span>기록</span></a></li>
+					<li><a href="../My/my.html"><span>MY</span></a></li>
+				</ul>
+			</nav>
+			<a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="playball-sub">
+				<div id="MainCont">
+					<section class="review">
+						<h1>10.12(금) 시즌 16차전</h1>
+						<div class="info-box">
+							<div class="team away">
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+									<div class="player-info">
+										<div class="player">
+											<span class="result win">승</span>
+											<span class="name">엄상백백백</span>
+										</div>
+										<div class="player">
+											<span class="result save">세</span>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+								</div>
+								<div class="score win">99</div>
+							</div>
+							<div class="game-info">
+								<div class="end">경기종료</div>
+								<div class="place">대전</div>
+							</div>
+							<div class="team home">
+								<div class="score">99</div>
+								<div class="team-info">
+									<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+									<div class="player-info">
+										<div class="player">
+											<span class="result lose">패</span>
+											<span class="name">엄상백백백</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="description">경기가 시작되면 중계를 보실 수 있습니다.</p>
+					</section>
+				</div>
+				<div id="SubCont">
+					<section class="today-games">
+						<h1><a href="#none">타구장</a></h1>
+						<div id="GameList" class="scroll-wrap">
+							<div class="scroller">
+							<ul class="game-list">
+								<li class="preview">
+									<div class="team away">
+										<span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+										<span class="score"></span>
+									</div>
+									<span class="state">18:30</span>
+									<div class="team home">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="score"></div>
+									</div>
+								</li>
+								<li class="live">
+									<div class="team away">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+										<div class="score">99</div>
+									</div>
+									<span class="state">3회초</span>
+									<div class="team home">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="score">99</div>
+									</div>
+								</li>
+								<li class="review">
+									<div class="team away">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></div>
+										<div class="score">99</div>
+									</div>
+									<span class="state">종료</span>
+									<div class="team home">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="score">99</div>
+									</div>
+								</li>
+								<li class="cancel">
+									<div class="team away">
+										<div class="emb"><img src="../resources/images/emb/embR_278x210_KT.png" alt="" /></div>
+										<div class="score"></div>
+									</div>
+									<span class="state">18:30</span>
+									<div class="team home">
+										<div class="emb"><img src="../resources/images/emb/embR_278x210_HH.png" alt="" /></div>
+										<div class="score"></div>
+									</div>
+								</li>
+								<li class="preview">
+									<div class="team away">
+										<span class="emb"><img src="../resources/images/emb/emb_278x210_KT.png" alt="" /></span>
+										<span class="score"></span>
+									</div>
+									<span class="state">18:30</span>
+									<div class="team home">
+										<div class="emb"><img src="../resources/images/emb/emb_278x210_HH.png" alt="" /></div>
+										<div class="score"></div>
+									</div>
+								</li>
+							</ul>
+							</div>
+						</div>
+					</section>
+					<div id="TabDepth1" class="tab-area scroll-wrap">
+						<div class="scroller">
+              <ul class="tab tab-depth1">
+								<li><a href="../Playball/playball_리뷰_경기기록.html">경기기록</a></li>
+                <li><a href="../Playball/playball_리뷰_하이라이트.html">하이라이트</a></li>
+								<li><a href="../Playball/playball_리뷰_득점상황.html">득점상황</a></li>
+								<li><a href="../Playball/playball_리뷰_그래픽중계.html">그래픽중계</a></li>
+								<li class="on"><a href="../Playball/playball_리뷰_경기MVP.html">경기MVP</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 경기MVP -->
+					<section class="keyplayer">
+						<div class="info-box">
+							<h2 class="tit">WPA 순위</h2>
+							<ul class="wpa-rank">
+								<li class="top">
+									<div class="player-img"><img src="../resources/images/common/78224.jpg" alt="" /></div>
+									<div class="info-box">
+										<dl class="info">
+											<dt>1위</dt>
+											<dd>엄상백</dd>
+											<dd>34.2%</dd>
+										</dl>
+										<div class="record">
+											<dl>
+												<dt>이닝</dt>
+												<dd>3 2/3</dd>
+											</dl>
+											<dl>
+												<dt>실점</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>피안타</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>이닝</dt>
+												<dd>99</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="player-img"><img src="../resources/images/common/78224.jpg" alt="" /></div>
+									<div class="info-box">
+										<dl class="info">
+											<dt>2위</dt>
+											<dd>엄상백</dd>
+											<dd>34.2%</dd>
+										</dl>
+										<div class="record">
+											<dl>
+												<dt>이닝</dt>
+												<dd>3 2/3</dd>
+											</dl>
+											<dl>
+												<dt>실점</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>피안타</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>이닝</dt>
+												<dd>99</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="player-img"><img src="../resources/images/common/78224.jpg" alt="" /></div>
+									<div class="info-box">
+										<dl class="info">
+											<dt>3위</dt>
+											<dd>엄상백</dd>
+											<dd>34.2%</dd>
+										</dl>
+										<div class="record">
+											<dl>
+												<dt>타수</dt>
+												<dd>10</dd>
+											</dl>
+											<dl>
+												<dt>안타(홈런)</dt>
+												<dd>10(5)</dd>
+											</dl>
+											<dl>
+												<dt>득점</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>타점</dt>
+												<dd>99</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="player-img"><img src="../resources/images/common/78224.jpg" alt="" /></div>
+									<div class="info-box">
+										<dl class="info">
+											<dt>4위</dt>
+											<dd>엄상백</dd>
+											<dd>34.2%</dd>
+										</dl>
+										<div class="record">
+											<dl>
+												<dt>이닝</dt>
+												<dd>3 2/3</dd>
+											</dl>
+											<dl>
+												<dt>실점</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>피안타</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>이닝</dt>
+												<dd>99</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="player-img"><img src="../resources/images/common/78224.jpg" alt="" /></div>
+									<div class="info-box">
+										<dl class="info">
+											<dt>5위</dt>
+											<dd>엄상백</dd>
+											<dd>34.2%</dd>
+										</dl>
+										<div class="record">
+											<dl>
+												<dt>이닝</dt>
+												<dd>3 2/3</dd>
+											</dl>
+											<dl>
+												<dt>실점</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>피안타</dt>
+												<dd>99</dd>
+											</dl>
+											<dl>
+												<dt>이닝</dt>
+												<dd>99</dd>
+											</dl>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<dl class="description on">
+							<dt>기록</dt>
+							<dd>
+								<ul>
+									<li><span class="tit">WPA(승리기여도)</span>선수가 각 플레이마다 팀 승리확률을 얼마나 변화시켰는지 나타낸 수치</li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="no-record">
+							키플레이어는 1회말 종료 후부터 제공됩니다.
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

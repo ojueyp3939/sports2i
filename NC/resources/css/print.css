@@ -1,0 +1,127 @@
+.a4 {width:21cm;height:29.7cm;page-break-after:always}
+.a4.row {width:29.7cm;height:20cm}
+@page {size:auto;margin:0.7cm;}
+* {font-size:18px;}
+.print-tit span {font-size:25px;color:#04152b;font-weight:700;vertical-align:bottom;}
+.print-tit img {width:49px;margin-right:12px;}
+
+.board {margin:0}
+.board .box {position:relative;padding:20px 18px 0}
+.board .box::after {content:"";display:block;clear:both;}
+.board .box .tb-mini {width:100%;border-style:hidden;}
+.board .box .tb-mini tr th {height:34px;padding-top:3px;font-size:15px;border-bottom:1px solid #eee;border-right:1px solid #eee;font-weight:400;background-color:#e1e6ee;vertical-align:middle;}
+.board .box .tb-mini tr td {height:34px;padding:6px 6px 3px;font-size:15px;color:#333;text-align:center;border-bottom:1px solid #eee;border-right:1px solid #eee;background-color:#fff;vertical-align:middle;}
+.board .box .tb-mini tr td.sub-tit {background-color:#f5f7fa;}
+
+.board .box .tb-scroll {height:100%;overflow:auto;}
+.board .box .tb-scroll::-webkit-scrollbar {width:6px;height:6px;}
+.board .box .tb-scroll::-webkit-scrollbar-track {background-color:transparent;}
+.board .box .tb-scroll::-webkit-scrollbar-thumb {border-radius:3px;background-color:#c1c1c1;}
+
+.broadcast .right-zone {float:unset;width:100%}
+.broadcast .right-zone::after {content:"";display:block;clear:both;}
+.broadcast .right-zone .board.detail {height:auto;}
+.broadcast .right-zone .board.detail .box:first-child {text-align:center;}
+.broadcast .right-zone .board.detail .box .info {display:inline-block;padding:5px 35px 1px;border:1px solid #ccc;border-radius:5px;}
+.broadcast .right-zone .board.detail .box .tb-box {border:1px solid #eee;border-radius:5px;}
+.broadcast .right-zone .board.detail .box .tit-team {margin:4px 0 15px;font-size:22px;color:#003067;font-weight:700;text-align:center;}
+.broadcast .right-zone .board.detail .box .tit-team span {margin:0 5px;font-size:22px;color:#003067;font-weight:400}
+
+/* 문자중계 R - 홈런분석표 */
+.broadcast .right-zone .board.detail.homerun .box {padding:20px 50px 0;}
+.broadcast .right-zone .board.detail.homerun .box .date {position:absolute;top:70px;left:50px;font-size:18px;color:#333;font-weight:700}
+.broadcast .right-zone .board.detail.homerun .box .tb-box {height:100%;}
+.broadcast .right-zone .board.detail.homerun .box .banner {width:100%;}
+.broadcast .right-zone .board.detail.homerun .posi-hr {position:relative;margin-bottom:20px;border:0}
+.broadcast .right-zone .board.detail.homerun .posi-hr.left {float:left;width:309px;height:362px;background:url('../images/print/bg_hr1.png') no-repeat;background-size:contain;}
+.broadcast .right-zone .board.detail.homerun .posi-hr.right {float:right;width:361px;height:362px;background:url('../images/print/bg_hr2.png') no-repeat;background-size:contain;}
+
+/* 문자중계 R - 투구분석표 */
+.broadcast .right-zone .board.detail.analyze .box {padding:20px 140px 0;}
+.broadcast .right-zone .board.detail.analyze .box .list {display:inline-block;}
+.broadcast .right-zone .board.detail.analyze .box .list li {display:inline-block;margin:0 10px;}
+.broadcast .right-zone .board.detail.analyze .box .list li span {margin-right:5px;}
+.broadcast .right-zone .board.detail.analyze .box .list li .info {width:135px;padding:5px 15px 1px;text-align:left;}
+.broadcast .right-zone .board.detail.analyze .box .tb-box {height:100%;border:0}
+.broadcast .right-zone .board.detail.analyze .box .tb-box .tb-mini {border-left:1px solid #eee;border-radius:5px;}
+.broadcast .right-zone .board.detail.analyze .box .tb-box .tb-mini tr td.bg {background-color:#f5f7fa;}
+.broadcast .right-zone .board.detail.analyze .box .date {position:absolute;top:70px;left:140px;font-size:18px;color:#333;font-weight:700}
+.broadcast .right-zone .board.detail.analyze .box .tb-mini tr th {height:26px;padding-top:3px;}
+.broadcast .right-zone .board.detail.analyze .box .tb-mini tr td {height:26px;padding:4px 6px 0;}
+
+/* 벤치리포트 L */
+.day-box {display:inline-block;vertical-align:top}
+.day-box li {float:left;}
+.day-box li.day-tit {position:relative;padding:0 60px;margin-top:4px;}
+.day-box li.day-tit span {font-size:14px;line-height:1.4;}
+.day-box li.prev a {display:inline-block;width:23px;height:23px;background:url('../images/contents/icon_left_round.png');background-size:contain;}
+.day-box li.next a {display:inline-block;width:23px;height:23px;background:url('../images/contents/icon_right_round.png');background-size:contain;}
+.day-box li.prev.disable a {background:url('../images/contents/icon_left_round_d.png');background-size:contain;}
+.day-box li.next.disable a {background:url('../images/contents/icon_right_round_d.png');background-size:contain;}
+.day-box li.day-tit input {width:1px;outline:none;visibility:hidden;}
+.day-box li.day-tit .game-tit {margin-bottom:0;}
+
+.toggle {position:absolute;top:16px;left:30px;background-color:#e2e3e5;border-radius:5px;}
+.toggle li {float:left;width:52px;height:25px;border-radius:5px;}
+.toggle li a {display:block;width:100%;height:100%;padding-top:6px;border-radius:5px;font-size:12px;color:#888;text-align:center;}
+.toggle li.on {background-color:#275288;}
+.toggle li.on a {color:#fff;font-weight:700;}
+
+.report .left-zone {float:left;width:200px;margin:15px 10px 0 0;}
+.report .left-zone .board {padding:0;margin-bottom:10px;text-align:center;border:1px solid #ddd;border-radius:5px;}
+.report .left-zone .board .box {padding:40px 10px 30px}
+.report .left-zone .board.date {height:361px;}
+.report .left-zone .board.date .box .day-box li.day-tit {padding:0 10px;}
+.report .left-zone .board.date .box .day-box li.day-tit img {margin-left:4px}
+.report .left-zone .board.date .box .tit-team {margin:12px 0 20px;font-size:18px;font-weight:700;}
+.report .left-zone .board.date .box .tit-team span {margin:0 5px;font-weight:400}
+.report .left-zone .board.date .box .list {margin:20px 0;}
+.report .left-zone .board.date .box .list li {display:inline-block;}
+.report .left-zone .board.date .box .list li:first-child {margin-right:10px;}
+.report .left-zone .board.date .box .list li span {margin-right:5px;}
+.report .left-zone .board.date .box .list li .info {display:inline-block;width:52px;padding:5px 5px 3px;text-align:left;border:1px solid #ccc;border-radius:5px;}
+.report .left-zone .board.date .box.in-img {padding:0;}
+.report .left-zone .board.date .box.in-img img {width:100%;}
+.report .left-zone .board.date .box .toggle {position:inherit;top:unset;left:unset;display:inline-block;}
+.report .left-zone .board.data .box {padding:10px;}
+.report .left-zone .board.data .box .pic {width:85px;margin-bottom:8px;border:1px solid #eee;border-radius:5px;}
+.report .left-zone .board.data .box dl {margin-bottom:8px;}
+.report .left-zone .board.data .box dl dt {margin-bottom:5px;font-size:16px;font-weight:700;}
+.report .left-zone .board.data .box dl dt span {color:#003067}
+.report .left-zone .board.data .box dl dd {display:inline-block;padding:0 8px;color:#333}
+.report .left-zone .board.data .box .tb-box .tb-mini {table-layout:fixed;letter-spacing:-1.0px;}
+.report .left-zone .board.data .box .tb-box .tb-mini tr th {height:24px;font-size:10px;}
+.report .left-zone .board.data .box .tb-box .tb-mini tr td {height:24px;padding:0;font-size:10px;}
+/* 벤치리포트 R */
+.report .right-zone {float:right;width:calc(100% - 210px);margin-top:15px;}
+.report .right-zone .board {padding:10px 4px 10px 10px;border:1px solid #ddd;border-radius:5px;}
+.report .right-zone .board:first-child {margin-bottom:10px}
+.report .right-zone .board::after {content:"";display:block;clear:both;}
+.report .right-zone .board .box {float:left;width:170px;height:100%;padding:0;margin-right:10px;border:1px solid #eee;border-radius:5px;background-color:#f5f5f5;}
+.report .right-zone .board .box:last-child {margin-right:0}
+.report .right-zone .board .box .location {height:152px;border-top:1px solid #eee;border-bottom:1px solid #eee;background-color:#fff;}
+.report .right-zone .board .box .location .s2i_point {position:relative;width:128px;height:100%;margin:0 auto;background:url('../images/contents/bg_zone.png') no-repeat;background-size:contain;}
+.report .right-zone .board .box .tb-xs {table-layout:fixed;width:100%;margin-bottom:3px;background-color:#fff;}
+.report .right-zone .board .box .tb-xs:last-child {margin-bottom:0}
+.report .right-zone .board .box .tb-xs tr td {padding:2px 0 1px;border-right:1px solid #eee;border-bottom:1px solid #eee;font-size:12px;text-align:center;}
+.report .right-zone .board .box .tb-xs tr:last-child td {border-bottom:0;}
+.report .right-zone .board .box .tb-xs tr td:last-child {border-right:0;}
+.report .right-zone .board .box .tb-xs tr td span {font-size:12px;margin-right:50px;}
+.report .right-zone .board .box .tb-scroll {height:auto;}
+.report .right-zone .board .box .tb-scroll .tb-xs tr td {width:22px;font-size:11px;}
+.report .right-zone .board .box.on {border:1px solid #63acff;}
+.report .right-zone .board .box.on .tb-xs {border-radius:5px 5px 0 0;background-color:#f5faff;}
+.report .right-zone .board .box.on .tb-xs .point-txt {color:#0076fe;font-weight:700}
+.report .right-zone .board .box.on .location {background-color:#f5faff;}
+.report .right-zone .board.graphic table {height:147px;}
+.report .right-zone .board.graphic table:first-child {margin-bottom:10px}
+.report .right-zone .board.graphic table tr th {border-radius:5px 0 0 5px;color:#fff;font-weight:700;background-color:#5c8ebb;vertical-align:middle;letter-spacing:1px;line-height:1.45;}
+.report .right-zone .board.graphic table tr td ul li {float:left;width:106px;margin-right:6px;}
+.report .right-zone .board.graphic table tr td ul li div {width:100%;height:126px;background:url('../images/contents/bg_zone2.png') no-repeat;background-size:contain;}
+.report .right-zone .board.graphic table tr td ul li:last-child {margin-right:0}
+.report .right-zone .board.graphic table tr td ul li .tit {height:21px;padding-top:5px;font-size:12px;text-align:center;background-color:#e1e6ee;}
+.report .right-zone .board.graphic .left {float:left;width:584px;margin-right:10px;}
+.report .right-zone .board.graphic .right {float:right;width:calc(100% - 594px);}
+.report .right-zone .board.graphic .right table tr td {padding-right:6px;}
+.report .right-zone .board.graphic .right table tr td div {width:125px;height:100%;background:url('../images/contents/bg_zone.png') no-repeat;background-size:contain;}
+

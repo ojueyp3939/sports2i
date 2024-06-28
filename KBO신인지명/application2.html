@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="author" content="" />
+	<meta name="keywords" content="" />
+	<title>KBO 신인지명 대상 선수 등록 시스템</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/main.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<a href="main.html">
+					<img src="resources/images/main/img_header.png" alt="KBO 신인지명 대상 선수 등록 시스템">
+				</a>
+			</div>
+			<div class="user">
+				<p>
+					<img src="resources/images/main/icon_user.png" />
+					<span class="name">홍길동</span>님
+				</p>
+				<a class="link" href=""><b>회원정보 수정</b></a>
+				<a class="link" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="application">
+				<h1>신청서 작성</h1>
+				<h2>
+					2. 출신학교 및 아마추어 선수 경력사항
+					<span class="blue">(선수활동 유무는 선수 활동을 시작하는 ‘최초 선수등록학교‘ 기준)</span>
+				</h2>
+				<section class="application-wrap">
+					<div class="application-box">
+						<table class="tbl">
+							<colgroup>
+								<col width="138px">
+								<col width="">
+							</colgroup>
+							<tr>
+								<th>
+									초등학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+									<div class="check">
+										<input type="checkbox">
+										<label>리틀/클럽</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text" readonly="readonly" disabled="disabled">
+													<a href="#" class="btn btn-blue" id="" >검색</a>
+													<a href="#" class="btn btn-red" id="">삭제</a>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text" readonly="readonly" disabled="disabled">
+													<a href="#" class="btn btn-blue" id="" >검색</a>
+													<a href="#" class="btn btn-red" id="">삭제</a>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w142" type="text">
+													<span>리틀/클럽</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									중학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+									<div class="check">
+										<input type="checkbox">
+										<label>리틀/클럽</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text">
+													<span>중학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text">
+													<span>중학교</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w142" type="text">
+													<span>리틀/클럽</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>
+									고등학교
+									<div class="check">
+										<input type="checkbox">
+										<label>전학</label>
+									</div>
+									<div class="check">
+										<input type="checkbox">
+										<label>리틀/클럽</label>
+									</div>
+									<div class="check">
+										<input type="checkbox">
+										<label>검정고시</label>
+									</div>
+								</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text">
+													<span>고등학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text">
+													<span>고등학교</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="group">
+													<input class="w142" type="text">
+													<span>리틀/클럽</span>
+												</p>
+												<p class="date">
+													<span>(졸업 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>유급여부 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>대학교</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li class="mb10">
+												<p class="group">
+													<input class="w142" type="text">
+													<span>대학교</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57 mr5">
+														<option></option>
+													</select>
+													<span>년제 :</span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+											<li>
+												<p class="date2">
+													<span>(졸업예정 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>해외팀</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li>
+												<p class="group">
+													<input class="w142" type="text">
+													<span>팀</span>
+												</p>
+												<p class="date">
+													<span>(입단 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>실업</th>
+								<td>
+									<div class="bg">
+										<ul>
+											<li>
+												<p class="group">
+													<input class="w142" type="text">
+													<span>팀</span>
+												</p>
+												<p class="date">
+													<span>(입학 :</span>
+													<select class="w74">
+														<option></option>
+													</select>
+													<span>년</span>
+													<select class="w57">
+														<option></option>
+													</select>
+													<span>월)</span>
+												</p>
+												<p>
+													<span>선수활동 유무 : </span>
+													<select class="w57">
+														<option></option>
+													</select>
+												</p>
+											</li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</section>
+				<div class="btn-wrap">
+					<a href="">이전</a>
+					<a href="" class="blue">다음</a>
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

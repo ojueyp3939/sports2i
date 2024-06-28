@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content=""/>
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub">
+			<div class="bridge-wrap">
+				<ul>
+					<li>
+						<a href="">
+							전문체육 씨름
+						</a>
+					</li>
+					<li class="on">
+						<a href="">
+							민속씨름
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="../main.html"><img src="../resources/images/common/logo.png" alt="씨름 아카이브 센터"></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb clear">
+						<li>
+							<a href="../Archive/index.html">씨름 아카이브 센터란?</a>
+						</li>
+						<li>
+							<a href="../Livecenter/index.html">라이브센터</a>
+						</li>
+						<li>
+							<a href="../Museum/data.html">디지털 씨름 박물관</a>
+						</li>
+						<li>
+							<a href="../Game/monthly_schedule.html">일정/결과</a>
+						</li>
+						<li>
+							<a href="../Rank/season.html">순위</a>
+						</li>
+						<li>
+							<a class="on" href="../Record/top.html">기록</a>
+						</li>
+						<li>
+							<a href="../Player/player_team.html">선수/팀</a>
+						</li>
+						<li>
+							<a  href="../News/broadcast_news.html">NEWS</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lnb-wrap">
+				<ul>
+					<li>
+						<ul>
+							<li><a href="../Archive/index.html">씨름 아카이브 센터란?</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Museum/data.html">데이터 필름 센터</a></li>
+							<li><a href="../Museum/exhibition.html">씨름전시관</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Game/monthly_schedule.html">대회 일정</a></li>
+							<li><a href="../Game/schedule.html">경기결과</a></li>
+							<li><a href="../Game/prize_winner.html">대회 입상자</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<ul>
+							<li><a class="on" href="../Record/top.html">TOP 5</a></li>
+							<li><a href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Player/player_team.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab tab2">
+								<dd class="on"><a href="">개인전</a></dd>
+								<dd><a href="">단체전</a></dd>
+							</dl>
+						</div>
+						<!-- 남자 -->
+						<div class="team-box">
+							<ul class="team-tab">
+								<li><a href="">전체</a></li>
+								<li class="on"><a href=""> 태백급</a></li>
+								<li><a href="">금강급</a></li>
+								<li><a href="">한라급</a></li>
+								<li><a href="">백두급</a></li>
+							</ul>
+						</div>
+						<!-- 여자 -->
+						<div class="team-box">
+							<ul class="team-tab">
+								<li><a href="">전체</a></li>
+								<li class="on"><a href=""> 매화급</a></li>
+								<li><a href="">국화급</a></li>
+								<li><a href="">무궁화급</a></li>
+							</ul>
+						</div>
+						<ul class="sub-tab"> 
+							<li class="on"><a href="">남자</a></li>
+							<li><a href="">여자</a></li>
+						</ul>
+						<div class="top-wrap">
+							<div>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">승률</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/main/default_pic2.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">손기술 성공횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">다리기술 성공횟수</th>
+									</tr>
+									<tr class="default">
+										<td colspan="4">
+											<i class="icon default-g"></i>
+											<p>기록이 없습니다.</p>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<div>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">허리기술 성공횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">혼합기술 성공횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">기타기술 성공횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+							</div>
+							<div>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">되치기 성공횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4">기술 방어횟수</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+								<table class="tbl small" summary="TOP5">
+									<caption>TOP5</caption>
+									<colgroup>
+										<col width="145px">
+									</colgroup>
+									<tr>
+										<th colspan="4" class="in-tab">
+											경기시간
+											<ul class="tab-mini">
+												<li class="on">전체</li>
+												<li>승</li>
+												<li>패</li>
+											</ul>
+										</th>
+									</tr>
+									<tr class="winner">
+										<td rowspan="5">
+											<img src="../resources/images/sub/pic.png">
+										</td>
+										<td>1</td>
+										<td>김진진</td>
+										<td>80.0%</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>4</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+									<tr>
+										<td>5</td>
+										<td>김진</td>
+										<td>89.0%</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<a class="btn-detail" href="../Record/record.html"><span>상세보기</span></a>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 위례성대로 12길 5 아이베빌딩 5층</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br/>Copyright ⓒ 대한씨름협회. All rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

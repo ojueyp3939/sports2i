@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+html,body {height:100%;}
+body {background:#ececec;}
+#wrap {overflow:hidden;width:835px;min-height:100%;margin:0 auto;padding-top:95px;}
+.tit-area {float:left;width:394px;height:380px;background:#058fd3;border-radius:7px 0 0 7px;-moz-border-radius:7px 0 0 7px;-webkit-border-radius:7px 0 0 7px;text-align:center;}
+.tit-area .logo {margin:120px 0 19px;line-height:1.5;font-size:35px;font-weight:700;color:#fff;}
+.login-box {float:left;width:439px;height:380px;background:#fff;border-radius:0 7px 7px 0;-moz-border-radius:0 7px 7px 0;-webkit-border-radius:0 7px 7px 0;}
+.login-box > div {margin-left:64px;}
+.login-box .ipt-login {width:242px;height:35px;line-height:35px;padding:0 20px;border:1px solid #;border-radius:20px;-moz-border-radius:20px;-webkit-border-radius:20px;border:1px solid #babec0;box-sizing:border-box;;}
+.login-box .id-box {margin:93px 0 20px 64px;}
+.login-box .pw-box {margin-bottom:18px;}
+.login-box .id-save {}
+.login-box .id-save .chk {width:13px;height:13px;margin-top:2px;border:1px solid #c9ced0;vertical-align:top;}
+.login-box .id-save label {margin-left:3px;vertical-align:top;color:#666;letter-spacing:-1px;}
+.login-box .btn-area {margin-top:27px;}
+.login-box .btn-area .btn {display:inline-block;width:149px;height:43px;line-height:41px;padding-left:45px;background:#058fd3 url("../images/login/bg_arrow.gif") no-repeat 96px 16px;border-radius:22px;-moz-border-radius:22px;-webkit-border-radius:22px;color:#fff;font-size:14px;font-weight:bold;vertical-align:middle;box-sizing:border-box;}
+.login-box .alert {margin:10px 0 0 64px;font-size:13px;text-align:left;color:#e20404;}
+
+footer {width:100%;margin-top:80px;}
+footer address {width:250px;margin:30px auto;line-height:20px;font-size:13px;color:#666;font-style:normal;}

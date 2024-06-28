@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+
+/* common */
+* {box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;}
+html, body {min-height:100%;}
+body {width:100%;}
+#wrap {position:relative;background:#fff;}
+#contents {position:relative;background:#fff;}
+
+/* 헤더 */
+header {width:100%;}
+header #gnb .menu {overflow:hidden;position:relative;}
+header #gnb .menu:after {content:"";display:block;position:absolute;bottom:0;width:100%;height:1px;border-bottom:1px solid #e5e7eb;}
+header #gnb li {float:left;width:22%;text-align:center;}
+header #gnb li:nth-child(2), header #gnb li:nth-child(4) {width:28%;}
+header #gnb li a {display:block;height:2.5em;line-height:2.5em;font-size:1.4rem;font-weight:100;text-align:center;}
+header #gnb li.on a, header #gnb li:hover a {position:relative;padding-bottom:5px;font-weight:400;color:#0f53c1;border-bottom:2px solid #0e52c1;z-index:10;}
+
+/* header .tab-area {width:100%;padding:5px 0;border-bottom:1px solid #dadada;}
+header .tab-area .tab {overflow:hidden;text-align:center;}
+header .tab-area .tab li {position:relative;display:inline-block;margin:0 20px;} */
+/*
+header .tab-area .tab li a {display:block;height:23px;line-height:23px;padding:0 10px;font-size:1.4rem;font-weight:100;color:#121212;text-align:center;box-sizing:border-box;}
+header .tab-area .tab li.on a, .tab-area .tab li a:hover {background:#0e52c1;font-weight:400;color:#fff;}
+*/
+
+/* popup */
+#Popup {position:fixed;top:50%;left:50%;width:64%;padding:20px 10px 25px;background:#fff;border-radius:5px;text-align:center;z-index:15;transform:translate(-50%, -50%);}
+#Popup .tit {padding-bottom:10px;font-size:1.7rem;font-weight:700;color:#000;}
+#Popup .txt {font-size:1.3rem;color:#535353;line-height:1.4}
+#Popup .txt.blue {font-size:1.7rem;color:#3244ef}
+#Popup .txt.pink {font-size:1.7rem;color:#df3c5b}
+#Popup .noti {line-height:1.3;font-size:1.0rem;color:#8a8c8e}
+#Popup .btn-area .btn {margin-top:18px;display:inline-block;}
+#Popup .btn-area .btn.btn-confirm {width:163px;padding:7px 0;border-radius:10px;background:#1e226f;font-size:1.7rem;color:#fff;}
+#Popup .cookie-area {margin-top:15px;text-align:right;}
+#Popup .cookie-area label {margin-left:5px;vertical-align:text-bottom;}
+#Popup.in-img {border-bottom:0;}
+#Popup.in-img .cont img {width:88px;margin-bottom:12px;}
+#Popup.in-img .cont .txt.blue {font-size:1.7rem;color:#000}
+#Popup.in-img .btn-area .btn-confirm {font-size:1.5rem;background-color:#1e226f;}
+
+#Popup.custom {padding:22px 10px 20px;width:280px;border-radius:7px;border-bottom:0;}
+#Popup.custom .tit {padding-bottom:17px;}
+#Popup.custom .tit.under {text-decoration:underline;}
+#Popup.custom .txt {font-size:1.7rem;color:#1e226f}
+#Popup.custom .txt2 {font-size:1.2rem;color:#000;font-weight:100;line-height:1.4;}
+#Popup.custom img {width:163px}
+#Popup.custom .btn-area .btn.btn-confirm {width:200px;margin-top:0;}
+#Popup.custom .noti {line-height:1.5;letter-spacing:-0.8px;}
+#Popup.custom .check {text-align:right;}
+#Popup.custom .check input {vertical-align:top;}
+#Popup.custom .check label {font-size:1.0rem;}
+
+#Popup.post .txt.green {font-size:1.7rem;color:#43c4b6;font-weight:700}
+#Popup.post .btn-area .btn.btn-confirm {background-color:#43c4b6;}
+
+#Intro {position:fixed;top:50%;left:50%;width:80%;margin:0 0 0 -40%;border-radius:5px;text-align:center;z-index:15;}
+#Intro header {height:39px;background:#062d6e;color:#fff;border-radius:5px 5px 0 0;}
+#Intro header .tit {padding-top:12px;font-size:1.2rem;font-weight:400;text-align:center;}
+#Intro header .btn-close {position:absolute;top:11px;right:14px;width:15px;}
+#Intro .cont img {border-radius:0 0 5px 5px;}
+
+/* 2019 시즌누적 팝업 */
+#Modal {position:absolute;top:0;left:0;right:0;bottom:0;background:#000;opacity:0.8;z-index:30;}
+#Sol {position:fixed;top:50%;left:50%;width:90%;margin:-241px 0 0 -45%;z-index:40;background:#fff;}
+#Sol header .tit-popup {padding:34px 0 23px;text-align:center;font-size:1.8rem;font-weight:700;}
+#Sol header .btn-close {position:absolute;top:13px;right:6%;}
+#Sol header .btn-close span {display:inline-block;position:relative;margin:0 10px;padding:0;width:1px;height:23px;background:#150505;transform:rotate(45deg);-webkit-transform:rotate(45deg);text-indent:-9999px;}
+#Sol header .btn-close span:before {content: "";display: block;position:absolute;top:50%;left:50%;width:23px;height:1px;margin:-1px 0 0 -11px;background:#150505;}
+#Sol .content .moment {width:197px;margin:0 auto 28px;background:#f4f4f4;color:#777;border-radius:5px;text-align:center;font-size:1.5rem;}
+#Sol .content .moment .txt {padding:11px 0 10px;border-bottom:5px dotted #fff;font-size:1.3rem;}
+#Sol .content .moment .txt:last-child {border-bottom:0;}
+#Sol .content .txt-tip {padding-bottom:7px;line-height:1.25;text-align:center;font-size:1.4rem;font-weight:100;}
+#Sol .content .max-point {padding-bottom:35px;line-height:1.3;text-align:center;font-size:1.5rem;font-weight:700;}
+#Sol .btn-area {overflow:hidden;width:100%;}
+#Sol .btn-area .btn {float:left;width:50%;padding:13px 0 12px;background:#ebebeb;color:#101010;text-align:center;font-size:1.5rem;}
+#Sol .btn-area .btn.btn-sol {background:#1e2f5d;color:#fff;}
+/* // 2019 시즌누적 팝업 */
+
+/* media query */
+@media(max-width:320px){
+	#Sol {margin:-228px 0 0 -45%;}
+}

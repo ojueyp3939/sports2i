@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+html, body {position:relative;width:100vw;height:100vh;}
+body {background:#fff;}
+body.gray {background:#f1f0f0;}
+header.join .top {overflow:hidden;position:relative;width:100%;height:55px;padding:0 20px;margin:0 auto;background:#f1f0f0}
+header.join .top h1 {float:left;padding-top:13px;}
+header.join .top h1 img {width:95px;}
+header.join .top .link-k {float:right;padding-top:15px;font-size:15px;color:#232d61;font-weight:700;}
+/* 실시간투표현황 */
+header.vote-header .top {background:url("../images/common/bg_header.png") no-repeat 50% 100%/110px;}
+header.vote-header .top .logo {width:80px;padding:10px 0 10px 20px;}
+header.vote-header .top .logo a {display:block;}
+header.vote-header .top .logo a img {width:100%;}
+/* 투표하기 */
+header.vote-header.fan .top .logo {float:left;}
+header.vote-header.fan .top p {float:right;width:220px;padding:17px 10px 0 0;}
+header.vote-header.fan .top p img {width:100%;}
+footer {position:relative;width:100%;height:50px;padding-top:30px;text-align:center;}
+footer img {position:absolute;bottom:0;right:50%;z-index:-10;}
+footer address {color:#272f58;font-style:normal;}
+
+
+/* 팝업 */
+.pop-on {overflow:hidden;}
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.3;z-index:15;}
+/* #popup {position:fixed;top:280px;left:50%;background:#fff;z-index:20;} */

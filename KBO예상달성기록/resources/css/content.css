@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+.login .content {position:relative;height:100%;border-top:5px solid #1472d3;background:#fff}
+.login .content .login-wrap {position:absolute;top:calc(50% - 170px);left:calc(50% - 210px);width:420px;height:286px;border-radius:6px;text-align:center;background:#fff;}
+.login .content .login-wrap img {width:344px;margin-bottom:42px;}
+.login .content .login-wrap .left {float:left;}
+.login .content .login-wrap .left .login-box {position:relative;width:302px;height:46px;padding:0 22px 0 57px;margin-bottom:12px;border:1px solid #aaacb5;}
+.login .content .login-wrap .left .login-box::before {content:'';position:absolute;top:15px;left:25px;width:15px;height:16px;background:url('//lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBORecord/resources/images/main/id.png') no-repeat;}
+.login .content .login-wrap .left .login-box.pw {margin-bottom:0;}
+.login .content .login-wrap .left .login-box.pw::before {background:url('//lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBORecord/resources/images/main/pw.png') no-repeat;}
+.login .content .login-wrap .left .login-box input {width:100%;height:100%;font-size:13px;color:#4f4f4f;font-weight:700;outline:none;}
+.login .content .login-wrap .right {float:right;width:calc(100% - 304px)}
+.login .content .login-wrap .right .login-btn {width:104px;height:104px;margin-left:12px;border-radius:2px;font-size:15px;color:#fff;background:#1472d3;text-align:center;outline:none}
+.login .content .login-wrap .save-box {margin-top:12px;text-align:left;}
+.login .content .login-wrap .save-box input {margin-right:5px;}
+.login .content .login-wrap .save-box label {font-size:13px;color:#4f4f4f;cursor:pointer}
+.login .content .login-wrap .save-box .alert-txt {line-height:1.5;margin-top:15px;color:#eb6161;}
+
+.star {display:inline-block;width:12px;height:11px;background:url('//lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBORecord/resources/images/sub/ico_star.png');}
+.highlight {background:#000;}
+.red {font-size:inherit;color:#ff0000 !important;}
+
+.btw-wrap {height:36px;margin-bottom:10px;}
+.btw-wrap .tab {float:left;width:89px;height:36px;padding-top:9px;margin-right:13px;border:1px solid #ebebeb;font-size:13px;text-align:center;background-color:#f0f0f0;cursor:pointer}
+.btw-wrap .tab.on {padding-top:8px;border:2px solid #1472d3;color:#1472d3;background-color:#c8e4ff;}
+.btw-wrap .date {position:relative;float:right;height:20px;margin-top:20px;color:#333}
+.btw-wrap .date label {position:absolute;top:0px;right:20px;margin-right:5px;}
+.btw-wrap .date input {width:1px;outline:none;visibility:hidden;}
+
+.pagenation {margin:30px 0;text-align:center;}
+.pagenation .prev {margin-right:5px;}
+.pagenation .prev span {display:inline-block;width:30px;height:30px;font-size:0;background:url('//lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBORecord/resources/images/common/btn_left.png');vertical-align:top;}
+.pagenation .num {display:inline-block;height:30px;line-height:30px;vertical-align:top;}
+.pagenation .num a {padding:0 8px;margin:0 5px;color:#666}
+.pagenation .num a.on {font-weight:700;color:#222}
+.pagenation .next {margin-left:5px;}
+.pagenation .next span {display:inline-block;width:30px;height:30px;font-size:0;background:url('//lgcxydabfbch3774324.cdn.ntruss.com/KBO_IMAGE/KBORecord/resources/images/common/btn_right.png');vertical-align:top;}
+
+.tbl-wrap::after {content:"";display:block;clear:both;}
+.tbl-wrap {margin-bottom:5px;}
+.tbl-tit {margin:10px 0;font-size:20px;color:#122f71;font-weight:700}
+
+.tbl-print {width:100%;border-top:1px solid #333;border-bottom:1px solid #333;border-collapse:unset;}
+.tbl-print tr:first-child th {padding:5px 0;border-right:1px solid #a1aab2;font-size:13px;color:#fff;text-align:center;background-color:#122f71;vertical-align:middle;}
+.tbl-print tr th:last-child {padding:5px 0;border-right:0;}
+.tbl-print tr.main-th th {padding:5px 0;border-right:1px solid #a1aab2;font-size:13px;color:#fff;text-align:center;background-color:#122f71;vertical-align:middle;}
+.tbl-print tr.sub-th th {padding:5px 0;border-right:1px solid #a1aab2;color:#fff;background-color:#2351ae;}
+.tbl-print tr.sub-th th:last-child {border-right:0;}
+.tbl-print tr td {padding:15px 0;font-size:9px;color:#5e5e5e;border-right:1px solid #a1aab2;border-bottom:1px solid #a1aab2;text-align:center;vertical-align:middle;}
+.tbl-print.tbl-person tr td {padding:2px}
+.tbl-print tr td:last-child {border-right:0;}
+.tbl-print tr td p {font-size:9px;}
+.tbl-print tr td.bg {background-color:#e9ebef;}
+.tbl-print tr td.border-r {border-right:1px solid #a1aab2}
+.tbl-print tr.set td {border-bottom-color:#333}
+.tbl-print tr .emb img {width:50px;}\my.html
+.tbl-print tr .game {border-bottom-color:#333}
+
+.tbl-print.post tr th {font-size:17px;}
+.tbl-print.post tr td {padding:8px 5px;font-size:14px;}
+.tbl-print.post tr td p {font-size:14px;}
+.tbl-print.post tr td textarea {width:100%;height:100%;padding:2px;border-color:#a1aab2;resize:none;outline:none;vertical-align:middle;}
+.tbl-print.post tr.sub-th th {padding:5px 5px 7px;}
+.tbl-print.post tr.in-btn td {position:relative}
+.tbl-print.post tr.in-btn .btn-add {position:absolute;bottom:0;right:-38px;outline:none}
+.tbl-print.post tr.in-btn .btn-minus {position:absolute;bottom:40px;right:-38px;outline:none}
+
+.title {margin-bottom:5px;}
+.title::after {content:"";display:block;clear:both;}
+.title .tit-detail {float:left;}
+.title .tit-detail .txt {display:inline-block;margin-top:5px;font-size:30px;}
+.title .tit-detail .sponser-logo {width:55px;margin:0 10px 10px 0}
+.title .detail {float:right;text-align:right;}
+.title .detail img {width:100px}
+.title .detail p {font-size:13px;color:#333}
+
+.postseason-logo {width:auto;margin:40px 0 25px;}
+.btn-wrap {margin-bottom:40px;text-align:right;}
+.btn-wrap .btn-left {display:inline-block;width:30px;height:30px;margin-right:8px;background-image:url('../images/sub/icon_left.png');}
+.btn-wrap .btn-left:hover {background-image:url('../images/sub/icon_left_on.png');}
+.btn-wrap .btn-right {display:inline-block;width:30px;height:30px;background-image:url('../images/sub/icon_right.png');}
+.btn-wrap .btn-right:hover {background-image:url('../images/sub/icon_right_on.png');}
+

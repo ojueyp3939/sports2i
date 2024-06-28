@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>KT 모바일 프로야구</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="../resources/js/common.js"></script>
+  <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/my.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+      $("#VsTeam").bxSlider({
+        controls:false,
+        pager:false
+      });
+      // $("#CardNews").bxSlider({ // 모바일
+      //   controls:false,
+      //   pager:true
+      // });
+      $("#CardNews").bxSlider({ // 패드
+        controls:true,
+        pager:false
+      });
+      $("#ScrollArea").bxSlider({
+        controls:false,
+        pager:true
+      });
+		});
+	</script>
+</head>
+ <body>
+	 <!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+    <header class="fixed bg-none">
+			<h1 class="tit">카드뉴스</h1>
+      <a href="../Playball/playball.html" class="btn-back2"><img src="../resources/images/common/img_back.png" alt="" /></a>
+			<!-- <a href="../Playball/playball.html" class="btn-close"><span>닫기</span></a> -->
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="news card">
+				<h1 class="dp-none">카드뉴스</h1>
+        <section class="news-wrap">
+          <div class="card-news">
+            <h2 class="tit-news">[생생인터뷰] 강백호의 세 번째 캠프 목표, "찬스에 강해 지도록 하겠다."</h2>
+            <ul id="CardNews" class="photo-card clear">
+              <li><img src="../resources/images/common/screenshot.png" alt=""></li>
+              <li><img src="../resources/images/common/screenshot.png" alt=""></li>
+              <li><img src="../resources/images/common/screenshot.png" alt=""></li>
+            </ul>
+          </div>
+          <!-- 카드뉴스 -->
+          <div class="major-news">
+            <div class="roster clear">
+              <h2>카드뉴스</h2>
+              <a href="#none" class="btn-pst">최신순</a>
+            </div>
+            <!-- <div id="ScrollArea" class="scroll-area">
+              <ul class="news-content">
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차 젊은 피향한 이강철의 주문</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+              </ul>
+              <ul class="news-content">
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차 젊은 피향한 이강철의 주문</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+              </ul>
+              <ul class="news-content">
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차 젊은 피향한 이강철의 주문</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+                <li class="clear">
+                  <div class="screenshot">
+                    <div class="img-box">
+                      <img src="../resources/images/common/screenshot.png" alt="">
+                    </div>
+                  </div>
+                  <dl>
+                    <dt>"아직 커리어하이 아냐" 2년차</dt>
+                    <dd class="date"><span class="roboto">2020.03.28</span></dd>
+                  </dl>
+                </li>
+              </ul>
+            </div> -->
+            <p class="no-news">다음 카드뉴스가 없습니다.</p>
+          </div>
+          <!-- // 카드뉴스 -->
+        </section>
+			</div>
+		</div>
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

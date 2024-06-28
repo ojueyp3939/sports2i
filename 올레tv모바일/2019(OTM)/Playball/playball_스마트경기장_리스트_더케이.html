@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>KT 모바일 프로야구</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.ui.datepicker-ko.js"></script>
+    <script type="text/javascript" src="../resources/js/jquery.bxslider.min.js"></script>
+	 <script type="text/javascript" src="../resources/js/iscroll.js"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery.bxslider.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/smart.css" />
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".today-games h1").click(function(){
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+			
+			$(".btn-ground label").click(function(){
+				$(".ground ").toggleClass("on");
+				$(".lineup-list").toggleClass("on");
+				$(".description").toggleClass("on");
+			});
+			
+			$(".hitter-list").bxSlider({
+				pager:false
+			});
+			
+			$('#btnCalendar').datepicker({				
+				dateFormat: 'yy-mm-dd',                    
+				showOn: "button",
+				buttonImage: "../resources/images/common/btn_calendar_icon.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true,
+				beforeShow: function (input) {
+					var i_offset = $(input).offset(); //클릭된 input의 위치값 체크					    
+					$("body").append("<div id='Modal' />");
+					setTimeout(function () {
+						var dateOffset = $("#ui-datepicker-div").height() / 2;
+						$('#ui-datepicker-div').css({ 'position': 'fixed', 'top': '50%', 'left': '50%', 'margin-top': -dateOffset });
+					}, 0);
+				},
+				onSelect: function (dateText, inst) {
+					$("#Modal").remove();
+					//component.setDate(dateText.toDate('yyyy-MM-dd'));
+				},
+				onClose: function () {
+					$("#Modal").remove();
+				}
+			});
+
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('#gnb',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false			
+			});
+
+			var myScroll2 = new IScroll('#TabDepth1',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+			});
+
+			var myScroll3 = new IScroll('#TblInning',{
+				eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false 				
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1 class="tit">스마트경기장</h1>
+			<a href="#none" class="btn-back"><span>뒤로가기</span></a>
+			<a href="#none" class="btn-home"><span>홈으로</span></a>			
+		</header>
+		<nav id="gnb" class="scroll-wrap">
+			<div class="scroller">
+				<ul class="menu">
+					<li class="on"><a href="#none"><span>전체</span></a></li>
+					<li><a href="#none"><span>Omni/Sync View</span></a></li>
+					<li><a href="#none"><span>Free View</span></a></li>
+					<li><a href="#none"><span>The K’s</span></a></li>
+					<li><a href="#none"><span>Magic Moments</span></a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- // header -->		
+		<!-- container -->
+		<div id="container">
+			<ul class="tab tab-depth2">
+				<li><a href="#none">전체</a></li>
+				<li><a href="#none">날짜별</a></li>	
+			</ul>
+			<div  class="date-select-area">
+				<ul class="date-select">
+					<li class="prev"><a href="#"><img src="../resources/images/common/btn_arrow_left.png" alt="prev" /></a></li>
+					<li class="today"><span class="date">2018.10.11</span><span class="day">목</span></li>
+					<li class="next"><a href="#"><img src="../resources/images/common/btn_arrow_right.png" alt="prev" /></a></li>
+				</ul>
+				<span class="btn-calendar">						
+					<input type="hidden" id="btnCalendar" />
+				</span>
+			</div>
+			<div class="search-box">
+				<input type="text" placeholder="검색어를 입력하세요." class="search"/>
+				<a href="#none" class="btn"><img src="../resources/images/smart/btn_search.png" alt="" /></a>
+			</div>
+			<!-- contents -->
+			<div id="contents" class="">	
+				<ul class="news-list">
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+					<li>
+						<div class="img-box">
+							<img src="../resources/images/smart/img_news.png" alt="" />
+						</div>
+						<dl class="news">
+							<dt><strong>[분류]</strong>제목+분류 포함 30자 까지 표출 이후...표기</dt>
+							<dd>10월27일 LG VS KT</dd>
+						</dl>
+					</li>
+				</ul>
+				<div class="btn-area">
+					<a href="#none" class="btn more">MORE</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

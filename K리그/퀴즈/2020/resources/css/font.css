@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/NanumBarunGothicUltraLight.eot');
+  src: url('../font/NanumBarunGothicUltraLight.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicUltraLight.woff') format('woff');
+}
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumBarunGothicLight.eot');
+  src: url('../font/NanumBarunGothicLight.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicLight.woff') format('woff');
+}
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumBarunGothic.eot');
+  src: url('../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothic.woff') format('woff');
+}
+@font-face {
+  font-family:'nanum';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NanumBarunGothicBold.eot');
+  src: url('../font/NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'), url('../font/NanumBarunGothicBold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'gm';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/GmarketSansTTFLight.eot');
+  src: url('../font/GmarketSansTTFLight.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansTTFLight.woff') format('woff');
+}
+@font-face {
+  font-family:'gm';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../font/GmarketSansTTFMedium.eot');
+  src: url('../font/GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansTTFMedium.woff') format('woff');
+}
+@font-face {
+  font-family:'gm';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/GmarketSansTTFBold.eot');
+  src: url('../font/GmarketSansTTFBold.eot?#iefix') format('embedded-opentype'), url('../font/GmarketSansTTFBold.woff') format('woff');
+}
+
+@font-face {
+  font-family:'bm';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/BMEULJIROTTF.eot');
+  src: url('../font/BMEULJIROTTF.eot?#iefix') format('embedded-opentype'), url('../font/BMEULJIROTTF.woff') format('woff');
+}

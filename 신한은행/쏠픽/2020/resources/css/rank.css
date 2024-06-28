@@ -1,0 +1,126 @@
+﻿@charset "utf-8";
+
+.date-select.rank-date {position:relative;padding:0;margin-bottom:0;text-align:center;background-image:linear-gradient(#13aaf3, #17a4f2);}
+.date-select.rank-date .today {margin:0 15px;color:#fff;font-size:1.7rem;vertical-align:middle;}
+.date-select.rank-date .btn-prev,
+.date-select.rank-date .btn-next {display:inline-block;width:8px;margin-top:2px;padding:10px;vertical-align:middle;box-sizing:content-box;}
+.date-select.rank-date .btn-calendar {display:inline-block;width:18px;margin-left:6px;}
+
+.tab-rank {padding:16px 0;border-bottom:0;text-align:center;background-color:#13aaf3;}
+.tab-rank .tab li {display:inline-block;border-left:1px solid #f5f5f5;}
+.tab-rank .tab li:first-child {border-left:0;}
+.tab-rank .tab li a {line-height:1;padding:0 5.5555vw;font-size:1.6rem;color:#fff;opacity:0.7;}
+.tab-rank .tab li.on a {opacity:1}
+.tab-rank.event {background-color:#f5f5f5;}
+.tab-rank.event .tab li {border-color:#999;}
+.tab-rank.event .tab li a {color:#999}
+.tab-rank.event .tab li.on a {color:#0056a6;;}
+
+.ranking-area {padding:130vw 0 14px;background:url("../images/sub/img_rank.png") #f4f4f4 no-repeat 0 0/100%;}
+.ranking-area .tit-rank {padding-bottom:7px;color:#1c326f;font-size:2.1rem;font-weight:400;text-align:center;}
+.ranking-area .tit-date {font-size:1.2rem;font-weight:100;color:#888;text-align:center;}
+.ranking-area .info {padding:14px 48px 0;}
+.ranking-area .info dl {overflow:hidden;width:100%;height:22px;line-height:22px;margin:0 auto 4px;background:#0a3256;font-size:1.3rem;color:#fff;font-size:1.3rem;}
+.ranking-area .info dl dt {position:relative;float:left;width:100px;height:100%;padding-left:26px;background-color:#4fa0fa;}
+.ranking-area .info dl dt::after {content:'';position:absolute;right:-13px;padding-left:3px;border-top:22px solid #4fa0fa;border-right:10px solid transparent}
+.ranking-area .info dl dt img {display:inline-block;width:15px;margin:3px 8px 0 0;}
+.ranking-area .info dl dd {float:right;width:calc(100% - 100px);padding-right:34px;text-align:right;}
+.ranking-area .my-rank {width:calc(100% - 24px);padding:11px 30px;margin:12px 12px 20px;border-radius:17px;background:#fff;}
+.ranking-area .my-rank .my-tit {position:relative;display:inline-block;padding:5px 4px;margin-left:4px;font-size:1.2rem;color:#fff;background:#4fa0fa;}
+.ranking-area .my-rank .my-tit::before {content:'';position:absolute;top:2px;left:-4px;padding-left:3px;border-bottom:22px solid #4fa0fa;border-left:4px solid transparent}
+.ranking-area .my-rank .my-tit::after {content:'';position:absolute;top:0;right:-4px;padding-left:3px;border-top:22px solid #4fa0fa;border-right:4px solid transparent}
+.ranking-area .my-rank .temper {position:relative;height:12px;margin:15px 0;border-radius:5px;background:#eaeaea;}
+.ranking-area .my-rank .temper .temp-rate {position:absolute;top:50%;left:0;width:0%;height:12px;margin-top:-5px;background:#3973ec;border-radius:9px;}
+.ranking-area .my-rank .temper .temp-rate img {position:absolute;right:-6px;bottom:-6px;width:24px;}
+.ranking-area .my-rank .temper .temp-crown {position:absolute;top:-8px;right:0;width:23px;height:27px;background:url("../images/sub/icon_crown.png") no-repeat 0 0/100%;}
+.ranking-area .my-rank .temper .temp-ballon {position:absolute;top:-37px;right:0;padding:5px 7px;border-radius:11px;font-size:1.2rem;color:#fff;background-color:#333;}
+.ranking-area .my-rank .temper .temp-ballon::after {content:'';position:absolute;bottom:-4px;right:10px;border-top:4px solid #333;border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:0 solid transparent;}
+.ranking-area .my-rank .my-txt {font-size:1.4rem;color:#666;text-align:center;}
+.ranking-area .my-rank .my-txt span {color:#3973ec}
+.ranking-area .my-rank.no-data {line-height:1.5;font-size:1.3rem;color:#666;text-align:center;}
+.ranking-area .top-rank {padding:0 12px;margin-top:10px;}
+.ranking-area .top-rank .tbl {width:100%;margin-bottom:2px;}
+.ranking-area .top-rank .tbl th {padding:5px 0px;border-bottom:5px solid #fff;font-size:1.3rem;color:#fff;font-weight:400;background:#0a3256;}
+.ranking-area .top-rank .tbl td {height:44px;border-bottom:2px solid #f4f4f4;color:#333;font-size:1.4rem;text-align:center;background:#fff;vertical-align:middle;}
+.ranking-area .top-rank .tbl tr td:first-child {padding-left:3%;text-align:left;font-size:1.3rem;font-weight:700;}
+.ranking-area .top-rank .tbl tr td:nth-child(3) {text-align:center;}
+.ranking-area .top-rank .tbl tr:last-child td {border-bottom:0;}
+.ranking-area .top-rank .tbl td span {font-size:1.0rem;}
+.ranking-area.end {background:url("../images/sub/img_rank_end.png") #f4f4f4 no-repeat 0 0/100%;}
+
+.description-area {padding:12px 12px 17px;color:#666;font-size:1.1rem;background-color:#e0e0e0;}
+.description-area .description {padding-bottom:3px;}
+.description-area .description dt {padding-bottom:6px;}
+.description-area .description dd {padding:0 0 4px 9px;}
+
+/* 순위 변동 화살표 아이콘 */
+.ranking-area .top-rank .tbl tr.up td:nth-child(2) > span:nth-child(1) {color:#bc0631;}
+.ranking-area .top-rank .tbl tr.down td:nth-child(2) > span:nth-child(1) {color:#0056a6;}
+
+/* 랭킹 4위이후 리스트표출 */
+.ranking-area .top-rank .tbl.rank-list tr td {background:#e5f2f7;}
+.ranking-area .top-rank .tbl.rank-list tr td:nth-child(1) {color:#111;}
+
+/* 4위이후 묶음표출 */
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(1) {padding-left:3%;color:#111;text-align:left;letter-spacing:-0.03em;}
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(2) {padding-right:4%;font-size:1.2rem;letter-spacing:-0.03em;text-align:right;}
+.ranking-area .top-rank .tbl.rank-bundle tr td:nth-child(3) {padding-right:0%;text-align:center;}
+.ranking-area .top-rank .tbl.rank-bundle tr td {background:#dadde2;color:#888;}
+
+/* 기프트 아이콘 */
+.ranking-area .tbl .gift {display:block;width:53px;height:30px;margin:0 auto;}
+.ranking-area .tbl .gift img {max-width:100%;}
+
+/* 이벤트 */
+.banner-row {margin-bottom:10px;}
+
+/* 종료 */
+.sol-review {width:311px;margin:0 auto;}
+.sol-review .tit-area {overflow:hidden;}
+.sol-review .tit-area .tit {display:inline-block;width:113px;margin:0 17px 0 11px;vertical-align:bottom;}
+.sol-review .tit-area .txt {display:inline-block;font-weight:100;color:#888;vertical-align:bottom; letter-spacing:-0.5px}
+.sol-review .graph {position:relative;width:100%;padding-top:31px;}
+.sol-review .graph .list {display:inline-block;width:100%;padding-left:42px;background:url("https://cesopnqmxhpg3184873.cdn.ntruss.com/solpick/resources/images/sub/bg_graph_review2.png") no-repeat 0 0;background-size: 100%;}
+.sol-review .graph .list li {float:left;width:22px;margin:0 6px;}
+.sol-review .graph .list li:last-child {margin-right:0;}
+.sol-review .graph .list li:nth-child(1) {width:34px;margin:0 2px;}
+.sol-review .graph .list li:nth-child(6) {width:40px;margin:0 2px;}
+.sol-review .graph .list dl {position:relative;width:100%;height:139px;font-size:1.1rem;text-align:center;}
+.sol-review .graph .list li dl dt {position:absolute;bottom:-5px;width:23px;margin:0 auto;}
+.sol-review .graph .list li:nth-child(1) dl dt {width:34px;}
+.sol-review .graph .list li:nth-child(6) dl dt {width:40px;}
+.sol-review .graph .list li dl .bar {position:absolute;bottom:11px;width:16px;margin:0 3px;background:#0061ff;border-radius:20px 20px 0 0}
+.sol-review .graph .list li:nth-child(1) dl .bar,
+.sol-review .graph .list li:nth-child(6) dl .bar {left:8px;}
+.sol-review .graph .list li dl .bar .point{position:absolute;top:-19px;left:-3px;width:22px;margin:0 auto;}
+
+.league-wrap{margin-top:24px;}
+.league-d-day{font-size:1.9rem;color:#4d91ff;}
+.league-d-day .d-day{width:91px;height:26px;display:block;margin:3px auto 21px;background:#0061ff;border:2px  solid #062d6e;border-radius:10px;font-size:1.8rem;color:#fff;}
+.league-end-img {margin:0 auto;overflow:hidden;width:190px;}
+.league-end-img li{float:left;width:38px;}
+.league-txt{padding:16px 0 19px;font-size:1.3rem;line-height:1.9;text-align:center;}
+.league-txt strong {background:#fff799;border-radius:10px;font-size:1.4rem;}
+
+/* post */
+.post.rank .tab-rank {position:absolute;top:0;left:0;width:100%;background-color:transparent;}
+.post.rank .ranking-area {padding:146vw 0 14px;background:url("../images/sub/img_rank_post.png") #f4f4f4 no-repeat 0 0/100%;}
+.post.rank .ranking-area .info dl {background-color:#011b6a;}
+.post.rank .ranking-area .info dl dt {background-color:#6e62c4;}
+.post.rank .ranking-area .info dl dt::after {border-top-color:#6e62c4;}
+.post.rank .ranking-area .my-rank .my-tit {background:#07317c;}
+.post.rank .ranking-area .my-rank .my-tit::before {border-bottom-color:#07317c;}
+.post.rank .ranking-area .my-rank .my-tit::after {border-top-color:#07317c;}
+.post.rank .ranking-area .my-rank .temper .temp-rate {background-color:#967ffb;}
+.post.rank .ranking-area .my-rank .my-txt span {color:#5d3ee8}
+.post.rank .ranking-area .top-rank .tbl th {background-color:#011b6a;}
+.post.rank.end .tab-rank {position:unset;width:100%;background-color:#3c2cb4;}
+.post.rank.end .date-select.rank-date {position:absolute;top:46px;left:0;width:100%;background-image:linear-gradient(#3c2cb4, #3c2cb4);}
+
+/* media query */
+@media(max-width:359px){	
+	.sol-review {width:312px;}
+	.sol-review .garph .list {padding-left:33px;}
+	.sol-review .garph .list li {margin-right:10px;}
+	.sol-review .garph .list dl .bar {bottom:38px;}
+}

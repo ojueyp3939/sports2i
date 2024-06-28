@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="title" content="KBO" />
+		<meta name="author" content="스포츠투아이" />
+		<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 프로야구 데이터기록, KBO 신규기록실" />
+		<title>KBO 신규기록실</title>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/jquery-ui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/font.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="../../resources/css/tracking.css" />
+		<script type="text/javascript" src="../../resources/js/jquery-1.12.4.min.js"></script>
+		<script type="text/javascript" src="../../resources/js/jquery-ui.js"></script>
+	</head>
+	<body>
+		<!-- wrap -->
+		<div id="wrap">
+			<!-- header -->
+			<header>
+				<div class="header-wrap">
+					<h1><a href="../Main.html"><img src="../../resources/images/common/logo_main.png" alt="스포츠투아이 로고"></a></h1>
+					<div class="search-area">
+						<input type="text" class="ipt ipt-search" />
+						<a href="../Player/Player.html" class="btn-search"><img src="../../resources/images/common/btn_search.png" alt="검색"></a>
+						<ul class="search-list">
+							<li><a href="#none">김현수 (74) LG</a></li>
+							<li><a href="#none">김현수 (82) 롯데</a></li>
+						</ul>
+					</div>
+				</div>
+				<nav>
+					<ul class="menu-list clear">
+						<li class="on"><a href="">전반 기록실</a></li>
+						<li><a href="">팀 기록실</a></li>
+					</ul>
+				</nav>
+			</header>
+			<!-- // header -->
+			<hr/>
+			<!-- container -->
+			<div id="container">
+				<div id="contents">
+					<section class="player-record">
+						<!-- 데뷔 -->
+						<div class="player-info-box">
+							<h2>데뷔</h2>
+							<ul class="data-list tab2 clear">
+								<li class="on"><a href="#none">타자</a></li>
+								<li><a href="#none">투수</a></li>
+							</ul>
+							
+							<div class="data-box clear">
+								<div class="top">
+									<div class="select-area fr">
+										<select>
+											<option>구단</option>
+										</select>
+										<select>
+											<option>연도</option>
+										</select>
+										<select>
+											<option>좌/우타</option>
+										</select>
+										<a href="#none" class="btn btn-search">검색</a>
+									</div>
+								</div>
+								<div class="bottom">
+									<div class="select-area">
+										<select>
+											<option>전체</option>
+										</select>
+										<select>
+											<option>전체</option>
+										</select>
+										<input type="checkbox"><label>해외파/재일교포 포함</label>
+									</div>
+									<div class="select-area fr">
+										<select>
+											<option>데뷔 첫 타석</option>
+										</select>
+										<select>
+											<option>만루 홈런</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						
+							<div class="tbl-box">
+								<table class="tbl tbl-data" summary="데뷔 기록">
+									<caption>데뷔 기록</caption>
+									<colgroup>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+										<col style="width:8%;"/>
+									</colgroup>
+									<thead>
+										<tr>
+											<th>순위</th>
+											<th>달성일</th>
+											<th>선수명</th>
+											<th>구단</th>
+											<th>상대팀</th>
+											<th>구장</th>
+											<th>기록</th>
+											<th>비고</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>2022.03.03</td>
+											<td><a href="">홍길동</a></td>
+											<td><a href="">키움</a></td>
+											<td><a href="">키움</a></td>
+											<td>잠실</td>
+											<td>데뷔 첫 타석 만루 홈런</td>
+											<td>초구, 끝내기, 대타</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- // container -->
+			<footer>
+				<div class="footer-box clear">
+					<div class="company">
+						<h1><img src="../../resources/images/common/logo_footer.png" alt="스포츠투아이 로고"></h1>
+						<p>Copyright © sports2i Corp.</p>
+					</div>
+					<div class="txt-company">
+						<p>
+							※ 본 사이트에서 제공하는 데이터를 상업적인 용도로 사용할 경우 반드시 스포츠투아이㈜에 문의하시기 바랍니다.<br/>
+							<span>※ 본 사이트는 PTS 및 HTS를 통해 추적된 투구, 타구를 바탕으로 구현됐으며, 제 2 구장(포항, 울산, 청주 등)에서 열린 경기는 포함하지 않습니다.</span>
+						</p>
+						<address>주소: 경기도 성남시 분당구 벌말로 50번길 41 투아이센터 6층</address>
+						<p>전화: 02-3445-7116   팩스: 031-707-7165</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- // wrap -->
+	</body>
+</html>

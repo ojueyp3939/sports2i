@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords"
+		content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<title>2022 팀K리그 #팬11 투표 이벤트</title>
+	<link rel="shortcut icon" type="image/x-icon" href="resources/images/common/favicon.png">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/content.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+</head>
+
+<body class="main">
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<i class="logo"></i>
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<div class="my-box">
+					<div class="evnet-wrap">
+						<div class="event-link">
+							다른 이벤트 보기<img src="resources/images/content/icon_down.png">
+						</div>
+						<ul class="event-list">
+							<li><a href="/Mascot/Default.aspx">마스코트 반장선거</a></li>
+							<li><a href="/PotM/Default.aspx">이달의 선수상</a></li>
+						</ul>
+					</div>
+					<div class="profile">
+						<img src="resources/images/emb/JJ.png">
+					</div>
+					<span class="name">홍길동님</span>
+					<a class="link bar" href=""><span>회원정보 수정</span></a>
+					<a class="link bar" href=""><span>로그아웃</span></a>
+				</div>
+				<!-- <div class="my-box">
+					<a class="link" href="login.html"><span>로그인</span></a>
+					<a class="link bar" href="join.html"><span>회원가입</span></a>
+				</div> -->
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<section class="content-wrap">
+					<div class="main-banner"></div>
+					<div class="event">
+						<div class="inner">
+							<img class="pc" src="resources/images/content/img_event.png"
+								alt="2022 팀K리그 #팬11 투표 이벤트 - 투표기간 6월29일~7월3일, 5일간 / 후보선수 K리그1 12개구단에서 제출한 BEST11 후보 총 132명 / 포메이션 1-4-3-3" />
+							<img class="mb" src="resources/images/content/img_event_s.png"
+								alt="2022 팀K리그 #팬11 투표 이벤트 - 투표기간 6월29일~7월3일, 5일간 / 후보선수 K리그1 12개구단에서 제출한 BEST11 후보 총 132명 / 포메이션 1-4-3-3" />
+
+							<section class="state-wrap no-open">
+							</section>
+							<section class="state-wrap">
+								<div class="ground-box">
+									<p class="state-noti">
+										실시간 집계 업데이트 주기: 5분<br />최종 업데이트 : 2022-07-05 18:00
+									</p>
+									<ul>
+										<li class="win">
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li class="fix">
+											<img src="resources/images/content/img_ground_fix.png" alt="">
+											<p class="vote-num">고정픽</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+										<li>
+											<div class="img-box"><img src="resources/images/content/test1.png" alt="">
+											</div>
+											<img class="emb" src="resources/images/emb/GW_s.png" />
+											<div class="name-label">홍길동</div>
+											<p class="vote-num">12,456표</p>
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<section class="candidate-wrap">
+								<div class="top">
+									<p class="tit">전체 선수 득표 현황 -</p>
+								</div>
+								<div class="list">
+									<div class="head">
+										공격수(FW) 36명
+										<i></i>
+									</div>
+									<ul class="cont">
+										<li class="win">
+											<div class="rank">1</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">2</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">33</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+									</ul>
+
+									<div class="head">
+										미드필더(MF) 36명
+										<i></i>
+									</div>
+									<ul class="cont">
+										<li class="fix">
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="JB"></i>
+												문선민
+											</div>
+											<div class="num">고정픽</div>
+										</li>
+										<li class="win">
+											<div class="rank">1</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">2</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+									</ul>
+
+									<div class="head">
+										수비수(DF) 48명
+										<i></i>
+									</div>
+									<div>
+										<div class="label-tag">왼쪽 수비수 (LB)</div>
+										<ul class="cont mb25">
+											<li class="win">
+												<div class="rank">1</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">2</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+										</ul>
+
+										<div class="label-tag">중앙 수비수 (CB)</div>
+										<ul class="cont mb25">
+											<li class="win">
+												<div class="rank">1</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">2</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+										</ul>
+
+										<div class="label-tag">오른쪽 수비수 (RB)</div>
+										<ul class="cont">
+											<li class="win">
+												<div class="rank">1</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">2</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+											<li>
+												<div class="rank">3</div>
+												<div class="frame">
+													<img src="resources/images/content/test5.png">
+												</div>
+												<div class="name">
+													<i class="PH"></i>
+													홍길동동동
+												</div>
+												<div class="num">222,222표</div>
+											</li>
+										</ul>
+									</div>
+
+									<div class="head">
+										골키퍼(GK) 12명
+										<i></i>
+									</div>
+									<ul class="cont">
+										<li class="win">
+											<div class="rank">1</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">2</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+										<li>
+											<div class="rank">3</div>
+											<div class="frame">
+												<img src="resources/images/content/test5.png">
+											</div>
+											<div class="name">
+												<i class="PH"></i>
+												홍길동동동
+											</div>
+											<div class="num">222,222표</div>
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<div class="btn-box">
+								<a href="#">
+									<img src="resources/images/content/btn_vote_before.png" alt="지금은 투표 기간이 아닙니다">
+									<img src="resources/images/content/btn_vote.png" alt="투표하기">
+									<!-- <img src="resources/images/content/btn_vote_done.png" alt="나의 예측내역 확인하기">
+									<img src="resources/images/content/btn_vote_end.png" alt="예측 이벤트가 종료되었습니다. 당첨자 확인은 12월 14일 K리그 SNS채널 참조">
+									<img src="resources/images/content/btn_confirm.png" alt="수상자결과 확인하기"> -->
+								</a>
+							</div>
+
+							<img class="sponser" src="resources/images/content/img_sponser.png" alt="kleague / 쿠팡플레이">
+							<div class="social">
+								<p>K리그 공식 소셜미디어를 팔로우하고<br /><span>K리그의 최신소식을 받아보세요!</span></p>
+								<ul>
+									<li>
+										<a href="https://www.facebook.com/withKLEAGUE" target="_blank">
+											<i class="icon-fb"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.instagram.com/kleague/" target="_blank">
+											<i class="icon-insta"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.youtube.com/user/withkleague/" target="_blank">
+											<i class="icon-youtube"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://twitter.com/kleague" target="_blank">
+											<i class="icon-twitter"></i>
+										</a>
+									</li>
+									<li>
+										<a href="https://www.tiktok.com/@kleague_official" target="_blank">
+											<i class="icon-tiktok"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyright 2022 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

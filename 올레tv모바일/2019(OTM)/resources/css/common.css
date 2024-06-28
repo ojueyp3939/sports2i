@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+/* default style definition */
+body {margin:0;padding:0;font-size:1.2rem;font-weight:400;line-height:1.2;font-family:"noto",sans-serif;color:#1a1a1a;}
+form {margin:0;padding:0;}
+hr {display:none;}
+a {color:#1a1a1a;}
+a:link, a:visited {text-decoration:none;}
+a:active, a:hover {text-decoration:none;}
+a img, input.type-image {border:0 none;}
+input.type-text, textarea {border:1px solid #ddd;background:#fff;padding:1px;}
+input, select, textarea {vertical-align: middle;font-size:1.2rem;color: #333;}
+select {padding:0 5px;font-family:"noto" !important;font-size: 1.2rem;color:#666;border:1px solid #7e7d7d;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
+select::-ms-expand {display:none;}
+span.button, img.button, a.button {cursor: pointer;vertical-align: middle;}
+form select, form input {vertical-align:middle;}
+img {width:100%;vertical-align:top;}
+strong {font-weight:bold;}
+
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.row {overflow:hidden;position:relative;clear:both;width:100%;}
+.section-left {float:left !important;}
+.section-right {float:right !important;}
+
+.dp-none {display:none !important;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+.w30p {width:30%;}
+.w35p {width:35%;}
+.w45p {width:45%;}
+.w48p {width:48%;}
+.w50p {width:50%;}
+.w60p {width:60%;}
+.w65p {width:65%;}
+.w70p {width:70%;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+/* font */
+.f14 {font-size:14px !important;}
+.f15 {font-size:15px !important;}
+.f16 {font-size:16px !important;}
+.oswald {font-family:'Oswald', sans-serif;}
+
+/* margin, padding */
+.mt0 {margin-top:0 !important;}
+.mt5 {margin-top:5px;}
+.mt10 {margin-top:10px;}
+.mt15 {margin-top:15px !important;}
+.mt20 {margin-top:20px !important;}
+.mt25 {margin-top:25px !important;}
+.mt30 {margin-top:30px !important;}
+.mt35 {margin-top:35px !important;}
+.mt40 {margin-top:40px !important;}
+.mt50 {margin-top:50px !important;}
+
+.mtm20 {margin-top:-20px !important;}
+
+.mb0 {margin-bottom:0px !important;}
+.mb5 {margin-bottom:5px !important;}
+.mb10 {margin-bottom:10px !important;}
+.mb15 {margin-bottom:15px !important;}
+.mb20 {margin-bottom:20px !important;}
+.mb25 {margin-bottom:25px !important;}
+.mb30 {margin-bottom:30px !important;}
+.mb35 {margin-bottom:35px !important;}
+.mb40 {margin-bottom:40px !important;}
+.mb50 {margin-bottom:50px !important;}
+
+.ml0 {margin-left:0 !important;}
+.ml5 {margin-left:5px !important;}
+.ml10 {margin-left:10px !importan;}
+.ml15 {margin-left:15px !important;}
+.ml20 {margin-left:20px !important;}
+.ml25 {margin-left:25px !important;}
+
+.mr5 {margin-right:5px !important;}
+.mr10 {margin-right:10px !important;}
+.mr15 {margin-right:15px !important;}
+.mr20 {margin-right:20px !important;}
+.mr15 {margin-right:15px !important;}
+.mr30 {margin-right:30px !important;}
+.mr35 {margin-right:35px !important;}
+
+.pt0 {padding-top:0 !important;}
+.pt5 {padding-top:5px !important;}
+.pt10 {padding-top:10px !important;}
+.pt15 {padding-top:15px !important;}
+.pt20 {padding-top:20px !important;}
+.pt25 {padding-top:25px !important;}
+.pt30 {padding-top:30px !important;}
+.pt35 {padding-top:35px !important;}
+.pt40 {padding-top:40px !important;}
+.pt45 {padding-top:45px !important;}
+.pt50 {padding-top:50px !important;}
+
+.pb0 {padding-bottom:0 !important;}
+.pb5 {padding-bottom:5px !important;}
+.pb10 {padding-bottom:10px !important;}
+.pb15 {padding-bottom:15px !important;}
+.pb20 {padding-bottom:20px !important;}
+.pb25 {padding-bottom:25px !important;}
+.pb30 {padding-bottom:30px !important;}
+.pb35 {padding-bottom:35px !important;}
+.pb40 {padding-bottom:40px !important;}
+.pb45 {padding-bottom:45px !important;}
+.pb50 {padding-bottom:50px !important;}
+
+.pl0 {padding-left:0 !important;}
+.pl5 {padding-left:5px !important;}
+.pl10 {padding-left:10px !important;}
+.pl15 {padding-left:15px !important;}
+.pl20 {padding-left:20px !important;}
+.pl25 {padding-left:25px !important;}
+.pl30 {padding-left:30px !important;}
+.pl35 {padding-left:35px !important;}
+.pl40 {padding-left:40px !important;}
+.pl45 {padding-left:45px !important;}
+.pl50 {padding-left:50px !important;}
+
+.pr0 {padding-right:0 !important;}
+.pr5 {padding-right:5px !important;}
+.pr10 {padding-right:10px !important;}
+.pr15 {padding-right:15px !important;}
+.pr20 {padding-right:20px !important;}
+.pr25 {padding-right:25px !important;}
+.pr30 {padding-right:30px !important;}
+.pr35 {padding-right:35px !important;}
+.pr40 {padding-right:40px !important;}
+.pr45 {padding-right:45px !important;}
+.pr50 {padding-right:50px !important;}
+
+/* content */
+/* 탭메뉴 */
+
+
+/* 팀리스트 스크롤 */
+#TeamRecord {padding:15px 0 20px;border-top:1px solid #ededed;}
+#TeamRecord .scroller .team-list {white-space:nowrap;width:100%;padding:0 12px;}
+#TeamRecord .scroller .team-list li {display:inline-block;width:77px;margin-right:2px;}
+#TeamRecord .scroller .team-list li a {display:inline-block;width:100%;padding:5px;border:1px solid #ededed;border-radius:7px;}
+#TeamRecord .scroller .team-list li span {font-size:1.1rem;line-height:37px;color:#888;vertical-align:middle;}
+#TeamRecord .scroller .team-list li img {width:40px;vertical-align:middle;}
+#TeamRecord .scroller .team-list .myteam a {border:1px solid #ff4b53;}
+#TeamRecord .scroller .team-list .myteam span {color:#ff4b53;font-weight:700;}
+#TeamRecord .scroller .team-list .total a {padding:16px 5px 17px;border:1px solid #ededed;color:#888;font-weight:700;text-align:center;}
+#TeamRecord .scroller .team-list .total.myteam a {color:#ff4b53;border:1px solid #ff4b53;}
+
+/* 슬라이드 셋팅 */
+.bx-wrapper {position:relative;padding:0;margin:0;border:none;box-shadow:none;background:transparent;}
+
+/* 달력 */
+.ui-datepicker {width:80vw;margin-left:-40vw;z-index:25 !important;}
+.ui-datepicker .ui-datepicker-header {width:100%;padding:15px 10px;background:none;border:none;}
+.ui-widget-header .ui-state-highlight {border:1px solid #00172d;background:#0054a6;color:#fff;text-align:right;}
+.ui-icon-circle-triangle-w {background:url("../images/common/btn_date_prev.png") no-repeat left top !important;background-size:7px !important;}
+.ui-icon-circle-triangle-e {background:url("../images/common/btn_date_next.png") no-repeat left top !important;background-size:7px !important;}
+.ui-datepicker .ui-datepicker-prev {top:11px;left:12px;}
+.ui-datepicker .ui-datepicker-next {top:11px;right:12px;}
+.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span {margin-left:-4px;margin-top:-4px;}
+.ui-datepicker table {font-size:1.2rem;}
+.ui-datepicker table th {font-weight:400;font-size:1.1rem;border-bottom:1px solid #e5e7eb;}
+.ui-datepicker table td.satday a, .ui-datepicker table th.satday {color:#4d91ff;}
+.ui-datepicker table td.sunday a, .ui-datepicker table th.sunday {color:#b40d18;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {width:10vw;height:10vw;line-height:10vw;padding:0;border:none;background:none;color:#444;text-align: center;}
+.ui-widget.ui-widget-content {padding:0;border:none;font-family:"noto"}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight, .ui-datepicker table td.satday .ui-state-highlight, .ui-datepicker table td.sunday .ui-state-highlight {background:#ff4b53;color:#fff;border-radius:50%;}
+.ui-datepicker .ui-datepicker-title {width:210px;margin:0 auto;font-size:1.4rem;font-weight:700;line-height:1.2;color:#1a1a1a;vertical-align:top;}
+.ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year {margin-top:1px;padding:0;border:none;font-family:"noto";font-size:1.4rem;font-weight:700;vertical-align:top;line-height:1.1;}
+.ui-datepicker select.ui-datepicker-month {width:8%;margin-left:10px;}
+.ui-datepicker select.ui-datepicker-year {width:18%;}
+.ui-datepicker .ui-datepicker-buttonpane button,.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {margin:0;}
+.ui-datepicker .tit-area {padding:13px 0;background:#062d6e;font-weight:700;color:#fff;text-align: center;border-radius:5px 5px 0 0;}
+.ui-datepicker .ui-datepicker-buttonpane {display:none;}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br, .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl, .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr, .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {border-radius:0;}
+/* 버튼 */
+a.btn {display:inline-block;width:66px;height:29px;line-height:27px;font-size:1.2rem;background:#fff;color:#2f2f2f;border:1px solid #2f2f2f;border-radius:6px;}
+a.grey {color:#333;border:1px solid #dbdbdb;text-align:center;}
+a.black {color:#2f2f2f;border:1px solid #000;text-align:center;}
+a.red {color:#ff4b53;border:1px solid #ff4b53;text-align:center;}
+a.arrow {position:relative;width:auto;padding:0 20px 0 8px;}
+a.arrow:after {content:"";position:absolute;top:50%;right:8px;margin-top:-4px;padding:3px;border:solid black;border-width:0 1px 1px 0;border-color:#ff4b53;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);}
+a.btn-confirm {background:#ff4b53;color:#fff;border:1px solid #ff4b53;border-radius:3px;}
+a.btn-cancel {color:#888;border:1px solid #888;border-radius:3px;}
+a.btn-next {width:100%;border-radius:3px;}
+a.btn-next-os {width:65%;}
+
+.btn-close {}
+.btn-close span {display:inline-block;position:relative;margin:0 10px;padding:0;width:1px;height:23px;background:#888;transform:rotate(45deg);-webkit-transform:rotate(45deg);text-indent:-9999px;}
+.btn-close span:before {content: "";display: block;position:absolute;top:50%;left:50%;width:23px;height:1px;margin:-1px 0 0 -11px;background:#888;}
+
+/* 테이블 */
+.tbl {width:100%;text-align:center;}
+.tbl tr:nth-child(2n+2) {background:#fafafa;}
+.tbl thead th {padding:9px 5px 8px;background:#ececec;font-size:1.1rem;font-weight:400;color:#1a1a1a;}
+.tbl tr td {height:41px;line-height:41px;padding:0 5px;color:#666;font-size:1.1rem;border-bottom:1px solid #f2f2f2;}
+
+/* 내부스크롤 */
+.scroll-wrap {
+	overflow:hidden;
+	position:relative;
+	width:100%;
+	/* Prevent native touch events on Windows */
+	-ms-touch-action: none;
+	/* Prevent the callout on tap-hold and text selection */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	/* Prevent text resize on orientation change, useful for web-apps */
+	-webkit-text-size-adjust: none;
+	-moz-text-size-adjust: none;
+	-ms-text-size-adjust: none;
+	-o-text-size-adjust: none;
+	text-size-adjust: none;
+}
+.scroll-wrap .scroller {
+	display:inline-block;
+	/* Prevent elements to be highlighted on tap */
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	/* Put the scroller into the HW Compositing layer right from the start */
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+
+/* 체크박스*/
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {position:relative;padding-left:39px;font-size:1.4rem;color:#1a1a1a;}
+input[type="checkbox"] + label:after  {content:"";position:absolute;top:1px;left:12px;width:19px;height:19px;background:url("../images/common/img_checkbox.gif") no-repeat  0 0;background-size:38px 19px;cursor:pointer;}
+input[type="checkbox"]:checked + label:after  {background-position:-19px 0;}
+
+/* 셀렉트 영역*/
+.select-area {overflow:hidden;white-space:nowrap;width:100%;background:#fff;border-bottom:1px solid #ececec;}
+.select-area li {position:relative;float:left;width:50%;text-align:center;}
+.select-area li:after {content:"";position:absolute;top:50%;right:0;margin-top:-12.5px;width:1px;height:25px;background:#ececec;z-index:1;}
+.select-area li select {width:100%;height:40px;line-height:40px;padding:0 30%;background:url("../images/common/btn_arrow_bottom.png") no-repeat left 65% top 50%;background-size:6px;font-size:1.5rem;border:none;}
+.select-area li:last-child:after {display:none;}
+.select-area li.season select {background-position:left 73% top 50%;}
+
+/* 모달레이어*/
+#Modal {position:fixed;top:0;left:0;right:0;bottom:0;background:#000;opacity:0.8;z-index:20;}
+
+/* 핫콜드존 */
+.hotcoldzone {overflow:hidden;padding:25px 6.38889vw;background:#fafafa;border-top:1px solid #ececec;border-bottom:1px solid #ececec;}
+.hotcoldzone .zone {position:relative;float:left;width:41.6667vw;height:41.6667vw;}
+.tbl-hotcold {width:100%;height:100%;border:1px solid #939393;text-align:center;color:#fff;}
+.tbl-hotcold td {border:1px solid #939393;font-size:0.9rem;background:#ccc;}
+.tbl-hotcold td.lev1 {background:#ff3d3d;}
+.tbl-hotcold td.lev2 {background:#ff9ea2;}
+.tbl-hotcold td.lev3 {background:#5599ff;}
+.tbl-hotcold td.lev4 {background:#9fc4eb;}
+.tbl-hotcold.back tr:first-child td {vertical-align:top;padding-top:8px;}
+.tbl-hotcold.back tr:last-child td {vertical-align:bottom;;padding-bottom:8px;}
+.tbl-hotcold.front {position:absolute;top:50%;left:50%;width:27.2223vw;height:27.2223vw;margin:-13.61115vw 0 0 -13.61115vw;}
+.tbl-hotcold.front td {vertical-align:middle;}
+
+/* 경기 없는 날 */
+.img-no-game.another {display:none;}
+.img-no-game img {display:block;}
+
+/* 데이터 프리 */
+.data-free {padding:10px;background:#fff;}
+.data-free.data-no-game {background:#333;}
+.data-free.another-pad {display:none;}
+.data-free .txt-tip {padding:8px 0;background:#ff4b53;color:#fff;border-radius:10px;text-align:center;}
+.data-free .txt-tip span {display:block;}
+
+/* media query */
+@media (max-width:320px){
+	html {font-size:9px;}
+	.ui-datepicker .ui-datepicker-prev {top:17px;}
+	.ui-datepicker .ui-datepicker-next {top:17px;}
+}
+
+@media (min-width:321px){
+	html {font-size:10px;}
+}
+
+@media(orientation:landscape){
+	.ui-datepicker {width:34vw;margin-left:-17vw;}
+}
+
+@media (min-width:1024px){
+	a.btn {width:95px;height:40px;font-size:1.7rem;line-height:36px;}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {width:4vw;height:4vw;line-height:4vw;}
+	/* 경기 없는 날 */
+	.img-no-game {display:none;}
+	.img-no-game.another {display:block;}
+
+	/* 데이터프리 */
+	.data-free {display:none;}
+	.data-free.another-pad {display:block;padding:56px 40px;}
+	.data-free .txt-tip {padding:14px 0;background:#ff4b53;color:#fff;border-radius:10px;font-size:1.5rem;text-align:center;}
+}

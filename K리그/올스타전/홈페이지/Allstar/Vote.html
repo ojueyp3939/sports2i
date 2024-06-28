@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>2019 K리그 팬투표 페이지</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="K리그"/>
+  <meta name="author" content="스포츠투아이"/>
+	<meta name="keywords" content="KOREA, 한국프로축구연맹, K LEAGUE, K리그, K리그 실시간정보, K리그 일정 및 결과, 프로축구 중계, 구단순위, 선수정보, K리그 소개" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".open .cont-wrap").slideToggle("fast");
+			$(".accordion h4").click(function() {
+				$(".accordion").removeClass("open");
+				$(this).parent().addClass("open");
+				if($(this).next(".cont-wrap").is(":visible")){
+					$(this).next("cont-wrap").slideUp("fast");
+				} else {
+					$(".accordion .cont-wrap").slideUp("fast");
+					$(this).next("div").slideToggle("fast");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="main.html">
+						<img src="../resources/images/common/logo_k.png" alt="K리그 로고" />
+					</a>
+				</h1>
+				<a class="link-k" href="www.kleague.com" target="_blank">www.kleague.com</a>
+				<a class="logout" href=""><span>로그아웃</span></a>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents" class="vote voting">
+				<h3><span>#팬11</span> PICK</h3>
+				<ul class="emb-area clear">
+					<li><img src="../resources/images/emb/emb_66x74_JB.png" alt="전북"></li>
+					<li><img src="../resources/images/emb/emb_66x74_GN.png" alt="경남"></li>
+					<li><img src="../resources/images/emb/emb_66x74_US.png" alt="울산"></li>
+					<li><img src="../resources/images/emb/emb_66x74_PH.png" alt="포항"></li>
+					<li><img src="../resources/images/emb/emb_66x74_JJ.png" alt="제주"></li>
+					<li><img src="../resources/images/emb/emb_66x74_SW.png" alt="수원"></li>
+					<li><img src="../resources/images/emb/emb_66x74_DG.png" alt="대구"></li>
+					<li><img src="../resources/images/emb/emb_66x74_GW.png" alt="강원"></li>
+					<li><img src="../resources/images/emb/emb_66x74_IC.png" alt="인천"></li>
+					<li><img src="../resources/images/emb/emb_66x74_SJ.png" alt="상주"></li>
+					<li><img src="../resources/images/emb/emb_66x74_SU.png" alt="서울"></li>
+					<li><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></li>
+				</ul>
+				<div class="accordion vote-area GK">
+					<h4><a href="#none">GK (0/1)</a></h4>
+					<div class="cont-wrap">
+						<p>출장수 / 실점 / 클린시트 / 평점</p>
+						<ul class="clear">
+							<li>
+								<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+							<li>
+								<div class="img-box"></div>
+								<div class="name"><span><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"></span>사리치</div>
+								<div class="vote-total">123,456표</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="accordion vote-area DF player">
+					<h4><a href="#none">DF (0/4)</a></h4>
+					<div class="cont-wrap">
+						<p>출장수 / 골 / 어시스트 / 평점</p>
+						<div class="pst-wrap JB clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JB.png" alt="전북"><span>전북 현대 모터스</span></h5>
+							<ul class="clear">
+								<li class="on">
+									<div class="line">LD</div>
+									<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GN.png" alt="경남"><span>경남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap US clear">
+							<h5><img src="../resources/images/emb/emb_66x74_US.png" alt="울산"><span>울산 현대</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap PH clear">
+							<h5><img src="../resources/images/emb/emb_66x74_PH.png" alt="포항"><span>포항 스틸러스</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap JJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JJ.png" alt="제주"><span>제주 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SW.png" alt="수원"><span>수원 삼성 블루윙즈</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap DG clear">
+							<h5><img src="../resources/images/emb/emb_66x74_DG.png" alt="대구"><span>대구 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GW.png" alt="강원"><span>강원 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap IC clear">
+							<h5><img src="../resources/images/emb/emb_66x74_IC.png" alt="인천"><span>인천 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SJ.png" alt="상주"><span>상주 상무</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SU clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SU.png" alt="서울"><span>FC 서울</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"><span>성남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="accordion vote-area MF player open">
+					<h4><a href="#none">MF (0/3)</a></h4>
+					<div class="cont-wrap">
+						<p>출장수 / 골 / 어시스트 / 평점</p>
+						<div class="pst-wrap JB clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JB.png" alt="전북"><span>전북 현대 모터스</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GN.png" alt="경남"><span>경남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap US clear">
+							<h5><img src="../resources/images/emb/emb_66x74_US.png" alt="울산"><span>울산 현대</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap PH clear">
+							<h5><img src="../resources/images/emb/emb_66x74_PH.png" alt="포항"><span>포항 스틸러스</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap JJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JJ.png" alt="제주"><span>제주 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SW.png" alt="수원"><span>수원 삼성 블루윙즈</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap DG clear">
+							<h5><img src="../resources/images/emb/emb_66x74_DG.png" alt="대구"><span>대구 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GW.png" alt="강원"><span>강원 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap IC clear">
+							<h5><img src="../resources/images/emb/emb_66x74_IC.png" alt="인천"><span>인천 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SJ.png" alt="상주"><span>상주 상무</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SU clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SU.png" alt="서울"><span>FC 서울</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"><span>성남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="accordion vote-area FW player open">
+					<h4><a href="#none">FW (0/3)</a></h4>
+					<div class="cont-wrap">
+						<p>출장수 / 골 / 어시스트 / 평점</p>
+						<div class="pst-wrap JB clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JB.png" alt="전북"><span>전북 현대 모터스</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">123,456표</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GN.png" alt="경남"><span>경남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="special"><img src="../resources/images/main/img_special.png" alt=""></div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap US clear">
+							<h5><img src="../resources/images/emb/emb_66x74_US.png" alt="울산"><span>울산 현대</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap PH clear">
+							<h5><img src="../resources/images/emb/emb_66x74_PH.png" alt="포항"><span>포항 스틸러스</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap JJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_JJ.png" alt="제주"><span>제주 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SW.png" alt="수원"><span>수원 삼성 블루윙즈</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap DG clear">
+							<h5><img src="../resources/images/emb/emb_66x74_DG.png" alt="대구"><span>대구 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap GW clear">
+							<h5><img src="../resources/images/emb/emb_66x74_GW.png" alt="강원"><span>강원 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap IC clear">
+							<h5><img src="../resources/images/emb/emb_66x74_IC.png" alt="인천"><span>인천 유나이티드</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SJ clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SJ.png" alt="상주"><span>상주 상무</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SU clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SU.png" alt="서울"><span>FC 서울</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+						<div class="pst-wrap SN clear">
+							<h5><img src="../resources/images/emb/emb_66x74_SN.png" alt="성남"><span>성남 FC</span></h5>
+							<ul class="clear">
+								<li>
+									<div class="line">LD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">CD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+								<li>
+									<div class="line">RD</div>
+									<div class="img-box"></div>
+									<div class="name">사리치</div>
+									<div class="vote-total">30 / 10 / 10 / 8.6 ★</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="btn-area">
+					<a href="#none" class="btn-vote">투표하기</a><!-- 투표 전일경우 before 클래스 추가  -->
+				</div>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- popup -->
+	<div id="modal"></div>
+	<div id="popup" class="">
+		<div class="state-wrap">
+			<div class="ground-box">
+				<ul>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+					<li>
+						<div class="img-box"><img src="../resources/images/common/19980443.png" alt=""></div>
+						<img class="emb" src="../resources/images/emb/emb_66x74_SW.png" />
+						<div class="name-label">ttttttt</div>
+					</li>
+				</ul>
+				<div class="pop-btn">
+						<a href=""><img src="../resources/images/common/btn_cancel.png" alt="취소" /></a>
+						<a href=""><img src="../resources/images/common/btn_ok.png" alt="확인" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // popup -->
+	<!-- footer -->
+	<footer>
+		<img src="../resources/images/common/bg_footer.png" />
+		<address>Copyright 2019 ⓒ K LEAGUE. All right reserved.</address>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,452 @@
+@charset "utf-8";
+
+
+/* 전력분석 공통 */
+/** 타이틀 **/
+h2.tit {padding:14px 0 7px 12px;font-size:1.4rem;font-weight:400;}
+
+/** 스크립트 **/
+.description {display:none;padding:12px;color:#888;font-size:1.0rem;}
+.description.on {display:block;}
+.description dt {padding:0 0 7px 13px;background:url("../images/common/ico_notice.gif") no-repeat 0 0.15em;background-size:10.5px;}
+.description dd li {margin-bottom:3px;font-weight:100;}
+.description dd li .tit {position:relative;padding-right:8px;font-weight:400;}
+.description dd li .tit:after {content:"";position:absolute;top:3px;right:3px;width:1px;height:8px;background:#ececec;}
+.description dd li i.tit {display:inline-block;width:5px;height:5px;margin:4px 17px 0 5px;padding:0;background:#ff4b53;border-radius:50%;vertical-align:top;}
+.description dd li i.tit:after {top:-2px;right:-13px;}
+p.description {padding:12px 12px 12px 25px;background:url("../images/common/ico_notice.gif") no-repeat 12px 1.35em;background-size:10.5px;color:#888;font-size:1.0rem;}
+
+/* 퀵버튼 */
+.quick-button {position:fixed;right:5.5556vw;bottom:3.5vh;width:13.6667%;z-index:10;}
+.quick-button li {margin-bottom:6px;}
+.quick-button li:last-child {margin:0;}
+.quick-button li {}
+
+/** 관전포인트 **/
+.game-point > .no-record {padding:180px 0 50px;background:url("https://image-ktotm.sports2i.com/resources/images/common/bg_no.png") no-repeat 50% 30% / 27.2223%;text-align:center;font-size:1.5rem;color:#888;background-color:#fff;}
+
+/** 키플레이어 **/
+.keyplayer {}
+.keyplayer .info-box {}
+.keyplayer .info-box .wpa-rank {border-top:1px solid #ececec;}
+.keyplayer .info-box .wpa-rank li {overflow:hidden;padding:10px 12px 9px;border-bottom:1px solid #ececec;}
+.keyplayer .info-box .wpa-rank li .player-img {overflow:hidden;float:left;width:17.2223vw;height:20vw;margin-right:10.1112vw;border:1px solid #ececec;}
+.keyplayer .info-box .wpa-rank li .player-img img {width:100%;}
+.keyplayer .info-box .wpa-rank li .info-box {float:left;width:69.6428%;}
+.keyplayer .info-box .wpa-rank li .info-box .info {overflow:hidden;padding-bottom:6px;font-size:1.3rem;}
+.keyplayer .info-box .wpa-rank li .info-box .info dt {float:left;padding-right:11px;}
+.keyplayer .info-box .wpa-rank li .info-box .info dd {float:left;padding-right:11px;}
+.keyplayer .info-box .wpa-rank li .info-box .record {}
+.keyplayer .info-box .wpa-rank li .info-box .record {overflow:hidden;padding:6px 0 9px;background:#f7f7f7;}
+.keyplayer .info-box .wpa-rank li .info-box .record dl {float:left;width:28%;text-align:center;}
+.keyplayer .info-box .wpa-rank li .info-box .record dl:first-child {width:22%;}
+.keyplayer .info-box .wpa-rank li .info-box .record dl:last-child {width:22%;}
+.keyplayer .info-box .wpa-rank li .info-box .record dt {margin-bottom:8px;color:#8e8e8e;}
+.keyplayer .info-box .wpa-rank li .info-box .record dd {}
+.keyplayer .info-box .wpa-rank li.top .player-img {border-top:2px solid #ff4b53;}
+.keyplayer .info-box .wpa-rank li.top .info-box .info {font-weight:700;}
+.keyplayer .info-box .wpa-rank li.top .info-box .info dt {color:#ff4b53;}
+.keyplayer .no-record {padding:180px 0 50px;background:url("../images/common/bg_no.png") no-repeat 50% 30% / 27.2223%;text-align:center;font-size:1.5rem;color:#888;}
+
+/** 경기기록 **/
+.game-record {}
+.game-record .scoreboard {overflow:hidden;background:#282828;}
+/*
+.game-record .scoreboard .team {float:left;width:16%;}
+.game-record .scoreboard .inning {float:left;width:57%;}
+.game-record .scoreboard .result {float:left;width:27%;}
+.game-record .scoreboard .tbl-sb {width:100%;background:#282828;color:#fff;}
+.game-record .scoreboard .tbl-sb th {height:22px;border-bottom:1px solid #757575;vertical-align:middle;}
+.game-record .scoreboard .tbl-sb td {}
+.game-record .scoreboard .tbl-sb .hidden {position:absolute;clip:rect(0 0 0 0);width:0;height:0;margin:-1px;overflow:hidden;}
+*/
+
+.game-record .scoreboard .team {float:left;width:16%;color:#fff;}
+.game-record .scoreboard .team table td {max-width:45px;padding-left:10px;text-align:left;}
+.game-record .scoreboard .team .tit {overflow:hidden;display:block;text-overflow:ellipsis;white-space:nowrap;width:100%;}
+.game-record .scoreboard .team .emb {display:none;}
+.game-record .scoreboard .inning {float:left;width:57%;color:#fff;}
+.game-record .scoreboard .inning table {table-layout:fixed;}
+.game-record .scoreboard .inning table th, .game-record .scoreboard .inning table td {min-width:17px;}
+.game-record .scoreboard .result {position:relative;z-index:2;float:right;overflow:hidden;width:27%;color:#fff}
+.game-record .scoreboard .result table th {overflow:hidden;}
+.game-record .scoreboard .result table thead th:last-child,.game-record .scoreboard .result table tbody td:last-child {padding-right:3px}
+.game-record .scoreboard .result table tbody td:first-child {color:#ff9e15;}
+.game-record .scoreboard table {width:100.8%}
+.game-record .scoreboard table th,.game-record .scoreboard table td {height:15px;font-size:12px;text-align:center;vertical-align:middle;}
+.game-record .scoreboard table tbody tr th,.game-record .scoreboard table tbody tr td {padding-bottom:13px;padding-top:0;font-size:1.2rem;font-weight:400;}
+.game-record .scoreboard table tbody tr:first-child th,.game-record .scoreboard table tbody tr:first-child td {padding-top:13px;padding-bottom:10px;}
+.game-record .scoreboard table thead th{height:22px;border-bottom:1px solid #a4a4a4;color:#a4a4a4;}
+.game-record .scoreboard table td.on {color:#ff4b53;}
+.game-record .scoreboard table caption {overflow:hidden;position:absolute !important;width:1px;height:1px;font-size:1px;line-height:1px;clip:rect(1px,1px,1px,1px)}
+.game-record .scoreboard table .hidden {position:absolute;clip:rect(0 0 0 0);width:0;height:0;margin:-1px;overflow:hidden;}
+.game-record .scoreboard .inning {display:inline-block;white-space:nowrap;}
+.game-record .scoreboard .inning .tbl-scroll {table-layout:auto;}
+.game-record .scoreboard .inning .tbl-scroll th,.game-record .scoreboard .inning .tbl-scroll td {min-width:22px;}
+
+.game-record .tbl-grecord {}
+.game-record .tbl-grecord td {line-height:1.2;vertical-align:middle;}
+.game-record .tbl-grecord th:first-child,.game-record .tbl-grecord td:first-child {padding-left:12px;text-align:left;color:#000;}
+.game-record .tbl-grecord .order {display:inline-block;padding-right:3px;vertical-align:middle;}
+.game-record .tbl-grecord .player {display:inline-block;vertical-align:middle;text-align:left;}
+.game-record .tbl-grecord .player .position {display:block;font-size:0.9rem;color:#aaa;}
+
+
+/** 득점상황 **/
+.score-point {}
+.score-point .point-list {}
+.score-point .point-list li {overflow:hidden;position:relative;width:100%;padding:12px 0;}
+.score-point .point-list li:after {content:"";position:absolute;top:0;left:50%;width:2px;height:100%;margin-left:-2px;background:#ececec;}
+.score-point .point-list li:first-child {padding:20px 0 12px;}
+.score-point .point-list li:last-child {padding:12px 0 20px;}
+.score-point .point-list li .score-info {float:right;width:50%;padding-top:10px;padding-left:11.3889%;}
+.score-point .point-list li.home .score-info {padding:10px 1% 0 10.3889%;}
+.score-point .point-list li .score-info .inning {float:left;margin-right:5px;padding:1px 3px 2px;background:#ff4b53;font-size:1.0rem;color:#fff;}
+.score-point .point-list li .score-info .score-wrap {float:left;color:#000;}
+.score-point .point-list li .score-info .score-wrap .score {margin:0 4px;font-weight:700;}
+.score-point .point-list li .score-info .score-wrap .score strong {color:#ff4b53;}
+.score-point .point-list li.away .point-info {padding-left:5.2223%;}
+.score-point .point-list li .point-info {float:right;width:50%;padding-left:7.2223%;}
+.score-point .point-list li .point-info .player-info {overflow:hidden;}
+.score-point .point-list li .point-info .player-info .player-img {float:left;width:37px;margin-right:5px;border:1px solid #e0e0e0;border-radius:50%;}
+.score-point .point-list li .point-info .player-info .scored {float:left;font-size:1.0rem;color:#666;}
+.score-point .point-list li .point-info .player-info .scored .vs {padding:5px 0 4px;}
+.score-point .point-list li .point-info .player-info .scored .vs strong {color:#000;}
+.score-point .point-list li .point-info .btn-area {margin-top:9px;}
+.score-point .point-list li .point-info .btn-area .btn-more {display:block;width:70%;margin:0 auto;padding:5px 0;background:#ffff;font-size:1.0rem;font-weight:700;border:1px solid #1a1a1a;border-radius:6px;text-align:center;}
+.score-point .point-list li .score-team {position:absolute;top:17px;left:50%;width:6.6667vw;height:6.6667vw;line-height:6.6667vw;;margin-left:-3.3334%;background:#2f2f2f;font-size:1.1rem;color:#fff;text-align:center;border-radius:50%;z-index:5;}
+.score-point .point-list li .score-team.HH {background:#f78016;}
+.score-point .point-list li .score-team.OB {background:#1c2347;}
+.score-point .point-list li .score-team.SK {background:#e30d37;}
+.score-point .point-list li .score-team.HT {background:#a20e1f;}
+.score-point .point-list li .score-team.SS {background:#0c63b0;}
+.score-point .point-list li .score-team.LG {background:#b2164e;}
+.score-point .point-list li .score-team.NC {background:#c4af83;}
+.score-point .point-list li .score-team.WO {background:#6b152c;}
+.score-point .point-list li .score-team.KT {background:#1d1d1d;}
+.score-point .point-list li .score-team.LT {background:#0d3360;}
+.score-point .point-list li:first-child .score-team {top:25px;}
+.score-point .point-list li.away {background:#f5f5f5;}
+.score-point .point-list li.away .score-info {float:left;}
+.score-point .point-list li.away .point-info {float:left;}
+.score-point .no-record {padding:180px 0 50px;background:url("../images/common/bg_no.png") no-repeat 50% 30% / 27.2223%;text-align:center;font-size:1.5rem;color:#888;}
+
+
+/*** 득점상황 팝업 & 그래픽중계 문자중계, pts 공통 ***/
+.info-graphic {position:relative;width:93.334vw;height:60.27778vw;margin:0 auto;background:url("../images/playball/bg_ground_day_s.png") no-repeat 0 0;background-size:100%;}
+.info-graphic.night {background:url("../images/playball/bg_ground_night_s.png") no-repeat 0 0/100%;}
+.info-graphic .pts-area {position:absolute;bottom:5.5556vw;left:50%;width:41.1112vw;height:51.6668vw;margin-left:-20.5556vw;z-index:5;}
+.info-graphic .strike-zone {position:absolute;bottom:18.0556vw;left:50%;width:20.5556vw;height:25.8334vw;margin-left:-10.2778vw;background:url("../images/playball/bg_strikezone.png") no-repeat 0 0;background-size:100%;text-indent:-9999vw;}
+.info-graphic .btn-area {position:absolute;bottom:3.05556vw;width:100%;z-index:5;}
+.info-graphic .btn-area .btn {width:101px;height:36px;line-height:31px;margin-left:12px;background:#fff url("../images/playball/bg_btn_play.gif") no-repeat 15px 5px / 21px;font-size:1.5rem;font-weight:700;color:#333;border:2px solid #1a1a1a;text-indent:18px;text-align:center;}
+.info-graphic .btn-area .btn-replay {background:#fff url("../images/playball/bg_btn_replay.gif") no-repeat 7px 5px / 21px;text-indent:20px;}
+.info-graphic .player-info {position:absolute;right:0;bottom:0;padding:8px;background:rgba(255,255,255,0.3);}
+.info-graphic .player-info dl {overflow:hidden;margin-bottom:7px;color:#000;}
+.info-graphic .player-info dl:last-child {margin:0;}
+.info-graphic .player-info dl dt {float:left;margin-right:3px;font-weight:bold;}
+.info-graphic .player-info dl dd {float:left;}
+.info-graphic .homerun {position:relative;width:100%;height:100%;background:url("../images/playball/bg_homerun.png") no-repeat 0 0/100%;z-index:10;}
+.info-graphic .homerun h2 {padding:12px 0 10px;font-size:1.8rem;color:#fff;text-align:center;}
+.info-graphic .homerun h2 .num {font-weight:400;}
+.info-graphic .homerun .info-list {position:absolute;top:43px;right:10px;}
+.info-graphic .homerun .info-list dl {width:75px;padding:6px 0;margin-bottom:10px;background:rgba(0,0,0,0.4);text-align:center;border-radius:6px;}
+.info-graphic .homerun .info-list dt {margin-bottom:5px;color:#c8c8c8;font-weight:100;}
+.info-graphic .homerun .info-list dd {color:#fa4646;}
+.info-graphic .homerun .tracking {position:relative;width:59.8612vw;height:45.9723vw;margin-left:3.8889vw;background:url("../images/playball/bg_homerun_ag.png") no-repeat 0 0/100%;}
+.info-graphic .homerun .tracking li {position:absolute;left:75%;bottom:11px;width:5px;height:28vw;color:#fff;padding-top:10px;}
+.info-graphic .homerun .tracking li .graph {display:block;position:absolute;bottom:0;right:0;width:1px;height:100%;border-left:2px dashed #fa4646;transition:all 1s ease-in-out 1s;}
+.info-graphic .homerun .tracking li .graph:after {content:"";position:absolute;top:-7px;left:-4px;width:6px;height:5px;background:url("../images/playball/img_arrow.png") no-repeat 0 0/100%;}
+.info-graphic .homerun .tracking li .graph .ball {display:block;width:12px;height:12px;margin:-24px -7px;}
+.info-graphic .homerun .tracking li.ag1 {left:65%;bottom:14px;-webkit-transform: rotate(40deg);-moz-transform: rotate(40deg);-o-transform: rotate(40deg);transform: rotate(40deg);}
+.info-graphic .homerun .tracking li.ag2 {left:61%;bottom:20px;height:33vw;-webkit-transform: rotate(25deg);-moz-transform: rotate(25deg);-o-transform: rotate(25deg);transform: rotate(25deg);}
+.info-graphic .homerun .tracking li.ag3 {left:48.5%;bottom:25px;height:33vw;-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-o-transform: rotate(0deg);transform: rotate(0deg);}
+.info-graphic .homerun .tracking li.ag4 {left:37%;bottom:18px;height:33vw;-webkit-transform: rotate(-25deg);-moz-transform: rotate(-25deg);-o-transform: rotate(-25deg);transform: rotate(-25deg);}
+.info-graphic .homerun .tracking li.ag5 {left:32%;bottom:14px;-webkit-transform: rotate(-40deg);-moz-transform: rotate(-40deg);-o-transform: rotate(-40deg);transform: rotate(-40deg);}
+.info-txt {width:93.334vw;margin:15px auto;padding:15px 12px;background:#fff;}
+.info-txt li {padding-bottom:6px;}
+.info-txt li.ball-list dl {display:inline-block;}
+.info-txt li.ball-list dl dt {float:left;width:14px;height:14px;line-height:14px;font-size:1.0rem;color:#fff;border-radius:50%;text-align:center;}
+.info-txt li.ball-list dl dt.b {background:#4b9536;}
+.info-txt li.ball-list dl dt.s {background:#edb91c;}
+.info-txt li.ball-list dl dt.h {position:relative;background:#0054a6;}
+.info-txt li.ball-list dl dt.h:after {content:"";position:absolute;top:-3px;left:-3px;width:20px;height:20px;background:url("../images/playball/bg_ball_h.png") no-repeat 50% 50%/100%;}
+.info-txt li.ball-list dl dd {float:left;margin-left:6px;color:#000;}
+.info-txt li.ball-list dl dd.ball-info {font-size:1.0rem;color:#666;}
+.info-txt li.ball-list dl dd.ball-info span:first-child {margin-right:5px;}
+.info-txt li.ball-list dl dd.ballcount {float:right;font-size:1.0rem;color:#666;}
+.info-txt li.bat-result {padding:3px 0 6px;font-weight:700;color:#000;}
+.info-txt li.game-result {padding:3px 0 6px;font-size:1.1rem;color:#000;}
+.info-txt li.game-score {padding:2px 0 6px;font-size:1.5rem;font-weight:700;text-align:center;}
+.info-txt li.game-score span {display:inline-block;vertical-align:middle;}
+.info-txt li.game-score .team {width:33px;}
+.info-txt li.game-score .team.away {margin-right:32px;}
+.info-txt li.game-score .team.home {margin-left:32px;}
+.info-txt li.game-score .score.away {margin-right:18px;}
+.info-txt li.game-score .score.home {margin-left:18px;}
+.info-txt li.game-score .score.win {color:#f83740;}
+
+
+/** 그래픽중계 - 문자중계영역 **/
+.tab-inning {white-space:nowrap;width:100%;background:#fff;padding:8px 0;}
+.tab-inning li {display:inline-block;margin:0 9px;text-align:center;}
+.tab-inning li a {display:inline-block;width:100%;padding:6px 7px;background:#fff;font-size:1.1rem;color:#888;text-align:center;border-radius:7px;}
+.tab-inning li.on a {background:#ff4b53;color:#fff;}
+
+.txt-relay {padding:10px 12px;background:#f5f5f5;}
+.txt-relay > .no-record {padding:180px 0 50px;background:url("https://image-ktotm.sports2i.com/resources/images/common/bg_no.png") no-repeat 50% 30% / 27.2223%;text-align:center;font-size:1.5rem;color:#888;background-color:#fff;}
+.txt-relay .relay-list {}
+.txt-relay .relay-list > li {margin-bottom:5px;padding:15px 0;background:#fff;}
+.txt-relay .relay-list > li > .player-info {overflow:hidden;padding:0 12px;}
+.txt-relay .relay-list > li > .player-info .player-img {float:left;width:10.2778vw;margin-right:3.8889vw;border:1px solid #e0e0e0;border-radius:50%;}
+.txt-relay .relay-list > li > .player-info .lineup {float:left;margin-right:1.6667vw;padding-top:3.3334vw;font-size:1.3rem;font-weight:700;color:#888;}
+.txt-relay .relay-list > li > .player-info .name {float:left;padding-top:3.3334vw;font-size:1.3rem;font-weight:700;color:#000;}
+.txt-relay .relay-list > li > .player-info .state {float:right;font-size:1.0rem;padding-top:4.0277vw;}
+.txt-relay .relay-list > li .last-info {overflow:hidden;margin-bottom:8px;}
+.txt-relay .relay-list > li .last-info.active {margin-bottom:0;}
+.txt-relay .relay-list > li .last-info .btn-accor {float:right;width:39.3056vw;margin-right:12px;padding:5px 0 6px;font-size:1.0rem;border:1px solid #1a1a1a;border-radius:6px;text-align:center;}
+.txt-relay .relay-list > li .last-info .btn-accor i {display:inline-block;width:0;height:0;margin-left:7px;border-left:3px solid transparent;border-right:3px solid transparent;border-bottom:4px solid black;vertical-align:middle;}
+.txt-relay .relay-list > li .last-info .btn-accor.on {background:#e3e3e3;}
+.txt-relay .relay-list > li .last-info .btn-accor.on i {border-bottom:none;border-top:4px solid black;}
+.txt-relay .relay-list > li .last-info .accordion {clear:both;display:none;padding-top:10px;}
+.txt-relay .relay-list > li .last-info .accordion .tab {text-align:right;padding:0 12px;}
+.txt-relay .relay-list > li .last-info .accordion .tab li {display:inline-block;width:8.6111vw;}
+.txt-relay .relay-list > li .last-info .accordion .tab li a {display:block;}
+.txt-relay .relay-list > li .last-info .accordion > .info-txt.cont {margin:10px auto 0;padding:15px 12px 0;}
+.txt-relay .relay-list > li .last-info .accordion > .info-txt {width:100%;margin:0 auto;padding:0 12px;}
+.txt-relay .relay-list > li .last-info .accordion > .info-graphic {width:100%;margin:15px auto 10px;}
+.txt-relay .relay-list > li > .info-score {width:100%;margin:0 auto;padding:0;}
+.txt-relay .relay-list > li > .info-score li {padding:0;}
+
+.txt-relay .relay-list > li.recent .player-info .player-img {border-color:#ff4b53;}
+.txt-relay .relay-list > li.recent .player-info .lineup {color:#ff4b53;}
+.txt-relay .relay-list > li.recent .player-info .state {display:none;}
+.txt-relay .relay-list > li.recent .last-info .btn-accor {display:none;}
+.txt-relay .relay-list > li.recent .last-info .accordion {display:block;}
+.txt-relay .relay-list > li.recent .last-info .accordion .tab {display:none;}
+.txt-relay .relay-list > li.recent .last-info .accordion > .info-txt.cont {margin:10px auto 0;padding:0 12px 0;}
+.txt-relay .relay-list > li.inning {padding:5px 0 5px 12px;background:#dbdbdb;}
+.txt-relay .relay-list > li.inning .emb {display:inline-block;width:32px;vertical-align:middle;}
+.txt-relay .relay-list > li.inning .txt {font-weight:700;vertical-align:middle;}
+.txt-relay .relay-list > li.change {padding:10px 12px;}
+.txt-relay .relay-list > li.change dl {display:table;}
+.txt-relay .relay-list > li.change dl dt {display:table-cell;font-weight:700;color:#000;vertical-align:middle;}
+.txt-relay .relay-list > li.change dl dd {padding:3px 0 3px 10px;color:#666;}
+
+/*** 득점상황 상황보기 팝업 ***/
+#PopScore {position:fixed;bottom:0;width:100vw;height:calc(100vh - 56.25vw);background:#fff;z-index:20;}
+#PopScore header {overflow:hidden;padding:10px 0;}
+#PopScore header .btn-close {float:right;margin-right:12px;}
+#PopScore .content {height:100%;padding:12px 0 55px;background:#f5f5f5;overflow-y:auto;}
+
+/* 하이라이트 - 영상준비중 */
+.highlight.no-highlight p {padding:165px 0 150px;background:#fff url("../images/playball/bg_no_video.png") no-repeat 50% 53px/274px;color:#888;font-size:1.5rem;text-align:center;}
+/* 풀화면일 경우 하이라이트 */
+#MainCont .btn-highlight-back .btn-back {display:none;}
+
+/* 아이폰5 */
+@media(max-width:320px){
+	/** 관전포인트 **/
+	.game-point > .no-record {padding:330px 0 190px;background:url("https://image-ktotm.sports2i.com/resources/images/common/bg_no.png") no-repeat 50% 30% / 17.2223%;font-size:1.6rem}
+
+	/* .point-list .home 선수명이 최대5자리 일 경우 */
+	.score-point .point-list li.home .point-info {padding-left:3.5%;}
+}
+
+/* 풀화면일 경우 하이라이트 */
+@media(orientation:landscape){
+	#MainCont .btn-highlight-back .btn-back {display:block;position:absolute;top:2.7344vw;left:2.1875vw;width:3.75vw;height:5.5469vw;padding:0.9375vw;background:url("../images/playball/btn_back.png") no-repeat 50% 50%/1.875vw;text-indent:-99999vw;z-index:5;}
+}
+
+@media(min-width:1024px){
+	/* 퀵버튼 */
+	.quick-button {width:6.348%;right:3.90621vw;bottom:7.8125vh;z-index:30;}
+	.quick-button li.chat {display:none;}
+
+	/* 관전포인트 경기 시작전 */
+	.game-point .no-record {padding:394px 0 328px;background:url("https://image-ktotm.sports2i.com/resources/images/common/bg_no.png") no-repeat 50% 34% / 16.6503%;font-size:1.6rem;}
+
+	/* 키플레이어 */
+	.keyplayer .info-box .wpa-rank {border-top:1px solid #ccc;}
+	.keyplayer .info-box .wpa-rank li {padding:8px 171px;border-bottom:1px solid #ccc;}
+	.keyplayer .info-box .wpa-rank li .player-img {width:7.9102vw;height:9.2286vw;margin-right:2.9297vw;}
+	.keyplayer .info-box .wpa-rank li .info-box {overflow:hidden;width:83.7004%;padding:12px 0;}
+	.keyplayer .info-box .wpa-rank li .info-box .info {float:left;padding:29px 0 28px;font-size:1.7rem;}
+	.keyplayer .info-box .wpa-rank li .info-box .info dt {padding-right:19px;font-size:2.0rem;}
+	.keyplayer .info-box .wpa-rank li .info-box .info dd:nth-of-type(1) {width:94px;padding-right:14px;text-align:center;}
+	.keyplayer .info-box .wpa-rank li .info-box .info dd {padding:2px 31px 0 0;}
+	.keyplayer .info-box .wpa-rank li .info-box .record {padding:12px 0 14px;}
+	.keyplayer .info-box .wpa-rank li .info-box .record dl {font-size:1.6rem;}
+	.keyplayer .info-box .wpa-rank li .info-box .record dt {margin-bottom:14px;}
+	.keyplayer .info-box .wpa-rank li .info-box .record dd {font-size:1.5rem;}
+	/* 키플레이어txt */
+	.keyplayer .description {padding:23px 51px 22px;font-size:1.3rem;}
+	.keyplayer .description dt {padding:0 0 8px 17px;background-size:13px;}
+	.keyplayer .description dd li .tit {padding-right:17px;}
+	.keyplayer .description dd li .tit:after {top:4px;right:7px;height:12px;background:#d2d2d2;}
+	/* 점수가 없을 때 */
+	.keyplayer .no-record {padding:394px 0 328px;background:url("../images/common/bg_no.png") no-repeat 50% 34% / 16.6503%;font-size:1.6rem;}
+
+	/* 경기기록 */
+	.game-record .scoreboard table thead th {height:33px;}
+	.game-record .scoreboard .tbl-sb tr th {font-size:1.7rem;}
+	.game-record .scoreboard table tbody tr:first-child th, .game-record .scoreboard table tbody tr:first-child td {padding-top:18px;padding-bottom:8px;}
+	.game-record .scoreboard .tbl-sb tr td {font-size:1.7rem;}
+	.game-record .scoreboard .team {width:21.845%;}
+	.game-record .scoreboard .team .emb {display:inline-block;width:31px;margin-right:17px;}
+	.game-record .scoreboard .team .tit {display:inline;vertical-align:middle;}
+	.game-record .scoreboard .team table td {padding:0 0 21px 40px;}
+	.game-record .scoreboard .inning {width:57.25%;}
+	.game-record .scoreboard .inning .tbl-scroll {table-layout:fixed;}
+	.game-record .scoreboard .inning .tbl-scroll th, .game-record .scoreboard .inning .tbl-scroll td {min-width:10%;font-size:1.7rem;}
+	.game-record .scoreboard .inning .tbl-scroll tbody tr:first-child td, .game-record .scoreboard .result table tbody tr:first-child td {padding-top:20px;padding-bottom:11px;}
+	.game-record .scoreboard .result {width:20.905%;}
+	.game-record .scoreboard .result table thead th, .game-record .scoreboard .result table tbody td {padding-right:14px;}
+	.game-record .scoreboard .result table thead th:first-child, .game-record .scoreboard .result table tbody td:first-child {padding-left:18px;}
+	.game-record .scoreboard .result table thead th:last-child, .game-record .scoreboard .result table tbody td:last-child {padding-right:26px;}
+	h2.tit {padding:25px 0 9px 40px;font-size:1.9rem;font-weight:700;}
+	/* 타자,투수 */
+	.game-record .tbl thead th {padding:11px 25px 12px;font-size:1.5rem;font-weight:700;}
+	.game-record .tbl-grecord th:first-child, .game-record .tbl-grecord td:first-child {width:160px;padding-left:40px;}
+	.game-record .tbl-grecord td {height:51px;border-bottom:1px solid #ccc;font-size:1.6rem;}
+	.game-record .tbl-grecord tr:last-child td {border-bottom:2px solid #ccc;}
+	.game-record .tbl-grecord .player .position {font-size:1.4rem;}
+	.game-record .tbl-grecord .order {padding-right:8px;}
+
+	/* 득점상황 */
+	.score-point .point-list {float:left;width:50%;height:auto;border-right:1px solid #ccc;}
+	.score-point .point-list li:after {width:3px;margin-left:-3px;}
+	.score-point .point-list li {padding:17px 0;}
+	.score-point .point-list li:first-child {padding:30px 0 17px;}
+	.score-point .point-list li .point-info {padding-left:5.5%;}
+	.score-point .point-list li.home .point-info {padding-left:7.0450%;}
+	.score-point .point-list li .point-info .player-info .player-img {width:51px;margin-right:7px;}
+	.score-point .point-list li .point-info .player-info .scored {font-size:1.4rem;}
+	.score-point .point-list li .point-info .player-info .scored .vs {padding:7px 0 9px;}
+	.score-point .point-list li .point-info .btn-area {margin-top:14px;}
+	.score-point .point-list li .point-info .btn-area .btn-more {width:82%;margin:0;padding:8px 0;font-size:1.4rem;}
+	.score-point .point-list li:first-child .score-team {top:38px;}
+	.score-point .point-list li .score-info {padding-top:15px;padding-left:7.0450%;}
+	.score-point .point-list li .score-info .inning {margin-right:7px;padding:2px 5px;font-size:1.4rem;}
+	.score-point .point-list li .score-info .score-wrap {font-size:1.7rem;}
+	.score-point .point-list li .score-info .score-wrap .score {margin:0 5px;}
+	.score-point .point-list li .score-team {top:26px;width:3.223vw;height:3.223vw;line-height:3.223vw;font-size:1.5rem;}
+	/* 득점내용이 없을 때 */
+	.score-point .no-record {padding:351px 0 142px;background:url("../images/common/bg_no.png") no-repeat 50% 42% / 16.6504%;font-size:1.6rem;}
+	/* 득점상황 */
+	#PopScore {position:absolute;top:489px;left:50%;width:50%;height:auto;background:#eee;}
+	#PopScore header {display:none;}
+	#PopScore .content {height:auto;padding:30px 0 3px;}
+	#PopScore .content .info-graphic {width:40.43vw;height:26.172vw;}
+	#PopScore .content .info-graphic .pts-area {bottom:1.9531vw;width:17.774vw;height:22.266vw;margin-left:-8.887vw;}
+	#PopScore .content .info-graphic .strike-zone {bottom:7.86133vw;width:8.887vw;height:11.133vw;margin-left:-4.4435vw;}
+	#PopScore .content .info-graphic .homerun {display:none;}
+	#PopScore .content .info-graphic .homerun h2 {padding:13px 0 12px;font-size:2.2rem;}
+	#PopScore .content .info-graphic .homerun .tracking {width:25.977vw;height:19.923vw;margin-left:1.2695vw;}
+	#PopScore .content .info-graphic .homerun .tracking li {height:12.403vw;}
+	#PopScore .content .info-graphic .homerun .tracking li.ag1 {bottom:14px;}
+	#PopScore .content .info-graphic .homerun .tracking li.ag2 {height:13.77vw;}
+	#PopScore .content .info-graphic .homerun .tracking li.ag3 {height:15.235vw;}
+	#PopScore .content .info-graphic .homerun .tracking li.ag4 {height:13.77vw;}
+	#PopScore .content .info-graphic .homerun .info-list {top:54px;right:13px;}
+	#PopScore .content .info-graphic .homerun .info-list dl {width:93px;margin-bottom:7px;padding:5px 0;font-size:1.5rem;}
+	#PopScore .content .info-graphic .btn-area {bottom:1.3672vw;}
+	#PopScore .content .info-graphic .player-info {padding:10px 16px 0;font-size:1.3rem;}
+	#PopScore .content .info-graphic .player-info dl {margin-bottom:10px;}
+	#PopScore .content .info-txt {width:40.43vw;margin:8px auto 12px;padding:11px 0 19px;}
+	#PopScore .content .info-txt li {overflow:hidden;padding:4px 15px 5px;}
+	#PopScore .content .info-txt li.ball-list dl {display:block;}
+	#PopScore .content .info-txt li.ball-list dl dt {width:18px;height:18px;line-height:16px;font-size:1.2rem;}
+	#PopScore .content .info-txt li.ball-list dl dd {margin-left:8px;}
+	#PopScore .content .info-txt li.ball-list dl dt.h:after {top:-4px;left:-4px;width:26px;height:26px;}
+	#PopScore .content .info-txt li.ball-list dl dd.result {font-size:1.5rem;}
+	#PopScore .content .info-txt li.ball-list dl dd.ballcount {font-size:1.3rem;}
+	#PopScore .content .info-txt li.ball-list dl dd.ball-info {font-size:1.3rem;}
+	#PopScore .content .info-txt li.bat-result {padding:5px 15px 4px;font-size:1.5rem;}
+	#PopScore .content .info-txt li.game-result {padding:3px 15px 4px;font-size:1.4rem;}
+	#PopScore .content .info-txt li.game-score {padding:6px 0 0;}
+	#PopScore .content .info-txt li.game-score .team {width:39px;}
+	#PopScore .content .info-txt li.game-score span {font-size:1.8rem;}
+	#PopScore .content .info-txt li.game-score .team.away {margin-right:28px;}
+	#PopScore .content .info-txt li.game-score .score.away {margin-right:19px;}
+	#PopScore .content .info-txt li.game-score .score.home {margin-left:19px;}
+	#PopScore .content .info-txt li.game-score .team.home {margin-left:28px;}
+	/* 탭 */
+	.tab-inning li {margin:0 12px;}
+	.tab-inning li a {padding:8px 8px 7px;font-size:1.5rem;}
+	/* 그래픽중계 */
+	.txt-relay {padding:10px 40px;}
+	.txt-relay .relay-list > li {margin:0;padding:15px 115px 9px;}
+	.txt-relay .relay-list > li .player-info {padding:0 14px;}
+	.txt-relay .relay-list > li .player-info .state {padding-top:1.5625vw;color:#666;font-size:1.5rem;}
+	.txt-relay .relay-list > li .player-info .player-img {width:4.7852vw;margin-right:1.61133vw;}
+	.txt-relay .relay-list > li .player-info .lineup {padding-top:1.4160vw;margin-right:0.4883vw;font-size:1.8rem;}
+	.txt-relay .relay-list > li .player-info .name {padding-top:1.4160vw;font-size:1.8rem;}
+	.txt-relay .relay-list > li .last-info {overflow:hidden;margin:4px 0 0;}
+	.txt-relay .relay-list > li .last-info .btn-accor {width:18.9453vw;margin-right:14px;font-size:1.4rem;}
+	.txt-relay .relay-list > li .last-info .btn-accor i {margin-left:5px;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:6px solid #000;}
+	.txt-relay .relay-list > li .last-info .btn-accor.on i {border-top:6px solid #000;}
+	.txt-relay .relay-list > li.recent .last-info .accordion {overflow:hidden;padding-top:14px;}
+	.txt-relay .relay-list > li.recent .last-info .accordion .info-graphic {display:none !important;padding:0;}
+	.txt-relay .relay-list > li.recent .last-info .accordion > .info-txt.cont {float:inherit;width:auto;margin:0;padding:0;}
+	.txt-relay .relay-list > li.recent .last-info .accordion > .info-txt {float:inherit;width:auto;padding:0 14px;}
+	.txt-relay .relay-list > li.recent .last-info .accordion > .info-txt li.bat-result {padding:5px 0 4px;font-size:1.5rem;}
+	.txt-relay .relay-list > li.recent .last-info .accordion > .info-txt li.game-result {padding:3px 0;font-size:1.4rem;}
+	/* 볼 리스트 */
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li {overflow:hidden;padding:4px 14px 5px;font-size:1.4rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.bat-result {font-size:1.5rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl {display:block;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dt {width:18px;height:18px;line-height:18px;font-size:1.2rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dt.h:after {top:-4px;left:-4px;width:26px;height:26px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dd {font-size:1.5rem;margin-left:7px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dd.ball-info {margin-left:8px;padding-top:1px;font-size:1.3rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dd.ball-info span:first-child {margin-right:8px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-txt li.ball-list dl dd.ballcount {font-size:1.3rem;}
+	/* 팀 스코어 */
+	.txt-relay .relay-list > li > .info-score {padding-top:6px;}
+	.txt-relay .relay-list > li > .info-score li.game-score {font-size:1.8rem;}
+	.txt-relay .relay-list > li > .info-score li.game-score .team {width:39px;}
+	.txt-relay .relay-list > li > .info-score li.game-score .team.away {margin-right:29px;}
+	.txt-relay .relay-list > li > .info-score li.game-score .score.away {margin-right:20px;}
+	.txt-relay .relay-list > li > .info-score li.game-score .score.home {margin-left:20px;}
+	.txt-relay .relay-list > li > .info-score li.game-score .team.home {margin-left:29px;}
+	/*  */
+	.txt-relay .relay-list > li .last-info .accordion {overflow:hidden;padding-top:10px;}
+	.txt-relay .relay-list > li .last-info .accordion .tab {display:none;}
+	.txt-relay .relay-list > li .last-info .accordion > .info-txt.cont {float:left;width:50%;margin:0;padding:0;}
+	.txt-relay .relay-list > li .last-info .accordion > .info-txt {float:left;width:50%;margin:0;padding:0;}
+	.txt-relay .relay-list > li .last-info .accordion > .info-graphic {display:block !important;float:right;width:28.2715vw;height:18.3106vw;margin:4px 14px 0 0;}
+	.txt-relay .relay-list > li.inning {margin-top:10px;padding:13px 129px;}
+	.txt-relay .relay-list > li.inning .emb {width:39px;margin-right:16px;}
+	.txt-relay .relay-list > li.inning .txt {font-size:1.3rem;}
+	.txt-relay .relay-list > li.change {margin:10px 0;padding:9px 129px 8px;font-size:1.3rem;}
+	.txt-relay .relay-list > li.change dl dd {padding:4px 0 3px 13px;}
+	/* 그래픽 */
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .pts-area {bottom:1.367vw;width:12.5977vw;height:15.7227vw;margin-left:-6.29885vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .strike-zone {bottom:5.4687vw;width:6.2989vw;height:7.8614vw;margin-left:-3.1495vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .btn-area {bottom:0.9277vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .btn-area .btn {width:70px;height:25px;line-height:22px;background:#fff url("../images/playball/bg_btn_play.gif") no-repeat 7px 3px / 15px;font-size:1.0rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .player-info {padding:0 5px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .player-info {padding:6px 5px 0;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .player-info dl {margin-bottom:6px;font-size:1rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .player-info dl dt {margin-right:2px;}
+	/* 홈런상황 */
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun {width:28.2715vw;height:18.2617vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun h2 {padding:10px 0 8px;font-size:1.5rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking {width:18.0664vw;height:13.8672vw;margin-left:1.2695vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li {height:7.9590vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li.ag1 {bottom:12px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li.ag2 {left:60%;bottom:18px;height:8.9844vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li.ag3 {bottom:24px;height:10.0098vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li.ag4 {bottom:17px;height:8.9844vw;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li.ag5 {bottom:10px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .tracking li .graph .ball {margin:-20px -7px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .info-list {top:37px;right:12px;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .info-list dl {width:65px;margin-bottom:5px;padding:5px 0 4px;font-size:1.0rem;}
+	.txt-relay .relay-list > li .last-info .accordion .info-graphic .homerun .info-list dt {margin-bottom:3px;}
+
+	/*** pts 공통 ***/
+	.info-txt li.ball-list dl dt.h:after {width:26px;height:26px;}
+
+	/* 하이라이트 - 영상준비중 */
+	.highlight.no-highlight p {padding:225px 0 135px;background:#fff url("../images/playball/bg_no_video.png") no-repeat 50% 78px/356px;font-size:1.8rem;}
+}

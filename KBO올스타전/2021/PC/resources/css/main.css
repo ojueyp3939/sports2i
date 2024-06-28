@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+
+.vote-guide {margin-bottom:50px;}
+.vote-guide h3 {padding:37px 0 7px;font-size:23px;font-weight:700;color:#006dfa;text-align:center;}
+.vote-guide .sub-script {padding-bottom:25px;color:#2e348d;font-size:18px;font-weight:700;font-family:"sol";text-align:center;}
+.vote-guide .sub-script span {color:#ff408f;}
+.vote-guide .inner {margin:0 auto 42px;}
+.vote-guide .inner .guide-left {float:left;position:relative;width:507px;height:380px;}
+.vote-guide .inner .guide-left:after {content:"";position:absolute;top:0;right:-21px;width:1px;height:381px;background:#d4d4d4;}
+.vote-guide .inner .guide-right {float:right;width:465px;}
+.vote-guide .inner .guide {margin-bottom:7px;font-size:15px;color:#666;}
+.vote-guide .inner .guide .tit-vote {display:inline-block;position:relative;margin-bottom:6px;padding-left:9px;color:#2e348d;font-size:17px;font-weight:700;z-index:10;}
+.vote-guide .inner .guide .tit-vote:nth-of-type(2) {margin-top:50px;}
+.vote-guide .inner .guide .tit-vote.tit-point:before {content:"";position:absolute;top:5px;left:0;width:3px;height:9px;background:#2e348d;}
+.vote-guide .inner .guide .tit-vote.tit-point:after {content:"";position:absolute;bottom:0;left:8px;width:100%;height:10px;background:#ff408f;border-radius:20px;z-index:-10;}
+.vote-guide .inner .guide .txt-info {color:#666;font-size:15px;letter-spacing:-0.5px;}
+.vote-guide .inner .guide02 ul li {position:relative;padding:0 0 12px 8px;}
+.vote-guide .inner .guide02 ul li:before {content:"-";position:absolute;top:0;left:0;}
+.vote-guide .inner .guide02 ul li span.vote-point {color:#ff408f;}
+.vote-guide .inner .guide03 {}
+.vote-guide .inner .guide03 .notice {padding-top:10px;font-size:15px;color:#ff408f;letter-spacing:-1px;}
+.vote-guide .inner .guide03 ul li {letter-spacing:-1px;}
+.vote-guide .inner .guide04 {overflow:hidden;position:absolute;bottom:0;width:367px;margin:0;padding:8px 0 9px 34px;border-radius:18px;background:#ff408f;letter-spacing:-1px;box-sizing:border-box;}
+.vote-guide .inner .guide04 .tit-vote {float:left;position:relative;margin:0 14px 0 0;padding:0 13px 0 0;color:#00113e;}
+.vote-guide .inner .guide04 .tit-vote::before {content:"";position:absolute;top:50%;right:0;width:2px;height:14px;background:#ffc5dd;transform:translateY(-50%);}
+.vote-guide .inner .guide04 p.event-list {float:left;padding-top:2px;color:#00113e;font-size:16px;}
+.vote-guide .inner .guide04 p.event-list span {font-size:12px;}
+
+.voting-state {}
+.voting-state .cont-area {}
+.voting-state .rank1 .notice {padding:15px 0;color:#888;font-size:14px;}
+.voting-state .rank1 .notice span {color:#ff408f;}
+.voting-state .rank1 .team-list {overflow:hidden;width:876px;margin:0 auto 16px;}
+.voting-state .rank1 .team-list .team {float:left;}
+.voting-state .rank1 .team-list .team .emb {float:left;margin:0 33px 0;}
+.voting-state .rank1 .team-list .team .coach {float:left;position:relative;width:91px;height:91px;}
+.voting-state .rank1 .team-list .team .coach:after {content:"";position:absolute;top:0;left:0;width:100%;height:91px;background:url("../images/main/bg_photo_coach01.png") no-repeat 0 0/100%;}
+.voting-state .rank1 .team-list .team .coach .photo {overflow:hidden;width:91px;height:91px;border-radius:50%;}
+.voting-state .rank1 .team-list .team .coach .name {display:block;position:absolute;bottom:4px;z-index:10;width:100%;font-size:13px;color:#fff;text-align:center;letter-spacing:-1px;}
+
+.voting-state .rank1 .team-list .vs {float:left;width:48px;height:48px;line-height:45px;margin:25px 93px 0;border-radius:50%;background:#00113e;color:#fff;font-size:18px;font-weight:700;text-align:center;vertical-align:middle;}
+.voting-state .rank1 .team-list .nanum .emb {float:right;}
+.voting-state .rank1 .team-list .nanum .coach {float:right;}
+.voting-state .rank1 .team-list .nanum .coach:after {background:url("../images/main/bg_photo_coach02.png") no-repeat 0 0/100%;}
+
+.voting-state .rank1 .player-list {overflow:hidden;width:100%;height:425px;background:url("../images/main/bg_ground.gif") no-repeat 0 0;}
+.voting-state .rank1 .player-list .team {float:left;width:50%;padding-top:19px;box-sizing:border-box;}
+.voting-state .rank1 .player-list .team li {margin-bottom:20px;text-align:center;}
+.voting-state .rank1 .player-list .team .player {position:relative;display:inline-block;margin:0 1px;}
+.voting-state .rank1 .player-list .team .player:after {content:"";position:absolute;top:0;left:0;width:91px;height:91px;background:url("../images/main/bg_photo_player.png") no-repeat 0 0;}
+.voting-state .rank1 .player-list .team .name {position:absolute;bottom:23px;width:100%;font-size:13px;color:#888;text-align:center;z-index:10;}
+.voting-state .rank1 .player-list .team .photo {overflow:hidden;width:91px;height:91px;border-radius:50%;}
+.voting-state .rank1 .player-list .team .txt5 {bottom:23px;font-size:10px;}
+.voting-state .rank1 .player-list .team .vote-record {padding-top:5px;font-weight:700;color:#004ca0;text-align:center;}
+.voting-state .rank1 .player-list .dream {padding-left:5px;}
+.voting-state .rank1 .player-list .nanum {padding-right:2px;}
+.voting-state .rank1 .player-list .nanum .vote-record {padding-top:5px;font-weight:700;color:#ff4f65;}
+.voting-state .rank1 .date {padding-top:6px;font-size:14px;color:#666;text-align:right;}
+
+.voting-state .count {position:relative;}
+.voting-state .count .notice {padding:15px 0 8px;color:#888;font-size:15px;}
+.voting-state .count .standard {padding-left:12px;color:#102269;font-size:15px;font-weight:700;}
+.voting-state .count .btn-download {position:absolute;top:40px;right:0;width:192px;padding:8px 17px 8px 43px;background:url("../images/sub/bg_download.png") no-repeat 18px 50%/17px;color:#3959d2;border:1px solid #3959d2;border-radius:20px;font-size:14px;text-align:center;letter-spacing:-1px;box-sizing:border-box;}
+
+.voting-state .realtime {}
+.voting-state .realtime .standard {padding-top:35px;font-size:15px;font-weight:700;color:#888;text-align:center;}
+.voting-state .realtime .standard span {color:#0d378e;}
+.voting-state .realtime .standard {}
+.voting-state .realtime .date {padding-top:8px;font-size:14px;color:#666;text-align:right;}
+
+.voting-state .player-box {overflow:hidden;width:100%;padding-bottom:17px;background:#f7f7f7;}
+.voting-state .player-box .team-list {overflow:hidden;margin:29px 0 28px;}
+.voting-state .player-box .team-list .team {float:left;width:482px;text-align:center;}
+.voting-state .player-box .team-list .vs {float:left;width:48px;height:48px;margin-top:33px;border-radius:40px;background:#00113e;color:#fff;font-size:18px;line-height:48px;font-weight:700;text-align:center;vertical-align:middle;}
+.voting-state .player-box .team-list .nanum {width:485px;}
+.voting-state .player-box .player-list {overflow:hidden;width:100%;}
+.voting-state .player-box .player-list .team {float:left;width:50%;box-sizing:border-box;}
+.voting-state .player-box .player-list .team li {margin-bottom:20px;text-align:center;}
+.voting-state .player-box .player-list .team .player {display:inline-block;position:relative;margin:0 7px;}
+.voting-state .player-box .player-list .team .player:after {content:"";position:absolute;top:0;left:0;width:91px;height:91px;background:url("../images/main/bg_photo_player.png") no-repeat 0 0;}
+.voting-state .player-box .player-list .team .name {position:absolute;bottom:23px;width:100%;color:#666;font-size:13px;text-align:center;letter-spacing:-1px;z-index:10;}
+.voting-state .player-box .player-list .team .photo {overflow:hidden;width:91px;height:91px;border-radius:50%;}
+.voting-state .player-box .player-list .team .txt5 {bottom:25px;font-size:10px;}
+.voting-state .player-box .player-list .team .vote-record {padding-top:5px;font-weight:700;color:#004ca0;text-align:center;}
+.voting-state .player-box .player-list .team .emb {display:inline-block;position:absolute;right:0;bottom:36px;z-index:15;width:36px;}
+.voting-state .player-box .player-list .team .rank {position:absolute;top:0;left:0;width:27px;height:27px;border-radius:14px;background:#fff;color:#444;line-height:25px;font-weight:bold;text-align:center;z-index:15;}
+.voting-state .player-box .player-list .team .no1 {background:#2975d2;color:#fff;}
+.voting-state .player-box .player-list .nanum {padding-left:2px;}
+.voting-state .player-box .player-list .nanum .no1 {background:#e56066;}
+.voting-state .player-box .player-list .nanum .vote-record {padding-top:5px;color:#e56066;font-weight:700;}
+.voting-state .player-box .of-list {}
+.voting-state .player-box .of-list .team {}
+.voting-state .player-box .of-list .team li {text-align:left;}
+.voting-state .player-box .of-list .team {padding-left:40px;}
+.voting-state .player-box .of-list .team .player {margin:0 8px 0 7px;}
+.voting-state .player-box .player-list .team .player:after {}
+
+.voting-state .before {margin-top:43px;padding:241px 0 85px;border-bottom:1px solid #c7c7c7;background:#f7f7f7 url("../images/main/bg_no_vote.png") no-repeat 50% 65px/175px;text-align:center;}
+.voting-state .before dt {margin-bottom:10px;color:#536297;font-size:24px;font-weight:700;}
+/* 카운트다운 */
+.voting-state .time {margin-top:43px;padding:21px 0 50px;}
+.voting-state .time .logo {width:400px;margin:0 auto;}
+.voting-state .time .logo img {display:block;width:100%;}
+.voting-state .time .count-down {width:600px;height:126px;margin:0 auto;padding-top:33px;background:#e9ebf4;box-sizing:border-box;}
+
+/* 투표완료 */
+.voting-state .cont-area.roster {}
+.voting-state .cont-area.roster .tit-area {padding-top:55px;text-align:center;}
+.voting-state .cont-area.roster .tit-area .tit-best {padding-bottom:3px;color:#111;font-size:26px;font-weight:700;}
+.voting-state .cont-area.roster .tit-area .tit-best .txt-best12 {position:relative;color:#e56066;z-index:10;}
+.voting-state .cont-area.roster .tit-area .tit-best .txt-best12:after {content:"";position:absolute;bottom:0;left:0;z-index:-10;width:100%;height:15px;border-radius:7px;background:#fff6a5;}
+.voting-state .cont-area.roster .tit-area .txt {padding-bottom:42px;color:#222;font-size:17px;}
+.voting-state .cont-area.roster .team {}
+.voting-state .cont-area.roster .allstar-list h3 {padding:51px 0 8px;color:#111;font-size:17px;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul {overflow:hidden;}
+.voting-state .cont-area.roster .allstar-list ul li {float:left;width:504px;padding:5px 6px;border:2px solid #ebebeb;box-sizing:border-box;}
+.voting-state .cont-area.roster .allstar-list ul li:nth-child(2n+2) {float:right;margin:0;}
+.voting-state .cont-area.roster .allstar-list ul li span {display:block;}
+.voting-state .cont-area.roster .allstar-list ul li .photo {float:left;width:91px;margin-right:13px;}
+.voting-state .cont-area.roster .allstar-list ul li .player-info {float:left;width:116px;font-size:15px;}
+.voting-state .cont-area.roster .allstar-list ul li .player-info .emb {width:34px;padding:7px 0 9px;}
+.voting-state .cont-area.roster .allstar-list ul li .player-info .emb img {width:100%;}
+.voting-state .cont-area.roster .allstar-list ul li .player-info .num {padding-bottom:5px;color:#004ca0;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul li .player-info .name {color:#222;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info {float:left;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info .total-point {display:inline-block;margin-top:9px;padding:3px 9px;background:#2975d2;color:#fff;font-size:15px;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info .detail-point {padding:7px 0;font-size:14px;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info .etc {color:#004ca0;font-size:14px;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul li.nanum .player-info .num {color:#ff4f65;}
+.voting-state .cont-area.roster .allstar-list ul li.nanum .mvp-info .total-point {background:#e56066;}
+.voting-state .cont-area.roster .allstar-list ul li.nanum .mvp-info .etc {color:#ff4f65;}
+.voting-state .cont-area.roster .allstar-list ul li.top {border:2px solid #283e91;}
+.voting-state .cont-area.roster .allstar-list ul li.top .mvp-info .no1 {display:inline-block;padding:3px 9px;background:#fdc300;color:#000;font-size:15px;font-weight:700;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info.line2 {margin-top:8px;}
+.voting-state .cont-area.roster .allstar-list ul li.daeho .mvp-info .detail-point {padding:3px 0;}
+.voting-state .cont-area.roster .allstar-list ul li .mvp-info .f12 {font-size:12px;}
+
+.vote-app {position:relative;margin-top:30px;padding:31px 0;background:linear-gradient(131deg, rgba(42,159,217,1) 0%, rgba(38,38,75,1) 40%, rgba(38,38,75,1) 60%, rgba(224,87,129,1) 90%);color:#fff;}
+.vote-app .app-box {position:relative;width:1015px;margin:0 auto;}
+.vote-app .app-box::before {content:"";position:absolute;right:-86px;bottom:-32px;z-index:20;width:510px;height:82px;background:url('../images/sub/bg_deco.png') no-repeat 0 0/100%;}
+.vote-app .app-box .btn-vote-allstar {display:block;width:370px;margin:0 auto;}
+.vote-app .app-box .app-guide01 {padding:17px 0 50px;color:#edd9d9;font-size:24px;font-weight:700;line-height:1.34;text-align:center;letter-spacing:-1.5px;}
+.vote-app .app-box .app-guide01 span {display:block;color:#fff;font-size:17px;}
+.vote-app .app-box .btn-vote {display:block;position:absolute;top:30px;right:58px;width:375px;height:113px;padding:27px 45px 0 0;border-radius:3px;background:#ffe52c url("../images/main/bg_vote.gif") no-repeat 46px 22px;color:#0d378e;font-size:40px;font-weight:700;text-align:right;box-sizing:border-box;}
+.vote-app .app-box .member-join {overflow:hidden;}
+.vote-app .app-box .member-join .notice {float:left;position:relative;margin-top:16px;padding-left:22px;font-size:15px;color:#fff;letter-spacing:-0.5px;}
+.vote-app .app-box .member-join .notice:before {content:"";position:absolute;top:3px;left:0;width:14px;height:14px;background:url("../images/sub/bg_drp.png") no-repeat 0 0/14px;}
+.vote-app .app-box .member-join .btn-member {float:right;position:relative;z-index:20;width:224px;height:45px;padding-right:28px;background:#00113e url("../images/sub/bg_arrow_right.png") no-repeat 92% 50%/20px;color:#f5eed3;font-size:18px;line-height:45px;font-weight:700;text-align:center;box-sizing:border-box;}
+
+.vote-app .app-box.before .btn-vote-allstar,
+.vote-app .app-box.before .app-guide01 {display:none;}
+
+.kbo-area {padding:26px 0 24px;}
+.kbo-area .kbo-box {display:flex;justify-content:space-between;align-items:center;width:938px;margin:0 auto;}

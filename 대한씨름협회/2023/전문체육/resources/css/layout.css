@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+html, body {min-width:1100px;}
+#wrap {min-height:calc(100% - 197px);}
+#contents::after {content:'';display:block;clear:both;}
+
+/* header */
+header {position:fixed;top:0;left:0;width:100%;background-color:#fff;z-index:20;}
+header.on::before {content:'';position:absolute;top:106px;left:0;width:100%;border-bottom:1px solid #eee}
+header.on::after {content:'';position:absolute;top:0;left:0;z-index:-10;width:100%;height:535px;background:#fff;box-shadow:0px 10px 8px rgba(0,0,0,0.1);}
+header .gnb-wrap {position:relative;width:1100px;height:76px;margin:0 auto;}
+header .gnb-wrap h1 {float:left;padding-top:20px;}
+header .gnb-wrap .menu-wrap {float:right;height:100%;}
+header .gnb-wrap .menu-wrap .gnb {height:100%;margin:0 auto;}
+header .gnb-wrap .menu-wrap .gnb li {float:left;}
+header .gnb-wrap .menu-wrap .gnb li a {display:block;padding:30px 0 29px;margin-left:32px;font-size:14px;text-align:center;}
+header .gnb-wrap .menu-wrap .gnb li a:hover,
+header .gnb-wrap .menu-wrap .gnb li a.on {color:#2866c7;}
+header.main .gnb-wrap .menu-wrap .lnb {position:absolute;top:75px;left:0;width:1100px;height:429px;}
+header.main .gnb-wrap .menu-wrap .lnb > li {float:left;width:20%;height:100%;padding:30px 20px 0;border-right:1px solid #eee;text-align:left;}
+header.main .gnb-wrap .menu-wrap .lnb > li:first-child {border-left:1px solid #eee;}
+header.main .gnb-wrap .menu-wrap .lnb > li dl dt {margin-bottom:25px;font-size:14px;font-weight:700;}
+header.main .gnb-wrap .menu-wrap .lnb > li dl dd {margin-bottom:14px;}
+header.main .gnb-wrap .menu-wrap .lnb > li dl dd a {display:inline-block;height:18px;margin:0;padding:0;color:#666;font-size:14px;}
+header.main .gnb-wrap .menu-wrap .lnb > li dl dd a:hover {color:#2866c7;border-bottom:1px solid #2866c7}
+header.main .gnb-wrap .menu-wrap .lnb > li dl:first-child {height:145px;}
+.athletic header .gnb-wrap .menu-wrap .gnb li a:hover,
+.athletic header .gnb-wrap .menu-wrap .gnb li a.on {color:#ec1735;}
+.athletic header .gnb-wrap .menu-wrap .lnb > li dl dd a:hover {color:#db2445;border-bottom:1px solid #db2445}
+
+header .bridge-wrap {width:100%;height:30px;background-color:#2866c7;}
+header .bridge-wrap ul {width:1100px;margin:0 auto;}
+header .bridge-wrap ul li {float:right;width:100px;height:30px;}
+header .bridge-wrap ul li a {display:block;line-height:30px;font-size:14px;color:#fff;text-align:center;}
+header .bridge-wrap ul li.on a {color:#111;background-color:#fff;}
+.athletic header .bridge-wrap {background-color:#db2445;}
+
+/* header - sub */
+header.sub .lnb-wrap {display:block;width:100%;height:60px;background:url('../images/common/bg_lnb.png') center;}
+header.sub .lnb-wrap ul {width:1100px;height:100%;margin:0 auto;vertical-align:top;box-sizing:border-box;}
+header.sub .lnb-wrap ul li {display:none;float:left;width:auto;height:60px;margin:0 80px 0 0;font-size:16px;box-sizing:border-box}
+header.sub .lnb-wrap ul li.on {display:block;}
+header.sub .lnb-wrap ul li a {display:inline-block;height:60px;padding-top:20px;margin-right:55px;font-size:inherit;color:#fff;opacity:0.5;}
+header.sub .lnb-wrap ul li.on a:hover,
+header.sub .lnb-wrap ul li.on a.on {color:#fff;border-bottom:5px solid #2866c7;opacity:1;}
+header.sub .lnb-wrap ul li ul li {display:block;height:auto;margin:0;padding:0;}
+
+.athletic header.sub .lnb-wrap {background:url('../images/common/bg_lnb2.png') center;}
+.athletic header.sub .lnb-wrap ul li.on a:hover,
+.athletic header.sub .lnb-wrap ul li.on a.on {border-bottom:5px solid #db2445;}
+
+/* footer */
+footer {width:100%;height:197px;background:#111}
+footer .inner {position:relative;width:1100px;padding:48px 0 45px;margin:0 auto;}
+footer .inner address {line-height:1.5;margin-top:18px;color:#666;font-style:normal;}
+footer .inner address span {margin:0 20px 0 10px;color:#666;font-style:normal;}
+footer .inner .link {position:absolute;top:79px;right:0;}
+footer .inner .link a {display:inline-block;width:170px;height:40px;padding:10px 20px;margin-left:25px;border:1px solid #666;border-radius:20px}
+footer .inner .link a span {color:#666}
+footer .inner .link a i {float:right;margin-top:3px;}

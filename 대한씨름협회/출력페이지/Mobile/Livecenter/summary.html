@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="title" content=""/>
+  <meta name="description" content="">
+  <meta name="author" content="스포츠투아이"/>
+  <meta name="keywords" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+  <title>대한씨름협회</title>
+  <link rel="shortcut icon" type="image/x-icon" href="">
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+  <script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="../resources/js/iscroll.js"></script>
+  <script type="text/javascript">
+  function loaded() {
+		var myScroll1 = new IScroll('#gnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+		var myScroll2 = new IScroll('#lnb',{
+			eventPassthrough: true, scrollX: true, scrollY: false, preventDefault: false
+		});
+	}
+
+	$(document).ready(function(){
+		var gnbOffset = $( '#gnb' ).offset();
+		$( window ).scroll( function() {
+			if ( $( document ).scrollTop() > gnbOffset.top ) {
+				$( '#gnb' ).addClass( 'fixed' );
+			}
+			else {
+				$( '#gnb' ).removeClass( 'fixed' );
+			}
+		});
+  });
+  </script>
+</head>
+
+<body onload="loaded()">
+  <!-- wrap -->
+  <div id="wrap">
+    <!-- header -->
+    <header class="sub">
+			<div class="logo-wrap">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+			</div>
+      <nav id="gnb" class="scroll-wrap">
+				<div class="scroller">
+					<ul class="menu">
+						<li class="on"><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Vod/index.html">VOD</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li><a href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="lnb-wrap">
+				<div id="lnb" class="scroll-wrap">
+					<div class="scroller">
+						<ul class="lnb">
+							<li class="on"><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+    <!-- // header -->
+    <!-- container -->
+    <div id="container">
+      <div id="contents">
+        <article>
+          <div class="content">
+            <div class="profile-pic">
+              <div>
+  							<img src="../resources/images/main/default_pic2.png">
+                <p class="name">김현수</p>
+                <p>제주특별자치도청</p>
+              </div>
+              <div>
+                <img src="../resources/images/sub/pic.png">
+                <p class="name">김현수</p>
+                <p>제주특별자치도청</p>
+              </div>
+            </div>
+            <div class="profile-box">
+              <div class="blue">
+                <p class="state">LOSE</p>
+
+                <div class="privacy-box">
+                  <ul>
+                    <li>2019. 12. 31</li>
+                    <li>10kg</li>
+                    <li>들배지기</li>
+                    <li>2099년</li>
+                  </ul>
+                </div>
+              </div>
+              <ul class="category">
+                <li>생년월일</li>
+                <li>무게</li>
+                <li>주특기기술</li>
+                <li>데뷔년도</li>
+              </ul>
+              <div class="red">
+                <p class="state win">WIN</p>
+                <div class="privacy-box">
+                  <ul>
+                    <li>2019. 12. 31</li>
+                    <li>10kg</li>
+                    <li>들배지기</li>
+                    <li>2099년</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab-wrap live">
+              <dl class="tab">
+                <dd><a href="../Livecenter/tournament.html">대진표</a></dd>
+                <dd><a href="../Livecenter/detail_match.html">맞대결 비교</a></dd>
+                <!-- 경기중 일때 나오는 탭  -->
+                <dd><a href="../Livecenter/live.html">문자중계</a></dd>
+                <!-- 경기종료 일때 나오는 탭  -->
+                <dd class="on"><a href="../Livecenter/summary.html">경기요약</a></dd>
+                <dd><a href="../Livecenter/vod.html">VOD</a></dd>
+              </dl>
+            </div>
+            <div class="tit-wrap">
+              <p class="game-tit"><span>위더스제약</span>2019 설날장사씨름대회 16강 1조</p>
+            </div>
+            <div class="summary-box">
+              <div>
+                <ul>
+                  <li>
+                    <p class="tit">승리자</p>
+                    <p class="winner red"><span>홍팀</span>김현수</p>
+                  </li>
+                  <li>
+                    <p class="tit">결과</p>
+                    <p class="txt">2승 1패</p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul>
+                  <li>
+                    <p class="tit">평균 시간</p>
+                    <p class="txt">00:33초</p>
+                  </li>
+                  <li>
+                    <p class="tit">비디오 판독</p>
+                    <p class="txt">청: <span>1</span>회 / 홍: <span>1</span>회</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="btw-wrap">
+              <ul class="tab-sm">
+                <li class="on"><a href="">1라운드</a></li>
+                <li><a href="">2라운드</a></li>
+                <li><a href="">3라운드</a></li>
+              </ul>
+              <select>
+                <option>1</option>
+                <option>2</option>
+              </select>
+            </div>
+            <div class="tab-box result">
+              <ul class="chart">
+                <li>
+                  <div class="bar">
+                    <div style="width:40%"><span>23(5)</span></div>
+                  </div>
+                  <div class="tit">기술 시도</div>
+                  <div class="bar">
+                    <div style="width:50%"><span>23(5)</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar">
+                    <div style="width:20%"><span>23(5)</span></div>
+                  </div>
+                  <div class="tit">기술 방어</div>
+                  <div class="bar">
+                    <div style="width:80%"><span>23(5)</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar">
+                    <div style="width:10%"><span>23(5)</span></div>
+                  </div>
+                  <div class="tit">경고</div>
+                  <div class="bar">
+                    <div style="width:50%"><span>23(5)</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="bar">
+                    <div style="width:40%"><span>23(5)</span></div>
+                  </div>
+                  <div class="tit">비디오판독 요청</div>
+                  <div class="bar">
+                    <div style="width:12%"><span>23(5)</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-box result">
+              <ul class="result-box blue">
+                <li>
+                  <p class="sub-txt">결과</p>
+                  <div class="tech-box">
+                    <p class="tech-win">기술 승리</p>
+                    <div class="pic-wrap">
+                      <div class="pic">
+                        <img src="../resources/images/main/default_pic.png">
+                      </div>
+                      <i class="win"></i>
+                    </div>
+                    <p class="name">홍길동</p>
+                    <p class="sosok">부산광역시씨름단</p>
+                  </div>
+                </li>
+                <li>
+                  <p class="sub-txt">승리기술 위치</p>
+                  <div class="label-box">
+                    <ul class="label">
+                      <li><i class="icon block-lg"></i>기술존 1</li>
+                      <li><i class="icon block-g"></i>기술존 2</li>
+                    </ul>
+                    <ul class="label">
+                      <li><i class="icon block-b"></i>승리 기술 위치</li>
+                    </ul>
+                  </div>
+                  <div class="ground blue">
+                    <div class="pin out_1 on"><a href=""><p>32</p></a></div>
+                    <div class="pin out_2"><a href=""><p>55</p></a></div>
+                    <div class="pin out_3"><a href=""><p>55</p></a></div>
+                    <div class="pin out_4"><a href=""><p>55</p></a></div>
+                    <div class="pin out_5"><a href=""><p>55</p></a></div>
+                    <div class="pin out_6"><a href=""><p>55</p></a></div>
+                    <div class="pin out_7"><a href=""><p>55</p></a></div>
+                    <div class="pin out_8"><a href=""><p>55</p></a></div>
+                    <div class="pin out_9"><a href=""><p>55</p></a></div>
+                    <div class="pin out_10 on"><a href=""><p>55</p></a></div>
+                    <div class="pin out_11"><a href=""><p>55</p></a></div>
+                    <div class="pin out_12"><a href=""><p>55</p></a></div>
+                    <div class="pin in_1"><a href=""><p>32</p></a></div>
+                    <div class="pin in_2"><a href=""><p>55</p></a></div>
+                    <div class="pin in_3"><a href=""><p>55</p></a></div>
+                    <div class="pin in_4"><a href=""><p>55</p></a></div>
+                    <div class="pin in_5 on"><a href=""><p>55</p></a></div>
+                    <div class="pin in_6"><a href=""><p>55</p></a></div>
+                    <div class="pin in_7"><a href=""><p>55</p></a></div>
+                    <div class="pin in_8"><a href=""><p>55</p></a></div>
+                    <div class="pin in_9"><a href=""><p>55</p></a></div>
+                    <div class="pin in_10"><a href=""><p>55</p></a></div>
+                    <div class="pin in_11"><a href=""><p>55</p></a></div>
+                    <div class="pin in_12"><a href=""><p>55</p></a></div>
+                    <div class="pop-ground">
+                      <i class="icon btn-x"></i>
+                      <p class="tit">기술 승</p>
+                      <p>왼배지기(허리기술) 1회 성공</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- // container -->
+  </div>
+</div>
+<!-- // wrap -->
+<!-- footer -->
+<footer>
+  <div class="inner">
+    <a href="http://ssireum.sports.or.kr" target="_blank"><i class="icon logo-footer"></i></a>
+    <address>
+      주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장 B103호</span><br/>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span>
+      <p>Copyright ⓒ 대한씨름협회. All rights reserved</p>
+    </address>
+  </div>
+</footer>
+<!-- // footer -->
+</body>
+</html>

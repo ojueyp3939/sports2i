@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한은행 MY CAR KBO리그</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/sub.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.rwdImageMaps.min.js"></script>	
+	<script type="text/javascript" src="resources/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+		});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- container -->
+		<div id="container">			
+			<!-- contents -->
+			<div id="contents" style="width:750px;margin:0 auto;">	
+				<div class="event event01"><img src="resources/images/sub/img_event01.png" alt="" /></div>								
+				<div class="event"><img src="resources/images/sub/img_event03.png" usemap="#event3" alt="" /></div>
+				<map name="event3" id="event3">
+					<area shape="rect" coords="75,365,370,430" href="/Goods/Savings" target="_self" alt="" />
+					<area shape="rect" coords="377,365,670,430" href="/Goods/Deposit" target="_self" alt="" />
+				</map>
+				<div class="event"><a href="https://bit.ly/2rQlSlv"><img src="resources/images/sub/img_event04.png" alt="" /></a></div>
+				<div class="event" style="margin:0;"><a href="https://tong.shinhan.com/rib/any/index.jsp#250KO0100000"><img src="resources/images/sub/img_event02.png" alt="" /></a></div>
+			</div>			
+			<!-- // contents -->			
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

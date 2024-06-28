@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+@font-face {
+  font-family:'sol';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../font/OneShinhanLight.eot');
+  src: url('../font/OneShinhanLight.eot?#iefix') format('embedded-opentype'), url('../font/OneShinhanLight.woff') format('woff');
+}
+@font-face {
+  font-family:'sol';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/OneShinhanMedium.eot');
+  src: url('../font/OneShinhanMedium.eot?#iefix') format('embedded-opentype'), url('../font/OneShinhanMedium.woff') format('woff');
+}
+@font-face {
+  font-family:'sol';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/OneShinhanBold.eot');
+  src: url('../font/OneShinhanBold.eot?#iefix') format('embedded-opentype'), url('../font/OneShinhanBold.woff') format('woff');
+}

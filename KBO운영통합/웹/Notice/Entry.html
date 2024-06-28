@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>KBO 운영 통합 관리 시스템</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 운영 통합 관리 시스템"/>
+    <meta name="author" content="스포츠투아이"/> 	
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui-theme.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/contents.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/popup.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.placeholder.min.js"></script>
+	<script type="text/javascript" src="../resources/js/common.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="inner">
+				<h1><span class="logo"><img src="../resources/images/common/h1_logo_s.png" alt="KBO" /></span><span class="tit">운영 통합 관리 시스템</span></h1>
+				<div class="login-info">
+					<a class="notice" href="#none">
+						<img src="../resources/images/common/btn_notice.png" alt="" />
+						<span class="num">999</span>
+					</a>
+					<span class="user">KBO 관리자님 환영합니다.</span>
+					<a href="#none" class="btn-logout">LOGOUT</a>
+				</div>
+			</div>			
+		</header>
+		<nav id="gnb">
+			<ul class="menu">
+				<li>
+					<a href="#none">현역 선수 등록·말소</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">전체 등록 현황</a></li>
+							<li><a href="#none">선수 관리</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">등록일수 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">연도별 등록 일수</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="#none">선수단 이동 현황 확인</a>
+					<div class="depth2">
+						<ul>
+							<li><a href="#none">구단별</a></li>
+							<li><a href="#none">월별</a></li>
+							<li><a href="#none">항목별</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a href="#none">사용자관리</a></li>
+				<li class="on">
+					<a href="#none">시스템 관리</a>
+					<div class="depth2" style="display:block;">
+						<ul>
+							<li><a href="#none">NOTICE</a></li>
+							<li><a href="#none">엔트리 인원 관리</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<!-- container -->
+		<div id="container">			
+			<div class="tit-area">
+				<div class="inner">
+					<h2>알림</h2>					
+				</div> 
+			</div>
+			<div class="tab-area">
+				<ul class="tab">
+					<li><a href="#none">새로 받은 알림</a></li>
+					<li class="on"><a href="#none">엔트리 등록/말소 이력</a></li>
+					<li><a href="#none">기타 알림</a></li>
+				</ul>
+			</div>
+			<div class="tab-area2">
+				<ul class="tab" style="margin-left:100px;">
+					<li class="on"><a href="#none">KBO 리그</a></li>
+					<li><a href="#none">퓨처스리그</a></li>
+				</ul>
+			</div>
+			<div class="select-area mt20">
+				<div class="radio-area">
+					<input type="radio" name="" id="" />
+					<label for="" class="mr20">수정만 보기</label>
+					<input type="radio" name="" id="" />
+					<label for="">과거순</label>
+				</div>
+				<select name="" id="">
+					<option value="">구단</option>
+					<option value="">KIA</option>
+				</select>
+				<select name="" id="">
+					<option value="">월별</option>
+					<option value="">12</option>
+				</select>
+			</div>
+			<div class="tbl-board">
+				<table class="tbl">
+					<colgroup>
+						<col width="15%" />
+						<col width="15%" />
+						<col width="40%" />
+						<col width="15%" />
+						<col width="15%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>구단</th>
+							<th>구분</th>
+							<th>세부 내용</th>
+							<th>ID</th>
+							<th>업데이트 시간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>KBO</td>
+							<td>제출</td>
+							<td>등록 : 3명&nbsp;&nbsp;&nbsp;&nbsp;말소 : 5명<a class="btn-entry" href="#none">&lt;등록/말소 명단보기&gt;</a></td>
+							<td>SK 김강석</td>
+							<td>6월 18일 18:30</td>
+						</tr>
+						<tr>
+							<td>KBO</td>
+							<td>제출</td>
+							<td>SK 엔트리 최종 승인 </td>
+							<td>SK 김강석</td>
+							<td>6월 18일 18:30</td>
+						</tr>
+					</tbody>						
+				</table>
+			</div>
+			<div class="paging">    
+				<a class="btn btn-first" href="#none">처음으로</a>
+				<a class="btn btn-prev" href="#none">다음</a>
+				<a class="on" href="#none">1</a>
+				<a href="#none">2</a>
+				<a href="#none">3</a>
+				<a href="#none">4</a>
+				<a href="#none">5</a>
+				<a href="#none">6</a>
+				<a href="#none">7</a>
+				<a href="#none">8</a>
+				<a href="#none">9</a>
+				<a href="#none">10</a>
+				<a class="btn btn-next" href="#none">다음</a>
+				<a class="btn btn-last" href="#none">맨끝으로</a>
+			</div>
+		</div>
+		<!-- // container -->			
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<address>Copyrightⓒ KBO, All Rights Reserved.</address>
+	</footer>
+	<!-- // footer -->
+<div id="popup" class="pop-entry-history">
+	<h1>2018년 6월 18일 두산 등록/말소 현황</h1>
+	<div class="contents">
+		<table class="tbl">
+			<colgroup>
+				<col width="30%" />
+				<col width="70%" />
+			</colgroup>
+			<tbody>
+				<tr>
+					<th>등록</th>
+					<td><span>유병석(23)</span></td>
+				</tr>
+				<tr>
+					<th>말소</th>
+					<td><span>유병석(23)</span><span>정상호(33)</span></td>
+				</tr>
+				<tr>
+					<th>코치등록</th>
+					<td><span>유병석(23)</span><span>정상호(33)</span></td>
+				</tr>
+				<tr>
+					<th>코치말소</th>
+					<td><span>유병석(23)</span><span>정상호(33)</span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<a href="#none" class="btn-close"><img src="../resources/images/common/btn_pop_close.gif" alt="" /></a>
+</div>
+<div class="modal"></div>
+</body>
+</html>

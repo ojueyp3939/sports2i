@@ -1,0 +1,300 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<title>KBO 모바일 홈페이지 올스타투표</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO, 한국야구위원회, 프로야구, KBO 리그, 퓨처스리그, 프로야구순위, 프로야구 일정, 올스타, 올스타투표" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	<meta name="format-detection" content="telephone=no" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/allstar.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery.bxslider.min.js"></script>
+	<script type="text/javascript" src="resources/js/iscroll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".part-list .btn-wrap").click(function() {
+				$(this).find('a').toggleClass("on");
+				$(this).next().slideToggle();
+			});
+		});
+
+		function loaded() {
+			var myScroll1 = new IScroll('.player-info-wrap', {
+				eventPassthrough: true,
+				scrollX: true,
+				scrollY: false,
+				preventDefault: false
+			});
+		}
+	</script>
+</head>
+<body onload="loaded()">
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<h1><a href="main_appvote.html" class="logo"><img src="resources/images/common/img_logo_allstar.png" alt="KBO 올스타 로고" /></a></h1>
+			<a href="main_login.html" class="btn-login">로그아웃</a>
+		</header>
+		<!-- // header -->
+		<hr />
+		<section id="contents" class="main-vote">
+			<!-- 올스타 팀 선택 -->
+			<div class="allstar-team">
+				<ul class="allstar">
+					<li class="dream on"><a href="#none" class="menu-dream">드림 올스타</a></li>
+					<li class="nanum on"><a href="#none" class="menu-nanum">나눔 올스타</a></li>
+				</ul>
+				<div class="emb-area nanum"> <!-- 나눔일 경우 nanum 클래스 추가 -->
+					<span class="emb"><img src="resources/images/emblem/emb_139x92_NC.png" alt="NC 다이노스"></span>
+					<span class="emb"><img src="resources/images/emblem/emb_139x92_LG.png" alt="LG 트윈스"></span>
+					<span class="emb"><img src="resources/images/emblem/emb_139x92_WO.png" alt="키움 히어로즈"></span>
+					<span class="emb"><img src="resources/images/emblem/emb_139x92_HT.png" alt="기아 타이거즈"></span>
+					<span class="emb"><img src="resources/images/emblem/emb_139x92_HH.png" alt="한화 이글스"></span>
+				</div>
+			</div>
+			<!-- // 올스타 팀 선택 -->
+			<!-- 선수선택 -->
+			<ul class="part-list" id="PartList">
+				<li>
+					<div class="btn-wrap"><a class="btn-part">선발투수 (0/1)</a></div>
+					<div class="player-info-wrap">
+						<div class="scroller">
+							<ul class="vote-list">
+								<li class="on"><a href="#none">득표순</a></li>
+								<li><a href="#none">WAR</a></li>
+								<li><a href="#none">경기</a></li>
+								<li><a href="#none">ERA</a></li>
+								<li><a href="#none">WHIP</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+							</ul>
+						</div>
+						<div class="info on">
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+						<div class="info no-pick"> <!-- 선수 선택이 불가능할때 no-pick 클래스 추가 -->
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+						<div class="info">
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="btn-wrap"><a class="btn-part">중간투수 (1/1)</a></div>
+					<div class="player-info-wrap">
+						<div class="scroller">
+							<ul class="vote-list">
+								<li class="on"><a href="#none">득표순</a></li>
+								<li><a href="#none">WAR</a></li>
+								<li><a href="#none">경기</a></li>
+								<li><a href="#none">ERA</a></li>
+								<li><a href="#none">WHIP</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+								<li><a href="#none">경기순</a></li>
+							</ul>
+						</div>
+						<div class="info on">
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+						<div class="info">
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+						<div class="info">
+							<div class="img-box"><img src="https://crdfcowjurxm984864.cdn.ntruss.com/person/middle/2019/76232.jpg" alt=""></div>
+							<div class="player-info top">
+								<div class="info-row">
+									<span class="rank">득표 <span>1위</span></span><!-- 나눔팀이 특표 1위일 경우 nanum 클래스 추가 -->
+									<span class="vote-total">득표수 <span>1,000,000</span></span>
+									<a href="#none" class="check-player on">선택</a><!-- 선택시 on 클래스 추가 -->
+								</div>
+								<div class="info-row">
+									<span class="emb"><img src="resources/images/emblem/initial_162_102_HH.png" alt=""></span>
+									<span class="name">하재훈</span>
+									<span class="txt-info">WAR <span>3.34</span></span>
+								</div>
+							</div>
+							<ul class="info-record">
+								<li>경기<span>24</span></li>
+								<li>ERA<span>3.52</span></li>
+								<li>WHIP<span>1.00</span></li>
+								<li>4승 0패</li>
+								<li>4홀드</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<!-- // 선수선택 -->
+			<!-- 투표 팁 -->
+			<p class="txt-tip">* 투표는 <span>각 포지션별 1명, 외야수는 3명 씩 양 팀 모두</span> 선택해야 완료됩니다.</p>
+			<!-- // 투표 팁 -->
+			<!-- 투표하기 버튼 -->
+			<div class="btn-area"><a href="vote/vote_pick.html" class="btn-vote">투표하기</a></div>
+			<!-- // 투표하기 버튼 -->
+		</section>
+		<!-- 푸터 메뉴 -->
+		<footer>
+			<ul class="allstar-list">
+				<li><a href="../event/event.html" class="btn-shinhan">신한 SOL 앱 투표하기</a></li>
+				<li class="on"><a href="main_vote.html" class="btn-vote">올스타 투표</a></li>
+				<li><a href="#none" class="btn-news">NEWS</a></li>
+			</ul>
+		</footer>
+		<!-- // 푸터 메뉴 -->
+	</div>
+	<!-- // wrap -->
+	<!-- 모달창 -->
+	<div id="Modal" style="display:;">
+		<!-- <div class="popup">
+			<a href="#none" class="btn-close"><span>닫기</span></a>
+			<div class="content">
+				<p class="txt-question">투표를 <span>완료</span>하시겠습니까?</p>
+				<div class="btn-area">
+					<a href="#none" class="btn btn-cancel">아니오</a>
+					<a href="#none" class="btn btn-confirm">예</a>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="popup">
+			<div class="content">
+				<a href="#none" class="btn-close"><span>닫기</span></a>
+				<p class="txt-select">나눔 올스타<span class="dp-b"><span class="point">[선발투수]</span>를 선택해주세요.</span></p>
+			</div>
+		</div> -->
+		<div class="popup complete">
+			<a href="#none" class="btn-close"><span>닫기</span></a>
+			<div class="content">
+				<p class="txt-complete">
+					투표가 완료되었습니다.<br/>감사합니다.
+				</p>
+				<p class="tip">
+					KBO 홈페이지(PC/모바일)와<br/>
+					신한은행 SOL 앱에서도 투표가 가능합니다.
+				</p>
+				<div class="btn-area">
+					<a href="#none" class="btn btn-kbo">KBO 모바일 앱<br/>바로가기</a>
+					<a href="#none" class="btn btn-shinhan">신한 SOL 앱<br/>바로가기</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // 모달창 -->
+</body>
+</html>

@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+.video {padding-top:102px;box-sizing:content-box;}
+.video #MainCont {height:calc(56.25vw + 68px);}
+.video #MainCont .live-wrapper {position:fixed;top:102px;z-index:30;width:100%;height:55.9722vw;}
+.video #MainCont .live-wrapper .broadcast .video-js {position:absolute;top:50%;left:50%;margin:-28.9861vw 0 0 -50.5%;}
+.video #MainCont .live-wrapper .control-box {top:0;bottom:auto;}
+.video #MainCont .tit-box {top:56.25vw;}
+
+/* 상세페이지 */
+.video.video-detail {height:calc(100vh - 48px);padding-top:48px;}
+.video.video-detail #MainCont .live-wrapper {top:48px;}
+.video.video-detail #SubCont {height:calc(100vh - 48px - 74.7222vw);}
+/* 탭 */
+.video #SubCont {position:relative;top:68px;}
+.video #SubCont .tit-highlight {display:none;padding:14px 0 13px;background:#fff;color:#1a1a1a;font-size:1.9rem;text-align:center;}
+.video #SubCont #HighLightTabDepth1 {width:100%;background:#fff;border-top:1px solid #ececec;border-bottom:1px solid #f2f2f2;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 {overflow:hidden;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 li {float:left;width:23.333%;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 li:last-child {width:30%;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 li a {display:block;width:100%;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 li a.btn-5gvod {padding-left:3.36111vw;background:url("../images/common/bg_5g_vod.png") no-repeat 0 50%/6.38889vw;}
+.video #SubCont #HighLightTabDepth1 .tab-depth1 li.on a.btn-5gvod {background:url("../images/common/bg_5g_vod_on.png") no-repeat 0 50%/6.38889vw;}
+
+/* 영상리스트 */
+.video .vs-team .tab {margin-top:34px;padding:0 16px;}
+.video .vs-team .roster {padding:0 16px;}
+.video .vs-team .roster h2 {margin:20px 0 9px;}
+.video .vs-team .roster h2 .hash-tag {margin:0;}
+.video .vs-team .vs-box ul li {margin-bottom:0;}
+.video .vs-team .vs-box ul li dl {width:calc(100% - 108px);}
+.video .vs-team .vs-box ul li dl dt {width:100%;}
+
+
+/* 아이폰5 */
+@media(max-width:320px){
+	.highlight {overflow:hidden;height:calc(100vh - 93px);}
+}
+
+@media(orientation:landscape){
+	/* 풀모드일 경우 영상 */
+	#wrap > header {display:none;}
+	.video {height:100vh;padding:0;}
+	.video #MainCont {height:100%;}
+	.video #MainCont .live-wrapper {top:0;height:100vh;}
+	.video #MainCont .tit-box {display:none;}
+	.video #SubCont {display:none;}
+	/* 상세페이지 */
+	.video.video-detail {height:100vh;}
+	.video.video-detail #MainCont .live-wrapper {top:0;}
+}
+@media (min-width:1024px) {
+	#wrap {overflow:hidden;}
+	#wrap > header {display:block;}
+	.video {height:calc(100vh - 96px);padding-top:102px;}
+  #contents.video #MainCont {float:left;width:59.47%;height:auto;}
+	.video #MainCont .live-wrapper {position:relative;top:0;height:37.793vw;}
+  .video #MainCont .live-wrapper .broadcast {float:left;background:#181818;}
+	.video #MainCont .live-wrapper .broadcast .video-js {position:absolute;top:50%;left:50%;height:39vw !important;margin:-19.5vw 0 0 -50.5%}
+  .video #MainCont .live-wrapper .control-box {width:100%;height:37.793vw;}
+  .video #MainCont .live-wrapper .control-box .layer {display:none;}
+  .video #MainCont .tit-box {display:table;position:relative;top:0;}
+	.video #MainCont .tit-box .tit-video {width:490px;}
+	.video #MainCont .control-box .relation-box {display:none;}
+	.video #MainCont .tit-box .btn-area {width:90px;}
+  .video #SubCont {display:block;float:left;top:0;width:40.53%;height:auto;}
+
+	/* 상세페이지 */
+	.video.video-detail {height:calc(100vh - 48px);}
+	.video.video-detail #MainCont .live-wrapper {top:0;}
+	.video.video-detail #SubCont {height:auto;}
+
+	/* 날짜별 경기정보 - 경기중, 종료 */
+	.video .game-list li {width:17vw;margin-right:0.9vw;padding:3.333vw 2.3611vw 3.1944vw;border-radius:18px;font-size:1.4rem;}
+	.video .game-list li .state {margin-bottom:0.8vw;}
+	.video .game-list li .state .kt5g {width:4vw;font-size:1.2rem;}
+	.video .game-list li .team-info .emb {width:3.52vw;max-width:36px;}
+	.video .game-list li .team-info .info {width:calc(100% - 72px);margin-top:0.4vw;}
+	/* 날짜별 경기정보 - 경기취소 */
+	.video .game-list li.cancel .team-info .info .place {font-size:1.2rem;}
+
+	.video .vs-team .vs-box ul {overflow-y:scroll;height:calc(100vh - 343px);}
+	.video.video-detail .vs-team .vs-box ul {height:calc(100vh - 48px - 70px);}
+}

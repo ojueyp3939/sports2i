@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 관중임장수입"/>
+    <meta name="author" content="KBO 관중임장수입"/>
+	<meta name="keywords" content="KBO 관중임장수입" />
+	<title>KBO 관중임장수입</title>
+	<link rel="shortcut icon" href="resources/images/contents/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+</head>
+
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="top">
+				<div class="wrap">
+					<a class="logo" href="user_list_before.html">
+						<img src="resources/images/contents/txt_title.png" alt="KBO 관중임장수입" />
+					</a>
+					
+					<i class="icon-user"></i>
+					<b>두산베어스</b>님 환영합니다.
+					<a href="#" class="btn-logout">
+						LOGOUT
+					</a>
+				</div>
+			</div>
+			<div class="gnb">
+				<div class="wrap">
+					<ul class="menu">
+						<li class="on">
+							<a href="user_list_before.html">등록</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<h3>
+					2023
+					<div class="btn-controll">
+						<a href="user_list_before.html" class="btn cancel">취소</a>
+						<a href="user_list_after2.html" class="btn save">저장</a>
+					</div>
+				</h3>
+				<section class="board-cover">
+					<div class="board left">
+						<ul class="tit-list">
+							<li>구단명</li>
+							<li>홈경기수</li>
+						</ul>
+						<ul class="data-list">
+							<li class="on">
+								<a href="">
+									<span>두산 베어스</span>
+									<span>1</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="board right edit-mode">
+						<ul class="tit-list">
+							<li>경기날짜</li>
+							<li>요일</li>
+							<li>총입장수</li>
+							<li>총입장금액</li>
+						</ul>
+						<ul class="data-list">
+							<li class="on">
+								<a href="">
+									<span>2023.12.25</span>
+									<span>화</span>
+									<span class="txt-r">00,000</span>
+									<span class="txt-r">000,000,000</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>2023.12.25</span>
+									<span>화</span>
+									<span class="txt-r">00,000</span>
+									<span class="txt-r">000,000,000</span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>2023.12.25</span>
+									<span>화</span>
+									<span class="txt-r"></span>
+									<span class="txt-r"></span>
+								</a>
+							</li>
+							<li>
+								<a href="">
+									<span>2023.12.25</span>
+									<span>화</span>
+									<span class="txt-r"></span>
+									<span class="txt-r"></span>
+								</a>
+							</li>
+						</ul>
+						<ul class="total-list">
+							<li>합계</li>
+							<li>00,000</li>
+							<li>000,000,000</li>
+						</ul>
+					</div>
+				</section>
+				<section class="board bottom">
+					<div class="soldout-box"> 
+						<input type="checkbox">
+						<label>매진</label>
+						<input type="text">
+					</div>
+					<table class="tb-mini left">
+						<colgroup>
+							<col width="80px">
+							<col width="150px">
+							<col width="118px">
+							<col width="150px">
+						</colgroup>
+						<tr>
+							<th>경기일자</th>
+							<td>2023.10.10</td>
+							<th>요일</th>
+							<td>수</td>
+						</tr>
+						<tr>
+							<th>홈팀</th>
+							<td></td>
+							<th>경기차수</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>경기장</th>
+							<td></td>
+							<th>점수(홈)</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>원정팀</th>
+							<td></td>
+							<th>점수(원정)</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>리그</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>TV 중계 1</th>
+							<td></td>
+							<th>TV 중계 2</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>TV 중계 3</th>
+							<td></td>
+							<th>TV 중계 4</th>
+							<td></td>
+						</tr>
+						<tr>
+							<th>시리즈</th>
+							<td></td>
+							<th>DH</th>
+							<td></td>
+						</tr>
+					</table>
+					<table class="tb-mini right">
+						<colgroup>
+							<col width="150px">
+							<col width="150px">
+							<col width="150px">
+						</colgroup>
+						<tr>
+							<th></th>
+							<th class="txt-c">입장객</th>
+							<th class="txt-c">입장금액</th>
+						</tr>
+						<tr>
+							<th>일반 관중(유료)</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+						</tr>
+						<tr>
+							<th>스카이박스</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+						</tr>
+						<tr>
+							<th>어린이(무료)</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+						</tr>
+						<tr>
+							<th>우대석(무료)</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+						</tr>
+						<tr>
+							<th>카드 할인</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th>멤버십</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th>광고 및 프로모션</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th>기타1</th>
+							<td>
+								<input type="number">
+							</td>
+							<td>
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th>기타2</th>
+							<td>
+								<input type="number">
+							</td>
+							<td>
+								<input type="number">
+							</td>
+						</tr>
+						<tr>
+							<th>합계</th>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+							<td>
+								<input type="number" value="00,000" disabled>
+							</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<span>Copyright ©KBO, All Rights Reserved.</span>
+	</footer>
+	<!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+
+/* 라이브 공통 */
+/** 스트리밍 **/
+.after {display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:-1;}
+.control-box {position:absolute;top:0;left:0;width:100%;height:56.25vw;z-index:5;color:#fff;}
+.control-box.highlight-control {height:calc(56.25vw - 3em);}
+/* .control-box:after {content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.4);z-index:-1;} */
+.control-box .tit-game {padding:17px 0 0 12px;font-size:1.5rem;font-weight:400;text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);}
+.control-box .btn-player {position:absolute;top:50%;left:50%;width:18.6112vw;height:18.6112vw;margin:-9.3056vw 0 0 -9.3056vw;}
+.control-box.highlight-control .btn-player {margin:-4.6528vw 0 0 -9.3056vw;}
+.control-box .btn-player .btn-play {display:block;width:100%;height:100%;background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/37.2224vw;text-indent:-99999vw;border:none;border-radius:inherit;}
+.control-box .btn-player .stop {background-position:-18.6112vw;}
+.control-box .btn-control {position:absolute;right:12px;bottom:11px;}
+
+.control-box .btn-control .btn-quality-wrap {position:relative;float:left;margin-top:2px;}
+.control-box .btn-control .btn-quality-wrap .btn-quality {display:block;padding:0.8334vw 4.4445vw 1.1112vw 1.6667vw;background:url("../images/playball/bg_quality_sort.png") no-repeat right 1.6667vw top 2.2223vw/1.6667vw;font-size:1.1rem;color:#fff;border:1px solid #e5e5e5;border-radius:5px;text-align:center;}
+.control-box .btn-control .btn-quality-wrap .quality-list {position:absolute;left:0;bottom:30px;width:100%;}
+.control-box .btn-control .btn-quality-wrap .quality-list li {width:95%;margin:0 auto 2px;}
+.control-box .btn-control .btn-quality-wrap .quality-list li a {display:block;width:100%;height:100%;padding:3px 0;background:rgba(0,0,0,0.5);font-size:1.0rem;font-weight:100;color:#fff;text-align:center;}
+.control-box .btn-control .btn-volume {float:left;width:7.2223vw;height:7.2223vw;margin-left:8px;background:url("../images/playball/btn_streaming_volume.png") no-repeat 0 0/100%;text-indent:-9999vw;}
+.control-box .btn-control .btn-volume.on {background-position:0 100%;}
+.control-box .btn-control .btn-mode {float:left;width:6.6667vw;margin:3px 0 0 8px;}
+.control-box .btn-control .btn-mode img:first-child {display:block;}
+.control-box .btn-control .btn-mode img:last-child {display:none;}
+.control-box .no-login {}
+.control-box .preview-play {overflow:hidden;position:absolute;right:12px;bottom:12px;}
+.control-box .preview-play dt {float:left;margin:3px 7px 0 0;}
+.control-box .preview-play dt span {color:#fff200;}
+.control-box .preview-play dd {float:left;}
+.control-box .preview-play dd .btn-view {display:block;padding:2px 4px 3px;background:rgba(255,255,255,0.5);border:1px solid #fff;color:#fff;}
+.control-box .btn-view-wrap {position:absolute;top:15px;right:12px;}
+.control-box .btn-view-wrap .btn-view {display:block;width:21.8667vw;padding:9px 1.80556vw 9px 6.222vw;background:rgba(0,0,0,0.7) url("../images/playball/bg_live_view.png") no-repeat 1.08334vw 50%/3.6111vw;color:#fff;border:1px solid #fff;border-radius:4px;}
+
+.preview-end {position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);color:#fff;z-index:5;}
+.preview-end dt {padding-top:18.8889vw;line-height:1.5;text-align:center;}
+.preview-end dt span {color:#fff200;}
+.preview-end dd {width:20.417vw;margin:14px auto 0;}
+.preview-end dd .btn-view {display:block;width:100%;padding:1.67vw 0;background:rgba(255,255,255,0.5);border:1px solid #fff;color:#fff;text-align:center;}
+
+
+/** 관전포인트 **/
+.game-point {background:#f5f5f5;}
+.game-point .info-box {background:#fff;border-bottom:1px solid #ececec;}
+.game-point .info-box .player-info {overflow:hidden;padding:11px 12px 15px;border-top:1px solid #ececec;border-bottom:1px solid #ececec;}
+.game-point .info-box .player-info .player-img {float:left;width:21%;margin-top:5px;}
+.game-point .info-box .player-info .info-wrap {float:right;width:70%;}
+.game-point .info-box .player-info .info {margin-bottom:4px;}
+.game-point .info-box .player-info .info .emb {display:inline-block;width:32px;margin-right:5px;vertical-align:middle;}
+.game-point .info-box .player-info .info .name {font-size:1.4rem;vertical-align:middle;}
+.game-point .info-box .player-info .data-box {}
+.game-point .info-box .player-info .data-box h4 {margin-bottom:5px;font-size:1.3rem;font-weight:400;color:#888;}
+.game-point .info-box .player-info .data-box .record {overflow:hidden;padding:6px 0 9px;background:#f7f7f7;}
+.game-point .info-box .player-info .info-wrap .data-box .record dl {float:left;width:28%;text-align:center;}
+.game-point .info-box .player-info .info-wrap .data-box .record dl:first-child {width:22%;}
+.game-point .info-box .player-info .info-wrap .data-box .record dl:last-child {width:22%;}
+.game-point .info-box .player-info .info-wrap .data-box .record dt {margin-bottom:8px;color:#8e8e8e;}
+.game-point .info-box .player-info .info-wrap .data-box .record dd {}
+.game-point .info-box .record-box {padding:13px 12px 14px;background:#fafafa;}
+.game-point .info-box .record-box .tit {margin-bottom:23px;font-size:1.3rem;}
+.game-point .info-box .record-box .tit .name {padding-left:5px;color:#ff4b53;}
+.game-point .info-box .record-box .record-wrap {}
+.game-point .info-box .record-box .record-wrap .hit-rate {}
+.game-point .info-box .record-box .record-wrap .hit-rate dl {overflow:hidden;margin-bottom:10px;}
+.game-point .info-box .record-box .record-wrap .hit-rate dt {float:left;width:18%;margin-right:4.5%;text-align:justify;letter-spacing:-0.01em;}
+.game-point .info-box .record-box .record-wrap .hit-rate dd {float:left;}
+.game-point .info-box .record-box .record-wrap .hit-rate dd.graph-wrap {position:relative;width:59%;height:10px;margin-top:2px;background:#e6e6e6;text-indent:-99999px;}
+.game-point .info-box .record-box .record-wrap .hit-rate dd.graph-wrap .graph {position:absolute;top:0;left:0;width:100%;height:100%;background:#888;}
+.game-point .info-box .record-box .record-wrap .hit-rate dd.txt {float:right;}
+.game-point .info-box .record-box .record-wrap .hit-rate .pointer dd.graph-wrap .graph {position:absolute;top:0;left:0;width:50%;height:100%;background:#ff4b53;}
+.game-point .info-box .record-box .record-wrap .hit-rate .pointer dd.txt {color:#ff4b53;}
+.game-point .info-box .record-box .record-wrap .hotcoldzone {overflow:hidden;padding:0;border:none;}
+.game-point .info-box .record-box .record-wrap .hotcoldzone .zone {float:none;width:58vw;height:58vw;margin:0 auto;}
+.game-point .info-box .record-box .record-wrap .hotcoldzone .tbl-hotcold.front {width:38vw;height:38vw;margin:-19vw 0 0 -19vw;}
+.game-point .info-box .record-box .record-wrap .hotcoldzone .tbl-hotcold td {font-size:1.3rem;}
+.game-point .info-box .record-box .record-wrap .hit-result dt {width:25%;margin-right:2.5%;}
+.game-point .info-box .record-box .record-wrap .hit-result dt .rank {margin-right:4px;}
+.game-point .info-box .record-box .record-wrap .hit-result dd.graph-wrap {width:55%;}
+.game-point .info-box .record-box .record-wrap .hit-result .top dd.graph-wrap .graph {position:absolute;top:0;left:0;width:50%;height:100%;background:#ff4b53;}
+.game-point .info-box .record-box .record-wrap .hit-result .top dd.txt {color:#ff4b53;}
+.game-point .info-box .record-box .record-wrap .hit-direction {position:relative;width:229px;height:164px;margin:0 auto;background:url("../images/playball/bg_ground.png") no-repeat 50% 50% / 229px;}
+.game-point .info-box .record-box .record-wrap .hit-direction li {position:absolute;top:;left:;padding:4px 6px;background:rgba(0,0,0,0.75);font-size:1.5rem;color:#fff;border-radius:7px;text-align:center;}
+.game-point .info-box .record-box .record-wrap .hit-direction .left {top:40px;left:13px;}
+.game-point .info-box .record-box .record-wrap .hit-direction .center {top:13px;left:94px;}
+.game-point .info-box .record-box .record-wrap .hit-direction .right {top:40px;right:13px;}
+.game-point .info-box .record-box .no-record {padding:35px 0;text-align:center;color:#888;}
+.game-point .info-box.hitter .order {padding:9px 0 11px;font-size:1.4rem;text-align:center;border-top:1px solid #ececec;}
+.game-point .info-box.hitter .player-info .info {float:right;width:70%;margin-bottom:4px;}
+.game-point .info-box.hitter .player-info .info .season-rate {display:none;}
+.game-point .info-box.hitter .player-info .data-box {float:right;width:70%;}
+.game-point .info-box.hitter .player-info .data-box .record {padding:9px 10px;min-height:51px;}
+.game-point .info-box.hitter .player-info .data-box .record dl {float:none;width:100%;text-align:left;}
+.game-point .info-box.hitter .player-info .data-box .record dt {margin-bottom:5px;color:#1a1a1a;}
+.game-point .info-box.hitter .player-info .data-box .record dd span {display:inline-block;min-width:30px;}
+.game-point .info-box.hitter .player-info .data-box .record p {text-align:center;padding-top:9px;color:#888;}
+.game-point .info-box.hitter .record-box {background:#fff;}
+
+.game-point .info-box.hitter .bx-wrapper .bx-controls-direction a {top:19px;z-index:10;}
+.game-point .info-box.hitter .bx-wrapper .bx-prev {background:url("../images/common/btn_controls_prev.png") no-repeat 50% 50% / 9px;}
+.game-point .info-box.hitter .bx-wrapper .bx-next {background:url("../images/common/btn_controls_next.png") no-repeat 50% 50% / 9px;}
+
+/** 그래픽중계 상단 pts 영역 **/
+.graphic-relay {position:relative;width:100%;height:100%;background:url("../images/playball/bg_ground_day_full.png") no-repeat 50% 50%/100.5%;}
+.graphic-relay.night {background:url("../images/playball/bg_ground_night_full.png") no-repeat 0 0/100%;}
+.graphic-relay .match-box {position:relative;width:62.2223vw;margin:0 auto;background:#252525;;font-weight:100;z-index:5;}
+.graphic-relay .match-box .player-info {width:100%;padding:4px 0;font-size:0.9rem;color:#fff;text-align:center;}
+.graphic-relay .match-box .player-info li {display:inline-block;margin:0 1.6667vw;}
+.graphic-relay .match-box .scoreboard {overflow:hidden;padding:0 5.5556vw 0 7.2223vw;font-size:0.9rem;color:#fff;}
+.graphic-relay .match-box .scoreboard .team {float:left;width:12.5vw;}
+.graphic-relay .match-box .scoreboard .team table td {max-width:45px;padding:0 0 2px 0;text-align:left;}
+.graphic-relay .match-box .scoreboard .team .tit {overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:100%;padding-left:1.6667vw;}
+.graphic-relay .match-box .scoreboard .team .emb {display:inline-block;width:4.1667vw;/* vertical-align:middle; */vertical-align:text-bottom;}
+.graphic-relay .match-box .scoreboard > .inning {display:none;}
+.graphic-relay .match-box .scoreboard .record {float:left;width:3.8889vw;}
+.graphic-relay .match-box .scoreboard .record table tbody td:first-child {color:#ff9e15;}
+.graphic-relay .match-box .scoreboard .record table tbody td {height:15px;padding-bottom:3px;}
+
+.graphic-relay .match-box .scoreboard .state {float:right;width:32.5vw;}
+.graphic-relay .match-box .scoreboard .state > .ballcount {display:none;}
+.graphic-relay .match-box .scoreboard .state > .current {float:right;width:100%;}
+.graphic-relay .match-box .scoreboard .state > .current .base {position:relative;float:right;width:24px;height:25px;margin:5px 0 3px 2.7778vw;}
+.graphic-relay .match-box .scoreboard .state > .current .base li {position:absolute;top:0;width:8px;height:8px;background:#111;border:1px solid #6c6c6c;text-indent:-99999vw;-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);-o-transform: rotate(45deg);transform: rotate(45deg);}
+.graphic-relay .match-box .scoreboard .state > .current .base li.on {background:#ff9e15;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b1 {top:6px;right:2px;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b2 {top:0;left:50%;margin-left:-4px;}
+.graphic-relay .match-box .scoreboard .state > .current .base li.b3 {top:6px;left:2px;}
+.graphic-relay .match-box .scoreboard .state > .current .ballcount {float:right;margin-top:8px;color:#b7b7b7}
+.graphic-relay .match-box .scoreboard .state > .current .inning {float:right;margin:8px 5px 0 0;color:#e1e1e1;text-align:center;}
+
+.graphic-relay .match-box .scoreboard table {width:100.8%}
+.graphic-relay .match-box .scoreboard table tbody tr th, .graphic-relay .scoreboard table tbody tr td {font-weight:100;text-align:center;vertical-align:middle;}
+.graphic-relay .match-box .scoreboard table thead th {display:none;}
+.graphic-relay .match-box .scoreboard table td:not(:first-child) {display:none;}
+
+.graphic-relay .hitter-graphic {position:absolute;bottom:0;left:50%;width:23.4723vw;margin-left:-34.5834vw;}
+.graphic-relay .hitter-graphic.left {margin-left:11.1111vw;}
+.graphic-relay .pts-area {position:absolute;bottom:2.2223vw;left:50%;width:26.9446vw;height:34.1668vw;margin-left:-13.4723vw;z-index:5;}
+.graphic-relay .strike-zone {position:absolute;bottom:10.6945vw;left:50%;width:13.4723vw;height:17.0834vw;margin-left:-6.7362vw;background:url("../images/playball/bg_strikezone_full.png") no-repeat 0 0;background-size:100%;text-indent:-9999vw;}
+.graphic-relay .btn-area {position:absolute;bottom:2.2223vw;right:1.6667vw;width:10vw;}
+.graphic-relay .btn-area a {display:block;width:100%;padding:1.6667vw;}
+
+.graphic-relay .no-data {position:absolute;top:0;left:0;width:100%;height:100.5%;z-index:5;color:#fff;display:table;}
+.graphic-relay .no-data:after {content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);z-index:-1;}
+.graphic-relay .no-data .txt {display: table-cell;font-size:1.6rem;font-weight:100;vertical-align:middle;text-align:center;}
+
+
+/*** 응원하기 채팅창 팝업 ***/
+.chat-tab {display:none;}
+#PopChat {position:fixed;bottom:0;width:100vw;height:calc(100vh - 56.25vw);background:#fff;z-index:20;}
+#PopChat header {position:absolute;top:0;left:0;overflow:hidden;width:100%;height:14.4445vw;background:#fff;padding:13.5px 0 12.5px;border-bottom:1px solid #ececec;z-index:5;}
+#PopChat header .btn-share {float:left;width:6.3889vw;height:6.9445vw;margin-left:8px;padding:1.1112vw;}
+#PopChat header .btn-close {float:right;margin-right:12px;}
+#PopChat .content {height:100%;padding:14.4445vw 0 15.8334vw;background:#f5f5f5;overflow-y:auto;}
+#PopChat .content .chat-box {padding:0 12px;}
+#PopChat .content .chat-box li {overflow:hidden;width:100%;margin:10px 0;padding:0 7px;}
+#PopChat .content .chat-box .intro {padding:5px 0;font-size:1.1rem;color:#888;text-align:center;}
+#PopChat .content .chat-box li dl {max-width:100%;display:inline-block;position:relative;float:left;padding:8px 12px 10px;background:#fff;border:1px solid #dbdbdb;border-radius:0 6px 6px 6px;}
+#PopChat .content .chat-box li dl:after {content:"";position:absolute;top:-1px;left:-8px;width:8px;height:11px;background:url("../images/playball/bg_tooltip.png") no-repeat 0 0/8px;}
+#PopChat .content .chat-box li .me {float:right;background:#f5eaea;border:1px solid #fd6c7d;border-radius:6px 0 6px 6px;}
+#PopChat .content .chat-box li .me:after {top:-1px;left:inherit;right:-8px;background:url("../images/playball/bg_tooltip_me.png") no-repeat 0 0/8px;}
+#PopChat .content .chat-box li dl .user-info {margin-bottom:6px;font-size:1.2rem;color:#888;}
+#PopChat .content .chat-box li dl .user-info .emb {display:inline-block;width:37px;vertical-align:middle;}
+#PopChat .content .chat-box li dl .user-info .nickname {vertical-align:middle;}
+#PopChat .content .chat-box li dl dd {word-break:break-all;}
+#PopChat .content .btn-chat-go {display:none;}
+#PopChat footer {position:absolute;left:0;bottom:0;width:100%;height:15.8334vw;padding:0 3.3332vw;background:#fff;border-top:1px solid #ececec ;}
+#PopChat footer .input-box {display:table;width:100%;height:15.8334vw;padding:3.0556vw 0;}
+#PopChat footer .input-box label {display:inline-block;width:75vw;min-height:100%;margin-right:2.5vw;padding:2.2223vw 2.7778vw;vertical-align:middle;border:1px solid #ececec;border-radius:6px;}
+#PopChat footer .input-box label input {float:left;width:85%;vertical-align:middle;outline-style:none;box-shadow:none;border-color:transparent;color:#1a1a1a;}
+#PopChat footer .input-box label .txt-info {float:right;font-size:1.1rem;color:#888;}
+#PopChat footer .input-box .btn-app {display:inline-block;width:15.6vw;vertical-align:middle;}
+#PopChat footer .input-box .btn-app a {display:block;width:100%;height:9.1667vw;line-height:9.1667vw;background:#ff4b53;color:#fff;text-align:center;border-radius:6px;}
+#PopChat footer .no-login {position:absolute;top:0;left:0;display:table;width:100vw;height:15.8334vw;background:#d5d5d5;color:#888;text-align:center;}
+#PopChat footer .no-login span {display:table-cell;vertical-align:middle;}
+#PopChat footer .copy {position:absolute;top:0;left:0;display:table;width:100vw;height:15.8334vw;background:rgba(0,0,0,0.9);color:#fff;vertical-align:middle;text-align:center;}
+#PopChat footer .copy span {display:table-cell;vertical-align:middle;}
+
+
+@media(orientation:landscape){
+	/* full 화면일 때 중계보기 버튼 */
+	#contents #MainCont.highlight-view {height:100vh;}
+
+	.control-box.highlight-control {height:calc(100% - 3em);}
+	.control-box .btn-view-wrap .btn-view {width:15.6667vw;}
+	.control-box .btn-player {width:10.5469vw;height:10.5469vw;margin:-5.27345vw 0 0 -5.27345vw;}
+	.control-box.highlight-control .btn-player {margin:-4.6528vw 0 0 -5.27345vw;}
+	.control-box .btn-player .btn-play {background-size:200%;}
+	.control-box .btn-player .btn-play.stop {background-position:100%;background-size:200%;}
+	.control-box.highlight-control .btn-control .btn-volume {width:5.8438vw;height:5.8438vw;}
+	.control-box.highlight-control .btn-control .btn-mode img:first-child {display:none;}
+	.control-box.highlight-control .btn-control .btn-mode img:last-child {display:block;}
+	.control-box.highlight-control .btn-control .btn-mode {width:4.8438vw;height:4.8438vw;margin:5px 0 0 8px;}
+
+	/* 풀모드 */
+	/* 스트리밍 */
+	.full-mode .control-box .btn-control {right:12px;bottom:11px;}
+	.full-mode .control-box .btn-control .btn-volume {width:5.8438vw;height:5.8438vw;}
+	.full-mode .control-box .btn-control .btn-mode {display:block;width:4.8438vw;height:4.8438vw;margin:2px 0 0 8px;}
+	.full-mode .control-box .btn-control .btn-mode img:first-child {display:none;}
+	.full-mode .control-box .btn-control .btn-mode img:last-child {display:block;}
+	/* 중계 하이라트 */
+	.full-mode .control-box.highlight-control .btn-control {right:12px;bottom:11px;}
+	.full-mode .control-box.highlight-control .btn-control .btn-volume {width:5.8438vw;height:5.8438vw;}
+	.full-mode .control-box.highlight-control .btn-control .btn-mode {display:block;width:4.8438vw;height:4.8438vw;margin:3px 0 0 8px;}
+	.full-mode .control-box.highlight-control .btn-control .btn-mode img:first-child {display:none;}
+	.full-mode .control-box.highlight-control .btn-control .btn-mode img:last-child {display:block;}
+}
+
+@media(min-width:1024px){
+	/* 관전포인트txt */
+	p.description {padding:18px 12px 10px 53px;background:url("../images/common/ico_notice.gif") no-repeat 36px 1.44em;background-size:14px;font-size:1.5rem;}
+
+	/* 버튼 */
+	.control-box.view-box {height:calc(387px - 3em);}
+	.control-box .btn-player {width:9.082vw;height:9.082vw;margin:-4.541vw 0 0 -4.541vw;}
+	.control-box .btn-player .btn-play {background:url("../images/playball/btn_streaming_player.png") no-repeat 0 0/18.5547vw;}
+	.control-box .btn-control {right:15px;bottom:12px;}
+	.control-box .btn-control .btn-quality-wrap .btn-quality {padding:0.6348vw 2.637vw 0.7324vw 1.0254vw;background:url("../images/playball/bg_quality_sort.png") no-repeat right 1.07422vw top 1.3184vw/0.7813vw;font-size:1.5rem;}
+	.control-box.highlight-control .btn-control .btn-volume {width:3.468vw;height:3.468vw;margin-left:12px;}
+	.control-box.highlight-control .btn-control .btn-mode {width:3.223vw;height:auto;}
+	.control-box.highlight-control .btn-control .btn-mode img:first-child {display:block;}
+	.control-box.highlight-control .btn-control .btn-mode img:last-child {display:none;}
+	.control-box .btn-control .btn-mode {width:3.223vw;margin:8px 0 0 12px;}
+	.control-box .btn-control .btn-quality-wrap .quality-list {bottom:37px;}
+	.control-box .btn-control .btn-quality-wrap .quality-list li a {padding:7px 0;font-size:1.4rem;}
+	.control-box .btn-control .btn-volume {width:4.15039vw;height:4.15039vw;}
+
+	/*  */
+	.control-box .btn-view-wrap {right:15px;}
+	.control-box .btn-view-wrap .btn-view {width:9.8633vw;padding:15px 0.8301vw 14px 3.2715vw;background:rgba(0,0,0,0.7) url("../images/playball/bg_live_view.png") no-repeat 0.9277vw 50%/1.66016vw}
+
+	/* 풀모드 */
+	/* 스트리밍 */
+	.full-mode .control-box .btn-control .btn-mode {margin:2px 0 0 18px;}
+	/* 중계 하이라이트 */
+	.full-mode .control-box.highlight-control .btn-control {right:15px;bottom:12px;}
+	.full-mode .control-box.highlight-control .btn-control .btn-volume {width:4.15039vw;height:4.15039vw;}
+	.full-mode .control-box.highlight-control .btn-control .btn-mode {width:4.223vw;height:4.223vw;margin:2px 0 0 12px;}
+
+	/* 투수 */
+	.game-point .info-box {overflow:hidden;margin-bottom:10px;border-bottom:1px solid #ccc;}
+	.game-point .info-box h2.tit {padding:27px 0 10px 40px;background:#fff;border-bottom:1px solid #ccc;font-size:1.9rem;font-weight:700;}
+	.game-point .info-box .player-info {float:left;width:50%;padding:20px 10px 16px 40px;border-top:1px solid #ccc;border-top:0;border-bottom:0;}
+	.game-point .info-box .player-info .player-img {width:18.182%;}
+	.game-point .info-box .player-info .info-wrap {width:81.818%;padding-left:5.6338%;}
+	.game-point .info-box .player-info .info {margin-bottom:12px;}
+	.game-point .info-box .player-info .info .name {font-size:1.7rem;font-weight:700;}
+	.game-point .info-box .player-info .data-box h4 {margin-bottom:7px;font-size:1.6rem;}
+	.game-point .info-box .player-info .info-wrap .data-box .record dt {margin-bottom:16px;font-size:1.6rem;}
+	.game-point .info-box .player-info .info-wrap .data-box .record dd {font-size:1.5rem;}
+	.game-point .info-box .player-info .data-box .record {padding:11px 0 13px;}
+	.game-point .info-box .record-box {float:right;width:50%;padding:56px 40px 16px 0;background:#fff;border-top:0;}
+	.game-point .info-box .record-box .tit {margin-bottom:7px;font-size:1.6rem;}
+	.game-point .info-box .record-box .tit .name {padding-left:6px;}
+	.game-point .info-box .record-box .record-wrap .hit-rate {padding:16px 26px 15px 36px;background:#fafafa;font-size:1.5rem;}
+	.game-point .info-box .record-box .record-wrap .hit-rate dt {margin-right:5%;}
+	.game-point .info-box .record-box .record-wrap .hit-rate dd.graph {width:71.6%;}
+	.game-point .info-box .record-box .record-wrap .hit-rate .pointer {margin-bottom:0;}
+	.game-point .info-box .record-box .record-wrap .hotcoldzone {padding:41px 0;background:#fafafa;}
+	.game-point .info-box .record-box .record-wrap .hotcoldzone .zone {width:20.411vw;height:20.411vw;}
+	.game-point .info-box .record-box .record-wrap .hotcoldzone .zone .tbl-hotcold.back tr:first-child td {padding-top:10px;}
+	.game-point .info-box .record-box .record-wrap .hotcoldzone .zone .tbl-hotcold.back tr:last-child td {padding-bottom:10px;}
+ 	.game-point .info-box .record-box .record-wrap .hotcoldzone .tbl-hotcold.front {width:13.5vw;height:13.5vw;margin:-6.75vw 0 0 -6.75vw;}
+	/* 타자 */
+	.game-point .info-box.hitter {margin-bottom:0;background:#f5f5f5;border-bottom:0;}
+	.game-point .info-box.hitter h2.tit {margin-bottom:10px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+	.game-point .info-box.hitter .hitter-num {width:58.7891vw;height:57.03125vw;background:#fff;}
+	.game-point .info-box.hitter .order {padding:12px 0 11px;background:#fff;border-top:0;border-bottom:2px solid #f5f5f5;font-size:1.7rem;}
+	.game-point .info-box.hitter .player-info {float:initial;width:100%;padding:25px 22px 17px 11px;background:#fff;border-bottom:2px solid #f5f5f5;}
+	.game-point .info-box.hitter .player-info .player-img {width:28.0731%;margin:0;}
+	.game-point .info-box.hitter .player-info .info {width:71.9269%;padding:27px 0 0 15px;}
+	.game-point .info-box.hitter .player-info .info .emb {width:40px;margin-right:3px;}
+	.game-point .info-box.hitter .player-info .data-box {float:left;width:100%;}
+	.game-point .info-box.hitter .player-info .data-box h4 {margin:28px 0 4px;font-size:1.5rem;}
+	.game-point .info-box.hitter .player-info .data-box .record {padding:12px 0 12px 14px;font-size:1.5rem;}
+	.game-point .info-box.hitter .player-info .data-box .record p {padding:14px 0 13px;font-size:1.2rem;}
+	.game-point .info-box.hitter .record-box {width:100%;padding:18px 12px 16px 11px;}
+	.game-point .info-box.hitter .record-box .tit {margin:0;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-rate {padding:21px 0 0 4px;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-rate dt {overflow:hidden;width:37%;white-space:nowrap;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-result dd.graph-wrap {width:43%;margin-top:5px;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-rate .season dt, .game-point .info-box.hitter .record-box .record-wrap .hit-rate .pointer dt {width:16%;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-rate .season dd.graph-wrap, .game-point .info-box.hitter .record-box .record-wrap .hit-rate .pointer dd.graph-wrap {width:59%;margin-top:4px;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-direction {margin:50px auto 0;}
+	.game-point .info-box.hitter .record-box .record-wrap .hit-direction li {padding:2px 5px 1px;}
+	.game-point .info-box.hitter .record-box .no-record {padding:74px 0 0 0;}
+
+	/* 그래픽중계 */
+	.graphic-relay .match-box {width:43.8476vw;}
+	.graphic-relay .match-box .player-info {padding:7px 0;font-size:1.6rem;}
+	.graphic-relay .match-box .player-info li {margin:0 0.8789vw;}
+	.graphic-relay .match-box .scoreboard {padding:0 4.6875vw 0 5.2734vw;}
+	.graphic-relay .match-box .scoreboard table {font-size:1.6rem;}
+	.graphic-relay .match-box .scoreboard .team table td {padding:0 0 4px 0;}
+	.graphic-relay .match-box .scoreboard .team table tr:last-child td {padding:0 0 6px 0;}
+	.graphic-relay .match-box .scoreboard .team {width:8.3008vw;}
+	.graphic-relay .match-box .scoreboard .team .emb {width:2.8320vw;}
+	.graphic-relay .match-box .scoreboard .team .tit {padding-left:1.4160vw;}
+	.graphic-relay .match-box .scoreboard .record {width:2.1484vw;}
+	.graphic-relay .match-box .scoreboard .record table tbody tr td:first-child {padding-top:2px;}
+	.graphic-relay .match-box .scoreboard .record table tbody td {height:20px;padding-bottom:6px;}
+	.graphic-relay .match-box .scoreboard .state {width:23.4375vw;}
+	.graphic-relay .match-box .scoreboard .state > .current {font-size:1.6rem;}
+	.graphic-relay .match-box .scoreboard .state > .current .base {width:42px;height:31px;margin:3px 0 0 2.2460vw;}
+	.graphic-relay .match-box .scoreboard .state > .current .base li {width:16px;height:16px;}
+	.graphic-relay .match-box .scoreboard .state > .current .base li.b1 {top:14px;right:0;}
+	.graphic-relay .match-box .scoreboard .state > .current .base li.b2 {margin-left:-8px;}
+	.graphic-relay .match-box .scoreboard .state > .current .base li.b3 {top:14px;left:0;}
+	.graphic-relay .match-box .scoreboard .state > .current .ballcount {margin-top:13px;}
+	.graphic-relay .match-box .scoreboard .state > .current .inning {margin:13px 13px 0 0;}
+
+	/* hitter */
+	.graphic-relay .hitter-graphic.left {margin-left:6.4941vw;}
+	.graphic-relay .hitter-graphic {width:13.9649vw;margin:0 0 0.9766vw -20.6055vw;}
+	.graphic-relay .pts-area {bottom:4.4922vw;width:15.9180vw;height:18.9454vw;margin-left:-7.959vw;}
+	.graphic-relay .strike-zone {bottom:9.0332vw;width:7.9590vw;height:9.4727vw;margin-left:-3.9795vw;}
+	.graphic-relay .btn-area {bottom:0.2223vw;right:0.2223vw;width:7vw;}
+	.graphic-relay .no-data .txt {font-size:1.7rem;}
+
+	/*** 응원하기 ***/
+	#PopChat {display:none;}
+	.chat-tab {display:block;}
+	.chat-tab {position:absolute;top:0;right:0;width:336px;}
+	.chat-tab h1 {width:50%;float:right;border-bottom:1px solid #ccc;z-index:5;}
+	.chat-tab h1 a {position:relative;display:block;width:100%;padding:10px 0 9px;text-align:center;font-size:2.0rem;font-weight:400;}
+	.chat-tab h1 a.on {color:#ff4b53;}
+	.chat-tab h1 a:after {content:"";position:absolute;top:12px;left:0;display:block;width:1px;height:21px;background:#ccc;}
+	.chat-tab .content {clear:both;height:343px;padding:15px 0;background:#f5f5f5;overflow-y:auto;}
+	.chat-tab .content .chat-box {padding:0 12px;}
+	.chat-tab .content .chat-box li {overflow:hidden;width:100%;margin:10px 0;padding:0 7px;}
+	.chat-tab .content .chat-box .intro {padding:5px 0;font-size:1.1rem;color:#888;text-align:center;}
+	.chat-tab .content .chat-box li dl {max-width:100%;display:inline-block;position:relative;float:left;padding:8px 12px 10px;background:#fff;border:1px solid #dbdbdb;border-radius:0 6px 6px 6px;}
+	.chat-tab .content .chat-box li dl:after {content:"";position:absolute;top:-1px;left:-8px;width:8px;height:11px;background:url("../images/playball/bg_tooltip.png") no-repeat 0 0/8px;}
+	.chat-tab .content .chat-box li .me {float:right;background:#f5eaea;border:1px solid #fd6c7d;border-radius:6px 0 6px 6px;}
+	.chat-tab .content .chat-box li .me:after {top:-1px;left:inherit;right:-8px;background:url("../images/playball/bg_tooltip_me.png") no-repeat 0 0/8px;}
+	.chat-tab .content .chat-box li dl .user-info {margin-bottom:6px;font-size:1.2rem;color:#888;}
+	.chat-tab .content .chat-box li dl .user-info .emb {display:inline-block;width:37px;vertical-align:middle;}
+	.chat-tab .content .chat-box li dl .user-info .nickname {vertical-align:middle;}
+	.chat-tab .content .chat-box li dl dd {word-break:break-all;}
+	.chat-tab .content .btn-chat-go {display:none;}
+	.chat-tab footer {position:fixed;left:0;bottom:0;width:100%;height:49px;padding:8px 40px;background:#fff;border-top:1px solid #ececec;}
+	.chat-tab footer .input-box {display:table;width:100%;height:inherit;padding:0;text-align:center;}
+	.chat-tab footer .input-box label {display:inline-block;width:845px;padding:8px 10px;vertical-align:middle;border:1px solid #ececec;border-radius:6px;}
+	.chat-tab footer .input-box label input {float:left;width:93%;vertical-align:middle;outline-style:none;box-shadow:none;border-color:transparent;color:#1a1a1a;}
+	.chat-tab footer .input-box label .txt-info {float:right;font-size:1.1rem;color:#888;}
+	.chat-tab footer .btn-share {display:inline-block;width:28px;margin:0 5px;padding:5px;vertical-align:middle;}
+	.chat-tab footer .input-box .btn-app {display:inline-block;width:57px;vertical-align:middle;}
+	.chat-tab footer .input-box .btn-app a {display:block;width:100%;height:33px;line-height:33px;background:#ff4b53;color:#fff;text-align:center;border-radius:6px;}
+	.chat-tab footer .no-login {position:absolute;top:0;left:0;display:table;width:100vw;height:100%;background:#d5d5d5;color:#888;text-align:center;}
+	.chat-tab footer .no-login span {display:table-cell;vertical-align:middle;}
+	.chat-tab footer .copy {position:absolute;top:0;left:0;display:table;width:100vw;height:100%;background:rgba(0,0,0,0.9);color:#fff;vertical-align:middle;text-align:center;}
+	.chat-tab footer .copy span {display:table-cell;vertical-align:middle;}
+
+	#contents #SubCont .today-games h1 {width:50%;z-index:5;}
+	#contents #SubCont .today-games h1 a {width:100%;padding:10px 0 9px;text-align:center;}
+	#contents #SubCont .today-games h1 a.on {color:#ff4b53;}
+
+}

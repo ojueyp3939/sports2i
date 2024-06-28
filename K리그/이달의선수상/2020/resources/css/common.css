@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 구단 */
+.GW {color:#dd5828 !important}
+.GN {color:#e83827 !important}
+.GJ {color:#ffd24f !important}
+.DG {color:#99cee3 !important}
+.DH {color:#007e6e !important}
+.BS {color:#e72410 !important}
+.BC {color:#ac2424 !important}
+.SJ {color:#e60021 !important}
+.SF {color:#d6000f !important}
+.SE {color:#00042e !important}
+.SN {color:#000000 !important}
+.SB {color:#014099 !important}
+.SW {color:#00396f !important}
+.AS {color:#00a17f !important}
+.AY {color:#4f1b87 !important}
+.US {color:#014099 !important}
+.IC {color:#036eb8 !important}
+.JN {color:#fcc800 !important}
+.JB {color:#00733f !important}
+.JJ {color:#f58025 !important}
+.CA {color:#ffe806 !important}
+.PH {color:#d6000f !important}
+
+input[type="text"], input[type="password"] {-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:0px;-webkit-border-radius:0;}
+input[type="password"] {font-family:'malgun gothic';} 
+/* clearfix */
+.clear::after {content:"";display:block;clear:both;}
+
+/* hidden */
+.hidden-obj {overflow:hidden;visibility:hidden;text-indent:-9999px;width:0;height:0;line-height:0;font-size:0;}
+
+/* layout */
+.dp-none {display:none;}
+.dp-i {display:inline !important;}
+.dp-b {display:block !important;}
+.dp-ib {display:inline-block !important;}
+
+/* align */
+.txt-c {text-align:center !important;}
+.txt-l {text-align:left !important;}
+.txt-r {text-align:right !important;}
+
+/* popup */
+.modal {position:fixed;top:0;left:0;bottom:0;right:0;background:#000;opacity:0.3;z-index:15;}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>카카오 스페셜 중계</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/content.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$('.gnb li').hover(function(){
+			$('.sub-menu',this).show();
+		}, function(){
+			$('.sub-menu',this).hide();
+		});
+	});
+	</script>
+</head>
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header>
+			<div id="Gnb">
+				<h1>카카오 스페셜 중계</h1>
+			</div>
+			<div class="game-info">
+				<ul class="ing">
+					<li>
+						KT
+					</li>
+					<li>
+						2021.08.23 (DH1)
+						<p>경기중</p>
+					</li>
+					<li>
+						롯데
+					</li>
+				</ul>
+				<!-- <ul>
+					<li>
+						KT
+					</li>
+					<li>
+						2021.08.23
+					</li>
+					<li>
+						롯데
+					</li>
+				</ul> -->
+				<div class="game-list">
+					<div class="game-choice">경기선택<i class="down"></i></div>
+					<ul class="game-box">
+						<li>
+							<span>KT</span>
+							<span class="date">2021.08.23(DH1)</span>
+							<span>KT</span>
+						</li>
+						<li>
+							<span>KT</span>
+							<span class="date">2021.08.23</span>
+							<span>KT</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<section class="wide">
+			<div class="content">
+			<table class="tbl-board">
+				<colgroup>
+					<col width="*">
+					<col width="410px">
+				</colgroup>
+				<tr>
+					<td rowspan="2" class="pr10">
+						<div class="video1">중계</div>
+					</td>
+					<td>
+						<div class="card">
+							<div class="top">
+								<img src="resources/images/emb/KT_s.png" alt="KT">
+								<span>KT WPA 순위</span>
+							</div>
+							<div class="mid">
+								<ul>
+									<li class="one">
+										<img class="rank" src="resources/images/common/rank1.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+									<li class="two">
+										<img class="rank" src="resources/images/common/rank2.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT_s.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+									<li class="three">
+										<img class="rank" src="resources/images/common/rank3.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT_s.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="card">
+							<div class="top">
+								<img src="resources/images/emb/KT_s.png" alt="KT">
+								<span>KT WPA 순위</span>
+							</div>
+							<div class="mid">
+								<ul>
+									<li class="one">
+										<img class="rank" src="resources/images/common/rank1.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+									<li class="two">
+										<img class="rank" src="resources/images/common/rank2.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT_s.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+									<li class="three">
+										<img class="rank" src="resources/images/common/rank3.png" alt="rank">
+										<div class="pic">
+											<img class="player" src="resources/images/common/test.png" alt="player">
+											<img class="symbol" src="resources/images/emb/symbol_KT_s.png" alt="KT">
+										</div>
+										<div class="data">
+											<p class="name">홍길동</p>
+											<p class="txt">WPA 21.8%</p>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="pr10">
+						<div class="card">
+							<div class="top">
+								<span>경기 승리 확률</span>
+							</div>
+							<div class="mid graph">
+								<ul>
+									<li>
+										<img src="resources/images/emb/KT.png" alt="KT">
+										<p class="team">KT 위즈 <i class="home"></i></p>
+									</li>
+									<li class="vs">
+										VS
+									</li>
+									<li>
+										<img src="resources/images/emb/LT.png" alt="LT">
+										<p class="team">롯데 자이언츠</p>
+									</li>
+								</ul>
+								<div class="bar">
+									<div class="left KT" style="width:78%;">78%</div>
+									<div class="right LT" style="width:calc(100% - 78%);">22%</div>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="video2">
+							해설영상
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>

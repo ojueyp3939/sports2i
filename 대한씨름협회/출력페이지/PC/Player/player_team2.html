@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="" />
+	<meta name="description" content="">
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="" />
+	<title>대한씨름협회</title>
+	<link rel="shortcut icon" type="image/x-icon" href="">
+	<link rel="stylesheet" type="text/css" href="../resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/sub.css" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.js"></script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<!-- header -->
+		<header class="sub">
+			<div id="Gnb" class="gnb-wrap clear">
+				<h1>
+					<a href="../main.html"><i class="icon logo-main"></i></a>
+				</h1>
+				<nav class="menu-wrap">
+					<ul class="gnb">
+						<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						<li><a href="../Game/monthly_schedule.html">일정/결과</a></li>
+						<li><a href="../Rank/season.html">순위</a></li>
+						<li><a href="../Record/top.html">기록</a></li>
+						<li><a class="on" href="../Player/player_team.html">선수/팀</a></li>
+						<li><a href="../News/broadcast_news.html">NEWS</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="lnb-wrap">
+				<ul>
+					<li>
+						<ul>
+							<li><a href="../Livecenter/index.html">라이브센터</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Game/monthly_schedule.html">월별 일정</a></li>
+							<li><a href="../Game/schedule.html">경기일정/결과</a></li>
+							<li><a href="../Game/prize_winner.html">대회 입상자</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Rank/season.html">시즌 별 순위</a></li>
+							<li><a href="../Rank/contest.html">대회 별 순위</a></li>
+							<li><a href="../Rank/cons_victories.html">최다 연승 순위</a></li>
+							<li><a href="../Rank/prize_money.html">상금 순위</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../Record/top.html">TOP 5</a></li>
+							<li><a href="../Record/record.html">기록실</a></li>
+							<li><a href="../Record/continuity.html">연속기록</a></li>
+							<li><a href="../Record/alltime.html">역대기록</a></li>
+							<li><a href="../Record/prediction.html">예측달성기록</a></li>
+							<li><a href="../Record/match.html">맞대결기록</a></li>
+						</ul>
+					</li>
+					<li class="on">
+						<ul>
+							<li><a class="on" href="../Player/player_team.html">등록 선수/팀 현황</a></li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li><a href="../News/broadcast_news.html">보도자료</a></li>
+							<li><a href="../News/game_news.html">금일경기특기사항</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<!-- // header -->
+		<!-- container -->
+		<div id="container">
+			<div id="contents">
+				<!-- 개인전  -->
+				<article>
+					<div class="content">
+						<div class="tab-wrap">
+							<dl class="tab">
+								<dd><a href="../Player/player_team.html">지역별 찾기</a></dd>
+								<dd class="on"><a href="../Player/player_team2.html">팀/이름별 찾기</a></dd>
+							</dl>
+						</div>
+						<div class="search-cont">
+							<div class="box">
+								<p class="tit team">팀명</p>
+								<ul class="team-cont">
+									<li>동작구청씨름단</li>
+									<li>연수구청씨름단</li>
+									<li>안산시청씨름단</li>
+									<li>수원시청씨름단</li>
+									<li>용인백옥씨름단</li>
+									<li>태안군청씨름단</li>
+									<li>정읍시청씨름단</li>
+									<li>영암군민속씨름단</li>
+									<li>제주특별자치도청씨름단</li>
+									<li>양평군청씨름단</li>
+									<li>경기광주시청씨름단</li>
+									<li>증평군청씨름단</li>
+									<li>문경시청씨름단</li>
+									<li>영월군청씨름단</li>
+									<li>의성군청마늘씨름단</li>
+									<li>구미시청씨름단</li>
+									<li>창원시청씨름단</li>
+									<li>울산동구청씨름단</li>
+									<li>부산갈매기씨름단</li>
+								</ul>
+							</div>
+							<div class="box">
+								<p class="tit pt10">가나다순</p>
+								<ul class="name-cont">
+									<li>
+										<a href="">가</a>
+									</li>
+									<li>
+										<a href="">나</a>
+									</li>
+									<li>
+										<a href="">다</a>
+									</li>
+									<li>
+										<a href="">라</a>
+									</li>
+									<li>
+										<a href="">마</a>
+									</li>
+									<li>
+										<a href="">바</a>
+									</li>
+									<li>
+										<a href="">사</a>
+									</li>
+									<li>
+										<a href="">아</a>
+									</li>
+									<li>
+										<a href="">자</a>
+									</li>
+									<li>
+										<a href="">차</a>
+									</li>
+									<li>
+										<a href="">카</a>
+									</li>
+									<li>
+										<a href="">타</a>
+									</li>
+									<li>
+										<a href="">파</a>
+									</li>
+									<li>
+										<a href="">하</a>
+									</li>
+								</ul>
+							</div>
+							<div class="box">
+								<p class="tit pt5">검색</p>
+								<div class="search-area">
+									<input type="text">
+									<a href="#none" class="btn-search"><span>검색</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="result-info">
+							<div class="info-head navy">가</div>
+							<div class="info-body">
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">가나다</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+							</div>
+							<div class="info-head navy">나</div>
+							<div class="info-body">
+								<div class="player">
+									<a href="">
+										<p class="name">나다라</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">나다라</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">나다라</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+								<div class="player">
+									<a href="">
+										<p class="name">나다라</p>
+									</a>
+									<p class="sosok">부산갈매기씨름단</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+	<!-- footer -->
+	<footer>
+		<div class="inner">
+			<a target="_blank"><i class="icon logo-footer"></i></a>
+			<address>
+				주소<span>서울특별시 송파구 올림픽로 25 잠실주경기장
+					B103호</span>TEL<span>02-420-4256~7</span>FAX<span>02-421-1346</span><br />Copyright ⓒ 대한씨름협회. All
+				rights reserved
+			</address>
+			<div class="link">
+				<a href="https://cafe.naver.com/ssireum1927" target="_blank"><span>씨름사진 바로가기</span><i
+						class="icon arrow-r"></i></a>
+				<a href="http://ssireum.sports.or.kr/" target="_blank"><span>홈페이지 바로가기</span><i
+						class="icon arrow-r"></i></a>
+			</div>
+		</div>
+	</footer>
+	<!-- // footer -->
+</body>
+
+</html>

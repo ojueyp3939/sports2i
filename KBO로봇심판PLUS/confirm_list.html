@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="title" content="KBO 로봇심판" />
+	<meta name="author" content="스포츠투아이" />
+	<meta name="keywords" content="KBO 로봇심판, KBO" />
+	<title>KBO 로봇심판</title>
+	<link rel="shortcut icon" href="resources/images/common/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="resources/css/contents.css" />
+	<script type="text/javascript" src="resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btnCalendar').datepicker({
+				dateFormat: 'yy-mm-dd',
+				showOn: "button",
+				buttonImage: "resources/images/common/icon_calendar.png",
+				buttonImageOnly: true,
+				changeMonth: true,
+				changeYear: true,
+				autoSize: true,
+				showButtonPanel: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div class="top">
+				<h1 class="logo">
+					<a href="confirm_list.html"><img src="resources/images/common/logo.png" alt="2IU MPIRE ZONE" /></a>
+				</h1>
+				<ul class="menu">
+					<li class="on">
+						<a href="confirm_list.html">
+							투구 및 영상 확인<br/>
+							<span>(2024 ~)</span>
+						</a>
+					</li>
+					<li>
+						<a href="confirm_list_old.html">
+							투구 및 영상 확인<br/>
+							<span>(2022 ~ 2023)</span>
+						</a>
+					</li>
+					<li>
+						<a href="video_upload.html">
+							영상 등록<br/>
+							<span>&nbsp;</span>
+						</a>
+					</li>
+				</ul>
+				<ul class="user_menu">
+					<li>
+						<a href="#">비밀번호변경</a>
+						<!-- 비밀번호 변경 레이어 팝업 -->
+						<div class="layer-pw" style="display:none;">
+							<h2>비밀번호 변경</h2>
+							<div>
+								<ul>
+									<li>
+										<label for="pw_now">현재 비밀번호</label>
+										<input type="password" id="pw_now">
+									</li>
+									<li>
+										<label for="pw_new">새 비밀번호</label>
+										<input type="password" id="pw_new">
+									</li>
+									<li>
+										<label for="pw_new_check">새 비밀번호 확인</label>
+										<input type="password" id="pw_new_check">
+									</li>
+								</ul>
+								<ul class="pw_notice">
+									<li>※ 비밀번호는 아이디를 포함할 수 없습니다.</li>
+									<li>※ 비밀번호는 4자 이상 12글자 이내여야 합니다.</li>
+								</ul>
+								<p class="btn_save">
+									<a href="#">저장</a>
+								</p>
+							</div>
+						</div>
+					</li>
+					<li><a href="#">로그아웃</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- container -->
+		<div class="container">
+			<div class="contents">
+				<div class="clear">
+					<ul class="tab">
+						<li class="on">
+							<a href="confirm_list.html">투구 기록 확인</a>
+						</li>
+						<li>
+							<a href="video_live.html">실시간 영상</a>
+						</li>
+					</ul>
+					<ul class="search-wrap">
+						<li>
+							<input type="text" id="btnCalendar">
+						</li>
+						<li>
+							<select>
+								<option>경기없음</option>
+								<option>고척(한화:키움) 18:30</option>
+							</select>
+						</li>
+					</ul>
+				</div>
+				<div class="board-wrap">
+					<div class="clear mb40">
+						<div class="left-board">
+							<img src="resources/images/common/img_ball.png" alt="B, C, S, F, D">
+							<div class="ball-board">
+								<i class="ball b">2</i>
+							</div>
+							<p class="txt">홈플레이트 중간면 기준</p>
+						</div>
+						<div class="center-board">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:20%;" />
+									<col style="width:20%" />
+									<col style="width:30%" />
+									<col style="width:30%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>이닝</th>
+										<th>초/말</th>
+										<th>투수</th>
+										<th>타자</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="on">
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+									<tr class="last">
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+									</tr>
+								</tbody>
+							</table>
+
+						</div>
+						<div class="right-board">
+							<table class="tbl">
+								<colgroup>
+									<col style="width:10%;" />
+									<col style="width:10%" />
+									<col style="width:15%" />
+									<col style="width:15%" />
+									<col style="width:10%" />
+									<col style="width:10%" />
+									<col style="width:15%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th>이닝</th>
+										<th>초/말</th>
+										<th>투수</th>
+										<th>타자</th>
+										<th>구속</th>
+										<th>콜</th>
+										<th>투구번호</th>
+										<th>코멘트</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td><img src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr class="detail">
+										<td colspan="3">원정팀 감독/코치</td>
+										<td>홍길동</td>
+										<td colspan="4">우투수의 좌타자 바깥쪽 높은 변화구</td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td><img src="resources/images/common/icon_dot.png" alt="dot"></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr>
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+									<tr class="last">
+										<td>1</td>
+										<td>초</td>
+										<td>홍길동</td>
+										<td>홍길동</td>
+										<td>111</td>
+										<td>볼</td>
+										<td>1</td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="clear">
+						<ul class="coordinate-board">
+							<li>
+								<p class="tit">중간면</p>
+								<div class="first">
+									<div class="square"></div>
+								</div>
+								<div class="second">
+								</div>
+							</li>
+							<li>
+								<p class="tit">끝면</p>
+								<div class="first">
+									<div class="square"></div>
+								</div>
+								<div class="second">
+								</div>
+							</li>
+						</ul>
+						<div class="comment-board">
+							<div class="mb10">
+								<div class="clear">
+									<h2 class="mb10">투구 의견</h2>
+									<table class="tbl type-row">
+										<colgroup>
+											<col style="width:88px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th class="date">의견등록</th>
+												<td>
+													<select style="width:84px;">
+														<option>구분</option>
+													</select>
+													<input style="width:48px;" type="text" placeholder="작성자">
+													<input style="width:48px;" type="text" placeholder="구수">
+													<input style="width:193px;" type="text" placeholder="투구 코멘트">
+													<a class="btn fr">등록</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="scroll-tbl" style="height:130px;">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:18%;" />
+											<col style="width:45px" />
+											<col style="width:45px" />
+											<col style="width:45px" />
+											<col style="width:45px" />
+											<col style="width:45px" />
+											<col style="width:auto" />
+											<col style="width:100px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>작성자</th>
+												<th>이닝</th>
+												<th>투수</th>
+												<th>타자</th>
+												<th>구수</th>
+												<th>투구 코멘트</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>원정팀 감독/코치</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>1</td>
+												<td>
+													<div class="comment">우투수의 우타자 우투수의 우타자우투수의 우타자우투수의 우타자우투수의 우타자</div>
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<select>
+														<option>구분</option>
+													</select>
+												</td>
+												<td>
+													<input type="text" placeholder="작성자">
+												</td>
+												<td>
+													<input type="text" placeholder="이닝">
+												</td>
+												<td>
+													<input type="text" placeholder="투수">
+												</td>
+												<td>
+													<input type="text" placeholder="타자">
+												</td>
+												<td>
+													<input type="text" placeholder="구수">
+												</td>
+												<td>
+													<input type="text" placeholder="투구 코멘트">
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+											<tr class="last">
+												<td>원정팀 감독/코치</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>홍길동</td>
+												<td>1</td>
+												<td>
+													<div class="comment">우투수의 우타자 우투수의 우타자우투수의 우타자우투수의 우타자우투수의 우타자</div>
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div>
+								<div class="clear">
+									<h2 class="mb10">경기 총평</h2>
+									<table class="tbl type-row">
+										<colgroup>
+											<col style="width:88px;" />
+										</colgroup>
+										<tbody>
+											<tr>
+												<th class="date">의견등록</th>
+												<td>
+													<select style="width:84px;">
+														<option>구분</option>
+													</select>
+													<input style="width:48px;" type="text" placeholder="작성자">
+													<input style="width:242px;" type="text" placeholder="투구 코멘트">
+													<a class="btn fr">등록</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="scroll-tbl" style="height:130px;">
+									<table class="tbl">
+										<colgroup>
+											<col style="width:20%;" />
+											<col style="width:60px" />
+											<col style="width:auto" />
+											<col style="width:100px" />
+										</colgroup>
+										<thead>
+											<tr>
+												<th>구분</th>
+												<th>작성자</th>
+												<th>경기 코멘트</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>원정팀 감독/코치</td>
+												<td>홍길동</td>
+												<td>
+													<div class="comment">우투수의 우타자 우투수의 우타자우투수의 우타자우투수의 우타자우투수의 우타자</div>
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<select>
+														<option>구분</option>
+													</select>
+												</td>
+												<td>
+													<input type="text" placeholder="작성자">
+												</td>
+												<td>
+													<input type="text" placeholder="투구 코멘트">
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+											<tr class="last">
+												<td>원정팀 감독/코치</td>
+												<td>홍길동</td>
+												<td>
+													<div class="comment">우투수의 우타자 우투수의 우타자우투수의 우타자우투수의 우타자우투수의 우타자</div>
+												</td>
+												<td>
+													<a class="btn">변경</a>
+													<a class="btn">삭제</a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer>
+			<div>
+				<img src="resources/images/common/logo_footer.png" alt="KBO | sports2i" />
+				<p>Copyrights ⓒ SPORTS2i All rights reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+	</div>
+</body>
+
+</html>

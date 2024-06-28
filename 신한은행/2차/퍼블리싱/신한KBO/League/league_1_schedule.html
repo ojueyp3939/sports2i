@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<title>신한 BASEBALL PARK</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<script type="text/javascript" src="../resources/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../resources/js/jquery.bxslider.js	"></script>
+    <script type="text/javascript" src="../resources/js/common.js"></script>
+	<link rel="stylesheet" type="text/css" href="../resources/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/layout.css" />	
+	<link rel="stylesheet" type="text/css" href="../resources/css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/mvp.css" />
+	<link rel="stylesheet" type="text/css" href="../resources/css/league.css" />
+</head>
+<script>
+$(document).ready(function(){
+	// 킬러컨텐츠_슬라이드
+	var mc_Swiper = new Swiper('.main-contents-slider', {
+		pagination: {el: '.swiper-pagination',clickable: true},
+		autoplay: {
+			delay: 4000,
+			disableOnInteraction: true,
+		},
+	});
+	// 탑플레이어 스와이프
+	var TPH_Swiper = new Swiper('.tp-hitter', {
+		slidesPerView:3,
+		grabCursor: true,
+		centeredSlides: false,
+		freeMode: true,
+		spaceBetween:0,
+		loop:false
+	});
+	var TPP_Swiper = new Swiper('.tp-pitcher', {
+		slidesPerView:3,
+		grabCursor: true,
+		centeredSlides: false,
+		freeMode: true,
+		spaceBetween:0,
+		loop:false
+	});
+});
+</script>
+
+<body>
+	<!-- aside -->
+	<aside>
+		<nav id="navAll">
+			<div class="navdep1 nav-league ">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_league.png" alt="" /></span>KBO 리그</a></h2>
+				<ul class="navdep2"> 
+					<li><a href="./league_1_schedule.html">경기일정/결과</a></li>
+					<li><a href="./league_2_ranking.html">팀순위</a></li>
+					<li><a href="./league_2_ranking_1.html">선수순위</a></li>
+					<li class="event">
+						<a href="#none">
+							<span>EVENT</span>퀴즈 풀면 쏠쏠하다!<br />쏠픽!
+						</a>
+					</li>
+					<li><a href="./league_5_invest.html">가성비</a></li>
+					<li><a href="./league_6_potcast.html">팟캐스트</a></li>
+					<li><a href="./league_4_highlight.html">하이라이트</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-product">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_product.png" alt="" /></span>KBO 상품</a></h2>
+				<ul class="navdep2">
+					<li><a href="#none">예금</a></li>
+					<li><a href="#none">적금</a></li>
+					<li><a href="#none">대출</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-sol">
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_sol.png" alt="" /></span>쏠픽</a></h2>
+			</div>
+			<div class="navdep1 nav-mvp">	
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_mvp.png" alt="" /></span>월간 MVP</a></h2>
+				<ul class="navdep2">
+					<li><a href="#none">월간 랭킹</a></li>
+					<li><a href="#none">MVP 투표하기</a></li>
+					<li><a href="#none">MVP 결과</a></li>
+				</ul>
+			</div>
+			<div class="navdep1 nav-event">					
+				<h2><a href="javascript:;"><span class="ico"><img src="../resources/images/common/navAll_event.png" alt="" /></span>이벤트</a></h2>
+			</div>
+		</nav>
+		<div class="banner"><a href="javascript:;">배너영역</a></div>
+	</aside>
+	<!-- // aside -->
+	<!-- wrap -->
+	<div id="wrap">	
+		<!-- header -->
+		<header>	
+			<h1 class="tit"><a href="#none">신한 BASEBALL PARK</h1>
+			<a href="#none" class="btn-aside">
+				<span class="menu-icon ">
+					<span class="menu-line menu-line1"></span>
+					<span class="menu-line menu-line2"></span>
+					<span class="menu-line menu-line3"></span>
+				</span>
+			</a>	
+			<nav id="gnb">
+				<ul class="menu">
+					<li class="on"><a href="javascript:;">KBO 리그</a></li>
+					<li><a href="javascript:;">KBO 상품</a></li>
+					<li><a href="javascript:;">쏠픽</a></li>
+					<li><a href="javascript:;">월간 MVP</a></li>
+					<li><a href="javascript:;">이벤트</a></li>
+				</ul>
+			</nav>
+		</header>
+		<!-- // header -->
+		<hr /> 
+		<!-- container -->
+		<div id="container">
+			<!-- contents -->
+			<div id="contents" class="bg-grey">
+				<!-- 상단 컨텐츠 영역 // -->
+				<div class="content-wrap">
+					<div class="main-contents">
+						<div class="main-contents-area">
+							<div class="swiper-container main-contents-slider">
+								<div class="swiper-wrapper">
+									<!-- 전력분석 // -->
+									<div class="swiper-slide">
+										<div class="top-analysis">
+											<div class="top-analysis-wrap">
+												<div class="stitle">6월 23일<br><font style="font-size:1.8rem">쏠픽</font></div>
+												<div class="btn-solpick">쏠픽하러가기 ></div>
+												<div class="left-area">
+													<span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+													<span><img class="team" src="../resources/images/emb/embS_OB.png" alt="양의지" /></span>
+													<span>두산</span>
+												</div>
+												<div class="score-area">
+													<div class="title-name">
+														<span class="title">승부예측</span>
+														<span class="left-name">이용찬</span>
+														<span class="right-name">김광현</span>
+													</div>
+													<div class="pre-rate">
+														<span class="rate-left">53.6%</span>
+														<span class="rate-bar" style="width:53.6%;"></span>
+														<span class="rate-right">46.4%</span>
+													</div>
+													<div class="solpick-poll">
+														<div class="title-box">
+															<span class="title">실시간 쏠픽 투표율</span>
+														</div>
+														<span class="left">80%</span>
+														<span class="icon-winner brace-left" id="rate-poll"></span>
+														<span class="right">20%</span>
+													</div>
+												</div>
+												<div class="right-area">
+													<span><img src="http://www.koreabaseball.com/file/person/kbo/2018/76232.png" alt="양의지" /></span>
+													<span><img class="team" src="../resources/images/emb/embS_KT.png" alt="양의지" /></span>
+													<span>KT</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 전력분석 -->
+									<!-- 팟캐스트 // -->
+									<div class="swiper-slide">
+										<div class="vod-wrap">
+											<a href="#">
+												<div class="vod">
+													<span class="vod-title">백수야구</span>
+													<span class="vod-subject">형, 요즘 어디서 뭐해?</span>
+												</div>
+												<span class="mark-play"></span>
+												<img src="../resources/images/main/sapmple_main_banner_cast.png" title="">
+											</a>
+										</div>
+									</div>
+									<!-- // 팟캐스트 -->
+									<!-- 연봉투자수익 // -->
+									<div class="swiper-slide">
+										<div class="top-invest">
+											<div class="top-invest-wrap">
+												<div class="stitle"><font class="blue">TEAM</font> 연봉 투자 수익 TOP 3</div>
+												<div class="sinfo2">[ 기준 : 연봉 2억 이상 ]</div>
+												<div class="top-invest-list">
+													<div class="invest-row">
+														<div class="invest" id="1위">
+															<span class="subject">1위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_OB.png" /></span>
+															<span class="name">두산</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+													<div class="invest-row">
+														<div class="invest" id="2위">
+															<span class="subject">2위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_SK.png" /></span>
+															<span class="name">SK</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+													<div class="invest-row">
+														<div class="invest" id="3위">
+															<span class="subject">3위</span>
+															<span class="photo"><img src="../resources/images/emb/embL_HH.png" /></span>
+															<span class="name">한화</span>
+															<span class="rate">1WAR 당 3억 5천</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- // 연봉투자수익 -->
+									<!-- 하이라이트 // -->
+									<div class="swiper-slide">
+										<div class="vod-wrap">
+											<a href="#">
+												<div class="vod">
+													<span class="vod-title">하이라이트</span>
+													<span class="vod-subject">신본기 결승 투런포,<br/>롯데 한화 꺾고 위닝시리즈</span>
+												</div>
+												<span class="mark-play"></span>
+												<img src="../resources/images/main/sapmple_main_banner_hl.png" title="">
+											</a>
+										</div>
+									</div>
+									<!-- // 하이라이트 -->
+									<!-- 이벤트 // -->
+									<div class="swiper-slide">
+										<a href="#"><img src="../resources/images/main/sapmple_main_banner_event.png" title=""></a>
+									</div>
+									<!-- // 이벤트 -->
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 상단 컨텐츠 영역 -->
+				<!-- 메뉴 버튼 // -->
+				<ul class="league-menu">
+					<li class="menu on" onClick="javascript:location.href='../index.html';"><a href="">일정/결과</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_2_ranking.html';"><a href="">팀/개인 순위</a></li>
+					<li class="menu"><a href="#none">쏠픽하기 ></a></li>
+					<li class="menu" onClick="javascript:location.href='./league_4_highlight.html';"><a href="">하이라이트</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_5_invest.html';"><a href="">연봉 투자 수익</a></li>
+					<li class="menu" onClick="javascript:location.href='./league_6_potcast.html';"><a href="">팟캐스트</a></li>
+				</ul>
+				<!-- //메뉴 버튼 -->
+
+				<!-- 일정/결과 // -->
+				<div class="content-wrap" id="match-schedule">
+					<div class="stitle">TODAY</div>
+                    <div class="date-select">
+                        <div class="today">2018. 06. 23 (금)</div>
+                        <a href="javascript:;" class="btn btn-prev"></a>
+                        <a href="javascript:;" class="btn btn-next"></a>
+                        <a href="javascript:;" class="btn-calendar"></a>
+                    </div>
+					
+					<div class="match-wrap mb20">
+						<div class="match-row match-row-before">
+							<div class="match-row-box">
+								<div class="away">
+									<span>10위</span>
+									<span>999승 99무 99패</span>
+									<span>선발 : 다이아몬드</span>
+								</div>
+								<div class="score">
+									<div>
+										<span class="emblem"><img src="../resources/images/emb/embL_HT.png" alt="기아타이거즈" /></span>
+										<span class="score-away"></span>
+										<span class="local">
+											<span>고척</span>
+											<span class="local-bar"></span>
+											<span>18:30</span>
+										</span>
+										<span class="score-home"></span>
+										<span class="emblem"><img src="../resources/images/emb/embL_NC.png" alt="NC다이노스" /></span>
+										<span class="broad">SBS SPORTS, KBS N SPORTS, SPOTV</span>
+									</div>
+								</div>
+								<div class="home">
+									<span>10위</span>
+									<span>999승 99무 99패</span>
+									<span>선발 : 다이아몬드</span>
+								</div>
+							</div>
+						</div>
+						<div class="match-row match-row-play">
+							<div class="match-row-box">
+								<div class="away">투 : 다이아몬드</div>
+								<div class="score">
+									<div>
+										<span class="emblem"><img src="../resources/images/emb/embL_HT.png" alt="기아타이거즈" /></span>
+										<span class="score-away win">99</span>
+										<span class="status">
+											<span class="base"><img src="../resources/images/main/base_001.png" /></span>
+											<span class="inning">99회초</span>
+											<span class="count">1B 0S 1O</span>
+										</span>
+										<span class="score-home">98</span>
+										<span class="emblem"><img src="../resources/images/emb/embL_NC.png" alt="NC다이노스" /></span>
+									</div>
+									<span class="broad">SBS SPORTS, KBS N SPORTS, SPOTV</span>
+								</div>
+								<div class="home">타 : 다이아몬드</div>
+							</div>
+						</div>
+						<div class="match-row match-row-end">
+							<div class="match-row-box">
+								<div class="away">
+									<span>다이아몬드 패</span>
+								</div>
+								<div class="score">
+									<div>
+										<span class="emblem"><img src="../resources//images/emb/embS_HT.png" alt="기아타이거즈" /></span>
+										<span class="score-away">98</span>
+										<span class="status">
+											<span>종료</span>
+											<span>광주</span>
+										</span>
+										<span class="score-home win">99</span>
+										<span class="emblem"><img src="../resources//images/emb/embS_NC.png" alt="NC다이노스" /></span>
+									</div>
+									<span class="broad">SBS SPORTS, KBS N SPORTS, SPOTV</span>
+								</div>
+								<div class="home">
+									<span>다이아몬드 승</span>
+									<span>다이아몬드 세</span>
+								</div>
+							</div>
+						</div>
+						<div class="match-row match-row-abort">
+							<div class="match-row-box">
+								<div class="away">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="score">
+									<div>
+										<span class="emblem"><img src="../resources/images/emb/embR_HT.png" alt="기아타이거즈" /></span>
+										<span class="score-away"></span>
+										<span class="local">
+											<span>고척</span>
+											<span class="local-bar"></span>
+											<span>취소</span>
+										</span>
+										<span class="score-home"></span>
+										<span class="emblem"><img src="../resources/images/emb/embR_NC.png" alt="NC다이노스" /></span>
+										<span class="broad">SBS SPORTS, KBS N SPORTS, SPOTV</span>
+									</div>
+								</div>
+								<div class="home">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 경기일정 -->
+				</div>
+				<!-- // 일정/결과 -->
+
+			</div>
+			<!-- // contents -->
+		</div>
+		<!-- // container -->
+	</div>
+	<!-- // wrap -->
+</body>
+</html>
